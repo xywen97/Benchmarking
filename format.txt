@@ -1,0 +1,36 @@
+6 subfields:
+- general knowledge
+- spec (Chenchen)
+- RTL (Yi)
+- netlist (Zhengyuan)
+- architecture (Chenhao)
+- backend (Yuxiang)
+
+data format: 1 json + 1 image directory
+
+e.g., general knowledge:
+- image directory: general/
+    - general/x.png, general/y.jpg, ...
+- json: general.json
+    - items in the json:
+      "item_id": {
+          "statement": "the preliminary statement of the questions",
+          "image": ["a list of image names"],
+          "question": ["a list of questions"],
+          "question_type": ["types of the questions"],
+          "answer": ["answers to the questions"],
+          "explanation": ["explanations to the answers"],
+          "modality": ["data modalities of the questions"],
+          "difficulty": ["difficulty level of the questions"],
+          "ability": ["tested abilities of the model regarding the questions"],
+          "source": "source of the material"
+      }
+    - item_ids should include subfield names, e.g., general_0, spec_203
+    - do not encode images into strings and put them into the questions
+    - record image names instead of their absolute/relative paths
+    - use "image": [] for text-only questions
+    - valid "question_type" values: single, multi, blank, open
+    - use empty strings for explanations if explanations are not applicable
+    - valid "modality" values: text, image, text&image
+    - valid "difficulty" values: easy, medium, hard
+    - valid "ability" values: knowledge, perception, inference, computation

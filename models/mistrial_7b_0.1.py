@@ -1,0 +1,46 @@
+from flask import Flask, request, jsonify
+import torch
+from transformers import pipeline
+from transformers import AutoTokenizer
+import os
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
+app = Flask(__name__)
+
+# Load your model and tokenizer
+model_path = "/data/zyzheng23/xiangyu/hf_ckpts/mistrial_7b_0.1"
+tokenizer = AutoTokenizer.from_pretrained(model_path)
+model = pipeline(
+    "text-generation",
+    model=model_path,
+    torch_dtype=torch.float16,
+    device_map="auto"
+)
+
+@app.route('/generate', methods=['POST'])
+def generate_text():
+    # Get prompt from the request
+    data = request.json
+    prompt = data.get("prompt", "")
+
+    print(f"""
+        This is the mistrial_7b_0.1.py script.
+        The prompt is: {prompt}
+    """)
+    
+    # Generate text
+    response = model(
+        prompt, 
+        do_sample=True, 
+        top_k=10, 
+        num_return_sequences=1, 
+        eos_token_id=tokenizer.eos_token_id,
+        truncation=True, 
+        max_length=1024
+    )
+
+    return jsonify(response[0]['generated_text'])
+
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=5001)

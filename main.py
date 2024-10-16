@@ -1,5 +1,6 @@
 from utils.parser import benchmarking, benchmarking_batch, compute_acc
 from utils.dataloader import load_data, load_data_batch
+import json
 
 if __name__ == "__main__":
     '''
@@ -25,8 +26,7 @@ if __name__ == "__main__":
     results, comparisons = compute_acc(return_data)
 
     print(f"results: {results}")
-    print(f"comparison: {comparisons}")
-
+    print(json.dumps({"comparison": comparisons}, ensure_ascii=False, indent=4))
     '''
     benchmarking the model using batch of questions
     '''

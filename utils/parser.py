@@ -86,6 +86,8 @@ def benchmarking(raw_data, field="general", model='gpt4o'):
     answer_preds = []
     explanation_preds = []
 
+    print(f"STATEMENT: {statement_item}")
+    print()
     for i in range(len(question_item)):
         question_type = question_type_item[i]
         prompt_mapping = {
@@ -93,19 +95,19 @@ def benchmarking(raw_data, field="general", model='gpt4o'):
             "single": """Single choice question. Please answer in Json format and return Json object only. The response format should be: {{"answer": it should be a/b/c/d, "explanation": no more than 2 sentences for explanation on the answer}}"""
         }
         entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
-        print(entire_question)
+        print(f"QUESTION: {question_item[i]}")
         
         for attempt in range(3):
             try:
                 response = query_model(entire_question)
                 if response:
-                    print(f"Response received: {response}")
+                    # print(f"Response received: {response}")
                     try:
                         # 尝试将响应解析为JSON对象
                         # 处理响应中包含的json``` ```的情况
                         if response.startswith("```json") and response.endswith("```"):
                             response = response[7:-3].strip()
-                        print(response)
+                        # print(response)
                         response_data = json.loads(response)
                         answer_pred = response_data.get("answer", "No answer found")
                         explanation_pred = response_data.get("explanation", "No explanation found")
@@ -120,6 +122,9 @@ def benchmarking(raw_data, field="general", model='gpt4o'):
                 print(f"Attempt {attempt + 1} failed with error: {e}")
         else:
             print("All attempts to query the model failed.")
+        
+        print("#" * 100)
+        print()
         
     returned_response = {
         "original_data": {

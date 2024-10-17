@@ -8,7 +8,7 @@ from openai import OpenAI
 api_key = "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"
 base_url = "https://api.openai-forward.com/v1/"
 
-def query_llama2_7b(prompt):
+def query_llama2_7b(prompt, images=None):
     url = 'http://127.0.0.1:5000/generate'
     headers = {'Content-Type': 'application/json'}
     data = json.dumps({"prompt": prompt})
@@ -19,7 +19,7 @@ def query_llama2_7b(prompt):
     else:
         return "Error: " + str(response.status_code)
 
-def query_llama2_13b(prompt):
+def query_llama2_13b(prompt, images=None):
     url = 'http://127.0.0.1:5002/generate'
     headers = {'Content-Type': 'application/json'}
     data = json.dumps({"prompt": prompt})
@@ -30,7 +30,7 @@ def query_llama2_13b(prompt):
     else:
         return "Error: " + str(response.status_code)
     
-def query_llama3_8b_instruct(prompt):
+def query_llama3_8b_instruct(prompt, images=None):
     url = 'http://127.0.0.1:5003/generate'
     headers = {'Content-Type': 'application/json'}
     data = json.dumps({"prompt": prompt})
@@ -41,7 +41,7 @@ def query_llama3_8b_instruct(prompt):
     else:
         return "Error: " + str(response.status_code)
     
-def query_mistrial_7b(prompt):
+def query_mistrial_7b(prompt, images=None):
     url = 'http://127.0.0.1:5001/generate'
     headers = {'Content-Type': 'application/json'}
     data = json.dumps({"prompt": prompt})
@@ -52,7 +52,7 @@ def query_mistrial_7b(prompt):
     else:
         return "Error: " + str(response.status_code)
     
-def query_gpt35(prompt):
+def query_gpt35(prompt, images=None):
     openai_api_key = api_key
     openai_api_base = base_url
     client = OpenAI(api_key=openai_api_key, base_url=openai_api_base)
@@ -70,7 +70,7 @@ def query_gpt35(prompt):
     llm_outputs = llm_response.choices[0].message.content
     return llm_outputs
 
-def query_gpt4o(prompt):
+def query_gpt4v(prompt, images=None):
     openai_api_key = api_key
     openai_api_base = base_url
     client = OpenAI(api_key=openai_api_key, base_url=openai_api_base)
@@ -80,15 +80,110 @@ def query_gpt4o(prompt):
     ]
     llm_response = client.chat.completions.create(
         messages=messages,
-        model="gpt-4o",
+        model="gpt-3.5-turbo",
         max_tokens=1024,
-        temperature=0.7,
+        temperature=0.0,
         stream=False  
     )
     llm_outputs = llm_response.choices[0].message.content
     return llm_outputs
 
-def query_gpt4(prompt):
+def create_payload(images, prompt: str, model="gpt-4-vision-preview", max_tokens=1024, detail="high"):
+    """Creates the payload for the API request."""
+    messages = [
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": f"You are a helpful assistant. {prompt} You can refer to the provided images.",
+                },
+            ],
+        },
+    ]
+
+    for image in images:
+        base64_image = image
+        messages[0]["content"].append({
+            "type": "image_url",
+            "image_url": {
+                "url": base64_image,
+                "detail": detail,
+            }
+        })
+
+    return {
+        "model": model,
+        "messages": messages,
+        "max_tokens": max_tokens
+    }
+
+def query_gpt4o(prompt, images=None):
+    openai_api_key = api_key
+    openai_api_base = base_url
+
+    if images:
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {openai_api_key}"
+        }
+
+        # too slow
+        payload = {
+            "model": "gpt-4o",
+            "messages": [
+                {
+                "role": "user",
+                "content": [
+                        {
+                            "type": "text",
+                            "text": f"You are a helpful assistant. {prompt}. You can refer to the provided images."
+                        },
+                        {
+                            "type": "image_url",
+                                "image_url": {
+                                    "url": f"data:image/jpeg;base64,{images[0]}"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "max_tokens": 1024,
+            "temperature": 0.7,
+            "stream": False  
+        }
+
+        for image in images:
+            payload["messages"][0]["content"].append({
+                "type": "image_url",
+                "image_url": {
+                    "url": f"data:image/jpeg;base64,{image}"
+                }
+            })
+
+        llm_outputs = requests.post("https://api.openai-forward.com/v1/chat/completions", headers=headers, json=payload)
+        llm_outputs = llm_outputs.json()
+        llm_outputs = llm_outputs['choices'][0]['message']['content']
+
+    else:
+        client = OpenAI(api_key=openai_api_key, base_url=openai_api_base)
+        messages = [
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": prompt}
+        ]
+        llm_response = client.chat.completions.create(
+            messages=messages,
+            model="gpt-4o",
+            max_tokens=1024,
+            temperature=0.7,
+            stream=False  
+        )
+        llm_outputs = llm_response.choices[0].message.content
+
+    return llm_outputs
+
+def query_gpt4(prompt, images=None):
+
     openai_api_key = api_key
     openai_api_base = base_url
     client = OpenAI(api_key=openai_api_key, base_url=openai_api_base)

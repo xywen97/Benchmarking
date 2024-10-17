@@ -1,6 +1,6 @@
 from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4
 import json
-
+import base64
 
 def compute_acc(data):
     correct_count = 0
@@ -44,11 +44,36 @@ def choose_model(model_name):
     else:
         raise ValueError(f"Model '{model_name}' is not recognized. Please choose a valid model.")
 
+def check_if_multi_modal(model_name):
+    is_multi_mapping = {
+        "llama2_7b": False,
+        "llama2_13b": False,
+        "llama3_8b_instruct": False,
+        "mistrial_7b": False,
+        "gpt35": False,
+        "gpt4o": "type_base64",
+        "gpt4": "type_base64"
+    }
+
+    return is_multi_mapping[model_name]
+
+def load_image_base64(image_path):
+    """
+    Encode an image file to Base64
+
+    Input:
+         - image_path: The file path of the image
+    Output:
+         - The encoded Base64 string
+    """
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode("utf-8")
+
+
 def benchmarking_batch():
     pass
 
-def benchmarking(raw_data, field="general", model='gpt4o'):
-    # print(raw_data)
+def benchmarking(raw_data, field="general", model_name='gpt4o'):
     if field.lower() not in ['architecture', 'backend', 'general', 'netlist', 'rtl', 'spec']:
         raise ValueError(f"Field '{field}' is not recognized. Please choose from 'architecture', 'backend', 'general', 'netlist', 'rtl', 'spec'.")
     
@@ -65,6 +90,9 @@ def benchmarking(raw_data, field="general", model='gpt4o'):
     ability_item = data['abilities']
     source_item = data['source']
 
+    '''
+    Check if the elements in each item is full filled
+    '''
     if not (len(question_item) == len(question_type_item) == len(answer_item) == len(explanation_item) == len(modality_item) == len(difficulty_item) == len(ability_item)):
         raise ValueError("Mismatch in the number of items: "
                          f"questions({len(question_item)}), "
@@ -80,9 +108,36 @@ def benchmarking(raw_data, field="general", model='gpt4o'):
     print("Testing: ")
     print(f"This question is from {source_item}")
     
-    query_model = choose_model(model.lower())
+    '''
+    Choose candidate models
+    '''
+    query_model = choose_model(model_name.lower())
 
+    '''
+    Determine if the model supports multi-modal reasoning
+    '''
+    is_multi_modal = check_if_multi_modal(model_name)
 
+    '''
+    Load images correspondingly
+    '''
+    images = []
+    if not is_multi_modal:
+        pass
+    elif is_multi_modal == "type_base64":
+        
+        for image_name in image_item:
+            try:
+                image = load_image_base64(image_name)
+                images.append(image)
+            except FileNotFoundError:
+                print(f"Image {image_name} not found.")
+    else:
+        pass
+
+    '''
+    Query model for getting answers
+    '''
     answer_preds = []
     explanation_preds = []
 
@@ -99,7 +154,7 @@ def benchmarking(raw_data, field="general", model='gpt4o'):
         
         for attempt in range(3):
             try:
-                response = query_model(entire_question)
+                response = query_model(entire_question, images)
                 if response:
                     # print(f"Response received: {response}")
                     try:

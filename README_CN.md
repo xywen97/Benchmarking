@@ -4,6 +4,23 @@
 
 Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比较不同模型在多模态数据上的表现。该项目支持多种数据格式和模型，帮助研究人员和开发者更好地理解模型在处理多模态数据时的能力。
 
+## TODO
+
+### 文本模态模型
+- [ ] GPT-3.5-turbo
+- [ ] Llama2-7b
+- [ ] Llama2-13b
+- [ ] Llama3-8b
+- [ ] mistrial-7b
+
+### 多模态模型
+- [x] GPT-4o
+- [x] MiniGPT4-vicuna-7b
+- [ ] MiniGPT4-vicuna-13b
+- [ ] GPT-4
+- [ ] GPT-4-turbo
+- [ ] GPT-4-vision
+
 ## 数据格式
 
 项目中的数据格式包括一个JSON文件和一个图像目录。每个子领域的数据都遵循以下结构：

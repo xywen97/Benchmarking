@@ -6,6 +6,25 @@
 
 The Multimodal EDA Benchmarking project aims to provide a framework for evaluating and comparing the performance of different models on multimodal data. This project supports various data formats and models, helping researchers and developers better understand the capabilities of models in handling multimodal data.
 
+## TODO
+
+### Text-only Model
+- [ ] GPT-3.5-turbo
+- [ ] Llama2-7b
+- [ ] Llama2-13b
+- [ ] Llama3-8b
+- [ ] mistrial-7b
+
+### Multi-modal Model
+- [x] GPT-4o
+- [x] MiniGPT4-vicuna-7b
+- [ ] MiniGPT4-vicuna-13b
+- [ ] GPT-4
+- [ ] GPT-4-turbo
+- [ ] GPT-4-vision
+
+
+
 ## Data Format
 
 The data format in the project includes a JSON file and an image directory. The data for each subdomain follows the structure below:

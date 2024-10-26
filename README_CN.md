@@ -6,6 +6,9 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 
 ## TODO
 
+### 图片标题生成
+- [ ] Blip-image-captioning-large
+
 ### 文本模态模型
 - [x] GPT-3.5-turbo
 - [ ] Llama2-7b-chat-hf

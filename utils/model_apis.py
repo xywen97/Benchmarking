@@ -2,11 +2,11 @@ import requests
 import json
 from openai import OpenAI
 
-# api_key = "sk-89576ilSZoBXCFmGlJPxBEzpYGDRe17MBudXmnQmhMxmaC3x"
-# base_url = "https://a.fe8.cn/v1/"
+api_key = "sk-QpHUrsblHgB7kAzcpwLmrFz3yKKTiFVlFOW2vgVc7ARfqsXR"
+base_url = "https://a.fe8.cn/v1"
 
-api_key = "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"
-base_url = "https://api.openai-forward.com/v1/"
+# api_key = "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"
+# base_url = "https://api.openai-forward.com/v1/"
 
 def query_llama2_7b(prompt, images=None):
     url = 'http://127.0.0.1:5000/generate'
@@ -64,11 +64,12 @@ def query_gpt35(prompt, images=None):
         messages=messages,
         model="gpt-3.5-turbo",
         max_tokens=1024,
-        temperature=0.0,
+        temperature=0.7,
         stream=False  
     )
     llm_outputs = llm_response.choices[0].message.content
     return llm_outputs
+
 
 def query_gpt4v(prompt, images=None):
     openai_api_key = api_key

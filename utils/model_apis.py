@@ -183,6 +183,73 @@ def query_gpt4o(prompt, images=None):
 
     return llm_outputs
 
+def query_gpt4_turbo(prompt, images=None):
+    print("we are using GPT-4_turbo")
+
+    openai_api_key = api_key
+    openai_api_base = base_url
+
+    if images:
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {openai_api_key}"
+        }
+
+        # too slow
+        payload = {
+            "model": "gpt-4-turbo",
+            "messages": [
+                {
+                "role": "user",
+                "content": [
+                        {
+                            "type": "text",
+                            "text": f"You are a helpful assistant. {prompt}. You can refer to the provided images."
+                        },
+                        {
+                            "type": "image_url",
+                                "image_url": {
+                                    "url": f"data:image/jpeg;base64,{images[0]}"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "max_tokens": 1024,
+            "temperature": 0.7,
+            "stream": False  
+        }
+
+        for image in images:
+            payload["messages"][0]["content"].append({
+                "type": "image_url",
+                "image_url": {
+                    "url": f"data:image/jpeg;base64,{image}"
+                }
+            })
+
+        llm_outputs = requests.post(f"{openai_api_base}/chat/completions", headers=headers, json=payload)
+        llm_outputs = llm_outputs.json()
+        llm_outputs = llm_outputs['choices'][0]['message']['content']
+
+    else:
+        client = OpenAI(api_key=openai_api_key, base_url=openai_api_base)
+        messages = [
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": prompt}
+        ]
+        llm_response = client.chat.completions.create(
+            messages=messages,
+            model="gpt-4-turbo",
+            max_tokens=1024,
+            temperature=0.7,
+            stream=False  
+        )
+        llm_outputs = llm_response.choices[0].message.content
+
+    return llm_outputs
+
+
 def query_gpt4(prompt, images=None):
     print("we are using GPT-4")
 
@@ -228,7 +295,7 @@ def query_gpt4(prompt, images=None):
                 }
             })
 
-        llm_outputs = requests.post("https://a.fe8.cn/v1/chat/completions", headers=headers, json=payload)
+        llm_outputs = requests.post(f"{openai_api_base}/chat/completions", headers=headers, json=payload)
         llm_outputs = llm_outputs.json()
         llm_outputs = llm_outputs['choices'][0]['message']['content']
 

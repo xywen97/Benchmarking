@@ -18,7 +18,7 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 - [x] MiniGPT4-vicuna-7b
 - [ ] MiniGPT4-vicuna-13b
 - [x] GPT-4
-- [ ] GPT-4-turbo
+- [x] GPT-4-turbo
 - [ ] GPT-4-vision
 
 ## 数据格式

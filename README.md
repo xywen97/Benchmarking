@@ -20,7 +20,7 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 - [x] MiniGPT4-vicuna-7b
 - [ ] MiniGPT4-vicuna-13b
 - [x] GPT-4
-- [ ] GPT-4-turbo
+- [x] GPT-4-turbo
 - [ ] GPT-4-vision
 
 

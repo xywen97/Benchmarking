@@ -1,4 +1,4 @@
-from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4
+from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v
 import json
 import base64
 
@@ -37,7 +37,9 @@ def choose_model(model_name):
         "mistrial_7b": query_mistrial_7b,
         "gpt35": query_gpt35,
         "gpt4o": query_gpt4o,
-        "gpt4": query_gpt4
+        "gpt4": query_gpt4,
+        "gpt4_turbo": query_gpt4_turbo,
+        "gpt4v": query_gpt4v
     }
     if model_name in model_mapping:
         return model_mapping[model_name]
@@ -52,7 +54,9 @@ def check_if_multi_modal(model_name):
         "mistrial_7b": False,
         "gpt35": False,
         "gpt4o": "type_base64",
-        "gpt4": "type_base64"
+        "gpt4": "type_base64",
+        "gpt4_turbo": "type_base64",
+        "gpt4v": "type_base64"
     }
 
     return is_multi_mapping[model_name]

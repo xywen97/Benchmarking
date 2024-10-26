@@ -22,7 +22,7 @@ if __name__ == "__main__":
     field = "general"
     # available models:
     # llama2_7b, llama2_13b, llama3_8b_instruct, mistrial_7b, gpt35, gpt4o, gpt4, gpt4_turbo, gpt4v
-    return_data = benchmarking(data, field, model_name='gpt4_turbo')
+    return_data = benchmarking(data, field, model_name='gpt4v')
     results, comparisons = compute_acc(return_data)
 
     print(f"results: {results}")

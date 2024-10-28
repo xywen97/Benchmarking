@@ -9,7 +9,7 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 ## TODO
 
 ### Image Captioning
-- [ ] Blip-image-captioning-large
+- [x] Blip-image-captioning-large
 
 ### Text-only Model
 - [x] GPT-3.5-turbo

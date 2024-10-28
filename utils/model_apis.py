@@ -8,6 +8,22 @@ base_url = "https://a.fe8.cn/v1"
 # api_key = "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"
 # base_url = "https://api.openai-forward.com/v1/"
 
+def image_captioning(image_path=None):
+    url = 'http://127.0.0.1:5010/generate_caption'
+    headers = {'Content-Type': 'application/json'}
+    
+    if image_path is not None:
+        data = json.dumps({"image_path": image_path})
+        print(f"data: {data}")
+        response = requests.post(url, headers=headers, data=data)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            return "Error: " + str(response.status_code)
+    else:
+        return "Error: No image path provided"
+
+
 def query_llama2_7b(prompt, images=None):
     url = 'http://127.0.0.1:5000/generate'
     headers = {'Content-Type': 'application/json'}

@@ -1,28 +1,35 @@
-# Load model directly
-from transformers import AutoProcessor, AutoModelForSeq2SeqLM
+from flask import Flask, request, jsonify
+from transformers import pipeline
 from PIL import Image
+import os
 
-local_ckpt_path = "/data/xiangyu/benchmarkModels/blip-image-captioning-large"
+os.environ["CUDA_VISIBLE_DEVICES"] = "7"
+
+app = Flask(__name__)
 
 # 加载处理器和模型
-processor = AutoProcessor.from_pretrained(local_ckpt_path)
-model = AutoModelForSeq2SeqLM.from_pretrained(local_ckpt_path)
+local_ckpt_path = "/data/xiangyu/benchmarkModels/blip-image-captioning-large"
+pipe = pipeline("image-to-text", model=local_ckpt_path)
 
-def generate_caption(image_path):
+@app.route('/generate_caption', methods=['POST'])
+def generate_caption():
+    # 从请求中获取图像路径
+    data = request.json
+    image_path = data.get("image_path", "")
+    image_path = f"/home/xiangyu/project/multimodalEDABenchmarking/{image_path}"
+
+    print(f"""
+        This is the blip_captioning.py script.
+        The image path is: {image_path}
+    """)
+
     # 打开图像
     image = Image.open(image_path)
 
-    # 处理图像
-    inputs = processor(images=image, return_tensors="pt")
+    # 使用pipeline生成图像描述
+    caption = pipe(image)[0]['generated_text']
+    image.close()
+    return jsonify({"caption": caption})
 
-    # 生成图像描述
-    outputs = model.generate(**inputs)
-
-    # 解码生成的描述
-    caption = processor.decode(outputs[0], skip_special_tokens=True)
-    return caption
-
-# 示例用法
-image_path = "/home/xiangyu/project/multimodalEDABenchmarking/models/MiniGPT-4/examples/test.png"
-caption = generate_caption(image_path)
-print("生成的图像描述:", caption)
+if __name__ == "__main__":
+    app.run(debug=False, host='0.0.0.0', port=5010)

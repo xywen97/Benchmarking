@@ -1,4 +1,4 @@
-from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v
+from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning
 import json
 import base64
 
@@ -127,7 +127,14 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
     '''
     images = []
     if not is_multi_modal:
-        pass
+        for image_name in image_item:
+            try:
+                print(image_name)
+                image_caption = image_captioning(image_path=image_name)
+                print(image_caption)
+            except Exception as e:
+                print(f"An error occurred while generating image caption: {e}")
+        
     elif is_multi_modal == "type_base64":
         
         for image_name in image_item:

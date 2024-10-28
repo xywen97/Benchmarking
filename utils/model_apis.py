@@ -14,7 +14,6 @@ def image_captioning(image_path=None):
     
     if image_path is not None:
         data = json.dumps({"image_path": image_path})
-        print(f"data: {data}")
         response = requests.post(url, headers=headers, data=data)
         if response.status_code == 200:
             return response.json()
@@ -24,7 +23,7 @@ def image_captioning(image_path=None):
         return "Error: No image path provided"
 
 
-def query_llama2_7b(prompt, images=None):
+def query_llama2_7b(prompt, images=None, image_captions=None):
     url = 'http://127.0.0.1:5000/generate'
     headers = {'Content-Type': 'application/json'}
     data = json.dumps({"prompt": prompt})
@@ -35,7 +34,7 @@ def query_llama2_7b(prompt, images=None):
     else:
         return "Error: " + str(response.status_code)
 
-def query_llama2_13b(prompt, images=None):
+def query_llama2_13b(prompt, images=None, image_captions=None):
     url = 'http://127.0.0.1:5002/generate'
     headers = {'Content-Type': 'application/json'}
     data = json.dumps({"prompt": prompt})
@@ -46,7 +45,7 @@ def query_llama2_13b(prompt, images=None):
     else:
         return "Error: " + str(response.status_code)
     
-def query_llama3_8b_instruct(prompt, images=None):
+def query_llama3_8b_instruct(prompt, images=None, image_captions=None):
     url = 'http://127.0.0.1:5003/generate'
     headers = {'Content-Type': 'application/json'}
     data = json.dumps({"prompt": prompt})
@@ -57,7 +56,7 @@ def query_llama3_8b_instruct(prompt, images=None):
     else:
         return "Error: " + str(response.status_code)
     
-def query_mistrial_7b(prompt, images=None):
+def query_mistrial_7b(prompt, images=None, image_captions=None):
     url = 'http://127.0.0.1:5001/generate'
     headers = {'Content-Type': 'application/json'}
     data = json.dumps({"prompt": prompt})
@@ -68,7 +67,7 @@ def query_mistrial_7b(prompt, images=None):
     else:
         return "Error: " + str(response.status_code)
     
-def query_gpt35(prompt, images=None):
+def query_gpt35(prompt, images=None, image_captions=None):
     openai_api_key = api_key
     openai_api_base = base_url
     client = OpenAI(api_key=openai_api_key, base_url=openai_api_base)
@@ -87,7 +86,7 @@ def query_gpt35(prompt, images=None):
     return llm_outputs
 
 
-def query_gpt4v(prompt, images=None):
+def query_gpt4v(prompt, images=None, image_captions=None):
     print("We are using gpt 4v")
     openai_api_key = api_key
     openai_api_base = base_url
@@ -182,7 +181,7 @@ def create_payload(images, prompt: str, model="gpt-4-vision-preview", max_tokens
         "max_tokens": max_tokens
     }
 
-def query_gpt4o(prompt, images=None):
+def query_gpt4o(prompt, images=None, image_captions=None):
     openai_api_key = api_key
     openai_api_base = base_url
 
@@ -246,7 +245,7 @@ def query_gpt4o(prompt, images=None):
 
     return llm_outputs
 
-def query_gpt4_turbo(prompt, images=None):
+def query_gpt4_turbo(prompt, images=None, image_captions=None):
     print("we are using GPT-4_turbo")
 
     openai_api_key = api_key
@@ -313,7 +312,7 @@ def query_gpt4_turbo(prompt, images=None):
     return llm_outputs
 
 
-def query_gpt4(prompt, images=None):
+def query_gpt4(prompt, images=None, image_captions=None):
     print("we are using GPT-4")
 
     openai_api_key = api_key

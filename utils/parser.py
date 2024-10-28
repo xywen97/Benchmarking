@@ -126,12 +126,13 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
     Load images correspondingly
     '''
     images = []
+    image_captions = []
     if not is_multi_modal:
         for image_name in image_item:
             try:
-                print(image_name)
+                print("### Image captioning...")
                 image_caption = image_captioning(image_path=image_name)
-                print(image_caption)
+                image_captions.append(image_caption['caption'])
             except Exception as e:
                 print(f"An error occurred while generating image caption: {e}")
         
@@ -160,8 +161,16 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
             "blank": """Filling in blanks question. Please answer in Json format and return Json object only. The response format should be: {{"answer": it should be a number/yes/no/not a sentence, "explanation": no more than 2 sentences for explanation on the answer}}""".strip(),
             "single": """Single choice question. Please answer in Json format and return Json object only. The response format should be: {{"answer": it should be a/b/c/d, "explanation": no more than 2 sentences for explanation on the answer}}"""
         }
-        entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
-        print(f"QUESTION: {question_item[i]}")
+
+        image_captions_hint = ",".join(image_captions)
+
+        if not is_multi_modal:
+            # use the image captions as the additional cues for answering this question
+            entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type] + " You may refer to the cues that extracted from several provided images: " + image_captions_hint 
+        else:
+            entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
+        
+        print(f"QUESTION: {entire_question}")
         
         for attempt in range(3):
             try:

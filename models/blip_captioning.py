@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # 加载处理器和模型
 local_ckpt_path = "/data/xiangyu/benchmarkModels/blip-image-captioning-large"
-pipe = pipeline("image-to-text", model=local_ckpt_path)
+pipe = pipeline("image-to-text", model=local_ckpt_path, device=0)  # 指定使用CUDA设备
 
 @app.route('/generate_caption', methods=['POST'])
 def generate_caption():

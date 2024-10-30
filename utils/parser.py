@@ -193,6 +193,8 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
                         break
                     except json.JSONDecodeError:
                         print("Failed to decode JSON from response.")
+                        answer_preds.append("None")
+                        explanation_preds.append("None")
             except Exception as e:
                 print(f"Attempt {attempt + 1} failed with error: {e}")
         else:

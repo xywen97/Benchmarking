@@ -5,17 +5,19 @@ from transformers import AutoTokenizer
 import os
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "7"
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 app = Flask(__name__)
 
 # Load your model and tokenizer
-model_path = "meta-llama/Llama-2-7b-chat-hf"
+model_path = "/data/xiangyu/benchmarkModels/llama-2-7b-chat-hf"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = pipeline(
     "text-generation",
     model=model_path,
     torch_dtype=torch.float16,
-    device_map="auto"
+    # device_map="auto"
+    device=device
 )
 
 @app.route('/generate', methods=['POST'])
@@ -25,16 +27,18 @@ def generate_text():
     prompt = data.get("prompt", "")
 
     print(f"""
-        This is the llama_2_7b_chat_hf.py script.
+        This is the llama_2_13b_chat_hf.py script.
         The prompt is: {prompt}
     """)
-
+    
     prompt = [
         # {"role": "system", "content": "You are math assistant. You can help with math problems."},
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": prompt},
     ]
-    
+
+    print(prompt)
+
     # Generate text
     response = model(
         prompt, 
@@ -43,10 +47,11 @@ def generate_text():
         num_return_sequences=1, 
         eos_token_id=tokenizer.eos_token_id,
         truncation=True, 
-        max_length=512,
+        max_length=1024,
         temperature=0.7,
     )
 
+    print(response)
     response = response[0]['generated_text'][-1]['content']
     return jsonify(response)
 

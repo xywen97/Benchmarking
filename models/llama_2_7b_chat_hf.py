@@ -27,7 +27,7 @@ def generate_text():
     prompt = data.get("prompt", "")
 
     print(f"""
-        This is the llama_2_13b_chat_hf.py script.
+        This is the llama_2_7b_chat_hf.py script.
         The prompt is: {prompt}
     """)
     

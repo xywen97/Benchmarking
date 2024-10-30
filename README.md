@@ -13,8 +13,8 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 
 ### Text-only Model
 - [x] GPT-3.5-turbo
-- [ ] Llama2-7b-chat-hf
-- [ ] Llama2-13b-chat-hf
+- [x] Llama2-7b-chat-hf
+- [x] Llama2-13b-chat-hf
 - [ ] Llama3-8b-instruct
 - [ ] mistrial-7b
 

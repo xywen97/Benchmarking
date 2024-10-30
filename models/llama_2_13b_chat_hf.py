@@ -16,7 +16,7 @@ model = pipeline(
     "text-generation",
     model=model_path,
     torch_dtype=torch.float16,
-    # device_map="auto"
+    # device_map="auto" 
     device=device
 )
 

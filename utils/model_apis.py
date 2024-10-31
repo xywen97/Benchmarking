@@ -243,6 +243,7 @@ def query_gpt4o(prompt, images=None, image_captions=None):
         )
         llm_outputs = llm_response.choices[0].message.content
 
+    print(llm_outputs)
     return llm_outputs
 
 def query_gpt4_turbo(prompt, images=None, image_captions=None):

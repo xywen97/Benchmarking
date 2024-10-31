@@ -132,6 +132,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
             try:
                 print("### Image captioning...")
                 image_caption = image_captioning(image_path=image_name)
+                print(f"extracted image caption: {image_caption['caption']}")
                 image_captions.append(image_caption['caption'])
             except Exception as e:
                 print(f"An error occurred while generating image caption: {e}")
@@ -141,6 +142,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
         for image_name in image_item:
             try:
                 image = load_image_base64(image_name)
+                print(f"load image: {image_name}")
                 images.append(image)
             except FileNotFoundError:
                 print(f"Image {image_name} not found.")

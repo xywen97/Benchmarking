@@ -7,20 +7,33 @@ def compute_acc(data):
     total_count = 0
     comparison_results = {}
 
-    original_data = data.get("original_data", {})
-    answers = original_data.get("answers", [])
-    predictions = data.get("answer_preds", [])
-    
-    for i, (answer, prediction) in enumerate(zip(answers, predictions)):
-        key = f"question_{i}"
-        comparison_results[key] = {
-            "gt_answer": answer,
-            "pred_answer": prediction,
-            "is_correct": answer == prediction
-        }
-        if answer == prediction:
-            correct_count += 1
-        total_count += 1
+    for key in data.keys():
+        current_data = data[key]
+        # original_data = data.get("original_data", {})
+        answers = current_data.get("answer", [])
+        predictions = current_data.get("answer_preds", [])
+        
+        acc_per_question_total_count = 0
+        acc_per_question_correct_count = 0
+
+        current_comparison_results = {}
+
+        for i, (answer, prediction) in enumerate(zip(answers, predictions)):
+            question_key = f"question_{i}"
+            current_comparison_results[question_key] = {
+                "gt_answer": answer,
+                "pred_answer": prediction,
+                "is_correct": answer.lower() == prediction.lower()
+            }
+            if answer == prediction:
+                correct_count += 1
+                acc_per_question_correct_count += 1
+            total_count += 1
+            acc_per_question_total_count += 1
+        
+        acc_per_question = acc_per_question_correct_count/acc_per_question_total_count if acc_per_question_total_count != 0 else 0
+        current_comparison_results["accuracy"] = acc_per_question
+        comparison_results[key] = current_comparison_results
 
     if total_count == 0:
         return 0.0, comparison_results
@@ -81,144 +94,184 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
     if field.lower() not in ['architecture', 'backend', 'general', 'netlist', 'rtl', 'spec']:
         raise ValueError(f"Field '{field}' is not recognized. Please choose from 'architecture', 'backend', 'general', 'netlist', 'rtl', 'spec'.")
     
-    data = raw_data[f"{field}_0"]
+    field_responses = {}
 
-    statement_item = data['statement']
-    image_item = data['images']
-    question_item = data['questions']
-    question_type_item = data['question_types']
-    answer_item = data['answers']
-    explanation_item = data['explanations']
-    modality_item = data['modalities']
-    difficulty_item = data['difficulties']
-    ability_item = data['abilities']
-    source_item = data['source']
+    for key in raw_data.keys():
+        data = raw_data[key]
 
-    '''
-    Check if the elements in each item is full filled
-    '''
-    if not (len(question_item) == len(question_type_item) == len(answer_item) == len(explanation_item) == len(modality_item) == len(difficulty_item) == len(ability_item)):
-        raise ValueError("Mismatch in the number of items: "
-                         f"questions({len(question_item)}), "
-                         f"question_types({len(question_type_item)}), "
-                         f"answers({len(answer_item)}), "
-                         f"explanations({len(explanation_item)}), "
-                         f"modalities({len(modality_item)}), "
-                         f"difficulties({len(difficulty_item)}), "
-                         f"abilities({len(ability_item)})")
+        # data = raw_data[f"{field}_0"]
+
+        statement_item = data['statement']
+        image_item = data['images']
+        question_item = data['questions']
+        question_type_item = data['question_types']
+        answer_item = data['answers']
+        explanation_item = data['explanations']
+        modality_item = data['modalities']
+        difficulty_item = data['difficulties']
+        ability_item = data['abilities']
+        source_item = data['source']
+
+        '''
+        Check if the elements in each item is full filled
+        '''
+        if not (len(question_item) == len(question_type_item) == len(answer_item) == len(explanation_item) == len(modality_item) == len(difficulty_item) == len(ability_item)):
+            raise ValueError("Mismatch in the number of items: "
+                            f"questions({len(question_item)}), "
+                            f"question_types({len(question_type_item)}), "
+                            f"answers({len(answer_item)}), "
+                            f"explanations({len(explanation_item)}), "
+                            f"modalities({len(modality_item)}), "
+                            f"difficulties({len(difficulty_item)}), "
+                            f"abilities({len(ability_item)})")
 
 
-    
-    print("Testing: ")
-    print(f"This question is from {source_item}")
-    
-    '''
-    Choose candidate models
-    '''
-    query_model = choose_model(model_name.lower())
-
-    '''
-    Determine if the model supports multi-modal reasoning
-    '''
-    is_multi_modal = check_if_multi_modal(model_name)
-
-    '''
-    Load images correspondingly
-    '''
-    images = []
-    image_captions = []
-    if not is_multi_modal:
-        for image_name in image_item:
-            try:
-                print("### Image captioning...")
-                image_caption = image_captioning(image_path=image_name)
-                print(f"extracted image caption: {image_caption['caption']}")
-                image_captions.append(image_caption['caption'])
-            except Exception as e:
-                print(f"An error occurred while generating image caption: {e}")
-        
-    elif is_multi_modal == "type_base64":
-        
-        for image_name in image_item:
-            try:
-                image = load_image_base64(image_name)
-                print(f"load image: {image_name}")
-                images.append(image)
-            except FileNotFoundError:
-                print(f"Image {image_name} not found.")
-    else:
-        pass
-
-    '''
-    Query model for getting answers
-    '''
-    answer_preds = []
-    explanation_preds = []
-
-    print(f"STATEMENT: {statement_item}")
-    print()
-    for i in range(len(question_item)):
-        question_type = question_type_item[i]
-        prompt_mapping = {
-            "blank": """Filling in blanks question. Please answer in Json format and return Json object only. The response format should be: {{"answer": it should be a number/yes/no/not a sentence, "explanation": no more than 2 sentences for explanation on the answer}}""".strip(),
-            "single": """Single choice question. Please answer in Json format and return Json object only. The response format should be: {{"answer": it should be a/b/c/d, "explanation": no more than 2 sentences for explanation on the answer}}"""
-        }
-
-        image_captions_hint = ",".join(image_captions)
-
-        if not is_multi_modal:
-            # use the image captions as the additional cues for answering this question
-            entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type] + " You may refer to the cues that extracted from several provided images: " + image_captions_hint 
-        else:
-            entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
-        
-        print(f"QUESTION: {entire_question}")
-        
-        for attempt in range(3):
-            try:
-                response = query_model(entire_question, images)
-                if response:
-                    # print(f"Response received: {response}")
-                    try:
-                        # 尝试将响应解析为JSON对象
-                        # 处理响应中包含的json``` ```的情况
-                        if response.startswith("```json") and response.endswith("```"):
-                            response = response[7:-3].strip()
-                        # print(response)
-                        response_data = json.loads(response)
-                        answer_pred = response_data.get("answer", "No answer found")
-                        explanation_pred = response_data.get("explanation", "No explanation found")
-                        print(f"Extracted Answer: {answer_pred}")
-                        print(f"Extracted Explanation: {explanation_pred}")
-                        answer_preds.append(str(answer_pred))
-                        explanation_preds.append(explanation_pred)
-                        break
-                    except json.JSONDecodeError:
-                        print("Failed to decode JSON from response.")
-                        answer_preds.append("None")
-                        explanation_preds.append("None")
-            except Exception as e:
-                print(f"Attempt {attempt + 1} failed with error: {e}")
-        else:
-            print("All attempts to query the model failed.")
-        
-        print("#" * 100)
+        print("###########################################")
+        print(f"# We are now benchmarking {model_name}...        #")
+        print(f"# This question is from {source_item}...      #")
+        print(f"This is QESTION: {key} for this filed...      #")
+        print("###########################################")
         print()
         
-    returned_response = {
-        "original_data": {
-            "statement": statement_item,
-            "questions": question_item,
-            "question_types": question_type_item,
-            "answers": answer_item,
-            "explanations": explanation_item,
-            "modalities": modality_item,
-            "difficulties": difficulty_item,
-            "abilities": ability_item,
-            "source": source_item
-        },
-        "answer_preds": answer_preds,
-        "explanation_preds": explanation_preds
-    }
+        '''
+        Choose candidate models
+        '''
+        query_model = choose_model(model_name.lower())
 
-    return returned_response
+        '''
+        Determine if the model supports multi-modal reasoning
+        '''
+        is_multi_modal = check_if_multi_modal(model_name)
+
+        '''
+        Load images correspondingly
+        '''
+        images = []
+        image_captions = []
+        if not is_multi_modal:
+            for image_name in image_item:
+                try:
+                    print("### Image captioning...")
+                    image_caption = image_captioning(image_path=image_name)
+                    print(f"extracted image caption: {image_caption['caption']}")
+                    image_captions.append(image_caption['caption'])
+                except Exception as e:
+                    print(f"An error occurred while generating image caption: {e}")
+            
+        elif is_multi_modal == "type_base64":
+            
+            for image_name in image_item:
+                try:
+                    image = load_image_base64(image_name)
+                    print(f"load image: {image_name}")
+                    images.append(image)
+                except FileNotFoundError:
+                    print(f"Image {image_name} not found.")
+        else:
+            pass
+        
+        print()
+
+        '''
+        Query model for getting answers
+        '''
+        answer_preds = []
+        explanation_preds = []
+        raw_preds = []
+
+        # print(f"STATEMENT: {statement_item}")
+        # print()
+        for i in range(len(question_item)):
+            question_type = question_type_item[i]
+            prompt_mapping = {
+                "blank": """Filling in blanks question. Please answer in Json format and return Json object only. The response format should be: {{"answer": it should be a number/yes/no/not a sentence, "explanation": no more than 3 sentences for explanation on your thought to give the answer.}}""".strip(),
+                "single": """Single choice question. Please answer in Json format and return Json object only. The response format should be: {{"answer": it should be a/b/c/d, "explanation": no more than 3 sentences for explanation on your thought to give the answer.}}""".strip(),
+            }
+
+            if question_type not in prompt_mapping.keys():
+                prompt_mapping[question_type] = """
+                    Answer this question in Json format and return Json object only. The response format should be {{"answer": your answer to this question, "explanation": no more than 3 sentences for explanation on your thought to give the answer.
+                """.strip()
+
+
+            image_captions_hint = ",".join(image_captions)
+
+            if not is_multi_modal:
+                # use the image captions as the additional cues for answering this question
+                entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type] + " You may refer to the cues that extracted from several provided images: " + image_captions_hint 
+            else:
+                entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
+            
+            print(f"QUESTION: {entire_question}")
+            
+            for attempt in range(3):
+                try:
+                    response = query_model(entire_question, images)
+                    if response:
+                        # print(f"Response received: {response}")
+                        try:
+                            # 尝试将响应解析为JSON对象
+                            # 处理响应中包含的json``` ```的情况
+                            if response.startswith("```json") and response.endswith("```"):
+                                response = response[7:-3].strip()
+                            # print(response)
+                            response_data = json.loads(response)
+                            answer_pred = response_data.get("answer", "No answer found")
+                            explanation_pred = response_data.get("explanation", "No explanation found")
+                            print(f"--> Extracted Answer: {answer_pred}")
+                            print(f"--> Extracted Explanation: {explanation_pred}")
+                            answer_preds.append(str(answer_pred))
+                            explanation_preds.append(explanation_pred)
+                            raw_preds.append("None")
+                            break
+                        except json.JSONDecodeError:
+                            print("Failed to decode JSON from response.")
+                            if attempt == 2:
+                                answer_preds.append("None")
+                                explanation_preds.append("None")
+                                raw_preds.append(response)
+                                print("Appending raw data...")
+                            
+                except Exception as e:
+                    print(f"Attempt {attempt + 1} failed with error: {e}")
+            else:
+                print("All attempts to query the model failed.")
+            
+            print("#" * 100)
+            print()
+            
+        # returned_response = {
+        #     "original_data": {
+        #         "statement": statement_item,
+        #         "questions": question_item,
+        #         "question_types": question_type_item,
+        #         "answers": answer_item,
+        #         "explanations": explanation_item,
+        #         "modalities": modality_item,
+        #         "difficulties": difficulty_item,
+        #         "abilities": ability_item,
+        #         "source": source_item
+        #     },
+        #     "answer_preds": answer_preds,
+        #     "explanation_preds": explanation_preds
+        # }
+
+        returned_response = {
+            "statement": statement_item,
+            "question": question_item,
+            "question_type": question_type_item,
+            "answer": answer_item,
+            "explanation": explanation_item,
+            "difficulty": difficulty_item,
+            "ability": ability_item,
+            "image": image_item,
+            "modality": modality_item,
+            "source": source_item,
+            "answer_preds": answer_preds,
+            "explanation_preds": explanation_preds,
+            "raw_preds": raw_preds
+        }
+
+        field_responses[key] = returned_response
+
+    return field_responses

@@ -107,7 +107,7 @@ def query(model_name: str, text: str, img: Optional[str]) -> str:
 if __name__ == '__main__':
     model_name = 'MiniGPT-4'
     text = 'We design new mugs shown in the image. Can you help us write anadvertisement?'
-    image_path = "examples/test1.png"
+    image_path = "examples/test.png"
     img = image_path
     print("Response: ", query(model_name, text, img))
 

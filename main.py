@@ -12,21 +12,26 @@ if __name__ == "__main__":
     '''
     load test example for testing
     '''
-    data_path = "data/tmp.json"
-    image_path = "data/tmp"
+    data_path = "data/spec.json"
+    image_path = "data/spec"
     data = load_data(data_path, image_path)
 
     '''
     benchmarking the model using one question
     '''
-    field = "general"
+    field = "spec"
     # available models:
     # llama2_7b, llama2_13b, llama3_8b_instruct, mistrial_7b, gpt35, gpt4o, gpt4, gpt4_turbo, gpt4v
-    return_data = benchmarking(data, field, model_name='llama2_13b')
+    return_data = benchmarking(data, field, model_name='gpt4o')
+
+    with open(f"{field}.json", 'w', encoding='utf-8') as f:
+        json.dump(return_data, f, ensure_ascii=False, indent=4)
+
     results, comparisons = compute_acc(return_data)
 
-    print(f"results: {results}")
-    print(json.dumps({"comparison": comparisons}, ensure_ascii=False, indent=4))
+    with open(f"results_and_comparisons_{field}.json", 'w', encoding='utf-8') as f:
+        json.dump({f"Accuracy": results, "Comparison": comparisons}, f, ensure_ascii=False, indent=4)
+    
     '''
     benchmarking the model using batch of questions
     '''

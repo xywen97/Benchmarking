@@ -129,7 +129,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
         print("###########################################")
         print(f"# We are now benchmarking {model_name}...        #")
         print(f"# This question is from {source_item}...      #")
-        print(f"This is QESTION: {key} for this filed...      #")
+        print(f"This is QESTION: {key} for this filed...  #")
         print("###########################################")
         print()
         

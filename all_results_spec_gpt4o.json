@@ -44,18 +44,18 @@
         "source": "datasheet",
         "answer_preds": [
             "b",
-            "True",
+            "Yes",
             "10"
         ],
         "explanation_preds": [
-            "The AD580's low quiescent current of 1.5 mA maximum makes it ideal for CMOS and other low power applications, as stated in the product highlights.",
-            "The AD580K operates within the specified temperature range of 0°C to +70°C, and its output voltage change is rated at 40 ppm/°C. At 50°C, the output voltage will remain stable within the specified limits.",
-            "The line regulation is given as 2 mV/V for the AD580L. The input voltage varies from 5V to 10V, which is a change of 5V. Therefore, the total error due to line regulation is 2 mV/V * 5 V = 10 mV."
+            "The document highlights the low quiescent current of the AD580, making it ideal for CMOS and other low power applications. This ensures minimal power consumption, which is crucial for CMOS technology.",
+            "The AD580K has a temperature coefficient of 40 ppm/°C, meaning it has excellent temperature stability. At 50°C, which is within its specified operating range of 0°C to +70°C, the output voltage will remain stable with minimal variation.",
+            "The line regulation is given as 2 mV/V for the AD580L. The input voltage change is from 5V to 10V, which is a 5V change. Therefore, the total error is 2 mV/V * 5V = 10 mV."
         ],
         "raw_preds": [
-            null,
-            null,
-            null
+            "None",
+            "None",
+            "None"
         ]
     },
     "spec_1": {
@@ -103,18 +103,18 @@
         "source": "datasheet",
         "answer_preds": [
             "c",
-            "The AD580 maintains a stable voltage reference by using a bandgap reference design. This compensates for the temperature coefficient of silicon transistor base-emitter voltages, combining a positive and a negative temperature coefficient to achieve a stable output.",
+            "The AD580 maintains a stable voltage reference by using a bandgap reference circuit that compensates for temperature variations. This circuit combines two voltages: one with a negative temperature coefficient and another with a positive temperature coefficient, resulting in a stable output voltage with minimal temperature dependence.",
             "1.75"
         ],
         "explanation_preds": [
-            "The maximum allowable input voltage for the AD580 device is 40 V, as stated in the Absolute Maximum Ratings table on the provided page.",
-            "The AD580 uses the bandgap reference concept to produce a low temperature coefficient voltage. By summing a compensating voltage with the base-emitter voltage of transistors, it achieves a constant output across temperature variations.",
-            "The document states that the AD580 guarantees a maximum deviation of 1.75 mV over the 0°C to 70°C temperature range, which corresponds to 10 ppm/°C. This is explicitly mentioned under Figure 7, indicating the voltage change is 1.75 mV."
+            "The maximum allowable input voltage for the AD580 device is listed as 40 V in the Absolute Maximum Ratings table on the provided page.",
+            "The AD580 uses the bandgap reference concept, which involves summing voltages with opposite temperature coefficients to achieve a constant output. This compensation mechanism ensures the output voltage remains stable across temperature changes, as shown in the theory of operation section.",
+            "The AD580 guarantees a maximum deviation of 1.75 mV over the 0°C to 70°C temperature range, which is equivalent to 10 ppm/°C average as shown in the specification document."
         ],
         "raw_preds": [
-            null,
-            null,
-            null
+            "None",
+            "None",
+            "None"
         ]
     },
     "spec_2": {
@@ -162,17 +162,17 @@
         "answer_preds": [
             "b",
             "3",
-            "The low power consumption of the AD580, requiring only 1 mA quiescent current, makes it highly suitable for microprocessor-based systems by minimizing power usage and heat generation. This is particularly beneficial for systems that operate from a single, low voltage supply, as it allows for efficient power management. The reduced power consumption also complements the compact size and integration requirements of modern microprocessor applications."
+            "The low power consumption feature of the AD580, with a quiescent current of 1 mA, makes it well-suited for microprocessor-based systems."
         ],
         "explanation_preds": [
-            "The AD580 is used to provide a stable voltage reference for the AD7542 12-bit DAC system. It outputs a calibrated 2.500 V to ensure precision and minimize user trim requirements. This stable reference is critical for the accurate operation of DAC systems.",
-            "The temperature coefficient is 40 ppm/°C. For a 30°C change, the voltage change is 40 ppm/°C * 30°C = 1200 ppm. For a 2.5V reference, this is 2.5V * 1200 ppm = 3 mV.",
-            "The AD580's low power consumption is aligned with CMOS-type devices, which are prevalent in microprocessor-based systems, helping to maintain low overall power usage. It operates efficiently within the constraints of a single 5 V supply, eliminating the need for additional power sources. This makes it an ideal choice for compact, power-sensitive applications."
+            "The AD580 is used as a reference for the AD7542 DAC system to provide a stable voltage reference. It outputs a calibrated 2.500 V, which is crucial for precise operation in data converters. This stable voltage minimizes user trim requirements and ensures accurate DAC functionality.",
+            "The temperature coefficient is 40 ppm/°C. For a 30°C change, the change in ppm is 40 * 30 = 1200 ppm. The nominal voltage is 2.5V, so the change is 2.5V * 1200 ppm = 3 mV.",
+            "Its low power requirement is comparable to CMOS-type devices, allowing for efficient operation without excessive power demands. This feature supports the integration of the AD580 in systems that prioritize minimal energy usage, complementing the trend towards smaller, more efficient components."
         ],
         "raw_preds": [
-            null,
-            null,
-            null
+            "None",
+            "None",
+            "None"
         ]
     },
     "spec_3": {
@@ -224,14 +224,14 @@
             "1150"
         ],
         "explanation_preds": [
-            "The document states that the AC5 chipset supports VoDSL (VoIP and VoATM) as well as Voice-over ADSL (VoADSL).",
-            "The diagram shows that the TNETD5800 transceiver connects directly to the TNETD5080, which is labeled as the 'Codec.' This connection is explicitly illustrated in the functional diagram provided.",
-            "The complete system consumes 1.3 W per modem, which is 1300 mW. Subtracting the 150 mW used by the line transceiver, the remaining power for other components is 1150 mW."
+            "The document states that the AC5 chipset supports VoDSL (VoIP and VoATM) and embedded voice-over ADSL (VoADSL). This indicates support for both VoDSL and VoADSL capabilities.",
+            "The diagram shows that the TNETD5800 transceiver connects directly to the TNETD5080 codec. This connection is indicated by the data interface (Data I/F) linking the two components.",
+            "The complete system consumes 1.3 W (1300 mW) per modem. Subtracting the 150 mW consumed by the line transceiver, the remaining components use 1150 mW."
         ],
         "raw_preds": [
-            null,
-            null,
-            null
+            "None",
+            "None",
+            "None"
         ]
     },
     "spec_4": {
@@ -278,18 +278,18 @@
         "source": "datasheet",
         "answer_preds": [
             "c",
-            "The device is not intended for use in military applications.",
-            "13"
+            "The device is not intended for military applications.",
+            "12"
         ],
         "explanation_preds": [
-            "The document emphasizes that buyers are responsible for compliance with all legal and regulatory requirements when using TI products in automotive applications. It mentions the necessity for compliance with ISO/TS 16949 standards, indicating a focus on legal and regulatory adherence.",
-            "Only products explicitly designated by TI as military-grade are intended for military/aerospace applications. Use of non-designated products for such applications is at the buyer's own risk and responsibility.",
-            "The document lists URLs corresponding to unique applications under the 'Applications' section. Counting these URLs gives a total of 13 unique applications."
+            "The document emphasizes that TI products used in automotive applications must meet legal and regulatory requirements, and buyers are responsible for compliance with these requirements. It explicitly states that TI is not responsible for any failures to meet such requirements.",
+            "TI products are not intended for military environments unless specifically designated as military-grade. Therefore, non-designated products should not be used in such applications.",
+            "The document lists 12 unique URLs under the 'Applications' section, each corresponding to a unique application: Audio, Automotive, Broadband, Digital Control, Medical, Military, Optical Networking, Security, Telephony, Video & Imaging, Wireless."
         ],
         "raw_preds": [
-            null,
-            null,
-            null
+            "None",
+            "None",
+            "None"
         ]
     },
     "spec_5": {
@@ -338,17 +338,17 @@
         "answer_preds": [
             "b",
             "3.625",
-            "The thermal resistance decreases as the flow rate increases."
+            "The thermal resistance decreases as flow rate increases."
         ],
         "explanation_preds": [
-            "The AD22100 is described as a 'Voltage Output Temperature Sensor' with signal conditioning, indicating its primary function is temperature sensing. The general description confirms it operates over a temperature range for various applications. Thus, the primary function is a temperature sensor.",
-            "Plug T_A = 100°C into the transfer function V_OUT = (5/5) × [1.375 V + (22.5 mV/°C) × 100°C]. This simplifies to V_OUT = 1.375 V + 2.25 V = 3.625 V.",
-            "The performance curves show a downward trend in thermal resistance with increasing flow rate. This indicates improved heat dissipation efficiency at higher flow rates, leading to reduced thermal resistance."
+            "The AD22100 is described as a 'Voltage Output Temperature Sensor with Signal Conditioning'. It is used for measuring temperature and provides an output voltage proportional to the temperature. This clearly indicates its primary function is as a temperature sensor.",
+            "Using the transfer function V_OUT = (V+/5 V) × [1.375 V + (22.5 mV/°C) × T_A], substitute V+ = 5 V and T_A = 100°C. Calculate V_OUT = (5/5) × [1.375 + 0.0225 × 100] = 3.625 V.",
+            "The performance curve for thermal resistance vs. flow rate shows a downward trend indicating that as the flow rate increases, the thermal resistance decreases. This relationship suggests improved heat dissipation with higher flow rates."
         ],
         "raw_preds": [
-            null,
-            null,
-            null
+            "None",
+            "None",
+            "None"
         ]
     },
     "spec_6": {
@@ -396,18 +396,18 @@
         "source": "datasheet",
         "answer_preds": [
             "b",
-            "1.513",
+            "1.5125",
             "60"
         ],
         "explanation_preds": [
-            "The document states that the resistor Rf is a temperature-dependent resistor, which indicates that its function is to provide temperature compensation, making the output voltage proportional to temperature.",
-            "The output voltage is proportional to the supply voltage. Increasing the supply from 5.0 V to 5.5 V results in a 10% increase in output voltage. 1.375 V * 1.10 = 1.513 V.",
-            "According to Table 1, for a moving air environment, the response time is 60 seconds and the corresponding thermal resistance (θja) for an aluminum block is 60°C/Watt."
+            "The resistor Rf is described as a temperature-dependent resistor which implies that it provides temperature compensation by varying its resistance with temperature changes.",
+            "The output voltage is proportional to the supply voltage. Increasing the supply from 5.0 V to 5.5 V results in an output voltage of (5.5/5.0) * 1.375 V = 1.5125 V.",
+            "According to Table 1, the time constant θja for an aluminum block is 60 °C/Watt. The response time given for the moving air environment matches this value."
         ],
         "raw_preds": [
-            null,
-            null,
-            null
+            "None",
+            "None",
+            "None"
         ]
     },
     "spec_7": {
@@ -455,18 +455,18 @@
         "source": "datasheet",
         "answer_preds": [
             "b",
-            "1.375V",
+            "1.375",
             "2.5"
         ],
         "explanation_preds": [
-            "The AD22100 temperature sensor features a high level, low impedance output as mentioned in the features section of the document.",
-            "Using the given formula V_out = (V+ / 5V) x (1.375V + (22.5 mV/°C) x T_A), and substituting T_A = 0°C and V+ = 5V, the output voltage V_out simplifies to 1.375V since the temperature-dependent term becomes zero.",
-            "Using the transfer function V_out = (V+ / 5V) x (1.375V + (22.5 mV/°C) x T_A), and substituting V+ = 5V and T_A = 50°C, we calculate V_out = (5V / 5V) x (1.375V + (22.5 mV/°C x 50°C)) = 1.375V + 1.125V = 2.5V."
+            "The AD22100 features a high level, low impedance output as mentioned in the features section of the document. Dual-supply operation is not listed, it does not require external trimming, and it is suitable for automotive applications.",
+            "Substituting T_A = 0°C and V+ = 5V into the formula, V_out = (5V / 5V) x (1.375V + (22.5 mV/°C) x 0°C) results in V_out = 1.375V. The temperature coefficient term becomes zero since T_A = 0°C.",
+            "Using the transfer function V_out = (5V / 5V) x (1.375V + (22.5 mV/°C) x 50°C), we calculate V_out = 1.375V + 1.125V = 2.5V."
         ],
         "raw_preds": [
-            null,
-            null,
-            null
+            "None",
+            "None",
+            "None"
         ]
     },
     "spec_8": {
@@ -518,14 +518,14 @@
             "150"
         ],
         "explanation_preds": [
-            "According to the Pin Configurations section, Pin 3 in the TO-92 package is labeled as GND, which is a Ground Pin that must be connected to 0 V.",
-            "At high flow rates, the TO-92 package shows lower thermal resistance compared to the SOIC package as observed from the graph in Figure 6. This indicates better thermal efficiency for TO-92 at higher flow rates.",
-            "The maximum allowable junction temperature of the device is specified as 150°C in the absolute maximum ratings table. Since the supply voltage of 8 V is within the maximum rating of 10 V, the junction temperature limit remains 150°C."
+            "According to the Pin Configurations section for the TO-92 package, Pin 3 is labeled as GND and described as 'Ground Pin Must Be Connected to 0 V.'",
+            "Based on Figure 6, the TO-92 package exhibits lower thermal resistance compared to the SOIC package at high flow rates. This indicates better efficiency in dissipating heat under these conditions.",
+            "The maximum allowable junction temperature is specified directly in the document as 150°C. The supply voltage of 8 V is within the allowable range, so the specified junction temperature remains applicable under standard conditions."
         ],
         "raw_preds": [
-            null,
-            null,
-            null
+            "None",
+            "None",
+            "None"
         ]
     },
     "spec_9": {
@@ -573,18 +573,18 @@
         "source": "datasheet",
         "answer_preds": [
             "c",
-            "The output voltage Vout will increase by approximately 1.94 mV.",
-            "2.8125"
+            "The output voltage Vout will increase proportionally to the change in supply voltage.",
+            "2.0625"
         ],
         "explanation_preds": [
-            "RT in the AD22100 circuit is described as a temperature-dependent resistor whose resistance changes nearly linearly with temperature. This indicates that its function is to vary resistance with temperature.",
-            "The transfer function shows that Vout is proportional to the power supply voltage (Vs). A change from 5.0 V to 5.5 V results in a nominal output change of 193.75 mV, leading to an increase of 1.94 mV in output voltage due to the ratiometric behavior of the sensor.",
-            "The output voltage change is calculated using the formula Vout = (V+/5 V) × (1.375 V + 22.5 mV/°C × TA). For TA = 150°C, Vout = 5/5 × (1.375 + 22.5 × 150) = 4.1875 V. The variation from 25°C (1.375 V) to 150°C (4.1875 V) is 2.8125 V."
+            "RT in the AD22100 circuit is a temperature-dependent resistor, meaning its resistance varies with temperature. This change in resistance is used to produce a voltage proportional to temperature, making option C correct.",
+            "The transfer function Vout = (Vs/5 V) × (1.375 V + 22.5 mV/°C × TA) shows that Vout is directly proportional to the power supply voltage Vs. Increasing Vs from 5.0 V to 5.5 V will result in a proportional increase in Vout.",
+            "The output voltage formula is V_out = (V+/5V) * (1.375 V + 22.5 mV/°C * T_A). For T_A = 25°C, V_out = 1.375 V. For T_A = 150°C, V_out = (5/5) * (1.375 + 22.5 * 150) = 3.4375 V. The variation is 3.4375 V - 1.375 V = 2.0625 V."
         ],
         "raw_preds": [
-            null,
-            null,
-            null
+            "None",
+            "None",
+            "None"
         ]
     }
 }

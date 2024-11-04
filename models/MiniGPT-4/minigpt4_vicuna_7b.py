@@ -107,8 +107,13 @@ def generate_text():
             print(f"upload image: {i}, {img_paths[i]}")
             chat.upload_img(img_paths[i], chat_state, img_list)
 
-        print("encoding images...")
-        chat.encode_img(img_list)
+        print("encoding images...")        
+        for i in range(len(img_paths)):
+            print(f"encoding image: {i}")     
+            chat.encode_img(img_list)
+
+        for i in range(len(img_paths)):
+            print(type(img_list[i]))
 
         print("ask models....")
         chat.ask(text, chat_state)
@@ -141,8 +146,12 @@ def query(text: str, img_paths: Optional[str]) -> str:
         """
         for i in range(len(img_paths)):
             chat.upload_img(img_paths[i], chat_state, img_list)
+        
+        for i in range(len(img_paths)):
+            chat.encode_img(img_list)
 
-        chat.encode_img(img_list)
+        for i in range(len(img_paths)):
+            print(type(img_list[i]))
 
         chat.ask(text, chat_state)
 

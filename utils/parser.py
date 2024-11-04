@@ -1,4 +1,4 @@
-from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning
+from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b
 import json
 import base64
 
@@ -52,7 +52,8 @@ def choose_model(model_name):
         "gpt4o": query_gpt4o,
         "gpt4": query_gpt4,
         "gpt4_turbo": query_gpt4_turbo,
-        "gpt4v": query_gpt4v
+        "gpt4v": query_gpt4v,
+        "minigpt4_vicuna7b": query_minigpt4_vicuna7b
     }
     if model_name in model_mapping:
         return model_mapping[model_name]
@@ -69,7 +70,8 @@ def check_if_multi_modal(model_name):
         "gpt4o": "type_base64",
         "gpt4": "type_base64",
         "gpt4_turbo": "type_base64",
-        "gpt4v": "type_base64"
+        "gpt4v": "type_base64",
+        "minigpt4_vicuna7b": "type_raw"
     }
 
     return is_multi_mapping[model_name]
@@ -126,11 +128,12 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
                             f"abilities({len(ability_item)})")
 
 
-        print("###########################################")
-        print(f"# We are now benchmarking {model_name}...        #")
-        print(f"# This question is from {source_item}...      #")
-        print(f"This is QESTION: {key} for this filed...  #")
-        print("###########################################")
+        line_length = 50
+        print("#" * line_length)
+        print(f"# We are now benchmarking {model_name}...".ljust(line_length - 1) + "#")
+        print(f"# This question is from {source_item}...".ljust(line_length - 1) + "#")
+        print(f"# This is QUESTION: {key} for this field...".ljust(line_length - 1) + "#")
+        print("#" * line_length)
         print()
         
         '''
@@ -159,7 +162,6 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
                     print(f"An error occurred while generating image caption: {e}")
             
         elif is_multi_modal == "type_base64":
-            
             for image_name in image_item:
                 try:
                     image = load_image_base64(image_name)
@@ -167,6 +169,15 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
                     images.append(image)
                 except FileNotFoundError:
                     print(f"Image {image_name} not found.")
+        
+        elif is_multi_modal == "type_raw":
+            for image_name in image_item:
+                try:
+                    print(f"preparing raw image paths: {image_name}")
+                    images.append("/home/xiangyu/project/multimodalEDABenchmarking/" + image_name)
+                except Exception as e:
+                    print(f"An error occurred while preparing raw image paths: {e}")
+        
         else:
             pass
         

@@ -37,8 +37,6 @@ def generate_text():
         {"role": "user", "content": prompt},
     ]
 
-    print(prompt)
-
     # Generate text
     response = model(
         prompt, 

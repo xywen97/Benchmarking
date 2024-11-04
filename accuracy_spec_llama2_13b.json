@@ -1,56 +1,56 @@
 {
-    "Accuracy": 0.06666666666666667,
+    "Accuracy": 0.1,
     "Comparison": {
         "spec_0": {
             "question_0": {
                 "gt_answer": "B",
-                "pred_answer": "b",
+                "pred_answer": "B",
                 "is_correct": true
             },
             "question_1": {
                 "gt_answer": "Yes, because the temperature range for stable operation is up to +70°C, and 50°C is within this range. The device should maintain stable output voltage.",
-                "pred_answer": "Yes",
+                "pred_answer": "True",
                 "is_correct": false
             },
             "question_2": {
                 "gt_answer": "_10_",
-                "pred_answer": "10",
+                "pred_answer": "None",
                 "is_correct": false
             },
-            "accuracy": 0.0
+            "accuracy": 0.3333333333333333
         },
         "spec_1": {
             "question_0": {
                 "gt_answer": "(C) 40 V",
-                "pred_answer": "c",
+                "pred_answer": "A",
                 "is_correct": false
             },
             "question_1": {
                 "gt_answer": "The AD580 uses the bandgap voltage reference technique to maintain stability over temperature changes. By generating a compensating voltage (V1), it ensures that variations in base-emitter voltage are counteracted, maintaining a consistent output voltage.",
-                "pred_answer": "The AD580 maintains a stable voltage reference by using the bandgap voltage reference concept, which compensates for temperature variations. It combines a positive temperature coefficient voltage with the base-emitter voltage that has a negative temperature coefficient to achieve a near-zero temperature coefficient. This results in a stable output voltage across its operating temperature range.",
+                "pred_answer": "The AD580 maintains a stable voltage reference despite temperature variations within its operating range through the use of an internal temperature compensation circuit and a precision voltage reference.",
                 "is_correct": false
             },
             "question_2": {
                 "gt_answer": "1.75",
-                "pred_answer": "1.75",
-                "is_correct": true
+                "pred_answer": "None",
+                "is_correct": false
             },
-            "accuracy": 0.3333333333333333
+            "accuracy": 0.0
         },
         "spec_2": {
             "question_0": {
                 "gt_answer": "(B) To provide a stable voltage reference",
-                "pred_answer": "b",
+                "pred_answer": "B",
                 "is_correct": false
             },
             "question_1": {
                 "gt_answer": "1.2 mV",
-                "pred_answer": "3",
+                "pred_answer": "None",
                 "is_correct": false
             },
             "question_2": {
                 "gt_answer": "The low power consumption of the AD580 reduces the overall power requirements of the system, allowing it to operate effectively with limited power resources, which is ideal for microprocessor-based applications that may rely on battery power or have power constraints.",
-                "pred_answer": "The AD580's low power consumption of 1 mA quiescent current is ideal for microprocessor-based systems as it minimizes power demands and reduces heat generation, thereby improving efficiency and reliability.",
+                "pred_answer": "The low power consumption feature of the AD580 contributes to its suitability in microprocessor-based systems by allowing for a longer battery life and reduced heat dissipation, making it ideal for portable and mobile devices.",
                 "is_correct": false
             },
             "accuracy": 0.0
@@ -58,17 +58,17 @@
         "spec_3": {
             "question_0": {
                 "gt_answer": "(B) VoDSL and VoADSL",
-                "pred_answer": "b",
+                "pred_answer": "B",
                 "is_correct": false
             },
             "question_1": {
                 "gt_answer": "ARM7 Core",
-                "pred_answer": "TNETD5080",
+                "pred_answer": "None",
                 "is_correct": false
             },
             "question_2": {
                 "gt_answer": "1150 mW",
-                "pred_answer": "1150",
+                "pred_answer": "None",
                 "is_correct": false
             },
             "accuracy": 0.0
@@ -76,35 +76,35 @@
         "spec_4": {
             "question_0": {
                 "gt_answer": "C",
-                "pred_answer": "c",
+                "pred_answer": "C",
                 "is_correct": true
             },
             "question_1": {
                 "gt_answer": "The TI products should not be used in military environments unless specifically designated as such.",
-                "pred_answer": "The device is not intended for use in military environments.",
+                "pred_answer": "The device is not intended for military use",
                 "is_correct": false
             },
             "question_2": {
                 "gt_answer": "16",
-                "pred_answer": "12",
+                "pred_answer": "None",
                 "is_correct": false
             },
-            "accuracy": 0.0
+            "accuracy": 0.3333333333333333
         },
         "spec_5": {
             "question_0": {
                 "gt_answer": "B",
-                "pred_answer": "b",
-                "is_correct": true
+                "pred_answer": "A",
+                "is_correct": false
             },
             "question_1": {
                 "gt_answer": "2.925 V",
-                "pred_answer": "3.625",
+                "pred_answer": "None",
                 "is_correct": false
             },
             "question_2": {
                 "gt_answer": "The thermal resistance decreases as the flow rate increases. As more air flows over the device, it cools more efficiently, reducing thermal resistance.",
-                "pred_answer": "The thermal resistance decreases as the flow rate increases.",
+                "pred_answer": "{'thermal resistance changes as flow rate increases': 'The thermal resistance of the AD22100 device decreases as the flow rate increases, as indicated by the downward trend in the performance curves. This is because a higher flow rate allows for more efficient heat transfer, resulting in a lower thermal resistance. Additionally, the curve shows that the thermal resistance remains relatively constant at higher flow rates, indicating that the device is able to effectively dissipate heat at these flow rates.'}",
                 "is_correct": false
             },
             "accuracy": 0.0
@@ -112,17 +112,17 @@
         "spec_6": {
             "question_0": {
                 "gt_answer": "(B)",
-                "pred_answer": "b",
+                "pred_answer": "A",
                 "is_correct": false
             },
             "question_1": {
                 "gt_answer": "1.5125 V",
-                "pred_answer": "1.5125",
+                "pred_answer": "None",
                 "is_correct": false
             },
             "question_2": {
                 "gt_answer": "60 °C/Watt",
-                "pred_answer": "60",
+                "pred_answer": "None",
                 "is_correct": false
             },
             "accuracy": 0.0
@@ -130,17 +130,17 @@
         "spec_7": {
             "question_0": {
                 "gt_answer": "(B) High level, low impedance output",
-                "pred_answer": "b",
+                "pred_answer": "B",
                 "is_correct": false
             },
             "question_1": {
                 "gt_answer": "At T_A = 0°C and V+ = 5V, V_out = 1.375V",
-                "pred_answer": "1.375V",
+                "pred_answer": "None",
                 "is_correct": false
             },
             "question_2": {
                 "gt_answer": "V_out = 2.4875 V",
-                "pred_answer": "2.5",
+                "pred_answer": "None",
                 "is_correct": false
             },
             "accuracy": 0.0
@@ -148,8 +148,8 @@
         "spec_8": {
             "question_0": {
                 "gt_answer": "D",
-                "pred_answer": "d",
-                "is_correct": true
+                "pred_answer": "A",
+                "is_correct": false
             },
             "question_1": {
                 "gt_answer": "SOIC package is more efficient as it shows lower thermal resistance compared to TO-92 at high flow rates.",
@@ -158,28 +158,28 @@
             },
             "question_2": {
                 "gt_answer": "150°C",
-                "pred_answer": "150°C",
-                "is_correct": true
+                "pred_answer": "125",
+                "is_correct": false
             },
-            "accuracy": 0.3333333333333333
+            "accuracy": 0.0
         },
         "spec_9": {
             "question_0": {
                 "gt_answer": "C",
-                "pred_answer": "c",
+                "pred_answer": "C",
                 "is_correct": true
             },
             "question_1": {
                 "gt_answer": "The output voltage Vout will increase as the power supply voltage increases, according to the transfer function Vout = (V+/5 V) x (1.375 V + 22.5 mV/°C x TA), since V+ is part of the proportionality factor.",
-                "pred_answer": "The output voltage Vout will increase by approximately 1.94 mV.",
+                "pred_answer": "None",
                 "is_correct": false
             },
             "question_2": {
                 "gt_answer": "______5.2203 V______",
-                "pred_answer": "2.125",
+                "pred_answer": "None",
                 "is_correct": false
             },
-            "accuracy": 0.0
+            "accuracy": 0.3333333333333333
         }
     }
 }

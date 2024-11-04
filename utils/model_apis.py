@@ -22,6 +22,17 @@ def image_captioning(image_path=None):
     else:
         return "Error: No image path provided"
 
+def query_minigpt4_vicuna7b(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5004/generate'
+    headers = {'Content-Type': 'application/json'}
+    data = json.dumps({"prompt": prompt, "image_paths": images})
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return "Error: " + str(response.status_code)
+
 
 def query_llama2_7b(prompt, images=None, image_captions=None):
     url = 'http://127.0.0.1:5000/generate'

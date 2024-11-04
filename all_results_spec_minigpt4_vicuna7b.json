@@ -1,0 +1,59 @@
+{
+    "spec_0": {
+        "statement": "Based on the given AD580 specification document, answer the following questions.",
+        "question": [
+            "Which feature of the AD580 makes it ideal for CMOS applications? (A) High output voltage, (B) Low quiescent current, (C) High temperature stability, (D) High noise performance.",
+            "If the AD580K operates at a temperature of 50°C, can you infer if its output voltage will remain stable? Explain your reasoning.",
+            "Calculate the total error in millivolts for the AD580L device given the line regulation is 2 mV/V and the input varies from 5V to 10V."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "B",
+            "Yes, because the temperature range for stable operation is up to +70°C, and 50°C is within this range. The device should maintain stable output voltage.",
+            "_10_"
+        ],
+        "explanation": [
+            "The low quiescent current makes the AD580 ideal for energy-efficient applications like CMOS.",
+            "The AD580K is specified to operate with temperature stability for up to +70°C, which includes normal variations like 50°C, maintaining consistent voltage output.",
+            "The line regulation is 2 mV/V, with a 5V change in input. So, total error = 2 mV/V * 5 V = 10 mV."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "image": [
+            "data/spec/5962_8686101XA_page1.png"
+        ],
+        "modality": [
+            "text&image",
+            "text&image",
+            "text&image"
+        ],
+        "source": "datasheet",
+        "answer_preds": [
+            "None",
+            "Yes, the output voltage of AD580K will remain stable at a temperature of 50°C as it is designed to operate within a specified temperature range. The device's stability is ensured by the internal temperature compensation circuitry that adjusts the voltage in response to changes in temperature.",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "The AD580K operates within a specified temperature range and its internal temperature compensation circuitry adjusts the voltage in response to changes in temperature to maintain stability. This means that the output voltage will remain stable even if the temperature rises above the specified range.",
+            "None"
+        ],
+        "raw_preds": [
+            "​\n\n{\n\"answer\": \"B\",\n\"explanation\": \"The AD580 has low quiescent current, making it ideal for CMOS applications.\"\n}",
+            "None",
+            "​\n\nAnswer: {{\"answer\": 0.0125, \"explanation\": \"The total error in millivolts for the AD580L device given the line regulation of 2 mV/V and the input varying from 5V to 10V is approximately 0.0125. This error value is calculated by taking the maximum difference between the desired voltage and the actual voltage (10V - 5V = 5V) and multiplying it by the line regulation (2mV/V).\"}}"
+        ]
+    }
+}

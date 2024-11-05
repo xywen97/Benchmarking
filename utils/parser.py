@@ -1,3 +1,4 @@
+from antlr4 import PredictionMode
 from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b
 import json
 import base64
@@ -92,7 +93,10 @@ def load_image_base64(image_path):
 def benchmarking_batch():
     pass
 
-def benchmarking(raw_data, field="general", model_name='gpt4o'):
+def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
+    if save_path is None:
+        raise ValueError("The save_path cannot be None. Please provide a valid path to save the results.")
+
     if field.lower() not in ['architecture', 'backend', 'general', 'netlist', 'rtl', 'spec']:
         raise ValueError(f"Field '{field}' is not recognized. Please choose from 'architecture', 'backend', 'general', 'netlist', 'rtl', 'spec'.")
     
@@ -118,15 +122,21 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
         Check if the elements in each item is full filled
         '''
         if not (len(question_item) == len(question_type_item) == len(answer_item) == len(explanation_item) == len(modality_item) == len(difficulty_item) == len(ability_item)):
-            raise ValueError("Mismatch in the number of items: "
-                            f"questions({len(question_item)}), "
-                            f"question_types({len(question_type_item)}), "
-                            f"answers({len(answer_item)}), "
-                            f"explanations({len(explanation_item)}), "
-                            f"modalities({len(modality_item)}), "
-                            f"difficulties({len(difficulty_item)}), "
-                            f"abilities({len(ability_item)})")
+            print(f"Mismatch in the number of items of question {key}: "
+                  f"questions({len(question_item)}), "
+                  f"question_types({len(question_type_item)}), "
+                  f"answers({len(answer_item)}), "
+                  f"explanations({len(explanation_item)}), "
+                  f"modalities({len(modality_item)}), "
+                  f"difficulties({len(difficulty_item)}), "
+                  f"abilities({len(ability_item)})")
 
+            returned_response = "None"
+            with open(save_path, 'a', encoding='utf-8') as f:
+                json.dump({key: returned_response}, f, ensure_ascii=False, indent=4)
+                f.write('\n')
+            
+            continue
 
         line_length = 50
         print("#" * line_length)
@@ -195,8 +205,8 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
         for i in range(len(question_item)):
             question_type = question_type_item[i]
             prompt_mapping = {
-                "blank": """Filling in blanks question. Please answer in Json format and return Json object only. The response format should be: {{"answer": it should be a number/yes/no/not a sentence, "explanation": no more than 3 sentences for explanation on your thought to give the answer.}}""".strip(),
-                "single": """Single choice question. Please answer in Json format and return Json object only. The response format should be: {{"answer": it should be a/b/c/d, "explanation": no more than 3 sentences for explanation on your thought to give the answer.}}""".strip(),
+                # "blank": """Filling in blanks question. Please answer in Json format and return Json object only. The response format should be: {{"answer": it should be a number/yes/no/not a sentence, "explanation": no more than 3 sentences for explanation on your thought to give the answer.}}""".strip(),
+                # "single": """Single choice question. Please answer in Json format and return Json object only. The response format should be: {{"answer": it should be a/b/c/d, "explanation": no more than 3 sentences for explanation on your thought to give the answer.}}""".strip(),
             }
 
             if question_type not in prompt_mapping.keys():
@@ -284,5 +294,9 @@ def benchmarking(raw_data, field="general", model_name='gpt4o'):
         }
 
         field_responses[key] = returned_response
+
+        with open(save_path, 'a', encoding='utf-8') as f:
+            json.dump({key: returned_response}, f, ensure_ascii=False, indent=4)
+            f.write('\n')
 
     return field_responses

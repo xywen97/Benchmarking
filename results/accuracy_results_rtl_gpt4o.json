@@ -1,0 +1,2440 @@
+{
+    "Accuracy": 0.10335195530726257,
+    "Comparison": {
+        "rtl_0": {
+            "question_0": {
+                "gt_answer": "4'b1010",
+                "pred_answer": "reg [3:0] my_vector = 4'b1010;",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "assign",
+                "pred_answer": "assign",
+                "is_correct": true
+            },
+            "question_2": {
+                "gt_answer": "8'b11000011",
+                "pred_answer": "8'b11000011",
+                "is_correct": true
+            },
+            "question_3": {
+                "gt_answer": "^",
+                "pred_answer": "^",
+                "is_correct": true
+            },
+            "question_4": {
+                "gt_answer": "16-bit width, 32-depth memory",
+                "pred_answer": "{'width': 16, 'depth': 32}",
+                "is_correct": false
+            },
+            "question_5": {
+                "gt_answer": "?:",
+                "pred_answer": "?",
+                "is_correct": false
+            },
+            "question_6": {
+                "gt_answer": "Blocking assignment",
+                "pred_answer": "blocking assignment",
+                "is_correct": true
+            },
+            "question_7": {
+                "gt_answer": "8-bit input port",
+                "pred_answer": "A multi-bit input port",
+                "is_correct": false
+            },
+            "question_8": {
+                "gt_answer": "reg stores values, wire represents connections",
+                "pred_answer": "The primary difference between reg and wire in Verilog is that reg holds its value until explicitly changed and is used for procedural assignments, while wire is used to connect different components and carries values driven by continuous assignments.",
+                "is_correct": false
+            },
+            "question_9": {
+                "gt_answer": "===",
+                "pred_answer": "=== and !==",
+                "is_correct": false
+            },
+            "accuracy": 0.3
+        },
+        "rtl_1": {
+            "question_0": {
+                "gt_answer": "wire",
+                "pred_answer": "wire",
+                "is_correct": true
+            },
+            "question_1": {
+                "gt_answer": "tri",
+                "pred_answer": "tri",
+                "is_correct": true
+            },
+            "question_2": {
+                "gt_answer": "4'b0110",
+                "pred_answer": "4'b0110",
+                "is_correct": true
+            },
+            "question_3": {
+                "gt_answer": "assign",
+                "pred_answer": "assign",
+                "is_correct": true
+            },
+            "question_4": {
+                "gt_answer": "#5",
+                "pred_answer": "#5",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "rtl_2": {
+            "question_0": {
+                "gt_answer": "Blocking assignments (=) execute sequentially, while non-blocking (<=) allow parallel execution.",
+                "pred_answer": "Blocking assignments use the '=' operator and execute sequentially, while non-blocking assignments use the '<=' operator and execute concurrently.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "A latch is a memory element that holds a value without a clock edge; avoid by covering all conditions.",
+                "pred_answer": "A latch is a level-triggered storage element that can hold a value until the input changes. Latches can be avoided in Verilog by using edge-triggered constructs like 'always @(posedge clk)' or 'always @(negedge clk)' for sequential logic, ensuring that signals are only updated on clock edges.",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "The generate statement allows multiple instances in a loop. Example: for (i=0; i<4; i=i+1).",
+                "pred_answer": "module top_module; genvar i; generate for (i = 0; i < 4; i = i + 1) begin: gen_block adder add_inst (.a(a[i]), .b(b[i]), .sum(sum[i])); end endgenerate endmodule",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "Hierarchical names access elements by full path, e.g., top_module.submodule.signal.",
+                "pred_answer": "Verilog supports hierarchical naming by allowing instances of modules to be referenced using dot notation, starting from the top-level module down to the lowest-level module or signal. For example, if there is a top-level module 'top' that contains an instance of a module 'sub', which in turn contains a signal 'sig', it can be referenced as 'top.sub.sig'.",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "Fork-join allows concurrent execution of multiple processes within an always block.",
+                "pred_answer": "The fork-join statement is used to execute multiple statements concurrently in Verilog.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_3": {
+            "question_0": {
+                "gt_answer": "*",
+                "pred_answer": "*",
+                "is_correct": true
+            },
+            "question_1": {
+                "gt_answer": "4'b0101",
+                "pred_answer": "4'b0101",
+                "is_correct": true
+            },
+            "question_2": {
+                "gt_answer": "&",
+                "pred_answer": "&",
+                "is_correct": true
+            },
+            "question_3": {
+                "gt_answer": "Unknown (x) state",
+                "pred_answer": "The condition if (x === 1'bx) checks if x is exactly unknown.",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "&& is evaluated before ||",
+                "pred_answer": "((a && b) || c)",
+                "is_correct": false
+            },
+            "accuracy": 0.6
+        },
+        "rtl_4": {
+            "question_0": {
+                "gt_answer": "localparam",
+                "pred_answer": "localparam",
+                "is_correct": true
+            },
+            "question_1": {
+                "gt_answer": "{ }",
+                "pred_answer": "{,}",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "wire",
+                "pred_answer": "wire",
+                "is_correct": true
+            },
+            "question_3": {
+                "gt_answer": "conditional (ternary) assignment",
+                "pred_answer": "a conditional (ternary) operator",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "bit and reg types",
+                "pred_answer": "reg and wire",
+                "is_correct": false
+            },
+            "accuracy": 0.4
+        },
+        "rtl_5": {
+            "question_0": {
+                "gt_answer": "Verilog uses wired-and (wand) or wired-or (wor) types to resolve values by performing logic on multiple drivers.",
+                "pred_answer": "Verilog resolves conflicting values on a net using wired logic by assigning a net type such as 'wand' (wired AND) or 'wor' (wired OR), which defines the logic operation to resolve conflicts.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "The case statement selects among multiple branches, casex treats x and z as don't care, casez only treats z as don't care.",
+                "pred_answer": "The purpose of the `case` statement in Verilog is to implement a multi-way branch, allowing different actions based on the value of an expression. `casex` and `casez` are variants that handle don’t-care conditions differently, where `casex` treats both 'x' and 'z' as don’t-care, and `casez` treats only 'z' as don’t-care.",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "Example: always @(posedge clk) begin #5 signal = value; end assigns with a 5-time-unit delay.",
+                "pred_answer": "always @(posedge clk) begin\n  #5 q <= d;\nend",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "The ?: operator assigns based on a condition, e.g., (a > b) ? a : b.",
+                "pred_answer": "In Verilog, the conditional operator ?: is used to select between two values based on a condition. It takes the form condition ? value_if_true : value_if_false.",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "An 8-bit shift register can be modeled using an always block with sequential assignments shifting data left or right.",
+                "pred_answer": "module shift_register (input clk, input reset, input [7:0] data_in, input shift_en, output reg [7:0] data_out); always @(posedge clk or posedge reset) begin if (reset) data_out <= 8'b0; else if (shift_en) data_out <= {data_out[6:0], data_in[7]}; end endmodule",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_6": {
+            "question_0": {
+                "gt_answer": "module",
+                "pred_answer": "module",
+                "is_correct": true
+            },
+            "question_1": {
+                "gt_answer": ".port_name(signal_name)",
+                "pred_answer": ".port_name(signal_name)",
+                "is_correct": true
+            },
+            "question_2": {
+                "gt_answer": "An 8-bit register output",
+                "pred_answer": "Declare an 8-bit wide register named out_data as an output.",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "For connecting different module instances",
+                "pred_answer": "In Verilog, the wire type is most often used to connect different modules or to connect outputs of one module to inputs of another.",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "Using the keyword parameter inside the module",
+                "pred_answer": "A parameterized module in Verilog can be created using the 'parameter' keyword within the module definition, allowing parameters to be set with default values that can be overridden during instantiation.",
+                "is_correct": false
+            },
+            "accuracy": 0.4
+        },
+        "rtl_7": {
+            "question_0": {
+                "gt_answer": "endmodule",
+                "pred_answer": "endmodule",
+                "is_correct": true
+            },
+            "question_1": {
+                "gt_answer": "assign",
+                "pred_answer": "assign",
+                "is_correct": true
+            },
+            "question_2": {
+                "gt_answer": "[63:0]",
+                "pred_answer": "[63:0]",
+                "is_correct": true
+            },
+            "question_3": {
+                "gt_answer": "=",
+                "pred_answer": "<=",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "input",
+                "pred_answer": "input",
+                "is_correct": true
+            },
+            "accuracy": 0.8
+        },
+        "rtl_8": {
+            "question_0": {
+                "gt_answer": "An array is declared using reg [width:0] array_name [depth]; e.g., reg [7:0] mem [0:15];",
+                "pred_answer": "In Verilog, an array is declared by specifying the range of the array in square brackets, followed by the array name. For example, a 4-bit wide and 16-element deep array can be declared as 'reg [3:0] array_name [15:0];'. This declaration creates an array named 'array_name' with 16 elements, each 4 bits wide.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Verilog requires the signed keyword to handle signed arithmetic.",
+                "pred_answer": "Verilog handles signed arithmetic using the 'signed' keyword.",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "input is unidirectional, while inout allows bidirectional data flow.",
+                "pred_answer": "Input ports are used for signals that are driven into a module, while inout ports are bidirectional and can be driven both into and out of a module.",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "Hierarchical names enable access to specific elements within module hierarchies.",
+                "pred_answer": "Hierarchical names in Verilog are used to uniquely identify and access variables, modules, and instances within different levels of the design hierarchy.",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "A 4-bit adder can be created using always @(a or b) and a + b in behavioral Verilog.",
+                "pred_answer": "module four_bit_adder(input [3:0] A, input [3:0] B, output [4:0] Sum); assign Sum = A + B; endmodule",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_9": {
+            "question_0": {
+                "gt_answer": "Combinational",
+                "pred_answer": "Combinational logic",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Incomplete conditional coverage",
+                "pred_answer": "The use of latches in a Verilog design might imply that the design is not fully synchronous and may have unintended or asynchronous behavior.",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "case is more efficient for mutually exclusive conditions.",
+                "pred_answer": "In Verilog synthesis, a case statement is preferred for implementing multiplexers and more structured decision-making, whereas if-else can lead to priority encoding with potentially more complex logic.",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "Behavioral describes function, structural describes connections.",
+                "pred_answer": "The primary difference between behavioral and structural Verilog is that behavioral Verilog describes what a system does, while structural Verilog describes how a system is implemented.",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "A 4-bit counter with non-blocking assignment",
+                "pred_answer": "4-bit binary counter",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_10": {
+            "question_0": {
+                "gt_answer": "posedge",
+                "pred_answer": "posedge",
+                "is_correct": true
+            },
+            "question_1": {
+                "gt_answer": "Introduce a delay",
+                "pred_answer": "The # symbol in Verilog is used for specifying time delays.",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "Positive edge of clk or negative edge of reset",
+                "pred_answer": "The block is triggered by a positive edge of clk or a negative edge of reset.",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "Increments q by 1 at every clock edge",
+                "pred_answer": "Increment",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "Using an always block with posedge clk and conditional reset",
+                "pred_answer": "module flip_flop_sync_reset (input clk, input reset, input d, output reg q); always @(posedge clk) begin if (reset) q <= 0; else q <= d; end endmodule",
+                "is_correct": false
+            },
+            "accuracy": 0.2
+        },
+        "rtl_11": {
+            "question_0": {
+                "gt_answer": "always @*",
+                "pred_answer": "always @*",
+                "is_correct": true
+            },
+            "question_1": {
+                "gt_answer": "10",
+                "pred_answer": "10",
+                "is_correct": true
+            },
+            "question_2": {
+                "gt_answer": "wait",
+                "pred_answer": "wait",
+                "is_correct": true
+            },
+            "question_3": {
+                "gt_answer": "initial",
+                "pred_answer": "initial",
+                "is_correct": true
+            },
+            "question_4": {
+                "gt_answer": "always @*",
+                "pred_answer": "always_comb",
+                "is_correct": false
+            },
+            "accuracy": 0.8
+        },
+        "rtl_12": {
+            "question_0": {
+                "gt_answer": "Tasks can contain delays and multiple outputs; functions cannot.",
+                "pred_answer": "The main difference is that tasks can contain timing controls; functions cannot.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Verilog resolves conflicts using the wire type's resolution function like tri, wand, etc.",
+                "pred_answer": "Verilog resolves multiple drivers on a single wire using a resolution function.",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "fork-join allows concurrent execution of multiple statements within a block.",
+                "pred_answer": "The fork-join block in Verilog is used to execute multiple threads of code concurrently.",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "repeat is used for fixed iterations, e.g., repeat (3) begin ... end;",
+                "pred_answer": "The repeat statement in Verilog is used to execute a block of code a fixed number of times. Example: repeat (5) begin //code to be repeated end",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "$monitor continuously displays changes in specified signals.",
+                "pred_answer": "The $monitor system task in Verilog continuously displays the values of specified variables whenever they change.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_13": {
+            "question_0": {
+                "gt_answer": "Allows x and z values to be treated as don't cares",
+                "pred_answer": "The casex keyword allows for 'don't care' conditions in the case expression, where certain bits can be ignored during matching.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Treats Z values as don't care conditions",
+                "pred_answer": "In a casez statement, Z values are treated as don't cares.",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "===",
+                "pred_answer": "==? and !=?",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "Assigns a with b if b > c, otherwise with c",
+                "pred_answer": "The expression assigns the value of 'b' to 'a' if 'b' is greater than 'c', otherwise it assigns the value of 'c' to 'a'.",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "By listing conditions in the desired priority order",
+                "pred_answer": "Priority can be implemented in Verilog case statements by using sequential case if (casez or casex) statements or by explicitly ordering conditions with priority in nested if-else statements.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_20": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "6'b111010",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "B",
+                "pred_answer": "4'bxxxx",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "C",
+                "pred_answer": "1",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "A",
+                "pred_answer": "A 2D array of 128 registers, each 16-bits wide.",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "A",
+                "pred_answer": "{'A == B': '1', 'A === B': 'X'}",
+                "is_correct": false
+            },
+            "question_5": {
+                "gt_answer": "D",
+                "pred_answer": "assign",
+                "is_correct": false
+            },
+            "question_6": {
+                "gt_answer": "B",
+                "pred_answer": "18",
+                "is_correct": false
+            },
+            "question_7": {
+                "gt_answer": "B",
+                "pred_answer": "my_module instance_name (.a(a), .b(b), .c(c));",
+                "is_correct": false
+            },
+            "question_8": {
+                "gt_answer": "D",
+                "pred_answer": "infinite loop",
+                "is_correct": false
+            },
+            "question_9": {
+                "gt_answer": "B",
+                "pred_answer": "7",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_21": {
+            "question_0": {
+                "gt_answer": "8, 32",
+                "pred_answer": "8, 32",
+                "is_correct": true
+            },
+            "question_1": {
+                "gt_answer": " =, <=",
+                "pred_answer": "{'blocking_assignment': '=', 'non_blocking_assignment': '<='}",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "0, 255",
+                "pred_answer": "0 to 255",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "tri",
+                "pred_answer": "tri",
+                "is_correct": true
+            },
+            "question_4": {
+                "gt_answer": "latch",
+                "pred_answer": "latch",
+                "is_correct": true
+            },
+            "accuracy": 0.6
+        },
+        "rtl_22": {
+            "question_0": {
+                "gt_answer": "Blocking assignments (=) execute sequentially and are typically used in combinational logic. Non-blocking assignments (<=) update in parallel and are used for sequential logic to model clocked behavior.",
+                "pred_answer": "In Verilog, blocking assignments use the '=' operator and execute sequentially, meaning the next statement executes only after the current statement completes. Non-blocking assignments use the '<=' operator and allow the next statement to start executing without waiting for the current one to finish. Blocking is typically used in combinational logic, while non-blocking is used in sequential logic like in always blocks triggered by a clock edge.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "A latch is a memory element that retains its value when not explicitly changed. To avoid latches, ensure that all branches of conditional statements (e.g., if-else) are covered.",
+                "pred_answer": "A latch is a level-sensitive memory element that can store a bit of data. It is created in Verilog with incomplete or ambiguous conditional assignments.",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "The assign statement is used for continuous assignments in combinational logic. Example: assign sum = a + b; drives the output sum continuously based on inputs a and b.",
+                "pred_answer": "The assign statement in Verilog is used to drive values onto a net, typically a wire, with a continuous assignment.",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "generate is used for repetitive structure instantiation. Example with generate for: genvar i; generate for (i = 0; i < 8; i = i + 1) begin my_module inst (.a(a[i]), .b(b[i]), .c(c[i])); end endgenerate",
+                "pred_answer": "The generate statement in Verilog is used to create multiple instances of modules or code blocks based on a parameter or loop to efficiently handle repetitive structures in hardware design. By using 'generate for', you can instantiate a block of code multiple times with varying parameters, allowing for scalable and parameterized hardware design.",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "Verilog modules can be interconnected by instantiating one module within another. This involves declaring inputs and outputs and mapping them correctly using .port(signal) in the top module. Example: my_module u1 (.a(signal_a), .b(signal_b), .c(signal_c));",
+                "pred_answer": "Verilog supports the interconnection of multiple modules through module instantiation, where a module is instantiated within another module, effectively creating a hierarchy. The steps for module instantiation include: 1) Declare the instance of the module using the module name, 2) Provide a unique instance name, and 3) Connect the instance ports to signals or other module ports using positional or named port mapping.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_23": {
+            "question_0": {
+                "gt_answer": "Synchronous reset",
+                "pred_answer": "Synchronous reset",
+                "is_correct": true
+            },
+            "question_1": {
+                "gt_answer": "['Predictable timing', 'Better synthesis support', 'Easier debugging']",
+                "pred_answer": "['Synchronous resets are integrated into the clocking scheme and help ensure that all parts of the circuit are reset in a coordinated manner, reducing metastability issues.', 'They simplify the timing analysis and verification process by aligning reset de-assertion with clock edges, making the design more robust across different synthesis tools and FPGA architectures.', 'Synchronous resets can be optimized out by synthesis tools if not needed, potentially leading to more efficient use of resources.']",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "['Registers', 'ALUs', 'State machines', 'Multiplexers']",
+                "pred_answer": "['Flip-flops', 'Registers', 'Combinational Logic', 'State Machines', 'Multiplexers', 'Decoders']",
+                "is_correct": false
+            },
+            "accuracy": 0.3333333333333333
+        },
+        "rtl_24": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "Behavioral modeling in Verilog describes the functionality of the system using high-level constructs without concern for hardware implementation, while RTL (Register Transfer Level) modeling represents the system in terms of data flow and registers, focusing on how data is transferred and transformed.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "",
+                "pred_answer": "An FSM in RTL design is used to model the control logic of a digital system by transitioning between a finite number of states based on inputs and current state.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_25": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "To prevent latch inference, ensure that every conditional branch in combinational logic assignments assigns a value to the output signals.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "It infers a latch",
+                "pred_answer": "If a combinational block is not fully specified, unintended latches may be inferred.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_26": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "{'blocking': {'operator': '=', 'execution': 'sequential', 'impact': 'Affects subsequent statements immediately.'}, 'non-blocking': {'operator': '<=', 'execution': 'parallel', 'impact': 'Updates occur after all right-hand sides are evaluated.'}}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Prevents race conditions",
+                "pred_answer": "Non-blocking assignments",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_27": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "['Reusability', 'Scalability', 'Maintainability']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_28": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "Synthesis tools handle asynchronous signals by implementing them as separate paths that require careful design to avoid metastability, while synchronous signals are managed within a global clock domain ensuring timing closure and predictability.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_29": {
+            "question_0": {
+                "gt_answer": "[\"Functional coverage\", \"Latch inference\", \"Timing violations\", \"Synthesis warnings\"]",
+                "pred_answer": "{'reset_synchronization': 'Ensure reset signals are synchronized to the clock domain they control to avoid metastability.', 'reset_assertion': 'Verify that the reset signal is asserted long enough for the system to reach a known state.', 'reset_deassertion': 'Check that deassertion of reset happens synchronously and does not cause glitches.', 'reset_state_coverage': 'Ensure all states, including edge cases, are covered during reset testing.', 'reset_release_timing': 'Confirm that reset release timing does not cause race conditions or timing violations.', 'reset_polarity': 'Check that the polarity of reset signals is consistent throughout the design.'}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "[\"Functional failure at startup\", \"High power consumption\", \"Incorrect state machine transitions\", \"Latch inference\"]",
+                "pred_answer": "['Metastability issues', 'Undefined initial states', 'Inconsistent simulation and synthesis results', 'Increased power consumption', 'Incorrect system behavior']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_33": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "{'parallel case': 'A parallel case statement is a type of case statement where each case item is mutually exclusive, meaning no two case items can match the same input condition. This is often used in cases where the designer wants to ensure that only one case can be true at a time.', 'full case': 'A full case statement ensures that all possible input values are accounted for within the case statement, either through explicit case items or a default case. This prevents unintended latches in synthesis by covering all possible conditions.'}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "",
+                "pred_answer": "In Verilog, a full case statement is one where all possible values of the case expression are explicitly covered by the case items, including 'default'. This ensures that the case statement accounts for all possible inputs, preventing any latches due to incomplete specification. The 'full_case' directive can also be used in synthesis tools to indicate the intent that all potential cases are covered.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_34": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "The '==' operator is used for logical equality, while the '===' operator is used for case equality.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "===",
+                "pred_answer": "===",
+                "is_correct": true
+            },
+            "accuracy": 0.5
+        },
+        "rtl_35": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "In Verilog, 'reg' is used for variables that can hold values between assignments and is typically used in procedural blocks like 'always' and 'initial', whereas 'wire' is used for connecting different components and does not hold a value on its own.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Z",
+                "pred_answer": "z",
+                "is_correct": true
+            },
+            "accuracy": 0.0
+        },
+        "rtl_36": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "{'blocking': \"Blocking assignments use the '=' operator and execute sequentially, blocking the execution of subsequent statements until the current statement is completed.\", 'non_blocking': \"Non-blocking assignments use the '<=' operator and allow execution of subsequent statements without waiting for the current statement to complete, enabling concurrent execution.\"}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "",
+                "pred_answer": "Non-blocking assignments should be used in sequential logic, especially within always blocks triggered by clock edges.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_37": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "In Verilog, a sensitivity list is part of an always block that specifies the signals which trigger the execution of the block.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "",
+                "pred_answer": "A sensitivity list is important in sequential circuits because it determines when the procedural block should be executed, typically in response to clock edges or specific signal changes.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_38": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "{'$monitor': 'Continuously displays the specified variables whenever they change.', '$display': 'Prints the specified variables or text once at the time it is executed.', '$strobe': 'Prints the specified variables or text once at the end of the current simulation time step.'}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "$monitor",
+                "pred_answer": "$monitor",
+                "is_correct": true
+            },
+            "accuracy": 0.5
+        },
+        "rtl_39": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "['One-Hot Encoding', 'Binary Encoding', 'Gray Encoding', 'Johnson Encoding', 'Mealy and Moore Machines']",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "",
+                "pred_answer": "Separating sequential and combinational logic in FSM coding involves using one always block for state transitions (sequential logic) and another for output logic (combinational logic). The sequential logic block updates the current state based on inputs and the clock, while the combinational logic block determines the outputs based on the current state and inputs.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_40": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "Transport delay in Verilog refers to the delay introduced by the propagation of a signal from one point to another, regardless of the signal's stability or glitches during the delay period.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "",
+                "pred_answer": "In Verilog, transport delay models the delay of signals as they pass through a system, capturing all changes, while inertial delay filters out pulses that do not meet a certain width threshold, simulating physical gate delays more accurately.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_41": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "{'syntax': 'repeat (number_of_times) begin // statements end', 'example': 'integer i; initial begin i = 0; repeat (5) begin i = i + 1; $display(\"i = %d\", i); end end', 'use': 'The repeat loop in Verilog is used for executing a block of statements a fixed number of times specified by an integer expression.'}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "",
+                "pred_answer": "The repeat loop in Verilog allows for executing a block of code a specified number of times, thereby reducing redundancy.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_42": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "Semaphores in Verilog are synchronization primitives used in SystemVerilog to control access to shared resources by multiple processes.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "",
+                "pred_answer": "In Verilog, semaphores are used for mutual exclusion by creating a semaphore object that manages access to shared resources. Processes can acquire and release tokens from the semaphore, ensuring that only a limited number of processes can access the resource concurrently.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_43": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "{'wire': 'Used to connect different components and is driven by continuous assignments or outputs of other modules.', 'reg': 'Used to store values and can hold state, typically driven by procedural blocks like always or initial.'}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "wire",
+                "pred_answer": "wire",
+                "is_correct": true
+            },
+            "accuracy": 0.5
+        },
+        "rtl_44": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "Blocking assignments use the '=' operator and execute sequentially, blocking the next statement until the current one is complete. Non-blocking assignments use the '<=' operator and allow execution to proceed without waiting, scheduling the assignment to occur later.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "",
+                "pred_answer": "Non-blocking assignments should be used in sequential logic, such as always blocks that model flip-flops or registers.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_45": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "The sensitivity list in Verilog is used to specify the conditions under which a procedural block should be executed.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Simulation may not produce expected results.",
+                "pred_answer": "If a signal is missing from a sensitivity list, the block will not execute when that signal changes.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_46": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "`timescale 1ns/1ps` in Verilog specifies that the simulation time unit is 1 nanosecond and the simulation time precision is 1 picosecond.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "",
+                "pred_answer": "In Verilog, the `timescale` directive specifies the time unit and time precision for the simulation, affecting the interpretation of time delays and simulation time advancement.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_47": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "{'syntax': 'Verilog has a syntax similar to C, while VHDL has a syntax similar to Ada and Pascal.', 'usage': 'Verilog is often preferred in the United States, while VHDL is more popular in Europe.', 'design': 'Verilog is generally used for simpler, smaller designs, whereas VHDL is used for larger, more complex designs.', 'typing': 'Verilog is weakly typed, whereas VHDL is strongly typed.', 'simulation': 'Verilog is considered to be more intuitive for simulating digital circuits, while VHDL is seen as better for documenting designs.'}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Verilog",
+                "pred_answer": "Verilog",
+                "is_correct": true
+            },
+            "accuracy": 0.5
+        },
+        "rtl_48": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "Transport delay in Verilog refers to the delay in signal propagation without any regard to the signal's previous values or changes.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "",
+                "pred_answer": "Inertial delay models both the delay and pulse rejection of signals, whereas transport delay only models the delay without any pulse rejection.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_49": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "A continuous assignment in Verilog is a statement that continuously drives a value onto a net using the 'assign' keyword.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "assign",
+                "pred_answer": "assign",
+                "is_correct": true
+            },
+            "accuracy": 0.5
+        },
+        "rtl_50": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "Generate blocks in Verilog are used to create multiple instances of a module or to conditionally instantiate code based on parameters or generate-for loops.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "",
+                "pred_answer": "Generate blocks in Verilog can be used to replicate hardware structures by using the 'generate' keyword along with 'for', 'if', or 'case' constructs to create multiple instances of a module or a set of statements. This allows for parameterized and scalable hardware designs by iterating over a loop to instantiate repeated logic. For example, a generate block can be used to create an array of flip-flops or a series of adders in a pipelined architecture.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_51": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "['Define the states and state encoding.', 'Declare state variables and parameters.', 'Create state transition logic using a case statement.', 'Implement output logic based on the current state.', 'Initialize the state machine in an initial or reset block.']",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "",
+                "pred_answer": "Separating state and output logic enhances clarity and modularity in FSM design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_52": {
+            "question_0": {
+                "gt_answer": "",
+                "pred_answer": "The '==' operator is used for logical equality comparison, whereas the '===' operator is used for case equality comparison.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "===",
+                "pred_answer": "===",
+                "is_correct": true
+            },
+            "accuracy": 0.5
+        },
+        "rtl_53": {
+            "question_0": {
+                "gt_answer": "Verilog is a hardware description language used for modeling electronic systems.",
+                "pred_answer": "Verilog is a hardware description language (HDL) used to model electronic systems.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Verilog has a concise syntax compared to VHDL.",
+                "pred_answer": "The primary difference between Verilog and VHDL is their syntax and design philosophy.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_54": {
+            "question_0": {
+                "gt_answer": "`==` compares logical values and ignores unknowns, while `===` compares including unknowns.",
+                "pred_answer": "The '==' operator is used for logical comparison and does not account for unknown (x) or high-impedance (z) values, while the '===' operator is used for case equality and does account for these unknown and high-impedance values.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "===",
+                "pred_answer": "===",
+                "is_correct": true
+            },
+            "accuracy": 0.5
+        },
+        "rtl_55": {
+            "question_0": {
+                "gt_answer": "Functions execute in one simulation time unit, cannot include timing controls, must return a value, while tasks can include timing controls, have multiple outputs, etc.",
+                "pred_answer": "{'1': 'Tasks can contain timing controls, while functions cannot.', '2': 'Functions must execute in one simulation time unit, but tasks can span multiple time units.', '3': 'Tasks can have zero or more inputs and outputs, whereas functions must have at least one input and return a single output.', '4': 'Functions cannot enable tasks, but tasks can enable other tasks and functions.', '5': 'Functions are used when a return value is required, whereas tasks are used when no return value is needed.'}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Yes",
+                "pred_answer": "True",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_56": {
+            "question_0": {
+                "gt_answer": "Continuous assignment is used to assign values to a wire.",
+                "pred_answer": "Continuous assignment in Verilog is a way to drive values onto nets such as wires using the 'assign' statement.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "assign",
+                "pred_answer": "assign",
+                "is_correct": true
+            },
+            "accuracy": 0.5
+        },
+        "rtl_57": {
+            "question_0": {
+                "gt_answer": "Blocking assignments execute sequentially, while non-blocking assignments execute concurrently.",
+                "pred_answer": "Blocking assignments use the '=' operator and execute sequentially, whereas non-blocking assignments use the '<=' operator and allow for parallel execution.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Non-blocking assignments should be used in sequential circuits to avoid race conditions.",
+                "pred_answer": "Non-blocking assignments should be used in sequential circuits, especially inside always blocks triggered by a clock edge, to ensure that all the assignments evaluate the right-hand side expressions based on the same set of variable values.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_58": {
+            "question_0": {
+                "gt_answer": "HDL simulators are tools used to test and verify the functionality of HDL code before synthesis.",
+                "pred_answer": "HDL simulators are software tools used to model and analyze the behavior of hardware described in a hardware description language like Verilog. They allow designers to test and debug their hardware design before physical implementation by simulating how the hardware will behave. This is crucial in Verilog design to ensure correctness and efficiency before committing to costly hardware fabrication.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "[\"ModelSim\", \"Vivado\"]",
+                "pred_answer": "['ModelSim', 'Xilinx Vivado Simulator']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_59": {
+            "question_0": {
+                "gt_answer": "Repeat loop runs a specific number of times, while the while loop runs until a condition is met.",
+                "pred_answer": "In Verilog, the repeat loop is used to execute a block of code a fixed number of times. The syntax is 'repeat (expression) begin ... end', where 'expression' is evaluated once at the start to determine how many times the loop will execute.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Repeat loops are executed a fixed number of times, while while loops depend on a condition.",
+                "pred_answer": "In Verilog, a repeat loop executes a block of code a fixed number of times, whereas a while loop executes as long as a specified condition is true.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_60": {
+            "question_0": {
+                "gt_answer": "Signal strength determines the driving capability of a signal.",
+                "pred_answer": "Signal strength in Verilog refers to the ability to define the driving strength of signals in the code, using keywords such as supply0, supply1, strong0, strong1, pull0, pull1, weak0, and weak1.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "It affects which value is resolved when multiple drivers are present on a net.",
+                "pred_answer": "Signal strength in Verilog affects logic value resolution by determining which signal prevails when multiple drivers drive a net.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_61": {
+            "question_0": {
+                "gt_answer": "Clocking blocks are used for specifying clock signals and synchronization for sampling inputs and driving outputs.",
+                "pred_answer": "Clocking blocks in Verilog are constructs used in SystemVerilog to define a specific timing domain by grouping signals and specifying their timing behavior relative to a clock.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "They improve timing accuracy and make testbench coding easier.",
+                "pred_answer": "{'advantages': ['Simplifies timing specifications by grouping signal directions and timing constraints.', 'Enhances readability and maintainability of the code by clearly defining clock domains.', 'Reduces the potential for race conditions and timing errors by synchronizing signal sampling and driving.']}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_62": {
+            "question_0": {
+                "gt_answer": "Define states, define inputs and outputs, use always blocks for sequential and combinational logic.",
+                "pred_answer": "['Define the states using a state encoding scheme like binary, one-hot, or Gray code.', 'Declare the state variables and any other necessary signals.', 'Create the state transition logic using a case or if-else statement to describe how states change based on inputs.', 'Write the output logic to determine the outputs based on the current state and inputs.', 'Implement a state register to update the current state at every clock edge.']",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "To simplify debugging and ensure proper synthesis.",
+                "pred_answer": "Separating combinational and sequential logic in FSM coding improves readability, simplifies debugging, and enhances scalability.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_63": {
+            "question_0": {
+                "gt_answer": "Casez treats Z as a don't-care, while casex treats both X and Z as don't-cares.",
+                "pred_answer": "The 'casex' and 'casez' statements in Verilog are both used for case analysis with wildcard support. 'casex' treats both 'z' and 'x' as wildcards, while 'casez' treats only 'z' as a wildcard and 'x' as a literal value. This makes 'casez' more suitable when only ignoring high-impedance states and ensuring 'x's are treated as significant.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Casex is used when both X and Z should be treated as don't-cares.",
+                "pred_answer": "casex should be used when you need to ignore both 'x' and 'z' bits during case evaluations, while casez is preferable when you only need to ignore 'z' bits.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_64": {
+            "question_0": {
+                "gt_answer": "A testbench is a piece of code used to simulate and verify the behavior of the design under test (DUT).",
+                "pred_answer": "A testbench in Verilog is a piece of code used to verify the functionality of a Verilog module or design by providing stimuli and observing the outputs.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "By applying inputs and checking the outputs of the DUT.",
+                "pred_answer": "To verify RTL design functionality with a testbench in Verilog, create a separate testbench module that instantiates the design under test (DUT), applies stimulus to its inputs, and observes its outputs. Use initial blocks to define the test sequences and $monitor or $display for observing DUT responses. Simulate the testbench using a Verilog simulator to check if the DUT behaves as expected.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_65": {
+            "question_0": {
+                "gt_answer": "In Verilog, a flip-flop is a fundamental sequential logic element used to store and synchronize data in digital circuits, commonly used in registers or memory elements.",
+                "pred_answer": "{'concept': 'A flip-flop in Verilog is a digital storage element used to store a binary value, typically controlled by a clock signal. It can be used to create state machines or store data in registers.', 'verilog_example': 'module D_flip_flop (input clk, input d, output reg q); always @(posedge clk) q <= d; endmodule', 'real_world_application': 'Flip-flops are used in digital systems such as microprocessors to store data and state information, enabling operations like counting, data transfer, and sequential logic implementation.'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_66": {
+            "question_0": {
+                "gt_answer": "A testbench in Verilog simulates and verifies design functionality, ensuring correctness before synthesis, by generating inputs and monitoring outputs.",
+                "pred_answer": "A testbench in Verilog is used to simulate and verify the correct behavior of a digital design by providing stimulus and checking outputs.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_67": {
+            "question_0": {
+                "gt_answer": "Blocking assignments execute sequentially, while non-blocking assignments allow concurrent updates, better suited for modeling hardware flip-flops.",
+                "pred_answer": "{'blocking_assignments': \"Use the '=' operator, execute sequentially, and the right-hand side is evaluated and assigned immediately.\", 'non_blocking_assignments': \"Use the '<=' operator, allow simulation of parallelism by postponing the update to the end of the time step, enabling concurrent assignments.\"}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_68": {
+            "question_0": {
+                "gt_answer": "A 4-to-1 MUX selects one of four 1-bit inputs based on a 2-bit selection input, using a case statement for conditional selection.",
+                "pred_answer": "module mux4to1(input [3:0] i, input [1:0] sel, output reg y); always @(*) begin case(sel) 2'b00: y = i[0]; 2'b01: y = i[1]; 2'b10: y = i[2]; 2'b11: y = i[3]; endcase end endmodule",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_69": {
+            "question_0": {
+                "gt_answer": "The `always` block is used for combinational (`always @(*)`) or sequential (`always @(posedge clk)`) logic; `@(*)` is for combinational, and `@(posedge clk)` is for clock-triggered updates.",
+                "pred_answer": "The 'always' block in Verilog is used for defining procedural code that executes based on changes in specified signals, enabling sequential and combinational logic design. 'always @(*)' is used for describing combinational logic, automatically triggering when any input changes, whereas 'always @(posedge clk)' is used for sequential logic, triggered on the rising edge of the clock signal.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_70": {
+            "question_0": {
+                "gt_answer": "Parameterized modules allow for flexible module instantiation by specifying parameters, e.g., creating adders with different bit widths.",
+                "pred_answer": "{'concept': \"Parameterized modules in Verilog allow you to create a module that can be customized with parameters, which are constants that can be set at compile time. This makes the module more flexible and reusable for different situations. The parameters are defined using the 'parameter' keyword and can be overridden when the module is instantiated.\", 'example': 'module adder #(parameter WIDTH = 8) (input [WIDTH-1:0] a, b, output [WIDTH-1:0] sum); assign sum = a + b; endmodule'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_71": {
+            "question_0": {
+                "gt_answer": "The `case` statement is used for multi-way conditional logic, allowing selection of actions based on matching values of an input.",
+                "pred_answer": "The `case` statement in Verilog is used to implement decision-making logic by selecting one of several possible actions based on the value of an expression. It is similar to a switch statement in other programming languages.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_72": {
+            "question_0": {
+                "gt_answer": "FSM is used to model control logic in digital circuits, consisting of states and transitions based on inputs, commonly used in control units.",
+                "pred_answer": "A finite state machine (FSM) in Verilog is a model of computation used to design both sequential logic circuits and algorithms. It consists of a finite number of states, transitions between those states, and actions, which are defined by the current state and input signals. FSMs are significant in digital circuit design because they provide a systematic way to design complex control logic by breaking it down into simpler, manageable states and transitions.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_73": {
+            "question_0": {
+                "gt_answer": "The `generate` construct is used for creating repetitive hardware structures, such as arrays of similar modules or conditional instantiations.",
+                "pred_answer": "The `generate` construct in Verilog is used to create multiple instances of hardware blocks or conditional hardware generation based on parameters or loops. It allows for the scalable design of hardware by using `for`, `if`, or `case` statements to generate repetitive or conditional structures.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_74": {
+            "question_0": {
+                "gt_answer": "CDC refers to data transfer between different clock domains, presenting challenges like metastability; it is handled using synchronizers or FIFOs.",
+                "pred_answer": "{'concept': 'Clock Domain Crossing (CDC) refers to the transfer of data between different clock domains, where each domain may operate at different frequencies or phases.', 'challenges': 'The main challenges associated with CDC include metastability, data loss, and setup/hold time violations due to asynchronous sampling of signals.', 'solution': 'A common solution is to use a synchronizer, such as a two-flip-flop synchronizer, to safely transfer signals between clock domains.', 'example': {'verilog_code': 'module cdc_synchronizer (\\n  input wire clk_dest,\\n  input wire async_signal,\\n  output reg sync_signal\\n);\\n  reg sync_1;\\n\\n  always @(posedge clk_dest) begin\\n    sync_1 <= async_signal;\\n    sync_signal <= sync_1;\\n  end\\nendmodule'}}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_75": {
+            "question_0": {
+                "gt_answer": "Blocking assignments (`=`) execute sequentially, while non-blocking assignments (`<=`) allow concurrent updates. Blocking assignments are used for combinational logic, and non-blocking are used in sequential logic.",
+                "pred_answer": "Blocking assignments use the '=' operator and execute sequentially, while non-blocking assignments use the '<=' operator and allow parallel execution.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_76": {
+            "question_0": {
+                "gt_answer": "Functions cannot contain time delays and return only one value, whereas tasks can have multiple output values, include time delays, and be used in both sequential and combinational logic.",
+                "pred_answer": "{'tasks': {'can_have_time_controls': True, 'can_call_other_tasks_and_functions': True, 'can_have_multiple_outputs': True}, 'functions': {'can_have_time_controls': False, 'can_call_other_functions_only': True, 'must_have_single_output': True}}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_77": {
+            "question_0": {
+                "gt_answer": "`wire` is used for connecting combinational logic, whereas `reg` stores values between clock cycles. `wire` cannot store values without a driver.",
+                "pred_answer": "In Verilog, a 'wire' is used to connect different components and represents a physical connection, while a 'reg' is used to store data and represents a variable that retains its value until explicitly changed.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_78": {
+            "question_0": {
+                "gt_answer": "Generate blocks are used to replicate hardware structures conditionally or in loops, making it easier to create multiple instances of the same module with different parameters.",
+                "pred_answer": "A generate block in Verilog is used to create multiple instances of hardware components or to conditionally include or exclude blocks of code using generate-endgenerate statements. It is typically used in combination with loops and if-else constructs, allowing for parameterized and scalable designs.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_79": {
+            "question_0": {
+                "gt_answer": "In synchronous reset, the reset action occurs with the clock edge, while asynchronous reset works independently of the clock. Synchronous resets are generally preferred for their ease of timing analysis.",
+                "pred_answer": "In Verilog, a synchronous reset is applied in conjunction with a clock edge, meaning the reset signal only takes effect on a specific clock transition. An asynchronous reset, on the other hand, can affect the circuit immediately, without waiting for a clock edge.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_80": {
+            "question_0": {
+                "gt_answer": "`$stop` pauses the simulation and allows user interaction, whereas `$finish` ends the simulation.",
+                "pred_answer": "$stop is used to pause the simulation and allow for interactive debugging, while $finish is used to terminate the simulation completely.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_81": {
+            "question_0": {
+                "gt_answer": "You can generate clocks using `always` blocks with different time delays for each clock. Example: `always #5 clk1 = ~clk1; always #4 clk2 = ~clk2;`",
+                "pred_answer": "module testbench; reg clk1, clk2; initial begin clk1 = 0; clk2 = 0; end always #5 clk1 = ~clk1; always #7 clk2 = ~clk2; endmodule",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_82": {
+            "question_0": {
+                "gt_answer": "In a full case, all possible conditions are covered, while in a parallel case, each input value maps to a unique output without overlap. Parallel case ensures no two conditions match simultaneously.",
+                "pred_answer": "A full case statement in Verilog ensures that all possible input combinations are covered, whereas a parallel case statement is a synthesis directive that assumes only one case will be active at any time, potentially reducing logic. Full case statements prevent inferred latches by covering all conditions, while parallel case statements can lead to optimized logic by assuming mutually exclusive conditions.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_83": {
+            "question_0": {
+                "gt_answer": "Underflow occurs when reading from an empty FIFO, and overflow occurs when writing to a full FIFO. These conditions can lead to data corruption if not handled properly.",
+                "pred_answer": "FIFO underflow occurs when an attempt is made to read data from an empty queue, while overflow happens when data is written to a full queue.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_84": {
+            "question_0": {
+                "gt_answer": "The event scheduler in Verilog manages the order of execution of events in different time slots, including active, inactive, non-blocking assignments, and monitor regions, to ensure correct simulation.",
+                "pred_answer": "The Verilog event scheduler manages simulation time and the order of execution for events within a simulation cycle. It organizes events into active, inactive, non-blocking, monitor, and future event queues, ensuring accurate simulation of concurrent processes. This scheduling mechanism is crucial for synchronizing signal updates and executing processes in the correct order.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_85": {
+            "question_0": {
+                "gt_answer": "Blocking assignments (`=`) execute sequentially, while non-blocking assignments (`<=`) allow concurrent updates. Blocking assignments are used for combinational logic, and non-blocking are used in sequential logic.",
+                "pred_answer": "Blocking assignments use the '=' operator and execute sequentially, ensuring that each assignment is completed before the next one begins. Non-blocking assignments use the '<=' operator and allow multiple assignments to occur simultaneously, scheduling them for completion at the end of the simulation time step.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_86": {
+            "question_0": {
+                "gt_answer": "Functions cannot contain time delays and return only one value, whereas tasks can have multiple output values, include time delays, and be used in both sequential and combinational logic.",
+                "pred_answer": "{'task': {'can_contain_delays': True, 'can_call_functions_and_tasks': True, 'returns_value': False, 'multiple_outputs': True}, 'function': {'can_contain_delays': False, 'can_call_functions_and_tasks': False, 'returns_value': True, 'multiple_outputs': False}}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_87": {
+            "question_0": {
+                "gt_answer": "`wire` is used for connecting combinational logic, whereas `reg` stores values between clock cycles. `wire` cannot store values without a driver.",
+                "pred_answer": "In Verilog, 'wire' is used to connect different components and allows continuous assignment, whereas 'reg' is used to store values and is typically used in procedural assignments.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_88": {
+            "question_0": {
+                "gt_answer": "Generate blocks are used to replicate hardware structures conditionally or in loops, making it easier to create multiple instances of the same module with different parameters.",
+                "pred_answer": "A generate block in Verilog is a construct that allows for the creation of multiple instances of modules, or repeated segments of code, based on certain conditions or parameters. It is typically used for instantiating multiple similar hardware structures, such as arrays of registers or logic gates, in a compact and scalable manner. Generate blocks can include for-loops, if-generate constructs, or case-generate constructs to provide conditional instantiation.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_89": {
+            "question_0": {
+                "gt_answer": "In synchronous reset, the reset action occurs with the clock edge, while asynchronous reset works independently of the clock. Synchronous resets are generally preferred for their ease of timing analysis.",
+                "pred_answer": "A synchronous reset is a reset signal that is synchronized with the clock signal, meaning the reset action occurs on the clock edge. An asynchronous reset is a reset signal that is independent of the clock, meaning the reset action can occur at any time.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_90": {
+            "question_0": {
+                "gt_answer": "`$stop` pauses the simulation and allows user interaction, whereas `$finish` ends the simulation.",
+                "pred_answer": "$stop is used to halt the simulation and enter a debug mode, allowing the user to inspect the design state, while $finish ends the simulation entirely and exits.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_91": {
+            "question_0": {
+                "gt_answer": "You can generate clocks using `always` blocks with different time delays for each clock. Example: `always #5 clk1 = ~clk1; always #4 clk2 = ~clk2;`",
+                "pred_answer": "module testbench; reg clk1, clk2; initial begin clk1 = 0; clk2 = 0; forever #5 clk1 = ~clk1; end initial begin forever #7 clk2 = ~clk2; end endmodule",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_92": {
+            "question_0": {
+                "gt_answer": "In a full case, all possible conditions are covered, while in a parallel case, each input value maps to a unique output without overlap. Parallel case ensures no two conditions match simultaneously.",
+                "pred_answer": "In Verilog, a full case statement specifies all possible values of the case expression, ensuring that every potential input is covered, while a parallel case statement suggests that each case item is mutually exclusive, typically used with synthesis pragmas to optimize for mutually exclusive conditions.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_93": {
+            "question_0": {
+                "gt_answer": "Underflow occurs when reading from an empty FIFO, and overflow occurs when writing to a full FIFO. These conditions can lead to data corruption if not handled properly.",
+                "pred_answer": "{'underflow': 'FIFO underflow occurs when there is an attempt to read data from an empty FIFO queue.', 'overflow': 'FIFO overflow happens when there is an attempt to write data to a full FIFO queue.'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_94": {
+            "question_0": {
+                "gt_answer": "The event scheduler in Verilog manages the order of execution of events in different time slots, including active, inactive, non-blocking assignments, and monitor regions, to ensure correct simulation.",
+                "pred_answer": "The Verilog event scheduler is a mechanism that controls the order and timing of events during simulation, managing how changes in signals trigger processes. It operates using a stratified event queue, which consists of active events, inactive events, non-blocking assignments, and monitor events to ensure accurate simulation of concurrent operations in digital circuits. The scheduler ensures deterministic simulation results by handling events in a specific order and allowing for precise modeling of hardware behavior.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_95": {
+            "question_0": {
+                "gt_answer": "Latches are level-sensitive devices that are transparent when enabled, while flip-flops are edge-triggered devices that change state only on clock edges.",
+                "pred_answer": "Latches are level-sensitive devices, whereas flip-flops are edge-sensitive devices.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_96": {
+            "question_0": {
+                "gt_answer": "The `initial` block is used to execute a set of statements only once at the beginning of the simulation, commonly used for testbench initialization.",
+                "pred_answer": "The `initial` block in Verilog is used to execute a set of statements once at the beginning of the simulation.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_97": {
+            "question_0": {
+                "gt_answer": "The `always` block is used for defining sequential or combinational logic in Verilog.",
+                "pred_answer": "The 'always' block in Verilog is used to describe sequential logic and is executed repeatedly in a simulation.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "A common syntax error is not including all signals in the sensitivity list, which could lead to incorrect simulation results.",
+                "pred_answer": "A common syntax error is forgetting to include all input signals in the sensitivity list.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_98": {
+            "question_0": {
+                "gt_answer": "Modules can be instantiated using named or positional port connections.",
+                "pred_answer": "['Positional instantiation', 'Named instantiation']",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Named connections explicitly match each port by name, improving readability, while positional connections list signals in order, which can be prone to errors if the order is incorrect.",
+                "pred_answer": "Named port connections explicitly specify the mapping of external connections to the module's ports using their names, while positional port connections link external signals to module ports based on the order in which they are defined in the module.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_99": {
+            "question_0": {
+                "gt_answer": "Blocking assignments execute in sequence, while non-blocking assignments allow all right-hand side expressions to be evaluated before updating the left-hand side.",
+                "pred_answer": "The primary difference is that blocking assignments execute sequentially, while non-blocking assignments execute concurrently.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Non-blocking assignments help prevent race conditions in sequential logic.",
+                "pred_answer": "Non-blocking assignments are recommended in sequential logic to avoid race conditions and ensure predictable behavior in simulations.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_100": {
+            "question_0": {
+                "gt_answer": "Latch warnings occur when combinational logic does not fully define all output conditions.",
+                "pred_answer": "A 'latch inferred' warning in Verilog synthesis is caused by incomplete assignments in an always block, where not all possible conditions are covered, leading to unintended memory behavior.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Latch inference can be avoided by ensuring all branches of an `if-else` or `case` statement are covered.",
+                "pred_answer": "To avoid latch inference in combinational logic, ensure that all possible input conditions are covered and that outputs are assigned values in every branch of a conditional statement.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_101": {
+            "question_0": {
+                "gt_answer": "An FSM in Verilog is implemented using `always` blocks to manage states and transitions based on input conditions.",
+                "pred_answer": "An FSM in Verilog is implemented using a combination of always blocks to define state transitions and outputs. A register is used to hold the current state, and a case statement is often used within an always block to describe state transitions and outputs based on inputs. The FSM is typically divided into three parts: state register, next state logic, and output logic.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Separating state transition and output logic helps avoid unintended behavior and makes the design easier to debug.",
+                "pred_answer": "Separating state transition and output logic in FSM design is important for clarity and modularity.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_102": {
+            "question_0": {
+                "gt_answer": "Simulation tests functional correctness without considering hardware constraints, while synthesis converts code into hardware.",
+                "pred_answer": "{'simulation': 'Simulation is the process of testing the design by running it through test scenarios to check its behavior and functionality.', 'synthesis': 'Synthesis is the process of converting the high-level Verilog code into a gate-level netlist that can be implemented on a physical chip.'}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "`$display` works in simulation but is not synthesizable.",
+                "pred_answer": "Random Noise",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_103": {
+            "question_0": {
+                "gt_answer": "`assign` is used for continuous assignments, typically to drive combinational logic outputs.",
+                "pred_answer": "The 'assign' statement is used for continuous assignments in Verilog.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "`wire` is used for signals driven by combinational logic, while `reg` is used for variables in procedural blocks.",
+                "pred_answer": "A `wire` is used for connecting components and carrying signals driven by the outputs of other components, while a `reg` is used to store values in procedural blocks such as `always` blocks.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_104": {
+            "question_0": {
+                "gt_answer": "`initial` blocks run once at the beginning of the simulation, whereas `always` blocks are repeated based on sensitivity.",
+                "pred_answer": "An 'initial' block runs once at the beginning of the simulation, while an 'always' block repeatedly executes whenever the conditions specified in its sensitivity list are met.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "No",
+                "pred_answer": "No",
+                "is_correct": true
+            },
+            "accuracy": 0.5
+        },
+        "rtl_105": {
+            "question_0": {
+                "gt_answer": "`case` statements are more readable for selecting among multiple conditions, whereas `if-else` is better for binary conditions.",
+                "pred_answer": "A `case` statement in Verilog is used to select one of many blocks of code to execute based on the value of a single expression, while `if-else` statements evaluate conditions to decide which block of code to run.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Ensure all possible cases are covered, including a default condition.",
+                "pred_answer": "['Ensure all possible cases are covered, including the default case.', 'Initialize all outputs to a known value at the start of the block.', 'Avoid incomplete case statements by using full_case or parallel_case directives cautiously.']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_106": {
+            "question_0": {
+                "gt_answer": "If a signal is missing, the simulation may not properly reflect changes, potentially causing incorrect behavior.",
+                "pred_answer": "If a signal is missing from the sensitivity list in combinational logic, it can lead to incorrect or incomplete updates of the logic outputs.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Use `always @(*)` to automatically include all signals that affect the block's output.",
+                "pred_answer": "To ensure correct behavior in an 'always @(*)' block, include all signals that appear on the right-hand side of assignments in the sensitivity list automatically.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_107": {
+            "question_0": {
+                "gt_answer": "Verilog is a hardware description language used to model and simulate digital circuits. It is used for designing, verifying, and synthesizing electronic systems.",
+                "pred_answer": "Verilog is a hardware description language (HDL) used to model electronic systems.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "['Abstraction', 'Simulation', 'Synthesis', 'Verification']",
+                "pred_answer": "['Simplifies complex hardware design through abstraction.', 'Supports both behavioral and structural modeling.', 'Enables simulation and verification before physical implementation.', 'Facilitates reusability and modular design.', 'Widely supported by EDA tools and industry standards.']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_108": {
+            "question_0": {
+                "gt_answer": "Blocking assignments (`=`) execute sequentially, while non-blocking assignments (`<=`) execute concurrently.",
+                "pred_answer": "Blocking assignments in Verilog use the '=' operator and execute sequentially within a procedural block, meaning each assignment must complete before the next one begins. Non-blocking assignments use the '<=' operator and allow multiple assignments to execute concurrently, with each one being scheduled for the end of the current time step.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Non-blocking assignments should be used for sequential logic to avoid race conditions.",
+                "pred_answer": "Non-blocking assignments should be used in sequential logic, such as in always blocks triggered by a clock edge, to ensure that all assignments are evaluated concurrently.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_109": {
+            "question_0": {
+                "gt_answer": "Behavioral, Structural, and Dataflow modules are the types of Verilog modules.",
+                "pred_answer": "{'types_of_verilog_modules': ['Gate-level Modules', 'Dataflow Modules', 'Behavioral Modules', 'Structural Modules', 'Mixed-level Modules']}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "module adder (input a, input b, output sum); assign sum = a + b; endmodule",
+                "pred_answer": "module counter(clk, reset, count); input clk, reset; output reg [3:0] count; always @(posedge clk or posedge reset) begin if (reset) count <= 4'b0000; else count <= count + 1; end endmodule",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_110": {
+            "question_0": {
+                "gt_answer": "[\"Arithmetic Operators\", \"Logical Operators\", \"Relational Operators\", \"Bitwise Operators\", \"Shift Operators\", \"Concatenation Operator\"]",
+                "pred_answer": "{'Arithmetic Operators': ['+', '-', '*', '/', '%'], 'Relational Operators': ['==', '!=', '>', '<', '>=', '<='], 'Logical Operators': ['&&', '||', '!'], 'Bitwise Operators': ['&', '|', '^', '~', '^~', '~^'], 'Reduction Operators': ['&', '|', '^', '~&', '~|', '~^', '^~'], 'Shift Operators': ['<<', '>>', '<<<', '>>>'], 'Concatenation Operator': ['{'], 'Replication Operator': ['{'], 'Conditional Operator': ['?:'], 'Equality Operators': ['==', '!='], 'Case Equality Operators': ['===', '!=='], 'Assignment Operators': ['=', '+=', '-=', '*=', '/=', '%=', '&=', '|=', '^='], 'Unary Operators': ['+', '-', '!', '~']}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "The concatenation operator `{}` is used to combine multiple values into a single value.",
+                "pred_answer": "The concatenation operator `{}` in Verilog is used to join multiple expressions or signals into a single vector.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_111": {
+            "question_0": {
+                "gt_answer": "module dff (input clk, input d, output reg q); always @(posedge clk) begin q <= d; end endmodule",
+                "pred_answer": "module D_flip_flop (input wire D, input wire clk, output reg Q); always @(posedge clk) begin Q <= D; end endmodule",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_112": {
+            "question_0": {
+                "gt_answer": "[\"ModelSim\", \"VCS\", \"QuestaSim\", \"Icarus Verilog\"]",
+                "pred_answer": "{'tools': [{'name': 'ModelSim', 'features': ['Multi-language support', 'Advanced debugging capabilities', 'GUI and command-line interface']}, {'name': 'VCS (Verilog Compiler Simulator)', 'features': ['High performance', 'Comprehensive coverage', 'Integration with Synopsys tools']}, {'name': 'Xilinx Vivado Simulator', 'features': ['Integrated with Vivado Design Suite', 'Supports mixed-language simulation', 'Waveform viewer']}, {'name': 'Cadence Xcelium', 'features': ['Unified simulation engine', 'Multi-core and distributed processing', 'Support for mixed-signal verification']}]}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Waveform viewing displays the simulation results in a graphical format, allowing designers to visualize signal changes over time.",
+                "pred_answer": "The purpose of waveform viewing in Verilog simulation tools is to visually represent the signals and their changes over time during simulation.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_113": {
+            "question_0": {
+                "gt_answer": "A testbench is a Verilog module designed to verify the functionality of a design under test (DUT).",
+                "pred_answer": "A Verilog testbench is a piece of code written in Verilog that is used to test and verify the functionality of a digital design or module.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "[\"DUT instantiation\", \"Input stimulus generation\", \"Output monitoring\", \"Assertions\"]",
+                "pred_answer": "{'components': ['Module instantiation', 'Signal declaration', 'Stimulus generation', 'Clock and reset generation', 'Monitor and checkers', 'Result logging']}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_114": {
+            "question_0": {
+                "gt_answer": "A task is a reusable block of Verilog code that performs a specific operation.",
+                "pred_answer": "A task in Verilog is a block of code that can perform operations and can be called from other parts of the code, similar to a function but without returning a value.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Tasks encapsulate common operations, making the code more modular and easier to maintain.",
+                "pred_answer": "Tasks in Verilog allow for the encapsulation of repetitive or complex logic into modular units, enhancing code readability and maintainability.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_115": {
+            "question_0": {
+                "gt_answer": "Timing in Verilog is handled through delay specifications using the `#` operator.",
+                "pred_answer": "Timing in Verilog is managed using constructs like delays, event controls, and timing constraints. Delays can be specified using the '#' symbol followed by a time value, whereas event controls use the '@' symbol to trigger actions based on specific events. Timing constraints are often applied in synthesis tools to ensure designs meet specific performance requirements.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "The `#` operator specifies a delay in simulation time units before the next statement is executed.",
+                "pred_answer": "The `#` operator in Verilog is a delay operator used to introduce a time delay in the execution of a statement.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_116": {
+            "question_0": {
+                "gt_answer": "Verilog is a hardware description language used to model and simulate digital systems.",
+                "pred_answer": "Verilog is a hardware description language (HDL) used to model electronic systems.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "['Supports simulation', 'Ease of modeling', 'Widely used for ASIC/FPGA design']",
+                "pred_answer": "['Conciseness and Clarity', 'Simulation and Testing', 'Reusability and Scalability']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_117": {
+            "question_0": {
+                "gt_answer": "`wire` is used for connecting elements and cannot store values, whereas `reg` can store values and is used in procedural blocks.",
+                "pred_answer": "In Verilog, 'wire' is used to connect elements and represent physical connections between different modules, whereas 'reg' is used to store values and is necessary for variables that are assigned values within an always block.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "`reg` should be used in `always` blocks to store values across clock cycles.",
+                "pred_answer": "A 'reg' type should be used in Verilog to store values that are assigned in procedural blocks such as 'always' or 'initial' blocks.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_118": {
+            "question_0": {
+                "gt_answer": "Behavioral modeling uses high-level constructs, structural modeling describes circuit connections, and dataflow modeling uses expressions to describe data movement.",
+                "pred_answer": "{'behavioral': 'Behavioral modeling describes the function of a digital system using high-level constructs, focusing on what the system does rather than how it is implemented.', 'structural': 'Structural modeling represents a digital system as a collection of interconnected components, focusing on the hardware structure using gates and modules.', 'dataflow': 'Dataflow modeling describes a digital system by expressing the flow of data between registers and how data is processed, using continuous assignments and operators.'}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "module add(a, b, sum); input a, b; output sum; assign sum = a + b; endmodule",
+                "pred_answer": "module adder(input [3:0] a, b, output reg [4:0] sum); always @ (a or b) begin sum = a + b; end endmodule",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_119": {
+            "question_0": {
+                "gt_answer": "Blocking assignments execute sequentially, while non-blocking assignments allow parallel updates.",
+                "pred_answer": "Blocking assignments (`=`) execute sequentially, while non-blocking assignments (`<=`) allow parallel execution.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Non-blocking assignments should be used for sequential logic to avoid race conditions.",
+                "pred_answer": "Non-blocking assignments should be used in sequential logic such as always blocks triggered by a clock edge.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_120": {
+            "question_0": {
+                "gt_answer": "Simulation checks the behavior of the design, while synthesis translates the design into hardware.",
+                "pred_answer": "Synthesis is the process of converting Verilog code into a gate-level representation suitable for hardware implementation, while simulation is the process of testing the behavior of the Verilog code to ensure it functions as intended.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Some constructs, like `initial` blocks or delays, are for testing purposes only and cannot be mapped to hardware components.",
+                "pred_answer": "In digital design, simulation allows the use of constructs like delays and initial blocks to model behavior over time, which are not synthesizable as they don't map directly to hardware. Synthesis converts high-level code to hardware gates and flip-flops, requiring constructs that describe actual physical components and their connectivity. Simulation is for testing and verification, while synthesis is for hardware implementation.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_121": {
+            "question_0": {
+                "gt_answer": "Moore and Mealy",
+                "pred_answer": "{'types': ['Moore', 'Mealy']}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "A Moore state machine outputs depend only on the current state and can be implemented using an `always @(posedge clk)` block.",
+                "pred_answer": "module moore_fsm(input clk, reset, input in, output reg out); reg [1:0] state, next_state; parameter S0 = 2'b00, S1 = 2'b01, S2 = 2'b10; always @(posedge clk or posedge reset) if (reset) state <= S0; else state <= next_state; always @(*) case (state) S0: if (in) next_state = S1; else next_state = S0; S1: if (in) next_state = S2; else next_state = S0; S2: if (in) next_state = S2; else next_state = S0; default: next_state = S0; endcase always @(state) case (state) S0: out = 0; S1: out = 0; S2: out = 1; endcase endmodule",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_122": {
+            "question_0": {
+                "gt_answer": "A testbench is used to verify the functionality of a design by providing input stimuli and observing outputs.",
+                "pred_answer": "The purpose of a testbench in Verilog is to simulate and verify the behavior of a digital design before it is synthesized and implemented in hardware.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "[\"Design Under Test (DUT)\", \"Stimulus generator\", \"Output monitor\", \"Assertions\"]",
+                "pred_answer": "{'key_components': ['Module Instantiation', 'Clock and Reset Generation', 'Stimulus Generation', 'Response Monitoring', 'Simulation Control']}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_123": {
+            "question_0": {
+                "gt_answer": "An `always` block is used to describe sequential or combinational logic.",
+                "pred_answer": "An `always` block should be used in Verilog to describe sequential logic, combinational logic, or to implement state machines.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "`always @(*)` is used for combinational logic, whereas `always @(posedge clk)` is used for sequential logic triggered by a clock edge.",
+                "pred_answer": "always @(*) is used for combinational logic, while always @(posedge clk) is used for sequential logic.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_124": {
+            "question_0": {
+                "gt_answer": "`if-else` statements are used to make decisions based on conditions.",
+                "pred_answer": "In Verilog, `if-else` statements are used for conditional execution of code.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "`case` statements are more efficient when there are multiple possible values for a condition, while `if-else` is suitable for binary conditions.",
+                "pred_answer": "{'case': 'The `case` statement is used to select one of many blocks of code to be executed based on the value of a single expression.', 'if-else': 'The `if-else` statement is used for conditional execution of code blocks based on one or more conditions.'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_125": {
+            "question_0": {
+                "gt_answer": "The module `lo_simulate` implements clock division, ADC monitoring, and control signal generation functionalities. Inputs are divided to generate slower clock signals, control signals based on ADC thresholds, and manage power control signals. It also provides debugging functionality by aligning the debug signal `dbg` with `ssp_frame`.",
+                "pred_answer": "The module lo_simulate generates clock and control signals based on input signals and an 8-bit divisor.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_126": {
+            "question_0": {
+                "gt_answer": "The module `WireDelay` implements a configurable delay wire with optional error insertion functionality, utilizing bidirectional ports A and B to simulate signal propagation delays and errors with dynamic line enable control based on signal changes.",
+                "pred_answer": "The module WireDelay acts as a bidirectional buffer with optional delay and error insertion between two inout ports A and B.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_127": {
+            "question_0": {
+                "gt_answer": "The module \"Quad\" implements a sophisticated counter that can increment or decrement. It manages a W-bit counter, register, and control logic based on inputs A, B, Z, and zr. It employs shift registers, counters, and condition monitoring to accurately track and update the count state, index pulse, and output signals.",
+                "pred_answer": "The module processes quadrature encoder signals to track position and generate an index pulse.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_128": {
+            "question_0": {
+                "gt_answer": "The module `fifo_generator_v13_1_3_beh_ver_ll_afifo` implements a parameterized asynchronous FIFO for data buffering between different clock domains, featuring separate read and write clocks and pointer management to handle data reads and writes efficiently. It includes flags for full and empty conditions, \n//the C_HAS_RD_DATA_COUNT and C_HAS_WR_DATA_COUNT parameter have been set,but they does not perform any logical functions.//support for data count features, and ensures data integrity during resets.",
+                "pred_answer": "This Verilog module implements an asynchronous FIFO buffer with separate read and write clocks. It provides data storage and retrieval capabilities with control signals for indicating full and empty states.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_129": {
+            "question_0": {
+                "gt_answer": "The module `mux` implements a 4-to-1 multiplexer where the output selection is based on the 2-bit control signal `dsp_sel`. Depending on the value of `dsp_sel`, the output is either the lower 4 bits of `sum`, the internal register `cout`, input `opB`, or input `opA`. The internal register `cout` is set based on the most significant bit of `sum`.",
+                "pred_answer": "The module is a 4-to-1 multiplexer with inputs opA, opB, sum, and dsp_sel, and outputs a 4-bit vector out.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_130": {
+            "question_0": {
+                "gt_answer": "The module `beh_vlog_ff_ce_clr_v8_2` implements a D-type flip-flop with clock enable and asynchronous clear functionality, incorporating a simulation delay for data capture on the rising edge of the clock.",
+                "pred_answer": "The module implements a positive edge-triggered D flip-flop with clock enable and asynchronous clear.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_131": {
+            "question_0": {
+                "gt_answer": "The module `increment_axaddr` manages memory transactions with features like address calculation based on conditions, incrementing transaction addresses, updating transaction length counters, and determining the need for additional transactions using flags like `next` and `next_pending`. It allows for efficient control and handling of memory accesses within the system.",
+                "pred_answer": "The module 'increment_axaddr' manages address incrementation and next transaction readiness for AXI transactions.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_132": {
+            "question_0": {
+                "gt_answer": "The module `blk_mem_axi_regs_fwd_v8_2` implements an AXI register forwarder that stores incoming slave data and forwards it to the master side upon readiness. It involves data transfer synchronization between the slave and master sides, with support for asynchronous reset functionality.",
+                "pred_answer": "The module is a simple register-based data forwarding module with AXI-like handshake signals.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_133": {
+            "question_0": {
+                "gt_answer": "The module `BLK_MEM_GEN_v8_2_softecc_output_reg_stage` implements an optional output register stage for a memory block, registering input data and error signals based on the value of `C_HAS_SOFTECC_OUTPUT_REGS_B`.",
+                "pred_answer": "This module is a memory interface with optional soft error correction (ECC) output registers.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_134": {
+            "question_0": {
+                "gt_answer": "//The module `system_buffer_register_1_0` only defines interface signals for a 32-bit input 'val_in' captured on the //rising edge of 'clk' and output on 'val_out'. It does not perform any logical functions.\nThe module `system_buffer_register_1_0` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "This module is a 32-bit buffer register that captures the input value on the rising edge of the clock.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_135": {
+            "question_0": {
+                "gt_answer": "The module `usb_system_jtag_uart_sim_scfifo_w` implements a FIFO write interface for a USB system with JTAG UART, generating simulation outputs based on the input data and control signals.",
+                "pred_answer": "The module simulates a FIFO write operation, printing input data to the console.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_136": {
+            "question_0": {
+                "gt_answer": "The module `orangeTSMC180nm__wire_R_26m_675_C_0_025f` only implements the interface signal `a` and a supply0 connection, gnd. It does not perform any logical functions.",
+                "pred_answer": "The module is a simple Verilog module with one input and a supply0 connection.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_137": {
+            "question_0": {
+                "gt_answer": "The module `usb_system_jtag_uart_sim_scfifo_r` implements a FIFO unit within a USB system with JTAG UART functionality, synchronized with the clock and reset signals, managing read operations and status outputs based on the FIFO occupancy level.",
+                "pred_answer": "This Verilog module implements a simple FIFO-like system with a read interface.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_138": {
+            "question_0": {
+                "gt_answer": "//The module `sky130_fd_sc_ls__udp_pwrgood_pp$PG` implements a power-good monitoring functionality based on the comparison of input signals against specified power thresholds.\nThe module `sky130_fd_sc_ls__udp_pwrgood_pp$PG` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "This module is a power-good checker.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_139": {
+            "question_0": {
+                "gt_answer": "The module `unnamed_module` implements an AXI transaction manager for handling transactions that may wrap around a boundary. It calculates command byte addresses, manages wrap boundary and offset calculations triggered by the \n//`axhandshake` signal, maintains transaction progress counters, and utilizes a selector for identifying the first transaction, with the `next_pending` output signaling whether additional transactions are pending. It operates synchronously with a clock signal and supports a reset functionality.\nbut, in this module, cmd_byte-addr, axaddr, CYAXIADDR_WIDTH, reset, axhandshake, and axsize are used without being defined",
+                "pred_answer": "The module handles address wrapping for AXI transactions, managing the transition between initial and wrap-around addresses.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_140": {
+            "question_0": {
+                "gt_answer": "The module `watchdog` implements a watchdog timer that resets the system upon detecting unresponsiveness, utilizing a 4-bit counter incremented by WDCLK, resetting on specific conditions indicated by WDRESET, and offering active low outputs nRESET and nHALT to manage system responsiveness.",
+                "pred_answer": "The module implements a watchdog timer that resets a system if no activity is detected on specific signals.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_141": {
+            "question_0": {
+                "gt_answer": "The module `orangeTSMC180nm__wire_R_26m_1500_C_0_025f` only implements a single input port 'a' and does not have any logical functionality or output ports. //It is a placeholder module likely used for documentation purposes in larger systems.",
+                "pred_answer": "The module represents a wire with a grounded supply.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_142": {
+            "question_0": {
+                "gt_answer": "The module `soc_design_JTAG_sim_scfifo_w` implements a simulated FIFO write operation for testing purposes, where data is written to the simulation output upon each positive clock edge if a write operation is enabled. The outputs `fifo_FF` and `wfifo_empty` are fixed at 0 and 1, respectively, indicating the FIFO is never full and always empty, while `r_dat` and `wfifo_used` are fixed at 0 and 6'b0, showing that no data is read or stored in the FIFO, respectively.",
+                "pred_answer": "This module writes incoming data to the standard output when a write signal is asserted.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_143": {
+            "question_0": {
+                "gt_answer": "//The module `mux2to1` implements a 2-to-1 multiplexer with two 32-bit input ports, datain0 and datain1, a 1-bit select input, and a 32-bit output dataout, where the select input controls the output selection between datain0 and datain1.\nThe module \"mux2to1\" only implements some interface signals and signal initialization. It does not perform any logical functions. The clock, four, yesItAlwaysTure, yesItAlwyasFalse, and clear signals in this module were not defined earlier.",
+                "pred_answer": "The module is intended to be a 2-to-1 multiplexer but contains incorrect and irrelevant initial blocks.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_144": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hs__udp_dlatch$PR_pp$sN` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "This Verilog module defines a D-latch with a positive reset and active-low sleep control.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_145": {
+            "question_0": {
+                "gt_answer": "The module `spi_slave_0_base` implements an SPI slave device that communicates with an SPI master, sampling incoming data on the mosi line with each rising edge of sck when ssel is active and sending data back on the miso line, shifting out data on each falling edge of sck when ssel is active. It tracks received bits and bytes, sets a flag on byte reception, and indicates status when a specific number of valid bytes have been received.",
+                "pred_answer": "SPI Slave module for serial communication",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_146": {
+            "question_0": {
+                "gt_answer": "The module `Decodificador` implements a decoder that drives four 8-bit cathode outputs based on the 7-bit input 'Cuenta', displaying corresponding patterns for a 7-segment display with specific digit mappings as described in the specification.",
+                "pred_answer": "The module Decodificador is a decoder that takes a 7-bit input 'Cuenta' and outputs four 8-bit values 'catodo1', 'catodo2', 'catodo3', and 'catodo4' based on specific cases. These cases are 0, 1, 2, and 10, with a default case for any other input.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_147": {
+            "question_0": {
+                "gt_answer": "//The module `sky130_fd_sc_ms__a2111oi` performs a logical function involving AND and OR operations with inverted and non-inverted inputs implemented using CMOS technology; however, the exact relationship between the inputs (A1, A2, B1, C1, D1) and the output (Y) is not explicitly defined in the provided document.\nThe module `sky130_fd_sc_ms__a2111oi` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module is a 2-input AND gate followed by three 1-input OR gates and an inverter.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_148": {
+            "question_0": {
+                "gt_answer": "The module `DataMemory` implements a memory array with read and write functionality controlled by CLK. It initializes 10 32-bit registers, sets registers 2 and 5 to 2, and outputs specific register values based on Address. When CLK is low, it writes data to the memory array based on MouseEnable and WriteEnable, with MouseData having priority over WriteData. DATO1, DATO2, and RESULTADO display specific register values irrespective of CLK.",
+                "pred_answer": "The module is a simple data memory with additional functionality for mouse data handling.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_149": {
+            "question_0": {
+                "gt_answer": "The module `altera_avalon_st_pipeline_base` implements a two-stage pipeline for the Altera Avalon-ST protocol, offering configurable registered or unregistered ready signals and supporting parameterized data widths. It manages data movement, status flags, and reset operations according to the Avalon-ST protocol requirements.",
+                "pred_answer": "The module is a data pipeline that manages the flow of data between an input and an output with optional pipelining of the ready signal.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_150": {
+            "question_0": {
+                "gt_answer": "The module `mc_dlp` functions as a memory controller interacting with an arbiter to handle memory requests. It captures request details, syncs signals between clock domains, manages data transfers, and tracks completion status based on processed word count, addressing, and grant signals' state. The module initializes counters on reset and contains prompts to review completion conditions for specific byte sizes, despite having unused internal registers and parameters.",
+                "pred_answer": "The 'mc_dlp' module manages data transfer requests and grants between a host and memory, using dual clock domains for synchronization. It handles requests by toggling control signals, capturing addresses and write counts, and indicating readiness. The module tracks completion using a counter that adjusts based on the parameterized byte size.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_151": {
+            "question_0": {
+                "gt_answer": "The module `pixel ram` implements a parameterized dual port ram for different clock domain write and read operations, storing DATA_WIDTH bit data in an ADDR_WIDTH based storage location.",
+                "pred_answer": "The module implements a dual-clock RAM with separate read and write ports.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_152": {
+            "question_0": {
+                "gt_answer": "//The module `sky130_fd_sc_hdll__buf` implements a single-bit buffer with power and ground connections for CMOS IC operation. It does not perform any logical functions.\nThe module `sky130_fd_sc_hdll__buf` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module is a buffer.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_153": {
+            "question_0": {
+                "gt_answer": "The module `data_prbs_gen` implements a pseudo-random bit sequence generator using a linear feedback shift register (LFSR). It initializes the LFSR with a seed value upon assertion of 'prbs_seed_init' or 'rst_i' signals when 'EYE_TEST' is \"FALSE\", updating the LFSR on the rising edge of 'clk_i' when 'clk_en' is active, determining the feedback logic internally. The output 'prbs_o' reflects the current PRBS value, changing with LFSR updates, while employing a timing control parameter 'TCQ' for simulation and supporting an optional eye test mode through 'EYE_TEST'.",
+                "pred_answer": "The module is a Pseudo-Random Bit Sequence (PRBS) generator using a Linear Feedback Shift Register (LFSR).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_154": {
+            "question_0": {
+                "gt_answer": "The module `tx_phy` implements a finite state machine (FSM) for controlling a transmitter PHY in a data transmission system, transitioning between states IDLE, TASK, HASH, and NONCE based on inputs and internal conditions, managing data transmission, task IDs, timeouts, and physical layer transmission signals.",
+                "pred_answer": "The tx_phy module implements a finite state machine (FSM) for transmitting data in a serial fashion across a physical layer interface. It transitions through four states: IDLE, TASK, HASH, and NONCE, handling data preparation, task identification, and nonce generation for transmission. The module controls read enable signals, manages timing for transmission events, and outputs differential signals (TX_P and TX_N) based on the state and control signals.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_155": {
+            "question_0": {
+                "gt_answer": "The module `tcp_to_bus` interfaces TCP/RBCP with a bus system, managing data transfer and control signals, including incrementing the TCP RX write count, adjusting the byte count based on data length, handling invalid signals, updating the RX data count, determining `tcp_reset`, setting the length, managing write enable signals, addressing, and controlling bus signals for effective communication between the components involved.",
+                "pred_answer": "The module 'tcp_to_bus' processes incoming TCP data and translates it into bus transactions. It maintains counters to track received data and provides an interface for reading/writing over a bus. It handles potential errors such as invalid transactions and ensures data integrity during transfers.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_156": {
+            "question_0": {
+                "gt_answer": "//The module `sky130_fd_sc_ls__dlymetal6s2s` implements a delay element that generates a delayed output signal `X` based on the input signal `A`, with power and ground connections for proper operation.\nThe module `sky130_fd_sc_ls__dlymetal6s2s` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module is a delay element with metal routing layers.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_157": {
+            "question_0": {
+                "gt_answer": "The module `ac97_deframer` implements the deframing of an AC'97 audio data stream with synchronization logic and bit tracking for processing input data bits and assembling them into different output registers for address, data, and PCM audio channels. It provides flags for frame validity and readiness while resetting the bit counter upon synchronization for the next frame. The module acknowledges data receipt through the `up_ack` signal.",
+                "pred_answer": "The ac97_deframer module extracts and reconstructs audio and control information from a serialized AC'97 data stream. It identifies frame boundaries using a sync signal and decodes data into address, command, and PCM left and right audio channels.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_158": {
+            "question_0": {
+                "gt_answer": "//The module `sky130_fd_sc_lp__or3b` implements a 3-input OR gate with body biasing, where the output X is high if any of the inputs A, B, or not(C) is high, providing control over gate speed and power consumption through body biasing.\nThe module `sky130_fd_sc_lp__or3b` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module implements a 3-input OR gate with an inverted input.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_159": {
+            "question_0": {
+                "gt_answer": "The module `dc_video_reconfig` implements video settings reconfiguration for a DC video system based on an 8-bit input signal, controlling the video configuration and VGA mode. It utilizes internal registers synchronized to a clock, updating the output settings based on the input data and predefined configuration files.",
+                "pred_answer": "The module dc_video_reconfig adjusts the video configuration based on input data and potentially forces VGA mode.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_160": {
+            "question_0": {
+                "gt_answer": "//The module `decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix` only serves as a black box placeholder without any specified internal logic or functionality; it acts as a stand-in for a module whose implementation is externally defined or provided.\nThe module `sky130_fd_sc_ls__udp_pwrgood_pp$PG` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "This Verilog module defines an interface for a black-box module with a clock input and several probe inputs.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_161": {
+            "question_0": {
+                "gt_answer": "The module `hardcopyiii_delay_chain` implements a configurable delay chain that adjusts the input signal 'datain' based on 'delayctrlin' for coarse delay and 'finedelayctrlin' for fine delay. It utilizes internal delay tables for rising and falling edge delays, providing a delayed output 'dataout' reflecting the input with precise delay amounts determined by the control inputs. The module includes reset functionality, filters out invalid input states, and adheres to specified timing constraints.",
+                "pred_answer": "The module hardcopyiii_delay_chain introduces a programmable delay to the input signal datain based on the values of delayctrlin and finedelayctrlin inputs.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_162": {
+            "question_0": {
+                "gt_answer": "//The module `hardcopyiii_tsdblock` implements temperature sensor diode calibration functionality, accepting input signals for calibration and generating calibrated values based on defined parameters.\nThe module `hardcopyiii_tsdblock` only implements some interface signals and parameters. It does not perform any logical functions.",
+                "pred_answer": "The module 'hardcopyiii_tsdblock' represents a thermal sensor block with calibration capability.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_163": {
+            "question_0": {
+                "gt_answer": "The module `hardcopyiii_first_stage_add_sub` implements a 72-bit arithmetic unit capable of addition and subtraction based on the 4-bit operation code, considering sign extension and arithmetic operations on input operands `dataa` and `datab`, with the result available at the `dataout` output port.",
+                "pred_answer": "This Verilog module performs addition or subtraction on two 72-bit input data signals.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_164": {
+            "question_0": {
+                "gt_answer": "//The module `sky130_fd_sc_hd__a22oi` implements a logic gate combination known as an AND-OR-Invert operation, producing the output Y based on the logic defined for inputs A1, A2, B1, and B2.\nThe module `sky130_fd_sc_hd__a22oi` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module is a 2-input OR gate followed by a 2-input NOR gate.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_165": {
+            "question_0": {
+                "gt_answer": "//The module `bw_clk_gclk_inv_r90_192x` implements a clock signal inverter utilizing the bitwise NOT operator to generate the inverse of the input clock signal.\nThe module `bw_clk_gclk_inv_r90_192x` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module is a clock inverter.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_166": {
+            "question_0": {
+                "gt_answer": "The module `hardcopyiii_lcell_hsadder` implements a binary adder with optional carry-in inversion, producing the sum of 'dataa' and 'datab' inputs with an optional 'cin'. The 'sumout' output includes the carry-out, and 'cout' indicates the final carry-out.",
+                "pred_answer": "The module is a parameterized half/full adder.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_167": {
+            "question_0": {
+                "gt_answer": "The module `hardcopyiii_pll_reg` implements a register with asynchronous clear and preset functionality, capturing input data on the rising edge of the clock when enabled, and setting the output based on preset and clear signals, updating only with the input data under certain conditions.",
+                "pred_answer": "The module implements a positive-edge-triggered D flip-flop with asynchronous active-low set and clear inputs, and an enable signal.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_168": {
+            "question_0": {
+                "gt_answer": "The module `LAG_pl_free_pool` implements a pipeline lane allocation controller that updates the allocation status based on the presence of valid tail flits and previous allocations, following specific criteria, where pipeline lanes are marked as free or allocated accordingly. It initializes all pipeline lanes to a free state upon reset.",
+                "pred_answer": "The module LAG_pl_free_pool manages allocation status of a set of processing lanes (PLs) based on input status signals. It maintains a register of allocation statuses that gets updated every clock cycle based on whether PLs are allocated and the status of flits. The module also provides conditional allocation status output based on whether only allocation when PLs are empty is enabled.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_169": {
+            "question_0": {
+                "gt_answer": "The module `bram_module` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module is a parameterized block RAM controller for Xilinx 7-series FPGAs, supporting read and write operations with optional ECC and read enable.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_170": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hd__xnor3`only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module is a 3-input XNOR gate.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_171": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hd__lpflow_clkbufkapwr` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module sky130_fd_sc_hd__lpflow_clkbufkapwr is a clock buffer with power management capabilities.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_172": {
+            "question_0": {
+                "gt_answer": "The module `Alu` implements an Arithmetic Logic Unit (ALU) that performs various operations based on a 3-bit control signal, including Addition, Subtraction, Bitwise AND, OR, Shift Left, Shift Right, and Bitwise NOT. It operates on two 8-bit input operands and generates an 8-bit output, with a zero flag indicating if the output is zero or not.",
+                "pred_answer": "The module is an Arithmetic Logic Unit (ALU) that performs operations based on the input selection.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_173": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_lp__nand3b` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "3-input NAND gate with one inverted input",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_174": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hdll__dfrtp` only implements some interface signals. It does not perform any logical functions..",
+                "pred_answer": "The module is a positive-edge-triggered D flip-flop with an active-low reset.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_175": {
+            "question_0": {
+                "gt_answer": "The module `incif_wrapuint32_646_inc2` implements conditional incrementing logic for a 33-bit input, where the lower 32 bits are modified based on the 33rd bit value, with specific handling for the value 646. It operates synchronously with clock signal and includes clock enable input, though not utilized in the provided code.",
+                "pred_answer": "The module performs conditional increment or reset operations on a 32-bit input.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_176": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hvl__lsbuflv2hv_symmetric` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module is a level shifter.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_177": {
+            "question_0": {
+                "gt_answer": "The module `decoder` decodes a 16-bit instruction to generate control signals for a processor based on the opcode extracted from the instruction, setting control signals for different instruction types within a case statement.",
+                "pred_answer": "The module 'decoder' takes a 16-bit instruction as input and decodes it into various control signals for a processor. It determines the operation type based on the 4-bit opcode and assigns values to outputs like register addresses, immediate values, and control signals for ALU operations, load/store, and branching. Specific control signals are set based on different opcodes, with special handling for a HALT instruction when the opcode is 0000 and function is 001.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_178": {
+            "question_0": {
+                "gt_answer": "The module `reg_43` functions as a synchronous 32-bit register capturing 'new_value' on the rising edge of 'clk' when 'new_en' is active, presenting the data on 'output_payload' with a corresponding 'output_valid' signal. 'output_valid' reflects the acceptance status indicated by 'output_ready' and resets upon 'rst' assertion, with data updates synchronized to 'clk' rising edges.",
+                "pred_answer": "This module implements a register that stores a 32-bit payload and manages its validity using control signals.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_179": {
+            "question_0": {
+                "gt_answer": "The module `CC_Decoder` implements a one-hot decoder that converts a binary input signal to a one-hot encoded output, where only one bit is high based on the input value.",
+                "pred_answer": "The module implements a binary to one-hot decoder.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_180": {
+            "question_0": {
+                "gt_answer": "The module `mux` implements a 2-to-1 multiplexer function, selecting between inputs 'x' and 'y' based on the value of 'select'.",
+                "pred_answer": "The module is a 2-to-1 multiplexer.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_181": {
+            "question_0": {
+                "gt_answer": "The module `reg_41` implements a 32-bit storage element that updates its content based on control signals, updating the stored value upon a positive clock edge when enabled and managing the validity signal based on downstream logic readiness while also handling asynchronous resets.",
+                "pred_answer": "The module is a register that stores a 32-bit payload with control signals for validity and readiness. It updates the payload and validity flag based on enable and reset signals, and clears the validity when the output is ready.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_182": {
+            "question_0": {
+                "gt_answer": "The module `trainsim` implements a state machine simulating a train system with two trains, controlling track switches and train directions based on sensor inputs, transitioning between five states ('ABOUT', 'AIN', 'BIN', 'ASTOP', 'BSTOP') and setting outputs accordingly while using a clock signal and reset to manage state changes.",
+                "pred_answer": "The module simulates a train system that controls the direction and status of two trains based on sensor inputs. It uses a finite state machine with states ABOUT, AIN, BIN, ASTOP, and BSTOP to determine the train's movement and switching. The system transitions between states depending on specific sensor signals, setting outputs for switch positions and train directions accordingly.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_183": {
+            "question_0": {
+                "gt_answer": "The module `JTAGG` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module JTAGG is a JTAG interface module.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_184": {
+            "question_0": {
+                "gt_answer": "The module `pipeline_control_spr_exchange` orchestrates the data exchange between the processor's pipeline and special purpose registers (SPRs) using a state machine to handle read and write requests, managing transitions between idle, load, and store states based on the readiness of the load/store unit. Signals are generated to indicate operation completion and control the load/store unit, ensuring smooth pipeline operation without stalling.",
+                "pred_answer": "The module is a state machine that controls a pipeline for exchanging special purpose registers (SPR) in a system, managing load and store operations through a series of defined states.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_185": {
+            "question_0": {
+                "gt_answer": "The module `step_id` implements an instruction decoder that generates ready signals for various instructions based on the instruction content, an enable signal, and a condition output signal, with specific conditions for each instruction type.",
+                "pred_answer": "This Verilog module, step_id, processes an 8-bit instruction and various control signals to determine readiness signals for different operations such as NOP, CPF, CPT, LD, ST, CLR, IM, TCE, TS, ADD, and SUB.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_186": {
+            "question_0": {
+                "gt_answer": "The module `neg` demonstrates the toggling behavior of registers with negative indexing on the positive edge of the input clock signal.",
+                "pred_answer": "The module neg toggles the bits of three registers on every positive edge of the clock signal.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_187": {
+            "question_0": {
+                "gt_answer": "The module `PCIEBus_gtp_pipe_drp` implements a parameterized finite state machine (FSM) for managing Dynamic Reconfiguration Port (DRP) operations in a PCIe application, facilitating configuration and data transfer between the module and a GTP transceiver's DRP. It accepts 16-bit configuration data, generates a 9-bit address and 16-bit output data, controls DRP enablement and writes, and indicates operation completion through various output signals like `DRP_DONE` and `DRP_FSM`.",
+                "pred_answer": "The module is a finite state machine (FSM) for handling PCI Express (PCIe) bus operations with dynamic reconfiguration port (DRP) interface. It synchronizes signals, manages read and write operations, and signals completion of transactions. The FSM transitions through various states like LOAD, READ, WRITE, and DONE based on input signals and conditions.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_188": {
+            "question_0": {
+                "gt_answer": "The module `nios_solo_pio_0` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "This Verilog module represents a simple parallel input/output (PIO) interface for a Nios II processor.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_189": {
+            "question_0": {
+                "gt_answer": "The module `SingleCycleProcessor` implements a basic processor with a two-cycle operation (fetch and execute), supporting various arithmetic, logical, memory access, and control flow operations. It includes internal registers for managing the execution flow, extracting instruction fields, and updating the program counter and register file based on the instruction executed. It also handles asynchronous reset functionality for clearing the processor state.",
+                "pred_answer": "This Verilog module represents a simple single-cycle processor.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_190": {
+            "question_0": {
+                "gt_answer": "The module `alu` implements an Arithmetic Logic Unit (ALU) that performs addition operations on two 32-bit input operands based on a specified command, transitioning through states to handle input processing and result generation.",
+                "pred_answer": "This Verilog module implements a simple Arithmetic Logic Unit (ALU) that performs addition.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_191": {
+            "question_0": {
+                "gt_answer": "The module `step_ex_cpf` implements a state machine-controlled data flow unit managing register 0 within a register file, featuring conditional signal controls and a tri-state buffer array for data routing based on register ID, ensuring controlled operation based on clock, reset, and enable signals.",
+                "pred_answer": "The module step_ex_cpf controls register operations based on a clock, reset, and enable signal, managing data transfer to and from a set of registers.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_192": {
+            "question_0": {
+                "gt_answer": "The module `ODDRX2DQSB` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module ODDRX2DQSB is a dual data rate (DDR) serializer.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_193": {
+            "question_0": {
+                "gt_answer": "The module `sp_find_segment_stn1` implements direct signal routing, passing inputs to corresponding outputs without alteration, establishing one-to-one mappings between input and output signals.",
+                "pred_answer": "The module sp_find_segment_stn1 reads four input signals and directly assigns them to four output signals.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_194": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hs__tapvgnd2` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module sky130_fd_sc_hs__tapvgnd2 is a power and ground tap cell with no inputs or outputs.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_195": {
+            "question_0": {
+                "gt_answer": "The module `DemoInterconnect_axi_spi_master_0_1` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module implements an AXI to SPI Master interface.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_196": {
+            "question_0": {
+                "gt_answer": "The module `readonly_register` implements a logic whereby it outputs a predefined value on the `reg_data` bus when the `reg_addr` matches a specified address and the `reg_wr` signal is low; otherwise, it sets the `reg_data` bus to high-impedance ('32'hZZ') to prevent bus contention.",
+                "pred_answer": "This module implements a read-only register.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_197": {
+            "question_0": {
+                "gt_answer": "The module `loadTrack` implements a functionality to monitor the load on a router and its ports, updating the utilization based on port activity statuses and productive vectors, with router and port load outputs provided accordingly.",
+                "pred_answer": "The module `loadTrack` monitors the load on a router and its ports by updating utilization counts based on the status and activity of each port.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_198": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hs__tapvpwrvgnd` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module is a placeholder for power and ground connections in an integrated circuit.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_199": {
+            "question_0": {
+                "gt_answer": "The module `clk63_3hz` implements a clock divider generating an output clock 'outclk' that toggles at 1/789901th the frequency of the input clock 'clk'.",
+                "pred_answer": "The module clk63_3hz generates a pulse on the outclk output every 789,901 clock cycles of the input clk.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_200": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_lp__inputiso1p`only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module 'sky130_fd_sc_lp__inputiso1p' functions as an input isolation cell with a power gating capability.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_201": {
+            "question_0": {
+                "gt_answer": "The module `IBUF` implements a simple buffer that directly forwards the input signal `I` to the output `O` without introducing any delay.",
+                "pred_answer": "The IBUF module is a simple input buffer that passes the input signal 'I' directly to the output 'O'.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_202": {
+            "question_0": {
+                "gt_answer": "The module `system_zed_vga_0_0` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module converts a 16-bit RGB565 color input to separate 4-bit VGA color channels.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_203": {
+            "question_0": {
+                "gt_answer": "The module `INV` implements a simple inverter operation and features a specified propagation delay of 127 time units.\n.",
+                "pred_answer": "The module 'INV' is a simple inverter (NOT gate).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_204": {
+            "question_0": {
+                "gt_answer": "The module `ripemd160_rol_s` implements logical operations by right-shifting first_sequence and second_sequence based on the value of the input signal rx_round, and storing the results in the output registers.",
+                "pred_answer": "This Verilog module implements a lookup table functionality using two sequences of 4-bit values. Based on a 7-bit input 'rx_round', it selects corresponding 4-bit values from the two predefined sequences 'first_sequence' and 'second_sequence' and outputs them as 'tx_s0' and 'tx_s1'. This operation is clocked, meaning the output values update on the rising edge of the clock signal.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_205": {
+            "question_0": {
+                "gt_answer": "The module `vga_controller` implements signal generation for driving a VGA display, including synchronization, blanking, and color signal generation based on pixel position and input color data. It supports configurable color depth and resolution, operates in color or monochrome mode, utilizes counters for tracking positions, and scales down the pixel position for memory address calculation. Sync signals, blanking, and color processing are based on defined timing parameters, enhancing brightness by replicating bits for color channels, or replicating a single bit in monochrome mode. It outputs a constant high sync signal and directly passes the input clock as the VGA clock signal.",
+                "pred_answer": "The vga_controller module generates VGA signals based on a specific resolution.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_206": {
+            "question_0": {
+                "gt_answer": "The module `pcie_7x_v1_3_fast_cfg_init_cntr` implements a counter that operates on the rising edge of the `clk` signal, resetting `pattern_o` to zeros on `rst` assertion, incrementing it by 1 on deassertion if not equal to `INIT_PATTERN`, with a delay specified by `TCQ`.",
+                "pred_answer": "The module implements a counter that increments the output pattern_o on each clock cycle until it matches the INIT_PATTERN, and resets to zero on a reset signal.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_207": {
+            "question_0": {
+                "gt_answer": "The module `SUB` implements a simple synchronous reset flip-flop with an output that mirrors the state of an internal register based on clock and reset signals.",
+                "pred_answer": "The module SUB is a simple flip-flop with an asynchronous reset.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_208": {
+            "question_0": {
+                "gt_answer": "The module `comparador` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module 'comparador' seems to be a part of a system that processes data inputs and outputs a 4-bit value to 'sensores'.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_209": {
+            "question_0": {
+                "gt_answer": "The module `Apb3Decoder` decodes a 20-bit input address to select peripherals on an APB3 bus using bitwise operations for select signal generation. It passes through control and data signals between input and output ports.",
+                "pred_answer": "The module Apb3Decoder decodes APB3 bus addresses and generates select signals for different peripherals based on address ranges.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_210": {
+            "question_0": {
+                "gt_answer": "The module `ORCY` implements a bitwise OR operation between input signals `CI` and `I`, producing the result at output `O`.",
+                "pred_answer": "The module ORCY performs a logical OR operation.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_211": {
+            "question_0": {
+                "gt_answer": "The module `Dflop` implements combinational logic thatcaptures the value of the input signal D on the high level of the clock signal Clk and stores this value in the output signal Q. The output Q retains its value until the next high level of the clock signal Clk, at which point it updates to the new value of D.",
+                "pred_answer": "This module is a positive edge-triggered D flip-flop.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_212": {
+            "question_0": {
+                "gt_answer": "The module `dragster_spi_adapter` implements a SPI bus adapter with transaction buffering and forwarding capabilities, operating on the negative edge of the clock and reset, handling bit counters, slave select signals, and buffering transactions. It features parameterized settings for clock extension, transaction depth, and data width to ensure flexibility in SPI bus interfacing.",
+                "pred_answer": "The module implements a SPI adapter that handles transactions between an internal SPI interface and an external SPI interface, with configurable transaction depth and data width.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_213": {
+            "question_0": {
+                "gt_answer": "The module `LUT1` implements a 1-bit Look-Up Table (LUT) functionality with output O determined by the 2-bit parameter INIT based on the input I0, and features a specified propagation delay of 127 time units.",
+                "pred_answer": "The LUT1 module is a 1-input lookup table that outputs one of the two bits of the INIT parameter based on the input I0.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_214": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hs__dfrbp` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module is a positive-edge-triggered D flip-flop with active-low asynchronous reset.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_215": {
+            "question_0": {
+                "gt_answer": "The module `MUXF5` implements a 2-to-1 multiplexer, selecting between input `I0` and input `I1` based on the value of the select signal `S`.",
+                "pred_answer": "The module MUXF5 is a 2-to-1 multiplexer.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_216": {
+            "question_0": {
+                "gt_answer": "The module `conled` implements a PWM controller for six LEDs, with individual brightness levels based on specific bits of a counter.",
+                "pred_answer": "The module conled is designed to control six LEDs with a pattern that changes based on a counter driven by a clock signal.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_217": {
+            "question_0": {
+                "gt_answer": "The module `controller` implements a memory controller FSM managing data transactions, transitioning through IDLE, SAMPLE, DELAY, READ, and READWAIT states based on input conditions, handling memory read/write operations with control signals synchronized to the clock.",
+                "pred_answer": "The module is a controller for writing to and reading from memory, managing different states such as IDLE, SAMPLE, DELAY, READ, and READWAIT.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_218": {
+            "question_0": {
+                "gt_answer": "The module `random_gen` implements a pseudo-random number generator using a linear feedback shift register (LFSR) and controls a trigger event based on the generated number and retry count. It incorporates signal synchronization on the positive clock edge.",
+                "pred_answer": "The 'random_gen' module generates a random delay based on a retry count and triggers an output when the delay has elapsed.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_219": {
+            "question_0": {
+                "gt_answer": "The module `VGAFrequency` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module VGAFrequency is a Verilog module that appears to serve as an interface or placeholder for a frequency-related component within a VGA system.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_220": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_lp__sdfbbp` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "The module is a scan-enabled flip-flop with set and reset functionalities.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_221": {
+            "question_0": {
+                "gt_answer": "The module `UDP_LATCH1` implements a latch that stores data from D1 or D2 based on the control signals G1 and G2, updating the output Q_ after a 1-time unit delay and remaining in the current state if both control signals are the same.",
+                "pred_answer": "The module is a latch that conditionally assigns its output Q_ based on the states of its inputs.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_222": {
+            "question_0": {
+                "gt_answer": "The module `beh_vlog_ff_ce_clr_v8_0` implements a flip-flop with clock enable and clear functionality, where the output Q is asynchronously reset to 0 on a positive clock edge if the clear input CLR is high; otherwise, Q captures the input D after a delay specified by FLOP_DELAY when the clock enable input CE is high, retaining its state if CE is inactive.",
+                "pred_answer": "This module is a positive edge-triggered flip-flop with clock enable and asynchronous clear.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_223": {
+            "question_0": {
+                "gt_answer": "The module `Event_Pulse` implements a detector for rising and falling edge transitions of the input signal, generating separate outputs for rising edges, falling edges, and both edges based on the sampled input signal at the rising clock edge.",
+                "pred_answer": "The module detects rising, falling, and both edges of an input signal.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        }
+    }
+}

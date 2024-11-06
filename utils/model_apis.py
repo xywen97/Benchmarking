@@ -1,8 +1,11 @@
 import requests
 import json
 from openai import OpenAI
+import fastapi_poe as fp
+import asyncio
 
 api_key = "sk-QpHUrsblHgB7kAzcpwLmrFz3yKKTiFVlFOW2vgVc7ARfqsXR"
+api_key_poe = "GwpNvRYkJDExNG7HJLHHpmxuP0yEoncdlsx0bK7dlG0"
 base_url = "https://a.fe8.cn/v1"
 
 # api_key = "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"
@@ -21,6 +24,38 @@ def image_captioning(image_path=None):
             return "Error: " + str(response.status_code)
     else:
         return "Error: No image path provided"
+
+def query_gemini_series(prompt, images=None, image_captions=None, model_name=None):
+
+    model_to_bot_mapping = {
+        ""
+    }
+
+    bot_name = model_to_bot_mapping[model_name]
+
+    def parse_string_to_json(string):
+        try:
+            return json.loads(string)
+        except json.JSONDecodeError as e:
+            print(f"JSON解析错误: {e}")
+            return None
+    async def get_responses(api_key_poe, messages):
+        response = []
+        async for partial in fp.get_bot_response(messages=messages, bot_name=bot_name, api_key=api_key_poe):
+            text = partial.raw_response['text']
+            '{"text": " today"}'
+            text = parse_string_to_json(text)
+            response.append(text['text'])
+            
+        # print(''.join(response))
+        return_result = ''.join(response)
+        return return_result
+    
+    message_system = fp.ProtocolMessage(role="system", content="You are a helpful assistant.")
+    message_user = fp.ProtocolMessage(role="user", content=prompt)
+
+    result = asyncio.run(get_responses(api_key_poe, [message_system, message_user]))
+    return result
 
 def query_minigpt4_vicuna7b(prompt, images=None, image_captions=None):
     url = 'http://127.0.0.1:5004/generate'

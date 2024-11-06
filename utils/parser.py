@@ -1,5 +1,6 @@
+from pyexpat import model
 from antlr4 import PredictionMode
-from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b
+from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series
 import json
 import base64
 
@@ -44,6 +45,8 @@ def compute_acc(data):
 
 
 def choose_model(model_name):
+    if model_name.start_with('gemini'):
+        return query_gemini_series
     model_mapping = {
         "llama2_7b": query_llama2_7b,
         "llama2_13b": query_llama2_13b,
@@ -62,6 +65,9 @@ def choose_model(model_name):
         raise ValueError(f"Model '{model_name}' is not recognized. Please choose a valid model.")
 
 def check_if_multi_modal(model_name):
+    if model_name.start_with('gemini'):
+        return False
+
     is_multi_mapping = {
         "llama2_7b": False,
         "llama2_13b": False,
@@ -227,7 +233,10 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
             
             for attempt in range(3):
                 try:
-                    response = query_model(entire_question, images)
+                    if model_name == "gemini_series":
+                        response = query_model(entire_question, images, model_name)
+                    else:
+                        response = query_model(entire_question, images)
                     if response:
                         # print(f"Response received: {response}")
                         try:

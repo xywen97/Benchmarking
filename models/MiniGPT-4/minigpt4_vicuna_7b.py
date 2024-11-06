@@ -96,6 +96,9 @@ def generate_text():
         The image paths are: {img_paths}
     """)
 
+    if len(img_paths) == 0:
+        img_paths.append("/home/xiangyu/project/multimodalEDABenchmarking/models/MiniGPT-4/tmp.png")
+
     try:
         chat = Chat(model, vis_processor, device='cuda:{}'.format(args.gpu_id), stopping_criteria=stopping_criteria)
         chat_state = CONV_VISION.copy()
@@ -122,11 +125,11 @@ def generate_text():
         temperature = 0.7
         print("query models....")
         llm_message = chat.answer(conv=chat_state,
-                                  img_list=img_list,
-                                  num_beams=num_beams,
-                                  temperature=temperature,
-                                  max_new_tokens=300,
-                                  max_length=2000)[0]
+                                img_list=img_list,
+                                num_beams=num_beams,
+                                temperature=temperature,
+                                max_new_tokens=300,
+                                max_length=2000)[0]
         print(llm_message)
 
         return jsonify(llm_message)

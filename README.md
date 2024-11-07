@@ -29,6 +29,7 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 ### Multi-modal Model (image not ready)
 - [x] Gemini series
 - [x] Claude series
+- [x] Reka series
 
 
 ## Data Format

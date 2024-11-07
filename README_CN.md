@@ -27,6 +27,7 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 ### 多模态模型 (图片端还未成功)
 - [x] Gemini series
 - [x] Claude series
+- [x] Reka series
 
 ## 数据格式
 

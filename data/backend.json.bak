@@ -1,4 +1,3460 @@
 {
+    "backend_0": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Brief me on OpenROAD Flow?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "OpenROAD-flow-scripts (ORFS) is a fully autonomous, RTL-GDSII flow for rapid architecture and design space exploration, early prediction of QoR, and detailed physical design implementation. However, ORFS also enables manual intervention for finer user control of individual flow stages through Tcl commands and Python APIs."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-0"
+    },
+    "backend_1": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is OpenROAD Flow and its benefits?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "OpenROAD-flow-scripts (ORFS) is a fully autonomous, RTL-GDSII flow for rapid architecture and design space exploration, early prediction of QoR, and detailed physical design implementation. However, ORFS also enables manual intervention for finer user control of individual flow stages through Tcl commands and Python APIs."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-1"
+    },
+    "backend_2": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Brief me on OpenROAD Flow?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "OpenROAD-flow-scripts offer a comprehensive, autonomous RTL-GDSII flow for rapid design exploration and physical design, allowing for manual intervention at stages through Tcl commands and Python APIs for greater control."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-2"
+    },
+    "backend_3": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "I'm trying to port ORFS to a TSMC process. During the detailed route step, I get a lot of DRT-0073 errors. Utilization is set to 20% at the beginning of the P&R flow and it is a pretty simple design. Give me some tips about what to look into?\nI have tried to run the pin_access command directly but the -verbose parameter does not seem to work as I don't get any more information"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "You can try the developer debugs to get a sense of what is going on. Put detailed_route_debug -pa -pa_markers -pin _3504_:A1 before you call detailed_route and run it in the GUI. It will stop at the pin and show you how it is trying to access it and any associated drc markers. You click the continue button to see the various steps. Hopefully, that gives you an idea as to what is going on. The other option is a support contract with precisioninno.com where we can help under NDA.\n"
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-3"
+    },
+    "backend_4": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "I'm encountering DRT-0073 errors during detailed routing in ORFS; any advice?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "You can try the developer debugs to get a sense of what is going on. Put detailed_route_debug -pa -pa_markers -pin _3504_:A1 before you call detailed_route and run it in the GUI. It will stop at the pin and show you how it is trying to access it and any associated drc markers. You click the continue button to see the various steps. Hopefully, that gives you an idea as to what is going on. The other option is a support contract with precisioninno.com where we can help under NDA.\n"
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-4"
+    },
+    "backend_5": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "I'm trying to port ORFS to a TSMC process. During the detailed route step, I get a lot of DRT-0073 errors. Utilization is set to 20% at the beginning of the P&R flow and it is a pretty simple design. Give me some tips about what to look into?\nI have tried to run the pin_access command directly but the -verbose parameter does not seem to work as I don't get any more information"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Developer debug options in OpenROAD can give insights into detailed routing processes, offering visual debug aids in the GUI and the option for NDA-supported assistance from precisioninno.com."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-5"
+    },
+    "backend_6": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: -o or \u2014local?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The argument, o or \u2014local, builds locally instead of building a Docker image."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-6"
+    },
+    "backend_7": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How does the -o or \u2014local argument function in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The argument, o or \u2014local, builds locally instead of building a Docker image."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-7"
+    },
+    "backend_8": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: -o or \u2014local?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -o or --local argument opts for a local build over Docker."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-8"
+    },
+    "backend_9": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What operation does the -l or --latest argument perform in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -l or --latest argument specifies to use of the head of branch \u2013or_branch or \u2018master\u2019 by default for tools/OpenROAD."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-9"
+    },
+    "backend_10": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is accomplished by the -l or --latest argument in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -l or --latest argument specifies to use of the head of branch \u2013or_branch or \u2018master\u2019 by default for tools/OpenROAD."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-10"
+    },
+    "backend_11": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What operation does the -l or --latest argument perform in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -l or --latest argument chooses the latest branch head for tools/OpenROAD, defaulting to master."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-11"
+    },
+    "backend_12": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How is this argument utilized in the build command of ORFS: --or_branch BRANCH_NAME?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -or_branch BRANCH_NAME argument stipulates the use of the head of branch BRANCH for tools/OpenROAD."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-12"
+    },
+    "backend_13": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How is the --or_branch BRANCH_NAME argument used in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -or_branch BRANCH_NAME argument stipulates the use of the head of branch BRANCH for tools/OpenROAD."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-13"
+    },
+    "backend_14": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How is this argument utilized in the build command of ORFS: --or_branch BRANCH_NAME?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -or_branch BRANCH_NAME argument selects the branch head of BRANCH for tools/OpenROAD."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-14"
+    },
+    "backend_15": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What role does this argument play in the build command of ORFS: --or_repo REPO_URL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            " This argument enumerates to use of a fork at REPO-URL (https/ssh) for tools/OpenROAD."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-15"
+    },
+    "backend_16": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the --or_repo REPO_URL argument specify in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            " This argument enumerates to use of a fork at REPO-URL (https/ssh) for tools/OpenROAD."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-16"
+    },
+    "backend_17": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What role does this argument play in the build command of ORFS: --or_repo REPO_URL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Specifies using a tools/OpenROAD fork at a given REPO-URL."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-17"
+    },
+    "backend_18": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: --no_init?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The --no_init argument prescribes skipping initializing submodules."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-18"
+    },
+    "backend_19": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the --no_init argument accomplish in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The --no_init argument prescribes skipping initializing submodules."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-19"
+    },
+    "backend_20": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: --no_init?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The --no_init option omits submodule initialization."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-20"
+    },
+    "backend_21": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How does the following argument function in the build command of ORFS: -t N or --threads N?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -t N or --threads N argument stipulates the use of N cpus when compiling software."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-21"
+    },
+    "backend_22": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the -t N or --threads N argument control in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -t N or --threads N argument stipulates the use of N cpus when compiling software."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-22"
+    },
+    "backend_23": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How does the following argument function in the build command of ORFS: -t N or --threads N?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -t N or --threads N argument utilizes N CPUs for software compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-23"
+    },
+    "backend_24": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is the purpose of the following argument in the build command of ORFS: -n or --nice?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -n or --nice flag in the build script instructs the build script to set all jobs to the maximim Unix \"niceness\". Niceness determines how much the operating system prefers to schedule process. The purpose of setting this flag is to ensure that a system is not overwhelmed by using all available processing primarily of the build jobs. The build will use all CPUs by default unless --threads is also given, then N threads are used instead."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-24"
+    },
+    "backend_25": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is the purpose of the -n or --nice argument in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -n or --nice flag in the build script instructs the build script to set all jobs to the maximim Unix \"niceness\". Niceness determines how much the operating system prefers to schedule process. The purpose of setting this flag is to ensure that a system is not overwhelmed by using all available processing primarily of the build jobs. The build will use all CPUs by default unless --threads is also given, then N threads are used instead."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-25"
+    },
+    "backend_26": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is the purpose of the following argument in the build command of ORFS: -n or --nice?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The build script's -n or --nice flag sets all jobs to the maximum Unix \"niceness\" level. This determines the priority with which the operating system schedules processes. The aim is to prevent system overload by allocating all processing power primarily to the build jobs. Without specifying otherwise, the build utilizes all CPUs, but specifying --threads allows for the use of a fixed number of threads."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-26"
+    },
+    "backend_27": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014yosys-args-overwrite?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This argument states to not use default flags set by this scrip during Yosys compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-27"
+    },
+    "backend_28": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the --yosys-args-overwrite argument modify in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This argument states to not use default flags set by this scrip during Yosys compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-28"
+    },
+    "backend_29": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014yosys-args-overwrite?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This parameter instructs the script to ignore the default flags during Yosys compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-29"
+    },
+    "backend_30": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is the purpose of the following argument in the build command of ORFS: \u2014yosys-args STRING?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '\u2014yosys-args STRING' argument adds additional compilation flags for Yosys compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-30"
+    },
+    "backend_31": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How does the --yosys-args STRING argument customize the build process in ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '\u2014yosys-args STRING' argument adds additional compilation flags for Yosys compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-31"
+    },
+    "backend_32": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is the purpose of the following argument in the build command of ORFS: \u2014yosys-args STRING?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '--yosys-args STRING' option allows for the inclusion of extra flags in Yosys compilations."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-32"
+    },
+    "backend_33": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What function does the following argument serve in the build command of ORFS: \u2014openroad-args-overwrite?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '\u2014openroad-args-overwrite' argument specifies to not use default flags set by this script during OpenROAD app compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-33"
+    },
+    "backend_34": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What modification does the --openroad-args-overwrite argument make in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '\u2014openroad-args-overwrite' argument specifies to not use default flags set by this script during OpenROAD app compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-34"
+    },
+    "backend_35": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What function does the following argument serve in the build command of ORFS: \u2014openroad-args-overwrite?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '--openroad-args-overwrite' option commands the script not to apply its default flags during OpenROAD app compilations."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-35"
+    },
+    "backend_36": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014openroad-args STRING?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '\u2014openroad-args STRING' argument adds aditional compilation flags for OpenROAD app compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-36"
+    },
+    "backend_37": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How does the --openroad-args STRING argument alter the build process in ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '\u2014openroad-args STRING' argument adds aditional compilation flags for OpenROAD app compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-37"
+    },
+    "backend_38": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014openroad-args STRING?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '--openroad-args STRING' option introduces additional flags for compiling the OpenROAD app."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-38"
+    },
+    "backend_39": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is the purpose of the following argument in the build command of ORFS: \u2014lsoracle-enable?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This argument initiates compiling LSOracle since it is disabled by default as it is not currently used on the flow."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-39"
+    },
+    "backend_40": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is the function of the --lsoracle-enable argument in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This argument initiates compiling LSOracle since it is disabled by default as it is not currently used on the flow."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-40"
+    },
+    "backend_41": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is the purpose of the following argument in the build command of ORFS: \u2014lsoracle-enable?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Activates the compilation of LSOracle, which is off by default as it's not part of the current workflow."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-41"
+    },
+    "backend_42": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014lsoracle-args-overwrite?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '\u2014lsoracle-args-overwrite' argument stipulates not to use default flags set by this script during LSOracle compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-42"
+    },
+    "backend_43": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the --lsoracle-args-overwrite argument change in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '\u2014lsoracle-args-overwrite' argument stipulates not to use default flags set by this script during LSOracle compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-43"
+    },
+    "backend_44": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014lsoracle-args-overwrite?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '--lsoracle-args-overwrite' command directs the script to bypass default flags for LSOracle compilations."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-44"
+    },
+    "backend_45": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument achieve in the build command of ORFS: \u2014lsoracle-args STRING?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This argument adds aditional compilation flags for LSOracle compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-45"
+    },
+    "backend_46": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How does the --lsoracle-args STRING argument customize the ORFS build process?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This argument adds aditional compilation flags for LSOracle compilation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-46"
+    },
+    "backend_47": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument achieve in the build command of ORFS: \u2014lsoracle-args STRING?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This command introduces extra compilation flags for LSOracle."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-47"
+    },
+    "backend_48": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What function does the following argument serve in the build command of ORFS: \u2014install-path PATH?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '\u2014install-path PATH' delineates the path to install tools. Default is ${INSTALL_PATH}."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-48"
+    },
+    "backend_49": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the --install-path PATH argument specify in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '\u2014install-path PATH' delineates the path to install tools. Default is ${INSTALL_PATH}."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-49"
+    },
+    "backend_50": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What function does the following argument serve in the build command of ORFS: \u2014install-path PATH?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '--install-path PATH' option specifies the installation directory for tools, with ${INSTALL_PATH} as the default."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-50"
+    },
+    "backend_51": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014clean?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '\u2014clean' argument calls the git clean command interactively before compiling. It is useful to remove old build files."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-51"
+    },
+    "backend_52": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is achieved by the --clean argument in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '\u2014clean' argument calls the git clean command interactively before compiling. It is useful to remove old build files."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-52"
+    },
+    "backend_53": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014clean?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '--clean' argument triggers an interactive git clean command before compiling, helping remove outdated build files."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-53"
+    },
+    "backend_54": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014clean-force?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This '\u2014clean-force' argument will call git clean before compiling but WARNING: this option will not ask for confirmation. It is useful to remove old build files."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-54"
+    },
+    "backend_55": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How does the --clean-force argument function in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This '\u2014clean-force' argument will call git clean before compiling but WARNING: this option will not ask for confirmation. It is useful to remove old build files."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-55"
+    },
+    "backend_56": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014clean-force?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '--clean-force' command enforces a git clean operation before compilation without seeking user confirmation, aiding in the deletion of old build files."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-56"
+    },
+    "backend_57": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What function does the following argument serve in the build command of ORFS: -c or --copy-platforms?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This argument is only applicable to docker builds. It is used to copy platforms inside the docker image."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-57"
+    },
+    "backend_58": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the -c or --copy-platforms argument do in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This argument is only applicable to docker builds. It is used to copy platforms inside the docker image."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-58"
+    },
+    "backend_59": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What function does the following argument serve in the build command of ORFS: -c or --copy-platforms?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This command is tailored for docker builds, enabling the copying of platforms into the docker image."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-59"
+    },
+    "backend_60": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014docker-args-overwrite?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The ' \u2014docker-args-overwrite' argument is only applicable for docker builds. They specify to not use default flags set by this script for Docker builds."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-60"
+    },
+    "backend_61": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What modification does the --docker-args-overwrite argument make in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The ' \u2014docker-args-overwrite' argument is only applicable for docker builds. They specify to not use default flags set by this script for Docker builds."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-61"
+    },
+    "backend_62": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014docker-args-overwrite?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The '--docker-args-overwrite' command is designated for docker builds, instructing not to use the script's default Docker build flags."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-62"
+    },
+    "backend_63": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014docker-args STRING?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This argument is only applicable to docker builds. It is used to add additional compilation flags for the Docker build."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-63"
+    },
+    "backend_64": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How does the --docker-args STRING argument customize the ORFS build process?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This argument is only applicable to docker builds. It is used to add additional compilation flags for the Docker build."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-64"
+    },
+    "backend_65": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following argument do in the build command of ORFS: \u2014docker-args STRING?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This command, specific to docker builds, allows adding extra compilation flags for Docker builds."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-65"
+    },
+    "backend_66": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, SYNTH_HIERARCHICAL do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The variable  SYNTH_HIERARCHICAL enables synthesis hierarchically, otherwise considered flat synthesis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-66"
+    },
+    "backend_67": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the SYNTH_HIERARCHICAL variable in Synthesis control?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The variable  SYNTH_HIERARCHICAL enables synthesis hierarchically, otherwise considered flat synthesis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-67"
+    },
+    "backend_68": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, SYNTH_HIERARCHICAL do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "SYNTH_HIERARCHICAL toggles between hierarchical and flat synthesis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-68"
+    },
+    "backend_69": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, LATCH_MAP_FILE do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "LATCH_MAP_FILE variable specifies the list of latches treated as a black box by Yosys."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-69"
+    },
+    "backend_70": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is the purpose of the LATCH_MAP_FILE variable in Synthesis?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "LATCH_MAP_FILE variable specifies the list of latches treated as a black box by Yosys."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-70"
+    },
+    "backend_71": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, LATCH_MAP_FILE do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "LATCH_MAP_FILE lists latches considered as black boxes by Yosys."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-71"
+    },
+    "backend_72": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, CLKGATE_MAP_FILE do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This variable specifies a list of cells for the gating clock treated as a black box by Yosys."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-72"
+    },
+    "backend_73": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How does the CLKGATE_MAP_FILE variable in Synthesis function?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This variable specifies a list of cells for the gating clock treated as a black box by Yosys."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-73"
+    },
+    "backend_74": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, CLKGATE_MAP_FILE do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Specifies cells to treat as black boxes for clock gating in Yosys."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-74"
+    },
+    "backend_75": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Can you explain the usage of this Synthesis variable, ADDER_MAP_FILE?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "List of adders treated as a black box by Yosys."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-75"
+    },
+    "backend_76": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the ADDER_MAP_FILE variable in Synthesis specify?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "List of adders treated as a black box by Yosys."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-76"
+    },
+    "backend_77": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Can you explain the usage of this Synthesis variable, ADDER_MAP_FILE?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Lists adders treated as black boxes by Yosys."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-77"
+    },
+    "backend_78": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, TIEHI_CELL_AND_PORT do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The variable, TIEHI_CELL_AND_PORT is used to tie high cells used in Yosys synthesis to replace a logical 1 in the Netlist."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-78"
+    },
+    "backend_79": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the TIEHI_CELL_AND_PORT variable in Synthesis define?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The variable, TIEHI_CELL_AND_PORT is used to tie high cells used in Yosys synthesis to replace a logical 1 in the Netlist."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-79"
+    },
+    "backend_80": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, TIEHI_CELL_AND_PORT do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "TIEHI_CELL_AND_PORT identifies high tie cells used in Yosys synthesis to replace logical 1 in the Netlist."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-80"
+    },
+    "backend_81": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, TIELO_CELL_AND_PORT do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This variable is used to tie low cells used in Yosys synthesis to replace a logical 0 in the Netlist."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-81"
+    },
+    "backend_82": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the TIELO_CELL_AND_PORT variable in Synthesis indicate?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This variable is used to tie low cells used in Yosys synthesis to replace a logical 0 in the Netlist."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-82"
+    },
+    "backend_83": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, TIELO_CELL_AND_PORT do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Defines low tie cells used in Yosys synthesis to replace logical 0 in the Netlist."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-83"
+    },
+    "backend_84": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, MIN_BUF_CELL_AND_PORTS do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The MIN_BUF_CELL_AND_PORTS variable is used to insert a buffer cell to pass through wires. Used in synthesis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-84"
+    },
+    "backend_85": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How does the MIN_BUF_CELL_AND_PORTS variable in Synthesis operate?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The MIN_BUF_CELL_AND_PORTS variable is used to insert a buffer cell to pass through wires. Used in synthesis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-85"
+    },
+    "backend_86": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, MIN_BUF_CELL_AND_PORTS do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MIN_BUF_CELL_AND_PORTS inserts a buffer cell for wire pass-through, used in synthesis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-86"
+    },
+    "backend_87": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, ABC_CLOCK_PERIOD_IN_PS do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The variable,  ABC_CLOCK_PERIOD_IN_PS is used to specify the clock period to be used by STA during synthesis. Default value read from constraint.sdc."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-87"
+    },
+    "backend_88": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the ABC_CLOCK_PERIOD_IN_PS variable in Synthesis determine?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The variable,  ABC_CLOCK_PERIOD_IN_PS is used to specify the clock period to be used by STA during synthesis. Default value read from constraint.sdc."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-88"
+    },
+    "backend_89": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, ABC_CLOCK_PERIOD_IN_PS do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "ABC_CLOCK_PERIOD_IN_PS sets the clock period for STA during synthesis, with a default from constraint.sdc."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-89"
+    },
+    "backend_90": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, ABC_DRIVER_CELL do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Default driver cell used during ABC synthesis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-90"
+    },
+    "backend_91": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the ABC_DRIVER_CELL variable in Synthesis specify?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Default driver cell used during ABC synthesis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-91"
+    },
+    "backend_92": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, ABC_DRIVER_CELL do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Specifies the default driver cell for ABC synthesis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-92"
+    },
+    "backend_93": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, ABC_LOAD_IN_FF do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "During synthesis, the set_load value specified by this, ABC_LOAD_IN_FF variable is used."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-93"
+    },
+    "backend_94": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the ABC_LOAD_IN_FF variable in Synthesis imply?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "During synthesis, the set_load value specified by this, ABC_LOAD_IN_FF variable is used."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-94"
+    },
+    "backend_95": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, ABC_LOAD_IN_FF do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "ABC_LOAD_IN_FF sets the load value during synthesis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-95"
+    },
+    "backend_96": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, MAX_UNGROUP_SIZE do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "For hierarchical synthesis, this variable ungroups modules of the size given by this variable."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-96"
+    },
+    "backend_97": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the MAX_UNGROUP_SIZE variable in Synthesis control?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "For hierarchical synthesis, this variable ungroups modules of the size given by this variable."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-97"
+    },
+    "backend_98": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the following Synthesis variable, MAX_UNGROUP_SIZE do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "For hierarchical synthesis, ungroups modules based on specified size."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-98"
+    },
+    "backend_99": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Tell me about the Floorplan variable, FLOORPLAN_DEF?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "FLOORPLAN_DEF is used to specify the use of the DEF file to initialize floorplan."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-99"
+    },
+    "backend_100": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Can you explain the FLOORPLAN_DEF variable in Floorplan?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "FLOORPLAN_DEF is used to specify the use of the DEF file to initialize floorplan."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-100"
+    },
+    "backend_101": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Tell me about the Floorplan variable, FLOORPLAN_DEF?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "FLOORPLAN_DEF uses a DEF file to initialize the floorplan."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-101"
+    },
+    "backend_102": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Elaborate on the Floorplan variable, PLACE_SITE?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Placement site for core cells defined in the technology LEF file."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-102"
+    },
+    "backend_103": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is the role of the PLACE_SITE variable in Floorplan?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Placement site for core cells defined in the technology LEF file."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-103"
+    },
+    "backend_104": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Elaborate on the Floorplan variable, PLACE_SITE?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Defines the placement site for core cells in the technology LEF file."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-104"
+    },
+    "backend_105": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Describe the use this Floorplan variable, TAPCELL_TCL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "TAPCELL_TCL specifies the path to the Endcap and Welltie cells file."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-105"
+    },
+    "backend_106": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How does the TAPCELL_TCL variable in Floorplan function?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "TAPCELL_TCL specifies the path to the Endcap and Welltie cells file."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-106"
+    },
+    "backend_107": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Describe the use this Floorplan variable, TAPCELL_TCL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "TAPCELL_TCL points to the Endcap and Welltie cells file."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-107"
+    },
+    "backend_108": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is the function of the Floorplan variable, RTLMP_FLOW?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This variable, RTLMP_FLOW enables the Hierarchical RTLMP flow. By default it is disabled."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-108"
+    },
+    "backend_109": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the RTLMP_FLOW variable in Floorplan control?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This variable, RTLMP_FLOW enables the Hierarchical RTLMP flow. By default it is disabled."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-109"
+    },
+    "backend_110": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What is the function of the Floorplan variable, RTLMP_FLOW?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "RTLMP_FLOW toggles the Hierarchical RTLMP flow, defaulting to off."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-110"
+    },
+    "backend_111": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Tell me about the Floorplan variable, MACRO_HALO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MACRO_HALO specifies to keep out a distance from macro, in X and Y, to standard cell row."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-111"
+    },
+    "backend_112": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Can you describe the MACRO_HALO variable in Floorplan?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MACRO_HALO specifies to keep out a distance from macro, in X and Y, to standard cell row."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-112"
+    },
+    "backend_113": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Tell me about the Floorplan variable, MACRO_HALO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MACRO_HALO sets the keep-out distance around macros in X and Y to standard cell rows."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-113"
+    },
+    "backend_114": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Tell me about the Floorplan variable, MACRO_PLACEMENT?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MACRO_PLACEMENT specifies the path of a file on how to place certain macros manually using read_macro_placement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-114"
+    },
+    "backend_115": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the MACRO_PLACEMENT variable in Floorplan specify?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MACRO_PLACEMENT specifies the path of a file on how to place certain macros manually using read_macro_placement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-115"
+    },
+    "backend_116": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Tell me about the Floorplan variable, MACRO_PLACEMENT?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MACRO_PLACEMENT defines manual macro placement through a specified file."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-116"
+    },
+    "backend_117": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Elaborate on the Floorplan variable, MACRO_PLACEMENT_TCL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This variable specifies the path of a TCL file on how to place certain macros manually."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-117"
+    },
+    "backend_118": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "How does the MACRO_PLACEMENT_TCL variable in Floorplan operate?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This variable specifies the path of a TCL file on how to place certain macros manually."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-118"
+    },
+    "backend_119": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Elaborate on the Floorplan variable, MACRO_PLACEMENT_TCL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Specifies a TCL file for manual macro placement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-119"
+    },
+    "backend_120": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Describe the Floorplan variable, MACRO_PLACE_HALO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Horizontal /vertical halo around macros (microns). Used by automatic macro placement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-120"
+    },
+    "backend_121": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the MACRO_PLACE_HALO variable in Floorplan indicate?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Horizontal /vertical halo around macros (microns). Used by automatic macro placement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-121"
+    },
+    "backend_122": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Describe the Floorplan variable, MACRO_PLACE_HALO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Sets the halo around macros for automatic placement, in microns."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-122"
+    },
+    "backend_123": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Tell me about the Floorplan variable, MACRO_PLACE_CHANNEL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Horizontal/vertical channel width between macros (microns). Used by automatic macro placement when RTLMP_FLOW is disabled. Imagine channel=10 and halo=5. Then macros must be 10 apart but standard cells must be 5 away from a macro."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-123"
+    },
+    "backend_124": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "What does the MACRO_PLACE_CHANNEL variable in Floorplan define?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Horizontal/vertical channel width between macros (microns). Used by automatic macro placement when RTLMP_FLOW is disabled. Imagine channel=10 and halo=5. Then macros must be 10 apart but standard cells must be 5 away from a macro."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-124"
+    },
+    "backend_125": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Tell me about the Floorplan variable, MACRO_PLACE_CHANNEL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Determines the channel width between macros for automatic placement, in microns."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-125"
+    },
+    "backend_126": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Give me details on the Floorplan variable, MACRO_BLOCKAGE_HALO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Blockage width overridden from default calculation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-126"
+    },
+    "backend_127": {
+        "statement": "",
+        "image": [],
+        "question": [
+            "Can you detail the MACRO_BLOCKAGE_HALO variable in Floorplan?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Blockage width overridden from default calculation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "modality": [
+            "text"
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "source": "EDA-Corpus",
+        "extra": "Augmented_Data/Question-Answer/Flow/Flow.csv--line-127"
+    },
     "backend_128": {
         "statement": "",
         "image": [],

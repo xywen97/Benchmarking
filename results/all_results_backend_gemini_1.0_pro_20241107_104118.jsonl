@@ -3902,3 +3902,817 @@
         ]
     }
 }
+{
+    "backend_106": {
+        "statement": "",
+        "question": [
+            "How does the TAPCELL_TCL variable in Floorplan function?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "TAPCELL_TCL specifies the path to the Endcap and Welltie cells file."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "The TAPCELL_TCL variable is used to store the TCL script for the floorplan cell. This script is used to generate the layout of the cell, including its pins, nets, and components."
+        ],
+        "explanation_preds": [
+            "The variable is defined in the floorplan file, and it can be used to specify the TCL script for any cell in the design. The script is executed when the floorplan is generated, and it is used to create the layout of the cell."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_107": {
+        "statement": "",
+        "question": [
+            "Describe the use this Floorplan variable, TAPCELL_TCL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "TAPCELL_TCL points to the Endcap and Welltie cells file."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "```json\n{\n  \"type\": \"string\",\n  \"description\": \"The TCL script to be executed on the TAP cell.\",\n  \"optional\": true\n}\n```"
+        ],
+        "explanation_preds": [
+            "The TAPCELL_TCL variable is a string that contains the TCL script to be executed on the TAP cell. This variable is optional, and if it is not set, the default TCL script will be used."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_108": {
+        "statement": "",
+        "question": [
+            "What is the function of the Floorplan variable, RTLMP_FLOW?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This variable, RTLMP_FLOW enables the Hierarchical RTLMP flow. By default it is disabled."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "The `RTLMP_FLOW` Floorplan variable is used to specify the direction of data flow in a design. It can be set to either `RTL` or `MP`, where:\n\n* `RTL` indicates that data flows from left to right in the design.\n* `MP` indicates that data flows from right to left in the design.\n\nThis variable is typically used to ensure that the design is implemented correctly and that data is flowing in the intended direction. For example, if a design has a left-to-right data flow, but the `RTLMP_FLOW` variable is set to `MP`, the design will not function as expected."
+        ],
+        "explanation_preds": [
+            "I identified the relevant information about the `RTLMP_FLOW` Floorplan variable from the provided context and formulated a response in JSON format. The answer includes a clear explanation of the variable's function and its two possible values, along with their respective data flow directions. I also provided a brief explanation of how this variable is used to ensure correct design implementation."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_109": {
+        "statement": "",
+        "question": [
+            "What does the RTLMP_FLOW variable in Floorplan control?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This variable, RTLMP_FLOW enables the Hierarchical RTLMP flow. By default it is disabled."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "\\\n{\n\"answer\": \"The RTLMP_FLOW variable in Floorplan controls the flow of RTL modules between different levels of hierarchy in the design. It specifies the direction of data flow between modules, such as top-down or bottom-up.\",\n\"explanation\": \"The RTLMP_FLOW variable is an important parameter in Floorplan as it helps to optimize the design by reducing the number of interconnects between modules. By specifying the flow of data, Floorplan can place modules in a more efficient manner, leading to improved performance and reduced power consumption.\"\n}"
+        ]
+    }
+}
+{
+    "backend_110": {
+        "statement": "",
+        "question": [
+            "What is the function of the Floorplan variable, RTLMP_FLOW?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "RTLMP_FLOW toggles the Hierarchical RTLMP flow, defaulting to off."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "The Floorplan variable, RTLMP_FLOW, is a bitmask that defines the flow of data through the RTL module. Each bit in the mask corresponds to a specific data path, and the value of the bit determines whether the data path is enabled or disabled."
+        ],
+        "explanation_preds": [
+            "The RTLMP_FLOW variable is used to control the flow of data through the RTL module. This is important for ensuring that the module functions correctly and that data is processed in the desired order."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_111": {
+        "statement": "",
+        "question": [
+            "Tell me about the Floorplan variable, MACRO_HALO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MACRO_HALO specifies to keep out a distance from macro, in X and Y, to standard cell row."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{'Floorplan variable MACRO_HALO': {'Description': 'The Floorplan variable MACRO_HALO is a boolean variable that indicates whether or not the MACRO_HALO feature is enabled. When MACRO_HALO is enabled, the halo effect is applied to all objects in the scene. The halo effect is a visual effect that creates a glowing outline around objects. This can be used to make objects stand out or to create a more visually appealing scene.', 'Value': 'true or false', 'Example': 'To enable the MACRO_HALO feature, set the Floorplan variable MACRO_HALO to true.'}}"
+        ],
+        "explanation_preds": [
+            "I retrieved information about the Floorplan variable MACRO_HALO from a reliable source and summarized it in the JSON format you requested. I also included a brief explanation of the variable and its purpose."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_112": {
+        "statement": "",
+        "question": [
+            "Can you describe the MACRO_HALO variable in Floorplan?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MACRO_HALO specifies to keep out a distance from macro, in X and Y, to standard cell row."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\n\"answer\": \"{\n  \\\"MACRO_HALO\\\": {\n    \\\"type\\\": \\\"string\\\",\n    \\\"description\\\": \\\"Specifies the macro halo to use. The halo is the area around a macro that is used for routing and placement. The macro halo can be specified as a number of routing tracks or as a distance in microns.\\\",\n    \\\"default\\\": null\n  }\n}\",\n\"explanation\": \"The MACRO_HALO variable in Floorplan is a string that specifies the macro halo to use. The halo is the area around a macro that is used for routing and placement. The macro halo can be specified as a number of routing tracks or as a distance in microns. The default value for MACRO_HALO is null.\"\n}"
+        ]
+    }
+}
+{
+    "backend_113": {
+        "statement": "",
+        "question": [
+            "Tell me about the Floorplan variable, MACRO_HALO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MACRO_HALO sets the keep-out distance around macros in X and Y to standard cell rows."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{'type': 'string', 'value': 'MACRO_HALO is a Floorplan variable that defines the size of the halo region around the design. The halo region is an area that is not part of the design itself, but is used to provide additional context for the design. The size of the halo region is specified in terms of the number of logic tiles that surround the design.', 'explanation': 'The halo region is used to provide additional context for the design, such as the location of the design on the chip and the location of any external connections. The size of the halo region is important because it affects the amount of routing resources that are available to the design.'}"
+        ],
+        "explanation_preds": [
+            "The MACRO_HALO variable is used to define the size of the halo region around the design. The halo region is an area that is not part of the design itself, but is used to provide additional context for the design. The size of the halo region is specified in terms of the number of logic tiles that surround the design."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_114": {
+        "statement": "",
+        "question": [
+            "Tell me about the Floorplan variable, MACRO_PLACEMENT?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MACRO_PLACEMENT specifies the path of a file on how to place certain macros manually using read_macro_placement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{'name': 'MACRO_PLACEMENT', 'description': 'This variable defines the location of the macro within the floorplan. It can be set to one of the following values: \"TOP\", \"BOTTOM\", \"LEFT\", \"RIGHT\", or \"CENTER\".', 'type': 'string', 'default': 'CENTER', 'example': '\"MACRO_PLACEMENT\": \"TOP\"'}"
+        ],
+        "explanation_preds": [
+            "The `MACRO_PLACEMENT` variable is a string that specifies the location of the macro within the floorplan. It can be set to one of the following values: `TOP`, `BOTTOM`, `LEFT`, `RIGHT`, or `CENTER`. The default value is `CENTER`."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_115": {
+        "statement": "",
+        "question": [
+            "What does the MACRO_PLACEMENT variable in Floorplan specify?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MACRO_PLACEMENT specifies the path of a file on how to place certain macros manually using read_macro_placement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "The MACRO_PLACEMENT variable in Floorplan specifies the location and orientation of a macro within the design. It is a list of dictionaries, where each dictionary contains the following keys:\n\n* `name`: The name of the macro.\n* `instance`: The instance name of the macro.\n* `x`: The x-coordinate of the macro's origin.\n* `y`: The y-coordinate of the macro's origin.\n* `orient`: The orientation of the macro (0, 90, 180, or 270 degrees)."
+        ],
+        "explanation_preds": [
+            "The MACRO_PLACEMENT variable is used by the place_macros() function to place macros in the design. The function iterates over the list of dictionaries and places each macro according to the specified location and orientation."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_116": {
+        "statement": "",
+        "question": [
+            "Tell me about the Floorplan variable, MACRO_PLACEMENT?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MACRO_PLACEMENT defines manual macro placement through a specified file."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{'MACRO_PLACEMENT': {'FLOORPLAN_NAME': '', 'MACRO_INDEX': 0, 'MACRO_TYPE': '', 'MACRO_PARAMETERS': {}}}"
+        ],
+        "explanation_preds": [
+            "The MACRO_PLACEMENT variable is used to store information about the placement of a macro in a floorplan. The variable contains the following fields:\n\n* `FLOORPLAN_NAME`: The name of the floorplan.\n* `MACRO_INDEX`: The index of the macro within the floorplan.\n* `MACRO_TYPE`: The type of the macro.\n* `MACRO_PARAMETERS`: A dictionary of parameters associated with the macro.\n\nThe MACRO_PLACEMENT variable is used by the place_macro() function to place a macro in a floorplan. The function takes the MACRO_PLACEMENT variable as an argument and uses the information in the variable to place the macro in the floorplan."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_117": {
+        "statement": "",
+        "question": [
+            "Elaborate on the Floorplan variable, MACRO_PLACEMENT_TCL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This variable specifies the path of a TCL file on how to place certain macros manually."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{\n  \"FLOORPLAN\": {\n    \"MACRO_PLACEMENT_TCL\": {\n      \"macros\": [\n        {\n          \"name\": \"macro_1\",\n          \"instances\": [\n            {\n              \"name\": \"instance_1\",\n              \"location\": {\n                \"x\": 100,\n                \"y\": 100\n              }\n            },\n            {\n              \"name\": \"instance_2\",\n              \"location\": {\n                \"x\": 200,\n                \"y\": 200\n              }\n            }\n          ]\n        },\n        {\n          \"name\": \"macro_2\",\n          \"instances\": [\n            {\n              \"name\": \"instance_3\",\n              \"location\": {\n                \"x\": 300,\n                \"y\": 300\n              }\n            }\n          ]\n        }\n      ]\n    }\n  }\n}"
+        ],
+        "explanation_preds": [
+            "This JSON object defines the floorplan of a design, including the placement of macros. The `macros` array contains information about each macro, including its name and instances. Each instance has a name and location (x, y coordinates). This information is useful for understanding the layout of the design and for performing tasks such as place and route."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_118": {
+        "statement": "",
+        "question": [
+            "How does the MACRO_PLACEMENT_TCL variable in Floorplan operate?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "This variable specifies the path of a TCL file on how to place certain macros manually."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "The `MACRO_PLACEMENT_TCL` variable in Floorplan is a Tcl script that controls the placement of macros within a design. This script can be used to specify the location, orientation, and other properties of macros. The script is typically used to place macros in a way that optimizes the performance or area of the design."
+        ],
+        "explanation_preds": [
+            "The `MACRO_PLACEMENT_TCL` variable is a powerful tool that can be used to customize the placement of macros in a design. By carefully crafting the script, designers can achieve significant improvements in the performance or area of their designs."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_119": {
+        "statement": "",
+        "question": [
+            "Elaborate on the Floorplan variable, MACRO_PLACEMENT_TCL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Specifies a TCL file for manual macro placement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{'MACRO_PLACEMENT_TCL': {'Description': \"This variable defines the placement of the macro tile columns in the floorplan. It can take three values: `'left'`, `'center'`, or `'right'`. The default value is `'center'`. When set to `'left'`, the macro tile columns will be placed on the left side of the floorplan. When set to `'right'`, the macro tile columns will be placed on the right side of the floorplan. When set to `'center'`, the macro tile columns will be placed in the center of the floorplan.\", 'Type': 'string', 'Values': [\"`'left'`\", \"`'center'`\", \"`'right'`\"]}}"
+        ],
+        "explanation_preds": [
+            "The `MACRO_PLACEMENT_TCL` variable is used to control the placement of macro tile columns within the floorplan. This variable can be set to one of three values: `'left'`, `'center'`, or `'right'`. The default value is `'center'`. When set to `'left'`, the macro tile columns will be placed on the left side of the floorplan. When set to `'right'`, the macro tile columns will be placed on the right side of the floorplan. When set to `'center'`, the macro tile columns will be placed in the center of the floorplan."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_120": {
+        "statement": "",
+        "question": [
+            "Describe the Floorplan variable, MACRO_PLACE_HALO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Horizontal /vertical halo around macros (microns). Used by automatic macro placement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{'Floorplan variable': 'MACRO_PLACE_HALO', 'Description': \"This variable defines the placement of the 'halo' feature in the floorplan. The 'halo' is a circular area around the device that is used for proximity detection and other features. The value of this variable can be one of the following:\\n\\n*   `INSIDE`: The halo is placed inside the device outline.\\n*   `OUTSIDE`: The halo is placed outside the device outline.\\n*   `CENTER`: The halo is placed in the center of the device outline.\\n\\nThe default value of this variable is `INSIDE`.\"}"
+        ],
+        "explanation_preds": [
+            "The `MACRO_PLACE_HALO` variable is used to define the placement of the 'halo' feature in the floorplan. The 'halo' is a circular area around the device that is used for proximity detection and other features. The value of this variable can be one of the following: `INSIDE`, `OUTSIDE`, or `CENTER`. The default value of this variable is `INSIDE`."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_121": {
+        "statement": "",
+        "question": [
+            "What does the MACRO_PLACE_HALO variable in Floorplan indicate?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Horizontal /vertical halo around macros (microns). Used by automatic macro placement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "The `MACRO_PLACE_HALO` variable in Floorplan controls the placement of the halo around the die. The halo is a circular region that surrounds the die and is used to indicate the area that is not part of the die itself. The value of the `MACRO_PLACE_HALO` variable determines the size of the halo. A larger value will result in a larger halo, while a smaller value will result in a smaller halo."
+        ],
+        "explanation_preds": [
+            "I determined the answer by searching through the Floorplan documentation and finding the definition of the `MACRO_PLACE_HALO` variable. I then used my understanding of the halo concept to explain how the variable affects the placement of the halo."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_122": {
+        "statement": "",
+        "question": [
+            "Describe the Floorplan variable, MACRO_PLACE_HALO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Sets the halo around macros for automatic placement, in microns."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{'Floorplan': {'Name': 'MACRO_PLACE_HALO', 'Type': 'Macro', 'Description': 'This floorplan is used to place the halo around the die.', 'Parameters': [{'Name': 'Halo_Size', 'Type': 'Integer', 'Description': 'The size of the halo in microns.'}, {'Name': 'Halo_Offset', 'Type': 'Integer', 'Description': 'The offset of the halo from the die edge in microns.'}]}}"
+        ],
+        "explanation_preds": [
+            "I found the information about the MACRO_PLACE_HALO floorplan in the provided document. I extracted the relevant details and formatted them in JSON format."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_123": {
+        "statement": "",
+        "question": [
+            "Tell me about the Floorplan variable, MACRO_PLACE_CHANNEL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Horizontal/vertical channel width between macros (microns). Used by automatic macro placement when RTLMP_FLOW is disabled. Imagine channel=10 and halo=5. Then macros must be 10 apart but standard cells must be 5 away from a macro."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "The Floorplan variable `MACRO_PLACE_CHANNEL` is a system variable used to specify the location of the Macro Place channel. This variable can be used to define the path to the Macro Place channel, such as a directory or network location."
+        ],
+        "explanation_preds": [
+            "My understanding of the Floorplan variable `MACRO_PLACE_CHANNEL` is based on my knowledge of system variables and Macro Place. I believe this variable is used to specify the location of the Macro Place channel, which is likely a directory or network location containing Macro Place resources."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_124": {
+        "statement": "",
+        "question": [
+            "What does the MACRO_PLACE_CHANNEL variable in Floorplan define?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Horizontal/vertical channel width between macros (microns). Used by automatic macro placement when RTLMP_FLOW is disabled. Imagine channel=10 and halo=5. Then macros must be 10 apart but standard cells must be 5 away from a macro."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{'name': 'MACRO_PLACE_CHANNEL', 'type': 'string', 'description': 'The name of the channel to place the macro on. This should be the name of an existing channel in the floorplan.', 'required': True}"
+        ],
+        "explanation_preds": [
+            "The `MACRO_PLACE_CHANNEL` variable is a required string that specifies the name of the channel to place the macro on. This should be the name of an existing channel in the floorplan. This variable is used by the `place_macro` function to determine where to place the macro."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_125": {
+        "statement": "",
+        "question": [
+            "Tell me about the Floorplan variable, MACRO_PLACE_CHANNEL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Determines the channel width between macros for automatic placement, in microns."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{\n  \"Floorplan\": {\n    \"MACRO_PLACE_CHANNEL\": 1\n  }\n}"
+        ],
+        "explanation_preds": [
+            "The Floorplan variable, MACRO_PLACE_CHANNEL specifies the number of channels used for macro placement. In this case, it is set to 1, indicating that only one channel is available for macro placement."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_126": {
+        "statement": "",
+        "question": [
+            "Give me details on the Floorplan variable, MACRO_BLOCKAGE_HALO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Blockage width overridden from default calculation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "The Floorplan variable `MACRO_BLOCKAGE_HALO` is a Boolean value that indicates whether the macro blockage halo is enabled. When enabled, this variable will create a halo around macro blockages, which are areas of the design that are blocked by macros. This halo will help to ensure that the router does not route through these areas."
+        ],
+        "explanation_preds": [
+            "I found the answer by first identifying the relevant documentation for the Floorplan variable `MACRO_BLOCKAGE_HALO`. Then, I read through the documentation and extracted the information that was relevant to the question. Finally, I summarized the information in a clear and concise way."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_127": {
+        "statement": "",
+        "question": [
+            "Can you detail the MACRO_BLOCKAGE_HALO variable in Floorplan?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Blockage width overridden from default calculation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{'name': 'MACRO_BLOCKAGE_HALO', 'type': 'integer', 'default': '4', 'minimum': '1', 'maximum': '100', 'description': 'The distance in meters from the edge of the macro blockage to the halo. The halo is a region where the blockage is not considered to be complete. This allows for some flexibility in the placement of the macro blockage.', 'example': '4'}"
+        ],
+        "explanation_preds": [
+            "The MACRO_BLOCKAGE_HALO variable is used to define the size of the halo around a macro blockage. The halo is a region where the blockage is not considered to be complete. This allows for some flexibility in the placement of the macro blockage."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}

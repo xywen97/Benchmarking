@@ -24,6 +24,10 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 - [x] GPT-4-turbo
 - [x] GPT-4-vision
 
+### 多模态模型 (图片端还未成功)
+- [x] Gemini series
+- [x] Claude series
+
 ## 数据格式
 
 项目中的数据格式包括一个JSON文件和一个图像目录。每个子领域的数据都遵循以下结构：

@@ -1,8 +1,8 @@
 from pyexpat import model
-from antlr4 import PredictionMode
-from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series
+from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series
 import json
 import base64
+import time
 
 def compute_acc(data):
     correct_count = 0
@@ -45,8 +45,10 @@ def compute_acc(data):
 
 
 def choose_model(model_name):
-    if model_name.start_with('gemini'):
+    if model_name.startswith('gemini'):
         return query_gemini_series
+    if model_name.startswith('claude'):
+        return query_claude_series
     model_mapping = {
         "llama2_7b": query_llama2_7b,
         "llama2_13b": query_llama2_13b,
@@ -65,7 +67,7 @@ def choose_model(model_name):
         raise ValueError(f"Model '{model_name}' is not recognized. Please choose a valid model.")
 
 def check_if_multi_modal(model_name):
-    if model_name.start_with('gemini'):
+    if model_name.startswith('gemini') or model_name.startswith('claude'):
         return False
 
     is_multi_mapping = {
@@ -217,24 +219,30 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
 
             if question_type not in prompt_mapping.keys():
                 prompt_mapping[question_type] = """
-                    Answer this question in Json format and return Json object only. The response format should be {{"answer": your answer to this question, "explanation": no more than 3 sentences for explanation on your thought to give the answer.
+                    Answer this question in Json format and return Json object only. The response format should be {{"answer": your answer to this question, "explanation": no more than 3 sentences for explanation on your thought to give the answer.}}
                 """.strip()
 
 
             image_captions_hint = ",".join(image_captions)
 
-            if not is_multi_modal:
+            if not is_multi_modal and len(image_captions) > 0:
                 # use the image captions as the additional cues for answering this question
                 entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type] + " You may refer to the cues that extracted from several provided images: " + image_captions_hint 
-            else:
+            elif not is_multi_modal and len(image_captions) == 0:
                 entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
+            elif is_multi_modal:
+                entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
+            else:
+                print("not handled yet..")
+                pass
             
             print(f"QUESTION: {entire_question}")
             
             for attempt in range(3):
                 try:
-                    if model_name == "gemini_series":
-                        response = query_model(entire_question, images, model_name)
+                    if model_name.startswith("gemini") or model_name.startswith("claude"):
+                        response = query_model(entire_question, images, model_name=model_name)
+                        time.sleep(10)
                     else:
                         response = query_model(entire_question, images)
                     if response:

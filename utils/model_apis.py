@@ -26,13 +26,12 @@ def image_captioning(image_path=None):
         return "Error: No image path provided"
 
 def query_gemini_series(prompt, images=None, image_captions=None, model_name=None):
-
     model_to_bot_mapping = {
-        ""
+        "gemini_1.0_pro": "Gemini-1.0-pro",
+        "gemini_1.5_pro": "Gemini-1.5-pro",
+        "gemini_1.5_flash": "Gemini-1.5-Flash"
     }
-
     bot_name = model_to_bot_mapping[model_name]
-
     def parse_string_to_json(string):
         try:
             return json.loads(string)
@@ -43,7 +42,36 @@ def query_gemini_series(prompt, images=None, image_captions=None, model_name=Non
         response = []
         async for partial in fp.get_bot_response(messages=messages, bot_name=bot_name, api_key=api_key_poe):
             text = partial.raw_response['text']
-            '{"text": " today"}'
+            text = parse_string_to_json(text)
+            response.append(text['text'])
+            
+        # print(''.join(response))
+        return_result = ''.join(response)
+        return return_result
+    
+    message_system = fp.ProtocolMessage(role="system", content="You are a helpful assistant.")
+    message_user = fp.ProtocolMessage(role="user", content=prompt)
+
+    result = asyncio.run(get_responses(api_key_poe, [message_system, message_user]))
+    return result
+
+def query_claude_series(prompt, images=None, image_captions=None, model_name=None):
+    model_to_bot_mapping = {
+        "claude_3_sonnet": "Claude-3-Sonnet",
+        "claude_3_haiku": "Claude-3-Haiku",
+        "claude_3_opus": "Claude-3-Opus"
+    }
+    bot_name = model_to_bot_mapping[model_name]
+    def parse_string_to_json(string):
+        try:
+            return json.loads(string)
+        except json.JSONDecodeError as e:
+            print(f"JSON解析错误: {e}")
+            return None
+    async def get_responses(api_key_poe, messages):
+        response = []
+        async for partial in fp.get_bot_response(messages=messages, bot_name=bot_name, api_key=api_key_poe):
+            text = partial.raw_response['text']
             text = parse_string_to_json(text)
             response.append(text['text'])
             

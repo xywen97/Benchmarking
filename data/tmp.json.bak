@@ -1,0 +1,74 @@
+{
+    "general_0": {
+        "statement": "Consider the circuit in the image. X and Y update at each rising edge of the clock. You are given the following: the adder propagation delay is 2ns; the register setup time is 2ns; the register hold time is 4ns; the register clk-to-q delay is 3ns; the clock frequency is 100MHz.\nHint: if an input updates at each rising edge of the clock, you can think of it as an output from a register with 0 clk-to-q delay.\nAs a reminder, a circuit must fulfill the following conditions in order to exhibit consistently correct behavior:\nt_{clk-to-q}+t_{shortest-combinational-path}>=t_{hold}\nt_{clk-to-q}+t_{longest-combinational-path}+t_{setup}<=t_{clk-period}",
+        "image": [
+            "image_0.png",
+            "image_1.png",
+            "image_2.png"
+        ],
+        "question": [
+            "After the rising edge of the clock, how many nanoseconds elapse before the input to the register changes?\nHint: consider all the paths going into the register, the shortest one will induce the first input change to the register.",
+            "Is the hold time requirement of the register met? (a) yes, (b) no\nHint: your answer to the previous question will be relevant for this one.",
+            "Will the circuit work properly? (a) yes (b) no\nHint: recall that both setup and hold time inequalities should be satisfied for the circuit to work properly.",
+            "What is the minimum clock period needed to ensure that the system works correctly?\nHint: you would need to identify the longest combinational path delay for this one. Consider all paths that leads to the register input.",
+            "What is the maximum clock frequency at which the circuit will work properly? Express your answer in MHz in integer.",
+            "Swap X and Y: (a) increases max clock frequency, (b) does not affect max clock frequency, (c) decreases max clock frequency.",
+            "Add X and Y first, then add the result with the output of the register: (a) increases max clock frequency, (b) does not affect max clock frequency, (c) decreases max clock frequency.\nNote that the current setup has input X added to the register output first before being added to Y."
+        ],
+        "question_type": [
+            "blank",
+            "single",
+            "single",
+            "blank",
+            "blank",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "2",
+            "b",
+            "b",
+            "9",
+            "111",
+            "b",
+            "a"
+        ],
+        "explanation": [
+            "Input Y arrives at at 0ns, so the output of that adder changes at 2ns.",
+            "We need a hold time of 4ns but the input changes at 2ns, so the hold time requirement is not satisfied.",
+            "The hold time requirement is not satisfied, so the circuit will not be consistent.",
+            "3ns (clk-to-q) + 2ns (adder 1) + 2ns (adder 2) + 2ns (setup) = 9ns.",
+            "1 / 9ns (answer to the previous question) = 111MHz",
+            "The inputs are basically the same, so this does not change anything.",
+            "Adding the two inputs first allows that addition to be done in parallel with the clk-to-q delay, so we reduce the length of the critical path."
+        ],
+        "modality": [
+            "text&image",
+            "text&image",
+            "text&image",
+            "text&image",
+            "text&image",
+            "text&image",
+            "text&image"
+        ],
+        "difficulty": [
+            "medium",
+            "easy",
+            "easy",
+            "hard",
+            "hard",
+            "hard",
+            "hard"
+        ],
+        "ability": [
+            "inference",
+            "inference",
+            "inference",
+            "computation",
+            "computation",
+            "inference",
+            "inference"
+        ],
+        "source": "ucb_course"
+    }
+}

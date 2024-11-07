@@ -1,11 +1,15 @@
+from pyexpat.errors import messages
 import requests
 import json
 from openai import OpenAI
 import fastapi_poe as fp
 import asyncio
+from reka.client import Reka
+from reka import ChatMessage
 
 api_key = "sk-QpHUrsblHgB7kAzcpwLmrFz3yKKTiFVlFOW2vgVc7ARfqsXR"
 api_key_poe = "GwpNvRYkJDExNG7HJLHHpmxuP0yEoncdlsx0bK7dlG0"
+api_key_reka = "eb696dc825f2cba426aac1b5758ffd4d7d454cfbdd82a9c147d81bfcfdeead3a"
 base_url = "https://a.fe8.cn/v1"
 
 # api_key = "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"
@@ -24,6 +28,46 @@ def image_captioning(image_path=None):
             return "Error: " + str(response.status_code)
     else:
         return "Error: No image path provided"
+
+
+def query_reka_series(prompt, images=None, image_captions=None, model_name=None):
+    '''
+    support image url only
+    '''
+    model_to_name_mapping = {
+        "reka_core": "reka-core",
+        "reka_flash": "reka-flash",
+        "reka_edge": "reka-edge"
+    }
+
+    chosen_model = model_to_name_mapping[model_name]
+
+    client = Reka(api_key=api_key_reka)
+
+
+    user_contents = [
+        {"type": "text", "text": prompt}
+    ]
+    for image in images:
+        user_contents.append(
+            {"type": "image_url", "image_url": image}
+        )
+
+    messages = [
+        ChatMessage(
+            content = user_contents,
+            role="user"
+        )
+    ]
+
+    response = client.chat.create(
+        messages = messages,
+        model = chosen_model,
+        max_tokens = 1024,
+        temperature = 0.7
+    )
+    return response.responses[0].message.content
+
 
 def query_gemini_series(prompt, images=None, image_captions=None, model_name=None):
     model_to_bot_mapping = {

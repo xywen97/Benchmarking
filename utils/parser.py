@@ -1,5 +1,5 @@
 from pyexpat import model
-from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series
+from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series, query_reka_series
 import json
 import base64
 import time
@@ -49,6 +49,8 @@ def choose_model(model_name):
         return query_gemini_series
     if model_name.startswith('claude'):
         return query_claude_series
+    if model_name.startswith('reka'):
+        return query_reka_series
     model_mapping = {
         "llama2_7b": query_llama2_7b,
         "llama2_13b": query_llama2_13b,
@@ -69,6 +71,9 @@ def choose_model(model_name):
 def check_if_multi_modal(model_name):
     if model_name.startswith('gemini') or model_name.startswith('claude'):
         return False
+    
+    if model_name.startswith('reka'):
+        return "url_base64"
 
     is_multi_mapping = {
         "llama2_7b": False,
@@ -105,7 +110,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
     if save_path is None:
         raise ValueError("The save_path cannot be None. Please provide a valid path to save the results.")
 
-    if field.lower() not in ['architecture', 'backend', 'general', 'netlist', 'rtl', 'spec']:
+    if field.lower() not in ['architecture', 'backend', 'general', 'netlist', 'rtl', 'spec', 'tmp']:
         raise ValueError(f"Field '{field}' is not recognized. Please choose from 'architecture', 'backend', 'general', 'netlist', 'rtl', 'spec'.")
     
     field_responses = {}
@@ -196,6 +201,15 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
                 except Exception as e:
                     print(f"An error occurred while preparing raw image paths: {e}")
         
+        elif is_multi_modal == "url_base64":
+            for image_name in image_item:
+                try:
+                    image = load_image_base64(image_name)
+                    print(f"load image: {image_name}")
+                    images.append(f"data:image/jpeg;base64,{image}")
+                except FileNotFoundError:
+                    print(f"Image {image_name} not found.")
+
         else:
             pass
         
@@ -242,7 +256,9 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
                 try:
                     if model_name.startswith("gemini") or model_name.startswith("claude"):
                         response = query_model(entire_question, images, model_name=model_name)
-                        time.sleep(10)
+                        time.sleep(15)
+                    elif model_name.startswith("reka"):
+                        response = query_model(entire_question, images, model_name=model_name)
                     else:
                         response = query_model(entire_question, images)
                     if response:

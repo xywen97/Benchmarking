@@ -1,11 +1,6 @@
 {
     "tmp_0": {
         "statement": "Here are several images",
-        "image": [
-            "image_0.png",
-            "image_1.png",
-            "image_2.png"
-        ],
         "question": [
             "Whats in these images?",
             "What's the difference between these images?",
@@ -26,11 +21,6 @@
             "We need a hold time of 4ns but the input changes at 2ns, so the hold time requirement is not satisfied.",
             "The hold time requirement is not satisfied, so the circuit will not be consistent."
         ],
-        "modality": [
-            "text&image",
-            "text&image",
-            "text&image"
-        ],
         "difficulty": [
             "medium",
             "easy",
@@ -41,6 +31,25 @@
             "inference",
             "inference"
         ],
-        "source": "ucb_course"
+        "image": [
+            "data/tmp/image_0.png",
+            "data/tmp/image_1.png",
+            "data/tmp/image_2.png"
+        ],
+        "modality": [
+            "text&image",
+            "text&image",
+            "text&image"
+        ],
+        "source": "ucb_course",
+        "answer_preds": [
+            "5"
+        ],
+        "explanation_preds": [
+            "I counted each image as a separate item, regardless of the variations in content or style, as each represents a distinct image file."
+        ],
+        "raw_preds": [
+            "None"
+        ]
     }
 }

@@ -26,6 +26,7 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 - [x] GPT-4-turbo
 - [x] GPT-4-vision
 - [x] Reka series
+- [x] Blip + T5
 
 ### Multi-modal Model (image not ready)
 - [x] Gemini series

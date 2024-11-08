@@ -1,0 +1,61 @@
+{
+    "tmp_0": {
+        "statement": "Here are several images",
+        "question": [
+            "Whats in these images?",
+            "What's the difference between these images?",
+            "How many images are there?"
+        ],
+        "question_type": [
+            "blank",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "2",
+            "b",
+            "b"
+        ],
+        "explanation": [
+            "Input Y arrives at at 0ns, so the output of that adder changes at 2ns.",
+            "We need a hold time of 4ns but the input changes at 2ns, so the hold time requirement is not satisfied.",
+            "The hold time requirement is not satisfied, so the circuit will not be consistent."
+        ],
+        "difficulty": [
+            "medium",
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "inference",
+            "inference",
+            "inference"
+        ],
+        "image": [
+            "data/tmp/image_0.png",
+            "data/tmp/image_1.png",
+            "data/tmp/image_2.png"
+        ],
+        "modality": [
+            "text&image",
+            "text&image",
+            "text&image"
+        ],
+        "source": "ucb_course",
+        "answer_preds": [
+            "None",
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            " The answer must be the images contain two separate subjects. The first image is a series of sculptures depicting two children reading a book in a garden. Each sculpture is rendered with different techniques, as indicated by the labels (a) SD, (b) Pose, (c) ControlNet (d) Adapter, (e) Ours. The second image is a photograph of a cat lying on a table with a checkered cloth. The cat appears relaxed and is looking directly at the camera. There is no direct connection between the two images; they are simply two separate subjects presented in the same format. The sculptures are artistic representations, while the cat image is a candid photograph. The sculptures might represent a narrative or theme, while the cat image captures a moment in time.",
+            " The answer is the difference between the images lies in the methods used to create the sculpture of two children reading a book. Image (a) SD likely represents a traditional sculpture method, where the figures are depicted in a lifelike pose. Image (b) Pose shows a simplified and abstracted form of the pose, emphasizing the basic structure and movement without detail. Image (c) ControlNet (Adapter) appears to be an intermediate step, using a control net to guide the sculpture's form and proportions while maintaining a level of detail. Finally, image (e) Ours is the result of an advanced technique that combines detailed sculpting with control net guidance, resulting in a highly detailed and realistic depiction of the children. The progression from (a) to (e) reflects an advancement in digital sculpting techniques, from traditional to more sophisticated methods that integrate pose guidance and detailed texturing.",
+            " There are five images in total. Each image represents a different approach to generating or depicting a statue of two children reading a book in a garden. The variety of techniques demonstrates the evolution of image generation technology, with each method aiming to improve the realism and detail of the scene."
+        ]
+    }
+}

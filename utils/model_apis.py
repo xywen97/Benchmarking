@@ -129,10 +129,11 @@ def query_claude_series(prompt, images=None, image_captions=None, model_name=Non
     result = asyncio.run(get_responses(api_key_poe, [message_system, message_user]))
     return result
 
-def query_minigpt4_vicuna7b(prompt, images=None, image_captions=None):
-    url = 'http://127.0.0.1:5004/generate'
+
+def query_llama2_7b(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5000/generate'
     headers = {'Content-Type': 'application/json'}
-    data = json.dumps({"prompt": prompt, "image_paths": images})
+    data = json.dumps({"prompt": prompt})
 
     response = requests.post(url, headers=headers, data=data)
     if response.status_code == 200:
@@ -140,9 +141,8 @@ def query_minigpt4_vicuna7b(prompt, images=None, image_captions=None):
     else:
         return "Error: " + str(response.status_code)
 
-
-def query_llama2_7b(prompt, images=None, image_captions=None):
-    url = 'http://127.0.0.1:5000/generate'
+def query_mistrial_7b(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5001/generate'
     headers = {'Content-Type': 'application/json'}
     data = json.dumps({"prompt": prompt})
 
@@ -174,16 +174,62 @@ def query_llama3_8b_instruct(prompt, images=None, image_captions=None):
     else:
         return "Error: " + str(response.status_code)
     
-def query_mistrial_7b(prompt, images=None, image_captions=None):
-    url = 'http://127.0.0.1:5001/generate'
+def query_minigpt4_vicuna7b(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5004/generate'
     headers = {'Content-Type': 'application/json'}
-    data = json.dumps({"prompt": prompt})
+    data = json.dumps({"prompt": prompt, "image_paths": images})
 
     response = requests.post(url, headers=headers, data=data)
     if response.status_code == 200:
         return response.json()
     else:
         return "Error: " + str(response.status_code)
+
+def query_instructblip_flan_t5_xl(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5005/generate'
+    headers = {'Content-Type': 'application/json'}
+    data = json.dumps({"prompt": prompt, "image_paths": images})
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return "Error: " + str(response.status_code)
+
+def query_instructblip_flan_t5_xxl(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5006/generate'
+    headers = {'Content-Type': 'application/json'}
+    data = json.dumps({"prompt": prompt, "image_paths": images})
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return "Error: " + str(response.status_code)
+
+
+def query_blip2_flan_t5_xl(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5007/generate'
+    headers = {'Content-Type': 'application/json'}
+    data = json.dumps({"prompt": prompt, "image_paths": images})
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return "Error: " + str(response.status_code)
+    
+def query_blip2_flan_t5_xxl(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5008/generate'
+    headers = {'Content-Type': 'application/json'}
+    data = json.dumps({"prompt": prompt, "image_paths": images})
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return "Error: " + str(response.status_code)
+
     
 def query_gpt35(prompt, images=None, image_captions=None):
     openai_api_key = api_key

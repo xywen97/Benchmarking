@@ -1,8 +1,10 @@
 from pyexpat import model
-from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series, query_reka_series
+from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series, query_reka_series, query_instructblip_flan_t5_xl, query_instructblip_flan_t5_xxl, query_blip2_flan_t5_xl, query_blip2_flan_t5_xxl
 import json
 import base64
 import time
+
+data_image_base_path = "/home/xiangyu/project/multimodalEDABenchmarking/"
 
 def compute_acc(data):
     correct_count = 0
@@ -61,7 +63,11 @@ def choose_model(model_name):
         "gpt4": query_gpt4,
         "gpt4_turbo": query_gpt4_turbo,
         "gpt4v": query_gpt4v,
-        "minigpt4_vicuna7b": query_minigpt4_vicuna7b
+        "minigpt4_vicuna7b": query_minigpt4_vicuna7b,
+        "instructblip_flan_t5_xl": query_instructblip_flan_t5_xl,
+        "instructblip_flan_t5_xxl": query_instructblip_flan_t5_xxl,
+        "blip2_flan_t5_xl": query_blip2_flan_t5_xl,
+        "blip2_flan_t5_xxl": query_blip2_flan_t5_xxl
     }
     if model_name in model_mapping:
         return model_mapping[model_name]
@@ -85,7 +91,11 @@ def check_if_multi_modal(model_name):
         "gpt4": "type_base64",
         "gpt4_turbo": "type_base64",
         "gpt4v": "type_base64",
-        "minigpt4_vicuna7b": "type_raw"
+        "minigpt4_vicuna7b": "type_raw",
+        "instructblip_flan_t5_xl": "type_raw",
+        "instructblip_flan_t5_xxl": "type_raw",
+        "blip2_flan_t5_xl": "type_raw",
+        "blip2_flan_t5_xxl": "type_raw"
     }
 
     return is_multi_mapping[model_name]
@@ -197,7 +207,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
             for image_name in image_item:
                 try:
                     print(f"preparing raw image paths: {image_name}")
-                    images.append("/home/xiangyu/project/multimodalEDABenchmarking/" + image_name)
+                    images.append(data_image_base_path + image_name)
                 except Exception as e:
                     print(f"An error occurred while preparing raw image paths: {e}")
         
@@ -232,9 +242,14 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
             }
 
             if question_type not in prompt_mapping.keys():
-                prompt_mapping[question_type] = """
-                    Answer this question in Json format and return Json object only. The response format should be {{"answer": your answer to this question, "explanation": no more than 3 sentences for explanation on your thought to give the answer.}}
-                """.strip()
+                if model_name in ['instructblip_flan_t5_xl', 'instructblip_flan_t5_xxl', 'blip2_flan_t5_xl', 'blip2_flan_t5_xxl']:
+                    prompt_mapping[question_type] = """
+                        Question:
+                    """.strip()
+                else:
+                    prompt_mapping[question_type] = """
+                        Answer this question in Json format and return Json object only. The response format should be {{"answer": your answer to this question, "explanation": no more than 3 sentences for explanation on your thought to give the answer.}}
+                    """.strip()
 
 
             image_captions_hint = ",".join(image_captions)
@@ -245,7 +260,11 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
             elif not is_multi_modal and len(image_captions) == 0:
                 entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
             elif is_multi_modal:
-                entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
+                if model_name in ['instructblip_flan_t5_xl', 'instructblip_flan_t5_xxl', 'blip2_flan_t5_xl', 'blip2_flan_t5_xxl']:
+                    entire_question = prompt_mapping[question_type] + " " + statement_item + " " + question_item[i] + " " + "Answer:"
+                else:
+                    entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type] + " You may refer to the provided images."
+                
             else:
                 print("not handled yet..")
                 pass

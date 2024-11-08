@@ -18,7 +18,7 @@ def main():
     data = load_data(data_path, image_path)
 
     current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
-    save_path = f"./results/all_results_{args.field}_{args.model}_{current_time}.jsonl"
+    save_path = f"./results/predictedResults/{args.field}/{args.field}_{args.model}_{current_time}.jsonl"
     
     return_data = benchmarking(data, args.field, model_name=args.model, save_path=save_path)
 
@@ -27,7 +27,7 @@ def main():
 
     results, comparisons = compute_acc(return_data)
 
-    with open(f"./results/accuracy_{args.field}_{args.model}_{current_time}.json", 'w', encoding='utf-8') as f:
+    with open(f"./results/accuracy/{args.field}/{args.field}_{args.model}_{current_time}.json", 'w', encoding='utf-8') as f:
         json.dump({"Accuracy": results, "Comparison": comparisons}, f, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":

@@ -5706,3 +5706,134 @@
         ]
     }
 }
+{
+    "rtl_123": {
+        "statement": "`always` Block Usage in Verilog",
+        "question": [
+            "When should an `always` block be used in Verilog?",
+            "What is the difference between `always @(*)` and `always @(posedge clk)`?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "An `always` block is used to describe sequential or combinational logic.",
+            "`always @(*)` is used for combinational logic, whereas `always @(posedge clk)` is used for sequential logic triggered by a clock edge."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "An `always` block in Verilog should be used to describe sequential or combinatorial logic behavior. It is triggered based on specific events (for sequential logic) or continuously (for combinatorial logic).",
+            "`always @(*)` is a sensitivity list that triggers the always block whenever any of its inputs change, while `always @(posedge clk)` triggers the block only on the positive edge of the clock signal `clk`."
+        ],
+        "explanation_preds": [
+            "The decision to use an `always` block depends on whether the logic depends on the previous state (sequential) or only the current inputs (combinatorial). Sequential logic `always` blocks include event triggers like `posedge` or `negedge` of a clock signal, while combinatorial logic blocks do not have event triggers and are sensitive to all input changes.",
+            "The `always @(*)` block is used for combinational logic, as it ensures that the block re-evaluates whenever any of its inputs vary. In contrast, `always @(posedge clk)` is used for sequential logic, specifically for synchronous designs where updates to registers or state machines occur only on the rising edge of the clock. This distinction is crucial for proper timing and functionality in digital circuit design."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_124": {
+        "statement": "Conditional Statements in Verilog",
+        "question": [
+            "What is the purpose of `if-else` statements in Verilog?",
+            "What is the difference between `case` and `if-else` statements?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "`if-else` statements are used to make decisions based on conditions.",
+            "`case` statements are more efficient when there are multiple possible values for a condition, while `if-else` is suitable for binary conditions."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "The `if-else` statements in Verilog are used for conditional execution of code blocks based on boolean expressions. They allow designers to implement decision-making logic in their digital circuits, enabling different behaviors under specific conditions.",
+            "The `case` statement in Verilog is used for multi-way branching based on the equality of a single expression with multiple possible values, while the `if-else` statement is used for binary decision making based on the truth value of a condition."
+        ],
+        "explanation_preds": [
+            "In Verilog, `if-else` statements are essential for creating complex digital systems that need to respond differently to various input conditions. They help in modeling sequential logic and control flow within a design, making it possible to simulate and synthesize circuits that exhibit intelligent behavior. The evaluation of boolean expressions within `if-else` constructs determines which code block gets executed, thereby influencing the overall functionality of the circuit.",
+            "The `case` statement is more efficient and easier to read when dealing with multiple possible outcomes of a single expression, especially when the outcomes are mutually exclusive. It also supports wildcard matching and default cases. On the other hand, `if-else` statements are more flexible for complex conditional logic that cannot be easily reduced to a single expression's equality checks."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_125": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule lo_simulate(\n    pck0,             \n    ck_1356meg,       \n    ck_1356megb,      \n    pwr_lo,           \n    pwr_hi,           \n    pwr_oe1,          \n    pwr_oe2,          \n    pwr_oe3,          \n    pwr_oe4,          \n    adc_d,            \n    adc_clk,          \n    ssp_frame,        \n    ssp_din,          \n    ssp_dout,         \n    ssp_clk,          \n    cross_hi,         \n    cross_lo,         \n    dbg,              \n    divisor           \n);\ninput pck0, ck_1356meg, ck_1356megb;\noutput pwr_lo, pwr_hi, pwr_oe1, pwr_oe2, pwr_oe3, pwr_oe4;\ninput [7:0] adc_d;\noutput adc_clk;\ninput ssp_dout;\noutput ssp_frame, ssp_din, ssp_clk;\ninput cross_hi, cross_lo;\noutput dbg;\ninput [7:0] divisor;\nassign pwr_oe3 = 1'b0;        \nassign pwr_oe1 = ssp_dout;    \nassign pwr_oe2 = ssp_dout;    \nassign pwr_oe4 = ssp_dout;    \nassign ssp_clk = cross_lo;    \nassign pwr_lo = 1'b0;         \nassign pwr_hi = 1'b0;         \nassign dbg = ssp_frame;       \nreg [7:0] pck_divider;        \nreg clk_state;                \nalways @(posedge pck0) begin\n    if(pck_divider == divisor[7:0]) begin\n        pck_divider <= 8'd0;  \n        clk_state = !clk_state; \n    end else begin\n        pck_divider <= pck_divider + 1; \n    end\nend\nassign adc_clk = ~clk_state;  \nreg is_high;                  \nreg is_low;                   \nreg output_state;             \nalways @(posedge pck0) begin\n    if((pck_divider == 8'd7) && !clk_state) begin\n        is_high = (adc_d >= 8'd200); \n        is_low = (adc_d <= 8'd64);   \n    end\nend\nalways @(posedge is_high or posedge is_low) begin\n    if(is_high)\n        output_state <= 1'd1; \n    else if(is_low)\n        output_state <= 1'd0; \nend\nassign ssp_frame = output_state; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `lo_simulate` implements clock division, ADC monitoring, and control signal generation functionalities. Inputs are divided to generate slower clock signals, control signals based on ADC thresholds, and manage power control signals. It also provides debugging functionality by aligning the debug signal `dbg` with `ssp_frame`."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The module `lo_simulate` acts as a digital signal processor that interfaces with various external components such as ADC, SSP, and power control signals. It generates control signals based on input clock signals, ADC data, and a preset divisor. The module also performs logic operations to determine the state of output signals like `ssp_frame` and `pwr_oeX`."
+        ],
+        "explanation_preds": [
+            "The module uses a clock divider to generate a new clock signal `adc_clk` from `pck0`. It then processes the `adc_d` input to determine high and low states, which are used to set the `ssp_frame` output. Additionally, it controls power output enable signals (`pwr_oe1` to `pwr_oe4`) based on the `ssp_dout` input."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}

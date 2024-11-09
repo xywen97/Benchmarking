@@ -510,3 +510,157 @@
         ]
     }
 }
+{
+    "rtl_6": {
+        "statement": "Answer the following questions on Verilog module definitions and instantiations.",
+        "question": [
+            "Which keyword is used to start a Verilog module?",
+            "To connect ports by name during module instantiation, which syntax is used?",
+            "What does the declaration output reg [7:0] out_data; signify?",
+            "In Verilog, where is the wire type most often used?",
+            "How can a parameterized module be created in Verilog?"
+        ],
+        "question_type": [
+            "single",
+            "single",
+            "single",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "module",
+            ".port_name(signal_name)",
+            "An 8-bit register output",
+            "For connecting different module instances",
+            "Using the keyword parameter inside the module"
+        ],
+        "explanation": [
+            "The keyword module begins the definition of a Verilog module.",
+            "Named port connections use the .port_name(signal_name) syntax.",
+            "output reg [7:0] defines an 8-bit output register.",
+            "wire is commonly used for interconnecting module ports.",
+            "Parameterization in Verilog uses the parameter keyword."
+        ],
+        "difficulty": [
+            "easy",
+            "easy",
+            "medium",
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "recall",
+            "application",
+            "comprehension",
+            "recall",
+            "comprehension"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "module",
+            ".name",
+            "The declaration output reg [7:0] out_data; signifies a 8-bit output register named out_data.",
+            "Between modules",
+            "A parameterized module can be created in Verilog by defining a module with parameters, which are variables that can be set when the module is instantiated. This is done by using the `parameter` keyword to declare the parameter, and then using the parameter in the module's declaration. For example: `module my_module #(parameter WIDTH = 8) (input [WIDTH-1:0] data);`"
+        ],
+        "explanation_preds": [
+            "The keyword'module' is used to start a Verilog module definition, which is the fundamental building block of a Verilog design. It defines the interface and behavior of a reusable piece of digital circuitry. The'module' keyword is used to declare the start of a new module definition.",
+            "To connect ports by name during module instantiation, the syntax used is to specify the port name followed by the dot operator (.). This allows the connection of ports by name instead of by position.",
+            "The 'output' keyword indicates that the register is an output of the module. The'reg' keyword declares a register variable. The '[7:0]' part specifies that the register is 8 bits wide, with the leftmost bit being bit 7 and the rightmost bit being bit 0.",
+            "The wire type is often used to connect ports of different modules, allowing signals to be passed between them. This is because wire is a type of net that can be driven by multiple drivers and can be connected to multiple loads. By using wire, designers can create complex digital circuits by instantiating multiple modules and connecting their outputs and inputs.",
+            "This allows the module to be instantiated with different values for the parameter, making it reusable and flexible."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_7": {
+        "statement": "Complete the sentences with appropriate Verilog syntax or keywords.",
+        "question": [
+            "The keyword used to end a module in Verilog is ___.",
+            "A continuous assignment to a wire in Verilog is done using ___.",
+            "To create a 16-bit memory with 64 locations, declare as reg [15:0] mem ___.",
+            "When modeling combinational logic, the assignment symbol to use is ___.",
+            "The keyword to specify an input to a module in Verilog is ___."
+        ],
+        "question_type": [
+            "blank",
+            "blank",
+            "blank",
+            "blank",
+            "blank"
+        ],
+        "answer": [
+            "endmodule",
+            "assign",
+            "[63:0]",
+            "=",
+            "input"
+        ],
+        "explanation": [
+            "endmodule signals the end of a module definition.",
+            "Continuous assignments to wire types use the assign keyword.",
+            "mem [63:0] creates 64 16-bit memory locations.",
+            "The = operator is used for blocking assignments in combinational logic.",
+            "input declares an input port in Verilog."
+        ],
+        "difficulty": [
+            "easy",
+            "easy",
+            "medium",
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "recall",
+            "recall",
+            "application",
+            "recall",
+            "recall"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "endmodule",
+            "assign",
+            "None",
+            "=",
+            "input"
+        ],
+        "explanation_preds": [
+            "The keyword 'endmodule' is used to end a module definition in Verilog. It is used to indicate the end of the module and to specify the name of the module. It is a required keyword in Verilog to define a module.",
+            "A continuous assignment to a wire in Verilog is done using the 'assign' keyword, which is used to assign a constant value or the result of an expression to a net or a variable.",
+            "None",
+            "The assignment symbol '=' is used to assign the value of the right-hand side to the left-hand side in Verilog, which is a common practice in modeling combinational logic.",
+            "The keyword to specify an input to a module in Verilog is 'input'. This keyword is used to declare the inputs of a module, which are the signals that are provided to the module from outside, such as from another module or from a testbench."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "{\"answer\": \"array[63:0]\",\"explanation\": \"To declare a 16-bit memory with 64 locations, we need to declare a reg array with 64 elements, each 16 bits wide. The range of the array is specified as 63:0, indicating that the array has 64 elements, and the leftmost bit is the 0th bit. This is a common way to declare a memory in Verilog.\"",
+            "None",
+            "None"
+        ]
+    }
+}

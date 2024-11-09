@@ -4352,3 +4352,161 @@
         ]
     }
 }
+{
+    "rtl_94": {
+        "statement": "Verilog Event Scheduler",
+        "question": [
+            "Explain the Verilog event scheduler and its importance."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The event scheduler in Verilog manages the order of execution of events in different time slots, including active, inactive, non-blocking assignments, and monitor regions, to ensure correct simulation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "The Verilog event scheduler is a mechanism in Verilog that enables the simulation of asynchronous events and their impact on the design. It is important because it allows for the accurate modeling of real-world systems, where events may occur at different times and with different frequencies."
+        ],
+        "explanation_preds": [
+            "The Verilog event scheduler allows for the simulation of asynchronous events, such as clock edges, interrupts, and other external triggers, and their impact on the design. This is important because it enables the accurate modeling of real-world systems, where events may occur at different times and with different frequencies."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_95": {
+        "statement": "Difference Between Latches and Flip-Flops",
+        "question": [
+            "What is the difference between latches and flip-flops in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Latches are level-sensitive devices that are transparent when enabled, while flip-flops are edge-triggered devices that change state only on clock edges."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "Latches and flip-flops are both synchronous digital circuits used in sequential logic, but they differ in their output behavior and application."
+        ],
+        "explanation_preds": [
+            "Latches are edge-triggered, meaning their output changes on the rising or falling edge of the clock signal, while flip-flops are level-triggered, meaning their output changes on both the high and low levels of the clock signal. Latches are used in combinational logic, while flip-flops are used in sequential logic to store and transfer data."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_96": {
+        "statement": "Usage of Initial Block",
+        "question": [
+            "What is the purpose of the `initial` block in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The `initial` block is used to execute a set of statements only once at the beginning of the simulation, commonly used for testbench initialization."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "The `initial` block in Verilog is used to specify the initial state of a module's signals and variables."
+        ],
+        "explanation_preds": [
+            "The `initial` block is used to set the initial values of signals and variables in a Verilog module. This is useful when the module's inputs and outputs are not yet known at the time of synthesis, or when the module needs to start in a specific state. The `initial` block can be used to set the initial values of signals and variables to a known state, which can help ensure that the module behaves correctly and as intended."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_97": {
+        "statement": "Verilog Syntax and Common Errors",
+        "question": [
+            "What is the purpose of the `always` block in Verilog?",
+            "Explain a common syntax error when using `always @(*)` for combinational logic."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "The `always` block is used for defining sequential or combinational logic in Verilog.",
+            "A common syntax error is not including all signals in the sensitivity list, which could lead to incorrect simulation results."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "The purpose of the `always` block in Verilog is to define a combinational logic circuit that produces an output based on the current input values, and maintains its output value until the next clock edge.",
+            "True"
+        ],
+        "explanation_preds": [
+            "The `always` block is used to implement finite state machines, counters, and other combinational logic circuits in Verilog. The block is always executed after the input values have changed, and before the output values are updated. This allows for the creation of complex digital circuits that can perform a wide range of functions.",
+            "The `always @(*)` syntax is used to create a combinational logic block that is triggered by the input signals at the current clock edge. However, this syntax can sometimes cause a syntax error if the input signals are not properly defined. To fix this error, make sure that all input signals are properly declared and connected to the `always` block."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}

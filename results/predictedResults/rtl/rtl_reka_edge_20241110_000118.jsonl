@@ -7687,3 +7687,151 @@
         ]
     }
 }
+{
+    "rtl_176": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hvl__lsbuflv2hv_symmetric (\n    X,\n    A\n);\n    output X; \n    input  A; \n    supply1 VPWR ; \n    supply0 VGND ; \n    supply1 LVPWR; \n    supply1 VPB  ; \n    supply0 VNB  ; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_hvl__lsbuflv2hv_symmetric` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The module 'sky130_fd_sc_hvl__lsbuflv2hv_symmetric' is a Verilog module that takes one input 'A' and one output 'X'. It is designed to operate within a specific power supply range, with 'VPWR' and 'VGND' representing the power supply and ground respectively. Additionally, it has two supply signals 'LVPWR' and 'VPB', and 'VNB' to control the voltage levels. The functionality of this module is to process and output 'X' based on the input 'A' within the defined power supply conditions."
+        ],
+        "explanation_preds": [
+            "The module utilizes the provided power supply signals and input 'A' to perform its intended function, with 'X' serving as the output. The specific voltage levels are controlled by the supply signals 'LVPWR', 'VPB', and 'VNB', ensuring the module operates within its specified power range. By processing the input 'A', the module generates the output 'X' in a way that is dependent on the input, providing the desired functionality of the system it is integrated into."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_177": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule decoder(\n    input [15:0]  INST, \n    output [2:0]  DR,   \n    output [2:0]  SA,   \n    output [2:0]  SB,   \n    output [5:0]  IMM,  \n    output        MB,   \n    output [2:0]  FS,   \n    output        MD,   \n    output        LD,   \n    output        MW,   \n    output [2:0]  BS,   \n    output [5:0]  OFF,  \n    output        HALT  \n);\nreg [2:0] DR;\nreg [2:0] SA;\nreg [2:0] SB;\nreg       MB;\nreg [2:0] FS;\nreg       MD;\nreg       LD;\nreg       MW;\nreg [2:0] BS;\nreg [5:0] OFF;\nreg       HALT;\nreg [5:0] IMM;\nwire [3:0] OP;       \nwire [2:0] RS;       \nwire [2:0] RT;       \nwire [2:0] RD;       \nwire [2:0] FUNCT;    \nwire [5:0] IMM_INST; \nassign OP = INST[15:12];\nassign RS = INST[11:9];\nassign RT = INST[8:6];\nassign RD = INST[5:3];\nassign FUNCT = INST[2:0];\nassign IMM_INST = INST[5:0];\nalways @(*) begin\n    case (OP)\n        4'b0000: begin\n            DR = 3'b0;\n            SA = 3'b0;\n            SB = 3'b0;\n            MB = 1'b0;\n            FS = 3'b0;\n            MD = 1'b0;\n            LD = 1'b0;\n            MW = 1'b0;\n            BS = 3'b100; \n            OFF = 6'b0;\n            HALT = (FUNCT == 3'b001) ? 1'b1 : 1'b0;\n            IMM = IMM_INST;\n        end\n        4'b0010: begin\n            DR = RT; \n            SA = RS; \n            SB = 3'b0;\n            MB = 1'b1; \n            FS = 3'b000; \n            MD = 1'b1; \n            LD = 1'b1; \n            MW = 1'b0; \n            BS = 3'b100; \n            OFF = 6'b0; \n            HALT = 1'b0; \n            IMM = IMM_INST; \n        end\n        4'b0100: begin\n            DR = 3'b0; \n            SA = RS; \n            SB = RT; \n            MB = 1'b1; \n            FS = 3'b000; \n            MD = 1'b0; \n            LD = 1'b0; \n            MW = 1'b1; \n            BS = 3'b100; \n            OFF = 6'b0; \n            HALT = 1'b0; \n            IMM = IMM_INST; \n        end\n        4'b1111: begin\n            DR = RD; \n            SA = RS; \n            SB = RT; \n            MB = 1'b0; \n            FS = FUNCT; \n            MD = 1'b0; \n            LD = 1'b1; \n            MW = 1'b0; \n            BS = 3'b100; \n            OFF = 6'b0; \n            HALT = 1'b0; \n            IMM = IMM_INST; \n        end\n        default: begin\n            DR = 3'b0;\n            SA = 3'b0;\n            SB = 3'b0;\n            MB = 1'b0;\n            FS = 3'b0;\n            MD = 1'b0;\n            LD = 1'b0;\n            MW = 1'b0;\n            BS = 3'b100; \n            OFF = 6'b0;\n            HALT = 1'b0;\n            IMM = IMM_INST; \n        end\n    endcase\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `decoder` decodes a 16-bit instruction to generate control signals for a processor based on the opcode extracted from the instruction, setting control signals for different instruction types within a case statement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The given Verilog module is a decoder that takes a 15-bit input (`INST`) and outputs four 2-bit signals (`DR`, `SA`, `SB`, and `FS`) along with several other signals (`IMM`, `MB`, `OFF`, `HALT`) based on the value of the input `INST`. The module uses a case statement to determine the output values based on the `OP` (operation code) extracted from the first 4 bits of `INST`. Depending on the operation, the module sets the values of the output signals accordingly to perform different decoding tasks such as selecting a data register, source and destination registers, function code, etc. The module also includes an input `IMM` that allows it to handle immediate values during certain operations."
+        ],
+        "explanation_preds": [
+            "The Verilog module is designed to decode the instruction set of a computer system. It takes a 15-bit instruction (`INST`) as input, which contains information about the operation to be performed and the operands involved. The module uses a case statement to analyze the first 4 bits of `INST` and determine the operation to perform. Based on this operation, the module sets the values of the output signals (`DR`, `SA`, `SB`, `FS`, etc.) to select the appropriate data register, source and destination registers, function code, etc. The module also includes an input `IMM` that allows it to handle immediate values during certain operations. Overall, this module is an essential component of a computer's instruction decoding unit, enabling it to execute instructions correctly and efficiently."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_178": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule reg_43(clk, output__valid, output__payload, output__ready, new_en, new_value, rst);\n  reg \\initial  = 0;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/stream/stream.py:98\" *)\n  wire \\$1 ;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/third_party/python/nmigen/nmigen/hdl/ir.py:524\" *)\n  input clk;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:49\" *)\n  input new_en;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:50\" *)\n  input [31:0] new_value;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  output [31:0] output__payload;\n  reg [31:0] output__payload = 32'd0;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  reg [31:0] \\output__payload$next ;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  input output__ready;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  output output__valid;\n  reg output__valid = 1'h0;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  reg \\output__valid$next ;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/third_party/python/nmigen/nmigen/hdl/ir.py:524\" *)\n  input rst;\n  assign \\$1  = output__valid & (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/stream/stream.py:98\" *) output__ready;\n  always @(posedge clk)\n    output__payload <= \\output__payload$next ;\n  always @(posedge clk)\n    output__valid <= \\output__valid$next ;\n  always @* begin\n    if (\\initial ) begin end\n    \\output__valid$next  = output__valid;\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:53\" *)\n    casez (\\$1 )\n      1'h1:\n          \\output__valid$next  = 1'h0;\n    endcase\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:56\" *)\n    casez (new_en)\n      1'h1:\n          \\output__valid$next  = 1'h1;\n    endcase\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/third_party/python/nmigen/nmigen/hdl/xfrm.py:519\" *)\n    casez (rst)\n      1'h1:\n          \\output__valid$next  = 1'h0;\n    endcase\n  end\n  always @* begin\n    if (\\initial ) begin end\n    \\output__payload$next  = output__payload;\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:56\" *)\n    casez (new_en)\n      1'h1:\n          \\output__payload$next  = new_value;\n    endcase\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/third_party/python/nmigen/nmigen/hdl/xfrm.py:519\" *)\n    casez (rst)\n      1'h1:\n          \\output__payload$next  = 32'd0;\n    endcase\n  end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `reg_43` functions as a synchronous 32-bit register capturing 'new_value' on the rising edge of 'clk' when 'new_en' is active, presenting the data on 'output_payload' with a corresponding 'output_valid' signal. 'output_valid' reflects the acceptance status indicated by 'output_ready' and resets upon 'rst' assertion, with data updates synchronized to 'clk' rising edges."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The `reg_43` module is a digital register that manages the payload output, validity, and readiness of a digital system. It receives clock and control signals such as `new_en` and `new_value`, and updates its internal state accordingly. The output payload is a 32-bit value that can be updated by either `new_en` or the reset signal `rst`. The module also maintains the validity of the output payload and updates it based on the control signals and the previous value. The output `output_valid` indicates if the payload is ready for use."
+        ],
+        "explanation_preds": [
+            "The module consists of various signals and registers, each with specific functionality. The clock `clk` is used to synchronize the internal state updates. The `new_en` and `new_value` signals allow external control over the payload's value and enable state changes. The `rst` signal resets the internal state to a default value. The module uses always blocks to update the internal registers and the output signals based on the current state and the control signals. The output `output_valid` is updated whenever the internal state changes. Overall, the module serves as a control unit that manages the digital system's payload and its availability."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_179": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule CC_Decoder(in, out);\n  parameter IN_WIDTH=8;\n  parameter OUT_WIDTH=(1 << IN_WIDTH);\n  input [IN_WIDTH-1:0] in;\n  output [OUT_WIDTH-1:0] out;\n  genvar i;\n  generate\n    for (i = 0; i < OUT_WIDTH; i = i + 1)\n    begin: SELECT\n      assign out[i] = (i == in) ? 1'b1 : 1'b0;\n    end\n  endgenerate\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `CC_Decoder` implements a one-hot decoder that converts a binary input signal to a one-hot encoded output, where only one bit is high based on the input value."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The `CC_Decoder` module takes an `in` signal of width `IN_WIDTH` bits and produces an `out` signal of width `OUT_WIDTH` bits. It uses a generator statement to create a series of `SELECT` statements, each of which sets the corresponding bit of `out` to 1 if the corresponding bit of `in` is 1, and 0 otherwise. This implements a binary decoder that converts the input `in` signal into an output `out` signal with a one-hot encoded representation."
+        ],
+        "explanation_preds": [
+            "The module uses a generator statement to loop through each bit of the output signal `out`, starting at index 0 and incrementing by 1 for each iteration. Within the loop, a `SELECT` statement is used to assign the value of the current input bit `in` to the current output bit `out[i]`. If the input bit is 1, `out[i]` is set to 1; otherwise, it is set to 0. This creates a one-hot encoded output where each bit corresponds to a single input bit and is either 1 or 0 depending on the value of the corresponding input bit. The resulting output signal `out` has the same width as specified in the module parameters."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}

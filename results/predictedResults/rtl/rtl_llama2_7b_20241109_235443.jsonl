@@ -6510,3 +6510,114 @@
         ]
     }
 }
+{
+    "rtl_144": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hs__udp_dlatch$PR_pp$sN (\n    Q,        \n    D,        \n    GATE,     \n    RESET,    \n    SLEEP_B,  \n    NOTIFIER  \n);\n    output Q;       \n    input  D;       \n    input  GATE;    \n    input  RESET;   \n    input  SLEEP_B; \n    input  NOTIFIER;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_hs__udp_dlatch$PR_pp$sN` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"The Sky130_fd_sc_hs__udp_dlatch$PR_pp$sN module is a synchronous dual-port RAM (DRAM) with a built-in delay line. It has four inputs: D, GATE, RESET, and SLEEP_B, and two outputs: Q and NOTIFIER. The module is designed to store data in the D input for a specified time period, and then release the stored data to the output Q. The NOTIFIER input is used to indicate when the data has been released.\"\"explanation\": \"The Sky130_fd_sc_hs__udp_dlatch$PR_pp$sN module is a synchronous DRAM with a delay line, which means that the data is stored in the D input for a specified time period before being released to the output. The GATE input is used to control the flow of data into the module, and the RESET input is used to reset the module to its initial state. The SLEEP_B input is used to specify the time period during which the data is stored in the module.\"}"
+        ]
+    }
+}
+{
+    "rtl_145": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule spi_slave_0_base(\n    clk, sck, mosi, miso, ssel, rst_n, recived_status\n);\n    input clk;                 \n    input rst_n;               \n    input sck;                 \n    input mosi;                \n    input ssel;                \n    output miso;               \n    output recived_status;     \n    reg recived_status;        \n    reg[2:0] sckr;             \n    reg[2:0] sselr;            \n    reg[1:0] mosir;            \n    reg[2:0] bitcnt;           \n    reg[7:0] bytecnt;          \n    reg byte_received;         \n    reg [7:0] byte_data_received; \n    reg[7:0] received_memory;  \n    reg [7:0] byte_data_sent;  \n    reg [7:0] cnt;             \n    wire ssel_active;          \n    wire sck_risingedge;       \n    wire sck_fallingedge;      \n    wire ssel_startmessage;    \n    wire ssel_endmessage;      \n    wire mosi_data;            \n\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        sckr <= 3'h0;          \n    else\n        sckr <= {sckr[1:0], sck}; \nend\nassign sck_risingedge = (sckr[2:1] == 2'b01) ? 1'b1 : 1'b0;\nassign sck_fallingedge = (sckr[2:1] == 2'b10) ? 1'b1 : 1'b0;\n\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        sselr <= 3'h0;         \n    else\n        sselr <= {sselr[1:0], ssel}; \nend\nassign ssel_active = (~sselr[1]) ? 1'b1 : 1'b0;  \nassign ssel_startmessage = (sselr[2:1] == 2'b10) ? 1'b1 : 1'b0;  \nassign ssel_endmessage = (sselr[2:1] == 2'b01) ? 1'b1 : 1'b0;  \n\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        mosir <= 2'h0;         \n    else\n        mosir <= {mosir[0], mosi}; \nend\nassign mosi_data = mosir[1];\n\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n) begin\n        bitcnt <= 3'b000;              \n        byte_data_received <= 8'h0;    \n    end else begin\n        if (~ssel_active)\n            bitcnt <= 3'b000;          \n        else begin\n            if (sck_risingedge) begin\n                bitcnt <= bitcnt + 3'b001; \n                byte_data_received <= {byte_data_received[6:0], mosi_data};\n            end\n        end\n    end\nend\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        byte_received <= 1'b0; \n    else\n        byte_received <= ssel_active && sck_risingedge && (bitcnt == 3'b111);\nend\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n) begin\n        bytecnt <= 8'h0;               \n        received_memory <= 8'h0;       \n    end else begin\n        if (byte_received) begin\n            bytecnt <= bytecnt + 1'b1; \n            received_memory <= (byte_data_received == bytecnt) ? (received_memory + 1'b1) : received_memory;\n        end\n    end\nend\n\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        cnt <= 8'h0; \n    else begin\n        if (byte_received)\n            cnt <= cnt + 8'h1; \n    end\nend\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        byte_data_sent <= 8'h0; \n    else begin\n        if (ssel_active && sck_fallingedge) begin\n            if (bitcnt == 3'b000)\n                byte_data_sent <= cnt; \n            else\n                byte_data_sent <= {byte_data_sent[6:0], 1'b0};\n        end\n    end\nend\nassign miso = byte_data_sent[7];\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        recived_status <= 1'b0; \n    else\n        recived_status <= (received_memory == 8'd64) ? 1'b1 : 1'b0;\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `spi_slave_0_base` implements an SPI slave device that communicates with an SPI master, sampling incoming data on the mosi line with each rising edge of sck when ssel is active and sending data back on the miso line, shifting out data on each falling edge of sck when ssel is active. It tracks received bits and bytes, sets a flag on byte reception, and indicates status when a specific number of valid bytes have been received."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_146": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule Decodificador(\n   input [6:0] Cuenta, \n   output reg [7:0] catodo1, \n   output reg [7:0] catodo2, \n   output reg [7:0] catodo3, \n   output reg [7:0] catodo4  \n);\nalways @(*)\nbegin\n    case (Cuenta)\n        6'd0: begin\n            catodo1 <= 8'b00000011; \n            catodo2 <= 8'b00000011; \n            catodo3 <= 8'b00000011; \n            catodo4 <= 8'b00000011; \n        end\n        6'd1: begin\n            catodo1 <= 8'b10011111; \n            catodo2 <= 8'b00000011;\n            catodo3 <= 8'b00000011;\n            catodo4 <= 8'b00000011;\n        end\n        6'd2: begin\n            catodo1 <= 8'b00100101; \n            catodo2 <= 8'b00000011;\n            catodo3 <= 8'b00000011;\n            catodo4 <= 8'b00000011;\n        end\n        6'd10: begin\n            catodo1 <= 8'b00000011; \n            catodo2 <= 8'b10011111; \n            catodo3 <= 8'b00000011;\n            catodo4 <= 8'b00000011;\n        end\n        default: begin\n            catodo1 <= 8'b10011111; \n            catodo2 <= 8'b10011111; \n            catodo3 <= 8'b10011111; \n            catodo4 <= 8'b10011111; \n        end\n    endcase\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `Decodificador` implements a decoder that drives four 8-bit cathode outputs based on the 7-bit input 'Cuenta', displaying corresponding patterns for a 7-segment display with specific digit mappings as described in the specification."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The Decodificador module takes an input signal 'Cuenta' and produces four output signals 'catodo1', 'catodo2', 'catodo3', and 'catodo4'. Based on the value of 'Cuenta', the module implements a 4-bit binary counter that outputs the corresponding binary code. The counter starts at 0 and increments by 1 on each positive transition of 'Cuenta'. The module uses a simple case statement to determine the output of each binary code based on the value of 'Cuenta'."
+        ],
+        "explanation_preds": [
+            "The Decodificador module is a simple binary counter that takes an input signal 'Cuenta' and produces four output signals 'catodo1', 'catodo2', 'catodo3', and 'catodo4'. The module implements a 4-bit binary counter that counts from 0 to 10 and outputs the corresponding binary code. The counter uses a simple case statement to determine the output of each binary code based on the value of 'Cuenta'. The module is designed to be easy to use and understand, making it a useful tool for beginners to learn about digital circuit design."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}

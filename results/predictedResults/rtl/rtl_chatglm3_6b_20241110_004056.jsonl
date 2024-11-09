@@ -1960,3 +1960,97 @@
         ]
     }
 }
+{
+    "rtl_37": {
+        "statement": "Understanding Verilog Sensitivity list",
+        "question": [
+            "What is a Sensitivity list in Verilog?",
+            "Why is a sensitivity list important in sequential circuits?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "A sensitivity list in Verilog is a set of parameters that define the behavior of a module in response to changes in its input parameters. It is used to specify the relative timing of the input and output signals and to determine the impact of changes to the input parameters on the output.",
+            "A sensitivity list is important in sequential circuits because it helps to identify the potential paths through which a signal can flow and affect the behavior of the circuit. It allows designers to analyze and verify the correctness of the circuit and detect any potential errors or paths that may cause issues with the output. By defining the sensitivity list, designers can ensure that the circuit behaves as expected and meets the desired specifications."
+        ],
+        "explanation_preds": [
+            "In Verilog, a sensitivity list is specified within the module's ` SensitivityList` attribute. The list contains a set of tuples, where each tuple represents the relative timing of the input and output signals. The timing parameter is defined as a ratio of the time it takes for the output signal to change relative to the time it takes for the input signal to change. The sensitivity list is used to specify the impact of changes to the input parameters on the output signal, allowing the designer to simulate the behavior of the module under different input conditions.",
+            "In sequential circuits, a sensitivity list is used to analyze the potential paths through which a signal can flow and affect the behavior of the circuit. It helps designers detect any potential errors or paths that may cause issues with the output and ensures that the circuit behaves as expected. Defining the sensitivity list is crucial for verifying the correctness of the circuit and ensuring that it meets the desired specifications."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_38": {
+        "statement": "Usage of $monitor, $display, and $strobe commands",
+        "question": [
+            "What is the difference between $monitor, $display, and $strobe in Verilog?",
+            "Which command is used to display changes continuously?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "$monitor"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "The $monitor, $display, and $strobe commands in Verilog are used for different purposes. $monitor is used to print the value of a particular register or variable to the console. $display is used to print the value of a register or variable to the console, but it only displays the value once. $strobe is used to repeatedly display the value of a register or variable to the console, similar to $display, but with a higher frequency.",
+            "display"
+        ],
+        "explanation_preds": [
+            "To better understand the differences between these commands, let's consider an example. Suppose we have a variable named `count` that is initially set to 0. If we use the $monitor command to print the value of `count`, it will display 0. If we use the $display command to print the value of `count`, it will display 0 once and then stop. Finally, if we use the $strobe command to print the value of `count`, it will display 0 repeatedly at a higher frequency.",
+            "The 'display' command is used to display changes continuously."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}

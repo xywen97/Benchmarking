@@ -6,9 +6,9 @@ import os
 
 app = Flask(__name__)
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "4"
 
-model_path = "/data/xiangyu/benchmarkModels/Meta-Llama-3-8B-Instruct"
+model_path = "/data/xiangyu/benchmarkModels/Meta-Llama-3___1-70B-Instruct"
 
 model = pipeline(
     "text-generation",
@@ -30,7 +30,7 @@ def generate_text():
     prompt = data.get("prompt", "")
 
     print(f"""
-        This is the llama_3_8b_instruct.py script.
+        This is the llama_3_70b_instruct.py script.
         The prompt is: {prompt}
     """)
 
@@ -53,4 +53,4 @@ def generate_text():
     return jsonify(response)
 
 if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0', port=5003)
+    app.run(debug=False, host='0.0.0.0', port=5011)

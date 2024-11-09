@@ -2756,3 +2756,3932 @@
         ]
     }
 }
+{
+    "rtl_54": {
+        "statement": "Verilog operators: == vs ===",
+        "question": [
+            "What is the difference between the `==` and `===` operators in Verilog?",
+            "Which operator should be used to compare unknown (X) values?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "`==` compares logical values and ignores unknowns, while `===` compares including unknowns.",
+            "==="
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "Computers & Internet: Computers & Internet: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers & Networking: Computers",
+            "== vs === Which operator should be used to compare unknown (X) values?"
+        ]
+    }
+}
+{
+    "rtl_55": {
+        "statement": "Tasks and functions in Verilog",
+        "question": [
+            "What are the five main differences between Verilog tasks and functions?",
+            "Can Verilog functions be used in expressions?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "Functions execute in one simulation time unit, cannot include timing controls, must return a value, while tasks can include timing controls, have multiple outputs, etc.",
+            "Yes"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "task is a block of verilog code while function is a block of verilog code",
+            "naomi daniel"
+        ]
+    }
+}
+{
+    "rtl_56": {
+        "statement": "Continuous assignments in Verilog",
+        "question": [
+            "What is continuous assignment in Verilog?",
+            "Which keyword is used for continuous assignment in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "Continuous assignment is used to assign values to a wire.",
+            "assign"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "sys.setrecursionlimit(int)",
+            "def clk(a, b): if b == 0: clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b) clk(a, b"
+        ]
+    }
+}
+{
+    "rtl_57": {
+        "statement": "Blocking vs non-blocking assignments",
+        "question": [
+            "What is the primary difference between blocking and non-blocking assignments in Verilog?",
+            "When should non-blocking assignments be used in sequential circuits?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments execute sequentially, while non-blocking assignments execute concurrently.",
+            "Non-blocking assignments should be used in sequential circuits to avoid race conditions."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "non-blocking assignments are asynchronous",
+            "non-blocking assignments should be used in sequential circuits"
+        ]
+    }
+}
+{
+    "rtl_58": {
+        "statement": "Understanding HDL simulators",
+        "question": [
+            "What are HDL simulators, and why are they important in Verilog design?",
+            "Name two popular HDL simulators."
+        ],
+        "question_type": [
+            "open",
+            "multi"
+        ],
+        "answer": [
+            "HDL simulators are tools used to test and verify the functionality of HDL code before synthesis.",
+            [
+                "ModelSim",
+                "Vivado"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "simulation tool for dspice and verilog",
+            "verilog and vhdl"
+        ]
+    }
+}
+{
+    "rtl_59": {
+        "statement": "Repeat loops in Verilog",
+        "question": [
+            "Explain how the repeat loop works in Verilog.",
+            "What is the difference between repeat and while loops in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Repeat loop runs a specific number of times, while the while loop runs until a condition is met.",
+            "Repeat loops are executed a fixed number of times, while while loops depend on a condition."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "if x == 0 and y == 0 then x = x + y else x = x + y",
+            "while loops in verilog repeat loops in verilog"
+        ]
+    }
+}
+{
+    "rtl_60": {
+        "statement": "Signal strength in Verilog",
+        "question": [
+            "What is signal strength in Verilog?",
+            "How does signal strength affect logic value resolution?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Signal strength determines the driving capability of a signal.",
+            "It affects which value is resolved when multiple drivers are present on a net."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "signal strength in verilog is a measure of how strong a signal is",
+            "signal strength affects amplitude of signal"
+        ]
+    }
+}
+{
+    "rtl_61": {
+        "statement": "Clocking blocks in Verilog",
+        "question": [
+            "What are clocking blocks in Verilog, and why are they used?",
+            "Explain the advantages of using clocking blocks."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Clocking blocks are used for specifying clock signals and synchronization for sampling inputs and driving outputs.",
+            "They improve timing accuracy and make testbench coding easier."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "synchronize clocks in verilog",
+            "synchronizes with other clocks in system"
+        ]
+    }
+}
+{
+    "rtl_62": {
+        "statement": "FSM coding in Verilog",
+        "question": [
+            "What are the key steps involved in writing FSM code in Verilog?",
+            "Why is it recommended to separate combinational and sequential logic in FSM coding?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Define states, define inputs and outputs, use always blocks for sequential and combinational logic.",
+            "To simplify debugging and ensure proper synthesis."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "hard",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "def fsm(x): if x == 0: return 0 if x == 1: return 1 if x == 2: return 1 if x == 3: return 1 if x == 4: return 1 if x == 5: return 1 if x == 6: return 1 if x == 7: return 1 if x == 8: return 1 if x == 9: return 1 if x == 10: return 1 if x == 11: return 1 if x == 12: return 1 if x == 13: return 1 if x == 14: return 1 if x == 15: return 1 if x == 16: return 1 if x == 17: return 1 if x == 18: return 1 if x == 19: return 1 if x == 20: return 1 if x == 21: return 1 if x == 22: return 1 if x == 23: return 1 if x == 24: return 1 if x == 25: return 1 if x == 26: return 1 if x == 27: return 1 if x == 28: return 1 if x == 29: return 1 if x == 30: return 1 if x == 31: return 1 if x == 32: return 1 if x == 33: return 1 if x == 34: return 1 if x == 35: return 1 if x == 36: return 1 if x == 37: return 1 if x == 38: return 1 if x == 39: return 1 if x == 40: return 1 if x == 41: return 1 if x == 42: return 1 if x == 43: return 1 if x == 44: return 1 if x == 45: return 1 if x == 46: return 1 if x == 47: return 1 if x == 48: return 1 if x == 49: return",
+            "reusability of code is important in FSM coding"
+        ]
+    }
+}
+{
+    "rtl_63": {
+        "statement": "Verilog casex and casez statements",
+        "question": [
+            "What is the difference between casex and casez statements in Verilog?",
+            "When should casex be used instead of casez?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Casez treats Z as a don't-care, while casex treats both X and Z as don't-cares.",
+            "Casex is used when both X and Z should be treated as don't-cares."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "casex and casez statements in verilog",
+            "if x == 0 and y == 0"
+        ]
+    }
+}
+{
+    "rtl_64": {
+        "statement": "Verilog testbenches and simulation",
+        "question": [
+            "What is a testbench in Verilog?",
+            "How do you use a testbench to verify RTL design functionality?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "A testbench is a piece of code used to simulate and verify the behavior of the design under test (DUT).",
+            "By applying inputs and checking the outputs of the DUT."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "test case for dspice and dspice verilog",
+            "run testcases in emulation environment"
+        ]
+    }
+}
+{
+    "rtl_65": {
+        "statement": "Understanding Flip-Flops in Verilog",
+        "question": [
+            "Explain the concept of a flip-flop in Verilog and provide an example of its usage in a real-world application."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "In Verilog, a flip-flop is a fundamental sequential logic element used to store and synchronize data in digital circuits, commonly used in registers or memory elements."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "a flip-flop in verilog"
+        ]
+    }
+}
+{
+    "rtl_66": {
+        "statement": "Role of Testbenches in Verilog",
+        "question": [
+            "What is the purpose of a testbench in Verilog, and why is it essential during the development process?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "A testbench in Verilog simulates and verifies design functionality, ensuring correctness before synthesis, by generating inputs and monitoring outputs."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Verilog testbench is a set of test cases that can be used to verify the correctness of a design"
+        ]
+    }
+}
+{
+    "rtl_67": {
+        "statement": "Blocking vs Non-blocking Assignments",
+        "question": [
+            "Explain the difference between blocking and non-blocking assignments in Verilog."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments execute sequentially, while non-blocking assignments allow concurrent updates, better suited for modeling hardware flip-flops."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "blocking and non-blocking assignments in verilog"
+        ]
+    }
+}
+{
+    "rtl_68": {
+        "statement": "4-to-1 Multiplexer in Verilog",
+        "question": [
+            "Provide an example of a Verilog module that implements a 4-to-1 multiplexer (MUX) and explain its functionality."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "A 4-to-1 MUX selects one of four 1-bit inputs based on a 2-bit selection input, using a case statement for conditional selection."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "(A) a 4-to-1 multiplexer (MUX)"
+        ]
+    }
+}
+{
+    "rtl_69": {
+        "statement": "Purpose of always Blocks",
+        "question": [
+            "Explain the purpose of the `always` block in Verilog and the difference between `always @(*)` and `always @(posedge clk)`."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The `always` block is used for combinational (`always @(*)`) or sequential (`always @(posedge clk)`) logic; `@(*)` is for combinational, and `@(posedge clk)` is for clock-triggered updates."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "(II) inferred clk"
+        ]
+    }
+}
+{
+    "rtl_70": {
+        "statement": "Parameterized Modules in Verilog",
+        "question": [
+            "Explain the concept of parameterized modules in Verilog and provide an example."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Parameterized modules allow for flexible module instantiation by specifying parameters, e.g., creating adders with different bit widths."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "this is an example of a parameterized module in verilog"
+        ]
+    }
+}
+{
+    "rtl_71": {
+        "statement": "Verilog Case Statement Usage",
+        "question": [
+            "What is the purpose of the `case` statement in Verilog, and how is it used? Provide an example."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The `case` statement is used for multi-way conditional logic, allowing selection of actions based on matching values of an input."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "case statement in verilog, and how it is used"
+        ]
+    }
+}
+{
+    "rtl_72": {
+        "statement": "Finite State Machine (FSM) Concept",
+        "question": [
+            "Explain the concept of a finite state machine (FSM) in Verilog and its significance in digital circuit design."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "FSM is used to model control logic in digital circuits, consisting of states and transitions based on inputs, commonly used in control units."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "(A) a finite state machine (FSM) in Verilog and its significance in digital circuit design"
+        ]
+    }
+}
+{
+    "rtl_73": {
+        "statement": "Purpose of generate Construct",
+        "question": [
+            "Explain the purpose of the `generate` construct in Verilog and provide an example of its usage."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The `generate` construct is used for creating repetitive hardware structures, such as arrays of similar modules or conditional instantiations."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "to create a variable in verilog"
+        ]
+    }
+}
+{
+    "rtl_74": {
+        "statement": "Clock Domain Crossing (CDC) in Verilog",
+        "question": [
+            "Explain the concept of clock domain crossing (CDC) in Verilog and the challenges associated with it. Provide an example of how to handle CDC."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "CDC refers to data transfer between different clock domains, presenting challenges like metastability; it is handled using synchronizers or FIFOs."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "(II) inline with the rest of the text"
+        ]
+    }
+}
+{
+    "rtl_75": {
+        "statement": "Blocking vs Non-blocking Assignments",
+        "question": [
+            "What is the difference between blocking and non-blocking assignments in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments (`=`) execute sequentially, while non-blocking assignments (`<=`) allow concurrent updates. Blocking assignments are used for combinational logic, and non-blocking are used in sequential logic."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "non-blocking assignments are asynchronous"
+        ]
+    }
+}
+{
+    "rtl_76": {
+        "statement": "Tasks vs Functions in Verilog",
+        "question": [
+            "What are the differences between a task and a function in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Functions cannot contain time delays and return only one value, whereas tasks can have multiple output values, include time delays, and be used in both sequential and combinational logic."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "task is recursive while function is non recursive"
+        ]
+    }
+}
+{
+    "rtl_77": {
+        "statement": "Difference Between Wire and Reg",
+        "question": [
+            "What is the difference between `wire` and `reg` in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "`wire` is used for connecting combinational logic, whereas `reg` stores values between clock cycles. `wire` cannot store values without a driver."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "wire is a signal while reg is a register"
+        ]
+    }
+}
+{
+    "rtl_78": {
+        "statement": "Generate Block Usage in Verilog",
+        "question": [
+            "What is a generate block in Verilog and how is it used?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Generate blocks are used to replicate hardware structures conditionally or in loops, making it easier to create multiple instances of the same module with different parameters."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "generate block in verilog and how to use it"
+        ]
+    }
+}
+{
+    "rtl_79": {
+        "statement": "Synchronous vs Asynchronous Reset",
+        "question": [
+            "What is the difference between synchronous and asynchronous reset in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "In synchronous reset, the reset action occurs with the clock edge, while asynchronous reset works independently of the clock. Synchronous resets are generally preferred for their ease of timing analysis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Computers & Electronics, Engineering & Technology"
+        ]
+    }
+}
+{
+    "rtl_80": {
+        "statement": "Difference Between $stop and $finish",
+        "question": [
+            "What is the difference between `$stop` and `$finish` in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "`$stop` pauses the simulation and allows user interaction, whereas `$finish` ends the simulation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "finish is recursive while stop is non recursive"
+        ]
+    }
+}
+{
+    "rtl_81": {
+        "statement": "Clock Generation in Testbench",
+        "question": [
+            "How can you generate two different clocks in a Verilog testbench?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "You can generate clocks using `always` blocks with different time delays for each clock. Example: `always #5 clk1 = ~clk1; always #4 clk2 = ~clk2;`"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "dummy node and dummy node"
+        ]
+    }
+}
+{
+    "rtl_82": {
+        "statement": "Difference Between Full and Parallel Case Statements",
+        "question": [
+            "What is the difference between full and parallel case statements in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "In a full case, all possible conditions are covered, while in a parallel case, each input value maps to a unique output without overlap. Parallel case ensures no two conditions match simultaneously."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "full case vs parallel case statements in verilog"
+        ]
+    }
+}
+{
+    "rtl_83": {
+        "statement": "FIFO Underflow and Overflow",
+        "question": [
+            "What are underflow and overflow conditions in FIFO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Underflow occurs when reading from an empty FIFO, and overflow occurs when writing to a full FIFO. These conditions can lead to data corruption if not handled properly."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "reversal of order in which items are inserted into fifo"
+        ]
+    }
+}
+{
+    "rtl_84": {
+        "statement": "Verilog Event Scheduler",
+        "question": [
+            "Explain the Verilog event scheduler and its importance."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The event scheduler in Verilog manages the order of execution of events in different time slots, including active, inactive, non-blocking assignments, and monitor regions, to ensure correct simulation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "it's important to have a scheduler in verilog"
+        ]
+    }
+}
+{
+    "rtl_85": {
+        "statement": "Blocking vs Non-blocking Assignments",
+        "question": [
+            "What is the difference between blocking and non-blocking assignments in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments (`=`) execute sequentially, while non-blocking assignments (`<=`) allow concurrent updates. Blocking assignments are used for combinational logic, and non-blocking are used in sequential logic."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "non-blocking assignments are asynchronous"
+        ]
+    }
+}
+{
+    "rtl_86": {
+        "statement": "Tasks vs Functions in Verilog",
+        "question": [
+            "What are the differences between a task and a function in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Functions cannot contain time delays and return only one value, whereas tasks can have multiple output values, include time delays, and be used in both sequential and combinational logic."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "task is recursive while function is non recursive"
+        ]
+    }
+}
+{
+    "rtl_87": {
+        "statement": "Difference Between Wire and Reg",
+        "question": [
+            "What is the difference between `wire` and `reg` in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "`wire` is used for connecting combinational logic, whereas `reg` stores values between clock cycles. `wire` cannot store values without a driver."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "wire is a signal while reg is a register"
+        ]
+    }
+}
+{
+    "rtl_88": {
+        "statement": "Generate Block Usage in Verilog",
+        "question": [
+            "What is a generate block in Verilog and how is it used?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Generate blocks are used to replicate hardware structures conditionally or in loops, making it easier to create multiple instances of the same module with different parameters."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "generate block in verilog and how to use it"
+        ]
+    }
+}
+{
+    "rtl_89": {
+        "statement": "Synchronous vs Asynchronous Reset",
+        "question": [
+            "What is the difference between synchronous and asynchronous reset in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "In synchronous reset, the reset action occurs with the clock edge, while asynchronous reset works independently of the clock. Synchronous resets are generally preferred for their ease of timing analysis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Computers & Electronics, Engineering & Technology"
+        ]
+    }
+}
+{
+    "rtl_90": {
+        "statement": "Difference Between $stop and $finish",
+        "question": [
+            "What is the difference between `$stop` and `$finish` in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "`$stop` pauses the simulation and allows user interaction, whereas `$finish` ends the simulation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "finish is recursive while stop is non recursive"
+        ]
+    }
+}
+{
+    "rtl_91": {
+        "statement": "Clock Generation in Testbench",
+        "question": [
+            "How can you generate two different clocks in a Verilog testbench?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "You can generate clocks using `always` blocks with different time delays for each clock. Example: `always #5 clk1 = ~clk1; always #4 clk2 = ~clk2;`"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "dummy node and dummy node"
+        ]
+    }
+}
+{
+    "rtl_92": {
+        "statement": "Difference Between Full and Parallel Case Statements",
+        "question": [
+            "What is the difference between full and parallel case statements in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "In a full case, all possible conditions are covered, while in a parallel case, each input value maps to a unique output without overlap. Parallel case ensures no two conditions match simultaneously."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "full case vs parallel case statements in verilog"
+        ]
+    }
+}
+{
+    "rtl_93": {
+        "statement": "FIFO Underflow and Overflow",
+        "question": [
+            "What are underflow and overflow conditions in FIFO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Underflow occurs when reading from an empty FIFO, and overflow occurs when writing to a full FIFO. These conditions can lead to data corruption if not handled properly."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "reversal of order in which items are inserted into fifo"
+        ]
+    }
+}
+{
+    "rtl_94": {
+        "statement": "Verilog Event Scheduler",
+        "question": [
+            "Explain the Verilog event scheduler and its importance."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The event scheduler in Verilog manages the order of execution of events in different time slots, including active, inactive, non-blocking assignments, and monitor regions, to ensure correct simulation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "it's important to have a scheduler in verilog"
+        ]
+    }
+}
+{
+    "rtl_95": {
+        "statement": "Difference Between Latches and Flip-Flops",
+        "question": [
+            "What is the difference between latches and flip-flops in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Latches are level-sensitive devices that are transparent when enabled, while flip-flops are edge-triggered devices that change state only on clock edges."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "latches and flip flops in verilog"
+        ]
+    }
+}
+{
+    "rtl_96": {
+        "statement": "Usage of Initial Block",
+        "question": [
+            "What is the purpose of the `initial` block in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The `initial` block is used to execute a set of statements only once at the beginning of the simulation, commonly used for testbench initialization."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "defintie if block is initial or not"
+        ]
+    }
+}
+{
+    "rtl_97": {
+        "statement": "Verilog Syntax and Common Errors",
+        "question": [
+            "What is the purpose of the `always` block in Verilog?",
+            "Explain a common syntax error when using `always @(*)` for combinational logic."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "The `always` block is used for defining sequential or combinational logic in Verilog.",
+            "A common syntax error is not including all signals in the sensitivity list, which could lead to incorrect simulation results."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "boolean conditional expressions in a block of code",
+            "(II) inverted always @(*) for combinational logic"
+        ]
+    }
+}
+{
+    "rtl_98": {
+        "statement": "Instantiation of Modules in Verilog",
+        "question": [
+            "What are the two ways to instantiate a module in Verilog?",
+            "What is the difference between named and positional port connections when instantiating a module?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Modules can be instantiated using named or positional port connections.",
+            "Named connections explicitly match each port by name, improving readability, while positional connections list signals in order, which can be prone to errors if the order is incorrect."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "def instantiate() and def instantiate(module)",
+            "positional port connections are based on module's location"
+        ]
+    }
+}
+{
+    "rtl_99": {
+        "statement": "Blocking vs Non-blocking Assignments",
+        "question": [
+            "What is the primary difference between blocking and non-blocking assignments?",
+            "Why is it recommended to use non-blocking assignments in sequential logic?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments execute in sequence, while non-blocking assignments allow all right-hand side expressions to be evaluated before updating the left-hand side.",
+            "Non-blocking assignments help prevent race conditions in sequential logic."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "non-blocking assignments can be done in any order",
+            "non-blocking assignments are easier to understand"
+        ]
+    }
+}
+{
+    "rtl_100": {
+        "statement": "Synthesis Warnings in Verilog",
+        "question": [
+            "What causes 'latch inferred' warnings during synthesis in Verilog?",
+            "How can latch inference be avoided in combinational logic?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Latch warnings occur when combinational logic does not fully define all output conditions.",
+            "Latch inference can be avoided by ensuring all branches of an `if-else` or `case` statement are covered."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "hard",
+            "hard"
+        ],
+        "ability": [
+            "inference",
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "latches are not in same place as other latches",
+            "reversing order of inputs and outputs"
+        ]
+    }
+}
+{
+    "rtl_101": {
+        "statement": "Finite State Machines (FSM) in Verilog",
+        "question": [
+            "How is an FSM implemented in Verilog?",
+            "Why is it important to separate state transition and output logic in FSM design?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "An FSM in Verilog is implemented using `always` blocks to manage states and transitions based on input conditions.",
+            "Separating state transition and output logic helps avoid unintended behavior and makes the design easier to debug."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "hard",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "(A) as a series of state transitions",
+            "(B) output logic in FSM design is important to separate state transition and output logic in FSM design"
+        ]
+    }
+}
+{
+    "rtl_102": {
+        "statement": "Simulation vs Synthesis Differences",
+        "question": [
+            "What is the difference between simulation and synthesis in Verilog?",
+            "Give an example of a construct that works in simulation but not in synthesis."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Simulation tests functional correctness without considering hardware constraints, while synthesis converts code into hardware.",
+            "`$display` works in simulation but is not synthesizable."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "simulation vs synthesis in verilog",
+            "symtoms can be used in simulation but not in synthesis"
+        ]
+    }
+}
+{
+    "rtl_103": {
+        "statement": "Common Verilog Constructs and Their Use Cases",
+        "question": [
+            "What is the purpose of the `assign` statement in Verilog?",
+            "When should you use a `wire` type versus a `reg` type?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "`assign` is used for continuous assignments, typically to drive combinational logic outputs.",
+            "`wire` is used for signals driven by combinational logic, while `reg` is used for variables in procedural blocks."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "to pass variable from one place to another without recompiling",
+            "Computers & Technology, Science & Math"
+        ]
+    }
+}
+{
+    "rtl_104": {
+        "statement": "Initial and Always Blocks in Verilog",
+        "question": [
+            "What is the difference between an `initial` block and an `always` block in Verilog?",
+            "Can `initial` blocks be synthesized?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "`initial` blocks run once at the beginning of the simulation, whereas `always` blocks are repeated based on sensitivity.",
+            "No"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "Always Blocks in Verilog Initial Blocks in Verilog",
+            "ii.1a.1b"
+        ]
+    }
+}
+{
+    "rtl_105": {
+        "statement": "Usage of `case` Statements in Verilog",
+        "question": [
+            "How does a `case` statement differ from `if-else` in Verilog?",
+            "What precautions should be taken to avoid latch inference with `case` statements?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "`case` statements are more readable for selecting among multiple conditions, whereas `if-else` is better for binary conditions.",
+            "Ensure all possible cases are covered, including a default condition."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "case statement is a subset of if-else",
+            "if case statement is not in enumerate"
+        ]
+    }
+}
+{
+    "rtl_106": {
+        "statement": "Sensitivity Lists in Verilog",
+        "question": [
+            "What happens if a signal is missing from the sensitivity list in combinational logic?",
+            "How can you ensure correct behavior in an `always @(*)` block?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "If a signal is missing, the simulation may not properly reflect changes, potentially causing incorrect behavior.",
+            "Use `always @(*)` to automatically include all signals that affect the block's output."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "signal isn't able to be used",
+            "(II) int(*)"
+        ]
+    }
+}
+{
+    "rtl_107": {
+        "statement": "Introduction to Verilog and its Uses",
+        "question": [
+            "What is Verilog and why is it used?",
+            "List the key advantages of using Verilog for hardware design."
+        ],
+        "question_type": [
+            "open",
+            "multi"
+        ],
+        "answer": [
+            "Verilog is a hardware description language used to model and simulate digital circuits. It is used for designing, verifying, and synthesizing electronic systems.",
+            [
+                "Abstraction",
+                "Simulation",
+                "Synthesis",
+                "Verification"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "programming language for microcontrollers and other electronic devices",
+            "it's a language for hardware design"
+        ]
+    }
+}
+{
+    "rtl_108": {
+        "statement": "Blocking vs Non-blocking Assignments in Verilog",
+        "question": [
+            "What is the difference between blocking and non-blocking assignments in Verilog?",
+            "When should non-blocking assignments be used?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments (`=`) execute sequentially, while non-blocking assignments (`<=`) execute concurrently.",
+            "Non-blocking assignments should be used for sequential logic to avoid race conditions."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "blocking and non-blocking assignments in verilog",
+            "non-blocking assignments should be used when there is no need to wait for a result"
+        ]
+    }
+}
+{
+    "rtl_109": {
+        "statement": "Verilog Modules and Their Types",
+        "question": [
+            "What are the different types of Verilog modules?",
+            "Give an example of a behavioral module in Verilog."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Behavioral, Structural, and Dataflow modules are the types of Verilog modules.",
+            "module adder (input a, input b, output sum); assign sum = a + b; endmodule"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "systm and systm",
+            "iota and stdout"
+        ]
+    }
+}
+{
+    "rtl_110": {
+        "statement": "Operators in Verilog",
+        "question": [
+            "List the different types of operators available in Verilog.",
+            "What is the purpose of the concatenation operator `{}` in Verilog?"
+        ],
+        "question_type": [
+            "multi",
+            "open"
+        ],
+        "answer": [
+            [
+                "Arithmetic Operators",
+                "Logical Operators",
+                "Relational Operators",
+                "Bitwise Operators",
+                "Shift Operators",
+                "Concatenation Operator"
+            ],
+            "The concatenation operator `{}` is used to combine multiple values into a single value."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "arithmetic and boolean",
+            "symtom of comma"
+        ]
+    }
+}
+{
+    "rtl_111": {
+        "statement": "Modeling a D Flip-Flop in Verilog",
+        "question": [
+            "How would you model a simple D flip-flop in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "module dff (input clk, input d, output reg q); always @(posedge clk) begin q <= d; end endmodule"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "x = 0 y = 0 z = 0 for i in range(len(x)): if x == 0: x = x + 1 else: x = x - 1 if y == 0: y = y + 1 else: y = y - 1 if z == 0: z = z - 1 else: z = z - 1"
+        ]
+    }
+}
+{
+    "rtl_112": {
+        "statement": "Verilog Simulation Tools",
+        "question": [
+            "Name some common Verilog simulation tools and their features.",
+            "What is the purpose of waveform viewing in Verilog simulation tools?"
+        ],
+        "question_type": [
+            "multi",
+            "open"
+        ],
+        "answer": [
+            [
+                "ModelSim",
+                "VCS",
+                "QuestaSim",
+                "Icarus Verilog"
+            ],
+            "Waveform viewing displays the simulation results in a graphical format, allowing designers to visualize signal changes over time."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "perception"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "verilog symphony",
+            "to see what's going on in simulation"
+        ]
+    }
+}
+{
+    "rtl_113": {
+        "statement": "Verilog Testbenches and Their Purpose",
+        "question": [
+            "What is a Verilog testbench?",
+            "List the key components of a Verilog testbench."
+        ],
+        "question_type": [
+            "open",
+            "multi"
+        ],
+        "answer": [
+            "A testbench is a Verilog module designed to verify the functionality of a design under test (DUT).",
+            [
+                "DUT instantiation",
+                "Input stimulus generation",
+                "Output monitoring",
+                "Assertions"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "verification tool for vlsi circuits",
+            "node id and node id"
+        ]
+    }
+}
+{
+    "rtl_114": {
+        "statement": "Verilog Tasks and Their Uses",
+        "question": [
+            "What is a task in Verilog?",
+            "How can tasks make Verilog code more modular?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "A task is a reusable block of Verilog code that performs a specific operation.",
+            "Tasks encapsulate common operations, making the code more modular and easier to maintain."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "symtoms in verilog",
+            "re-usable blocks of code that can be reused over and over again"
+        ]
+    }
+}
+{
+    "rtl_115": {
+        "statement": "Handling Timing in Verilog",
+        "question": [
+            "How is timing handled in Verilog?",
+            "What does the `#` operator do in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Timing in Verilog is handled through delay specifications using the `#` operator.",
+            "The `#` operator specifies a delay in simulation time units before the next statement is executed."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "cpu timers and counters",
+            "stdout and stdio"
+        ]
+    }
+}
+{
+    "rtl_116": {
+        "statement": "Basic Concepts of Verilog",
+        "question": [
+            "What is Verilog, and what is it used for?",
+            "List three advantages of using Verilog for hardware design."
+        ],
+        "question_type": [
+            "open",
+            "multi"
+        ],
+        "answer": [
+            "Verilog is a hardware description language used to model and simulate digital systems.",
+            [
+                "Supports simulation",
+                "Ease of modeling",
+                "Widely used for ASIC/FPGA design"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "dsp programming language used to program microcontrollers",
+            "easy to read, write, and debug"
+        ]
+    }
+}
+{
+    "rtl_117": {
+        "statement": "Verilog Data Types",
+        "question": [
+            "What is the difference between `wire` and `reg` in Verilog?",
+            "When should a `reg` type be used?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "`wire` is used for connecting elements and cannot store values, whereas `reg` can store values and is used in procedural blocks.",
+            "`reg` should be used in `always` blocks to store values across clock cycles."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "wire is a variable while reg is a constant",
+            "Computers & Electronics, Programming & Languages"
+        ]
+    }
+}
+{
+    "rtl_118": {
+        "statement": "Modeling Techniques in Verilog",
+        "question": [
+            "Describe the differences between behavioral, structural, and dataflow modeling in Verilog.",
+            "Provide an example of behavioral modeling."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Behavioral modeling uses high-level constructs, structural modeling describes circuit connections, and dataflow modeling uses expressions to describe data movement.",
+            "module add(a, b, sum); input a, b; output sum; assign sum = a + b; endmodule"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "dataflow is a type of modeling in verilog",
+            "iota and octave"
+        ]
+    }
+}
+{
+    "rtl_119": {
+        "statement": "Blocking and Non-blocking Assignments",
+        "question": [
+            "What is the difference between blocking (`=`) and non-blocking (`<=`) assignments?",
+            "When should non-blocking assignments be used in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments execute sequentially, while non-blocking assignments allow parallel updates.",
+            "Non-blocking assignments should be used for sequential logic to avoid race conditions."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "(II) non-blocking assignments",
+            "if you don't want to wait"
+        ]
+    }
+}
+{
+    "rtl_120": {
+        "statement": "Synthesis vs Simulation",
+        "question": [
+            "What is the difference between synthesis and simulation in Verilog?",
+            "Why are some constructs allowed in simulation but not in synthesis?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Simulation checks the behavior of the design, while synthesis translates the design into hardware.",
+            "Some constructs, like `initial` blocks or delays, are for testing purposes only and cannot be mapped to hardware components."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "hard",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "simulation vs synthesis in verilog",
+            "simulation is computerized model of real world process"
+        ]
+    }
+}
+{
+    "rtl_121": {
+        "statement": "Finite State Machines (FSM) in Verilog",
+        "question": [
+            "What are the two types of FSM used in Verilog?",
+            "How do you implement a Moore state machine in Verilog?"
+        ],
+        "question_type": [
+            "single",
+            "open"
+        ],
+        "answer": [
+            "Moore and Mealy",
+            "A Moore state machine outputs depend only on the current state and can be implemented using an `always @(posedge clk)` block."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "knowledge",
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "finite state machine (fsm) and non finite state machine (nsfsm)",
+            "(I) implement a Moore state machine in Verilog"
+        ]
+    }
+}
+{
+    "rtl_122": {
+        "statement": "Verilog Testbenches",
+        "question": [
+            "What is the purpose of a testbench in Verilog?",
+            "What are the key components of a typical testbench?"
+        ],
+        "question_type": [
+            "open",
+            "multi"
+        ],
+        "answer": [
+            "A testbench is used to verify the functionality of a design by providing input stimuli and observing outputs.",
+            [
+                "Design Under Test (DUT)",
+                "Stimulus generator",
+                "Output monitor",
+                "Assertions"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "to test a program before it's run",
+            "node and symtoms"
+        ]
+    }
+}
+{
+    "rtl_123": {
+        "statement": "`always` Block Usage in Verilog",
+        "question": [
+            "When should an `always` block be used in Verilog?",
+            "What is the difference between `always @(*)` and `always @(posedge clk)`?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "An `always` block is used to describe sequential or combinational logic.",
+            "`always @(*)` is used for combinational logic, whereas `always @(posedge clk)` is used for sequential logic triggered by a clock edge."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "if you want to make sure something always happens",
+            "(A) always @(posege clk)"
+        ]
+    }
+}
+{
+    "rtl_124": {
+        "statement": "Conditional Statements in Verilog",
+        "question": [
+            "What is the purpose of `if-else` statements in Verilog?",
+            "What is the difference between `case` and `if-else` statements?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "`if-else` statements are used to make decisions based on conditions.",
+            "`case` statements are more efficient when there are multiple possible values for a condition, while `if-else` is suitable for binary conditions."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "if one thing is true then do something else",
+            "if-else is recursive"
+        ]
+    }
+}
+{
+    "rtl_125": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule lo_simulate(\n    pck0,             \n    ck_1356meg,       \n    ck_1356megb,      \n    pwr_lo,           \n    pwr_hi,           \n    pwr_oe1,          \n    pwr_oe2,          \n    pwr_oe3,          \n    pwr_oe4,          \n    adc_d,            \n    adc_clk,          \n    ssp_frame,        \n    ssp_din,          \n    ssp_dout,         \n    ssp_clk,          \n    cross_hi,         \n    cross_lo,         \n    dbg,              \n    divisor           \n);\ninput pck0, ck_1356meg, ck_1356megb;\noutput pwr_lo, pwr_hi, pwr_oe1, pwr_oe2, pwr_oe3, pwr_oe4;\ninput [7:0] adc_d;\noutput adc_clk;\ninput ssp_dout;\noutput ssp_frame, ssp_din, ssp_clk;\ninput cross_hi, cross_lo;\noutput dbg;\ninput [7:0] divisor;\nassign pwr_oe3 = 1'b0;        \nassign pwr_oe1 = ssp_dout;    \nassign pwr_oe2 = ssp_dout;    \nassign pwr_oe4 = ssp_dout;    \nassign ssp_clk = cross_lo;    \nassign pwr_lo = 1'b0;         \nassign pwr_hi = 1'b0;         \nassign dbg = ssp_frame;       \nreg [7:0] pck_divider;        \nreg clk_state;                \nalways @(posedge pck0) begin\n    if(pck_divider == divisor[7:0]) begin\n        pck_divider <= 8'd0;  \n        clk_state = !clk_state; \n    end else begin\n        pck_divider <= pck_divider + 1; \n    end\nend\nassign adc_clk = ~clk_state;  \nreg is_high;                  \nreg is_low;                   \nreg output_state;             \nalways @(posedge pck0) begin\n    if((pck_divider == 8'd7) && !clk_state) begin\n        is_high = (adc_d >= 8'd200); \n        is_low = (adc_d <= 8'd64);   \n    end\nend\nalways @(posedge is_high or posedge is_low) begin\n    if(is_high)\n        output_state <= 1'd1; \n    else if(is_low)\n        output_state <= 1'd0; \nend\nassign ssp_frame = output_state; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `lo_simulate` implements clock division, ADC monitoring, and control signal generation functionalities. Inputs are divided to generate slower clock signals, control signals based on ADC thresholds, and manage power control signals. It also provides debugging functionality by aligning the debug signal `dbg` with `ssp_frame`."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_126": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule WireDelay # (\n  parameter Delay_g = 0,       \n  parameter Delay_rd = 0,      \n  parameter ERR_INSERT = \"OFF\" \n)\n(\n  inout A,                     \n  inout B,                     \n  input reset,                 \n  input phy_init_done          \n);\n  reg A_r;                     \n  reg B_r;                     \n  reg B_inv;                   \n  reg line_en;                 \n  reg B_nonX;                  \n  assign A = A_r;              \n  assign B = B_r;              \n  always @ (*) begin\n    if (B === 1'bx)            \n      B_nonX <= $random;       \n    else\n      B_nonX <= B;             \n  end\n  always @(*) begin\n    if ((B_nonX == 'b1) || (B_nonX == 'b0)) \n      B_inv <= #0 ~B_nonX;                  \n    else\n      B_inv <= #0 'bz;                      \n  end\n  always @(*) begin\n    if (!reset) begin           \n      A_r <= 1'bz;              \n      B_r <= 1'bz;              \n      line_en <= 1'b0;     \n    end else begin              \n      if (line_en) begin        \n        B_r <= 1'bz;            \n        if ((ERR_INSERT == \"ON\") & (phy_init_done)) \n          A_r <= #Delay_rd B_inv; \n        else\n          A_r <= #Delay_rd B_nonX; \n      end else begin            \n        B_r <= #Delay_g A;      \n        A_r <= 1'bz;            \n      end\n    end\n  end\n  always @(A or B) begin\n    if (!reset) begin           \n      line_en <= 1'b0;          \n    end else if (A !== A_r) begin \n      line_en <= 1'b0;          \n    end else if (B_r !== B) begin \n      line_en <= 1'b1;          \n    end else begin              \n      line_en <= line_en;       \n    end\n  end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `WireDelay` implements a configurable delay wire with optional error insertion functionality, utilizing bidirectional ports A and B to simulate signal propagation delays and errors with dynamic line enable control based on signal changes."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_127": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule quad(clk, A, B, Z, zr, out);\n    parameter W=14;\n    input clk, A, B, Z, zr; \n    reg [(W-1):0] c, i; \n    reg zl; \n    output [2*W:0] out = { zl, i, c };\n    reg [2:0] Ad, Bd;\n    reg [2:0] Zc;\n    always @(posedge clk) Ad <= {Ad[1:0], A};\n    always @(posedge clk) Bd <= {Bd[1:0], B};\n    wire good_one = &Zc;\n    wire good_zero = ~|Zc;\n    reg last_good;\n    wire index_pulse = good_one && !last_good;\n    wire count_enable = Ad[1] ^ Ad[2] ^ Bd[1] ^ Bd[2];\n    wire count_direction = Ad[1] ^ Bd[2];\n    always @(posedge clk)\n    begin\n        if(Z && !good_one) Zc <= Zc + 2'b1;\n        else if(!good_zero) Zc <= Zc - 2'b1;\n        if(good_one) last_good <= 1;\n        else if(good_zero) last_good <= 0;\n        if(count_enable)\n        begin\n            if(count_direction) c <= c + 1'd1;\n            else c <= c - 1'd1;\n        end\n        if(index_pulse) begin\n            i <= c;\n            zl <= 1;\n        end else if(zr) begin \n            zl <= 0;\n        end\n    end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module \"Quad\" implements a sophisticated counter that can increment or decrement. It manages a W-bit counter, register, and control logic based on inputs A, B, Z, and zr. It employs shift registers, counters, and condition monitoring to accurately track and update the count state, index pulse, and output signals."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Quad(clk, A, B, Z, zr, out); parameter W=14; input clk, A, B, Z, zr; reg [(W-1):0] c, i; reg zl; output [2*W:0] out =  zl, i, c ; reg [2:0] Ad, Bd; reg [2:0] Zc; always @(posedge clk) Ad = Ad[1:0], A; always @(posedge clk) Bd = Bd[1:0], B; wire good_one = &Zc; wire good_zero = |Zc; reg last_good; wire index_pulse = good_one &&!last_good; wire count_enable = Ad[1]  Ad[2]  Bd[1]  Bd[2]; wire count_direction = Ad[1]  Bd[2]; always @(posedge clk) begin if(Z &&!good_one) Zc = Zc + 2'b1; else if(!good_zero) Zc = Zc - 2'b1; if(good_one) last_good = 1; else if(good_zero) last_good = 0; if(count_enable) begin if(count_direction) c = c + 1'd1; else c = c - 1'd1; end if(index_pulse) begin i = c; zl = 1; end else if(zr) begin zl = 0; end end end end"
+        ]
+    }
+}
+{
+    "rtl_128": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule fifo_generator_v13_1_3_beh_ver_ll_afifo \n  /***************************************************************************\n  #(\n    parameter  C_DIN_WIDTH                    = 8,  \n    parameter  C_DOUT_RST_VAL                 = \"\", \n    parameter  C_DOUT_WIDTH                   = 8,  \n    parameter  C_FULL_FLAGS_RST_VAL           = 1,  \n    parameter  C_HAS_RD_DATA_COUNT            = 0,  \n    parameter  C_HAS_WR_DATA_COUNT            = 0,  \n    parameter  C_RD_DEPTH                     = 256,\n    parameter  C_RD_PNTR_WIDTH                = 8,  \n    parameter  C_USE_DOUT_RST                 = 0,  \n    parameter  C_WR_DATA_COUNT_WIDTH          = 2,  \n    parameter  C_WR_DEPTH                     = 256,\n    parameter  C_WR_PNTR_WIDTH                = 8,  \n    parameter  C_FIFO_TYPE                    = 0   \n   )\n  /***************************************************************************\n  (\n   input       [C_DIN_WIDTH-1:0]                 DIN,       \n   input                                         RD_CLK,    \n   input                                         RD_EN,     \n   input                                         WR_RST,    \n   input                                         RD_RST,    \n   input                                         WR_CLK,    \n   input                                         WR_EN,     \n   output reg  [C_DOUT_WIDTH-1:0]                DOUT = 0,  \n   output reg                                    EMPTY = 1'b1, \n   output reg                                    FULL = C_FULL_FLAGS_RST_VAL \n  );\n  reg [C_DIN_WIDTH-1:0] memory[C_WR_DEPTH-1:0];\n  integer i;\n  initial begin\n    for (i = 0; i < C_WR_DEPTH; i = i + 1)\n      memory[i] = 0;\n  end\n  reg  [C_WR_PNTR_WIDTH-1:0] wr_pntr_ll_afifo = 0;\n  wire [C_RD_PNTR_WIDTH-1:0] rd_pntr_ll_afifo;\n  reg  [C_RD_PNTR_WIDTH-1:0] rd_pntr_ll_afifo_q = 0;\n  reg                        ll_afifo_full    = 1'b0;\n  reg                        ll_afifo_empty   = 1'b1;\n  wire                       write_allow;\n  wire                       read_allow;\n  assign write_allow = WR_EN & ~ll_afifo_full;\n  assign read_allow  = RD_EN & ~ll_afifo_empty;\n  always @(posedge WR_CLK or posedge WR_RST) begin\n    if (WR_RST)\n      wr_pntr_ll_afifo   <= 0;\n    else if (write_allow)\n      wr_pntr_ll_afifo <= #`TCQ wr_pntr_ll_afifo + 1;\n  end\n  always @(posedge RD_CLK or posedge RD_RST) begin\n    if (RD_RST)\n      rd_pntr_ll_afifo_q   <= 0;\n    else\n      rd_pntr_ll_afifo_q <= #`TCQ rd_pntr_ll_afifo;\n  end\n  assign rd_pntr_ll_afifo = read_allow ? rd_pntr_ll_afifo_q + 1 : rd_pntr_ll_afifo_q;\n  always @(posedge WR_CLK) begin\n    if (write_allow)\n      memory[wr_pntr_ll_afifo] <= #`TCQ DIN;\n  end\n  always @(posedge RD_CLK) begin\n      DOUT <= #`TCQ memory[rd_pntr_ll_afifo];\n  end\n  always @(posedge RD_CLK or posedge RD_RST) begin\n    if (RD_RST)\n      ll_afifo_empty   <= 1'b1;\n    else\n      ll_afifo_empty   <= ((wr_pntr_ll_afifo == rd_pntr_ll_afifo_q) |\n                           (read_allow & (wr_pntr_ll_afifo == (rd_pntr_ll_afifo_q + 2'h1))));\n  end\n  always @(posedge WR_CLK or posedge WR_RST) begin\n    if (WR_RST)\n      ll_afifo_full   <= 1'b1;\n    else\n      ll_afifo_full   <= ((rd_pntr_ll_afifo_q == (wr_pntr_ll_afifo + 2'h1)) |\n                           (write_allow & (rd_pntr_ll_afifo_q == (wr_pntr_ll_afifo + 2'h2))));\n  end\n  always @* begin\n    FULL  <= ll_afifo_full;\n    EMPTY <= ll_afifo_empty;\n  end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `fifo_generator_v13_1_3_beh_ver_ll_afifo` implements a parameterized asynchronous FIFO for data buffering between different clock domains, featuring separate read and write clocks and pointer management to handle data reads and writes efficiently. It includes flags for full and empty conditions, \n//the C_HAS_RD_DATA_COUNT and C_HAS_WR_DATA_COUNT parameter have been set,but they does not perform any logical functions.//support for data count features, and ensures data integrity during resets."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_129": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule mux(opA, opB, sum, dsp_sel, out);\n    input [3:0] opA, opB;\n    input [4:0] sum;\n    input [1:0] dsp_sel;\n    output [3:0] out;\n    reg cout;\n    always @ (sum)\n    begin\n        if (sum[4] == 1)\n            cout <= 4'b0001; \n        else\n            cout <= 4'b0000; \n    end\n    reg [3:0] out;\n    always @(dsp_sel, sum, cout, opB, opA)\n    begin\n        if (dsp_sel == 2'b00)\n            out <= sum[3:0]; \n        else if (dsp_sel == 2'b01)\n            out <= cout; \n        else if (dsp_sel == 2'b10)\n            out <= opB; \n        else if (dsp_sel == 2'b11)\n            out <= opA; \n    end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `mux` implements a 4-to-1 multiplexer where the output selection is based on the 2-bit control signal `dsp_sel`. Depending on the value of `dsp_sel`, the output is either the lower 4 bits of `sum`, the internal register `cout`, input `opB`, or input `opA`. The internal register `cout` is set based on the most significant bit of `sum`."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Computers & Technology is the category of this book"
+        ]
+    }
+}
+{
+    "rtl_130": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule beh_vlog_ff_ce_clr_v8_2 (Q, C, CE, CLR, D);\n  parameter INIT = 0;\n  localparam FLOP_DELAY = 100;\n  output Q; \n  input  C; \n  input  CE; \n  input  CLR; \n  input  D; \n  reg Q;\n  initial Q = 1'b0;\n  always @(posedge C )\n    if (CLR)\n      Q <= 1'b0;\n    else if (CE)\n      Q <= #FLOP_DELAY D;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `beh_vlog_ff_ce_clr_v8_2` implements a D-type flip-flop with clock enable and asynchronous clear functionality, incorporating a simulation delay for data capture on the rising edge of the clock."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "The module beh_vlog_ff_ce_clr_v8_2 (Q, C, CE, CLR, D); parameter INIT = 0; localparam FLOP_DELAY = 100; output Q; input C; input CE; input CLR; input D; reg Q; initial Q = 1'b0; always @(posedge C) if (CLR) Q = 1'b0; else if (CE) Q = #FLOP_DELAY D; endmodule"
+        ]
+    }
+}
+{
+    "rtl_131": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule increment_axaddr (\n  input  wire next,          \n  output reg  next_pending   \n);\nreg          sel_first;      \nreg [11:0]   axaddr_incr;    \nreg [8:0]    axlen_cnt;      \nreg          next_pending_r; \nwire [3:0]   axsize_shift;   \nwire [11:0]  axsize_mask;    \nlocalparam L_AXI_ADDR_LOW_BIT = (C_AXI_ADDR_WIDTH >= 12) ? 12 : 11;\ngenerate\n  if (C_AXI_ADDR_WIDTH > 12) begin : ADDR_GT_4K\n    assign cmd_byte_addr = (sel_first) ? axaddr : {axaddr[C_AXI_ADDR_WIDTH-1:L_AXI_ADDR_LOW_BIT], axaddr_incr[11:0]};\n  end else begin : ADDR_4K\n    assign cmd_byte_addr = (sel_first) ? axaddr : axaddr_incr[11:0];\n  end\nendgenerate\nassign axsize_shift = (1 << axsize[1:0]); \nassign axsize_mask  = ~(axsize_shift - 1'b1); \nalways @(posedge clk) begin\n  if (sel_first) begin\n    if (~next) begin\n      axaddr_incr <= axaddr[11:0] & axsize_mask;\n    end else begin\n      axaddr_incr <= (axaddr[11:0] & axsize_mask) + axsize_shift;\n    end\n  end else if (next) begin\n    axaddr_incr <= axaddr_incr + axsize_shift;\n  end\nend\nalways @(posedge clk) begin\n  if (axhandshake) begin\n    axlen_cnt <= axlen;\n    next_pending_r <= (axlen >= 1);\n  end else if (next) begin\n    if (axlen_cnt > 1) begin\n      axlen_cnt <= axlen_cnt - 1;\n      next_pending_r <= ((axlen_cnt - 1) >= 1);\n    end else begin\n      axlen_cnt <= 9'd0;\n      next_pending_r <= 1'b0;\n    end\n  end\nend\nalways @(*) begin\n  if (axhandshake) begin\n    next_pending = (axlen >= 1);\n  end else if (next) begin\n    if (axlen_cnt > 1) begin\n      next_pending = ((axlen_cnt - 1) >= 1);\n    end else begin\n      next_pending = 1'b0;\n    end\n  end else begin\n    next_pending = next_pending_r;\n  end\nend\nalways @(posedge clk) begin\n  if (reset | axhandshake) begin\n    sel_first <= 1'b1;\n  end else if (next) begin\n    sel_first <= 1'b0;\n  end\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `increment_axaddr` manages memory transactions with features like address calculation based on conditions, incrementing transaction addresses, updating transaction length counters, and determining the need for additional transactions using flags like `next` and `next_pending`. It allows for efficient control and handling of memory accesses within the system."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_132": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule blk_mem_axi_regs_fwd_v8_2\n  #(parameter C_DATA_WIDTH = 8 \n   )(\n    input   ACLK,               \n    input   ARESET,             \n    input   S_VALID,            \n    output  S_READY,            \n    input   [C_DATA_WIDTH-1:0] S_PAYLOAD_DATA, \n    output  M_VALID,            \n    input   M_READY,            \n    output  reg [C_DATA_WIDTH-1:0] M_PAYLOAD_DATA \n    );\n    reg  [C_DATA_WIDTH-1:0] STORAGE_DATA;\n    wire S_READY_I;            \n    reg  M_VALID_I;            \n    reg  [1:0] ARESET_D;       \n    assign S_READY = S_READY_I;\n    assign M_VALID = M_VALID_I;\n    always @(posedge ACLK) begin\n        ARESET_D <= {ARESET_D[0], ARESET};\n    end\n    always @(posedge ACLK or posedge ARESET) begin\n        if (ARESET == 1'b1) begin\n            STORAGE_DATA <= 0; \n        end else begin\n            if(S_VALID == 1'b1 && S_READY_I == 1'b1 ) begin\n                STORAGE_DATA <= S_PAYLOAD_DATA; \n            end\n        end\n    end\n    always @(posedge ACLK) begin\n        M_PAYLOAD_DATA <= STORAGE_DATA;\n    end\n    always @(posedge ACLK or posedge ARESET_D) begin\n        if (ARESET_D != 2'b00) begin\n            M_VALID_I <= 1'b0; \n        end else begin\n            if (S_VALID == 1'b1) begin\n                M_VALID_I <= 1'b1;\n            end else if (M_READY == 1'b1 ) begin\n                M_VALID_I <= 1'b0;\n            end\n        end\n    end\n    assign S_READY_I = (M_READY || (!M_VALID_I)) && !(|(ARESET_D));\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `blk_mem_axi_regs_fwd_v8_2` implements an AXI register forwarder that stores incoming slave data and forwards it to the master side upon readiness. It involves data transfer synchronization between the slave and master sides, with support for asynchronous reset functionality."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_133": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule BLK_MEM_GEN_v8_2_softecc_output_reg_stage\n  #(parameter C_DATA_WIDTH          = 32,  \n    parameter C_ADDRB_WIDTH         = 10,  \n    parameter C_HAS_SOFTECC_OUTPUT_REGS_B= 0, \n    parameter C_USE_SOFTECC         = 0,  \n    parameter FLOP_DELAY            = 100 \n  )\n  (\n   input                         CLK, \n   input      [C_DATA_WIDTH-1:0] DIN, \n   output reg [C_DATA_WIDTH-1:0] DOUT, \n   input                         SBITERR_IN, \n   input                         DBITERR_IN, \n   output reg                    SBITERR, \n   output reg                    DBITERR, \n   input      [C_ADDRB_WIDTH-1:0] RDADDRECC_IN, \n   output reg [C_ADDRB_WIDTH-1:0] RDADDRECC \n);\nreg [C_DATA_WIDTH-1:0]           dout_i       = 0; \nreg                              sbiterr_i    = 0; \nreg                              dbiterr_i    = 0; \nreg [C_ADDRB_WIDTH-1:0]          rdaddrecc_i  = 0; \ngenerate if (C_HAS_SOFTECC_OUTPUT_REGS_B==0) begin : no_output_stage\n  always @* begin\n    DOUT = DIN;\n    RDADDRECC = RDADDRECC_IN;\n    SBITERR = SBITERR_IN;\n    DBITERR = DBITERR_IN;\n  end\nend\nendgenerate\ngenerate if (C_HAS_SOFTECC_OUTPUT_REGS_B==1) begin : has_output_stage\n  always @(posedge CLK) begin\n    dout_i <= #FLOP_DELAY DIN;\n    rdaddrecc_i <= #FLOP_DELAY RDADDRECC_IN;\n    sbiterr_i <= #FLOP_DELAY SBITERR_IN;\n    dbiterr_i <= #FLOP_DELAY DBITERR_IN;\n  end\n  always @* begin\n    DOUT = dout_i;\n    RDADDRECC = rdaddrecc_i;\n    SBITERR = sbiterr_i;\n    DBITERR = dbiterr_i;\n  end \nend \nendgenerate\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `BLK_MEM_GEN_v8_2_softecc_output_reg_stage` implements an optional output register stage for a memory block, registering input data and error signals based on the value of `C_HAS_SOFTECC_OUTPUT_REGS_B`."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_134": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule system_buffer_register_1_0(\n    clk,      \n    val_in,   \n    val_out   \n);\n  input clk;             \n  input [31:0] val_in;   \n  output [31:0] val_out; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "//The module `system_buffer_register_1_0` only defines interface signals for a 32-bit input 'val_in' captured on the //rising edge of 'clk' and output on 'val_out'. It does not perform any logical functions.\nThe module `system_buffer_register_1_0` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Computers & Internet: Books, Magazines & Newspapers"
+        ]
+    }
+}
+{
+    "rtl_135": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule usb_system_jtag_uart_sim_scfifo_w (\n  clk,          \n  fifo_wdata,   \n  fifo_wr,      \n  fifo_FF,      \n  r_dat,        \n  wfifo_empty,  \n  wfifo_used    \n);\noutput           fifo_FF;\noutput  [  7: 0] r_dat;\noutput           wfifo_empty;\noutput  [  5: 0] wfifo_used;\ninput            clk;\ninput   [  7: 0] fifo_wdata;\ninput            fifo_wr;\nwire             fifo_FF;\nwire    [  7: 0] r_dat;\nwire             wfifo_empty;\nwire    [  5: 0] wfifo_used;\nalways @(posedge clk)\n  begin\n    if (fifo_wr)\n        $write(\"%c\", fifo_wdata); \n  end\nassign wfifo_used = {6{1'b0}}; \nassign r_dat = {8{1'b0}};      \nassign fifo_FF = 1'b0;         \nassign wfifo_empty = 1'b1;     \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `usb_system_jtag_uart_sim_scfifo_w` implements a FIFO write interface for a USB system with JTAG UART, generating simulation outputs based on the input data and control signals."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "The module usb_system_jtag_uart_sim_scfifo_w ( clk, fifo_wdata, fifo_wr, fifo_FF, r_dat, wfifo_empty, wfifo_used ); output fifo_FF; output [ 7: 0] r_dat; output wfifo_empty; output [ 5: 0] wfifo_used; input clk; input [ 7: 0] fifo_wdata; input fifo_wr; wire fifo_FF; wire [ 7: 0] r_dat; wire wfifo_empty; wire [ 5: 0] wfifo_used; always @(posedge clk) begin if (fifo_wr) $write(\"%c\", fifo_wdata); end assign wfifo_used = 61'b0; assign r_dat = 81'b0; assign fifo_FF = 1'b0; assign wfifo_empty = 1'b1; endmodule"
+        ]
+    }
+}
+{
+    "rtl_136": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule orangeTSMC180nm__wire_R_26m_675_C_0_025f(a);\n  input a;\n  supply0 gnd;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `orangeTSMC180nm__wire_R_26m_675_C_0_025f` only implements the interface signal `a` and a supply0 connection, gnd. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "orangeTSMC180nm__wire_R_26m_675_C_0_025f(a); input a; supply0 gnd; endmodule"
+        ]
+    }
+}
+{
+    "rtl_137": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule usb_system_jtag_uart_sim_scfifo_r (\n  clk,          \n  fifo_rd,      \n  rst_n,        \n  fifo_EF,      \n  fifo_rdata,   \n  rfifo_full,   \n  rfifo_used    \n);\noutput           fifo_EF;\noutput  [  7: 0] fifo_rdata;\noutput           rfifo_full;\noutput  [  5: 0] rfifo_used;\ninput            clk;\ninput            fifo_rd;\ninput            rst_n;\nreg     [ 31: 0] bytes_left;\nwire             fifo_EF;\nreg              fifo_rd_d;       \nwire    [  7: 0] fifo_rdata;\nwire             new_rom;         \nwire    [ 31: 0] num_bytes;       \nwire    [  6: 0] rfifo_entries;   \nwire             rfifo_full;\nwire    [  5: 0] rfifo_used;\nalways @(posedge clk or negedge rst_n)\nbegin\n  if (rst_n == 0)\n  begin\n    bytes_left <= 32'h0;\n    fifo_rd_d <= 1'b0;\n  end\n  else\n  begin\n    fifo_rd_d <= fifo_rd;\n    if (fifo_rd_d)\n      bytes_left <= bytes_left - 1'b1;\n    if (new_rom)\n      bytes_left <= num_bytes;\n  end\nend\nassign fifo_EF = bytes_left == 32'b0;          \nassign rfifo_full = bytes_left > 7'h40;        \nassign rfifo_entries = (rfifo_full) ? 7'h40 : bytes_left; \nassign rfifo_used = rfifo_entries[5 : 0];      \nassign new_rom = 1'b0;                         \nassign num_bytes = 32'b0;                      \nassign fifo_rdata = 8'b0;                      \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `usb_system_jtag_uart_sim_scfifo_r` implements a FIFO unit within a USB system with JTAG UART functionality, synchronized with the clock and reset signals, managing read operations and status outputs based on the FIFO occupancy level."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_138": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_ls__udp_pwrgood_pp$PG (\n    input  UDP_IN,  \n    output UDP_OUT, \n    input  VPWR,   \n    input  VGND    \n);\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "//The module `sky130_fd_sc_ls__udp_pwrgood_pp$PG` implements a power-good monitoring functionality based on the comparison of input signals against specified power thresholds.\nThe module `sky130_fd_sc_ls__udp_pwrgood_pp$PG` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Electronics & Photovoltaics"
+        ]
+    }
+}
+{
+    "rtl_139": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule unnamed_module ( \n  input  wire next,          \n  output reg  next_pending   \n);\nreg         sel_first;         //用于选择首地址或者包装地址的信号              \nwire [11:0] axaddr_i;          //AXI地址端口             \nwire [3:0]  axlen_i;           //AXI长度端口             \nreg  [11:0] wrap_boundary_axaddr;           \nreg  [3:0]  axaddr_offset;                  \nreg  [3:0]  wrap_second_len;                \nreg  [11:0] wrap_boundary_axaddr_r;         \nreg  [3:0]  axaddr_offset_r;                \nreg  [3:0]  wrap_second_len_r;              \nreg  [4:0]  axlen_cnt;                      \nreg  [4:0]  wrap_cnt_r;                     \nwire [4:0]  wrap_cnt;                       \nreg  [11:0] axaddr_wrap;                    \nreg         next_pending_r;                 \nlocalparam L_AXI_ADDR_LOW_BIT = (C_AXI_ADDR_WIDTH >= 12) ? 12 : 11; \ngenerate\n  if (C_AXI_ADDR_WIDTH > 12) begin : ADDR_GT_4K\n    assign cmd_byte_addr = (sel_first) ? axaddr : {axaddr[C_AXI_ADDR_WIDTH-1:L_AXI_ADDR_LOW_BIT], axaddr_wrap[11:0]};\n  end else begin : ADDR_4K\n    assign cmd_byte_addr = (sel_first) ? axaddr : axaddr_wrap[11:0];\n  end\nendgenerate\nassign axaddr_i = axaddr[11:0];\nassign axlen_i = axlen[3:0];\nalways @(*) begin\n  if (axhandshake) begin\n    wrap_boundary_axaddr = axaddr_i & ~(axlen_i << axsize[1:0]);\n    axaddr_offset = axaddr_i[axsize[1:0] +: 4] & axlen_i;\n  end else begin\n    wrap_boundary_axaddr = wrap_boundary_axaddr_r;\n    axaddr_offset = axaddr_offset_r;\n  end\nend\nalways @(*) begin\n  if (axhandshake) begin\n    wrap_second_len = (axaddr_offset > 0) ? axaddr_offset - 1 : 0;\n  end else begin\n    wrap_second_len = wrap_second_len_r;\n  end\nend\nalways @(posedge clk) begin\n  wrap_boundary_axaddr_r <= wrap_boundary_axaddr;\n  axaddr_offset_r <= axaddr_offset;\n  wrap_second_len_r <= wrap_second_len;\nend\nassign wrap_cnt = {1'b0, wrap_second_len + {3'b000, (|axaddr_offset)}};\nalways @(posedge clk)\n  wrap_cnt_r <= wrap_cnt;\nalways @(posedge clk) begin\n  if (axhandshake) begin\n    axaddr_wrap <= axaddr[11:0];\n  end if (next) begin\n    if (axlen_cnt == wrap_cnt_r) begin\n      axaddr_wrap <= wrap_boundary_axaddr_r;\n    end else begin\n      axaddr_wrap <= axaddr_wrap + (1 << axsize[1:0]);\n    end\n  end\nend\nalways @(posedge clk) begin\n  if (axhandshake) begin\n    axlen_cnt <= axlen_i;\n    next_pending_r <= axlen_i >= 1;\n  end else if (next) begin\n    if (axlen_cnt > 1) begin\n      axlen_cnt <= axlen_cnt - 1;\n      next_pending_r <= (axlen_cnt - 1) >= 1;\n    end else begin\n      axlen_cnt <= 5'd0;\n      next_pending_r <= 1'b0;\n    end\n  end\nend\nalways @(*) begin\n  if (axhandshake) begin\n    next_pending = axlen_i >= 1;\n  end else if (next) begin\n    if (axlen_cnt > 1) begin\n      next_pending = (axlen_cnt - 1) >= 1;\n    end else begin\n      next_pending = 1'b0;\n    end\n  end else begin\n    next_pending = next_pending_r;\n  end\nend\nalways @(posedge clk) begin\n  if (reset | axhandshake) begin\n    sel_first <= 1'b1;\n  end else if (next) begin\n    sel_first <= 1'b0;\n  end\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `unnamed_module` implements an AXI transaction manager for handling transactions that may wrap around a boundary. It calculates command byte addresses, manages wrap boundary and offset calculations triggered by the \n//`axhandshake` signal, maintains transaction progress counters, and utilizes a selector for identifying the first transaction, with the `next_pending` output signaling whether additional transactions are pending. It operates synchronously with a clock signal and supports a reset functionality.\nbut, in this module, cmd_byte-addr, axaddr, CYAXIADDR_WIDTH, reset, axhandshake, and axsize are used without being defined"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_140": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule watchdog(\n    input nLDS, RW,             \n    input A23I, A22I,           \n    input [21:17] M68K_ADDR_U,  \n    input WDCLK,                \n    output nHALT,               \n    output nRESET,              \n    input nRST                  \n);\n    reg [3:0] WDCNT;\n    initial\n        WDCNT <= 4'b0000;\n    assign nRESET = nRST & ~WDCNT[3];\n    assign nHALT = nRESET;\n    assign WDRESET = &{nRST, ~|{nLDS, RW, A23I, A22I}, M68K_ADDR_U[21:20], ~|{M68K_ADDR_U[19:17]}};\n    always @(posedge WDCLK or posedge WDRESET or posedge ~nRST)\n    begin\n        if (WDRESET)\n        begin\n            WDCNT <= 4'b0000;\n        end\n        else if (!nRST)\n        begin\n            WDCNT <= 4'b1110;            \n        end\n        else\n        begin\n            WDCNT <= WDCNT + 1'b1;\n        end\n    end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `watchdog` implements a watchdog timer that resets the system upon detecting unresponsiveness, utilizing a 4-bit counter incremented by WDCLK, resetting on specific conditions indicated by WDRESET, and offering active low outputs nRESET and nHALT to manage system responsiveness."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "a white background with the words watchdog on it"
+        ]
+    }
+}
+{
+    "rtl_141": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule orangeTSMC180nm__wire_R_26m_1500_C_0_025f(a);\n  input a;\n  supply0 gnd;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `orangeTSMC180nm__wire_R_26m_1500_C_0_025f` only implements a single input port 'a' and does not have any logical functionality or output ports. //It is a placeholder module likely used for documentation purposes in larger systems."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "orangeTSMC180nm__wire_R_26m_1500_C_0_025f(a); input a; supply0 gnd; endmodule"
+        ]
+    }
+}
+{
+    "rtl_142": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule soc_design_JTAG_sim_scfifo_w (\n  clk,          \n  fifo_wdata,   \n  fifo_wr,      \n  fifo_FF,      \n  r_dat,        \n  wfifo_empty,  \n  wfifo_used    \n);\noutput           fifo_FF;\noutput  [  7: 0] r_dat;\noutput           wfifo_empty;\noutput  [  5: 0] wfifo_used;\ninput            clk;\ninput   [  7: 0] fifo_wdata;\ninput            fifo_wr;\nwire             fifo_FF;\nwire    [  7: 0] r_dat;\nwire             wfifo_empty;\nwire    [  5: 0] wfifo_used;\nalways @(posedge clk)\n  begin\n    if (fifo_wr)\n        $write(\"%c\", fifo_wdata); \n  end\nassign wfifo_used = {6{1'b0}};\nassign r_dat = {8{1'b0}};\nassign fifo_FF = 1'b0;\nassign wfifo_empty = 1'b1;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `soc_design_JTAG_sim_scfifo_w` implements a simulated FIFO write operation for testing purposes, where data is written to the simulation output upon each positive clock edge if a write operation is enabled. The outputs `fifo_FF` and `wfifo_empty` are fixed at 0 and 1, respectively, indicating the FIFO is never full and always empty, while `r_dat` and `wfifo_used` are fixed at 0 and 6'b0, showing that no data is read or stored in the FIFO, respectively."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Soc Design & Engineering: Books, Magazines & Newspapers"
+        ]
+    }
+}
+{
+    "rtl_143": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule mux2to1(datain0, datain1, dataout, select);\n    input [31:0] datain0, datain1;\n    input select;\n    output [31:0] dataout;\n    initial\n        forever #50 clock = ~clock;\n    initial\n    begin\n        four = 4; \n        yesItAlwaysTure = 1; \n        yesItAlwyasFalse = 0; \n        clock = 0; \n        clear = 1; \n        #10 clear = 0;\n    end\n    initial\n        #10000 $stop;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "//The module `mux2to1` implements a 2-to-1 multiplexer with two 32-bit input ports, datain0 and datain1, a 1-bit select input, and a 32-bit output dataout, where the select input controls the output selection between datain0 and datain1.\nThe module \"mux2to1\" only implements some interface signals and signal initialization. It does not perform any logical functions. The clock, four, yesItAlwaysTure, yesItAlwyasFalse, and clear signals in this module were not defined earlier."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "This is a Verilog module for Computers & Technology"
+        ]
+    }
+}
+{
+    "rtl_144": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hs__udp_dlatch$PR_pp$sN (\n    Q,        \n    D,        \n    GATE,     \n    RESET,    \n    SLEEP_B,  \n    NOTIFIER  \n);\n    output Q;       \n    input  D;       \n    input  GATE;    \n    input  RESET;   \n    input  SLEEP_B; \n    input  NOTIFIER;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_hs__udp_dlatch$PR_pp$sN` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "The module sky130_fd_sc_hs__udp_dlatch$PR_pp$sN (Q, D, GATE, RESET, SLEEP_B, NOTIFIER) outputs Q; inputs D; input GATE; input RESET; input SLEEP_B; input NOTIFIER; endmodule"
+        ]
+    }
+}
+{
+    "rtl_145": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule spi_slave_0_base(\n    clk, sck, mosi, miso, ssel, rst_n, recived_status\n);\n    input clk;                 \n    input rst_n;               \n    input sck;                 \n    input mosi;                \n    input ssel;                \n    output miso;               \n    output recived_status;     \n    reg recived_status;        \n    reg[2:0] sckr;             \n    reg[2:0] sselr;            \n    reg[1:0] mosir;            \n    reg[2:0] bitcnt;           \n    reg[7:0] bytecnt;          \n    reg byte_received;         \n    reg [7:0] byte_data_received; \n    reg[7:0] received_memory;  \n    reg [7:0] byte_data_sent;  \n    reg [7:0] cnt;             \n    wire ssel_active;          \n    wire sck_risingedge;       \n    wire sck_fallingedge;      \n    wire ssel_startmessage;    \n    wire ssel_endmessage;      \n    wire mosi_data;            \n\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        sckr <= 3'h0;          \n    else\n        sckr <= {sckr[1:0], sck}; \nend\nassign sck_risingedge = (sckr[2:1] == 2'b01) ? 1'b1 : 1'b0;\nassign sck_fallingedge = (sckr[2:1] == 2'b10) ? 1'b1 : 1'b0;\n\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        sselr <= 3'h0;         \n    else\n        sselr <= {sselr[1:0], ssel}; \nend\nassign ssel_active = (~sselr[1]) ? 1'b1 : 1'b0;  \nassign ssel_startmessage = (sselr[2:1] == 2'b10) ? 1'b1 : 1'b0;  \nassign ssel_endmessage = (sselr[2:1] == 2'b01) ? 1'b1 : 1'b0;  \n\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        mosir <= 2'h0;         \n    else\n        mosir <= {mosir[0], mosi}; \nend\nassign mosi_data = mosir[1];\n\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n) begin\n        bitcnt <= 3'b000;              \n        byte_data_received <= 8'h0;    \n    end else begin\n        if (~ssel_active)\n            bitcnt <= 3'b000;          \n        else begin\n            if (sck_risingedge) begin\n                bitcnt <= bitcnt + 3'b001; \n                byte_data_received <= {byte_data_received[6:0], mosi_data};\n            end\n        end\n    end\nend\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        byte_received <= 1'b0; \n    else\n        byte_received <= ssel_active && sck_risingedge && (bitcnt == 3'b111);\nend\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n) begin\n        bytecnt <= 8'h0;               \n        received_memory <= 8'h0;       \n    end else begin\n        if (byte_received) begin\n            bytecnt <= bytecnt + 1'b1; \n            received_memory <= (byte_data_received == bytecnt) ? (received_memory + 1'b1) : received_memory;\n        end\n    end\nend\n\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        cnt <= 8'h0; \n    else begin\n        if (byte_received)\n            cnt <= cnt + 8'h1; \n    end\nend\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        byte_data_sent <= 8'h0; \n    else begin\n        if (ssel_active && sck_fallingedge) begin\n            if (bitcnt == 3'b000)\n                byte_data_sent <= cnt; \n            else\n                byte_data_sent <= {byte_data_sent[6:0], 1'b0};\n        end\n    end\nend\nassign miso = byte_data_sent[7];\nalways @(posedge clk or negedge rst_n) begin\n    if (!rst_n)\n        recived_status <= 1'b0; \n    else\n        recived_status <= (received_memory == 8'd64) ? 1'b1 : 1'b0;\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `spi_slave_0_base` implements an SPI slave device that communicates with an SPI master, sampling incoming data on the mosi line with each rising edge of sck when ssel is active and sending data back on the miso line, shifting out data on each falling edge of sck when ssel is active. It tracks received bits and bytes, sets a flag on byte reception, and indicates status when a specific number of valid bytes have been received."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_146": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule Decodificador(\n   input [6:0] Cuenta, \n   output reg [7:0] catodo1, \n   output reg [7:0] catodo2, \n   output reg [7:0] catodo3, \n   output reg [7:0] catodo4  \n);\nalways @(*)\nbegin\n    case (Cuenta)\n        6'd0: begin\n            catodo1 <= 8'b00000011; \n            catodo2 <= 8'b00000011; \n            catodo3 <= 8'b00000011; \n            catodo4 <= 8'b00000011; \n        end\n        6'd1: begin\n            catodo1 <= 8'b10011111; \n            catodo2 <= 8'b00000011;\n            catodo3 <= 8'b00000011;\n            catodo4 <= 8'b00000011;\n        end\n        6'd2: begin\n            catodo1 <= 8'b00100101; \n            catodo2 <= 8'b00000011;\n            catodo3 <= 8'b00000011;\n            catodo4 <= 8'b00000011;\n        end\n        6'd10: begin\n            catodo1 <= 8'b00000011; \n            catodo2 <= 8'b10011111; \n            catodo3 <= 8'b00000011;\n            catodo4 <= 8'b00000011;\n        end\n        default: begin\n            catodo1 <= 8'b10011111; \n            catodo2 <= 8'b10011111; \n            catodo3 <= 8'b10011111; \n            catodo4 <= 8'b10011111; \n        end\n    endcase\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `Decodificador` implements a decoder that drives four 8-bit cathode outputs based on the 7-bit input 'Cuenta', displaying corresponding patterns for a 7-segment display with specific digit mappings as described in the specification."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Decodificador( input [6:0] Cuenta, output reg [7:0] catodo1, output reg [7:0] catodo2, output reg [7:0] catodo3, output reg [7:0] catodo4 ); always @(*) begin case (Cuenta) 6'd0: begin catodo1 = 8'b00000011; catodo2 = 8'b00000011; catodo3 = 8'b00000011; catodo4 = 8'b00000011; end 6'd1: begin catodo1 = 8'b10011111; catodo2 = 8'b00000011; catodo3 = 8'b00000011; catodo4 = 8'b00000011; end 6'd2: begin catodo1 = 8'b00100101; catodo2 = 8'b00000011; catodo3 = 8'b00000011; catodo4 = 8'b00000011; end 6'd10: begin catodo1 = 8'b00000011; catodo2 = 8'b10011111; catodo3 = 8'b00000011; catodo4 = 8'b00000011; end default: begin catodo1 = 8'b10011111; catodo2 = 8'b10011111; catodo3 = 8'b10011111; catodo4 = 8'b10011111; end"
+        ]
+    }
+}
+{
+    "rtl_147": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_ms__a2111oi (\n    output Y,   \n    input  A1,  \n    input  A2,  \n    input  B1,  \n    input  C1,  \n    input  D1,  \n    input  VPWR, \n    input  VGND, \n    input  VPB,  \n    input  VNB   \n);\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "//The module `sky130_fd_sc_ms__a2111oi` performs a logical function involving AND and OR operations with inverted and non-inverted inputs implemented using CMOS technology; however, the exact relationship between the inputs (A1, A2, B1, C1, D1) and the output (Y) is not explicitly defined in the provided document.\nThe module `sky130_fd_sc_ms__a2111oi` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Computers & Internet: Science & Engineering"
+        ]
+    }
+}
+{
+    "rtl_148": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule DataMemory(\n    output reg [31:0] ReadData,    \n    output reg [31:0] DATO1,       \n    output reg [31:0] DATO2,       \n    output reg [31:0] RESULTADO,   \n    input [31:0] Address,          \n    input [31:0] WriteData,        \n    input [31:0] MouseData,        \n    input MouseEnable,             \n    input WriteEnable,             \n    input CLK                      \n);\n    reg [31:0] block [0:9];\n    always @ (*) begin\n        DATO1 = block[4];\n        DATO2 = block[5];\n        RESULTADO = block[7];\n        if (CLK) begin\n            case (Address)\n                32'h00000000: ReadData = block[0];\n                32'h00000004: ReadData = block[1];\n                32'h00000024: ReadData = block[9];\n                default: ReadData = 32'b0; \n            endcase\n        end\n        else begin\n            if (MouseEnable) begin\n                block[1] = MouseData;\n            end\n            if (WriteEnable)\n                case (Address)\n                    32'h00000000: block[0] = WriteData;\n                    32'h00000024: block[9] = WriteData;\n                endcase\n        end\n    end\n    integer i = 0;\n    initial begin\n        for (i=0; i<10; i=i+1)\n            block[i] = 32'b0;\n        block[1] = 2;\n        block[4] = 2;\n    end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `DataMemory` implements a memory array with read and write functionality controlled by CLK. It initializes 10 32-bit registers, sets registers 2 and 5 to 2, and outputs specific register values based on Address. When CLK is low, it writes data to the memory array based on MouseEnable and WriteEnable, with MouseData having priority over WriteData. DATO1, DATO2, and RESULTADO display specific register values irrespective of CLK."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Output reg [31:0] ReadData, output reg [31:0] DATO1, output reg [31:0] DATO2, output reg [31:0] RESULTADO, input [31:0] Address, input [31:0] WriteData, input [31:0] MouseData, input MouseEnable, input WriteEnable, input CLK ); reg [31:0] block [0:9]; always @ (CLK) begin DATO1 = block[4]; DATO2 = block[5]; RESULTADO = block[7]; if (CLK) begin case (Address) 32'h00000000: ReadData = block[0]; 32'h00000004: ReadData = block[1]; 32'h00000024: ReadData = block[9]; default: ReadData = 32'b0; endcase end else begin if (MouseEnable) begin block[1] = MouseData; end if (WriteEnable) case (Address) 32'h00000000: block[0] = WriteData; 32'h00000024: block[9] = WriteData; endcase end end integer i = 0; initial begin for (i = 0; i10; i=i+1) block[i] = 32'b0; block[1] = 2; block[4] = 2; end end"
+        ]
+    }
+}

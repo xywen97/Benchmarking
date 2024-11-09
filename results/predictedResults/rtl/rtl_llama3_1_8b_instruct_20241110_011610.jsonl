@@ -1,0 +1,281 @@
+{
+    "rtl_0": {
+        "statement": "Analyze the following Verilog questions about data types, operators, and syntax.",
+        "question": [
+            "What is the correct declaration for a 4-bit vector with a binary value of 1010?",
+            "Which keyword is used to create a continuous assignment in Verilog?",
+            "If a = 4'b1100 and b = 4'b0011, what is the result of {a, b}?",
+            "Which operator is used to perform bitwise XOR in Verilog?",
+            "What does reg [15:0] data [0:31] declare in terms of width and depth?",
+            "In an if-else statement, what symbol represents a conditional assignment?",
+            "For the assignment reg [7:0] num; num = 8'b11110000;, what type of assignment is used?",
+            "What does the following declaration represent: input [7:0] data_in;?",
+            "What is the primary difference between reg and wire declarations in Verilog?",
+            "Which Verilog operator can compare two 4-bit values for both logic and unknown states?"
+        ],
+        "question_type": [
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "4'b1010",
+            "assign",
+            "8'b11000011",
+            "^",
+            "16-bit width, 32-depth memory",
+            "?:",
+            "Blocking assignment",
+            "8-bit input port",
+            "reg stores values, wire represents connections",
+            "==="
+        ],
+        "explanation": [
+            "A binary vector is declared with size followed by the value in Verilog.",
+            "assign is the keyword for continuous assignments outside procedural blocks.",
+            "Concatenation joins a=4'b1100 and b=4'b0011 into 8'b11000011.",
+            "The symbol ^ represents bitwise XOR in Verilog.",
+            "This declaration specifies a memory with 16-bit elements and 32 addresses.",
+            "The ?: operator is a conditional assignment in Verilog.",
+            "In a blocking assignment, values are updated sequentially.",
+            "The keyword input specifies an input port in Verilog modules.",
+            "reg holds values, whereas wire connects components.",
+            "The === operator checks both logic and unknown states, unlike =="
+        ],
+        "difficulty": [
+            "easy",
+            "easy",
+            "medium",
+            "easy",
+            "medium",
+            "easy",
+            "medium",
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "recall",
+            "recall",
+            "computation",
+            "recall",
+            "inference",
+            "inference",
+            "recall",
+            "recall",
+            "inference",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "reg[3:0] x = 10;",
+            "assign",
+            "8'b11000011",
+            "^",
+            "{'width': 32, 'depth': 32}",
+            ":=",
+            "bit assignment",
+            "An 8-bit signed input vector named data_in.",
+            "Reg is used to declare a variable that can be modified within a module, whereas wire is used to declare a signal that can be connected to other modules or within the same module but its value cannot be changed once assigned.",
+            "=== or!=="
+        ],
+        "explanation_preds": [
+            "The correct declaration of a 4-bit vector in Verilog is using the'reg' data type. The '[3:0]' is the range of the vector, starting from the most significant bit (MSB) to the least significant bit (LSB). The binary value 1010 is equivalent to the decimal value 10, so it's assigned to the variable 'x'.",
+            "In Verilog, the 'assign' keyword is used to create a continuous assignment, which assigns a value to a net or reg variable as soon as the right-hand side of the assignment is evaluated. This is in contrast to procedural assignments, which are evaluated only at specific points in time. The 'assign' keyword is often used in combinational logic to model digital circuits.",
+            "In Verilog, the concatenation operator '{' is used to concatenate two or more signals. When concatenating two 4-bit signals 'a' and 'b', the resulting signal will be 8 bits long. The bits from 'a' will be the most significant bits, followed by the bits from 'b'.",
+            "The bitwise XOR operator in Verilog is '^'. This operator performs a bitwise exclusive OR operation, which compares each bit of the first operand to the corresponding bit of the second operand. If the bits are not the same, the corresponding result bit is set to 1.",
+            "This declaration declares a 2D array data with a width of 32 bits (since the range is 15:0) and a depth of 32 elements (since the range is 0:31). The reg type is used to declare a variable that can be modified.",
+            "In Verilog, the ':=' symbol represents a conditional assignment, often used in if-else statements to assign a value to a variable based on a condition. It is also known as the 'assign' operator. This operator is used to simplify the assignment of values within conditional statements.",
+            "The assignment is using a bit assignment because it's assigning a binary value to the variable num, which is declared as an 8-bit unsigned number. The '8'b prefix specifies that the value is a binary number and it should be assigned to the most significant bits of the variable. This type of assignment is used for direct assignment of binary values to variables.",
+            "The input keyword indicates that this is an input signal, [7:0] specifies the bit width and range of the vector, and data_in is the name given to this input signal.",
+            "Reg is a variable type, while wire is a signal type. This distinction affects how they can be used in Verilog code.",
+            "The '===' operator is used for equality comparison and the '!==' operator is used for inequality comparison. Both of these operators can compare two 4-bit values for both logic and unknown states. They are capable of handling unknown states because in Verilog, an unknown state is represented by 'x'."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_1": {
+        "statement": "Fill in the blanks with the correct Verilog concepts.",
+        "question": [
+            "A signal declared with ___ type does not store a value.",
+            "The keyword used to define a tri-state output in Verilog is ___.",
+            "The concatenation of 2'b01 and 2'b10 yields ___.",
+            "The ___ statement is used for continuous assignments in Verilog.",
+            "A delay of 5 time units in an assignment is written as ___ in Verilog."
+        ],
+        "question_type": [
+            "blank",
+            "blank",
+            "blank",
+            "blank",
+            "blank"
+        ],
+        "answer": [
+            "wire",
+            "tri",
+            "4'b0110",
+            "assign",
+            "#5"
+        ],
+        "explanation": [
+            "Wire does not store a value and represents physical connections.",
+            "tri is the keyword used to create a tri-state buffer output.",
+            "Concatenation joins the two expressions into 4'b0110.",
+            "assign is used for driving signals with continuous assignments.",
+            "The delay operator #5 indicates a 5-time-unit delay."
+        ],
+        "difficulty": [
+            "easy",
+            "easy",
+            "medium",
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "recall",
+            "recall",
+            "computation",
+            "recall",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "wire",
+            "triport",
+            "4'b0101",
+            "assign",
+            "$display"
+        ],
+        "explanation_preds": [
+            "In Verilog, a wire is a signal type that does not store a value. It is a temporary connection between modules and is used to pass values between them. Unlike reg, which is a storage type, wire does not have any internal memory.",
+            "A triport is a type of tri-state output in Verilog. It is used to control the output of a signal and can be either high impedance or low impedance. The triport keyword is used to define a tri-state output in Verilog.",
+            "In Verilog, concatenation is performed using the curly brackets {}. The two binary numbers 2'b01 and 2'b10 are concatenated by combining their bits in the same order as they appear.",
+            "The assign statement is used to create continuous assignments in Verilog. Continuous assignments are used to assign a value to a variable or net in a module. They are evaluated every time the input values change, hence the name 'continuous'.",
+            "In Verilog, a delay is represented by a dollar sign followed by the keyword 'display' and the time units. The $display statement is used to print the values of variables. However, the $display statement itself does not introduce a delay, but in the context of the question, the keyword is used for the delay representation, as $display is used for delay representation in some contexts, the $display is the closest representation to a delay of 5 time units in Verilog"
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_2": {
+        "statement": "Answer the following short-answer questions based on Verilog modeling concepts.",
+        "question": [
+            "Explain the difference between blocking and non-blocking assignments in Verilog.",
+            "What is a latch, and how can latches be avoided in Verilog design?",
+            "Provide an example of how a generate statement is used for repetitive structure instantiation.",
+            "Describe how Verilog supports hierarchical naming and provide an example.",
+            "What is the purpose of the fork-join statement in Verilog?"
+        ],
+        "question_type": [
+            "short",
+            "short",
+            "short",
+            "short",
+            "short"
+        ],
+        "answer": [
+            "Blocking assignments (=) execute sequentially, while non-blocking (<=) allow parallel execution.",
+            "A latch is a memory element that holds a value without a clock edge; avoid by covering all conditions.",
+            "The generate statement allows multiple instances in a loop. Example: for (i=0; i<4; i=i+1).",
+            "Hierarchical names access elements by full path, e.g., top_module.submodule.signal.",
+            "Fork-join allows concurrent execution of multiple processes within an always block."
+        ],
+        "explanation": [
+            "Blocking occurs in sequence; non-blocking simulates parallel assignments.",
+            "Latches are unintended and avoided by handling all branches in combinational logic.",
+            "Repetition of modules is achieved with generate for block.",
+            "Hierarchical names enable accessing specific module instances.",
+            "Fork-join is used for running parallel statements in the same always block."
+        ],
+        "difficulty": [
+            "medium",
+            "medium",
+            "medium",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "comprehension",
+            "comprehension",
+            "application",
+            "application",
+            "comprehension"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "Blocking assignments are evaluated immediately, while non-blocking assignments are evaluated at the end of the time step. In blocking assignments, the value is assigned before the execution of the next statement, whereas in non-blocking assignments, the assignment is delayed until the end of the time step.",
+            "A latch is a type of digital circuit that stores a value in a register based on a clock signal, but it doesn't have a clock enable signal. Latches can be avoided in Verilog design by using flip-flops, which require a clock enable signal and are more predictable in their behavior. This helps to prevent metastability and other issues associated with latches.",
+            "{'statement': 'A generate statement is used to instantiate a block of code multiple times in a Verilog design.', 'example': {'code': 'generate\\n  if (N > 0)\\n    for (genvar i = 0; i < N; i++)\\n      begin\\n        DFF i_DFF (.D(input[i]),.Q(output[i]));\\n      end\\nendgenerate', 'description': 'This example shows how to use a generate statement with an if-else statement and a for loop to instantiate a D-flip-flop (DFF) module N times.'}, 'explanation': 'The generate statement is used to instantiate a block of code that can be repeated multiple times. This is useful for creating repetitive structures in a digital design. The for loop is a common way to control the instantiation of a block of code.'}",
+            "Verilog supports hierarchical naming by allowing designers to create a hierarchical structure of modules, with each module having its own set of ports and internal signals. This hierarchical structure is achieved by using a period (.) to separate the module names, making it easier to identify and access signals at different levels of the hierarchy. For example, a signal 'clk' in a module 'top' can be accessed as 'top.clk' or 'top.module1.module2.clk' if it is nested inside modules'module1' and'module2'.",
+            "The purpose of the fork-join statement in Verilog is to execute multiple processes concurrently and then wait for all of them to complete before proceeding with the next statement."
+        ],
+        "explanation_preds": [
+            "This distinction is crucial in Verilog modeling, as it affects the order in which operations are executed. I considered the immediate and delayed evaluation aspects of blocking and non-blocking assignments to provide a clear answer.",
+            "To avoid latches, designers should use flip-flops instead of combinational logic with feedback loops. Flip-flops are designed to handle asynchronous inputs and provide a more predictable behavior.",
+            "No explanation found",
+            "This hierarchical naming concept helps in reducing signal naming conflicts and makes the design more manageable and scalable.",
+            "The fork-join statement allows designers to model concurrent processes in a Verilog module, enabling the simulation of multiple tasks or events happening simultaneously. This statement is particularly useful in modeling digital systems with multiple components or tasks that need to be executed in parallel. It helps designers to improve the efficiency and accuracy of their digital circuit simulations."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}

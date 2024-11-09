@@ -9359,3 +9359,114 @@
         ]
     }
 }
+{
+    "rtl_221": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule UDP_LATCH1(Q_, G1, G2, D1, D2);\n    output Q_; \n    input G1, G2, D1, D2; \n    reg Q_;\n    always @ (G1 or G2 or D1 or D2) begin\n        if ((G1 == 1) & (G2 == 0)) Q_ <= #1 D1;\n        else if ((G1 == 0) & (G2 == 1)) Q_ <= #1 D2;\n    end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `UDP_LATCH1` implements a latch that stores data from D1 or D2 based on the control signals G1 and G2, updating the output Q_ after a 1-time unit delay and remaining in the current state if both control signals are the same."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"The UDP_LATCH1 module is a level-sensitive dual-port RAM (LSR) that takes four inputs: G1, G2, D1, and D2. The module has two outputs: Q_ and D. The output Q_ is set to the value of D1 when G1 is high and G2 is low, and set to the value of D2 when G1 is low and G2 is high. The output D is set to the value of D1 when G1 is high and G2 is low, and set to the value of D2 when G1 is low and G2 is high.\"\"explanation\": \"The UDP_LATCH1 module is a level-sensitive dual-port RAM (LSR), which means that the output depends on the current state of the inputs. When G1 is high and G2 is low, the output Q_ is set to the value of D1. When G1 is low and G2 is high, the output Q_ is set to the value of D2. The output D is set to the value of D1 when G1 is high and G2 is low, and set to the value of D2 when G1 is low and G2 is high. The module is designed to latch the input values and hold them until the inputs change.\""
+        ]
+    }
+}
+{
+    "rtl_222": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule beh_vlog_ff_ce_clr_v8_0 (Q, C, CE, CLR, D);\n  parameter INIT = 0; \n  localparam FLOP_DELAY = 100; \n  output Q; \n  input  C, CE, CLR, D; \n  reg Q;\n  initial Q= 1'b0;\n  always @(posedge C ) \n    if (CLR) \n      Q <= 1'b0; \n    else if (CE) \n      Q <= #FLOP_DELAY D; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `beh_vlog_ff_ce_clr_v8_0` implements a flip-flop with clock enable and clear functionality, where the output Q is asynchronously reset to 0 on a positive clock edge if the clear input CLR is high; otherwise, Q captures the input D after a delay specified by FLOP_DELAY when the clock enable input CE is high, retaining its state if CE is inactive."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"The module beh_vlog_ff_ce_clr_v8_0 is a simple flip-flop circuit that takes four inputs: C, CE, CLR, and D. The output is a single bit, Q, which is set to 1 when CE is high and CLR is low, and reset to 0 when CE is low and CLR is high. The flip-flop has a delay of 100 clock cycles.\"\"explanation\": \"The module is a basic flip-flop circuit that implements a simple clocked storage element. The input CE controls the setting of the flip-flop, and the input CLR controls the resetting of the flip-flop. When CE is high and CLR is low, the flip-flop sets its output to 1. When CE is low and CLR is high, the flip-flop resets its output to 0. The flip-flop has a delay of 100 clock cycles, which means that the output will be held for 100 clock cycles before being reset.\"}"
+        ]
+    }
+}
+{
+    "rtl_223": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule Event_Pulse(\n    input in,               \n    input clk,              \n    output rising_edge,     \n    output falling_edge,    \n    output both_edges       \n    );\n    reg [1:0] reg_i = 2'b0; \n    assign rising_edge = (~reg_i[1]) &  reg_i[0];  \n    assign falling_edge =  reg_i[1]  &(~reg_i[0]); \n    assign both_edges = ((~reg_i[1]) &  reg_i[0]) | (reg_i[1] & (~reg_i[0]));   \n    always @(posedge clk)\n    begin\n        reg_i[0] <= in;\n        reg_i[1] <= reg_i[0];\n    end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `Event_Pulse` implements a detector for rising and falling edge transitions of the input signal, generating separate outputs for rising edges, falling edges, and both edges based on the sampled input signal at the rising clock edge."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"The Event_Pulse module is a flip-flop that generates an event pulse on its output based on the input signal. The module has five inputs: in, clk, rising_edge, falling_edge, and both_edges. The input in is the trigger signal that controls the generation of the event pulse. The clk input is the clock signal that determines the timing of the module. The output rising_edge, falling_edge, and both_edges are the signals generated by the module based on the input in and clk. The module uses a D flip-flop to generate the output signals. When the input in is high and the clock is high, the D flip-flop sets the output rising_edge to high and sets the output falling_edge to low. When the input in is low and the clock is high, the D flip-flop sets the output both_edges to high. The always block is used to update the input signals at each clock edge.\"\"explanation\": \"The Event_Pulse module is a simple circuit that can be used to generate event pulses based on a trigger signal. The module is designed to have a high input signal and a low input signal, which are used to control the generation of the event pulse. The clock signal is used to determine the timing of the module, and the output signals are generated based on the input signals and the clock signal. The module is implemented using a D flip-flop, which is a basic building block of digital circuits. The always block is used to update the input signals at each clock edge, ensuring that the output signals are always up-to-date.\""
+        ]
+    }
+}

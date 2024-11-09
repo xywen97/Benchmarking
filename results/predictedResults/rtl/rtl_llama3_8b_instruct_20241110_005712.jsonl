@@ -2259,3 +2259,1413 @@
         ]
     }
 }
+{
+    "rtl_32": {
+        "statement": "Race conditions in RTL",
+        "question": [
+            "In RTL, what is a race condition typically caused by?",
+            "What measures can be taken to prevent race conditions in RTL design?"
+        ],
+        "question_type": [
+            "single",
+            "open"
+        ],
+        "answer": [
+            "Incorrect use of blocking assignments",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "Multiple threads or processes accessing and modifying shared resources simultaneously",
+            "Implementing synchronization mechanisms such as clock domains crossing, FIFOs, and reset synchronization, using pipelining and register retiming, and ensuring that all registers have a unique clock domain."
+        ],
+        "explanation_preds": [
+            "A race condition occurs when two or more threads or processes attempt to access and modify shared resources at the same time, leading to unpredictable or incorrect results. This can happen when multiple threads or processes are executing concurrently and are accessing and modifying shared data, leading to a situation where the order of execution is not deterministic.",
+            "These measures help to prevent data corruption and ensure correct operation of the RTL design by controlling the flow of data and ensuring that all registers are updated in a predictable and consistent manner."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_33": {
+        "statement": "Understanding Verilog case statements and their usage",
+        "question": [
+            "What are Verilog parallel case and full case statements?",
+            "Explain how the full case statement works."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "In Verilog, a case statement can be either a full case statement or a parallel case statement. A full case statement (default case) is used when you want to specify a unique action for each value of the expression, and a default action for all other values. A parallel case statement (parallel default) is used when you want to specify a default action for all values of the expression, and then specify actions for specific values.",
+            "{'case': 'A full case statement in Verilog is used to select one of many possible values to be assigned to a variable based on the value of a variable or expression. It is a multiway branch that allows you to handle multiple cases in a single statement. The full case statement is used when you need to handle a large number of cases or when the cases are not sequential.', 'when': \"The full case statement starts with the keyword 'case' followed by the expression that needs to be evaluated. It is followed by a series of 'when' statements, each with a specific value and a statement to be executed if the expression matches that value. The 'default' keyword is optional and is used to specify a statement to be executed if none of the 'when' values match the expression.\", 'example': 'case (expression) begin when (value1) statement1; when (value2) statement2;... default statementN; end'}"
+        ],
+        "explanation_preds": [
+            "I provided a concise answer that directly answers the question, and a brief explanation to help clarify the difference between full and parallel case statements.",
+            "The full case statement is a powerful tool in Verilog that allows you to handle complex logic in a concise and readable way."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_34": {
+        "statement": "Differences in Verilog operators and expressions",
+        "question": [
+            "What is the difference between == and === in Verilog?",
+            "Which operator can compare X values: == or ===?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "==="
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "The '==' operator in Verilog is used for bit-wise comparison, whereas the '===' operator is used for logical comparison. The '==' operator checks for bit-wise equality, whereas the '===' operator checks for both bit-wise and logical equality.",
+            "==="
+        ],
+        "explanation_preds": [
+            "I provided this answer because it highlights the key difference between the two operators. The '==' operator is often used in digital circuit design, whereas the '===' operator is more commonly used in programming languages.",
+            "In Verilog, the '==' operator is used for bit-wise equality comparison, which does not account for X values. The '===' operator, on the other hand, is used for equality comparison with a special treatment of X values, allowing them to be considered equal."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_35": {
+        "statement": "Verilog data types: reg and wire",
+        "question": [
+            "What is the difference between reg and wire in Verilog?",
+            "What is the default value of a wire in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "Z"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "Reg is a variable that holds a value and can be assigned a new value, whereas wire is a signal that can only be driven by a driver and can't be assigned a value. Reg is used for variables that need to be stored and can be changed, whereas wire is used for signals that need to be propagated through a circuit. In other words, reg is a memory element, while wire is a wire.",
+            "x"
+        ],
+        "explanation_preds": [
+            "I based my answer on the fundamental difference between a variable that can store a value and a signal that can only be driven by a driver.",
+            "In Verilog, a wire is an unconnected signal that does not have a default value. When a wire is not explicitly driven by a source, its value is 'x', which represents an unknown or uninitialized value. This is because wires do not retain their previous values and are only updated when a source assigns a value to them."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_36": {
+        "statement": "Blocking vs non-blocking assignments in Verilog",
+        "question": [
+            "What are the differences between blocking and non-blocking assignments in Verilog?",
+            "When should you use non-blocking assignments?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "Blocking assignments in Verilog are evaluated sequentially and the assignment is completed before moving on to the next statement, whereas non-blocking assignments are evaluated concurrently and the assignment is not guaranteed to be completed before moving on to the next statement. Blocking assignments are used to model synchronous digital circuits, while non-blocking assignments are used to model asynchronous digital circuits or to improve simulation performance.",
+            "Use non-blocking assignments when you need to update the value of a variable without blocking the execution of other statements in the same process"
+        ],
+        "explanation_preds": [
+            "I provided this answer as it accurately describes the main difference between blocking and non-blocking assignments in Verilog, highlighting their use cases and implications on circuit behavior and simulation performance.",
+            "Non-blocking assignments allow for concurrent execution of statements, which is useful in situations where you need to update multiple variables independently. In contrast, blocking assignments can cause sequential execution and may lead to deadlocks or performance issues. By using non-blocking assignments, you can avoid these issues and improve the overall efficiency of your code."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_37": {
+        "statement": "Understanding Verilog Sensitivity list",
+        "question": [
+            "What is a Sensitivity list in Verilog?",
+            "Why is a sensitivity list important in sequential circuits?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "A sensitivity list in Verilog is a list of signals that a module's always block is sensitive to, meaning it will be executed whenever any of these signals change.",
+            "A sensitivity list is important in sequential circuits because it determines which signals the circuit should monitor for changes, allowing the circuit to respond to events and update its state accordingly."
+        ],
+        "explanation_preds": [
+            "The sensitivity list helps the simulator to determine which signals to monitor for changes, allowing the always block to be triggered only when necessary, improving simulation performance.",
+            "Without a sensitivity list, the circuit would not know when to update its state, resulting in incorrect behavior. The sensitivity list helps to ensure that the circuit responds correctly to changes in its inputs and outputs, allowing it to maintain a consistent and predictable behavior."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_38": {
+        "statement": "Usage of $monitor, $display, and $strobe commands",
+        "question": [
+            "What is the difference between $monitor, $display, and $strobe in Verilog?",
+            "Which command is used to display changes continuously?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "$monitor"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "{\"$monitor\": monitors and displays the values of variables at every time step, \"$display\": displays the values of variables at a specific time, and \"$strobe\": displays the values of variables at a specific time and then stops.\n\n\",\"$monitor\": is useful for debugging and monitoring the behavior of a module over time.\n\",\"$display\": is useful for displaying the final values of variables at the end of a simulation.\n\",\"$strobe\": is useful for displaying the values of variables at a specific time and then stopping the simulation.\n\"}",
+            "$display"
+        ],
+        "explanation_preds": [
+            "I used JSON format to provide the answer and explanation, providing a clear and concise comparison of the three commands in Verilog. The answer is a JSON object with the keys '$monitor', '$display', and '$strobe', each describing the functionality of the corresponding command. The explanation provides a brief overview of the purpose and usage of each command, highlighting their differences and use cases.",
+            "The $display command is used to display changes continuously, as it continuously updates the display with the current value of the variable or expression being monitored. This is in contrast to $monitor, which only updates the display when the value being monitored changes. $strobe is used to strobe or flash the display with a specific value, rather than continuously updating it."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_39": {
+        "statement": "Different methods for coding FSM in Verilog",
+        "question": [
+            "What are the different ways of writing FSM code in Verilog?",
+            "Explain the advantages of separating sequential and combinational logic in FSM coding."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "hard",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "[{'Method': 'State Variable Method', 'Description': 'This method involves declaring a variable to store the current state of the finite state machine.'}, {'Method': 'Case Statement Method', 'Description': 'This method uses a case statement to specify the next state based on the current state and input.'}, {'Method': 'Mealy Machine Method', 'Description': 'This method is used for Mealy machines where the output is a function of both the current state and the input.'}, {'Method': 'Moore Machine Method', 'Description': 'This method is used for Moore machines where the output is a function of the current state only.'}, {'Method': 'Clocked Method', 'Description': 'This method involves clocking the state variable to update the current state based on the input.'}]",
+            "Separating sequential and combinational logic in FSM coding helps in better debugging, readability, and maintainability of the code. This is because sequential logic (flip-flops) is responsible for storing state and combinational logic (logic gates) is responsible for determining the next state. By separating these two types of logic, the code becomes more modular and easier to understand."
+        ],
+        "explanation_preds": [
+            "These are the common methods used to implement finite state machines in Verilog, each with its own strengths and weaknesses.",
+            ""
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_40": {
+        "statement": "Transport and inertial delays in Verilog",
+        "question": [
+            "What is transport delay in Verilog?",
+            "How does inertial delay differ from transport delay?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "A transport delay in Verilog is a delay that is inserted by the synthesis tool or the simulator to account for the time it takes for a signal to physically propagate through the wires in the circuit.",
+            "Inertial delay is the time it takes for a signal to propagate through a wire, whereas transport delay is the time it takes for the signal to reach the receiving flip-flop or latch."
+        ],
+        "explanation_preds": [
+            "This delay is added to the netlist during the synthesis or simulation process to ensure that the circuit behaves as expected in real-world scenarios, where signal propagation is not instantaneous.",
+            "Inertial delay accounts for the physical properties of the wire, such as resistance and capacitance, which affect signal propagation. Transport delay, on the other hand, is a discrete time delay that represents the time it takes for the signal to reach the receiving clock domain."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_41": {
+        "statement": "Verilog loop constructs",
+        "question": [
+            "Explain the syntax and use of the repeat loop in Verilog.",
+            "How does the repeat loop in Verilog help reduce redundancy in code?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "{\"repeat\" loop syntax: `repeat(num) begin... end`, where `num` is the number of times the block is repeated. The loop will execute the block `num` times, then exit. This loop is used when the number of repetitions is known at compile time.\r\n\r\nExample: `repeat(5) begin #10 led = 1'b1; #10 led = 1'b0; end` will toggle the `led` signal 5 times.\r\n\r\n",
+            "The repeat loop in Verilog helps reduce redundancy in code by allowing the repetition of a statement or a block of statements for a specified number of times, eliminating the need to write multiple identical statements."
+        ],
+        "explanation_preds": [
+            "The repeat loop is a simple and efficient way to repeat a block of code a known number of times, making it suitable for situations where the number of iterations is known at compile time.",
+            "This reduces code duplication and makes the code more concise and easier to maintain, as the repeat loop can be easily modified to change the number of iterations."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_42": {
+        "statement": "Semaphores in Verilog",
+        "question": [
+            "What are semaphores in Verilog?",
+            "How are semaphores used for mutual exclusion in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "Semaphores in Verilog are a way to synchronize and coordinate the access to shared resources between multiple processes or threads in a digital circuit. They are typically implemented using a combination of a counter and a mutex (mutual exclusion) mechanism to ensure that only one process can access the shared resource at a time.",
+            "Semaphores in Verilog can be implemented using a combination of a counter and a flag signal. The counter is decremented when a process acquires the semaphore and incremented when a process releases the semaphore. The flag signal is set when the counter is greater than 0, indicating that the semaphore is available for acquisition."
+        ],
+        "explanation_preds": [
+            "Semaphores are a fundamental concept in concurrent programming and are often used in digital circuits to manage shared resources such as memory, I/O devices, or peripherals.",
+            "This implementation ensures mutual exclusion by allowing only one process to acquire the semaphore at a time, and preventing other processes from accessing the shared resource until the semaphore is released."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_43": {
+        "statement": "Difference between wire and reg in Verilog",
+        "question": [
+            "Explain the difference between wire and reg in Verilog.",
+            "Which one is used for combinational logic: wire or reg?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "wire"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipedge",
+        "answer_preds": [
+            "Wires are used for passing signals between different parts of a design, whereas registers are used for storing values. Wires are essentially just a connection between two points, whereas registers are a small amount of memory that can be read and written to. This means that wires can only be driven by a single driver, whereas registers can be read and written to by multiple modules.",
+            "wire is used for combinational logic"
+        ],
+        "explanation_preds": [
+            "I answered this question by breaking down the difference between wires and registers in terms of their functionality and usage in Verilog design.",
+            "A wire is a temporary storage location that holds the result of a combinational logic operation. It is used to connect the output of one module to the input of another. Reg, on the other hand, is used for sequential logic and holds its value for more than one clock cycle."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_44": {
+        "statement": "Blocking vs non-blocking assignments in Verilog",
+        "question": [
+            "What is the difference between blocking and non-blocking assignments?",
+            "In which scenario should non-blocking assignments be used?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipedge",
+        "answer_preds": [
+            "Blocking assignments are synchronous and occur at the same time as the current clock cycle, whereas non-blocking assignments are asynchronous and occur in the next clock cycle.",
+            "Non-blocking assignments should be used when the order of assignments is important and the assignments are dependent on each other, or when there are multiple drivers for a signal."
+        ],
+        "explanation_preds": [
+            "Blocking assignments are used when the assignment is dependent on the current value of a signal, whereas non-blocking assignments are used when the assignment can be done independently of the current value of a signal.",
+            "In these scenarios, non-blocking assignments allow for more control over the order in which assignments are executed, which can be crucial for ensuring correct behavior in the design."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_45": {
+        "statement": "Usage of sensitivity list in Verilog",
+        "question": [
+            "What is the purpose of a sensitivity list in Verilog?",
+            "What will happen if a signal is missing from the sensitivity list?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "Simulation may not produce expected results."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipedge",
+        "answer_preds": [
+            "A sensitivity list in Verilog is used to specify which signals a module's always block should monitor for changes, in order to trigger the block's execution.",
+            "The simulation will not detect any changes in the signal and will not trigger the block's execution if a signal is missing from the sensitivity list."
+        ],
+        "explanation_preds": [
+            "The sensitivity list is used to improve the efficiency of the simulation by only re-executing the always block when the specified signals change. This is especially important in complex digital circuits where the always block may need to be executed frequently.",
+            "A sensitivity list is used to specify the signals that a block is sensitive to, and if a signal is missing from the list, the block will not be triggered by changes to that signal. This is because the block is not aware of the signal's changes and will not update its internal state accordingly. As a result, the simulation will not detect any changes in the signal and will not trigger the block's execution."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_46": {
+        "statement": "Concept of timescale in Verilog",
+        "question": [
+            "What does `timescale 1ns/1ps` mean in Verilog?",
+            "How does the timescale affect simulation time?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipedge",
+        "answer_preds": [
+            "The `timescale 1ns/1ps` directive in Verilog specifies the unit of time in the simulation. The first value, `1ns`, is the unit of time, which is nanoseconds, and the second value, `1ps`, is the precision of the time unit, which is picoseconds. This means that the simulator will display time values in nanoseconds with a precision of picoseconds.",
+            "The timescale in Verilog determines the unit of time used to measure the simulation time. A larger timescale will result in a longer simulation time, as the simulator will have to iterate through more time units to cover the same duration. For example, if the timescale is set to 1ns, the simulator will simulate 1 billion clock cycles to reach 1 second, whereas if the timescale is set to 1s, the simulator will only need to iterate through 1 clock cycle to reach the same duration."
+        ],
+        "explanation_preds": [
+            "I gave a concise answer to directly address the question. I explained the concept of timescale in Verilog in a clear and simple manner, highlighting the unit of time and precision.",
+            "I considered the fundamental concept of timescale in Verilog and its impact on the simulation time. I also thought about how different timescales would affect the number of iterations required to simulate a given duration, leading me to conclude that a larger timescale would result in a longer simulation time."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_47": {
+        "statement": "Differences between Verilog and VHDL",
+        "question": [
+            "What are the main differences between Verilog and VHDL?",
+            "Which language is considered more concise: Verilog or VHDL?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "Verilog"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipedge",
+        "answer_preds": [
+            "[{'Key': 'Syntax', 'Value': 'Verilog uses a C-like syntax while VHDL uses an Ada-like syntax.'}, {'Key': 'History', 'Value': 'Verilog was introduced in 1984 by Gateway Design Automation, while VHDL was introduced in 1987 by the US Department of Defense.'}, {'Key': 'Use', 'Value': 'Verilog is commonly used for ASIC and FPGA design, while VHDL is commonly used for FPGA and ASIC design, and also for digital circuit simulation.'}, {'Key': 'Portability', 'Value': 'Verilog is more portable than VHDL due to its widespread use and support.'}, {'Key': 'Complexity', 'Value': 'VHDL is considered more complex than Verilog due to its support for more advanced features such as concurrency and parallelism.'}]",
+            "Verilog"
+        ],
+        "explanation_preds": [
+            "The main differences between Verilog and VHDL are their syntax, history, use, portability, and complexity. Verilog's C-like syntax and widespread use make it more portable, while VHDL's Ada-like syntax and advanced features make it more complex.",
+            "Verilog is considered more concise than VHDL due to its syntax and design principles. Verilog's syntax is more concise and flexible, allowing for more complex designs to be described in fewer lines of code. VHDL, on the other hand, is more verbose and requires more lines of code to achieve the same functionality."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_48": {
+        "statement": "Understanding transport and inertial delay",
+        "question": [
+            "What is transport delay in Verilog?",
+            "How does inertial delay differ from transport delay?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipedge",
+        "answer_preds": [
+            "Transport delay in Verilog is the delay introduced by the physical transmission of signals between two points in a digital circuit. It represents the time taken by the signal to travel from the output of one component to the input of another component. This delay is typically represented by the 'z' character in Verilog code.",
+            "Inertial delay refers to the time it takes for a device to adjust its internal state in response to a change in its environment, whereas transport delay is the time it takes for data to travel from the sender to the receiver."
+        ],
+        "explanation_preds": [
+            "I defined the transport delay as the delay introduced by physical transmission of signals because it accurately represents the time taken by the signal to travel between components. I also mentioned that it is typically represented by 'z' in Verilog code because it is a common notation used to represent this type of delay in Verilog code.",
+            "Inertial delay is a type of delay that occurs when a device needs to adjust its internal state, such as a sensor or an actuator, in response to a change in its environment. This type of delay is often dependent on the physical properties of the device and the environment it is operating in. In contrast, transport delay is a type of delay that occurs when data needs to be transmitted over a network or medium, and is typically dependent on the speed of the transmission medium."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_49": {
+        "statement": "Continuous assignment in Verilog",
+        "question": [
+            "What is a continuous assignment in Verilog?",
+            "Which keyword is used for continuous assignment?"
+        ],
+        "question_type": [
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "",
+            "assign"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipedge",
+        "answer_preds": [
+            "A continuous assignment in Verilog is a statement that assigns a value to a variable or net continuously, meaning it is always evaluated and updated at the same time as the clock signal.",
+            "assign"
+        ],
+        "explanation_preds": [
+            "This type of assignment is used to assign a constant value to a net or a variable that does not change over time, such as a reset signal or a fixed output value.",
+            "The 'assign' keyword is used to declare a continuous assignment in Verilog, which is a statement that assigns a value to a net or a variable at every clock cycle."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_50": {
+        "statement": "Usage of generate blocks in Verilog",
+        "question": [
+            "What is the purpose of generate blocks in Verilog?",
+            "How can generate blocks be used to replicate hardware structures?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "hard",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipedge",
+        "answer_preds": [
+            "Generate blocks in Verilog are used to create a block of code that can be repeated a specified number of times, allowing for more efficient and flexible coding of complex digital circuits.",
+            "Generate blocks in Verilog can be used to replicate hardware structures by allowing the designer to create a block of code that can be instantiated multiple times in the design. This is achieved by using the `generate` keyword followed by the type of block to be generated, such as a `for` loop or a `while` loop. This allows for the efficient creation of arrays of identical hardware structures, such as memory arrays or processing elements."
+        ],
+        "explanation_preds": [
+            "Generate blocks are useful for implementing arrays of identical modules, such as memories or registers, or for creating multiple instances of a module with different parameters. They allow the designer to write the code once and then replicate it as needed, reducing code duplication and increasing maintainability.",
+            "This approach enables the reuse of code and reduces the complexity of the design, making it more maintainable and scalable."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_51": {
+        "statement": "Finite State Machine (FSM) coding in Verilog",
+        "question": [
+            "What are the key steps involved in coding an FSM in Verilog?",
+            "Why is it important to separate state and output logic in FSM coding?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "hard",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipedge",
+        "answer_preds": [
+            "['Step 1: Define the Finite State Machine (FSM) behavior', 'Step 2: Identify the states and transitions', 'Step 3: Determine the input and output signals', 'Step 4: Write the Verilog code for the FSM', 'Step 5: Test and verify the FSM']",
+            "Separating state and output logic in FSM coding is important because it improves readability, maintainability, and scalability of the code. By separating these two components, the code becomes modular and easier to understand, allowing for easier modifications and debugging."
+        ],
+        "explanation_preds": [
+            "These are the key steps involved in coding an FSM in Verilog. The first step is to define the behavior of the FSM, which includes identifying the states and transitions. Then, the input and output signals are determined and the Verilog code is written accordingly.",
+            "This is because state and output logic are two distinct aspects of an FSM, and separating them allows for a clear distinction between the internal state of the machine and its output behavior, making the code more organized and efficient."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_52": {
+        "statement": "Verilog operators: == vs ===",
+        "question": [
+            "What is the difference between the `==` and `===` operators in Verilog?",
+            "Which operator should be used to compare unknown values (X) in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "==="
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipedge",
+        "answer_preds": [
+            "In Verilog, both `==` and `===` are used for comparison, but `==` checks for equality of values, whereas `===` checks for equality of values and data types. For example, `a == b` checks if `a` and `b` have the same value, whereas `a === b` checks if `a` and `b` have the same value and are of the same data type. This distinction is important to avoid incorrect comparisons, especially when dealing with different data types.",
+            "=="
+        ],
+        "explanation_preds": [
+            "No explanation found",
+            "The '==' operator is used to compare unknown values (X) in Verilog because it performs a logical equality check, which ignores unknown values and only checks for equality between known values. The '===' operator, on the other hand, performs a bit-wise equality check, which would incorrectly identify unknown values as unequal."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_53": {
+        "statement": "Basic concepts of Verilog HDL",
+        "question": [
+            "What is Verilog?",
+            "What is the primary difference between Verilog and VHDL?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "Verilog is a hardware description language used for modeling electronic systems.",
+            "Verilog has a concise syntax compared to VHDL."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "Verilog is a hardware description language (HDL) used to model digital electronic systems at a high level of abstraction, allowing designers to describe the behavior and structure of digital circuits, systems, and microprocessors.",
+            "Verilog and VHDL are both hardware description languages (HDLs) used to design and verify digital electronic systems, but the primary difference is that Verilog is a more procedural language, whereas VHDL is a more declarative language."
+        ],
+        "explanation_preds": [
+            "I defined Verilog as a HDL because it is used to describe the behavior and structure of digital circuits, systems, and microprocessors, which is the primary purpose of an HDL. The answer is concise and to the point, providing a clear definition of Verilog. The explanation is brief, highlighting the key point that Verilog is an HDL used for digital circuit design.",
+            "Verilog is based on a procedural paradigm, where the behavior of a system is described through a sequence of events, whereas VHDL is based on a declarative paradigm, where the behavior of a system is described through a set of equations and constraints."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_54": {
+        "statement": "Verilog operators: == vs ===",
+        "question": [
+            "What is the difference between the `==` and `===` operators in Verilog?",
+            "Which operator should be used to compare unknown (X) values?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "`==` compares logical values and ignores unknowns, while `===` compares including unknowns.",
+            "==="
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "The `==` operator in Verilog performs a bitwise equality check, while the `===` operator is not a standard Verilog operator and does not exist.",
+            "=="
+        ],
+        "explanation_preds": [
+            "I determined this answer by checking the official Verilog specification and noting that the `==` operator is commonly used for comparison in Verilog code. The `===` operator is not mentioned in the specification, suggesting that it is not a standard part of the language. As a result, I concluded that `===` is not a valid operator in Verilog.",
+            "The '==' operator is used to compare unknown (X) values in Verilog because it treats X as a valid value, whereas the '===' operator treats X as an unknown value and always returns 1'bX. This means that using '==' will allow the comparison to proceed, whereas using '===' will result in an unknown result."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_55": {
+        "statement": "Tasks and functions in Verilog",
+        "question": [
+            "What are the five main differences between Verilog tasks and functions?",
+            "Can Verilog functions be used in expressions?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "Functions execute in one simulation time unit, cannot include timing controls, must return a value, while tasks can include timing controls, have multiple outputs, etc.",
+            "Yes"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "[{'key': '1. Syntax', 'value': \"Tasks use the keyword 'task', while functions use the keyword 'function'.\"}, {'key': '2. Return Type', 'value': 'Tasks do not have a return type, while functions have a return type.'}, {'key': '3. Calling', 'value': \"Tasks are called using the 'begin-end' keyword, while functions are called like a procedure.\"}, {'key': '4. Scope', 'value': 'Tasks have a separate scope, while functions have the same scope as the module they are defined in.'}, {'key': '5. Timing', 'value': 'Tasks can be executed concurrently, while functions are executed sequentially.'}]",
+            "No"
+        ],
+        "explanation_preds": [
+            "I considered the main differences between tasks and functions in Verilog, focusing on their syntax, return type, calling, scope, and timing.",
+            "In Verilog, functions can only be called as statements, not as part of expressions. This is because functions are intended to perform a series of operations and return a value, whereas expressions are typically used to compute a value on the fly. As a result, functions cannot be used directly in expressions, and must be called as separate statements."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_56": {
+        "statement": "Continuous assignments in Verilog",
+        "question": [
+            "What is continuous assignment in Verilog?",
+            "Which keyword is used for continuous assignment in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "Continuous assignment is used to assign values to a wire.",
+            "assign"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "A continuous assignment in Verilog is a statement that assigns a value to a variable or a net in a module. This assignment is performed continuously, meaning it is executed at every clock cycle or delta cycle, and its value is updated immediately. This is in contrast to a procedural assignment, which is executed only when a specific event occurs.",
+            "assign"
+        ],
+        "explanation_preds": [
+            "",
+            "The 'assign' keyword is used in Verilog to make a continuous assignment, which means that the value of the left-hand side is always updated to the value of the right-hand side. This type of assignment is also known as a procedural assignment. It is used to assign a value to a variable or a signal at a specific point in the code."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_57": {
+        "statement": "Blocking vs non-blocking assignments",
+        "question": [
+            "What is the primary difference between blocking and non-blocking assignments in Verilog?",
+            "When should non-blocking assignments be used in sequential circuits?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments execute sequentially, while non-blocking assignments execute concurrently.",
+            "Non-blocking assignments should be used in sequential circuits to avoid race conditions."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "The primary difference between blocking and non-blocking assignments in Verilog is that blocking assignments suspend the execution of the current process until the assignment is completed, whereas non-blocking assignments do not suspend the execution of the current process and instead return immediately.",
+            "Non-blocking assignments should be used in sequential circuits when there is a need to maintain the original value of the signal until the assignment is complete, typically in cases where the signal is used as a clock or a reset signal."
+        ],
+        "explanation_preds": [
+            "Blocking assignments are used to model synchronous behavior, where the assignment is guaranteed to complete before the next statement is executed, whereas non-blocking assignments are used to model asynchronous behavior, where the assignment may not complete immediately and the process can continue executing.",
+            "This is because blocking assignments can cause the signal to be updated immediately, which may not be desirable in sequential circuits where the signal needs to maintain its original value until the assignment is complete. Non-blocking assignments, on the other hand, ensure that the signal retains its original value until the assignment is complete, which is essential in maintaining the correct functionality of the sequential circuit."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_58": {
+        "statement": "Understanding HDL simulators",
+        "question": [
+            "What are HDL simulators, and why are they important in Verilog design?",
+            "Name two popular HDL simulators."
+        ],
+        "question_type": [
+            "open",
+            "multi"
+        ],
+        "answer": [
+            "HDL simulators are tools used to test and verify the functionality of HDL code before synthesis.",
+            [
+                "ModelSim",
+                "Vivado"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "HDL (Hardware Description Language) simulators are software tools that simulate the behavior of digital circuits described in HDLs like Verilog or VHDL. They allow designers to test and verify their designs before implementing them on actual hardware, reducing the time and cost associated with physical prototyping. HDL simulators are essential in Verilog design as they enable designers to identify and fix bugs, optimize performance, and ensure correct functionality.",
+            "['ModelSim', 'VCS']"
+        ],
+        "explanation_preds": [
+            "I provided a concise definition of HDL simulators and highlighted their importance in Verilog design, focusing on their role in reducing design time and cost.",
+            "ModelSim and VCS are two of the most widely used HDL (Hardware Description Language) simulators. ModelSim is a popular simulator developed by Mentor Graphics, while VCS is a simulator developed by Synopsys. Both simulators are widely used in the industry for verifying and debugging digital circuits and systems designed using HDLs such as Verilog and VHDL."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_59": {
+        "statement": "Repeat loops in Verilog",
+        "question": [
+            "Explain how the repeat loop works in Verilog.",
+            "What is the difference between repeat and while loops in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Repeat loop runs a specific number of times, while the while loop runs until a condition is met.",
+            "Repeat loops are executed a fixed number of times, while while loops depend on a condition."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "The repeat loop in Verilog is used to repeat a statement or a block of statements a specified number of times. It is denoted by the keyword'repeat' followed by the number of times the statement needs to be repeated. The syntax is'repeat (expression) statement;' where 'expression' is a Verilog expression that evaluates to a positive integer.",
+            "The main difference between repeat and while loops in Verilog is that repeat loop is used for fixed number of iterations, whereas while loop is used for a condition-based iteration.\n\nThe repeat loop is used when the number of iterations is known beforehand, whereas the while loop is used when the number of iterations is dependent on a condition."
+        ],
+        "explanation_preds": [
+            "I answered the question by providing a clear and concise description of the repeat loop in Verilog, including its syntax and functionality. I aimed to provide a helpful and accurate response that would assist the user in understanding how to use the repeat loop in their Verilog code.",
+            "I provided this answer by considering the fundamental difference between the two types of loops in Verilog, focusing on the number of iterations and the condition for termination."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_60": {
+        "statement": "Signal strength in Verilog",
+        "question": [
+            "What is signal strength in Verilog?",
+            "How does signal strength affect logic value resolution?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Signal strength determines the driving capability of a signal.",
+            "It affects which value is resolved when multiple drivers are present on a net."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "Signal strength in Verilog refers to the voltage level or current level of a signal at a specific point in the digital circuit.",
+            "None"
+        ],
+        "explanation_preds": [
+            "In Verilog, signal strength is an important concept as it determines the logical state of a signal, whether it is 0 or 1. The signal strength is typically represented by a voltage level, such as 0V for logic 0 and Vcc for logic 1, or a current level, such as 0mA for logic 0 and Imax for logic 1.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "{\"answer\": \"Signal strength in Verilog determines the logic value resolution by influencing the threshold voltage required to switch the output of a gate. A stronger signal can drive the output to the desired logic level, while a weaker signal may not be able to overcome the threshold voltage, resulting in an incorrect logic value.\",\"explanation\": \"In digital circuits, the strength of a signal refers to its ability to overcome the threshold voltage of a gate's output. A strong signal can easily drive the output to the desired logic level, while a weak signal may not be able to overcome the threshold voltage, resulting in an incorrect logic value.\""
+        ]
+    }
+}
+{
+    "rtl_61": {
+        "statement": "Clocking blocks in Verilog",
+        "question": [
+            "What are clocking blocks in Verilog, and why are they used?",
+            "Explain the advantages of using clocking blocks."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Clocking blocks are used for specifying clock signals and synchronization for sampling inputs and driving outputs.",
+            "They improve timing accuracy and make testbench coding easier."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "Clocking blocks in Verilog are a way to specify the timing relationship between signals in a digital circuit, allowing the synthesizer to infer the correct clock domain crossing and clock enabling. They are used to specify the clock signal and its relationship with the signals being clocked, ensuring that the circuit operates correctly and efficiently. Clocking blocks are particularly important in digital designs that involve multiple clock domains or asynchronous clock signals.",
+            "The advantages of using clocking blocks in Verilog are that they provide a clear and concise way to specify the clock domain crossing (CDC) of signals, enable the use of asynchronous reset, and facilitate the implementation of synchronous circuits. Clocking blocks also help to reduce the complexity of the design by minimizing the need for manual clock domain crossing and reset handling."
+        ],
+        "explanation_preds": [
+            "I provided this answer by understanding the concept of clocking blocks in Verilog and their significance in digital circuit design. I also considered the importance of clock domain crossing and clock enabling in modern digital designs, which led me to provide a detailed answer.",
+            "I answered this question by highlighting the benefits of using clocking blocks in Verilog, which include simplifying the design process and improving the accuracy of the design by automating clock domain crossing and reset handling."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}

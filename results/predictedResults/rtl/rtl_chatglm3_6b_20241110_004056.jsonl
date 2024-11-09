@@ -4933,3 +4933,203 @@
         ]
     }
 }
+{
+    "rtl_107": {
+        "statement": "Introduction to Verilog and its Uses",
+        "question": [
+            "What is Verilog and why is it used?",
+            "List the key advantages of using Verilog for hardware design."
+        ],
+        "question_type": [
+            "open",
+            "multi"
+        ],
+        "answer": [
+            "Verilog is a hardware description language used to model and simulate digital circuits. It is used for designing, verifying, and synthesizing electronic systems.",
+            [
+                "Abstraction",
+                "Simulation",
+                "Synthesis",
+                "Verification"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "None",
+            "Verilog is a hardware description language that is widely used for digital hardware design. Its key advantages include its high-level abstractions, which make it easier to design and verify digital circuits. Additionally, Verilog has a large community of users and vendors, which makes it easy to find resources and support for using it."
+        ],
+        "explanation_preds": [
+            "None",
+            "No explanation found"
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"Verilog is a hardware description language used for designing and verifying digital circuits. It is used to model and simulate the behavior of digital circuits before they are implemented in hardware. Verilog is used in the fields of digital design and verification to improve the design process and reduce the risk of errors.\", \"explanation\": \"Verilog allows designers to describe the behavior of digital circuits using a high-level programming language. This makes it easier to design and verify the functionality of the circuit before it is implemented in hardware. By using Verilog, designers can reduce the risk of errors and improve the overall quality of the design.\"}}",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_108": {
+        "statement": "Blocking vs Non-blocking Assignments in Verilog",
+        "question": [
+            "What is the difference between blocking and non-blocking assignments in Verilog?",
+            "When should non-blocking assignments be used?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments (`=`) execute sequentially, while non-blocking assignments (`<=`) execute concurrently.",
+            "Non-blocking assignments should be used for sequential logic to avoid race conditions."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "Blocking assignments in Verilog are assignments that take a finite number of clock cycles to complete, while non-blocking assignments are assignments that can take zero or more clock cycles to complete.",
+            "None"
+        ],
+        "explanation_preds": [
+            "In Verilog, blocking assignments are those that are dependent on the previous clock edge and can only be completed if the previous assignment has finished its execution. On the other hand, non-blocking assignments can be executed independently of the previous assignment and can be executed in any order.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "{{\"answer\": \"Non-blocking assignments should be used when you want to avoid blocking paths in a design. For example, when you have multiple paths that need to execute simultaneously and you don't want any of them to be blocked by a single assignment, you can use non-blocking assignments.\", \"explanation\": \"Non-blocking assignments allow multiple paths to execute simultaneously without being blocked by each other. This can help improve the performance and efficiency of the design.\"}}"
+        ]
+    }
+}
+{
+    "rtl_109": {
+        "statement": "Verilog Modules and Their Types",
+        "question": [
+            "What are the different types of Verilog modules?",
+            "Give an example of a behavioral module in Verilog."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Behavioral, Structural, and Dataflow modules are the types of Verilog modules.",
+            "module adder (input a, input b, output sum); assign sum = a + b; endmodule"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "There are three types of Verilog modules: functional modules, arithmetic modules, and communication modules.",
+            "module1"
+        ],
+        "explanation_preds": [
+            "Functional modules implement specific functions or operations, arithmetic modules perform mathematical operations, and communication modules handle communication between different parts of a design.",
+            "Example of a behavioral module in Verilog is a module that implements a behavioral description of a simple counter. The counter can be incremented or decremented by a user-defined number using a two-bit binary counter register. The module also includes a load and store operation to load or store a value into the counter register. The behavior of the module is described by a state machine that iterates through a series of states based on the counter register value. The module can be implemented using a combination of combinatorial and sequential logic."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_110": {
+        "statement": "Operators in Verilog",
+        "question": [
+            "List the different types of operators available in Verilog.",
+            "What is the purpose of the concatenation operator `{}` in Verilog?"
+        ],
+        "question_type": [
+            "multi",
+            "open"
+        ],
+        "answer": [
+            [
+                "Arithmetic Operators",
+                "Logical Operators",
+                "Relational Operators",
+                "Bitwise Operators",
+                "Shift Operators",
+                "Concatenation Operator"
+            ],
+            "The concatenation operator `{}` is used to combine multiple values into a single value."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "The different types of operators available in Verilog are:",
+            "The concatenation operator `{}` in Verilog is used to represent a string literal."
+        ],
+        "explanation_preds": [
+            "These include unary operators such as `size()`, `concatenate()`, and `negate()`, as well as binary operators such as `and()`, `or()`, `xor()`, and `not()`, and also multi-bit operators like `&`, `|`, `^`, `~`, `<<`, `>>`, `>>>`, `+`, `-`, `*`, `/`, `%`, `^`, `=`, `<=`, `>=`, and `<`. These operators are used to perform various operations on digital circuits and mathematical values in Verilog code.",
+            "In Verilog, string literals are enclosed in curly braces `{}` and can consist of multiple characters, including letters, digits, and special characters. The `{}` operator is used to concatenate or join two or more string literals together, allowing programmers to create complex expressions or statements."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}

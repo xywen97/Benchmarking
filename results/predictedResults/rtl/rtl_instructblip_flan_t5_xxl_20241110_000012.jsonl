@@ -7092,3 +7092,1372 @@
         ]
     }
 }
+{
+    "rtl_160": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(\n    clk,        \n    probe0,     \n    probe1,     \n    probe2,     \n    probe3,     \n    probe4,     \n    probe5,     \n    probe6,     \n    probe7      \n);\n  input clk;             \n  input [63:0] probe0;   \n  input [63:0] probe1;   \n  input [31:0] probe2;   \n  input [31:0] probe3;   \n  input [0:0] probe4;    \n  input [0:0] probe5;    \n  input [0:0] probe6;    \n  input [0:0] probe7;    \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "//The module `decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix` only serves as a black box placeholder without any specified internal logic or functionality; it acts as a stand-in for a module whose implementation is externally defined or provided.\nThe module `sky130_fd_sc_ls__udp_pwrgood_pp$PG` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix( clk, probe0, probe1, probe2, probe3, probe4, probe5, probe6, probe7 ); input clk; input [63:0] probe0; input [63:0] probe1; input [31:0] probe2; input [31:0] probe3; input [0:0] probe4; input [0:0] probe5; input [0:0] probe6; input [0:0] probe7; endmodule"
+        ]
+    }
+}
+{
+    "rtl_161": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule hardcopyiii_delay_chain (\n \t    datain,\n \t    delayctrlin,\n \t    finedelayctrlin,\n \t    devclrn,\n \t    devpor,\n \t    dataout\n );\n parameter sim_delayctrlin_rising_delay_0  = 0;\n parameter sim_delayctrlin_rising_delay_1  = 50;\n parameter sim_delayctrlin_rising_delay_2  = 100;\n parameter sim_delayctrlin_rising_delay_3  = 150;\n parameter sim_delayctrlin_rising_delay_4  = 200;\n parameter sim_delayctrlin_rising_delay_5  = 250;\n parameter sim_delayctrlin_rising_delay_6  = 300;\n parameter sim_delayctrlin_rising_delay_7  = 350;\n parameter sim_delayctrlin_rising_delay_8  = 400;\n parameter sim_delayctrlin_rising_delay_9  = 450;\n parameter sim_delayctrlin_rising_delay_10  = 500;\n parameter sim_delayctrlin_rising_delay_11  = 550;\n parameter sim_delayctrlin_rising_delay_12  = 600;\n parameter sim_delayctrlin_rising_delay_13  = 650;\n parameter sim_delayctrlin_rising_delay_14  = 700;\n parameter sim_delayctrlin_rising_delay_15  = 750;\n parameter sim_delayctrlin_falling_delay_0  = 0;\n parameter sim_delayctrlin_falling_delay_1  = 50;\n parameter sim_delayctrlin_falling_delay_2  = 100;\n parameter sim_delayctrlin_falling_delay_3  = 150;\n parameter sim_delayctrlin_falling_delay_4  = 200;\n parameter sim_delayctrlin_falling_delay_5  = 250;\n parameter sim_delayctrlin_falling_delay_6  = 300;\n parameter sim_delayctrlin_falling_delay_7  = 350;\n parameter sim_delayctrlin_falling_delay_8  = 400;\n parameter sim_delayctrlin_falling_delay_9  = 450;\n parameter sim_delayctrlin_falling_delay_10  = 500;\n parameter sim_delayctrlin_falling_delay_11  = 550;\n parameter sim_delayctrlin_falling_delay_12  = 600;\n parameter sim_delayctrlin_falling_delay_13  = 650;\n parameter sim_delayctrlin_falling_delay_14  = 700;\n parameter sim_delayctrlin_falling_delay_15  = 750;\n parameter sim_finedelayctrlin_falling_delay_0 =  0 ;\n parameter sim_finedelayctrlin_falling_delay_1 =  25 ;\n parameter sim_finedelayctrlin_rising_delay_0  =  0 ;\n parameter sim_finedelayctrlin_rising_delay_1  =  25 ;\n parameter use_finedelayctrlin                 = \"false\";\n parameter lpm_type = \"hardcopyiii_delay_chain\";\n parameter use_delayctrlin = \"true\";\n parameter delay_setting   = 0; \n input        datain;\n input  [3:0] delayctrlin;\n input        devclrn;\n input        devpor;\n input        finedelayctrlin;  \n output       dataout;\n tri1 devclrn;\n tri1 devpor;\n integer      dly_table_rising[0:15];\n integer      dly_table_falling[0:15];\n integer      finedly_table_rising[0:1];\n integer      finedly_table_falling[0:1];\n integer      dly_setting;\n integer      rising_dly, falling_dly;\n reg          tmp_dataout;\n wire        datain_in;\n wire [3:0]  delayctrlin_in;\n wire        finedelayctrlin_in;\n assign datain_in = datain;\n specify\n     (datain => dataout) = (0,0);\n endspecify\n assign delayctrlin_in[0] = (delayctrlin[0] === 1'b1) ? 1'b1 : 1'b0;\n assign delayctrlin_in[1] = (delayctrlin[1] === 1'b1) ? 1'b1 : 1'b0;\n assign delayctrlin_in[2] = (delayctrlin[2] === 1'b1) ? 1'b1 : 1'b0;\n assign delayctrlin_in[3] = (delayctrlin[3] === 1'b1) ? 1'b1 : 1'b0;\n assign finedelayctrlin_in = (finedelayctrlin === 1'b1) ? 1'b1 : 1'b0;\n initial\n begin\n     dly_table_rising[0] = sim_delayctrlin_rising_delay_0;\n     dly_table_rising[1] = sim_delayctrlin_rising_delay_1;\n     dly_table_rising[2] = sim_delayctrlin_rising_delay_2;\n     dly_table_rising[3] = sim_delayctrlin_rising_delay_3;\n     dly_table_rising[4] = sim_delayctrlin_rising_delay_4;\n     dly_table_rising[5] = sim_delayctrlin_rising_delay_5;\n     dly_table_rising[6] = sim_delayctrlin_rising_delay_6;\n     dly_table_rising[7] = sim_delayctrlin_rising_delay_7;\n     dly_table_rising[8] = sim_delayctrlin_rising_delay_8;\n     dly_table_rising[9] = sim_delayctrlin_rising_delay_9;\n     dly_table_rising[10] = sim_delayctrlin_rising_delay_10;\n     dly_table_rising[11] = sim_delayctrlin_rising_delay_11;\n     dly_table_rising[12] = sim_delayctrlin_rising_delay_12;\n     dly_table_rising[13] = sim_delayctrlin_rising_delay_13;\n     dly_table_rising[14] = sim_delayctrlin_rising_delay_14;\n     dly_table_rising[15] = sim_delayctrlin_rising_delay_15;\n     dly_table_falling[0] = sim_delayctrlin_falling_delay_0;\n     dly_table_falling[1] = sim_delayctrlin_falling_delay_1;\n     dly_table_falling[2] = sim_delayctrlin_falling_delay_2;\n     dly_table_falling[3] = sim_delayctrlin_falling_delay_3;\n     dly_table_falling[4] = sim_delayctrlin_falling_delay_4;\n     dly_table_falling[5] = sim_delayctrlin_falling_delay_5;\n     dly_table_falling[6] = sim_delayctrlin_falling_delay_6;\n     dly_table_falling[7] = sim_delayctrlin_falling_delay_7;\n     dly_table_falling[8] = sim_delayctrlin_falling_delay_8;\n     dly_table_falling[9] = sim_delayctrlin_falling_delay_9;\n     dly_table_falling[10] = sim_delayctrlin_falling_delay_10;\n     dly_table_falling[11] = sim_delayctrlin_falling_delay_11;\n     dly_table_falling[12] = sim_delayctrlin_falling_delay_12;\n     dly_table_falling[13] = sim_delayctrlin_falling_delay_13;\n     dly_table_falling[14] = sim_delayctrlin_falling_delay_14;\n     dly_table_falling[15] = sim_delayctrlin_falling_delay_15;\n     finedly_table_rising[0]  = sim_finedelayctrlin_rising_delay_0;\n     finedly_table_rising[1]  = sim_finedelayctrlin_rising_delay_1;\n     finedly_table_falling[0] = sim_finedelayctrlin_falling_delay_0;\n     finedly_table_falling[1] = sim_finedelayctrlin_falling_delay_1;\n     dly_setting = 0;\n     rising_dly  = 0;\n     falling_dly = 0;\n     tmp_dataout = 1'bx;\n end\n always @(delayctrlin_in or finedelayctrlin_in)\n begin\n     if (use_delayctrlin == \"false\")\n         dly_setting = delay_setting;\n     else\n         dly_setting = delayctrlin_in;\n \tif (use_finedelayctrlin == \"true\")\n    begin\n \t    rising_dly  = dly_table_rising[dly_setting] + finedly_table_rising[finedelayctrlin_in];\n \t    falling_dly = dly_table_falling[dly_setting] + finedly_table_falling[finedelayctrlin_in];\n    end\n \telse\n    begin\n \t    rising_dly  = dly_table_rising[dly_setting];\n \t    falling_dly = dly_table_falling[dly_setting];\n    end\n end\n always @(datain_in)\n begin\n     if (datain_in === 1'b0)\n         tmp_dataout <= #(falling_dly) datain_in;\n     else\n         tmp_dataout <= #(rising_dly) datain_in;\n end\n assign dataout = tmp_dataout;\n endmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `hardcopyiii_delay_chain` implements a configurable delay chain that adjusts the input signal 'datain' based on 'delayctrlin' for coarse delay and 'finedelayctrlin' for fine delay. It utilizes internal delay tables for rising and falling edge delays, providing a delayed output 'dataout' reflecting the input with precise delay amounts determined by the control inputs. The module includes reset functionality, filters out invalid input states, and adheres to specified timing constraints."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_162": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule hardcopyiii_tsdblock\n    (\n        offset, \n        clk, \n        ce, \n        clr, \n        testin, \n        tsdcalo, \n        tsdcaldone, \n        fdbkctrlfromcore, \n        compouttest, \n        tsdcompout, \n        offsetout \n    );\ninput [5:0] offset; \ninput [7:0] testin; \ninput clk; \ninput ce; \ninput clr; \ninput fdbkctrlfromcore; \ninput compouttest; \noutput [7:0] tsdcalo; \noutput tsdcaldone; \noutput tsdcompout; \noutput [5:0] offsetout; \nparameter poi_cal_temperature = 85; \nparameter clock_divider_enable = \"on\"; \nparameter clock_divider_value = 40; \nparameter sim_tsdcalo = 0; \nparameter user_offset_enable = \"off\"; \nparameter lpm_type = \"hardcopyiii_tsdblock\"; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "//The module `hardcopyiii_tsdblock` implements temperature sensor diode calibration functionality, accepting input signals for calibration and generating calibrated values based on defined parameters.\nThe module `hardcopyiii_tsdblock` only implements some interface signals and parameters. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "The module hardcopyiii_tsdblock has the following parameters: poi_cal_temperature = 85; clock_divider_enable = \"on\"; clock_divider_value = 40; sim_tsdcalo = 0; user_offset_enable = \"off\"; lpm_type = \"hardcopyiii_tsdblock\""
+        ]
+    }
+}
+{
+    "rtl_163": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule hardcopyiii_first_stage_add_sub(\n                                 dataa,\n                                 datab,\n                                 sign,\n                                 operation,\n                                 dataout\n                                );\nparameter    dataa_width = 36;\nparameter    datab_width = 36;\nparameter   fsa_mode = \"add\";\ninput [71  : 0 ] dataa;\ninput [71 : 0 ] datab;\ninput sign;\ninput [3:0] operation;\noutput [71: 0] dataout;\nreg[71 :0] dataout_tmp;\nreg[71:0] abs_b;\nreg[71:0] abs_a;\nreg sign_a;\nreg sign_b;\nspecify\n    (dataa *> dataout)              = (0, 0);\n    (datab *> dataout)              = (0, 0);\n    (sign *> dataout)               = (0, 0);\nendspecify\nassign dataout = dataout_tmp;\nalways @(dataa or datab or sign or operation)\n    begin\n        if((operation == 4'b0111) ||(operation == 4'b1000)|| (operation == 4'b1001))  \n            begin\n                dataout_tmp = {dataa[53:36],dataa[35:0],18'b0} + datab;\n            end\n    else\n        begin\n            sign_a  = (sign && dataa[dataa_width -1]);\n            abs_a = (sign_a) ? (~dataa + 1'b1) : dataa;\n            sign_b  = (sign && datab[datab_width-1]);\n            abs_b = (sign_b) ? (~datab + 1'b1) : datab;\n            if (fsa_mode == \"add\")\n                dataout_tmp = (sign_a ? -abs_a : abs_a) + (sign_b ?-abs_b : abs_b);\n            else\n                dataout_tmp = (sign_a ? -abs_a : abs_a) - (sign_b ?-abs_b : abs_b);\n        end\n    end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `hardcopyiii_first_stage_add_sub` implements a 72-bit arithmetic unit capable of addition and subtraction based on the 4-bit operation code, considering sign extension and arithmetic operations on input operands `dataa` and `datab`, with the result available at the `dataout` output port."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_164": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hd__a22oi (\n    input  A1, \n    input  A2, \n    input  B1, \n    input  B2, \n    output Y   \n);\n    supply1 VPWR; \n    supply0 VGND; \n    supply1 VPB ; \n    supply0 VNB ; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "//The module `sky130_fd_sc_hd__a22oi` implements a logic gate combination known as an AND-OR-Invert operation, producing the output Y based on the logic defined for inputs A1, A2, B1, and B2.\nThe module `sky130_fd_sc_hd__a22oi` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Electronics & Photovoltaics"
+        ]
+    }
+}
+{
+    "rtl_165": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule bw_clk_gclk_inv_r90_192x (\n    clkout, \n    clkin   \n);\n    output clkout; \n    input  clkin;  \n    assign clkout = ~( clkin );\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "//The module `bw_clk_gclk_inv_r90_192x` implements a clock signal inverter utilizing the bitwise NOT operator to generate the inverse of the input clock signal.\nThe module `bw_clk_gclk_inv_r90_192x` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "bw_clk_gclk_inv_r90_192x ( clkout, clkin ); output clkout; input clkin; assign clkout = ( clkin ); endmodule"
+        ]
+    }
+}
+{
+    "rtl_166": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule hardcopyiii_lcell_hsadder (\n                            dataa,\n                            datab,\n                            cin,\n                            sumout,\n                            cout\n                            );\n    parameter dataa_width = 2; \n    parameter datab_width = 2; \n    parameter cin_inverted = \"off\"; \n    parameter lpm_type = \"hardcopyiii_lcell_hsadder\"; \n    parameter sumout_width = (dataa_width >= datab_width) ? (dataa_width + 1) : (datab_width + 1);\n    input [dataa_width - 1 : 0] dataa; \n    input [datab_width - 1 : 0] datab; \n    input cin; \n    output [sumout_width - 1 : 0] sumout; \n    output cout; \n    wire cin_sel; \n    reg [sumout_width : 0] sumout_tmp; \n    specify\n        (dataa *> sumout) = (0, 0);\n        (datab *> sumout) = (0, 0);\n        (cin *> sumout) = (0, 0);\n        (dataa *> cout) = (0, 0);\n        (datab *> cout) = (0, 0);\n        (cin *> cout) = (0, 0);\n    endspecify\n    assign cin_sel = (cin_inverted == \"on\") ? !cin : cin;\n    always @(datab or dataa or cin_sel)\n    begin\n        sumout_tmp = dataa + datab + cin_sel;\n    end\n    assign sumout = sumout_tmp[sumout_width - 1 : 0];\n    assign cout = sumout_tmp[sumout_width - 1];\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `hardcopyiii_lcell_hsadder` implements a binary adder with optional carry-in inversion, producing the sum of 'dataa' and 'datab' inputs with an optional 'cin'. The 'sumout' output includes the carry-out, and 'cout' indicates the final carry-out."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Module hardcopyiii_lcell_hsadder ( dataa, datab, cin, sumout, cout ); parameter dataa_width = 2; parameter datab_width = 2; parameter cin_inverted = \"off\"; parameter lpm_type = \"hardcopyiii_lcell_hsadder\"; parameter sumout_width = (dataa_width >= datab_width)? (dataa_width + 1) : (datab_width + 1); input [dataa_width - 1 : 0] dataa; input [datab_width - 1 : 0] datab; input cin; output [sumout_width - 1 : 0] sumout; output cout; wire cin_sel; reg [sumout_width : 0] sumout_tmp; specify (dataa *> sumout) = (0, 0); (datab *> sumout) = (0, 0); (cin *> sumout) = (0, 0); (dataa *> cout) = (0, 0); (datab *> cout) = (0, 0); (cin *> cout) = (0, 0); endspecify assign cin_sel = (cin_inverted == \"on\")?!cin : cin; always @(datab or dataa or cin_sel) begin sumout_tmp = dataa + datab + cin_sel; end assign sumout = sumout_tmp[sumout_width - 1 : 0]; assign cout = sumout_tmp[sumout_width - 1]; endmodule"
+        ]
+    }
+}
+{
+    "rtl_167": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule hardcopyiii_pll_reg  ( q,\n                            clk,\n                            ena,\n                            d,\n                            clrn,\n                            prn);\n    input d; \n    input clk; \n    input clrn; \n    input prn; \n    input ena; \n    output q; \n    reg q; \n    reg clk_last_value; \n    tri1 prn, clrn, ena; \n    initial q = 0;\n    always @ (clk or negedge clrn or negedge prn )\n    begin\n        if (prn == 1'b0)\n            q <= 1;\n        else if (clrn == 1'b0)\n            q <= 0;\n        else if ((clk === 1'b1) && (clk_last_value === 1'b0) && (ena === 1'b1))\n            q <= d;\n        clk_last_value = clk;\n    end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `hardcopyiii_pll_reg` implements a register with asynchronous clear and preset functionality, capturing input data on the rising edge of the clock when enabled, and setting the output based on preset and clear signals, updating only with the input data under certain conditions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "This is a Verilog module for Computers & Technology, Education & Reference, Science & Math, and Writing & Grammar"
+        ]
+    }
+}
+{
+    "rtl_168": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule LAG_pl_free_pool (\n    flits_tail,             \n    flits_valid,            \n    pl_alloc_status,        \n    pl_allocated,           \n    pl_empty,               \n    clk,                    \n    rst_n                   \n);\nparameter num_pls = 4;  \nparameter fifo_free_pool = 0;  \nparameter only_allocate_pl_when_empty = 0;  \ninput [num_pls-1:0] flits_tail;\ninput [num_pls-1:0] flits_valid;\ninput [num_pls-1:0] pl_allocated;\noutput [num_pls-1:0] pl_alloc_status;\ninput [num_pls-1:0]  pl_empty;\ninput  clk, rst_n;\nlogic [num_pls-1:0] pl_alloc_status_reg;\npl_t fifo_out;\nfifov_flags_t fifo_flags;\nlogic push;\ninteger i;\ngenerate\n    always@(posedge clk) begin\n        if (!rst_n) begin\n            for (i=0; i<num_pls; i++) begin:forpls2\n                pl_alloc_status_reg[i] <= 1'b1;\n            end\n        end else begin\n            for (i=0; i<num_pls; i++) begin:forpls\n                if (pl_allocated[i])\n                    pl_alloc_status_reg[i] <= 1'b0;\n                if (flits_valid[i] && flits_tail[i]) begin\n                    assert (!pl_alloc_status_reg[i]);\n                    pl_alloc_status_reg[i] <= 1'b1;\n                end\n            end \n        end \n    end \n    if (only_allocate_pl_when_empty) begin\n        assign pl_alloc_status = pl_alloc_status_reg & pl_empty;\n    end else begin\n        assign pl_alloc_status = pl_alloc_status_reg;\n    end\nendgenerate\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `LAG_pl_free_pool` implements a pipeline lane allocation controller that updates the allocation status based on the presence of valid tail flits and previous allocations, following specific criteria, where pipeline lanes are marked as free or allocated accordingly. It initializes all pipeline lanes to a free state upon reset."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_169": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule but used in infer_blkram_7series instantiation\n  parameter ONECLOCK   = 0, \n  parameter REGRAM     = 0, \n  parameter MODE       = \"READ_FIRST\",\n`ifdef NO_BRAM_READ_ENABLE\n  parameter USE_READ_ENABLE = 0 \n`else\n  parameter USE_READ_ENABLE = 1 \n`endif\n) (\n`ifdef ENABLE_ECC_DEBUG\n  input                        ecc_rst, \n`endif \n  output reg [D_WIDTH - 1:0]   o, \n  input                        we, \n  input                        wclk, \n  input                        re, \n  input                        reg_ce, \n  input                        rclk, \n  input     [D_WIDTH - 1:0]    d, \n  input     [ADDR_WIDTH - 1:0] raddr, \n  input     [ADDR_WIDTH - 1:0] waddr \n);"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `bram_module` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "a white background with a black text that reads infer_blkram_7series instantiation parameter ONECLOCK = 0, parameter REGRAM = 0, parameter MODE = \"READ_FIRST\", ifdef NO_BRAM_READ_ENABLE parameter USE_READ_ENABLE = 0 else parameter USE_READ_ENABLE = 1 endif ) ( ifdef ENABLE_ECC_DEBUG input ecc_rst, endif output reg [D_WIDTH - 1:0] o, input we, input wclk, input re, input reg_ce, input rclk, input [D_WIDTH - 1:0] d, input [ADDR_WIDTH - 1:0] raddr, input [ADDR_WIDTH - 1:0] waddr );"
+        ]
+    }
+}
+{
+    "rtl_170": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hd__xnor3 (\n    input  A, \n    input  B, \n    input  C, \n    output X  \n);\n    supply1 VPWR; \n    supply0 VGND; \n    supply1 VPB ; \n    supply0 VNB ; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_hd__xnor3`only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Electronics & Photovoltaics"
+        ]
+    }
+}
+{
+    "rtl_171": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hd__lpflow_clkbufkapwr (\n    input  A,    \n    output X,    \n    input  KAPWR, \n    input  VPB,   \n    input  VPWR,  \n    input  VGND,  \n    input  VNB    \n);\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_hd__lpflow_clkbufkapwr` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Electronics & Photovoltaics"
+        ]
+    }
+}
+{
+    "rtl_172": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule Alu(\n    Alu_in1,       \n    Alu_in2,       \n    Alu_sel,       \n    Alu_zero_flg,  \n    Alu_out        \n);\n    parameter wrd_size = 8,  \n               sel_width= 3; \n    input [wrd_size-1:0] Alu_in1, Alu_in2; \n    input [sel_width-1:0] Alu_sel;         \n    output reg [wrd_size-1:0] Alu_out;     \n    output Alu_zero_flg;                   \n    localparam NOP = 3'b000, \n               ADD = 3'b001, \n               SUB = 3'b010, \n               AND = 3'b011, \n               OR  = 3'b100, \n               SLT = 3'b101, \n               SRT = 3'b110, \n               NOT = 3'b111; \n    assign Alu_zero_flg = ~|Alu_out;\n    always @(*) begin\n        case(Alu_sel)\n            NOP:  Alu_out = 0;           \n            AND:  Alu_out = Alu_in1 & Alu_in2; \n            OR:   Alu_out = Alu_in1 | Alu_in2; \n            ADD:  Alu_out = Alu_in1 + Alu_in2; \n            SUB:  Alu_out = Alu_in1 - Alu_in2; \n            NOT:  Alu_out = ~Alu_in1;          \n            SLT:  Alu_out = Alu_in1 << Alu_in2; \n            SRT:  Alu_out = Alu_in1 >> Alu_in2; \n            default: Alu_out = 0;          \n        endcase\n    end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `Alu` implements an Arithmetic Logic Unit (ALU) that performs various operations based on a 3-bit control signal, including Addition, Subtraction, Bitwise AND, OR, Shift Left, Shift Right, and Bitwise NOT. It operates on two 8-bit input operands and generates an 8-bit output, with a zero flag indicating if the output is zero or not."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "a white background with the word Alu on it"
+        ]
+    }
+}
+{
+    "rtl_173": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_lp__nand3b (\n    Y  ,  \n    A_N,  \n    B  ,  \n    C   \n);\n    output Y  ;  \n    input  A_N;  \n    input  B  ;  \n    input  C  ;  \n    supply1 VPWR;  \n    supply0 VGND;  \n    supply1 VPB ;  \n    supply0 VNB ;  \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_lp__nand3b` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "The module sky130_fd_sc_lp__nand3b (Y, A_N, B, C) outputs Y; input A_N; input B; input C; supply1 VPWR; supply0 VGND; supply1 VPB; supply0 VNB; endmodule"
+        ]
+    }
+}
+{
+    "rtl_174": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hdll__dfrtp (\n    input  D      , \n    output Q      , \n    input  RESET_B, \n    input  CLK    , \n    input  VPB    , \n    input  VPWR   , \n    input  VGND   , \n    input  VNB      \n);\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_hdll__dfrtp` only implements some interface signals. It does not perform any logical functions.."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Electronics & Photovoltaics"
+        ]
+    }
+}
+{
+    "rtl_175": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule incif_wrapuint32_646_inc2(\n    input CLK,                  \n    input CE,                   \n    input [32:0] process_input, \n    output [31:0] process_output \n);\nparameter INSTANCE_NAME=\"INST\";\nwire [31:0] unnamedcast61USEDMULTIPLEcast;\nassign unnamedcast61USEDMULTIPLEcast = (process_input[31:0]);\nassign process_output = (\n    (process_input[32]) ? (\n        (\n            (unnamedcast61USEDMULTIPLEcast == (32'd646)) ? (\n                (32'd0)\n            ) : (\n                (unnamedcast61USEDMULTIPLEcast + (32'd2))\n            )\n        )\n    ) : (\n        unnamedcast61USEDMULTIPLEcast\n    )\n);\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `incif_wrapuint32_646_inc2` implements conditional incrementing logic for a 33-bit input, where the lower 32 bits are modified based on the 33rd bit value, with specific handling for the value 646. It operates synchronously with clock signal and includes clock enable input, though not utilized in the provided code."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Incif_wrapuint32_646_inc2( input CLK, input CE, input [32:0] process_input, output [31:0] process_output ); parameter INSTANCE_NAME=\"INST\"; wire [31:0] unnamedcast61USEDMULTIPLEcast; assign unnamedcast61USEDMULTIPLEcast = (process_input[31:0]); assign process_output = ( (process_input[32])? ( (unnamedcast61USEDMULTIPLEcast == (32'd646))? ( (32'd0) ) : ( (unnamedcast61USEDMULTIPLEcast + (32'd2)) ) ) ) : ( unnamedcast61USEDMULTIPLEcast ) ); endmodule"
+        ]
+    }
+}
+{
+    "rtl_176": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hvl__lsbuflv2hv_symmetric (\n    X,\n    A\n);\n    output X; \n    input  A; \n    supply1 VPWR ; \n    supply0 VGND ; \n    supply1 LVPWR; \n    supply1 VPB  ; \n    supply0 VNB  ; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_hvl__lsbuflv2hv_symmetric` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "The module sky130_fd_sc_hvl__lsbuflv2hv_symmetric ( X, A ); output X; input A; supply1 VPWR ; supply0 VGND ; supply1 LVPWR; supply1 VPB ; supply0 VNB ; endmodule"
+        ]
+    }
+}
+{
+    "rtl_177": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule decoder(\n    input [15:0]  INST, \n    output [2:0]  DR,   \n    output [2:0]  SA,   \n    output [2:0]  SB,   \n    output [5:0]  IMM,  \n    output        MB,   \n    output [2:0]  FS,   \n    output        MD,   \n    output        LD,   \n    output        MW,   \n    output [2:0]  BS,   \n    output [5:0]  OFF,  \n    output        HALT  \n);\nreg [2:0] DR;\nreg [2:0] SA;\nreg [2:0] SB;\nreg       MB;\nreg [2:0] FS;\nreg       MD;\nreg       LD;\nreg       MW;\nreg [2:0] BS;\nreg [5:0] OFF;\nreg       HALT;\nreg [5:0] IMM;\nwire [3:0] OP;       \nwire [2:0] RS;       \nwire [2:0] RT;       \nwire [2:0] RD;       \nwire [2:0] FUNCT;    \nwire [5:0] IMM_INST; \nassign OP = INST[15:12];\nassign RS = INST[11:9];\nassign RT = INST[8:6];\nassign RD = INST[5:3];\nassign FUNCT = INST[2:0];\nassign IMM_INST = INST[5:0];\nalways @(*) begin\n    case (OP)\n        4'b0000: begin\n            DR = 3'b0;\n            SA = 3'b0;\n            SB = 3'b0;\n            MB = 1'b0;\n            FS = 3'b0;\n            MD = 1'b0;\n            LD = 1'b0;\n            MW = 1'b0;\n            BS = 3'b100; \n            OFF = 6'b0;\n            HALT = (FUNCT == 3'b001) ? 1'b1 : 1'b0;\n            IMM = IMM_INST;\n        end\n        4'b0010: begin\n            DR = RT; \n            SA = RS; \n            SB = 3'b0;\n            MB = 1'b1; \n            FS = 3'b000; \n            MD = 1'b1; \n            LD = 1'b1; \n            MW = 1'b0; \n            BS = 3'b100; \n            OFF = 6'b0; \n            HALT = 1'b0; \n            IMM = IMM_INST; \n        end\n        4'b0100: begin\n            DR = 3'b0; \n            SA = RS; \n            SB = RT; \n            MB = 1'b1; \n            FS = 3'b000; \n            MD = 1'b0; \n            LD = 1'b0; \n            MW = 1'b1; \n            BS = 3'b100; \n            OFF = 6'b0; \n            HALT = 1'b0; \n            IMM = IMM_INST; \n        end\n        4'b1111: begin\n            DR = RD; \n            SA = RS; \n            SB = RT; \n            MB = 1'b0; \n            FS = FUNCT; \n            MD = 1'b0; \n            LD = 1'b1; \n            MW = 1'b0; \n            BS = 3'b100; \n            OFF = 6'b0; \n            HALT = 1'b0; \n            IMM = IMM_INST; \n        end\n        default: begin\n            DR = 3'b0;\n            SA = 3'b0;\n            SB = 3'b0;\n            MB = 1'b0;\n            FS = 3'b0;\n            MD = 1'b0;\n            LD = 1'b0;\n            MW = 1'b0;\n            BS = 3'b100; \n            OFF = 6'b0;\n            HALT = 1'b0;\n            IMM = IMM_INST; \n        end\n    endcase\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `decoder` decodes a 16-bit instruction to generate control signals for a processor based on the opcode extracted from the instruction, setting control signals for different instruction types within a case statement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_178": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule reg_43(clk, output__valid, output__payload, output__ready, new_en, new_value, rst);\n  reg \\initial  = 0;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/stream/stream.py:98\" *)\n  wire \\$1 ;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/third_party/python/nmigen/nmigen/hdl/ir.py:524\" *)\n  input clk;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:49\" *)\n  input new_en;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:50\" *)\n  input [31:0] new_value;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  output [31:0] output__payload;\n  reg [31:0] output__payload = 32'd0;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  reg [31:0] \\output__payload$next ;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  input output__ready;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  output output__valid;\n  reg output__valid = 1'h0;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  reg \\output__valid$next ;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/third_party/python/nmigen/nmigen/hdl/ir.py:524\" *)\n  input rst;\n  assign \\$1  = output__valid & (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/stream/stream.py:98\" *) output__ready;\n  always @(posedge clk)\n    output__payload <= \\output__payload$next ;\n  always @(posedge clk)\n    output__valid <= \\output__valid$next ;\n  always @* begin\n    if (\\initial ) begin end\n    \\output__valid$next  = output__valid;\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:53\" *)\n    casez (\\$1 )\n      1'h1:\n          \\output__valid$next  = 1'h0;\n    endcase\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:56\" *)\n    casez (new_en)\n      1'h1:\n          \\output__valid$next  = 1'h1;\n    endcase\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/third_party/python/nmigen/nmigen/hdl/xfrm.py:519\" *)\n    casez (rst)\n      1'h1:\n          \\output__valid$next  = 1'h0;\n    endcase\n  end\n  always @* begin\n    if (\\initial ) begin end\n    \\output__payload$next  = output__payload;\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:56\" *)\n    casez (new_en)\n      1'h1:\n          \\output__payload$next  = new_value;\n    endcase\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/third_party/python/nmigen/nmigen/hdl/xfrm.py:519\" *)\n    casez (rst)\n      1'h1:\n          \\output__payload$next  = 32'd0;\n    endcase\n  end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `reg_43` functions as a synchronous 32-bit register capturing 'new_value' on the rising edge of 'clk' when 'new_en' is active, presenting the data on 'output_payload' with a corresponding 'output_valid' signal. 'output_valid' reflects the acceptance status indicated by 'output_ready' and resets upon 'rst' assertion, with data updates synchronized to 'clk' rising edges."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_179": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule CC_Decoder(in, out);\n  parameter IN_WIDTH=8;\n  parameter OUT_WIDTH=(1 << IN_WIDTH);\n  input [IN_WIDTH-1:0] in;\n  output [OUT_WIDTH-1:0] out;\n  genvar i;\n  generate\n    for (i = 0; i < OUT_WIDTH; i = i + 1)\n    begin: SELECT\n      assign out[i] = (i == in) ? 1'b1 : 1'b0;\n    end\n  endgenerate\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `CC_Decoder` implements a one-hot decoder that converts a binary input signal to a one-hot encoded output, where only one bit is high based on the input value."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Computers & Electronics Computers & Electronics"
+        ]
+    }
+}
+{
+    "rtl_180": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule mux(\n    input select, \n    input x,      \n    input y,      \n    output z      \n);\n    assign z = (x & ~select) | (y & select);\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `mux` implements a 2-to-1 multiplexer function, selecting between inputs 'x' and 'y' based on the value of 'select'."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "The module mux(input select, input x, input y, output z) assigns z = (x & select) | (y & select); endmodule"
+        ]
+    }
+}
+{
+    "rtl_181": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule reg_41(clk, output__valid, output__payload, output__ready, new_en, new_value, rst);\n  reg \\initial  = 0;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/stream/stream.py:98\" *)\n  wire \\$1 ;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/third_party/python/nmigen/nmigen/hdl/ir.py:524\" *)\n  input clk;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:49\" *)\n  input new_en;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:50\" *)\n  input [31:0] new_value;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  output [31:0] output__payload;\n  reg [31:0] output__payload = 32'd0;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  reg [31:0] \\output__payload$next ;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  input output__ready;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  output output__valid;\n  reg output__valid = 1'h0;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:47\" *)\n  reg \\output__valid$next ;\n  (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/third_party/python/nmigen/nmigen/hdl/ir.py:524\" *)\n  input rst;\n  assign \\$1  = output__valid & (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/stream/stream.py:98\" *) output__ready;\n  always @(posedge clk)\n    output__payload <= \\output__payload$next ;\n  always @(posedge clk)\n    output__valid <= \\output__valid$next ;\n  always @* begin\n    if (\\initial ) begin end\n    \\output__valid$next  = output__valid;\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:53\" *)\n    casez (\\$1 )\n      1'h1:\n          \\output__valid$next  = 1'h0;\n    endcase\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:56\" *)\n    casez (new_en)\n      1'h1:\n          \\output__valid$next  = 1'h1;\n    endcase\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/third_party/python/nmigen/nmigen/hdl/xfrm.py:519\" *)\n    casez (rst)\n      1'h1:\n          \\output__valid$next  = 1'h0;\n    endcase\n  end\n  always @* begin\n    if (\\initial ) begin end\n    \\output__payload$next  = output__payload;\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/proj/hps_accel/gateware/gen1/set.py:56\" *)\n    casez (new_en)\n      1'h1:\n          \\output__payload$next  = new_value;\n    endcase\n    (* src = \"/media/tim/GIT/tcal-x/CFU-Playground/third_party/python/nmigen/nmigen/hdl/xfrm.py:519\" *)\n    casez (rst)\n      1'h1:\n          \\output__payload$next  = 32'd0;\n    endcase\n  end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `reg_41` implements a 32-bit storage element that updates its content based on control signals, updating the stored value upon a positive clock edge when enabled and managing the validity signal based on downstream logic readiness while also handling asynchronous resets."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_182": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule trainsim\n(\n\tinput wire        rst,    \n\tinput wire        clk,    \n\tinput wire [4:0]  sensor, \n\toutput reg [2:0]  sw,     \n\toutput reg [1:0]  dira,   \n\toutput reg [1:0]  dirb    \n);\n\tlocalparam ABOUT = 0; \n\tlocalparam AIN   = 1; \n\tlocalparam BIN   = 2; \n\tlocalparam ASTOP = 3; \n\tlocalparam BSTOP = 4; \n\treg [2:0]  state; \n\twire [1:0] s12 = {sensor[0], sensor[1]};\n\twire [1:0] s13 = {sensor[0], sensor[2]};\n\twire [1:0] s24 = {sensor[1], sensor[3]};\n\talways @ (posedge clk) begin\n\t\tsw[2] = 0;\n\tend\n\talways @ (posedge clk or posedge rst) begin\n\t\tif (rst)\n\t\t\tstate = ABOUT; \n\t\telse\n\t\t\tcase (state)\n\t\t\t\tABOUT:\n\t\t\t\t\tcase (s12)\n\t\t\t\t\t\t'b00:    state = ABOUT;\n\t\t\t\t\t\t'b01:    state = BIN;\n\t\t\t\t\t\t'b10:    state = AIN;\n\t\t\t\t\t\t'b11:    state = AIN;\n\t\t\t\t\t\tdefault: state = ABOUT;\n\t\t\t\t\tendcase\n\t\t\t\tAIN:\n\t\t\t\t\tcase (s24)\n\t\t\t\t\t\t'b00:    state = AIN;\n\t\t\t\t\t\t'b01:    state = ABOUT;\n\t\t\t\t\t\t'b10:    state = BSTOP;\n\t\t\t\t\t\t'b11:    state = ABOUT;\n\t\t\t\t\t\tdefault: state = ABOUT;\n\t\t\t\t\tendcase\n\t\t\t\tBIN:\n\t\t\t\t\tcase (s13)\n\t\t\t\t\t\t'b00:    state = BIN;\n\t\t\t\t\t\t'b01:    state = ABOUT;\n\t\t\t\t\t\t'b10:    state = ASTOP;\n\t\t\t\t\t\t'b11:    state = ABOUT;\n\t\t\t\t\t\tdefault: state = ABOUT;\n\t\t\t\t\tendcase\n\t\t\t\tASTOP:\n\t\t\t\t\tif (sensor[2])\n\t\t\t\t\t\tstate = AIN;\n\t\t\t\t\telse\n\t\t\t\t\t\tstate = ASTOP;\n\t\t\t\tBSTOP:\n\t\t\t\t\tif (sensor[3])\n\t\t\t\t\t\tstate = BIN;\n\t\t\t\t\telse\n\t\t\t\t\t\tstate = BSTOP;\n\t\t\t\tdefault:\n\t\t\t\t\tstate = ABOUT;\n\t\t\tendcase\n\tend\n\talways @ (state) begin\n\t\tcase (state)\n\t\t\tABOUT: begin\n\t\t\t\tsw[0] = 0;\n\t\t\t\tsw[1] = 0;\n\t\t\t\tdira = 'b01;\n\t\t\t\tdirb = 'b01;\n\t\t\tend\n\t\t\tAIN: begin\n\t\t\t\tsw[0] = 0;\n\t\t\t\tsw[1] = 0;\n\t\t\t\tdira = 'b01;\n\t\t\t\tdirb = 'b01;\n\t\t\tend\n\t\t\tBIN: begin\n\t\t\t\tsw[0] = 1;\n\t\t\t\tsw[1] = 1;\n\t\t\t\tdira = 'b01;\n\t\t\t\tdirb = 'b01;\n\t\t\tend\n\t\t\tASTOP: begin\n\t\t\t\tsw[0] = 1;\n\t\t\t\tsw[1] = 1;\n\t\t\t\tdira = 'b00;\n\t\t\t\tdirb = 'b01;\n\t\t\tend\n\t\t\tBSTOP: begin\n\t\t\t\tsw[0] = 0;\n\t\t\t\tsw[1] = 0;\n\t\t\t\tdira = 'b01;\n\t\t\t\tdirb = 'b00;\n\t\t\tend\n\t\t\tdefault: begin\n\t\t\t\tsw[0] = 0;\n\t\t\t\tsw[1] = 0;\n\t\t\t\tdira = 'b00;\n\t\t\t\tdirb = 'b00;\n\t\t\tend\n\t\tendcase\n\tend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `trainsim` implements a state machine simulating a train system with two trains, controlling track switches and train directions based on sensor inputs, transitioning between five states ('ABOUT', 'AIN', 'BIN', 'ASTOP', 'BSTOP') and setting outputs accordingly while using a clock signal and reset to manage state changes."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_183": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule JTAGG(\n    input TCK,   \n    input TMS,   \n    input TDI,   \n    input JTDO2, \n    input JTDO1, \n    output TDO,  \n    output JTDI, \n    output JTCK, \n    output JRTI2, \n    output JRTI1, \n    output JSHIFT,  \n    output JUPDATE, \n    output JRSTN,   \n    output JCE2,    \n    output JCE1     \n);\nparameter ER1 = \"ENABLED\"; \nparameter ER2 = \"ENABLED\"; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `JTAGG` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "JTAGG is a Verilog module"
+        ]
+    }
+}
+{
+    "rtl_184": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule pipeline_control_spr_exchange(\n\t\tinput wire iCLOCK,\n\t\tinput wire inRESET,\n\t\tinput wire iRESET_SYNC,\n\t\tinput wire [31:0] iSYSREG_SPR,\n\t\tinput wire [31:0] iSYSREG_TISR,\n\t\tinput wire [31:0] iSYSREG_TIDR,\n\t\tinput wire iRD_START,\n\t\tinput wire iRD_KERNEL,\t\t\t\t\n\t\toutput wire oFINISH,\n\t\toutput wire [31:0] oFINISH_SPR,\n\t\toutput wire oLDST_USE,\n\t\toutput wire oLDST_REQ,\n\t\tinput wire iLDST_BUSY,\n\t\toutput wire [1:0] oLDST_ORDER,\t\n\t\toutput wire oLDST_RW,\t\t\n\t\toutput wire [13:0] oLDST_ASID,\n\t\toutput wire [1:0] oLDST_MMUMOD,\n\t\toutput wire [31:0] oLDST_PDT,\n\t\toutput wire [31:0] oLDST_ADDR,\n\t\toutput wire [31:0] oLDST_DATA,\n\t\tinput wire iLDST_REQ,\n\t\tinput wire [31:0] iLDST_DATA\n\t);\n\t/***************************************************************************\n\tState\n\tlocalparam L_PARAM_IDLE = 3'h0;\n\tlocalparam L_PARAM_LOAD_REQ = 3'h1;\n\tlocalparam L_PARAM_LOAD_ACK = 3'h2;\n\tlocalparam L_PARAM_STORE_REQ = 3'h3;\n\tlocalparam L_PARAM_STORE_ACK = 3'h4;\n\treg [2:0] state;\n\treg [2:0] b_state;\n\talways@*begin\n\t\tcase(b_state)\n\t\t\tL_PARAM_IDLE:\n\t\t\t\tbegin\n\t\t\t\t\tif(iRD_START)begin\n\t\t\t\t\t\tstate = L_PARAM_LOAD_REQ;\n\t\t\t\t\tend\n\t\t\t\t\telse begin\n\t\t\t\t\t\tstate = L_PARAM_IDLE;\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\tL_PARAM_LOAD_REQ:\n\t\t\t\tbegin\n\t\t\t\t\tif(!iLDST_BUSY)begin\n\t\t\t\t\t\tstate = L_PARAM_LOAD_ACK;\n\t\t\t\t\tend\n\t\t\t\t\telse begin\n\t\t\t\t\t\tstate = L_PARAM_LOAD_REQ;\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\tL_PARAM_LOAD_ACK:\n\t\t\t\tbegin\n\t\t\t\t\tif(iLDST_REQ)begin\n\t\t\t\t\t\tstate = L_PARAM_STORE_REQ;\n\t\t\t\t\tend\n\t\t\t\t\telse begin\n\t\t\t\t\t\tstate = L_PARAM_LOAD_ACK;\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\tL_PARAM_STORE_REQ:\n\t\t\t\tbegin\n\t\t\t\t\tif(!iLDST_BUSY)begin\n\t\t\t\t\t\tstate = L_PARAM_STORE_ACK;\n\t\t\t\t\tend\n\t\t\t\t\telse begin\n\t\t\t\t\t\tstate = L_PARAM_STORE_REQ;\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\tL_PARAM_STORE_ACK:\n\t\t\t\tbegin\n\t\t\t\t\tif(iLDST_REQ)begin\n\t\t\t\t\t\tstate = L_PARAM_IDLE;\n\t\t\t\t\tend\n\t\t\t\t\telse begin\n\t\t\t\t\t\tstate = L_PARAM_STORE_ACK;\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\tdefault:\n\t\t\t\tbegin\n\t\t\t\t\tstate = L_PARAM_IDLE;\n\t\t\t\tend\n\t\tendcase\n\tend\n\talways@(posedge iCLOCK or negedge inRESET)begin\n\t\tif(!inRESET)begin\n\t\t\tb_state <= L_PARAM_IDLE;\n\t\tend\n\t\telse if(iRESET_SYNC)begin\n\t\t\tb_state <= L_PARAM_IDLE;\n\t\tend\n\t\telse begin\n\t\t\tb_state <= state;\n\t\tend\n\tend\n\treg b_finish;\n\talways@(posedge iCLOCK or negedge inRESET)begin\n\t\tif(!inRESET)begin\n\t\t\tb_finish <= 1'b0;\n\t\tend\n\t\telse if(iRESET_SYNC)begin\n\t\t\tb_finish <= 1'b0;\n\t\tend\n\t\telse begin\n\t\t\tb_finish <= (state == L_PARAM_STORE_ACK) && iLDST_REQ;\n\t\tend\n\tend\n\t/***************************************************************************\n\tLoad Data Buffer\n\treg [31:0] b_load_data;\n\talways@(posedge iCLOCK or negedge inRESET)begin\n\t\tif(!inRESET)begin\n\t\t\tb_load_data <= 32'h0;\n\t\tend\n\t\telse if(iRESET_SYNC)begin\n\t\t\tb_load_data <= 32'h0;\n\t\tend\n\t\telse begin\n\t\t\tif((state == L_PARAM_LOAD_ACK) && iLDST_REQ)begin\n\t\t\t\tb_load_data <= iLDST_DATA;\n\t\t\tend\n\t\tend\n\tend\n\t/***************************************************************************\n\tLoad Store Pipe\n\treg b_ldst_use;\n\treg b_ldst_req;\n\treg [31:0] b_ldst_data;\n\twire [31:0] uspr_addr = iSYSREG_TISR + {iSYSREG_TIDR[13:0], 8'h0} + `TST_USPR;\n\twire [31:0] kspr_addr = iSYSREG_TISR + {iSYSREG_TIDR[13:0], 8'h0} + `TST_KSPR;\n\talways@(posedge iCLOCK or negedge inRESET)begin\n\t\tif(!inRESET)begin\n\t\t\tb_ldst_use <= 1'b0;\n\t\t\tb_ldst_req <= 1'b0;\n\t\t\tb_ldst_data <= 32'h0;\n\t\tend\n\t\telse if(iRESET_SYNC)begin\n\t\t\tb_ldst_use <= 1'b0;\n\t\t\tb_ldst_req <= 1'b0;\n\t\t\tb_ldst_data <= 32'h0;\n\t\tend\n\t\telse begin\n\t\t\tb_ldst_use <= state != L_PARAM_IDLE;\n\t\t\tb_ldst_req <= state == L_PARAM_STORE_REQ || state == L_PARAM_LOAD_REQ;\n\t\t\tb_ldst_data <= iSYSREG_SPR;\n\t\tend\n\tend\n\treg [31:0] b_ldst_addr;\n\t\talways@(posedge iCLOCK or negedge inRESET)begin\n\t\tif(!inRESET)begin\n\t\t\tb_ldst_addr <= 32'h0;\n\t\tend\n\t\telse if(iRESET_SYNC)begin\n\t\t\tb_ldst_addr <= 32'h0;\n\t\tend\n\t\telse begin\n\t\t\tif(iRD_KERNEL)begin\n\t\t\t\tif(state == L_PARAM_STORE_REQ)begin\n\t\t\t\t\tb_ldst_addr <= uspr_addr;\n\t\t\t\tend\n\t\t\t\telse begin\n\t\t\t\t\tb_ldst_addr <= kspr_addr;\n\t\t\t\tend\n\t\t\tend\n\t\t\telse begin\n\t\t\t\tif(state == L_PARAM_STORE_REQ)begin\n\t\t\t\t\tb_ldst_addr <= kspr_addr;\n\t\t\t\tend\n\t\t\t\telse begin\n\t\t\t\t\tb_ldst_addr <= uspr_addr;\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\tend\n\t/***************************************************************************\n\tAssign\n\tassign oFINISH = b_finish;\n\tassign oFINISH_SPR = b_load_data;\n\tassign oLDST_USE = b_ldst_use;\n\tassign oLDST_REQ = b_ldst_req;\n\tassign oLDST_ORDER = 2'h2;\t\n\tassign oLDST_RW = 1'b0;\t\t\n\tassign oLDST_ASID = 14'h0;\n\tassign oLDST_MMUMOD = 2'h0;\n\tassign oLDST_PDT = 32'h0;\n\tassign oLDST_ADDR = b_ldst_addr;\n\tassign oLDST_DATA = b_ldst_data;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `pipeline_control_spr_exchange` orchestrates the data exchange between the processor's pipeline and special purpose registers (SPRs) using a state machine to handle read and write requests, managing transitions between idle, load, and store states based on the readiness of the load/store unit. Signals are generated to indicate operation completion and control the load/store unit, ensuring smooth pipeline operation without stalling."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_185": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule step_id(\n    inst,        \n    ena_,        \n    cond_dout,   \n    rdy_nop_,    \n    rdy_cpf_,    \n    rdy_cpt_,    \n    rdy_ld_,     \n    rdy_st_,     \n    rdy_clr_,    \n    rdy_im_,     \n    rdy_tce_,    \n    rdy_ts_,     \n    rdy_add_,    \n    rdy_sub_     \n);\n    input[7:0] inst; \n    input ena_; \n    input cond_dout; \n    output rdy_nop_, rdy_cpf_, rdy_cpt_, rdy_ld_, rdy_st_, rdy_clr_, rdy_im_, rdy_tce_, rdy_ts_, rdy_add_, rdy_sub_;\n    wire cond_ = inst[7] ^ cond_dout;\n    wire[6:0] inst_cond = inst[6:0] & {7{~(cond_ | ena_)}};\n    assign rdy_nop_ = inst_cond[6:0] != 7'b0000000 || ena_;\n    assign rdy_cpf_ = inst_cond[6:4] != 3'b010 || inst_cond[3:0] == 4'b0000;\n    assign rdy_cpt_ = inst_cond[6:4] != 3'b011 || inst_cond[3:0] == 4'b0000;\n    assign rdy_ld_  = {inst_cond[6:2], inst_cond[0]} != {5'b10001, 1'b0};\n    assign rdy_st_  = {inst_cond[6:2], inst_cond[0]} != {5'b10001, 1'b1};\n    assign rdy_clr_ = inst_cond != 7'b1010000;\n    assign rdy_im_  = inst_cond[6:5] != 2'b11;\n    assign rdy_tce_ = inst_cond != 7'b0001100;\n    assign rdy_ts_  = {inst_cond[6], inst_cond[3:0]} != {1'b0, 4'b0000} || inst_cond[5:4] == 2'b00;\n    assign rdy_add_ = inst_cond != 7'b1010110;\n    assign rdy_sub_ = inst_cond != 7'b1010111;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `step_id` implements an instruction decoder that generates ready signals for various instructions based on the instruction content, an enable signal, and a condition output signal, with specific conditions for each instruction type."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_186": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule neg (\n   input clk  \n            );\n   reg [0:-7] i8; initial i8 = '0; \n   reg [-1:-48] i48; initial i48 = '0;\n   reg [63:-64] i128; initial i128 = '0;\n   always @ (posedge clk) begin\n      i8 <= ~i8;   \n      i48 <= ~i48; \n      i128 <= ~i128; \n   end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `neg` demonstrates the toggling behavior of registers with negative indexing on the positive edge of the input clock signal."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Negative clock module; reg [0:-7] i8; initial i8 = '0; reg [-1:-48] i48; initial i48 = '0; reg [63:-64] i128; initial i128 = '0; always @ (posedge clk) begin i8 = i8; i48 = i48; i128 = i128; end endmodule"
+        ]
+    }
+}
+{
+    "rtl_187": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule PCIEBus_gtp_pipe_drp #\n(\n    parameter LOAD_CNT_MAX     = 2'd1,                      \n    parameter INDEX_MAX        = 1'd0                       \n)\n(\n    input               DRP_CLK,\n    input               DRP_RST_N,\n    input               DRP_X16,\n    input               DRP_START,\n    input       [15:0]  DRP_DO,\n    input               DRP_RDY,\n    output      [ 8:0]  DRP_ADDR,\n    output              DRP_EN,\n    output      [15:0]  DRP_DI,\n    output              DRP_WE,\n    output              DRP_DONE,\n    output      [ 2:0]  DRP_FSM\n);\n(* ASYNC_REG = \"TRUE\", SHIFT_EXTRACT = \"NO\" *)    reg                 x16_reg1;\n(* ASYNC_REG = \"TRUE\", SHIFT_EXTRACT = \"NO\" *)    reg                 start_reg1;\n(* ASYNC_REG = \"TRUE\", SHIFT_EXTRACT = \"NO\" *)    reg         [15:0]  do_reg1;\n(* ASYNC_REG = \"TRUE\", SHIFT_EXTRACT = \"NO\" *)    reg                 rdy_reg1;\n(* ASYNC_REG = \"TRUE\", SHIFT_EXTRACT = \"NO\" *)    reg                 x16_reg2;\n(* ASYNC_REG = \"TRUE\", SHIFT_EXTRACT = \"NO\" *)    reg                 start_reg2;\n(* ASYNC_REG = \"TRUE\", SHIFT_EXTRACT = \"NO\" *)    reg         [15:0]  do_reg2;\n(* ASYNC_REG = \"TRUE\", SHIFT_EXTRACT = \"NO\" *)    reg                 rdy_reg2;\n    reg         [ 1:0]  load_cnt =  2'd0;\n    reg         [ 4:0]  index    =  5'd0;\n    reg         [ 8:0]  addr_reg =  9'd0;\n    reg         [15:0]  di_reg   = 16'd0;\n    reg                 done     =  1'd0;\n    reg         [ 2:0]  fsm      =  0;\n    localparam          ADDR_RX_DATAWIDTH  = 9'h011;\n    localparam          MASK_RX_DATAWIDTH  = 16'b1111011111111111;  \n    localparam          X16_RX_DATAWIDTH   = 16'b0000000000000000;  \n    localparam          X20_RX_DATAWIDTH   = 16'b0000100000000000;  \n    wire        [15:0]  data_rx_datawidth;\n    localparam          FSM_IDLE  = 0;\n    localparam          FSM_LOAD  = 1;\n    localparam          FSM_READ  = 2;\n    localparam          FSM_RRDY  = 3;\n    localparam          FSM_WRITE = 4;\n    localparam          FSM_WRDY  = 5;\n    localparam          FSM_DONE  = 6;\nalways @ (posedge DRP_CLK)\nbegin\n    if (!DRP_RST_N)\n        begin\n        x16_reg1   <=  1'd0;\n        do_reg1    <= 16'd0;\n        rdy_reg1   <=  1'd0;\n        start_reg1 <=  1'd0;\n        x16_reg2   <=  1'd0;\n        do_reg2    <= 16'd0;\n        rdy_reg2   <=  1'd0;\n        start_reg2 <=  1'd0;\n        end\n    else\n        begin\n        x16_reg1   <= DRP_X16;\n        do_reg1    <= DRP_DO;\n        rdy_reg1   <= DRP_RDY;\n        start_reg1 <= DRP_START;\n        x16_reg2   <= x16_reg1;\n        do_reg2    <= do_reg1;\n        rdy_reg2   <= rdy_reg1;\n        start_reg2 <= start_reg1;\n        end\nend\nassign data_rx_datawidth = x16_reg2 ? X16_RX_DATAWIDTH : X20_RX_DATAWIDTH;\nalways @ (posedge DRP_CLK)\nbegin\n    if (!DRP_RST_N)\n        load_cnt <= 2'd0;\n    else\n        if ((fsm == FSM_LOAD) && (load_cnt < LOAD_CNT_MAX))\n            load_cnt <= load_cnt + 2'd1;\n        else if ((fsm == FSM_LOAD) && (load_cnt == LOAD_CNT_MAX))\n            load_cnt <= load_cnt;\n        else\n            load_cnt <= 2'd0;\nend\nalways @ (posedge DRP_CLK)\nbegin\n    if (!DRP_RST_N)\n        begin\n        addr_reg <=  9'd0;\n        di_reg   <= 16'd0;\n        end\n    else\n        begin\n        case (index)\n        1'd0 :\n            begin\n            addr_reg <= ADDR_RX_DATAWIDTH;\n            di_reg   <= (do_reg2 & MASK_RX_DATAWIDTH) | data_rx_datawidth;\n            end\n        default :\n            begin\n            addr_reg <=  9'd0;\n            di_reg   <= 16'd0;\n            end\n        endcase\n        end\nend\nalways @ (posedge DRP_CLK)\nbegin\n    if (!DRP_RST_N)\n        begin\n        fsm   <= FSM_IDLE;\n        index <= 5'd0;\n        done  <= 1'd0;\n        end\n    else\n        begin\n        case (fsm)\n        FSM_IDLE :\n            begin\n            if (start_reg2)\n                begin\n                fsm   <= FSM_LOAD;\n                index <= 5'd0;\n                done  <= 1'd0;\n                end\n            else\n                begin\n                fsm   <= FSM_IDLE;\n                index <= 5'd0;\n                done  <= 1'd1;\n                end\n            end\n        FSM_LOAD :\n            begin\n            fsm   <= (load_cnt == LOAD_CNT_MAX) ? FSM_READ : FSM_LOAD;\n            index <= index;\n            done  <= 1'd0;\n            end\n        FSM_READ :\n            begin\n            fsm   <= FSM_RRDY;\n            index <= index;\n            done  <= 1'd0;\n            end\n        FSM_RRDY :\n            begin\n            fsm   <= rdy_reg2 ? FSM_WRITE : FSM_RRDY;\n            index <= index;\n            done  <= 1'd0;\n            end\n        FSM_WRITE :\n            begin\n            fsm   <= FSM_WRDY;\n            index <= index;\n            done  <= 1'd0;\n            end\n        FSM_WRDY :\n            begin\n            fsm   <= rdy_reg2 ? FSM_DONE : FSM_WRDY;\n            index <= index;\n            done  <= 1'd0;\n            end\n        FSM_DONE :\n            begin\n            if (index == INDEX_MAX)\n                begin\n                fsm   <= FSM_IDLE;\n                index <= 5'd0;\n                done  <= 1'd0;\n                end\n            else\n                begin\n                fsm   <= FSM_LOAD;\n                index <= index + 5'd1;\n                done  <= 1'd0;\n                end\n            end\n        default :\n            begin\n            fsm   <= FSM_IDLE;\n            index <= 5'd0;\n            done  <= 1'd0;\n            end\n        endcase\n        end\nend\nassign DRP_ADDR = addr_reg;\nassign DRP_EN   = (fsm == FSM_READ) || (fsm == FSM_WRITE);\nassign DRP_DI   = di_reg;\nassign DRP_WE   = (fsm == FSM_WRITE);\nassign DRP_DONE = done;\nassign DRP_FSM  = fsm;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `PCIEBus_gtp_pipe_drp` implements a parameterized finite state machine (FSM) for managing Dynamic Reconfiguration Port (DRP) operations in a PCIe application, facilitating configuration and data transfer between the module and a GTP transceiver's DRP. It accepts 16-bit configuration data, generates a 9-bit address and 16-bit output data, controls DRP enablement and writes, and indicates operation completion through various output signals like `DRP_DONE` and `DRP_FSM`."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_188": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule nios_solo_pio_0 (\n                          address,      \n                          chipselect,   \n                          clk,          \n                          in_port,      \n                          reset_n,      \n                          write_n,      \n                          writedata,    \n                          irq,          \n                          readdata      \n                       )\n;"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `nios_solo_pio_0` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Verilog Languages & Compilers"
+        ]
+    }
+}
+{
+    "rtl_189": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule SingleCycleProcessor (\n    output reg [31:0] PC,         \n    output reg [31:0] datain,     \n    output reg [31:0] address,    \n    output reg MW,                \n    input [31:0] instruction,     \n    input [31:0] dataout,         \n    input clk,                    \n    input reset_n                 \n);\nreg [31:0] nextPC, counter, nextReg, seIM, zfIM; \nreg [31:0] R[0:31];                              \nreg RW;                                          \nwire [14:0] IM;                                  \nwire [4:0] AA, BA, DA;                           \nwire [6:0] op;                                   \nwire [3:0] FS;                                   \nparameter NOP   = 7'b0000000;\nparameter MOVA  = 7'b1000000;\nparameter JML   = 7'b0110000;\ninteger i;\nalways @(posedge clk or negedge reset_n) begin\n    if (!reset_n) begin\n        counter <= 0;\n        PC <= 0;\n        for (i = 0; i < 32; i = i + 1) begin\n            R[i] = 0;\n        end\n    end else begin\n        if (counter == 0) begin\n            counter <= counter + 1;\n            PC <= nextPC;\n        end else begin\n            counter <= 0;\n            PC <= nextPC;\n            if (RW == 1'b1 && DA != 0) begin\n                R[DA] = nextReg;\n            end\n        end\n    end\nend\nassign AA = instruction[19:15];\nassign BA = instruction[14:10];\nassign DA = instruction[24:20];\nassign op = instruction[31:25];\nassign IM = instruction[14:0];\nalways @(*) begin\n    if (IM[14] == 1'b0) begin\n        seIM = {17'd0, IM}; \n        zfIM = {17'd0, IM}; \n    end else begin\n        seIM = {17'd1, IM}; \n        zfIM = {17'd0, IM}; \n    end\nend\nalways @(*) begin\n    RW = 1'b0; \n    MW = 1'b1; \n    nextReg = 0; \n    address = 0; \n    datain = 0; \n    if (counter == 1) begin\n        case(op)\n            default: begin\n                nextPC = PC + 1;\n            end\n        endcase\n    end else begin\n        if (op == LD) begin\n            address = R[AA]; \n            MW = 1'b1; \n        end\n        nextPC = PC;\n    end\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `SingleCycleProcessor` implements a basic processor with a two-cycle operation (fetch and execute), supporting various arithmetic, logical, memory access, and control flow operations. It includes internal registers for managing the execution flow, extracting instruction fields, and updating the program counter and register file based on the instruction executed. It also handles asynchronous reset functionality for clearing the processor state."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_190": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule alu(\n  input clk,               \n  input reset,             \n  input [31:0] i_a,        \n  input [31:0] i_b,        \n  input  [1:0] i_cmd,      \n  output [31:0] o_result,  \n  output        o_valid,   \n  output        o_ready    \n);\nreg [31:0] reg_result;\nreg        reg_valid = 1'b0;\n`define ST_RESET  2'h0  \n`define ST_READY  2'h1  \n`define ST_BUSY   2'h2  \nreg [1:0] reg_status = `ST_RESET;\nalways @(posedge clk && reset) begin\n  reg_status <= `ST_READY; \nend\nassign o_ready = ((reg_status == `ST_READY) && !reset); \nassign o_valid = (reg_valid && (reg_status == `ST_READY)); \nassign o_result = o_valid ? reg_result : 32'hx; \nalways @(posedge clk && !reset) begin\n  case (reg_status)\n    `ST_READY: begin \n      reg_status <= `ST_BUSY; \n      if (i_cmd == `OP_ADD) begin \n        reg_result = i_a + i_b; \n      end\n    end\n    `ST_BUSY: begin \n      reg_valid <= 1'b1; \n      reg_status <= `ST_READY; \n    end\n    default: begin \n      $display(\"should not happen\"); \n      $finish; \n    end\n  endcase\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `alu` implements an Arithmetic Logic Unit (ALU) that performs addition operations on two 32-bit input operands based on a specified command, transitioning through states to handle input processing and result generation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Alu ( input clk, input reset, input [31:0] i_a, input [31:0] i_b, input [1:0] i_cmd, output [31:0] o_result, output o_valid, output o_ready ); reg [31:0] reg_result; reg reg_valid = 1'b0; define ST_RESET 2'h0 define ST_READY 2'h1 define ST_BUSY 2'h2 reg [1:0] reg_status = ST_RESET; always @(posedge clk && reset) begin reg_status = ST_READY; end assign o_ready = ((reg_status == ST_READY) &&!reset); assign o_valid = (reg_valid && (reg_status == ST_READY)); assign o_result = o_valid? reg_result : 32'hx; always @(posedge clk &&!reset) begin case (reg_status) ST_READY: begin reg_status = ST_BUSY; if (i_cmd == OP_ADD) begin reg_result = i_a + i_b; end end ST_BUSY: begin reg_valid = 1'b1; reg_status = ST_READY; end default: begin $display(\"should not happen\"); $finish; end endcase end endmodule"
+        ]
+    }
+}
+{
+    "rtl_191": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule step_ex_cpf(clk, rst_, ena_, rdy_, reg_id,\n    r0_din, r0_we_,\n    r0_dout, r1_dout, r2_dout, r3_dout, r4_dout, r5_dout, fl_dout, pc_dout);\n    input clk; \n    input rst_; \n    input ena_; \n    output rdy_; \n    input[3:0] reg_id; \n    output[7:0] r0_din; \n    output r0_we_; \n    input[7:0] r0_dout, r1_dout, r2_dout, r3_dout, r4_dout, r5_dout, fl_dout, pc_dout; \n    reg rdy_en; \n    assign rdy_ = rdy_en ? 1'b0 : 1'bZ; \n    reg r0_din_en; \n    assign r0_din = r0_din_en ? regs_dout[reg_id] : 8'bZ; \n    reg r0_we_en; \n    assign r0_we_ = r0_we_en ? 1'b0 : 1'bZ; \n    reg state; \n    tri0[7:0] regs_dout[15:0]; \n    assign regs_dout[0] = r0_dout; \n    assign regs_dout[1] = r1_dout; \n    assign regs_dout[2] = r2_dout; \n    assign regs_dout[3] = r3_dout; \n    assign regs_dout[4] = r4_dout; \n    assign regs_dout[5] = r5_dout; \n    assign regs_dout[10] = fl_dout; \n    assign regs_dout[14] = 8'hff; \n    assign regs_dout[15] = pc_dout; \n    always @(negedge rst_ or posedge clk)\n        if(!rst_) begin \n            rdy_en <= 0; \n            r0_din_en <= 0; \n            r0_we_en <= 0; \n            state <= 0; \n        end else if(!ena_) begin \n            rdy_en <= 0; \n            r0_din_en <= 1; \n            r0_we_en <= 0; \n            state <= 1; \n        end else if(state) begin \n            rdy_en <= 1; \n            r0_din_en <= 1; \n            r0_we_en <= 1; \n            state <= 0; \n        end else begin \n            rdy_en <= 0; \n            r0_din_en <= 0; \n            r0_we_en <= 0; \n        end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `step_ex_cpf` implements a state machine-controlled data flow unit managing register 0 within a register file, featuring conditional signal controls and a tri-state buffer array for data routing based on register ID, ensuring controlled operation based on clock, reset, and enable signals."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_192": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule ODDRX2DQSB(\n    input D0,    \n    input D1,    \n    input D2,    \n    input D3,    \n    input RST,   \n    input ECLK,  \n    input SCLK,  \n    input DQSW,  \n    output Q     \n);\n    parameter GSR = \"ENABLED\";\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `ODDRX2DQSB` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Electronics & Photovoltaics"
+        ]
+    }
+}
+{
+    "rtl_193": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sp_find_segment_stn1 (\n    ph_seg_p_1_1_1_V_read,   \n    th_seg_p_1_1_0_V_read,   \n    th_seg_p_1_1_1_V_read,   \n    cpat_seg_p_1_1_1_V_read, \n    ap_return_0,             \n    ap_return_1,             \n    ap_return_2,             \n    ap_return_3              \n);\ninput  [11:0] ph_seg_p_1_1_1_V_read;   \ninput  [6:0] th_seg_p_1_1_0_V_read;    \ninput  [6:0] th_seg_p_1_1_1_V_read;    \ninput  [3:0] cpat_seg_p_1_1_1_V_read;  \noutput [11:0] ap_return_0;              \noutput [3:0] ap_return_1;               \noutput [6:0] ap_return_2;               \noutput [6:0] ap_return_3;               \nassign ap_return_0 = ph_seg_p_1_1_1_V_read; \nassign ap_return_1 = cpat_seg_p_1_1_1_V_read; \nassign ap_return_2 = th_seg_p_1_1_0_V_read; \nassign ap_return_3 = th_seg_p_1_1_1_V_read; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sp_find_segment_stn1` implements direct signal routing, passing inputs to corresponding outputs without alteration, establishing one-to-one mappings between input and output signals."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Module sp_find_segment_stn1 ( ph_seg_p_1_1_V_read, th_seg_p_1_1_0_V_read, th_seg_p_1_1_1_V_read, cpat_seg_p_1_1_1_V_read, ap_return_0, ap_return_1, ap_return_2, ap_return_3 ); input [11:0] ph_seg_p_1_1_V_read; input [6:0] th_seg_p_1_1_0_V_read; input [6:0] th_seg_p_1_1_1_V_read; input [3:0] cpat_seg_p_1_1_V_read; output [11:0] ap_return_0; output [3:0] ap_return_1; output [6:0] ap_return_2; output [6:0] ap_return_3; assign ap_return_0 = ph_seg_p_1_1_V_read; assign ap_return_1 = cpat_seg_p_1_1_V_read; assign ap_return_2 = th_seg_p_1_1_0_V_read; assign ap_return_3 = th_seg_p_1_1_V_read; endmodule"
+        ]
+    }
+}
+{
+    "rtl_194": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hs__tapvgnd2 ();\n    supply1 VPWR;\n    supply0 VGND;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_hs__tapvgnd2` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "module sky130_fd_sc_hs__tapvgnd2 (); supply1 VPWR; supply0 VGND; endmodule"
+        ]
+    }
+}
+{
+    "rtl_195": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule DemoInterconnect_axi_spi_master_0_1(\n  m_spi_mosi, m_spi_miso, m_spi_ss, m_spi_sclk,\n  s00_axi_awaddr, s00_axi_awprot, s00_axi_awvalid, s00_axi_awready, s00_axi_wdata,\n  s00_axi_wstrb, s00_axi_wvalid, s00_axi_wready, s00_axi_bresp, s00_axi_bvalid,\n  s00_axi_bready, s00_axi_araddr, s00_axi_arprot, s00_axi_arvalid, s00_axi_arready,\n  s00_axi_rdata, s00_axi_rresp, s00_axi_rvalid, s00_axi_rready, s00_axi_aclk,\n  s00_axi_aresetn)\n  output m_spi_mosi; \n  input m_spi_miso;  \n  output m_spi_ss;   \n  output m_spi_sclk; \n  input [3:0]s00_axi_awaddr;   \n  input [2:0]s00_axi_awprot;   \n  input s00_axi_awvalid;       \n  output s00_axi_awready;      \n  input [31:0]s00_axi_wdata;   \n  input [3:0]s00_axi_wstrb;    \n  input s00_axi_wvalid;        \n  output s00_axi_wready;       \n  output [1:0]s00_axi_bresp;   \n  output s00_axi_bvalid;       \n  input s00_axi_bready;        \n  input [3:0]s00_axi_araddr;   \n  input [2:0]s00_axi_arprot;   \n  input s00_axi_arvalid;       \n  output s00_axi_arready;      \n  output [31:0]s00_axi_rdata;  \n  output [1:0]s00_axi_rresp;   \n  output s00_axi_rvalid;       \n  input s00_axi_rready;        \n  input s00_axi_aclk;          \n  input s00_axi_aresetn;       \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `DemoInterconnect_axi_spi_master_0_1` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_196": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule readonly_register(\n    reg_clk,    \n    reg_addr,   \n    reg_data,   \n    reg_wr,     \n    value       \n);\n    parameter ADDR = 1;\n    input reg_clk;             \n    input [15:0] reg_addr;     \n    inout [31:0] reg_data;     \n    input reg_wr;              \n    input [31:0] value;        \n    assign reg_data = (reg_addr == ADDR && !reg_wr) ? value : 32'hZZ;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `readonly_register` implements a logic whereby it outputs a predefined value on the `reg_data` bus when the `reg_addr` matches a specified address and the `reg_wr` signal is low; otherwise, it sets the `reg_data` bus to high-impedance ('32'hZZ') to prevent bus contention."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Computers & Internet: Books, Magazines & Newspapers"
+        ]
+    }
+}

@@ -8427,3 +8427,336 @@
         ]
     }
 }
+{
+    "rtl_196": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule readonly_register(\n    reg_clk,    \n    reg_addr,   \n    reg_data,   \n    reg_wr,     \n    value       \n);\n    parameter ADDR = 1;\n    input reg_clk;             \n    input [15:0] reg_addr;     \n    inout [31:0] reg_data;     \n    input reg_wr;              \n    input [31:0] value;        \n    assign reg_data = (reg_addr == ADDR && !reg_wr) ? value : 32'hZZ;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `readonly_register` implements a logic whereby it outputs a predefined value on the `reg_data` bus when the `reg_addr` matches a specified address and the `reg_wr` signal is low; otherwise, it sets the `reg_data` bus to high-impedance ('32'hZZ') to prevent bus contention."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "readonly_register( reg_clk, reg_addr, reg_data, reg_wr, value ); parameter ADDR = 1; input reg_clk; input [15:0] reg_addr; inout [31:0] reg_data; input reg_wr; input [31:0] value; assign reg_data = (reg_addr == ADDR && !reg_wr) ? value : 32'hZZ; endmodule"
+        ]
+    }
+}
+{
+    "rtl_197": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule loadTrack (reset, clk, valid, productiveVector, pgEnable, portStatus, routerLoad, portLoad);\ninput\t\tclk, reset,pgEnable; \ninput [3:0] valid; \ninput [3:0] productiveVector; \ninput [4*`PORT_STAT_SIZE-1:0] portStatus; \noutput [`PG_ROUTER_LOAD_SIZE-1:0] routerLoad; \noutput [4*`PG_PORT_LOAD_SIZE-1:0] portLoad; \nwire [`PORT_STAT_SIZE-1:0] wPortStatus [3:0]; \ngenvar i;\ngenerate\n\tfor (i=0; i<4; i= i+1) begin : split_bus\n\t\tassign wPortStatus[i] = portStatus[i*`PORT_STAT_SIZE+:`PORT_STAT_SIZE];\n\tend\nendgenerate\nreg [`PG_PORT_LOAD_SIZE-1:0] portUtilization [3:0];\nreg [2:0] j;\nalways @ (posedge clk or negedge reset) begin\n\tif (~reset) begin\n\t\tfor (j=0;j<4;j=j+1)\n\t\t\tportUtilization[j] <= 0; \n\tend\n\telse begin\n\t\tif (~pgEnable) begin\n\t\t\tfor (j=0;j<4;j=j+1)\n\t\t\t\tif ((valid[j] && (wPortStatus[j] == `ACTIVE))| (productiveVector[j] && (wPortStatus[j] == `INACTIVE)))\n\t\t\t\t\tportUtilization[j] <= portUtilization[j] + 1; \n\t\tend\n\t\telse\n\t\t\tfor (j=0;j<4;j=j+1)\n\t\t\t\tportUtilization[j] <= 0; \n\tend\nend\nassign routerLoad = portUtilization[3]+portUtilization[2]+portUtilization[1]+portUtilization[0];\nassign portLoad = {portUtilization[3],portUtilization[2],portUtilization[1],portUtilization[0]};\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `loadTrack` implements a functionality to monitor the load on a router and its ports, updating the utilization based on port activity statuses and productive vectors, with router and port load outputs provided accordingly."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "module loadTrack (reset, clk, valid, productiveVector, pgEnable, portStatus, routerLoad, portLoad); input clk, reset, pgEnable; input [3:0] valid; input [3:0] productiveVector; input [4*PG_STAT_SIZE-1:0] portStatus; output [PG_ROUTER_LOAD_SIZE-1:0] routerLoad; output [4*PG_PORT_LOAD_SIZE-1:0] portLoad; wire [PORT_STAT_SIZE-1:0] wPortStatus [3:0]; genvar i; generate for (i=0; i4; i= i+1) begin : split_bus assign wPortStatus[i] = portStatus[i*PORT_STAT_SIZE+:PORT_STAT_SIZE]; end endgenerate reg [PG_PORT_LOAD_SIZE-1:0] portUtilization [3:0]; reg [2:0] j; always @ (posedge clk or negedge reset) begin if (reset) begin for (j=0;j4;j=j+1) portUtilization[j] = 0; end else begin if (pgEnable) begin for (j=0;j4;j=j+1) if ((valid[j] && (wPortStatus[j] == ACTIVE))| (productiveVector[j] && (wPortStatus[j] == INACTIVE))) portUtilization[j] = portUtilization[j] + 1; end else for (j=0;j4;j=j+1) portUtilization[j] = 0; end end assign routerLoad = portUtilization[3]+portUtilization["
+        ]
+    }
+}
+{
+    "rtl_198": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hs__tapvpwrvgnd (\n    input VPWR,\n    input VGND\n);\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_hs__tapvpwrvgnd` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "module sky130_fd_sc_hs__tapvpwrvgnd ( input VPWR, input VGND ); endmodule"
+        ]
+    }
+}
+{
+    "rtl_199": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule clk63_3hz(\n\tinput wire clk, \n\toutput wire outclk \n);\n\treg [19:0] cnt = 0;\n\tassign outclk = cnt == 789900;\n\talways @(posedge clk)\n\t\tif(outclk) \n\t\t\tcnt <= 0; \n\t\telse\n\t\t\tcnt <= cnt + 20'b1; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `clk63_3hz` implements a clock divider generating an output clock 'outclk' that toggles at 1/789901th the frequency of the input clock 'clk'."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "module clk63_3hz( input wire clk, output wire outclk ); reg [19:0] cnt = 0; assign outclk = cnt == 789900; always @(posedge clk) if(outclk) cnt = 0; else cnt = cnt + 20'b1; endmodule"
+        ]
+    }
+}
+{
+    "rtl_200": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_lp__inputiso1p ( \n    X    , \n    A    , \n    SLEEP \n);\n    output X    ; \n    input  A    ; \n    input  SLEEP; \n    supply1 VPWR; \n    supply0 VGND; \n    supply1 VPB ; \n    supply0 VNB ; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_lp__inputiso1p`only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "module sky130_fd_sc_lp__inputiso1p ( X , A , SLEEP ); output X; input A; input SLEEP; supply1 VPWR; supply0 VGND; supply1 VPB; supply0 VNB; endmodule"
+        ]
+    }
+}
+{
+    "rtl_201": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule IBUF(\n    output O, \n    (* iopad_external_pin *)\n    input I   \n);\n  parameter IOSTANDARD = \"default\";\n  parameter IBUF_LOW_PWR = 0;\n  assign O = I;\n  specify\n    (I => O) = 0;\n  endspecify\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `IBUF` implements a simple buffer that directly forwards the input signal `I` to the output `O` without introducing any delay."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "IBUF( output O, (* iopad_external_pin *) input I ); parameter IOSTANDARD = \"default\"; parameter IBUF_LOW_PWR = 0; assign O = I; specify (I => O) = 0; endspecify endmodule"
+        ]
+    }
+}
+{
+    "rtl_202": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule system_zed_vga_0_0(clk, active, rgb565, vga_r, vga_g, vga_b)\n  ;\n  input clk;          \n  input active;       \n  input [15:0] rgb565; \n  output [3:0] vga_r; \n  output [3:0] vga_g; \n  output [3:0] vga_b; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `system_zed_vga_0_0` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "system_zed_vga_0_0(clk, active, rgb565, vga_r, vga_g, vga_b) ; input clk; input active; input [15:0] rgb565; output [3:0] vga_r; output [3:0] vga_g; output [3:0] vga_b; endmodule"
+        ]
+    }
+}
+{
+    "rtl_203": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule INV(\n    (* clkbuf_inv = \"I\" *) \n    output O, \n    input I \n);\n  assign O = !I; \n  specify\n    (I => O) = 127; \n  endspecify \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `INV` implements a simple inverter operation and features a specified propagation delay of 127 time units.\n."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "INV((* clkbuf_inv = \"I\" *) output O, input I); assign O = !I; specify (I => O) = 127; endspecify endmodule"
+        ]
+    }
+}
+{
+    "rtl_204": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule ripemd160_rol_s (\n\tinput clk, \n\tinput [6:0] rx_round, \n\toutput reg [3:0] tx_s0, \n\toutput reg [3:0] tx_s1 \n);\nlocalparam [319:0] first_sequence = {4'd6,4'd5,4'd8,4'd11,4'd14,4'd13,4'd12,4'd5,4'd12,4'd13,4'd8,4'd6,4'd11,4'd5,4'd15,4'd9,4'd12,4'd5,4'd6,4'd8,4'd6,4'd5,4'd14,4'd9,4'd8,4'd9,4'd15,4'd14,4'd15,4'd14,4'd12,4'd11,4'd5,4'd7,4'd12,4'd5,4'd6,4'd13,4'd8,4'd14,4'd15,4'd13,4'd9,4'd14,4'd7,4'd6,4'd13,4'd11,4'd12,4'd13,4'd7,4'd11,4'd9,4'd15,4'd12,4'd7,4'd15,4'd7,4'd9,4'd11,4'd13,4'd8,4'd6,4'd7,4'd8,4'd9,4'd7,4'd6,4'd15,4'd14,4'd13,4'd11,4'd9,4'd7,4'd8,4'd5,4'd12,4'd15,4'd14,4'd11};\nlocalparam [319:0] second_sequence = {4'd11,4'd11,4'd13,4'd15,4'd5,4'd6,4'd13,4'd8,4'd6,4'd14,4'd5,4'd12,4'd9,4'd12,4'd5,4'd8,4'd8,4'd15,4'd5,4'd12,4'd9,4'd12,4'd9,4'd6,4'd14,4'd6,4'd14,4'd14,4'd11,4'd8,4'd5,4'd15,4'd5,4'd7,4'd13,4'd13,4'd14,4'd5,4'd13,4'd12,4'd14,4'd6,4'd6,4'd8,4'd11,4'd15,4'd7,4'd9,4'd11,4'd13,4'd15,4'd6,4'd7,4'd12,4'd7,4'd7,4'd11,4'd9,4'd8,4'd12,4'd7,4'd15,4'd13,4'd9,4'd6,4'd12,4'd14,4'd14,4'd11,4'd8,4'd7,4'd7,4'd5,4'd15,4'd15,4'd13,4'd11,4'd9,4'd9,4'd8};\nalways @ (posedge clk)\nbegin\n\ttx_s0 <= first_sequence >> {rx_round, 2'b00}; \n\ttx_s1 <= second_sequence >> {rx_round, 2'b00}; \nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `ripemd160_rol_s` implements logical operations by right-shifting first_sequence and second_sequence based on the value of the input signal rx_round, and storing the results in the output registers."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "module ripemd160_rol_s ( input clk, input [6:0] rx_round, output reg [3:0] tx_s0, output reg [3:0] tx_s1 ); localparam [319:0] first_sequence = 4'd6,4'd5,4'd8,4'd11,4'd14,4'd13,4'd8,4'd6,4'd11,4'd5,4'd15,4'd9,4'd12,4'd5,4'd6,4'd13,4'd8,4'd14,4'd15,4'd13,4'd9,4'd14,4'd12,4'd11,4'd5,4'd6,4'd13,4'd8,4'd14,4'd15,4'd13,4'd11,4'd8,4'd5,4'd12,4'd14,4'd6,4'd6,4'd14,4'd11,4'd8,4'd5,4'd15,4'd5,4'd12,4'd9,4'd12,4'd9,4'd6,4'd14,4'd6,4'd14,4'd11,4'd8,4'd5,4'd15,4'd5,4'd7,4'd13,4'd13,4'd14,4'd5,4'd13,4'd12,4'd14,4'd6,4'd6,4'd6,4'd8,4'd11,4'd15,4'd7,4'd9,4'd11,4'd13,4'd15,4'd6,4'd7,4'd12,4'd7,4'd8,4'd11,4'd15,4'd6,4'd7,4'd12,4'd14,4'd11,4'd8,4'd7,4'd15,4'd13,4'd9,4'"
+        ]
+    }
+}

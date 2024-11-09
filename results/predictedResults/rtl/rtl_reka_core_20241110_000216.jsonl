@@ -9093,3 +9093,373 @@
         ]
     }
 }
+{
+    "rtl_214": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hs__dfrbp (\n    input  D      ,\n    output Q      ,\n    output Q_N    ,\n    input  RESET_B,\n    input  CLK\n);\n    supply1 VPWR;\n    supply0 VGND;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_hs__dfrbp` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The `sky130_fd_sc_hs__dfrbp` module is a dual-edge triggered D flip-flop with asynchronous reset. It takes a data input `D`, a clock input `CLK`, an active-low reset input `RESET_B`, and produces two outputs: the normal output `Q` and its inverted output `Q_N`."
+        ],
+        "explanation_preds": [
+            "The module is named to indicate it uses the Sky130 technology library (`sky130_fd_sc_hs__`), and it is a dual-flip-flop (`dfrbp`). The presence of both `D`, `CLK`, and `RESET_B` inputs along with `Q` and `Q_N` outputs is characteristic of a dual-edge triggered D flip-flop with reset. The `supply1 VPWR` and `supply0 VGND` declarations indicate the power supply connections."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_215": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule MUXF5(\n    output O,  \n    input I0,  \n    input I1,  \n    input S    \n);\nassign O = S ? I1 : I0;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `MUXF5` implements a 2-to-1 multiplexer, selecting between input `I0` and input `I1` based on the value of the select signal `S`."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The MUXF5 module is a 2:1 multiplexer that selects one of two input signals (I0 or I1) based on the value of the select signal (S) and outputs the selected signal on O. If S is high, I1 is selected; if S is low, I0 is selected."
+        ],
+        "explanation_preds": [
+            "The module uses an assign statement to conditionally assign the value of either I0 or I1 to the output O based on the logic level of the select signal S. This simple yet effective implementation allows for the routing of one of two input signals to a single output line, controlled by the state of the select input."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_216": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule conled(\n    input clk,        \n    output led0,      \n    output led1,      \n    output led2,      \n    output led3,      \n    output led4,      \n    output led5       \n    );\nreg [25:0] counter;\nreg [5:0] ledout;\nassign {led0,led1,led2,led3,led4,led5}=6'b111111;\nassign duty0=0;\nassign duty1=counter[15]&counter[16]&counter[17];\nassign duty2=counter[15]&counter[16];\nassign duty3=counter[15];\nassign duty4=1;\nalways @(posedge clk)\nbegin\n    counter <= counter + 1;\n    case (counter[25:23])\n        3'b000: ledout = {duty0, duty4, duty3, duty2, duty1, duty0};\n        3'b001: ledout = {duty4, duty3, duty2, duty1, duty0, duty0};\n        3'b010: ledout = {duty3, duty2, duty1, duty0, duty0, duty0};\n        3'b011: ledout = {duty2, duty1, duty0, duty0, duty0, duty0};\n        3'b100: ledout = {duty1, duty0, duty0, duty0, duty0, duty4};\n        3'b101: ledout = {duty0, duty0, duty0, duty0, duty4, duty3};\n        3'b110: ledout = {duty0, duty0, duty0, duty4, duty3, duty2};\n        default: ledout = {duty0, duty0, duty4, duty3, duty2, duty1};\n    endcase\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `conled` implements a PWM controller for six LEDs, with individual brightness levels based on specific bits of a counter."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The module `conled` generates a pulsating pattern on six LEDs (`led0` to `led5`) using a 26-bit counter and a case statement. The LEDs light up in a sequence, with each LED's duty cycle controlled by the counter's most significant bits. The pattern repeats every 2^26 clock cycles."
+        ],
+        "explanation_preds": [
+            "The module uses a counter that increments on each positive edge of the clock signal. The state of the counter's most significant three bits (`counter[25:23]`) determines which LEDs are on and their respective duty cycles through a case statement. The `ledout` register holds the current LED state, which is then assigned to the output LEDs. The pattern ensures that each LED is on for a specific portion of the total cycle, creating a pulsating effect."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_217": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule controller(\n  clock, reset, run,\n  wrSize, config_data,\n  validIn, dataIn, busy, arm,\n  send, memoryWrData, memoryRead,\n  memoryWrite, memoryLastWrite);\ninput clock;\ninput reset;\ninput run;\ninput wrSize;\ninput [31:0] config_data;\ninput validIn;\ninput [31:0] dataIn;\ninput busy;\ninput arm;\noutput send;\noutput [31:0] memoryWrData;\noutput memoryRead;\noutput memoryWrite;\noutput memoryLastWrite;\nreg [15:0] fwd, next_fwd; \nreg [15:0] bwd, next_bwd;\nreg send, next_send;\nreg memoryRead, next_memoryRead;\nreg memoryWrite, next_memoryWrite;\nreg memoryLastWrite, next_memoryLastWrite;\nreg [17:0] counter, next_counter;\nwire [17:0] counter_inc = counter+1'b1;\nreg [31:0] memoryWrData, next_memoryWrData;\nalways @(posedge clock)\nbegin\n  memoryWrData = next_memoryWrData;\nend\nalways @*\nbegin\n  #1; next_memoryWrData = dataIn;\nend\nparameter [2:0]\n  IDLE =     3'h0,\n  SAMPLE =   3'h1,\n  DELAY =    3'h2,\n  READ =     3'h3,\n  READWAIT = 3'h4;\nreg [2:0] state, next_state;\ninitial state = IDLE;\nalways @(posedge clock or posedge reset)\nbegin\n  if (reset)\n    begin\n      state = IDLE;\n      memoryWrite = 1'b0;\n      memoryLastWrite = 1'b0;\n      memoryRead = 1'b0;\n    end\n  else\n    begin\n      state = next_state;\n      memoryWrite = next_memoryWrite;\n      memoryLastWrite = next_memoryLastWrite;\n      memoryRead = next_memoryRead;\n    end\nend\nalways @(posedge clock)\nbegin\n  counter = next_counter;\n  send = next_send;\nend\nalways @*\nbegin\n  #1;\n  next_state = state;\n  next_counter = counter;\n  next_memoryWrite = 1'b0;\n  next_memoryLastWrite = 1'b0;\n  next_memoryRead = 1'b0;\n  next_send = 1'b0;\n  case(state)\n    IDLE :\n      begin\n        next_counter = 0;\n        next_memoryWrite = 1;\n\tif (run) next_state = DELAY;\n\telse if (arm) next_state = SAMPLE;\n      end\n    SAMPLE :\n      begin\n        next_counter = 0;\n        next_memoryWrite = validIn;\n        if (run) next_state = DELAY;\n      end\n    DELAY :\n      begin\n\tif (validIn)\n\t  begin\n\t    next_memoryWrite = 1'b1;\n            next_counter = counter_inc;\n            if (counter == {fwd,2'b11}) \t\n\t      begin\t\t\t\t\n\t\tnext_memoryLastWrite = 1'b1;\t\n\t\tnext_counter = 0;\n\t\tnext_state = READ;\n\t      end\n\t  end\n      end\n    READ :\n      begin\n        next_memoryRead = 1'b1;\n        next_send = 1'b1;\n        if (counter == {bwd,2'b11})\n\t  begin\n            next_counter = 0;\n            next_state = IDLE;\n          end\n        else\n\t  begin\n            next_counter = counter_inc;\n            next_state = READWAIT;\n          end\n      end\n    READWAIT :\n      begin\n        if (!busy && !send) next_state = READ;\n      end\n  endcase\nend\nalways @(posedge clock)\nbegin\n  fwd = next_fwd;\n  bwd = next_bwd;\nend\nalways @*\nbegin\n  #1;\n  next_fwd = fwd;\n  next_bwd = bwd;\n  if (wrSize)\n    begin\n      next_fwd = config_data[31:16];\n      next_bwd = config_data[15:0];\n    end\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `controller` implements a memory controller FSM managing data transactions, transitioning through IDLE, SAMPLE, DELAY, READ, and READWAIT states based on input conditions, handling memory read/write operations with control signals synchronized to the clock."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The module `controller` is a state machine that manages data sampling, delay, memory write, and read operations based on input signals. It transitions through states such as `IDLE`, `SAMPLE`, `DELAY`, `READ`, and `READWAIT` to control when to write data to memory, read data from memory, and send signals. The module also handles forward and backward delay settings configured through `wrSize` and `config_data` inputs."
+        ],
+        "explanation_preds": [
+            "The analysis of the Verilog code reveals that the module uses a state machine (`state`, `next_state`) to control its behavior based on input signals like `clock`, `reset`, `run`, `validIn`, and `busy`. It manages memory operations (`memoryWrite`, `memoryRead`, `memoryWrData`) and signal outputs (`send`) according to the current state and input conditions. The delay settings are configured through `wrSize` and `config_data`, which are used to set the `fwd` and `bwd` registers that control the delay duration in the `DELAY` state."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_218": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule random_gen(\n    input           reset,          \n    input           clock,          \n    input           init,           \n    input   [3:0]   retry_count,    \n    output reg      trigger         \n);\nreg [9:0]       random_sequence;\nreg [9:0]       random;\nreg [9:0]       random_counter;\nreg [7:0]       slot_time_counter;\nalways @ (posedge clock)\n    if (reset)\n        random_sequence <= 0;\n    else\n        random_sequence <= {random_sequence[8:0],~(random_sequence[2]^random_sequence[9])};\nalways @ (*)\n    case (retry_count)\n        4'h0    : random = {9'b0, random_sequence[0]};\n        4'h1    : random = {8'b0, random_sequence[1:0]};\n        4'h2    : random = {7'b0, random_sequence[2:0]};\n        4'h3    : random = {6'b0, random_sequence[3:0]};\n        4'h4    : random = {5'b0, random_sequence[4:0]};\n        4'h5    : random = {4'b0, random_sequence[5:0]};\n        4'h6    : random = {3'b0, random_sequence[6:0]};\n        4'h7    : random = {2'b0, random_sequence[7:0]};\n        4'h8    : random = {1'b0, random_sequence[8:0]};\n        4'h9    : random = {      random_sequence[9:0]};\n        default : random = {      random_sequence[9:0]};\n    endcase\nalways @ (posedge clock)\n    if (reset)\n        slot_time_counter <= 0;\n    else if(init)\n        slot_time_counter <= 0;\n    else if(!trigger)\n        slot_time_counter <= slot_time_counter + 1;\nalways @ (posedge clock)\n    if (reset)\n        random_counter <= 0;\n    else if (init)\n        random_counter <= random;\n    else if (random_counter != 0 && slot_time_counter == 255)\n        random_counter <= random_counter - 1;\nalways @ (posedge clock)\n    if (reset)\n        trigger <= 1;\n    else if (init)\n        trigger <= 0;\n    else if (random_counter == 0)\n        trigger <= 1;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `random_gen` implements a pseudo-random number generator using a linear feedback shift register (LFSR) and controls a trigger event based on the generated number and retry count. It incorporates signal synchronization on the positive clock edge."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The `random_gen` module generates a random trigger signal based on a linear feedback shift register (LFSR) and a configurable retry count. It initializes the LFSR on reset or when `init` is high and decrements a counter (`random_counter`) from a randomly generated value (`random`) until it reaches zero, at which point it sets the `trigger` signal high for one clock cycle."
+        ],
+        "explanation_preds": [
+            "The LFSR (`random_sequence`) produces a pseudo-random sequence, which is then used to set the initial value of `random_counter`. The `slot_time_counter` is used to measure time intervals, and when it reaches 255, `random_counter` is decremented if it is not already zero. Once `random_counter` reaches zero, `trigger` is set high for one cycle, after which it is reset to low until `random_counter` reaches zero again."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_219": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule VGAFrequency (\n\tareset,  \n\tinclk0,  \n\tc0       \n);\n\tinput\t  areset;  \n\tinput\t  inclk0;  \n\toutput\t  c0;      \n`ifndef ALTERA_RESERVED_QIS\n`endif\n\ttri0\t  areset;\n`ifndef ALTERA_RESERVED_QIS\n`endif\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `VGAFrequency` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The VGAFrequency module generates a clock signal (c0) with a specific frequency based on the input clock signal (inclk0) and a reset signal (areset). When areset is high, the output c0 is reset to low. Otherwise, c0 oscillates at a frequency derived from inclk0."
+        ],
+        "explanation_preds": [
+            "The module takes an input clock signal (inclk0) and a reset signal (areset). The output signal (c0) is controlled by these inputs. When areset is active (high), c0 is forced to low, effectively resetting the module. When areset is inactive (low), c0 generates a clock signal with a frequency that is determined by the internal logic of the module, which uses inclk0 as its reference. The specific frequency division or generation logic is not shown in the provided code snippet."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_220": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_lp__sdfbbp (\n    Q      , \n    Q_N    , \n    D      , \n    SCD    , \n    SCE    , \n    CLK    , \n    SET_B  , \n    RESET_B \n);\n    output Q      ; \n    output Q_N    ; \n    input  D      ; \n    input  SCD    ; \n    input  SCE    ; \n    input  CLK    ; \n    input  SET_B  ; \n    input  RESET_B; \n    supply1 VPWR; \n    supply0 VGND; \n    supply1 VPB ; \n    supply0 VNB ; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_lp__sdfbbp` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The `sky130_fd_sc_lp__sdfbbp` module is a synchronous D flip-flop with set and reset functionality, featuring scan enable and clock enable inputs. It has two outputs (`Q` and `Q_N`), which are the normal and inverted outputs of the flip-flop, respectively. The module takes a data input (`D`), a scan data input (`SCD`), a scan enable input (`SCE`), a clock input (`CLK`), a set input (`SET_B`), and a reset input (`RESET_B`). The module operates based on the clock signal and can be set, reset, or loaded with data based on the state of the control inputs."
+        ],
+        "explanation_preds": [
+            "The identification of the module as a D flip-flop comes from the presence of `D`, `CLK`, `Q`, and `Q_N` ports. The `SET_B` and `RESET_B` ports indicate asynchronous set and reset capabilities, respectively. The `SCD` and `SCE` ports suggest that the flip-flop is scan-enabled, allowing for easier testing and debugging in larger digital systems. The explanation considers the typical functionality of each port in a flip-flop and how they interact to control the module's behavior."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_221": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule UDP_LATCH1(Q_, G1, G2, D1, D2);\n    output Q_; \n    input G1, G2, D1, D2; \n    reg Q_;\n    always @ (G1 or G2 or D1 or D2) begin\n        if ((G1 == 1) & (G2 == 0)) Q_ <= #1 D1;\n        else if ((G1 == 0) & (G2 == 1)) Q_ <= #1 D2;\n    end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `UDP_LATCH1` implements a latch that stores data from D1 or D2 based on the control signals G1 and G2, updating the output Q_ after a 1-time unit delay and remaining in the current state if both control signals are the same."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The UDP_LATCH1 module is a dual-edge triggered latch with two data inputs (D1 and D2), two gate inputs (G1 and G2), and one output (Q_). It captures the value of D1 when G1 is high and G2 is low, and captures the value of D2 when G1 is low and G2 is high. The latch updates its output Q_ with a one-unit delay (#1) after the active gate edge."
+        ],
+        "explanation_preds": [
+            "The functionality is determined by the `always` block, which is sensitive to changes on G1, G2, D1, and D2. The two `if-else if` statements define the conditions under which the latch captures data from either D1 or D2, based on the state of the gate inputs. The `#1` delay specifies the timing of the output update after the active gate transition."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_222": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule beh_vlog_ff_ce_clr_v8_0 (Q, C, CE, CLR, D);\n  parameter INIT = 0; \n  localparam FLOP_DELAY = 100; \n  output Q; \n  input  C, CE, CLR, D; \n  reg Q;\n  initial Q= 1'b0;\n  always @(posedge C ) \n    if (CLR) \n      Q <= 1'b0; \n    else if (CE) \n      Q <= #FLOP_DELAY D; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `beh_vlog_ff_ce_clr_v8_0` implements a flip-flop with clock enable and clear functionality, where the output Q is asynchronously reset to 0 on a positive clock edge if the clear input CLR is high; otherwise, Q captures the input D after a delay specified by FLOP_DELAY when the clock enable input CE is high, retaining its state if CE is inactive."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "This Verilog module implements a synchronous D flip-flop with enable (CE) and asynchronous clear (CLR) inputs. When the clock (C) rises and the enable (CE) is high, the data input (D) is loaded into the flip-flop's output (Q) after a delay specified by FLOP_DELAY. If the asynchronous clear (CLR) input is high, the output (Q) is immediately set to 0, regardless of the clock or enable signals. The initial value of Q is set to 0."
+        ],
+        "explanation_preds": [
+            "The module uses an always block triggered by the positive edge of the clock signal (posedge C) to control the behavior of the flip-flop. The if-else statements within the always block handle the asynchronous clear and synchronous enable functionalities. The parameter INIT sets the initial value of Q, and the localparam FLOP_DELAY defines the propagation delay through the flip-flop."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_223": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule Event_Pulse(\n    input in,               \n    input clk,              \n    output rising_edge,     \n    output falling_edge,    \n    output both_edges       \n    );\n    reg [1:0] reg_i = 2'b0; \n    assign rising_edge = (~reg_i[1]) &  reg_i[0];  \n    assign falling_edge =  reg_i[1]  &(~reg_i[0]); \n    assign both_edges = ((~reg_i[1]) &  reg_i[0]) | (reg_i[1] & (~reg_i[0]));   \n    always @(posedge clk)\n    begin\n        reg_i[0] <= in;\n        reg_i[1] <= reg_i[0];\n    end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `Event_Pulse` implements a detector for rising and falling edge transitions of the input signal, generating separate outputs for rising edges, falling edges, and both edges based on the sampled input signal at the rising clock edge."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The module `Event_Pulse` detects and generates pulse signals for rising edges, falling edges, and both edges of the input signal `in` on the rising edge of the clock signal `clk`."
+        ],
+        "explanation_preds": [
+            "The module uses a two-bit register `reg_i` to capture the current and previous states of the input signal. The assignments for `rising_edge`, `falling_edge`, and `both_edges` compare the current and previous states to detect the desired edge transitions. The `always @(posedge clk)` block updates the register on each rising edge of the clock, ensuring synchronous operation."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}

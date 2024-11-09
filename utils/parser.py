@@ -1,5 +1,5 @@
 from pyexpat import model
-from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series, query_reka_series, query_instructblip_flan_t5_xl, query_instructblip_flan_t5_xxl, query_blip2_flan_t5_xl, query_blip2_flan_t5_xxl, query_chatglm3_6b, query_llama3_1_70b_instruct, query_llama3_1_8b_instruct
+from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series, query_reka_series, query_instructblip_flan_t5_xl, query_instructblip_flan_t5_xxl, query_blip2_flan_t5_xl, query_blip2_flan_t5_xxl, query_chatglm3_6b, query_llama3_1_70b_instruct, query_llama3_1_8b_instruct, query_llama3_2_11b_vision_instruct
 import json
 import base64
 import time
@@ -59,6 +59,7 @@ def choose_model(model_name):
         "llama3_8b_instruct": query_llama3_8b_instruct,
         "llama3_1_8b_instruct": query_llama3_1_8b_instruct,
         "llama3_1_70b_instruct": query_llama3_1_70b_instruct,
+        "llama3_2_11b_vision_instruct": query_llama3_2_11b_vision_instruct,
         "mistrial_7b": query_mistrial_7b,
         "gpt35": query_gpt35,
         "gpt4o": query_gpt4o,
@@ -101,7 +102,8 @@ def check_if_multi_modal(model_name):
         "instructblip_flan_t5_xxl": "type_raw",
         "blip2_flan_t5_xl": "type_raw",
         "blip2_flan_t5_xxl": "type_raw",
-        "chatglm3_6b": False
+        "chatglm3_6b": False,
+        "llama3_2_11b_vision_instruct": "type_raw"
     }
 
     return is_multi_mapping[model_name]

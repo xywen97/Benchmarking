@@ -13,3 +13,4 @@
 11. 5010: blip captioning 
 12. 5011: llama3.1 70b instruct
 13. 5012: llama3.1 8b instruct
+14. 5013: llama3.2 11b vision instruct

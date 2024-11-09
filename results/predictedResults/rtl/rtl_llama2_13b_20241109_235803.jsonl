@@ -3044,3 +3044,1311 @@
         ]
     }
 }
+{
+    "rtl_60": {
+        "statement": "Signal strength in Verilog",
+        "question": [
+            "What is signal strength in Verilog?",
+            "How does signal strength affect logic value resolution?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Signal strength determines the driving capability of a signal.",
+            "It affects which value is resolved when multiple drivers are present on a net."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "Signal strength in Verilog refers to the magnitude of a signal at a particular point in a circuit. It is measured in volts and is determined by the strength of the driving circuit and the load connected to the signal. A higher signal strength indicates a stronger signal, while a lower signal strength indicates a weaker signal.",
+            "Signal strength in Verilog affects the resolution of logic values by determining the threshold at which a signal is considered to be in a specific state."
+        ],
+        "explanation_preds": [
+            "Signal strength is an important concept in Verilog as it determines the reliability and accuracy of the circuit's operation. A weak signal can cause errors in the circuit's operation, while a strong signal ensures proper functioning of the circuit.",
+            "When a signal is weak, it may not be able to resolve its value clearly, leading to uncertainty in the logic operations that rely on it. A strong signal, on the other hand, allows for more accurate resolution of logic values and reduces the likelihood of uncertainty."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_61": {
+        "statement": "Clocking blocks in Verilog",
+        "question": [
+            "What are clocking blocks in Verilog, and why are they used?",
+            "Explain the advantages of using clocking blocks."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Clocking blocks are used for specifying clock signals and synchronization for sampling inputs and driving outputs.",
+            "They improve timing accuracy and make testbench coding easier."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "Clocking blocks in Verilog are used to ensure that the logic inside the block is executed only when the clock signal is asserted.",
+            "True"
+        ],
+        "explanation_preds": [
+            "Clocking blocks are used to synchronize the execution of logic inside the block with the clock signal, ensuring that the logic is executed only when the clock is asserted. This is useful for preventing metastability and ensuring that the design operates correctly.",
+            "Clocking blocks in Verilog provide several advantages, including better design organization, improved code readability, and enhanced timing control. By grouping related clocking logic together, designers can better manage their designs and avoid metastability issues. Additionally, clocking blocks can be easily reused and modified throughout a design, making them a valuable tool for efficient and flexible verilog coding."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_62": {
+        "statement": "FSM coding in Verilog",
+        "question": [
+            "What are the key steps involved in writing FSM code in Verilog?",
+            "Why is it recommended to separate combinational and sequential logic in FSM coding?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Define states, define inputs and outputs, use always blocks for sequential and combinational logic.",
+            "To simplify debugging and ensure proper synthesis."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "hard",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "{'key steps involved in writing FSM code in Verilog': ['1. Define the states and their properties', '2. Define the inputs and outputs of each state', '3. Implement the transition logic between states']}",
+            "It is recommended to separate combinational and sequential logic in FSM coding because it improves the readability, maintainability, and scalability of the code."
+        ],
+        "explanation_preds": [
+            "To write FSM code in Verilog, one should first define the states and their properties, then define the inputs and outputs of each state, and finally implement the transition logic between states using Verilog's sensitivity list and assignments.",
+            "Separating combinational and sequential logic allows for a clearer organization of the code, making it easier to understand and modify. Additionally, it enables better reuse of code and modularity, which is particularly important in large and complex FSM designs."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_63": {
+        "statement": "Verilog casex and casez statements",
+        "question": [
+            "What is the difference between casex and casez statements in Verilog?",
+            "When should casex be used instead of casez?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Casez treats Z as a don't-care, while casex treats both X and Z as don't-cares.",
+            "Casex is used when both X and Z should be treated as don't-cares."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "Casex and casez statements in Verilog are both used for conditional statements, but they differ in their handling of the expression evaluation and the number of arguments they can take.",
+            "Use casex instead of casez when you want to assign a value to a variable based on a condition that involves a bitwise operation."
+        ],
+        "explanation_preds": [
+            "Casex statements evaluate the expression once and use it for all matching branches, while casez statements evaluate the expression for each branch individually. Additionally, casex statements can take a single expression as an argument, while casez statements can take multiple expressions.",
+            "Casex allows you to perform bitwise operations on the condition expression, which can be useful when you want to assign a value based on a specific bit pattern in the input signal. In contrast, casez only allows you to test for equality or inequality of the input signal with a constant or a variable, and does not support bitwise operations."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_64": {
+        "statement": "Verilog testbenches and simulation",
+        "question": [
+            "What is a testbench in Verilog?",
+            "How do you use a testbench to verify RTL design functionality?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "A testbench is a piece of code used to simulate and verify the behavior of the design under test (DUT).",
+            "By applying inputs and checking the outputs of the DUT."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "A testbench in Verilog is a Verilog module that contains test cases for verifying the functionality of a digital circuit or system.",
+            "A testbench is used to verify the functionality of an RTL design by providing a set of inputs and checking the expected outputs. The testbench is written in Verilog and is connected to the RTL design through a test interface. The testbench exercises the RTL design with a series of test cases, and checks the outputs against the expected results to ensure that the design is functioning correctly."
+        ],
+        "explanation_preds": [
+            "A testbench is a critical component of the verification flow in a digital design, as it provides a set of test cases that exercise the functionality of the design and ensure that it meets the desired specifications. A testbench typically includes a set of modules that simulate the external interfaces of the design, as well as a set of test cases that exercise the design's functionality.",
+            "No explanation found"
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_65": {
+        "statement": "Understanding Flip-Flops in Verilog",
+        "question": [
+            "Explain the concept of a flip-flop in Verilog and provide an example of its usage in a real-world application."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "In Verilog, a flip-flop is a fundamental sequential logic element used to store and synchronize data in digital circuits, commonly used in registers or memory elements."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "True"
+        ],
+        "explanation_preds": [
+            "A flip-flop is a digital electronic circuit that has two stable states and can be used to store binary data. In Verilog, a flip-flop can be implemented using a pair of gates that control the input and output of the circuit. For example, a SR flip-flop can be implemented in Verilog as follows: \n\n`SR_FF sr_ff (clock, reset, set, output);`\n\nThis code defines a SR flip-flop with inputs clock, reset, set, and output, and can be used in a real-world application such as a digital clock to store the current time."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_66": {
+        "statement": "Role of Testbenches in Verilog",
+        "question": [
+            "What is the purpose of a testbench in Verilog, and why is it essential during the development process?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "A testbench in Verilog simulates and verifies design functionality, ensuring correctness before synthesis, by generating inputs and monitoring outputs."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"A testbench in Verilog is a critical component of the verification process, serving as a set of test cases that exercise the design and verify its functionality. The purpose of a testbench is to ensure that the design meets the desired specifications and behaves as expected under various input conditions. Essentially, a testbench is essential during the development process to validate the correctness and reliability of the design before it is deployed in the final product.\"\"explanation\": \"A testbench in Verilog is a set of test cases that exercise the design and verify its functionality. It is essential during the development process to ensure that the design meets the desired specifications and behaves as expected under various input conditions. The testbench helps to validate the correctness and reliability of the design before it is deployed in the final product.\"}"
+        ]
+    }
+}
+{
+    "rtl_67": {
+        "statement": "Blocking vs Non-blocking Assignments",
+        "question": [
+            "Explain the difference between blocking and non-blocking assignments in Verilog."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments execute sequentially, while non-blocking assignments allow concurrent updates, better suited for modeling hardware flip-flops."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "Blocking assignments are used to assign values to variables in a sequential manner, while non-blocking assignments are used to assign values to variables in a parallel manner."
+        ],
+        "explanation_preds": [
+            "Blocking assignments are used when the value of a variable is dependent on the previous value of another variable, and non-blocking assignments are used when the value of a variable can be computed independently of other variables."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_68": {
+        "statement": "4-to-1 Multiplexer in Verilog",
+        "question": [
+            "Provide an example of a Verilog module that implements a 4-to-1 multiplexer (MUX) and explain its functionality."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "A 4-to-1 MUX selects one of four 1-bit inputs based on a 2-bit selection input, using a case statement for conditional selection."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": {\"module\": \"module_name(\\n\\tinput[4:0] sel, \\n\\tinput[4:0] input_a, input_b, input_c, input_d, \\n\\toutput reg out);\\n\\tbegin\\n\\tcase(sel):\\n\\tcase(0) out <= input_a;\\n\\tcase(1) out <= input_b;\\n\\tcase(2) out <= input_c;\\n\\tcase(3) out <= input_d;\\n\\tendcase\\n\\tendmodule\";\"explanation\": \"This Verilog module implements a 4-to-1 multiplexer (MUX) that selects one of the four input signals (input_a, input_b, input_c, and input_d) based on the value of the selection signal (sel). The output of the MUX is a registor output (out) that is determined by the selected input signal.\"}}The above code is a Verilog module that implements a 4-to-1 multiplexer (MUX) using a case statement. The selection signal (sel) is a 4-bit input that determines which of the four input signals (input_a, input_b, input_c, and input_d) is selected as the output (out). The output (out) is a registor output."
+        ]
+    }
+}
+{
+    "rtl_69": {
+        "statement": "Purpose of always Blocks",
+        "question": [
+            "Explain the purpose of the `always` block in Verilog and the difference between `always @(*)` and `always @(posedge clk)`."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The `always` block is used for combinational (`always @(*)`) or sequential (`always @(posedge clk)`) logic; `@(*)` is for combinational, and `@(posedge clk)` is for clock-triggered updates."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": {\"The purpose of the `always` block in Verilog is to define a combinational logic function that is always executed regardless of the clock edge.\"},\"explanation\": \"The `always` block is used to implement finite state machines, counters, and other combinational logic functions in Verilog. The `@(*)` and `@(posedge clk)` keywords are used to specify the input signals that the block should respond to. The `@(*)` keyword specifies that the block should respond to all input signals, while the `@(posedge clk)` keyword specifies that the block should only respond to the positive edge of the clock signal.\"}"
+        ]
+    }
+}
+{
+    "rtl_70": {
+        "statement": "Parameterized Modules in Verilog",
+        "question": [
+            "Explain the concept of parameterized modules in Verilog and provide an example."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Parameterized modules allow for flexible module instantiation by specifying parameters, e.g., creating adders with different bit widths."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "True"
+        ],
+        "explanation_preds": [
+            "Parameterized modules in Verilog allow for the creation of modular and reusable designs by defining a module with input and output parameters. These parameters can be set to specific values or generated dynamically during synthesis, enabling the module to be used in a variety of contexts."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_71": {
+        "statement": "Verilog Case Statement Usage",
+        "question": [
+            "What is the purpose of the `case` statement in Verilog, and how is it used? Provide an example."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The `case` statement is used for multi-way conditional logic, allowing selection of actions based on matching values of an input."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "The `case` statement in Verilog is used to implement conditional statements that allow for multiple possible outcomes based on the value of an expression. It is used to simplify code and improve readability by reducing the number of if-else statements needed to implement a particular logic."
+        ],
+        "explanation_preds": [
+            "The `case` statement in Verilog allows for a more concise and organized way of implementing conditional statements, especially when there are multiple possible outcomes based on the value of an expression. For example, instead of using multiple if-else statements to implement a logic, the `case` statement can be used to simplify the code and improve readability."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_72": {
+        "statement": "Finite State Machine (FSM) Concept",
+        "question": [
+            "Explain the concept of a finite state machine (FSM) in Verilog and its significance in digital circuit design."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "FSM is used to model control logic in digital circuits, consisting of states and transitions based on inputs, commonly used in control units."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "A Finite State Machine (FSM) in Verilog is a behavioral model that represents a system that can be in one of a finite number of states, and can change state based on inputs and internal logic. The significance of FSMs in digital circuit design is that they allow for the creation of complex digital systems that can be easily analyzed, verified, and tested. By breaking down a system into smaller, more manageable states, FSMs provide a structured approach to designing and verifying digital circuits."
+        ],
+        "explanation_preds": [
+            "An FSM in Verilog is a way to model a system that can be in one of a finite number of states, and can change state based on inputs and internal logic. This allows for the creation of complex digital systems that can be easily analyzed, verified, and tested by breaking down the system into smaller, more manageable states."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_73": {
+        "statement": "Purpose of generate Construct",
+        "question": [
+            "Explain the purpose of the `generate` construct in Verilog and provide an example of its usage."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The `generate` construct is used for creating repetitive hardware structures, such as arrays of similar modules or conditional instantiations."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "The `generate` construct in Verilog is used to create a block of code that is executed once for each input vector element."
+        ],
+        "explanation_preds": [
+            "The `generate` block is used to create a loop that iterates over the input vector and executes the code inside the block once for each element. The input vector is used to control the iteration of the loop, and the code inside the `generate` block is executed for each element in the input vector."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_74": {
+        "statement": "Clock Domain Crossing (CDC) in Verilog",
+        "question": [
+            "Explain the concept of clock domain crossing (CDC) in Verilog and the challenges associated with it. Provide an example of how to handle CDC."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "CDC refers to data transfer between different clock domains, presenting challenges like metastability; it is handled using synchronizers or FIFOs."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "Clock Domain Crossing (CDC) in Verilog refers to the situation where two or more modules or components with different clock domains interact with each other. This can lead to metastability and other issues if not handled properly. CDC can be handled using techniques such as clock domain crossing interfaces, phase-locked loops, or asynchronous handshaking protocols."
+        ],
+        "explanation_preds": [
+            "CDC is a common challenge in Verilog design, as modern systems often consist of multiple clock domains, each with its own clock frequency and phase. Proper handling of CDC is essential to ensure reliable and predictable system behavior."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_75": {
+        "statement": "Blocking vs Non-blocking Assignments",
+        "question": [
+            "What is the difference between blocking and non-blocking assignments in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments (`=`) execute sequentially, while non-blocking assignments (`<=`) allow concurrent updates. Blocking assignments are used for combinational logic, and non-blocking are used in sequential logic."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "Blocking assignments in Verilog are assignments that wait for the completion of a task before proceeding, while non-blocking assignments do not wait and allow the task to be executed in parallel."
+        ],
+        "explanation_preds": [
+            "Blocking assignments are typically used when the result of the assignment is required before the next step in the design can be executed, while non-blocking assignments are used when the result can be computed in parallel without affecting the flow of the design."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_76": {
+        "statement": "Tasks vs Functions in Verilog",
+        "question": [
+            "What are the differences between a task and a function in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Functions cannot contain time delays and return only one value, whereas tasks can have multiple output values, include time delays, and be used in both sequential and combinational logic."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": {\"tasks\" and \"functions\" in Verilog are both used to describe the behavior of a digital circuit, but they serve different purposes and have different characteristics.\"explanation\": Tasks in Verilog are used to describe a sequence of statements that perform a specific action or set of actions, while functions are used to encapsulate a set of statements that perform a specific function or set of functions. Tasks are typically used for implementing finite state machines, while functions are used for more general purpose coding.}}"
+        ]
+    }
+}
+{
+    "rtl_77": {
+        "statement": "Difference Between Wire and Reg",
+        "question": [
+            "What is the difference between `wire` and `reg` in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "`wire` is used for connecting combinational logic, whereas `reg` stores values between clock cycles. `wire` cannot store values without a driver."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "In Verilog, `wire` and `reg` are both used to declare variables, but they have different characteristics and uses."
+        ],
+        "explanation_preds": [
+            "A `wire` is a variable that is not registered, meaning it is not guaranteed to be stored in a specific location in the hardware. It is typically used for signals that are not stored long-term or for intermediate calculations. On the other hand, a `reg` is a registered variable that is guaranteed to be stored in a specific location in the hardware. It is typically used for storing data that needs to be retained across clock cycles."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_78": {
+        "statement": "Generate Block Usage in Verilog",
+        "question": [
+            "What is a generate block in Verilog and how is it used?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Generate blocks are used to replicate hardware structures conditionally or in loops, making it easier to create multiple instances of the same module with different parameters."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "A generate block in Verilog is a block of code that is executed once per clock cycle, allowing for the creation of a finite state machine (FSM) or a sequential logic circuit. The generate block takes in a clock signal and produces a set of outputs based on the current state of the FSM or the inputs to the circuit. The outputs of the generate block can be used to drive other parts of the circuit or to trigger events."
+        ],
+        "explanation_preds": [
+            "The generate block is a powerful construct in Verilog that allows designers to create complex digital circuits with a high degree of control over the flow of data and the timing of events. By using a generate block, designers can create circuits that can be easily tested and verified, and that are highly optimized for performance and area."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_79": {
+        "statement": "Synchronous vs Asynchronous Reset",
+        "question": [
+            "What is the difference between synchronous and asynchronous reset in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "In synchronous reset, the reset action occurs with the clock edge, while asynchronous reset works independently of the clock. Synchronous resets are generally preferred for their ease of timing analysis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "Synchronous reset in Verilog refers to the reset signal being applied to the clock domain of the circuit, while asynchronous reset refers to the reset signal being applied to the data domain of the circuit."
+        ],
+        "explanation_preds": [
+            "Synchronous reset is used when the reset signal is generated by an external source and is applied to the clock domain of the circuit, allowing the circuit to be reset only when the clock is in the reset state. Asynchronous reset is used when the reset signal is generated internally and is applied to the data domain of the circuit, allowing the circuit to be reset at any time, regardless of the clock state."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_80": {
+        "statement": "Difference Between $stop and $finish",
+        "question": [
+            "What is the difference between `$stop` and `$finish` in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "`$stop` pauses the simulation and allows user interaction, whereas `$finish` ends the simulation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"$stop and $finish are both used to terminate a process or a task in Verilog, but they serve slightly different purposes.\"\"explanation\": \"$stop is used to stop the current process or task immediately, while $finish is used to indicate that the process or task has completed successfully. $stop is typically used in situations where the process needs to be terminated immediately, while $finish is used to indicate that the process has completed without any errors.\"}"
+        ]
+    }
+}
+{
+    "rtl_81": {
+        "statement": "Clock Generation in Testbench",
+        "question": [
+            "How can you generate two different clocks in a Verilog testbench?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "You can generate clocks using `always` blocks with different time delays for each clock. Example: `always #5 clk1 = ~clk1; always #4 clk2 = ~clk2;`"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "You can generate two different clocks in a Verilog testbench using the `clock` statement with different frequencies or phases."
+        ],
+        "explanation_preds": [
+            "To generate two different clocks, you can use two separate `clock` statements with different frequencies or phases. For example, you can use one clock with a frequency of 100 MHz and another clock with a frequency of 200 MHz. You can also use the `phase` attribute to specify the phase difference between the two clocks."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_82": {
+        "statement": "Difference Between Full and Parallel Case Statements",
+        "question": [
+            "What is the difference between full and parallel case statements in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "In a full case, all possible conditions are covered, while in a parallel case, each input value maps to a unique output without overlap. Parallel case ensures no two conditions match simultaneously."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "Full and parallel case statements in Verilog are both used to implement conditional statements, but they differ in their structure and application."
+        ],
+        "explanation_preds": [
+            "Full case statements are used to implement a single, sequential branch of logic, while parallel case statements allow for multiple branches of logic to be executed simultaneously. Full case statements are more commonly used for structured control flow, while parallel case statements are useful for implementing complex decision-making logic."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_83": {
+        "statement": "FIFO Underflow and Overflow",
+        "question": [
+            "What are underflow and overflow conditions in FIFO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Underflow occurs when reading from an empty FIFO, and overflow occurs when writing to a full FIFO. These conditions can lead to data corruption if not handled properly."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": {\"underflow\": A condition where there are no items available in the buffer to be fetched, and the producer has to wait until an item is added to the buffer.\"overflow\": A condition where the buffer is full and the producer has to discard the oldest item in the buffer to make space for a new item.},\"explanation\": The FIFO (First-In-First-Out) buffer is a circular buffer, where the producer adds items to one end of the buffer and the consumer removes items from the other end. Underflow occurs when the producer tries to add an item to an empty buffer, while overflow occurs when the buffer is full and the producer has to discard an item to make space for a new one."
+        ]
+    }
+}
+{
+    "rtl_84": {
+        "statement": "Verilog Event Scheduler",
+        "question": [
+            "Explain the Verilog event scheduler and its importance."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The event scheduler in Verilog manages the order of execution of events in different time slots, including active, inactive, non-blocking assignments, and monitor regions, to ensure correct simulation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "The Verilog event scheduler is a critical component of modern FPGA-based systems, enabling the efficient execution of tasks and the handling of external events."
+        ],
+        "explanation_preds": [
+            "The Verilog event scheduler allows for the precise control of task execution and handling of external events, such as interrupts or I/O operations. By prioritizing tasks and scheduling them for execution at specific times, the event scheduler ensures that the system can respond to external events in a timely manner while minimizing latency and maximizing throughput."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_85": {
+        "statement": "Blocking vs Non-blocking Assignments",
+        "question": [
+            "What is the difference between blocking and non-blocking assignments in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments (`=`) execute sequentially, while non-blocking assignments (`<=`) allow concurrent updates. Blocking assignments are used for combinational logic, and non-blocking are used in sequential logic."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "Blocking assignments in Verilog are assignments that wait for the completion of a task before proceeding, while non-blocking assignments do not wait and allow the task to run concurrently."
+        ],
+        "explanation_preds": [
+            "Blocking assignments are typically used when the assignment depends on the result of a previous task, while non-blocking assignments are used when the assignment can be done independently of other tasks. This allows for more efficient use of resources and improved performance."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_86": {
+        "statement": "Tasks vs Functions in Verilog",
+        "question": [
+            "What are the differences between a task and a function in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Functions cannot contain time delays and return only one value, whereas tasks can have multiple output values, include time delays, and be used in both sequential and combinational logic."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": {\"tasks\" and \"functions\" in Verilog are both used to implement reusable code blocks, but they have different purposes and characteristics:\"explanation\": Tasks in Verilog are used to group a set of statements together to perform a specific action, whereas functions are used to encapsulate a set of statements that perform a specific task. Tasks are typically used for sequential logic, while functions are used for combinational logic. Additionally, tasks can have multiple entries and exits, while functions can only have one entry and one exit.}}"
+        ]
+    }
+}
+{
+    "rtl_87": {
+        "statement": "Difference Between Wire and Reg",
+        "question": [
+            "What is the difference between `wire` and `reg` in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "`wire` is used for connecting combinational logic, whereas `reg` stores values between clock cycles. `wire` cannot store values without a driver."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "In Verilog, `wire` and `reg` are both used to declare variables, but they have different scopes and behaviors."
+        ],
+        "explanation_preds": [
+            "A `wire` is a variable that is declared as a signal and has a dynamic scope, meaning its value can be changed after it is declared. A `reg` is a variable that is declared as a register and has a local scope, meaning its value is retained across clock cycles."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_88": {
+        "statement": "Generate Block Usage in Verilog",
+        "question": [
+            "What is a generate block in Verilog and how is it used?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Generate blocks are used to replicate hardware structures conditionally or in loops, making it easier to create multiple instances of the same module with different parameters."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "A generate block in Verilog is a block of code that is executed once for each clock cycle, allowing for the creation of a custom clock domain within a larger design. It is used to generate a clock signal and any associated signals that are derived from it, such as reset signals or strobe signals. The generate block takes a clock input and produces a set of outputs that are synchronized to the clock signal."
+        ],
+        "explanation_preds": [
+            "The generate block is a powerful tool in Verilog that allows designers to create custom clock domains within their designs. By using the generate block, designers can create signals that are synchronized to a specific clock signal, which is useful for creating complex digital circuits that require multiple clock domains."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_89": {
+        "statement": "Synchronous vs Asynchronous Reset",
+        "question": [
+            "What is the difference between synchronous and asynchronous reset in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "In synchronous reset, the reset action occurs with the clock edge, while asynchronous reset works independently of the clock. Synchronous resets are generally preferred for their ease of timing analysis."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "Synchronous reset in Verilog refers to the reset signal being applied to the clock domain of the circuit, while asynchronous reset refers to the reset signal being applied to the data domain."
+        ],
+        "explanation_preds": [
+            "Synchronous reset ensures that all flops in the circuit are reset at the same clock edge, while asynchronous reset can be applied at any time and may not be synchronized with the clock."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_90": {
+        "statement": "Difference Between $stop and $finish",
+        "question": [
+            "What is the difference between `$stop` and `$finish` in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "`$stop` pauses the simulation and allows user interaction, whereas `$finish` ends the simulation."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"$stop and $finish are both used to terminate a process or a task in Verilog, but they have slightly different meanings and uses.\"\"explanation\": \"$stop is used to stop the current process or task immediately, while $finish is used to indicate that the process or task has completed successfully. $stop is typically used in situations where the process needs to be terminated immediately, while $finish is used to indicate that the process has completed as expected.\"}"
+        ]
+    }
+}
+{
+    "rtl_91": {
+        "statement": "Clock Generation in Testbench",
+        "question": [
+            "How can you generate two different clocks in a Verilog testbench?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "You can generate clocks using `always` blocks with different time delays for each clock. Example: `always #5 clk1 = ~clk1; always #4 clk2 = ~clk2;`"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "You can generate two different clocks in a Verilog testbench using the `clock` and `clock_domain` statements."
+        ],
+        "explanation_preds": [
+            "The `clock` statement is used to define a clock signal, while the `clock_domain` statement is used to create a new clock domain. By using these statements, you can generate two different clocks in your testbench and ensure that they are properly synchronized."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_92": {
+        "statement": "Difference Between Full and Parallel Case Statements",
+        "question": [
+            "What is the difference between full and parallel case statements in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "In a full case, all possible conditions are covered, while in a parallel case, each input value maps to a unique output without overlap. Parallel case ensures no two conditions match simultaneously."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "Full case statements and parallel case statements in Verilog are both used to implement conditional statements, but they differ in their syntax and application."
+        ],
+        "explanation_preds": [
+            "Full case statements are used when the condition to be evaluated is a single expression, and the statements inside the case are executed sequentially. Parallel case statements, on the other hand, are used when the condition is a vector of expressions, and the statements inside the case are executed in parallel."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_93": {
+        "statement": "FIFO Underflow and Overflow",
+        "question": [
+            "What are underflow and overflow conditions in FIFO?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Underflow occurs when reading from an empty FIFO, and overflow occurs when writing to a full FIFO. These conditions can lead to data corruption if not handled properly."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "vlsiverify",
+        "answer_preds": [
+            "{'underflow': 'A condition where the buffer is empty and there are no elements to retrieve', 'overflow': 'A condition where the buffer is full and there are no more elements to store'}"
+        ],
+        "explanation_preds": [
+            "In a FIFO (First-In-First-Out) buffer, underflow occurs when there are no elements in the buffer to retrieve, while overflow occurs when the buffer is full and there are no more elements to store."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}

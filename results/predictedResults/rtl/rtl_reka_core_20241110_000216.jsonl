@@ -5032,3 +5032,677 @@
         ]
     }
 }
+{
+    "rtl_109": {
+        "statement": "Verilog Modules and Their Types",
+        "question": [
+            "What are the different types of Verilog modules?",
+            "Give an example of a behavioral module in Verilog."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Behavioral, Structural, and Dataflow modules are the types of Verilog modules.",
+            "module adder (input a, input b, output sum); assign sum = a + b; endmodule"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "{'Sequential Modules': ['always', 'always_comb', 'always_ff', 'always_latch'], 'Combinational Modules': ['always_comb'], 'Initial and Final Blocks': ['initial', 'final'], 'Task and Function Modules': ['task', 'function']}",
+            "```verilogmodule counter Behavioral (    input wire clk,    input wire reset,    output reg [3:0] count);always @(posedge clk or posedge reset) begin    if (reset) begin        count <= 4'b0000;    end else begin        count <= count + 1;    endendendmodule```"
+        ],
+        "explanation_preds": [
+            "Verilog modules can be broadly categorized into sequential and combinational modules. Sequential modules include `always`, `always_comb`, `always_ff`, and `always_latch` blocks, which execute based on event triggers or time-based conditions. Combinational modules are represented by the `always_comb` block, which models logic that depends only on its current inputs. Additionally, Verilog supports `initial` and `final` blocks for one-time execution at simulation start or end, and `task` and `function` modules for reusable procedural blocks.",
+            "This example demonstrates a behavioral Verilog module named `counter Behavioral` that counts up on each positive edge of the clock signal `clk`, unless reset is active (`reset = 1`), in which case it resets the count to 0. The `always @(posedge clk or posedge reset)` block specifies that the code inside it should be executed whenever there is a positive edge on either `clk` or `reset`. The `count` register is incremented by 1 in each clock cycle unless the reset condition is met."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_110": {
+        "statement": "Operators in Verilog",
+        "question": [
+            "List the different types of operators available in Verilog.",
+            "What is the purpose of the concatenation operator `{}` in Verilog?"
+        ],
+        "question_type": [
+            "multi",
+            "open"
+        ],
+        "answer": [
+            [
+                "Arithmetic Operators",
+                "Logical Operators",
+                "Relational Operators",
+                "Bitwise Operators",
+                "Shift Operators",
+                "Concatenation Operator"
+            ],
+            "The concatenation operator `{}` is used to combine multiple values into a single value."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "{'Logical Operators': ['&&', '||', '!'], 'Bitwise Operators': ['&', '|', '^', '~', '<<', '>>'], 'Relational Operators': ['==', '!=', '<', '>', '<=', '>='], 'Equality Operators': ['==', '!='], 'Shift Operators': ['<<', '>>', '<<<', '>>>'], 'Arithmetic Operators': ['+', '-', '*', '/', '%'], 'Assignment Operators': ['=', '+=', '-=', '*=', '/=', '%=', '<<=', '>>=', '&=', '^=', '|='], 'Conditional (Ternary) Operator': ['? :'], 'Range Operators': ['[ ]']}",
+            "The concatenation operator `{}` in Verilog is used to combine multiple operands (of various sizes) into a single, larger operand. It can be used to create multi-bit vectors from smaller vectors, scalars, or even strings."
+        ],
+        "explanation_preds": [
+            "In Verilog, operators are used to perform various operations on variables and expressions. The types of operators include logical operators for boolean operations, bitwise operators for bit-level operations, relational and equality operators for comparisons, shift operators for shifting bits, arithmetic operators for basic mathematical operations, assignment operators for assigning values, a conditional operator for conditional expressions, and range operators for specifying ranges of bits within a vector.",
+            "The thought process behind this answer involves understanding the primary function of the concatenation operator in Verilog. It is a versatile operator that allows designers to easily manipulate and construct bit vectors, which is a fundamental aspect of digital design. By concatenating operands, designers can flexibly define the width and structure of their signals, making the code more readable and maintainable."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_111": {
+        "statement": "Modeling a D Flip-Flop in Verilog",
+        "question": [
+            "How would you model a simple D flip-flop in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "module dff (input clk, input d, output reg q); always @(posedge clk) begin q <= d; end endmodule"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "module d_ff (input wire clk, input wire reset_n, input wire d, output reg q, output reg q_bar);\n  always @(posedge clk or negedge reset_n) begin\n    if (~reset_n) begin\n      q <= 1'b0;\n      q_bar <= 1'b1;\n    end else begin\n      q <= d;\n      q_bar <= ~d;\n    end\n  end\nendmodule"
+        ],
+        "explanation_preds": [
+            "The D flip-flop is modeled using a Verilog module with inputs for clock (clk), asynchronous reset (reset_n), and data (d), and outputs for the Q and Q_bar signals. The always block is sensitive to both the positive edge of the clock and the negative edge of the reset. When the reset is low, Q is set to 0 and Q_bar is set to 1. On a positive clock edge, the value of D is loaded into Q and its inverse into Q_bar."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_112": {
+        "statement": "Verilog Simulation Tools",
+        "question": [
+            "Name some common Verilog simulation tools and their features.",
+            "What is the purpose of waveform viewing in Verilog simulation tools?"
+        ],
+        "question_type": [
+            "multi",
+            "open"
+        ],
+        "answer": [
+            [
+                "ModelSim",
+                "VCS",
+                "QuestaSim",
+                "Icarus Verilog"
+            ],
+            "Waveform viewing displays the simulation results in a graphical format, allowing designers to visualize signal changes over time."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "perception"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "[{'tool': 'VCS (Synopsys Verilog Compiler Simulator)', 'features': 'Supports SystemVerilog, UVM, advanced debugging, and formal verification integration.'}, {'tool': 'ModelSim', 'features': 'Offers comprehensive simulation for Verilog, VHDL, and SystemVerilog, with UVM support and waveform debugging.'}, {'tool': 'NC-Sim (Aldec)', 'features': 'High-performance simulation with support for Verilog, VHDL, SystemVerilog, and UVM, including advanced debugging and analysis tools.'}, {'tool': 'Iverilog', 'features': 'An open-source Verilog-95 and SystemVerilog simulator, supporting command-line interface and waveform visualization.'}, {'tool': 'Xcelium (Lattice Semiconductor)', 'features': 'Ultra-fast simulation for SystemVerilog, Verilog, and UVM, with advanced debugging and low-power design support.'}]",
+            "Waveform viewing in Verilog simulation tools allows designers to visually analyze the temporal behavior of their digital circuits. It enables the inspection of signal values over time, helping to verify the correctness of the design, identify timing issues, and debug errors."
+        ],
+        "explanation_preds": [
+            "The selection of Verilog simulation tools is based on their industry popularity, feature set, and support for SystemVerilog and UVM, which are now standard languages and methodologies in ASIC and FPGA design. The tools listed offer a range of capabilities from open-source solutions to high-performance commercial products, catering to different design needs and budgets.",
+            "Waveforms provide a graphical representation of signal transitions, showing when signals change state and their relative timing. This visual aid is crucial for understanding complex interactions between different components of a design and ensuring that the circuit functions as intended. By examining waveforms, designers can quickly spot discrepancies between the simulated behavior and the expected behavior, facilitating efficient debugging and design refinement."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_113": {
+        "statement": "Verilog Testbenches and Their Purpose",
+        "question": [
+            "What is a Verilog testbench?",
+            "List the key components of a Verilog testbench."
+        ],
+        "question_type": [
+            "open",
+            "multi"
+        ],
+        "answer": [
+            "A testbench is a Verilog module designed to verify the functionality of a design under test (DUT).",
+            [
+                "DUT instantiation",
+                "Input stimulus generation",
+                "Output monitoring",
+                "Assertions"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "A Verilog testbench is a module written in Verilog HDL that is used to simulate and verify the functionality of a design under test (DUT). It includes stimuli generation, clock and reset control, assertion checking, and monitoring of the DUT's behavior.",
+            "{'Testbench Module': 'Defines the environment for testing the design under test (DUT).', 'Clock Generation': 'Creates the clock signals required by the DUT.', 'Reset Generation': 'Generates reset signals to initialize the DUT.', 'Stimulus Generation': 'Provides input stimuli to the DUT, often using sequences or random data.', 'Monitor and Checker': 'Observes the output of the DUT and checks if it meets the expected behavior.', 'Scoreboard': 'Compares the actual output of the DUT with the expected output and keeps track of pass/fail results.', 'Sequencer': 'Controls the sequence of stimulus applied to the DUT, often coordinating multiple stimulus generators.', 'Transaction-Level Modeling (TLM)': 'Used for high-level verification, where transactions (data and control information) are exchanged between components rather than bit-level signals.', 'Coverage Analysis': 'Tracks which parts of the design have been exercised by the testbench to ensure comprehensive verification.'}"
+        ],
+        "explanation_preds": [
+            "In the context of digital design and verification, a testbench is essential for ensuring that the designed circuit or module meets the specified requirements. It acts as an environment that provides inputs to the DUT and observes its outputs to validate its correctness. The testbench can be designed to simulate various scenarios and edge cases to thoroughly test the DUT's functionality.",
+            "The components listed are essential for creating a robust Verilog testbench that can thoroughly verify the functionality of a digital design. They work together to provide a controlled environment for applying stimuli, observing responses, and ensuring that the design meets its specifications."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_114": {
+        "statement": "Verilog Tasks and Their Uses",
+        "question": [
+            "What is a task in Verilog?",
+            "How can tasks make Verilog code more modular?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "A task is a reusable block of Verilog code that performs a specific operation.",
+            "Tasks encapsulate common operations, making the code more modular and easier to maintain."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "A task in Verilog is a procedural block that encapsulates a sequence of statements and can be called by name from other procedural blocks. It allows for code reuse and modularity within a Verilog design.",
+            "Tasks in Verilog make code more modular by encapsulating reusable sequences of statements into named blocks that can be called from multiple places within the design. This promotes code reusability, reduces redundancy, and improves readability by abstracting complex operations into simpler, manageable units."
+        ],
+        "explanation_preds": [
+            "I defined a task in Verilog considering its primary purpose as a reusable procedural block. I emphasized that tasks can contain a series of statements and can be invoked from different parts of a design, which highlights their role in promoting code organization and efficiency. Additionally, I mentioned that tasks are a key feature of Verilog's procedural programming capabilities.",
+            "I considered the key features of Verilog tasks, which are designed to group together a series of operations that can be executed multiple times from different parts of the design. By doing so, tasks help in organizing the code logically, making it easier to maintain and debug. Additionally, tasks can accept input parameters and return values, further enhancing their utility in creating modular and parameterized designs."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_115": {
+        "statement": "Handling Timing in Verilog",
+        "question": [
+            "How is timing handled in Verilog?",
+            "What does the `#` operator do in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Timing in Verilog is handled through delay specifications using the `#` operator.",
+            "The `#` operator specifies a delay in simulation time units before the next statement is executed."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "Timing in Verilog is handled using constructs such as event control (`@`), timing control (`#`), and procedural assignments with delay. Event control is used to synchronize actions with changes on signals, while timing control introduces a fixed delay before executing a statement. Procedural assignments can have non-blocking (`<=`) or blocking (`=`) assignments, which affect the simulation timing model.",
+            "In Verilog, the `#` operator is used to specify a delay in time units (e.g., ns, us) between events. It is primarily used in procedural assignments and sequential statements to control the timing of signal changes."
+        ],
+        "explanation_preds": [
+            "I considered the primary mechanisms Verilog provides for managing temporal behavior in digital designs. Event control and timing control are fundamental for modeling sequential logic and combinational logic with delays, respectively. Procedural assignments, with their blocking and non-blocking variants, play a crucial role in determining the order of execution and thus the simulated timing of operations within modules.",
+            "The `#` operator introduces a time delay, ensuring that the statement following it executes after the specified delay has elapsed. This is useful for modeling sequential logic and timing-dependent behavior in digital circuits. For instance, `#10 a = b;` means that the value of signal `b` will be assigned to signal `a` after a delay of 10 time units."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_116": {
+        "statement": "Basic Concepts of Verilog",
+        "question": [
+            "What is Verilog, and what is it used for?",
+            "List three advantages of using Verilog for hardware design."
+        ],
+        "question_type": [
+            "open",
+            "multi"
+        ],
+        "answer": [
+            "Verilog is a hardware description language used to model and simulate digital systems.",
+            [
+                "Supports simulation",
+                "Ease of modeling",
+                "Widely used for ASIC/FPGA design"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "Verilog is a hardware description language (HDL) used for designing and modeling digital electronic systems, including combinational logic circuits, sequential logic circuits, and digital systems at various levels of abstraction, from gate-level to system-level.",
+            "['Modularity and Reusability: Verilog promotes a modular design approach, allowing designers to create reusable components (modules) that can be easily integrated into larger systems. This enhances productivity and reduces design errors.', 'Flexibility and Abstraction: Verilog supports multiple levels of abstraction, from behavioral to gate-level descriptions, enabling designers to model hardware at the appropriate level of detail for different stages of the design process. This flexibility accelerates design development and verification.', 'Strong Simulation Support: Verilog has robust simulation capabilities, allowing designers to test and verify their designs before physical implementation. The language includes constructs for event-driven simulation, which helps in identifying and fixing logical errors efficiently.']"
+        ],
+        "explanation_preds": [
+            "I defined Verilog as an HDL because its primary purpose is to describe the behavior and structure of digital hardware. I mentioned its use for designing combinational and sequential logic circuits as these are fundamental building blocks in digital electronics. Additionally, I highlighted its applicability across different levels of abstraction, from gate-level, which deals with individual logic gates, to system-level, which involves the integration of multiple components into a complete digital system.",
+            "I considered the key features of Verilog that set it apart from other hardware description languages (HDLs) and focused on those that directly contribute to the efficiency and effectiveness of the hardware design process. Modularity and reusability are crucial for managing complex designs, flexibility and abstraction enable designers to work at the appropriate level of detail, and strong simulation support is essential for ensuring design correctness before fabrication."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_117": {
+        "statement": "Verilog Data Types",
+        "question": [
+            "What is the difference between `wire` and `reg` in Verilog?",
+            "When should a `reg` type be used?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "`wire` is used for connecting elements and cannot store values, whereas `reg` can store values and is used in procedural blocks.",
+            "`reg` should be used in `always` blocks to store values across clock cycles."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "In Verilog, `wire` is a net type used to represent interconnections between modules or within a module. It automatically handles the flow of data based on the connected components. On the other hand, `reg` is a storage type used to hold data and can be assigned values within procedural blocks (always blocks). `reg` variables are typically used for flip-flops, latches, and other sequential logic elements.",
+            "A `reg` type should be used in Verilog for variables that need to store values and can change state over time, such as flip-flop outputs, registers, and variables used in always blocks."
+        ],
+        "explanation_preds": [
+            "The distinction between `wire` and `reg` is crucial for understanding how data flows and is stored in a Verilog design. `wire` represents passive connections, while `reg` represents active storage elements. This differentiation helps in correctly modeling both combinational and sequential logic in a design.",
+            "The `reg` type in Verilog is not just a simple register but a more general term used to describe any variable that can be assigned a new value within procedural blocks (like `always` blocks). This includes both flip-flop-based registers and variables that are synthesized as latches. Using `reg` for these types of variables ensures that the simulator and synthesizer treat them correctly, maintaining their state across simulation cycles or clock edges."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_118": {
+        "statement": "Modeling Techniques in Verilog",
+        "question": [
+            "Describe the differences between behavioral, structural, and dataflow modeling in Verilog.",
+            "Provide an example of behavioral modeling."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Behavioral modeling uses high-level constructs, structural modeling describes circuit connections, and dataflow modeling uses expressions to describe data movement.",
+            "module add(a, b, sum); input a, b; output sum; assign sum = a + b; endmodule"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "{'behavioral': 'Describes the functionality of a design using procedural statements (e.g., always blocks) and algorithms, focusing on what the design does rather than how it is implemented.', 'structural': 'Represents a design as a hierarchy of interconnected modules, similar to a schematic diagram, specifying how components are connected but not their internal operation.', 'dataflow': 'Models a design using concurrent assignments based on Boolean expressions and continuous assignments, describing how data flows through the design from inputs to outputs.'}",
+            "None"
+        ],
+        "explanation_preds": [
+            "I categorized the modeling techniques based on their primary focus and the level of abstraction they provide. Behavioral modeling is highest level, focusing on functionality. Structural modeling is at an intermediate level, describing the composition of a design. Dataflow modeling is also at an intermediate level but emphasizes the flow of data within the design.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "{  \"answer\": \"\"\"  module counter(clk, reset, count_out);    input wire clk, reset;    reg [7:0] count_out;    always @(posedge clk or posedge reset) begin      if (reset) begin        count_out <= 8'b0;      end else begin        count_out <= count_out + 1;      end    end  endmodule  \"\"\",  \"explanation\": \"This example demonstrates behavioral modeling in Verilog using an `always` block sensitive to the positive edge of the clock (`posedge clk`) and reset (`posedge reset`). The module `counter` increments an 8-bit register `count_out` on each clock cycle unless reset is active, in which case it sets `count_out` to zero. This approach focuses on the behavior of the circuit rather than its structural implementation.\"}"
+        ]
+    }
+}
+{
+    "rtl_119": {
+        "statement": "Blocking and Non-blocking Assignments",
+        "question": [
+            "What is the difference between blocking (`=`) and non-blocking (`<=`) assignments?",
+            "When should non-blocking assignments be used in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments execute sequentially, while non-blocking assignments allow parallel updates.",
+            "Non-blocking assignments should be used for sequential logic to avoid race conditions."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "Blocking assignments (`=`) in Verilog are evaluated and assigned in the current simulation time step, making them synchronous with the current clock edge. Non-blocking assignments (`<=`), on the other hand, are evaluated in the current time step but assigned in the next simulation time step, making them asynchronous and useful for modeling sequential logic.",
+            "Non-blocking assignments (`<=`) should be used in sequential logic, specifically within always blocks that are sensitive to a clock or reset signal, to model asynchronous updates and avoid race conditions."
+        ],
+        "explanation_preds": [
+            "The distinction between blocking and non-blocking assignments is crucial for designing correct digital circuits, especially in sequential logic where the order of assignments can affect the behavior of the circuit. Blocking assignments ensure that all assignments within a statement are completed before moving to the next statement, simulating parallel execution. Non-blocking assignments, by delaying the assignment, allow for proper modeling of the data flow through registers and sequential elements, which is essential for synchronous circuit design.",
+            "Non-blocking assignments ensure that all the right-hand side expressions are evaluated before any of the assignments are made, which is crucial for maintaining the correct order of operations in sequential logic. This helps in simulating and synthesizing designs that behave predictably in a multi-cycle environment, especially when dealing with registered signals and feedback loops."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_120": {
+        "statement": "Synthesis vs Simulation",
+        "question": [
+            "What is the difference between synthesis and simulation in Verilog?",
+            "Why are some constructs allowed in simulation but not in synthesis?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Simulation checks the behavior of the design, while synthesis translates the design into hardware.",
+            "Some constructs, like `initial` blocks or delays, are for testing purposes only and cannot be mapped to hardware components."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "hard",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "In Verilog, synthesis and simulation serve distinct purposes. Simulation is the process of modeling and testing the behavior of a digital design using a software simulator before it is physically implemented. It allows designers to verify the functionality and correctness of their code under various conditions. Synthesis, on the other hand, is the process of converting a high-level Verilog description of a digital circuit into a gate-level netlist, which can be physically implemented on an FPGA or ASIC. It translates the behavioral or structural description of the design into a set of logic gates and interconnections that can be fabricated.",
+            "Some constructs are allowed in simulation but not in synthesis because simulation focuses on behavioral modeling and verifying the functionality of a design, while synthesis is concerned with translating the design into a physical implementation, such as gate-level logic or an FPGA configuration. Constructs that are abstract or have ambiguous implementations can be useful for simulation to model complex behaviors or interactions but are not synthesizable because they cannot be directly mapped to physical hardware components or logic operations."
+        ],
+        "explanation_preds": [
+            "My answer differentiates synthesis and simulation based on their roles in the digital design flow. Simulation focuses on validating the design's functionality, while synthesis deals with transforming the design into a physical implementation. Understanding these differences is crucial for effective digital design and verification.",
+            "1. Simulation allows for more flexibility in modeling, including the use of high-level constructs and pseudo-code, which are not directly translatable to hardware. 2. Synthesis requires constructs that have a well-defined and unambiguous hardware implementation. 3. The goal of simulation is to verify functionality, while the goal of synthesis is to create an efficient and implementable design, leading to different constraints on the allowed constructs."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_121": {
+        "statement": "Finite State Machines (FSM) in Verilog",
+        "question": [
+            "What are the two types of FSM used in Verilog?",
+            "How do you implement a Moore state machine in Verilog?"
+        ],
+        "question_type": [
+            "single",
+            "open"
+        ],
+        "answer": [
+            "Moore and Mealy",
+            "A Moore state machine outputs depend only on the current state and can be implemented using an `always @(posedge clk)` block."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "knowledge",
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "The two types of Finite State Machines (FSM) used in Verilog are Mealy machines and Moore machines.",
+            "None"
+        ],
+        "explanation_preds": [
+            "In Verilog, FSMs can be implemented as either Mealy machines or Moore machines. The distinction lies in when the output is generated relative to the state transition. In a Mealy machine, the output is a function of both the current state and the current input. In contrast, a Moore machine generates the output solely based on the current state, independent of the current input. The choice between Mealy and Moore machines depends on the specific requirements of the design, including factors such as the desired timing of the output and the complexity of the state transition logic.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "{  \"answer\": \"\"\"  module moore_state_machine (    input clk,    input reset,    input [2:0] input_signal,    output reg [1:0] output_signal  );  parameter S0 = 3'b000, S1 = 3'b001, S2 = 3'b010, S3 = 3'b011;  reg [2:0] current_state, next_state;  always @(posedge clk or posedge reset) begin    if (reset) begin      current_state <= S0;    end else begin      current_state <= next_state;    end  end  always @(current_state or input_signal) begin    case (current_state)      S0: begin        if (input_signal == 3'b000) begin          next_state = S0;          output_signal = 2'b00;        end else if (input_signal == 3'b001) begin          next_state = S1;          output_signal = 2'b01;        end else begin          next_state = S0;          output_signal = 2'b00;        end      end      S1: begin        if (input_signal == 3'b000) begin          next_state = S2;          output_signal = 2'b10;        end else if (input_signal == 3'b001) begin          next_state = S3;          output_signal = 2'b11;        end else begin          next_state = S1;          output_signal = 2'b01;        end      end      // Add cases for S2 and S3      default: begin        next_state = S0;        output_signal = 2'b00;      end    endcase  endendmodule  \"\"\",  \"explanation\": \"In a Moore state machine, the output is determined solely by the current state. In this Verilog implementation, the `output_signal` is assigned within the `always @(current_state or input_signal)` block based on the `current_state`, not the `input_signal`. The state transitions are controlled by the `next_state` variable, which is updated based on both the `current_state` and `input_signal` in the same `always` block. The `clk` and `reset` signals are used to control the synchronous update of the `current_state` register.\"}"
+        ]
+    }
+}
+{
+    "rtl_122": {
+        "statement": "Verilog Testbenches",
+        "question": [
+            "What is the purpose of a testbench in Verilog?",
+            "What are the key components of a typical testbench?"
+        ],
+        "question_type": [
+            "open",
+            "multi"
+        ],
+        "answer": [
+            "A testbench is used to verify the functionality of a design by providing input stimuli and observing outputs.",
+            [
+                "Design Under Test (DUT)",
+                "Stimulus generator",
+                "Output monitor",
+                "Assertions"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "The purpose of a testbench in Verilog is to verify the functionality of a digital design by simulating its behavior under various input conditions and checking the output against expected results.",
+            "{'module_under_test': 'The instance of the design module being tested.', 'testbench_signals': 'Includes inputs, outputs, and internal signals used for stimulus and monitoring.', 'stimulus_generator': 'Generates input sequences and control signals to exercise the module-under-test.', 'monitor': 'Observes and records the outputs and internal signals of the module-under-test.', 'assertions': 'Checks if the module-under-test behaves as expected by validating output signals against expected values.', 'sequencer': 'Manages the timing and ordering of stimulus generation, often coordinating multiple stimulus generators.', 'scoreboard': 'Compares expected and actual outputs to determine if the test passed or failed.', 'test_cases': 'A set of predefined scenarios or input sequences to test different functionalities of the module-under-test.'}"
+        ],
+        "explanation_preds": [
+            "A testbench is essentially a Verilog module that instantiates the design under test (DUT) and provides stimuli to its inputs. It also includes mechanisms to monitor the outputs of the DUT and compare them with the expected responses. This helps in debugging and validating the design before it is implemented in hardware.",
+            "The key components of a Verilog testbench are designed to thoroughly test the functionality of the module-under-test. The testbench environment includes generating stimuli, monitoring responses, and validating the behavior against specifications. Each component plays a crucial role in ensuring the design works as intended under various conditions."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}

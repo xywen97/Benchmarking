@@ -6,9 +6,9 @@ import os
 
 app = Flask(__name__)
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "7"
+os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 
-model_path = "/data/zyzheng23/xiangyu/hf_ckpts/llama_3_8b_instruct"
+model_path = "/data/xiangyu/benchmarkModels/Meta-Llama-3-8B-Instruct"
 
 model = pipeline(
     "text-generation",
@@ -41,7 +41,7 @@ def generate_text():
 
     response = model(
         messages,
-        max_new_tokens=512,
+        max_new_tokens=1024,
         eos_token_id=terminators,
         do_sample=True,
         temperature=0.7,

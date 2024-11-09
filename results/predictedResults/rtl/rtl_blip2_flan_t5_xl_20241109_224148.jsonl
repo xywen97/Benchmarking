@@ -8606,3 +8606,410 @@
         ]
     }
 }
+{
+    "rtl_201": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule IBUF(\n    output O, \n    (* iopad_external_pin *)\n    input I   \n);\n  parameter IOSTANDARD = \"default\";\n  parameter IBUF_LOW_PWR = 0;\n  assign O = I;\n  specify\n    (I => O) = 0;\n  endspecify\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `IBUF` implements a simple buffer that directly forwards the input signal `I` to the output `O` without introducing any delay."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "IBUF(output O, (* iopad_external_pin *) input I); parameter IOSTANDARD = 'default'; parameter IBUF_LOW_PWR = 0; assign O = I; specify (I => O) = 0; endspecify endmodule"
+        ]
+    }
+}
+{
+    "rtl_202": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule system_zed_vga_0_0(clk, active, rgb565, vga_r, vga_g, vga_b)\n  ;\n  input clk;          \n  input active;       \n  input [15:0] rgb565; \n  output [3:0] vga_r; \n  output [3:0] vga_g; \n  output [3:0] vga_b; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `system_zed_vga_0_0` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "module system_zed_vga_0_0(clk, active, rgb565, vga_r, vga_g, vga_b) ; input clk; input active; input [15:0] rgb565; output [3:0] vga_r; output [3:0] vga_g; output [3:0] vga_b; endmodule"
+        ]
+    }
+}
+{
+    "rtl_203": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule INV(\n    (* clkbuf_inv = \"I\" *) \n    output O, \n    input I \n);\n  assign O = !I; \n  specify\n    (I => O) = 127; \n  endspecify \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `INV` implements a simple inverter operation and features a specified propagation delay of 127 time units.\n."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "INV((* clkbuf_inv = \"I\" *) output O, input I); assign O = !I; specify (I => O) = 127; endspecify endmodule"
+        ]
+    }
+}
+{
+    "rtl_204": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule ripemd160_rol_s (\n\tinput clk, \n\tinput [6:0] rx_round, \n\toutput reg [3:0] tx_s0, \n\toutput reg [3:0] tx_s1 \n);\nlocalparam [319:0] first_sequence = {4'd6,4'd5,4'd8,4'd11,4'd14,4'd13,4'd12,4'd5,4'd12,4'd13,4'd8,4'd6,4'd11,4'd5,4'd15,4'd9,4'd12,4'd5,4'd6,4'd8,4'd6,4'd5,4'd14,4'd9,4'd8,4'd9,4'd15,4'd14,4'd15,4'd14,4'd12,4'd11,4'd5,4'd7,4'd12,4'd5,4'd6,4'd13,4'd8,4'd14,4'd15,4'd13,4'd9,4'd14,4'd7,4'd6,4'd13,4'd11,4'd12,4'd13,4'd7,4'd11,4'd9,4'd15,4'd12,4'd7,4'd15,4'd7,4'd9,4'd11,4'd13,4'd8,4'd6,4'd7,4'd8,4'd9,4'd7,4'd6,4'd15,4'd14,4'd13,4'd11,4'd9,4'd7,4'd8,4'd5,4'd12,4'd15,4'd14,4'd11};\nlocalparam [319:0] second_sequence = {4'd11,4'd11,4'd13,4'd15,4'd5,4'd6,4'd13,4'd8,4'd6,4'd14,4'd5,4'd12,4'd9,4'd12,4'd5,4'd8,4'd8,4'd15,4'd5,4'd12,4'd9,4'd12,4'd9,4'd6,4'd14,4'd6,4'd14,4'd14,4'd11,4'd8,4'd5,4'd15,4'd5,4'd7,4'd13,4'd13,4'd14,4'd5,4'd13,4'd12,4'd14,4'd6,4'd6,4'd8,4'd11,4'd15,4'd7,4'd9,4'd11,4'd13,4'd15,4'd6,4'd7,4'd12,4'd7,4'd7,4'd11,4'd9,4'd8,4'd12,4'd7,4'd15,4'd13,4'd9,4'd6,4'd12,4'd14,4'd14,4'd11,4'd8,4'd7,4'd7,4'd5,4'd15,4'd15,4'd13,4'd11,4'd9,4'd9,4'd8};\nalways @ (posedge clk)\nbegin\n\ttx_s0 <= first_sequence >> {rx_round, 2'b00}; \n\ttx_s1 <= second_sequence >> {rx_round, 2'b00}; \nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `ripemd160_rol_s` implements logical operations by right-shifting first_sequence and second_sequence based on the value of the input signal rx_round, and storing the results in the output registers."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "ripemd160_rol_s ( input clk, input [6:0] rx_round, output reg [3:0] tx_s0, output reg [3:0] tx_s1 ); localparam [319:0] first_sequence = 4'd6,4'd5,4'd8,4'd11,4'd14,4'd13,4'd12,4'd5,4'd12,4'd13,4'd8,4'd6,4'd11,4'd5,4'd15,4'd9,4'd12,4'd5,4'd6,4'd8,4'd6,4'd5,4'd14,4'd9,4'd8,4'd9,4'd15,4'd14,4'd15,4'd13,4'd9,4'd14,4'd12,4'd11,4'd5,4'd7,4'd12,4'd5,4'd5,4'd6,4'd13,4'd11,4'd11,4'd15,4'd5,4'd15,4'd5,4'd15,4'd5,4'd15,4'd5,4'd15,4'd5,4'd15,4'd5,4'd15,4'd5,4'd15,4'd5,4'd15,4'd5,4'd15,4'd5,4'd15,4'd5,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd15,4'd"
+        ]
+    }
+}
+{
+    "rtl_205": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule vga_controller(\n    vga_clock, resetn, pixel_colour, memory_address,\n    VGA_R, VGA_G, VGA_B,\n    VGA_HS, VGA_VS, VGA_BLANK,\n    VGA_SYNC, VGA_CLK\n);\nparameter BITS_PER_COLOUR_CHANNEL = 1; \nparameter MONOCHROME = \"FALSE\"; \nparameter RESOLUTION = \"320x240\"; \nparameter C_VERT_NUM_PIXELS  = 10'd480; \nparameter C_VERT_SYNC_START  = 10'd493; \nparameter C_VERT_SYNC_END    = 10'd494; \nparameter C_VERT_TOTAL_COUNT = 10'd525; \nparameter C_HORZ_NUM_PIXELS  = 10'd640; \nparameter C_HORZ_SYNC_START  = 10'd659; \nparameter C_HORZ_SYNC_END    = 10'd754; \nparameter C_HORZ_TOTAL_COUNT = 10'd800; \ninput vga_clock, resetn;\ninput [((MONOCHROME == \"TRUE\") ? (0) : (BITS_PER_COLOUR_CHANNEL*3-1)):0] pixel_colour;\noutput [((RESOLUTION == \"320x240\") ? (16) : (14)):0] memory_address;\noutput reg [9:0] VGA_R, VGA_G, VGA_B; \noutput reg VGA_HS, VGA_VS; \noutput reg VGA_BLANK; \noutput VGA_SYNC, VGA_CLK; \nreg VGA_HS1, VGA_VS1, VGA_BLANK1; \nreg [9:0] xCounter, yCounter; \nwire xCounter_clear, yCounter_clear; \nwire vcc; \nreg [((RESOLUTION == \"320x240\") ? (8) : (7)):0] x; \nreg [((RESOLUTION == \"320x240\") ? (7) : (6)):0] y; \nassign vcc = 1'b1;\nalways @(posedge vga_clock or negedge resetn) begin\n    if (!resetn)\n        xCounter <= 10'd0; \n    else if (xCounter_clear)\n        xCounter <= 10'd0; \n    else\n        xCounter <= xCounter + 1'b1; \nend\nassign xCounter_clear = (xCounter == (C_HORZ_TOTAL_COUNT-1)); \nalways @(posedge vga_clock or negedge resetn) begin\n    if (!resetn)\n        yCounter <= 10'd0; \n    else if (xCounter_clear && yCounter_clear)\n        yCounter <= 10'd0; \n    else if (xCounter_clear)\n        yCounter <= yCounter + 1'b1; \nend\nassign yCounter_clear = (yCounter == (C_VERT_TOTAL_COUNT-1)); \nalways @(*) begin\n    if (RESOLUTION == \"320x240\") begin\n        x = xCounter[9:1]; \n        y = yCounter[8:1]; \n    end else begin\n        x = xCounter[9:2]; \n        y = yCounter[8:2]; \n    end\nend\nvga_address_translator controller_translator(\n    .x(x), .y(y), .mem_address(memory_address)\n);\ndefparam controller_translator.RESOLUTION = RESOLUTION; \nalways @(posedge vga_clock) begin\n    VGA_HS1 <= ~((xCounter >= C_HORZ_SYNC_START) && (xCounter <= C_HORZ_SYNC_END));\n    VGA_VS1 <= ~((yCounter >= C_VERT_SYNC_START) && (yCounter <= C_VERT_SYNC_END));\n    VGA_BLANK1 <= ((xCounter < C_HORZ_NUM_PIXELS) && (yCounter < C_VERT_NUM_PIXELS));\n    VGA_HS <= VGA_HS1;\n    VGA_VS <= VGA_VS1;\n    VGA_BLANK <= VGA_BLANK1;\nend\nassign VGA_SYNC = vcc; \nassign VGA_CLK = vga_clock; \ninteger index, sub_index;\nalways @(pixel_colour) begin\n    VGA_R <= 'b0;\n    VGA_G <= 'b0;\n    VGA_B <= 'b0;\n    if (MONOCHROME == \"FALSE\") begin\n        for (index = 10-BITS_PER_COLOUR_CHANNEL; index >= 0; index = index - BITS_PER_COLOUR_CHANNEL) begin\n            for (sub_index = BITS_PER_COLOUR_CHANNEL - 1; sub_index >= 0; sub_index = sub_index - 1) begin\n                VGA_R[sub_index+index] <= pixel_colour[sub_index + BITS_PER_COLOUR_CHANNEL*2];\n                VGA_G[sub_index+index] <= pixel_colour[sub_index + BITS_PER_COLOUR_CHANNEL];\n                VGA_B[sub_index+index] <= pixel_colour[sub_index];\n            end\n        end\n    end else begin\n        for (index = 0; index < 10; index = index + 1) begin\n            VGA_R[index] <= pixel_colour[0:0];\n            VGA_G[index] <= pixel_colour[0:0];\n            VGA_B[index] <= pixel_colour[0:0];\n        end\n    end\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `vga_controller` implements signal generation for driving a VGA display, including synchronization, blanking, and color signal generation based on pixel position and input color data. It supports configurable color depth and resolution, operates in color or monochrome mode, utilizes counters for tracking positions, and scales down the pixel position for memory address calculation. Sync signals, blanking, and color processing are based on defined timing parameters, enhancing brightness by replicating bits for color channels, or replicating a single bit in monochrome mode. It outputs a constant high sync signal and directly passes the input clock as the VGA clock signal."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "vga_controller( vga_clock, resetn, pixel_colour, memory_address, VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, VGA_BLANK, VGA_SYNC, VGA_CLK ); parameter BITS_PER_COLOUR_CHANNEL = 1; parameter MONOCHROME = \"FALSE\"; parameter RESOLUTION = \"320x240\"; parameter C_VERT_NUM_PIXELS = 10'd480; parameter C_VERT_SYNC_START = 10'd493; parameter C_VERT_SYNC_END = 10'd494; parameter C_VERT_TOTAL_COUNT = 10'd525; parameter C_HORZ_NUM_PIXELS = 10'd640; parameter C_HORZ_SYNC_START = 10'd659; parameter C_HORZ_SYNC_END = 10'd754; parameter C_HORZ_TOTAL_COUNT = 10'd800; input vga_clock, resetn; input [((MONOCHROME == \"TRUE\") ? (0) : (BITS_PER_COLOUR_CHANNEL*3-1)):0] pixel_colour; output [((RESOLUTION == \"320x240\") ? (16) : (14)):0] memory_address; output reg [9:0] VGA_R, VGA_G, VGA_B; output reg VGA_HS, VGA_VS; output reg VGA_BLANK; output VGA_SYNC, VGA_CLK; reg VGA_HS1, VGA_VS1, VGA_BLANK1; reg [9:0] xCounter, yCounter; wire xCounter_clear, yCounter_clear; wire vcc; reg [((RESOLUTION == \"320x240\") ? (8) : (7)):0] x; reg [((RESOLUTION =="
+        ]
+    }
+}
+{
+    "rtl_206": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule pcie_7x_v1_3_fast_cfg_init_cntr #(\n  parameter PATTERN_WIDTH = 8,          \n  parameter INIT_PATTERN  = 8'hA5,      \n  parameter TCQ           = 1           \n) (\n  input                          clk,    \n  input                          rst,    \n  output reg [PATTERN_WIDTH-1:0] pattern_o \n);\nalways @(posedge clk) begin\n  if(rst) begin\n    pattern_o <= #TCQ {PATTERN_WIDTH{1'b0}};\n  end else begin\n    if(pattern_o != INIT_PATTERN) begin\n      pattern_o <= #TCQ pattern_o + 1;\n    end\n  end\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `pcie_7x_v1_3_fast_cfg_init_cntr` implements a counter that operates on the rising edge of the `clk` signal, resetting `pattern_o` to zeros on `rst` assertion, incrementing it by 1 on deassertion if not equal to `INIT_PATTERN`, with a delay specified by `TCQ`."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "pcie_7x_v1_3_fast_cfg_init_cntr #( parameter PATTERN_WIDTH = 8, parameter INIT_PATTERN = 8'hA5, parameter TCQ = 1) ( input clk, input rst, output reg [PATTERN_WIDTH-1:0] pattern_o ); always @(posedge clk) begin if (rst) begin pattern_o = #TCQ PATTERN_WIDTH1'b0; end else begin if (pattern_o != INIT_PATTERN) begin pattern_o = #TCQ pattern_o + 1; end end end end end"
+        ]
+    }
+}
+{
+    "rtl_207": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule SUB(CLK,RST,IN, OUT); \n  input CLK, RST, IN; \n  output OUT; \n  reg reg1; \n  wire IN; \n  wire OUT = reg1; \n  always @(posedge CLK or negedge RST) begin\n    if(RST) begin \n      reg1 <= 1'b0; \n    end else begin \n      reg1 <= 1'b1; \n    end\n  end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `SUB` implements a simple synchronous reset flip-flop with an output that mirrors the state of an internal register based on clock and reset signals."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "module SUB(CLK,RST,IN,OUT); input CLK, RST, IN; output OUT; register reg1; wire IN; wire OUT = reg1; always @(posedge CLK or negedge RST) begin if (RST) begin reg1 = 1'b0; end else begin reg1 = 1'b1; end end endmodule"
+        ]
+    }
+}
+{
+    "rtl_208": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule comparador(\n\t\tinput wire clk, \n\t\toutput reg [3:0] sensores, \n\t\tinput wire [7:0]ps2_data_out, \n\t\tinput wire pulso_done \n\t\t);\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `comparador` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "module comparador( input wire clk, output reg [3:0] sensores, input wire [7:0]ps2_data_out, input wire pulso_done ); endmodule"
+        ]
+    }
+}
+{
+    "rtl_209": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule Apb3Decoder (\n      input  [19:0] io_input_PADDR, \n      input  [0:0] io_input_PSEL, \n      input   io_input_PENABLE, \n      output  io_input_PREADY, \n      input   io_input_PWRITE, \n      input  [31:0] io_input_PWDATA, \n      output [31:0] io_input_PRDATA, \n      output  io_input_PSLVERROR, \n      output [19:0] io_output_PADDR, \n      output reg [2:0] io_output_PSEL, \n      output  io_output_PENABLE, \n      input   io_output_PREADY, \n      output  io_output_PWRITE, \n      output [31:0] io_output_PWDATA, \n      input  [31:0] io_output_PRDATA, \n      input   io_output_PSLVERROR); \n  wire [19:0] _zz_1;\n  wire [19:0] _zz_2;\n  wire [19:0] _zz_3;\n  assign _zz_1 = (20'b11111111000000000000);\n  assign _zz_2 = (20'b11111111000000000000);\n  assign _zz_3 = (20'b11111111000000000000);\n  assign io_output_PADDR = io_input_PADDR;\n  assign io_output_PENABLE = io_input_PENABLE;\n  assign io_output_PWRITE = io_input_PWRITE;\n  assign io_output_PWDATA = io_input_PWDATA;\n  always @ (*) begin\n    io_output_PSEL[0] = (((io_input_PADDR & _zz_1) == (20'b00000000000000000000)) && io_input_PSEL[0]);\n    io_output_PSEL[1] = (((io_input_PADDR & _zz_2) == (20'b00010000000000000000)) && io_input_PSEL[0]);\n    io_output_PSEL[2] = (((io_input_PADDR & _zz_3) == (20'b00100000000000000000)) && io_input_PSEL[0]);\n  end\n  assign io_input_PREADY = io_output_PREADY;\n  assign io_input_PRDATA = io_output_PRDATA;\n  assign io_input_PSLVERROR = io_output_PSLVERROR;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `Apb3Decoder` decodes a 20-bit input address to select peripherals on an APB3 bus using bitwise operations for select signal generation. It passes through control and data signals between input and output ports."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "module apb3decoder ( input [19:0] io_input_PADDR, input [0:0] io_input_PSEL, input io_input_PENABLE, output io_input_PREADY, input io_input_PWRITE, input [31:0] io_input_PWDATA, output [31:0] io_input_PRDATA, output io_input_PSLVERROR, output [19:0] io_output_PADDR, output reg [2:0] io_output_PSEL, output io_output_PENABLE, input io_output_PREADY, output io_output_PWRITE, output [31:0] io_output_PWDATA, input [31:0] io_input_PRDATA, input io_output_PSLVERROR); wire [19:0] _zz_1; wire [19:0] _zz_2; wire [19:0] _zz_3; assign _zz_1 = (20'b11111111000000000000); assign _zz_2 = (20'b11111111000000000000); assign _zz_3 = (20'b11111111000000000000); assign io_output_PADDR = io_input_PADDR; assign io_output_PENABLE = io_input_PENABLE; assign io_output_PWRITE = io_input_PWRITE; assign io_output_PWDATA = io_input_PWDATA; always @ (*) begin io_output_PSEL[0] = (((io_input_PADDR & _zz_1) == (20'b0000000000000000)) && io_input_PSEL[0]); io_output_PSEL[1] = (((io_input_PADDR &"
+        ]
+    }
+}
+{
+    "rtl_210": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule ORCY (output O, input CI, I); \n  assign O = CI | I; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `ORCY` implements a bitwise OR operation between input signals `CI` and `I`, producing the result at output `O`."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "ORCY (output O, input CI, I); assign O = CI | I; endmodule"
+        ]
+    }
+}
+{
+    "rtl_211": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule Dflop (D, Clk, Q);\n  input D, Clk;\n  output reg Q;\n  always @ (D, Clk)\n    if (Clk)\n      Q = D;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `Dflop` implements combinational logic thatcaptures the value of the input signal D on the high level of the clock signal Clk and stores this value in the output signal Q. The output Q retains its value until the next high level of the clock signal Clk, at which point it updates to the new value of D."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Dflop (D, Clk, Q); input D, Clk; output reg Q; always @ (D, Clk) if (Clk) Q = D; endmodule"
+        ]
+    }
+}

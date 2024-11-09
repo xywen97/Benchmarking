@@ -510,3 +510,1453 @@
         ]
     }
 }
+{
+    "rtl_6": {
+        "statement": "Answer the following questions on Verilog module definitions and instantiations.",
+        "question": [
+            "Which keyword is used to start a Verilog module?",
+            "To connect ports by name during module instantiation, which syntax is used?",
+            "What does the declaration output reg [7:0] out_data; signify?",
+            "In Verilog, where is the wire type most often used?",
+            "How can a parameterized module be created in Verilog?"
+        ],
+        "question_type": [
+            "single",
+            "single",
+            "single",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "module",
+            ".port_name(signal_name)",
+            "An 8-bit register output",
+            "For connecting different module instances",
+            "Using the keyword parameter inside the module"
+        ],
+        "explanation": [
+            "The keyword module begins the definition of a Verilog module.",
+            "Named port connections use the .port_name(signal_name) syntax.",
+            "output reg [7:0] defines an 8-bit output register.",
+            "wire is commonly used for interconnecting module ports.",
+            "Parameterization in Verilog uses the parameter keyword."
+        ],
+        "difficulty": [
+            "easy",
+            "easy",
+            "medium",
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "recall",
+            "application",
+            "comprehension",
+            "recall",
+            "comprehension"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "None",
+            "To connect ports by name during module instantiation, the syntax used is 'port = module.port_name;'.",
+            "The declaration output reg [7:0] out_data; signifies the creation of a 8-bit register named 'out_data'.",
+            "None",
+            "To create a parameterized module in Verilog, you need to define the module with a generic parameter that can be instantiated with different values at the time of simulation. The generic parameter is defined inside the module and should have a non-zero bit width. Then, you can instantiate the module with different values for the generic parameter at the time of simulation using the `model` keyword."
+        ],
+        "explanation_preds": [
+            "None",
+            "In Verilog, you can connect ports of a module to other modules or to the outside world using the 'port = module.port_name;' syntax. This allows you to assign the output or input of a port to another module's input or output, respectively. During module instantiation, you can use this syntax to connect the ports of the instantiated module to the desired inputs or outputs.",
+            "A 'reg' declaration in Verilog creates a register that can hold a single value. In this case, the declaration creates an 8-bit register named 'out_data' that can hold a value between 0 and 255.",
+            "None",
+            "Instantiating a parameterized module allows you to define a module that can be customized at runtime with different input values. By defining the generic parameter inside the module, you can create a module that can be instantiated with different values for the parameter at the time of simulation."
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"module\", \"explanation\": \"The keyword 'module' is used to start a Verilog module.\"}}",
+            "None",
+            "None",
+            "{{\"answer\": \"wire\", \"explanation\": \"In Verilog, the `wire` type is most often used to define a wire or a set of wires that are connected to a particular port or module. It is commonly used in the instantiation of modules to provide input or output signals to the module.\"}}",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_7": {
+        "statement": "Complete the sentences with appropriate Verilog syntax or keywords.",
+        "question": [
+            "The keyword used to end a module in Verilog is ___.",
+            "A continuous assignment to a wire in Verilog is done using ___.",
+            "To create a 16-bit memory with 64 locations, declare as reg [15:0] mem ___.",
+            "When modeling combinational logic, the assignment symbol to use is ___.",
+            "The keyword to specify an input to a module in Verilog is ___."
+        ],
+        "question_type": [
+            "blank",
+            "blank",
+            "blank",
+            "blank",
+            "blank"
+        ],
+        "answer": [
+            "endmodule",
+            "assign",
+            "[63:0]",
+            "=",
+            "input"
+        ],
+        "explanation": [
+            "endmodule signals the end of a module definition.",
+            "Continuous assignments to wire types use the assign keyword.",
+            "mem [63:0] creates 64 16-bit memory locations.",
+            "The = operator is used for blocking assignments in combinational logic.",
+            "input declares an input port in Verilog."
+        ],
+        "difficulty": [
+            "easy",
+            "easy",
+            "medium",
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "recall",
+            "recall",
+            "application",
+            "recall",
+            "recall"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "module",
+            " continuous assignment to a wire in Verilog is done using 'assign' keyword",
+            "mem [15:0]",
+            "assignment",
+            "module"
+        ],
+        "explanation_preds": [
+            "The keyword used to end a module in Verilog is 'module'.",
+            "In Verilog, a continuous assignment to a wire can be performed using the 'assign' keyword. This keyword is used to assign a value to a wire or variable. It can be used to define a constant value or a changing value based on a certain condition. By using the 'assign' keyword, we can assign a value to a wire in a continuous assignment statement.",
+            "To create a 16-bit memory with 64 locations, we declare a register named 'mem' with a size of 16 bits and 64 locations. The '[15:0]' specifies the starting bit position of the memory to be used.",
+            "In combinational logic modeling, the assignment symbol to use is typically '='.",
+            "The keyword to specify an input to a module in Verilog is module."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_8": {
+        "statement": "Answer the following short-answer questions about memory and data types in Verilog.",
+        "question": [
+            "Explain how an array is declared in Verilog and provide an example.",
+            "How does Verilog handle signed arithmetic, and what keyword is required?",
+            "Describe the difference between input and inout ports in Verilog.",
+            "What is the purpose of using hierarchical names in a design?",
+            "How can a simple 4-bit adder be modeled using behavioral Verilog?"
+        ],
+        "question_type": [
+            "short",
+            "short",
+            "short",
+            "short",
+            "short"
+        ],
+        "answer": [
+            "An array is declared using reg [width:0] array_name [depth]; e.g., reg [7:0] mem [0:15];",
+            "Verilog requires the signed keyword to handle signed arithmetic.",
+            "input is unidirectional, while inout allows bidirectional data flow.",
+            "Hierarchical names enable access to specific elements within module hierarchies.",
+            "A 4-bit adder can be created using always @(a or b) and a + b in behavioral Verilog."
+        ],
+        "explanation": [
+            "Arrays are defined by specifying width and depth with reg or wire.",
+            "Verilog's signed keyword ensures correct signed arithmetic operations.",
+            "input is only for incoming signals, while inout allows signals in both directions.",
+            "Hierarchical names provide paths to specific modules and their signals.",
+            "A behavioral 4-bit adder sums inputs and stores the result."
+        ],
+        "difficulty": [
+            "medium",
+            "medium",
+            "medium",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "comprehension",
+            "comprehension",
+            "application",
+            "application",
+            "application"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "An array in Verilog is declared using the 'array' keyword, followed by the data type and the size of the array in parentheses. The size must be a positive integer. Example: `array [7:0] int a;` declares an array named 'a' of size 7, containing integer elements.",
+            "None",
+            "Input ports receive data from external sources, whereas inout ports receive both data and send data to external sources. In Verilog, input ports are represented by the 'input' keyword and inout ports are represented by the 'input' and 'output' keywords.",
+            "The purpose of using hierarchical names in a design is to organize and structure the design in a logical and easy-to-understand manner. By organizing the design elements into a hierarchical structure, it becomes easier to manage and modify the design.",
+            "A 4-bit adder can be modeled using behavioral Verilog by defining a state machine that performs the necessary operations on four 1-bit inputs to produce a sum of four 1-bit outputs."
+        ],
+        "explanation_preds": [
+            "In Verilog, arrays are used to store multiple values of the same data type in a single variable. The 'array' keyword is used to declare an array, and the data type and size of the array are specified using parentheses. The size of the array must be a positive integer, and the elements of the array are accessed using their index, starting from 0. The example demonstrates how to declare an array of integers with a size of 7.",
+            "None",
+            "Input ports are used to receive data from external sources, such as sensors or memory cells. In contrast, inout ports are used to both receive data and send data to external sources. This is useful when a module needs to both read data from external sources and write data to external sources, such as a processor or memory module.",
+            "Hierarchical names allow designers to group related elements together, such as functions, modules, or ports, and organize them in a logical order. This makes it easier to navigate the design and understand the relationships between different components.",
+            "A 4-bit adder is a combinational circuit that adds two 4-bit numbers. To model it using behavioral Verilog, we can define a state machine that represents the logic of the circuit. The state machine takes four 1-bit inputs representing the four bits of the numbers to be added, and produces four 1-bit outputs representing the sum of the numbers. At each state of the machine, the inputs are processed according to the logic of the adder to produce the sum."
+        ],
+        "raw_preds": [
+            "None",
+            "{{\"answer\": \"Verilog handles signed arithmetic by using integer data types and supporting operations such as addition, subtraction, multiplication, and division. The 'SIGNED' keyword is required to define a signed integer variable or expression.\", \"explanation\": \"Verilog uses integer data types to represent signed numbers, and the 'SIGNED' keyword is necessary to indicate that a variable or expression can store signed values. This allows for arithmetic operations to be performed on signed numbers, such as addition and subtraction.\",}}",
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_9": {
+        "statement": "Answer the following questions on logic synthesis and behavioral Verilog modeling.",
+        "question": [
+            "What type of logic is created when a module contains only combinational logic?",
+            "If a Verilog design uses latches, what type of behavior might this imply?",
+            "How does a case statement differ from if-else in Verilog synthesis?",
+            "What is the primary difference between behavioral and structural Verilog?",
+            "What does the following code segment represent? reg [3:0] counter; always @(posedge clk) counter <= counter + 1;"
+        ],
+        "question_type": [
+            "single",
+            "single",
+            "single",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "Combinational",
+            "Incomplete conditional coverage",
+            "case is more efficient for mutually exclusive conditions.",
+            "Behavioral describes function, structural describes connections.",
+            "A 4-bit counter with non-blocking assignment"
+        ],
+        "explanation": [
+            "Modules with no sequential elements synthesize as combinational logic.",
+            "Latches can form from incomplete conditions in combinational blocks.",
+            "Synthesis tools optimize case statements better than if-else for exclusive branches.",
+            "Behavioral modeling focuses on what the module does, while structural models how it's built.",
+            "The code defines a counter incrementing with each positive clock edge."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "recall",
+            "inference",
+            "inference",
+            "comprehension",
+            "comprehension"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "Combinational logic",
+            "A Verilog design that uses latches implies a deterministic, synchronous behavior.",
+            "None",
+            "The primary difference between behavioral and structural Verilog is that behavioral Verilog models describe the behavior of the circuit and its inputs and outputs, while structural Verilog models describe the physical structure of the circuit and its components.",
+            "None"
+        ],
+        "explanation_preds": [
+            "When a module contains only combinational logic, it performs a combination of input signals and generates output signals without any storage. Combinational logic models the behavior of digital circuits that process data based on a fixed set of inputs and produce a fixed set of outputs.",
+            "Latches are used to store state information and synchronize data in a circuit. They ensure that the circuit operates in a predetermined, predictable way. This is different from a design that uses flip-flops, which can have a higher degree of flexibility but may also have a harder-to-deterministic behavior.",
+            "None",
+            "Behavioral Verilog models focus on the functionality of the circuit and how it behaves under different inputs, while structural Verilog models focus on the technical details of the circuit's components and how they are connected.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "{{\"answer\": \"A case statement in Verilog synthesis is a way to implement conditional logic, where a block of code is executed based on the value of a particular expression. It differs from if-else statements in that it allows for multiple conditions to be checked in a single statement, and the code block to be executed only if one of the conditions is true. In contrast, if-else statements check a single condition and execute one of two code blocks based on whether it is true or false.\", \"explanation\": \"Case statements provide a more compact and efficient way to implement conditional logic compared to if-else statements, as they can express multiple conditions and corresponding actions in a single statement.\"}}",
+            "None",
+            "The code segment represents a counter register in Verilog. It has a width of 3 bits and is initialized to 0. The register is incremented by 1 on every positive edge of the clock signal."
+        ]
+    }
+}
+{
+    "rtl_10": {
+        "statement": "Answer the following questions about Verilog sequential logic and timing controls.",
+        "question": [
+            "Which event control keyword is used to execute statements at the positive edge of a clock?",
+            "What is the purpose of the # symbol in Verilog?",
+            "For the statement always @(posedge clk or negedge reset), what event will trigger this block?",
+            "If a 4-bit register q is set with q <= q + 1;, what operation does this perform?",
+            "How can you model a flip-flop with synchronous reset in Verilog?"
+        ],
+        "question_type": [
+            "single",
+            "single",
+            "single",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "posedge",
+            "Introduce a delay",
+            "Positive edge of clk or negative edge of reset",
+            "Increments q by 1 at every clock edge",
+            "Using an always block with posedge clk and conditional reset"
+        ],
+        "explanation": [
+            "posedge is used to trigger on the rising edge of a clock.",
+            "# introduces delay in time units for signal assignments.",
+            "The always block is triggered on either posedge clk or negedge reset.",
+            "q <= q + 1 increments q non-blockingly on each clock edge.",
+            "A flip-flop with synchronous reset uses if (reset) q <= 0; inside always @(posedge clk)."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "recall",
+            "recall",
+            "recall",
+            "computation",
+            "comprehension"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            " The event control keyword used to execute statements at the positive edge of a clock in Verilog sequential logic is '@(posedge clk)'. This keyword ensures that the statements inside the block are executed only when the clock signal goes positive, providing proper synchronization and ensuring efficient use of resources. }",
+            "None",
+            "The block will be triggered by a positive edge on the clk input or a negative edge on the reset input.",
+            "The operation performed by setting a 4-bit register q with q <= q + 1; is an increment operation. It increments the register value by 1.",
+            "None"
+        ],
+        "explanation_preds": [
+            "The @(posedge clk) event control keyword is used to define synchronous blocks in Verilog. It ensures that the statements inside the block are executed only when the clock signal goes positive, allowing for proper timing and efficient use of resources. This is particularly useful in sequential logic design, where timing control is crucial for ensuring the correct operation of the design.",
+            "None",
+            "In Verilog, the always block is a construct that specifies a set of statements that should always be executed in response to a certain event. In this case, the block will be triggered by either a positive edge on the clk input or a negative edge on the reset input. The use of the or operator ensures that the block is executed regardless of the occurrence of the other event. It is important to note that the always block is typically used in sequential logic to control timing and ensure that certain operations are performed in a specific order.",
+            "Increment operation in Verilog means that the value of the register is incremented by 1. In this case, the register is a 4-bit register, and the operation sets its value to the next higher value within the range of 0 to 15 (2^4-1).",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "{\"answer\": \"#\" symbol in Verilog is used to denote a non-blocking assignment operation. It is used to assign a value to a variable or signal without blocking the execution of the subsequent statement. This symbol is commonly used in cases where the assignment operation is not dependent on the previous statement's result.\"explanation\": The # symbol in Verilog is used to represent a non-blocking assignment operation, which means that the assignment operation is not dependent on the result of the previous statement. It is commonly used in cases where the assignment operation is not critical to the timing of the subsequent statement.",
+            "None",
+            "None",
+            "{{\"answer\": \"To model a flip-flop with synchronous reset in Verilog, we can use the `reg` keyword to define a寄存器, and the `always_comb` statement to define the logic for the flip-flop. Within the `always_comb` statement, we can use the `assign` statement to set the value of the flip-flop based on the current input and the previous state. Additionally, we can use the `sync_reset` statement to synchronize the reset signal with the clock signal, ensuring that the flip-flop is reset to its initial state when the reset signal is high. For example, the following code can be used to model a flip-flop with synchronous reset: `reg [3:0] count; always_comb begin count = assign(count, 3'b000); sync_reset(count, 1'b0); end`, which models a 4-bit flip-flop with a synchronous reset that resets the flip-flop to its initial state of `3'b000` when the reset signal is high.}}"
+        ]
+    }
+}
+{
+    "rtl_11": {
+        "statement": "Complete the sentences with appropriate Verilog keywords related to procedural timing and event controls.",
+        "question": [
+            "In Verilog, the always block triggered on any change of signals uses the keyword ___.",
+            "The delay control #10 a = 0; sets a delay of ___ time units.",
+            "To wait for a specific event in Verilog, you can use the ___ statement.",
+            "If you want an operation to execute only once at time 0, use the ___ block.",
+            "To model combinational logic in Verilog, the ___ keyword is typically used."
+        ],
+        "question_type": [
+            "blank",
+            "blank",
+            "blank",
+            "blank",
+            "blank"
+        ],
+        "answer": [
+            "always @*",
+            "10",
+            "wait",
+            "initial",
+            "always @*"
+        ],
+        "explanation": [
+            "always @* triggers the block on any input signal change, ideal for combinational logic.",
+            "#10 represents a delay of 10 time units for signal assignment.",
+            "The wait statement holds the process until the event occurs.",
+            "initial blocks execute statements once at simulation start.",
+            "Combinational logic often uses always @* for automatic sensitivity."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium",
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "recall",
+            "recall",
+            "application",
+            "recall",
+            "comprehension"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "always",
+            "10",
+            "wait",
+            "always",
+            "module"
+        ],
+        "explanation_preds": [
+            "The always block is used to define the behavior of a module when the specified event occurs. In this block, the keyword 'always' is used to specify that the block should be executed whenever the specified event changes.",
+            "The delay control #10 a = 0; sets a delay of 10 time units.",
+            "To wait for a specific event in Verilog, you can use the 'wait' statement.",
+            "The ___ block is used to define a procedural timing model in Verilog. It allows you to specify the timing of statements within a process.",
+            "To model combinational logic in Verilog, the 'module' keyword is typically used to define a new functional unit that can be composed of other smaller units."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_12": {
+        "statement": "Answer the following short-answer questions related to tasks, functions, and timing in Verilog.",
+        "question": [
+            "Explain the main difference between a task and a function in Verilog.",
+            "How does Verilog handle multiple drivers on a single wire?",
+            "Describe the purpose of the fork-join block in Verilog.",
+            "How is the repeat statement used in Verilog, and provide an example.",
+            "What is the function of the $monitor system task in Verilog?"
+        ],
+        "question_type": [
+            "short",
+            "short",
+            "short",
+            "short",
+            "short"
+        ],
+        "answer": [
+            "Tasks can contain delays and multiple outputs; functions cannot.",
+            "Verilog resolves conflicts using the wire type's resolution function like tri, wand, etc.",
+            "fork-join allows concurrent execution of multiple statements within a block.",
+            "repeat is used for fixed iterations, e.g., repeat (3) begin ... end;",
+            "$monitor continuously displays changes in specified signals."
+        ],
+        "explanation": [
+            "Functions return a single value without delays; tasks allow multiple operations with delays.",
+            "Resolution functions in Verilog handle multiple drivers by resolving values based on net type.",
+            "fork-join enables parallelism within procedural blocks.",
+            "repeat repeats the enclosed statements for a specific number of times.",
+            "$monitor prints signal values when any monitored signal changes."
+        ],
+        "difficulty": [
+            "medium",
+            "medium",
+            "medium",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "comprehension",
+            "comprehension",
+            "application",
+            "application",
+            "comprehension"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "Task and function are both used to organize code in Verilog, but the main difference is that a task is a self-contained unit of work that performs a specific task, while a function is a block of code that can be called multiple times. Tasks are typically used to perform a single, specific operation, such as a mathematical calculation, while functions are used to perform a more general operation, such as a set of operations. Additionally, tasks are usually defined with the `task` keyword, while functions are defined with the `function` keyword.",
+            "None",
+            "The purpose of the fork-join block in Verilog is to implement concurrent control flow in a design. It allows multiple paths to be taken simultaneously and then merge their results. It is useful when there are multiple tasks that need to be executed simultaneously and their execution needs to be overlapped. The fork-join block allows for efficient use of resources by allowing multiple tasks to be executed in parallel.",
+            "None",
+            "The function of the $monitor system task in Verilog is to monitor the progress of a task and report the status of the task to the user or designer."
+        ],
+        "explanation_preds": [
+            "In Verilog, tasks and functions are both used to organize code into reusable blocks. Tasks are self-contained units of work that perform a specific task, while functions are blocks of code that can be called multiple times. The main difference between the two is that tasks are typically used to perform a single, specific operation, while functions are used to perform a more general operation. Tasks are defined using the `task` keyword, while functions are defined using the `function` keyword.",
+            "None",
+            "A fork-join block is a type of concurrent logic block in Verilog that enables multiple paths to be taken simultaneously. It splits the control flow into multiple paths and then merges their results. This allows for efficient use of resources and enables multiple tasks to be executed in parallel. The fork-join block is useful in designs that require concurrent control flow, such as in designs that require multiple processors to work together on a task.",
+            "None",
+            "The $monitor system task is a user-defined task that can be used to track the progress of any task in a Verilog design. It allows the user to specify the task to be monitored, the conditions under which the task should be considered complete, and the reporting mechanism. By monitoring the progress of a task, the user can ensure that the task is completed within a specified time frame and take appropriate action if the task is late. The $monitor system task can be used in various Verilog designs, including digital circuits, simulation models, and real-time systems."
+        ],
+        "raw_preds": [
+            "None",
+            "{{\"answer\": \"Verilog handles multiple drivers on a single wire by using a synchronous design technique called \"data transfer mode\". In this mode, multiple drivers are clock-synchronized and transfer data in parallel on the same wire. The transfer is controlled by a master clock signal, which ensures that each driver correctly aligns its data with the previous one.\", \"explanation\": \"Data transfer mode in Verilog is a technique that allows multiple drivers to share a single wire for communication. It ensures that the drivers are properly aligned by using a master clock signal to synchronize their data transfers.\"}}",
+            "None",
+            "{{\"answer\": \"The repeat statement in Verilog is used to repeat a block of code multiple times. It is typically used in cases where there are multiple inputs that need to be processed simultaneously or when there are multiple branches in a decision-making logic.\", \"explanation\": \"The repeat statement allows users to define a loop that will execute a given block of code multiple times, making it ideal for implementing certain types of digital logic designs.\"}}",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_13": {
+        "statement": "Answer the following questions about Verilog conditional expressions and multi-way branching.",
+        "question": [
+            "What does the casex keyword allow in a case statement?",
+            "In a casez statement, how are Z values treated?",
+            "Which operator should be used to compare signals with unknowns?",
+            "What does the conditional expression a = (b > c) ? b : c; do?",
+            "How can priority be implemented in case statements in Verilog?"
+        ],
+        "question_type": [
+            "single",
+            "single",
+            "single",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "Allows x and z values to be treated as don't cares",
+            "Treats Z values as don't care conditions",
+            "===",
+            "Assigns a with b if b > c, otherwise with c",
+            "By listing conditions in the desired priority order"
+        ],
+        "explanation": [
+            "casex treats both x and z values as don't cares, simplifying matching.",
+            "In casez, only Z values are considered don't cares.",
+            "The === operator checks for exact matches, including unknowns.",
+            "The conditional operator ?: assigns based on the condition (b > c).",
+            "Case priority is handled by ordering conditions in the case block."
+        ],
+        "difficulty": [
+            "medium",
+            "medium",
+            "medium",
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "recall",
+            "recall",
+            "computation",
+            "inference",
+            "comprehension"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "The 'casex' keyword allows for the creation of a conditional expression in a case statement, enabling the implementation of multi-way branching.",
+            "None",
+            "None",
+            "None",
+            "Priority can be implemented in case statements in Verilog by using multiple 'case' statements with different priorities. Each 'case' statement can have one or more 'priority' attributes, which determine the order in which the statements within the case are executed. The highest priority 'case' statement is executed first, followed by the next highest priority, and so on. Priority can also be implemented using 'else if' statements within a 'case' statement, where the 'else if' clause can have a higher priority than the previous 'case' statement."
+        ],
+        "explanation_preds": [
+            "Casex is a keyword in Verilog that allows for the implementation of conditional expressions within a case statement. It enables the possibility of having multiple conditional paths within a case, allowing for more complex logic to be implemented. This is useful in situations where the decision making process requires more than just a simple true or false comparison.",
+            "None",
+            "None",
+            "None",
+            "No explanation found"
+        ],
+        "raw_preds": [
+            "None",
+            "{{\"answer\": \"Z values are treated as 0s (false) in a casez statement.\", \"explanation\": \"In a casez statement, the Z value represents the outcome of the comparison between the left-hand side (LHS) and the right-hand side (RHS) of the comparison expression. If the LHS is less than or equal to the RHS, the Z value is assigned 0 (false), indicating that the condition is not satisfied. If the LHS is greater than the RHS, the Z value is assigned 1 (true), indicating that the condition is satisfied. If the comparison expression evaluates to 0, the Z value is also 0, regardless of the outcome of the comparison.\"}}",
+            "{{\"answer\": \"The operator to compare signals with unknowns is '==' or '!='.\", \"explanation\": \"In Verilog, we can use the '==' operator to compare signals with unknowns and check for equality. For example, if we have two signals A and B and we want to check if they are equal, we can use the following expression: A == B; if this expression evaluates to true, it means that A and B are equal. Similarly, we can use the '!=' operator to check for inequality.\"}}",
+            "The conditional expression a = (b > c) ? b : c; is a shorthand for \"if b > c, then b else c\". It is used to assign the value of b if b is greater than c, otherwise it assigns the value of c. This is useful for multi-way branching, where the program needs to take different actions depending on the results of conditions. For example, it can be used to select the greater of two numbers or to go to different paths in a flowchart.",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_14": "None"
+}
+{
+    "rtl_15": "None"
+}
+{
+    "rtl_16": "None"
+}
+{
+    "rtl_17": "None"
+}
+{
+    "rtl_18": "None"
+}
+{
+    "rtl_19": "None"
+}
+{
+    "rtl_20": {
+        "statement": "Consider the following Verilog multiple choice, fill in the blanks, and short answer questions. Analyze the provided Verilog code and scenarios to answer.",
+        "question": [
+            "Given a = 2'b11; b = 4'b1010;, what is the result of {a, b}?",
+            "For the expression expr = (x == 1) ? a : b; with x=1'bx, a=4'b1100, and b=4'b0011, the value of expr is:",
+            "In always @(posedge clk) where q1 <= q2; q2 = q3; is executed and before the clock edge q1=0, q2=1, and q3=2, what will q1 be after the clock edge?",
+            "The declaration reg [15:0] mem [127:0]; represents:",
+            "For A = 4'b11X1 and B = 4'b11X1, the result of A == B and A === B is:",
+            "Which statement is used to define a tri-state buffer?",
+            "If signal A is 8 bits wide and B is 10 bits wide, what is the minimum bit width required for the product A * B without overflow?",
+            "Given the module my_module with ports input a, b; output c;, the correct instantiation is:",
+            "Which Verilog loop cannot be synthesized?",
+            "How many address lines are needed for a 128-to-1 multiplexer?"
+        ],
+        "question_type": [
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "B",
+            "B",
+            "C",
+            "A",
+            "A",
+            "D",
+            "B",
+            "B",
+            "D",
+            "B"
+        ],
+        "explanation": [
+            "{a, b} concatenates a=2'b11 and b=4'b1010, resulting in 6'b111010.",
+            "With x=1'bx, the condition is false, so expr = b = 4'b0011.",
+            "q1 <= q2 is non-blocking, so after the clock edge, q1 becomes q2's value before the clock, which is 2.",
+            "reg [15:0] mem [127:0]; declares a 16-bit wide, 128-depth memory.",
+            "== returns x when comparing X, while === can handle X and returns 1.",
+            "tri is used to define tri-state signals.",
+            "The minimum bit width required is 8 + 10 = 18 bits to avoid overflow.",
+            "Proper instantiation requires using port names with .port(signal) syntax.",
+            "forever creates an infinite loop and is not synthesizable.",
+            "A 128-to-1 multiplexer needs log2(128) = 7 address lines."
+        ],
+        "difficulty": [
+            "easy",
+            "easy",
+            "medium",
+            "easy",
+            "medium",
+            "easy",
+            "medium",
+            "easy",
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "recall",
+            "recall",
+            "inference",
+            "recall",
+            "inference",
+            "recall",
+            "computation",
+            "recall",
+            "inference",
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "zhihu",
+        "answer_preds": [
+            "{'a': 2'b11, 'b': 4'b1010}",
+            "a",
+            "q1 will be 0",
+            "The declaration reg [15:0] mem [127:0]; represents a 16-bit register that can hold a value between 0 and 65535.",
+            "A == B and A === B are both false",
+            "The statement used to define a tri-state buffer is 'tri_state_buffer(input, tri_state_t state, output)'.",
+            "18",
+            "None",
+            "C",
+            "12"
+        ],
+        "explanation_preds": [
+            "To find the result of {a, b}, we need to perform a bitwise OR operation on the binary representations of a and b. The binary representation of 2'b11 is 101 and the binary representation of 4'b1010 is 1010. The result of {a, b} is therefore 1010, which is represented in Verilog as 4'b1010.",
+            "Since x is equal to 1, the expression expr evaluates to a ? a : b, which is equivalent to a. Therefore, the value of expr is 4'b1100.",
+            "The Verilog code provided is a simple synchronous circuit that counts the number of clock cycles that have occurred. The variable q1 is initially set to 0, and it is incremented on each clock edge. The variable q2 is set to 1 on the first clock edge, and it is incremented on each subsequent clock edge. The variable q3 is set to 2 on the third clock edge, and it is incremented on each subsequent clock edge. Since q1 is always incremented on the same clock edge as q2, it will always be 0 after the clock edge.",
+            "In Verilog, 'reg' is used to declare a register. The number after the 'reg' keyword specifies the number of bits the register can hold. In this case, the register can hold 16 bits, which is represented by [15:0]. The memory declaration 'mem [127:0];' represents a memory array with 128 bytes, where each byte can be accessed from 0 to 65535.",
+            "In Verilog, the bitwise AND operator (&) returns 1 if both input bits are 1, and 0 otherwise. The bitwise OR operator (|) returns 1 if either or both input bits are 1, and 0 otherwise. Therefore, for A and B to have the same value, both A and B must be 11X1, which is not the case. Hence, A == B and A === B are both false.",
+            "In the given Verilog code, the 'tri_state_buffer' module is defined with three input ports 'input', 'tri_state_t state' and 'output'. The 'state' port is of type 'tri_state_t', which is a user-defined type that can have three possible values, and the 'output' port is of type 'bit'. This defines a tri-state buffer, which can store one of three states (input, unchanged, or output).",
+            "To find the minimum bit width required for the product A * B without overflow, we need to consider the highest order bit of A and B and find the maximum of those two bits. Since A is 8 bits wide and B is 10 bits wide, the highest order bit of A is 2012 (11111111 in binary) and the highest order bit of B is 1111111111 (all bits set to 1). Therefore, the maximum of those two bits is 2012. So, the minimum bit width required for the product A * B without overflow is 18 bits.",
+            "None",
+            "The loop in Verilog cannot be synthesized because it has a non-binary expression in the loop condition. The condition in the loop should be binary to enable synthesis.",
+            "A 128-to-1 multiplexer requires 12 address lines to select one of 128 inputs from the source."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "{{\"answer\": \"a\", \"explanation\": \"The correct instantiation for the module with inputs a and b and output c is: my_module(a, b, c);\"}}",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_21": {
+        "statement": "Fill in the blanks with the correct Verilog concepts based on the provided scenarios.",
+        "question": [
+            "In the declaration reg [7:0] data [0:31];, the width of data is ___ and the depth is ___.",
+            "In a sequential circuit, blocking assignment uses the symbol ___, while non-blocking assignment uses ___.",
+            "For an 8-bit unsigned integer, the range is from ___ to ___.",
+            "In Verilog, the keyword used to define a tri-state output is ___.",
+            "If an always block does not have a complete branch (e.g., missing an else), it might synthesize as a ___ circuit."
+        ],
+        "question_type": [
+            "blank",
+            "blank",
+            "blank",
+            "blank",
+            "blank"
+        ],
+        "answer": [
+            "8, 32",
+            " =, <=",
+            "0, 255",
+            "tri",
+            "latch"
+        ],
+        "explanation": [
+            "[7:0] represents an 8-bit wide bus, and [0:31] defines 32 elements.",
+            "Blocking assignments use =, and non-blocking assignments use <=.",
+            "The range for an 8-bit unsigned integer is from 0 to 255.",
+            "tri is the keyword for tri-state outputs.",
+            "Without a complete if-else structure, latches may be inferred."
+        ],
+        "difficulty": [
+            "easy",
+            "easy",
+            "easy",
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "recall",
+            "recall",
+            "recall",
+            "recall",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "zhihu",
+        "answer_preds": [
+            "{'answer': '32', 'explanation': 'The width of data is 32 and the depth is 1.'}",
+            "blocking",
+            "{'range': '0 to 255'}",
+            "tri-state",
+            "{"
+        ],
+        "explanation_preds": [
+            "In the declaration reg [7:0] data [0:31];, the width of data is 32 and the depth is 1. The '[7:0]' specifies a 32-bit wide data register with 7 bits leftmost. The 'data' is a 32-bit wide array that can hold 2^32 different values. The '[0:31]' specifies a 32-bit wide array with 32 elements starting from the 0th index.",
+            "In a sequential circuit, blocking assignment uses the symbol ';' for statement division, which splits a statement into multiple instructions and executes them sequentially. On the other hand, non-blocking assignment uses '|' for OR assignment, which combines the results of multiple assignments into a single value.",
+            "An 8-bit unsigned integer has a range of 0 to 255, as each bit can have a value of 0 or 1.",
+            "In Verilog, the keyword used to define a tri-state output is 'tri-state'.",
+            "An always block without a complete branch may synthesize as a half adder circuit."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_22": {
+        "statement": "Answer the following short answer questions to test your understanding of Verilog.",
+        "question": [
+            "Explain the difference between blocking and non-blocking assignments, and describe when each should be used.",
+            "What is a latch, and how can latches be avoided in Verilog?",
+            "What is the purpose of the assign statement in Verilog? Provide an example of its use in a synthesized design.",
+            "Describe the function of the generate statement in Verilog and explain how to use generate for to instantiate repetitive structures.",
+            "How does Verilog support the interconnection of multiple modules? Outline the steps for module instantiation and explain the key steps involved."
+        ],
+        "question_type": [
+            "short",
+            "short",
+            "short",
+            "short",
+            "short"
+        ],
+        "answer": [
+            "Blocking assignments (=) execute sequentially and are typically used in combinational logic. Non-blocking assignments (<=) update in parallel and are used for sequential logic to model clocked behavior.",
+            "A latch is a memory element that retains its value when not explicitly changed. To avoid latches, ensure that all branches of conditional statements (e.g., if-else) are covered.",
+            "The assign statement is used for continuous assignments in combinational logic. Example: assign sum = a + b; drives the output sum continuously based on inputs a and b.",
+            "generate is used for repetitive structure instantiation. Example with generate for: genvar i; generate for (i = 0; i < 8; i = i + 1) begin my_module inst (.a(a[i]), .b(b[i]), .c(c[i])); end endgenerate",
+            "Verilog modules can be interconnected by instantiating one module within another. This involves declaring inputs and outputs and mapping them correctly using .port(signal) in the top module. Example: my_module u1 (.a(signal_a), .b(signal_b), .c(signal_c));"
+        ],
+        "explanation": [
+            "Blocking vs Non-blocking: Blocking executes in the order written, Non-blocking happens concurrently, usually in clocked logic.",
+            "Latches can occur when not all branches of a combinational block are assigned. Cover all branches to avoid.",
+            "Assign: used for driving continuous logic outside of always blocks.",
+            "Generate allows code replication. It helps when instantiating multiple similar modules.",
+            "Interconnecting modules involves instantiating and connecting ports between modules."
+        ],
+        "difficulty": [
+            "medium",
+            "medium",
+            "easy",
+            "hard",
+            "medium"
+        ],
+        "ability": [
+            "comprehension",
+            "comprehension",
+            "comprehension",
+            "comprehension",
+            "comprehension"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "zhihu",
+        "answer_preds": [
+            "Blocking assignments are statements that change the value of a register or variable in a single operation, while non-blocking assignments are statements that do not change the value of a register or variable in a single operation.",
+            "A latch is a synchronous state machine that can be used to synchronize multiple modules or components in a digital design. It is essentially a flip-flop with a built-in clock input and a set of inputs and outputs that can be used to control the state of the latch. Latches can be avoided in Verilog by using synchronous design techniques such as寄存器或总线而不是状态机.",
+            "The purpose of the assign statement in Verilog is to assign a value to a variable or parameter.",
+            "None",
+            "Verilog supports the interconnection of multiple modules through the use of interfaces. To instantiate a module, the user declares the module and defines its interface, which specifies the inputs and outputs of the module. The user then creates instances of the module, connecting them together through the use of interface instances. The key steps involved in instantiating a module are defining the module's interface, creating the instance of the module, and connecting the instances together."
+        ],
+        "explanation_preds": [
+            "Blocking assignments are useful when you need to update the value of a register or variable in a single step, such as in a for loop. Non-blocking assignments, on the other hand, are useful when you only need to read the value of a register or variable and do not need to update it, such as in a case statement.",
+            "Latches are useful for synchronizing data between different parts of a design, but they can introduce delays and complexity. To avoid using latches, designers can use synchronous design techniques such as registers or buses to synchronize data between modules. This approach simplifies the design and reduces the risk of delays due to latch-based synchronization.",
+            "Assign statements are used to initialize variables, assign values to them, or set their初值。它们的语法是`assign <variable> = <value>;`",
+            "None",
+            "Verilog provides a way to connect multiple modules through the use of interfaces, which allows for the creation of complex systems. To instantiate a module, the user must declare the module and define its interface, which specifies the inputs and outputs of the module. This is followed by creating instances of the module and connecting them together through the use of interface instances. The process involves defining the module's interface, creating the instance of the module, and connecting the instances together, which are the key steps involved in instantiating a module."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None",
+            "{{\"answer\": \"The function of the generate statement in Verilog is to generate a repetitive structure. It is used to instantiate a block of code multiple times, reducing the amount of code required.\", \"explanation\": \"Generate is a keyword in Verilog that allows the creation of a block of code that is repeated multiple times. It is commonly used in digital design to reduce the amount of code needed and improve efficiency. By defining a generate statement, designers can specify the number of times the block of code should be repeated and the type of the elements that should be included in the block. This helps to minimize the overall size of the design and makes it easier to modify and maintain.\"}}",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_23": {
+        "statement": "Reset signal types and their application in RTL design",
+        "question": [
+            "Which type of reset is preferred for design portability?",
+            "What are the advantages of using synchronous resets in RTL design?",
+            "Which of the following are typical elements found in an RTL design?"
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "multi"
+        ],
+        "answer": [
+            "Synchronous reset",
+            [
+                "Predictable timing",
+                "Better synthesis support",
+                "Easier debugging"
+            ],
+            [
+                "Registers",
+                "ALUs",
+                "State machines",
+                "Multiplexers"
+            ]
+        ],
+        "explanation": [
+            "",
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "inference",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "Answer",
+            "Synchronous resets in RTL design are advantageous because they ensure that all components are properly initialized and that the system as a whole functions correctly. They also simplify the design by eliminating the need for multiple reset signals. Additionally, synchronous resets can improve the overall performance of the system by reducing the time required for initialization.",
+            "In an RTL design, typical elements include gates, flip-flops, multipliers, dividers, adders, and timers. These elements are used to implement the logic functions and circuits required for the design. The choice of these elements depends on the specific requirements of the design and the desired functionality."
+        ],
+        "explanation_preds": [
+            "To ensure design portability, a common preference for reset signal types is the '软复位' (Soft Reset) signal. This signal is typically used to reset all the registers and elements of a design to a known state, allowing for easy integration and testing of new components or algorithms. By using a soft reset, designers can minimize the impact of changes in component behavior and ensure consistent performance across different implementations.",
+            "Synchronous resets in RTL design are beneficial because they guarantee proper initialization of all components and ensure that the system functions as a whole. They simplify the design by eliminating the need for multiple reset signals, and their use can improve the overall performance of the system by reducing the time required for initialization.",
+            "RTL (Register-Transfer Level) design is a level of abstraction used in digital design where the focus is on the movement of data between registers and the operations performed on that data. The elements in an RTL design are typically gates, which are electronic circuits that implement a specific logical function, and flip-flops, which are memory elements that store a binary value. Other elements in an RTL design include multipliers, dividers, adders, and timers, which are used to implement specific logic functions and circuits."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_24": {
+        "statement": "Behavioral and RTL modeling in Verilog",
+        "question": [
+            "What is the difference between behavioral and RTL modeling in Verilog?",
+            "Explain the purpose of an FSM (Finite State Machine) in RTL design."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "Behavioral modeling in Verilog describes the behavior of a digital circuit at a high level of abstraction, while RTL (register-transfer level) modeling describes the underlying hardware structure of the circuit.",
+            "An FSM in RTL design is used to model the behavior of a system and manage its state transitions. It provides a visual representation of the system's state machine, which is a critical component in the design flow."
+        ],
+        "explanation_preds": [
+            "In summary, behavioral modeling in Verilog describes the behavior of a digital circuit at a high level, while RTL modeling describes the underlying hardware structure of the circuit. Both approaches are useful for different purposes in the design process.",
+            "FSMs are used to describe how a system transitions between different states based on inputs and outputs. They are widely used in digital design to model complex systems and manage their behavior. In RTL design, an FSM can be used to describe the behavior of a system and manage its state transitions, which is essential for creating efficient and reliable designs."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_25": {
+        "statement": "Latch inference and its prevention in RTL",
+        "question": [
+            "How can a designer prevent latch inference in combinational circuits?",
+            "What happens if a combinational block is not fully specified?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "It infers a latch"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "inference",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "None",
+            "A combinational block that is not fully specified can result in a latch inference error. This error occurs when a combinational block is used in a design without being fully specified, resulting in a change in the behavior of the design. This can lead to unexpected results and can be difficult to debug."
+        ],
+        "explanation_preds": [
+            "None",
+            "A latch inference error can occur when a combinational block is not fully specified, leading to unexpected behavior in the design. To prevent this error, it is important to ensure that all combinational blocks are fully specified and properly integrated into the design."
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"Latch inference can be prevented by using proper synchronization techniques and ensuring that the combinational circuit is designed in a way that avoids the possibility of multiple inputs being active at the same time. This can be achieved by using buffers, Flip-flops, and other synchronization elements to ensure that the correct sequence of inputs is used in the circuit.\", \"explanation\": \"Latch inference occurs when a circuit has multiple inputs that are dependent on the output of the previous cycle, leading to an infinite loop. By using proper synchronization, the designer can prevent this from happening and ensure that the circuit functions correctly.\"}}",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_26": {
+        "statement": "Blocking vs non-blocking assignments in Verilog",
+        "question": [
+            "Describe the difference between blocking and non-blocking assignments in Verilog.",
+            "What is the primary reason for using non-blocking assignments in sequential logic?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "Prevents race conditions"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "Blocking assignments in Verilog are assignments that take a finite amount of time to complete, while non-blocking assignments are assignments that can potentially run indefinitely. Non-blocking assignments are typically used for variables that are not time-critical and can tolerate some delay. In contrast, blocking assignments are used for variables that must be updated as soon as possible, such as clock inputs or synchronization signals. The choice between blocking and non-blocking assignments depends on the requirements of the design and the performance characteristics of the variables being used.",
+            "The primary reason for using non-blocking assignments in sequential logic is to avoid data hazards."
+        ],
+        "explanation_preds": [
+            "In Verilog, blocking assignments are those that have a fixed amount of time to complete, usually specified using the `timescale` keyword. Non-blocking assignments, on the other hand, are those that can run indefinitely and are typically used for variables that are not time-critical. The key difference between the two is the time it takes to complete them. Blocking assignments must be completed within a certain time limit, while non-blocking assignments can take as much time as needed.",
+            "Non-blocking assignments allow multiple registers to be updated simultaneously without causing a data hazard, which can occur when multiple instructions try to access the same data simultaneously. This ensures that the correct value is written to the register and avoids any potential issues that could arise from data hazards."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_27": {
+        "statement": "Parameterization in RTL design",
+        "question": [
+            "What are the benefits of using parameterized modules in RTL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            ""
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "The benefits of using parameterized modules in RTL design are increased modularity, reusability, and flexibility. Parameterization allows for the creation of independent modules that can be easily reused in different designs, and it also enables the creation of more adaptable and scalable designs by allowing for the easy modification of parameters. Additionally, parameterized modules can improve the overall performance of the design by reducing the number of routing decisions that need to be made."
+        ],
+        "explanation_preds": [
+            "RTL design is all about making decisions and choosing paths. By using parameterized modules, we can define a set of rules that determine how paths are taken, allowing for greater flexibility and reusability. Parameterization also allows for easier maintenance and modification of these rules, which can be especially important in larger and more complex designs. Overall, using parameterized modules can lead to more efficient and effective design choices."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_28": {
+        "statement": "Asynchronous vs synchronous signal handling",
+        "question": [
+            "How do synthesis tools handle asynchronous signals differently compared to synchronous ones?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            ""
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "Synthesis tools handle asynchronous signals differently compared to synchronous ones by using different approaches to handle the non-blocking nature of asynchronous signals. Asynchronous signals are typically handled using event-driven programming, where the synthesis tool responds to events rather than blocked waiting for a response. In contrast, synchronous signals are handled using a synchronous approach, where the synthesis tool waits for a response before proceeding. This difference in approach results in different performance characteristics between asynchronous and synchronous signal handling."
+        ],
+        "explanation_preds": [
+            "Asynchronous signals are non-blocking, meaning they can be processed in the background without waiting for a response. Synthesis tools handle these signals differently by using event-driven programming, where the tool responds to events rather than blocked waiting for a response. On the other hand, synchronous signals require a synchronous approach, where the synthesis tool waits for a response before proceeding. This difference in approach results in different performance characteristics between asynchronous and synchronous signal handling."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_29": {
+        "statement": "Handling of reset signals in RTL",
+        "question": [
+            "Which aspects should be considered during RTL code verification?",
+            "Which of the following are effects of improper handling of reset signals in RTL?"
+        ],
+        "question_type": [
+            "multi",
+            "multi"
+        ],
+        "answer": [
+            [
+                "Functional coverage",
+                "Latch inference",
+                "Timing violations",
+                "Synthesis warnings"
+            ],
+            [
+                "Functional failure at startup",
+                "High power consumption",
+                "Incorrect state machine transitions",
+                "Latch inference"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "inference",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "None",
+            "Improper handling of reset signals in RTL can result in unexpected behavior, failed system operation, and potential hardware damage."
+        ],
+        "explanation_preds": [
+            "None",
+            "Reset signals are used to reset the system to its initial state, ensuring that all components are returned to their default settings. If the reset signals are not handled properly, the system may not function correctly, and the reset may cause damage to the hardware if not handled properly."
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"reset signals in RTL should be handled carefully to ensure proper functionality of the system. The reset signals should be clearly defined and their effects should be properly modeled in the RTL code. The synchronization and timing of the reset signals should also be carefully considered. During RTL code verification, the handling of reset signals should be thoroughly checked to ensure that they are handled correctly and that the system behavior is as expected.\", \"explanation\": \"Handling reset signals in RTL is crucial for ensuring the proper functioning of the system. It requires careful definition and modeling of the reset signals and synchronization of their effects. During RTL code verification, it is essential to thoroughly check the handling of reset signals to ensure correct implementation and system behavior as expected.\"}}",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_30": "None"
+}
+{
+    "rtl_31": "None"
+}
+{
+    "rtl_32": "None"
+}
+{
+    "rtl_33": {
+        "statement": "Understanding Verilog case statements and their usage",
+        "question": [
+            "What are Verilog parallel case and full case statements?",
+            "Explain how the full case statement works."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "Verilog parallel case and full case statements are used to handle multiple conditions in a case statement. The parallel case statement checks each condition individually and selects the first one that satisfies any of the conditions. The full case statement checks all the conditions and selects the first one that satisfies all of them. In both statements, the 'then' clause specifies the actions to be taken when a condition is satisfied.",
+            "None"
+        ],
+        "explanation_preds": [
+            "Parallel case and full case statements in Verilog are used to implement multi-condition logic in a case statement. The parallel case statement checks each condition independently to determine which one satisfies the condition and executes the corresponding 'then' clause. On the other hand, the full case statement checks all conditions and executes the corresponding 'then' clause for the first one that satisfies all conditions.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "{{\"answer\": \"A full case statement in Verilog is used to evaluate the condition(s) and execute different blocks of code based on those conditions. It consists of a 'case' keyword followed by one or more 'if' clauses, each of which has a condition and a corresponding 'then' block and/or 'else' block. The 'else' block is optional and is executed when none of the 'if' clauses are true. The 'case' statement can also be followed by an optional 'default' block, which is executed when none of the 'if' clauses are true and the 'else' clause is not present. The full case statement is used to implement a wide range of digital logic functions and control structures in Verilog.\", \"explanation\": \"A full case statement in Verilog is a powerful tool for implementing complex digital logic functions and control structures. It allows designers to specify a series of conditions and corresponding actions to be taken when those conditions are met. By combining multiple 'if' clauses and 'else' blocks, designers can create highly flexible and customizable logic circuits.\"}}"
+        ]
+    }
+}
+{
+    "rtl_34": {
+        "statement": "Differences in Verilog operators and expressions",
+        "question": [
+            "What is the difference between == and === in Verilog?",
+            "Which operator can compare X values: == or ===?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "==="
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "The difference between == and === in Verilog is that == is used for equality comparison, while === is used for strict equality comparison. In other words, == performs a loose comparison of two operands, while === performs a strict comparison, ensuring that both operands are of the same data type and have the same value.",
+            "None"
+        ],
+        "explanation_preds": [
+            "The double equals sign (==) in Verilog is used to compare two variables for equality. It performs a loose comparison, meaning that it compares the values of the variables, rather than their types. On the other hand, the single equals sign (===) is used to compare two variables for strict equality. It ensures that both variables have the same data type and value, making it a more precise comparison.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "{{\"answer\": \"===\", \"explanation\": \"In Verilog, the `==` operator is used to compare two boolean values, while the `===` operator is used to compare two values of any type, including booleans. The `==` operator returns a value of `true` if the two operands are equal, while the `===` operator returns a value of `true` only if the two operands are of the same type and equal.}}"
+        ]
+    }
+}
+{
+    "rtl_35": {
+        "statement": "Verilog data types: reg and wire",
+        "question": [
+            "What is the difference between reg and wire in Verilog?",
+            "What is the default value of a wire in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "Z"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "Reg is a data type in Verilog that represents a register, which is a storage location in a digital circuit that holds a value. Wire is a data type in Verilog that represents a wire, which is a high-speed communication link between components in a digital circuit. The main difference between reg and wire is that reg is a named data type that is defined in the Verilog library, while wire is a user-defined data type that is created by the user at the top of the module. Reg is typically used to define a fixed-size register, while wire is used to define a variable-size wire that can be up to 32 bits wide.",
+            "json"
+        ],
+        "explanation_preds": [
+            "Reg is a data type in Verilog that represents a register, which is a storage location in a digital circuit that holds a value. Wire is a data type in Verilog that represents a wire, which is a high-speed communication link between components in a digital circuit. The main difference between reg and wire is that reg is a named data type that is defined in the Verilog library, while wire is a user-defined data type that is created by the user at the top of the module. Reg is typically used to define a fixed-size register, while wire is used to define a variable-size wire that can be up to 32 bits wide.",
+            "I'm sorry, but I am not sure what you are asking. Please provide more context or information about Verilog data types and wire default values."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_36": {
+        "statement": "Blocking vs non-blocking assignments in Verilog",
+        "question": [
+            "What are the differences between blocking and non-blocking assignments in Verilog?",
+            "When should you use non-blocking assignments?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "simplilearn",
+        "answer_preds": [
+            "Blocking assignments in Verilog are assignments that take a finite number of clock cycles to complete, while non-blocking assignments are assignments that can take any number of clock cycles to complete.",
+            "None"
+        ],
+        "explanation_preds": [
+            "In Verilog, blocking assignments are those that always take a fixed number of clock cycles to complete, regardless of the inputs. On the other hand, non-blocking assignments can take varying amounts of time to complete, depending on the inputs. This is the main difference between the two types of assignments.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "{{\"answer\": \"Non-blocking assignments should be used when the assignment operator does not need to wait for the assigned variable to be updated before continuing with the next operation.\", \"explanation\": \"Non-blocking assignments allow the assignment operator to proceed without waiting for the assigned variable to be updated, which can improve performance in certain situations. However, it is important to note that non-blocking assignments can only be used in certain contexts and may not be suitable for all situations.\"}}"
+        ]
+    }
+}

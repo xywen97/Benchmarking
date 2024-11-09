@@ -28,6 +28,8 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 - [x] GPT-4-vision
 - [x] Reka series
 - [x] Blip + T5
+- [x] Llama3.2-11b-vision-instruct
+- [x] Llama3.2-90b-vision-instruct
 
 ### 多模态模型 (图片端还未成功)
 - [x] Gemini series

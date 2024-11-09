@@ -6,7 +6,8 @@ import os
 
 app = Flask(__name__)
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "4"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 model_path = "/data/xiangyu/benchmarkModels/Meta-Llama-3___1-70B-Instruct"
 
@@ -14,9 +15,9 @@ model = pipeline(
     "text-generation",
     model=model_path,
     model_kwargs={"torch_dtype": torch.bfloat16},
-    device_map="auto",
+    device_map="auto"
+    # device=device
 )
-
 
 terminators = [
     model.tokenizer.eos_token_id,

@@ -8,20 +8,21 @@ from flask import Flask, request, jsonify
 import os
 
 app = Flask(__name__)
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "5"
+
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-model_dir = "/data/xiangyu/benchmarkModels/Llama-3___2-11B-Vision-Instruct"
+model_dir = "/data/xiangyu/benchmarkModels/Llama-3___2-90B-Vision-Instruct"
 # model_dir = snapshot_download(model_id, ignore_file_pattern=['*.pth'])
 print(model_dir)
 
 model = MllamaForConditionalGeneration.from_pretrained(
     model_dir,
     torch_dtype=torch.bfloat16,
-    device_map="auto",
+    device_map="auto"
 )
 
-model = model.to(device)
+# model = model.to(device)
 
 processor = AutoProcessor.from_pretrained(model_dir)
 
@@ -33,7 +34,7 @@ def generate_text():
     image_paths = data.get("image_paths", [])
 
     print(f"""
-        This is the blip2_flan_t5_xl.py script.
+        This is the Llama-3___2-90B-Vision-Instruct.py script.
         The prompt is: {prompt}
         The image path is: {image_paths}
     """)
@@ -75,5 +76,5 @@ def generate_text():
     return jsonify(assistant_content)
 
 if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0', port=5013)
+    app.run(debug=False, host='0.0.0.0', port=5014)
 

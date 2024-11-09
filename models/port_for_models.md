@@ -14,3 +14,4 @@
 12. 5011: llama3.1 70b instruct
 13. 5012: llama3.1 8b instruct
 14. 5013: llama3.2 11b vision instruct
+15. 5014: llama3.2 90b vision instruct

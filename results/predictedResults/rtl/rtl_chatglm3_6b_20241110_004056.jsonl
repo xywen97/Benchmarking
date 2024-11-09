@@ -202,3 +202,311 @@
         ]
     }
 }
+{
+    "rtl_2": {
+        "statement": "Answer the following short-answer questions based on Verilog modeling concepts.",
+        "question": [
+            "Explain the difference between blocking and non-blocking assignments in Verilog.",
+            "What is a latch, and how can latches be avoided in Verilog design?",
+            "Provide an example of how a generate statement is used for repetitive structure instantiation.",
+            "Describe how Verilog supports hierarchical naming and provide an example.",
+            "What is the purpose of the fork-join statement in Verilog?"
+        ],
+        "question_type": [
+            "short",
+            "short",
+            "short",
+            "short",
+            "short"
+        ],
+        "answer": [
+            "Blocking assignments (=) execute sequentially, while non-blocking (<=) allow parallel execution.",
+            "A latch is a memory element that holds a value without a clock edge; avoid by covering all conditions.",
+            "The generate statement allows multiple instances in a loop. Example: for (i=0; i<4; i=i+1).",
+            "Hierarchical names access elements by full path, e.g., top_module.submodule.signal.",
+            "Fork-join allows concurrent execution of multiple processes within an always block."
+        ],
+        "explanation": [
+            "Blocking occurs in sequence; non-blocking simulates parallel assignments.",
+            "Latches are unintended and avoided by handling all branches in combinational logic.",
+            "Repetition of modules is achieved with generate for block.",
+            "Hierarchical names enable accessing specific module instances.",
+            "Fork-join is used for running parallel statements in the same always block."
+        ],
+        "difficulty": [
+            "medium",
+            "medium",
+            "medium",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "comprehension",
+            "comprehension",
+            "application",
+            "application",
+            "comprehension"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "Blocking assignments in Verilog are assignments that take multiple clock cycles to complete, while non-blocking assignments are assignments that take a single clock cycle to complete. Non-blocking assignments are typically used for寄存器之间的传递, while blocking assignments are used for computation and memory accesses.",
+            "A latch is a synchronous circuit that can store one bit of information. It is used to synchronize data between two or more registers. Latches can be avoided in Verilog design by using寄存器和计数器 instead.",
+            "None",
+            "None",
+            "The purpose of the fork-join statement in Verilog is to create multiple paths in a design, allowing for concurrent execution of blocks and increased parallelism."
+        ],
+        "explanation_preds": [
+            "In Verilog, the distinction between blocking and non-blocking assignments is based on the time it takes for an assignment to complete. Non-blocking assignments, also known as single-cycle assignments, are executed in a single clock cycle and can be used for transferring data between registers or performing computations. On the other hand, blocking assignments, also known as multi-cycle assignments, take multiple clock cycles to complete and are typically used for memory accesses or computations that require multiple cycles of clock time.",
+            "Latches are useful for synchronizing data in digital circuits, but they can introduce delays and increase the complexity of the design. By using寄存器和计数器, the need for latches can be reduced or eliminated altogether.",
+            "None",
+            "None",
+            "The fork-join statement allows a designer to split a path into multiple paths, each of which can be executed concurrently. This increases the parallelism in the design, enabling faster simulation and faster implementation. The statement works by creating a new control point that allows the designer to choose which path to take, depending on the outcome of a condition statement."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "{{\"answer\": \"Example of generate statement for repetitive structure instantiation:\", \"explanation\": \"A generate statement is used to create multiple instances of a structure within a module. This can be useful when you want to implement a repetitive structure in your design. For example, you can use a generate statement to create multiple instances of a queue data structure, each with its own set of elements. This would allow you to process multiple queues simultaneously, improving the performance of your design.}}",
+            "{{\"answer\": \"Verilog supports hierarchical naming through the use of a naming convention that allows for the creation of a hierarchy of modules, where each module can have its own sub-modules. This makes it easier to organize and manage complex systems. An example of this can be seen in the design of a digital clock, where the main clock module contains smaller sub-modules for each hour, minute, and second hand. This allows for easy organization and modification of the clock without having to modify the main clock module itself.\", \"explanation\": \"Verilog's hierarchical naming convention allows for the creation of a hierarchy of modules, making it easier to organize and manage complex systems. An example of this can be seen in the design of a digital clock, where the main clock module contains smaller sub-modules for each hour, minute, and second hand.\"}}",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_3": {
+        "statement": "Analyze the Verilog code provided to answer questions on operator precedence, expressions, and conditionals.",
+        "question": [
+            "Which operator has the highest precedence in Verilog: *, +, ||, or ==?",
+            "What is the result of the expression ~4'b1010?",
+            "In the expression (a & b) | (c ^ d), which operation is evaluated first?",
+            "For the condition if (x === 1'bx), what does the result signify?",
+            "How does Verilog evaluate the expression (a && b || c)?"
+        ],
+        "question_type": [
+            "single",
+            "single",
+            "single",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "*",
+            "4'b0101",
+            "&",
+            "Unknown (x) state",
+            "&& is evaluated before ||"
+        ],
+        "explanation": [
+            "The multiplication (*) operator has the highest precedence.",
+            "~ is a bitwise NOT, flipping all bits in 4'b1010 to 4'b0101.",
+            "& has higher precedence than |, so it is evaluated first.",
+            "The triple equals (===) operator compares including unknowns, so x yields an unknown result.",
+            "In Verilog, && has a higher precedence than ||."
+        ],
+        "difficulty": [
+            "medium",
+            "medium",
+            "medium",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "recall",
+            "computation",
+            "recall",
+            "inference",
+            "recall"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "None",
+            "~4'b1010",
+            "Bitwise AND (&) is evaluated before Bitwise OR (|)",
+            "The result signifies a comparison operation between two binary variables, x and 1'bx, where 1'bx represents the binary number 1.",
+            "a && b || c"
+        ],
+        "explanation_preds": [
+            "None",
+            "The expression ~4'b1010 performs a bitwise NOT operation on the 4-bit binary number 1010. The result is the bitwise negation of the number, which is 1010 in binary. In Verilog, the bitwise NOT operator is represented by the '~' symbol.",
+            "In the expression (a & b) | (c ^ d), the Bitwise AND (&) operation is evaluated before the Bitwise OR (|). This is because the leftmost operator in the expression has higher precedence than the rightmost operator.",
+            "In this context, the comparison operator === is used to compare the values of x and 1'bx. If the values are equal, the result will be 1'b1 (which is 1 in binary), otherwise, the result will be 0.",
+            "The expression 'a && b || c' evaluates to true if both 'a' and 'b' are true, and either 'a' or 'b' (or both) are true. If either 'a' or 'b' is false, the expression evaluates to false. The order of evaluation is left-to-right for 'a' and 'b', and left-to-right for '||' (OR)."
+        ],
+        "raw_preds": [
+            "The answer is: {{\"answer\": \"||\", \"explanation\": \"In Verilog, the operator with the highest precedence is the double pipe (||) operator, which is used for logical OR.\"}}",
+            "None",
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_4": {
+        "statement": "Complete the sentences using appropriate Verilog keywords and concepts.",
+        "question": [
+            "To define a local parameter in Verilog, the keyword used is ___.",
+            "The operator used to concatenate two values in Verilog is ___.",
+            "The default net type when no net declaration is provided is ___.",
+            "When x is assigned using the expression x = (a > b) ? a : b;, x is assigned based on ___.",
+            "Verilog supports ___ as the primary data types for designing circuits."
+        ],
+        "question_type": [
+            "blank",
+            "blank",
+            "blank",
+            "blank",
+            "blank"
+        ],
+        "answer": [
+            "localparam",
+            "{ }",
+            "wire",
+            "conditional (ternary) assignment",
+            "bit and reg types"
+        ],
+        "explanation": [
+            "The keyword localparam declares constants with local scope.",
+            "Curly braces ({ }) are used for concatenation in Verilog.",
+            "If no type is specified, Verilog defaults to wire for nets.",
+            "The ternary operator (?:) assigns based on the condition (a > b).",
+            "Verilog primarily uses bit and reg types in circuit designs."
+        ],
+        "difficulty": [
+            "easy",
+            "easy",
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "recall",
+            "recall",
+            "recall",
+            "comprehension",
+            "recall"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "local",
+            "&",
+            "None",
+            "The value of x is assigned based on the evaluation of the expression a > b.",
+            "integer"
+        ],
+        "explanation_preds": [
+            "In Verilog, the keyword used to define a local parameter is 'local'.",
+            "The operator used to concatenate two values in Verilog is '&'.",
+            "None",
+            "The expression x = (a > b) ? a : b; returns the value of a if a is greater than b, otherwise it returns the value of b. Therefore, the value of x is determined by the outcome of this comparison.",
+            "Verilog supports integer as the primary data type for designing circuits."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "{\"answer\": \"answer\", \"explanation\": \"To complete the sentences using appropriate Verilog keywords and concepts, I will use the `module` keyword to define a Verilog module and the `net` keyword to declare the input and output ports. I will also use the `port` keyword to specify the type and name of each port. Finally, I will use the `endmodule` keyword to end the module definition. }\", \"timestamp\": 1628274400}}",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_5": {
+        "statement": "Answer the following short-answer questions related to Verilog modeling practices and data handling.",
+        "question": [
+            "Explain how Verilog resolves conflicting values on a net using wired logic.",
+            "What is the purpose of the `case` statement in Verilog, and how does it differ from `casex` and `casez`?",
+            "Provide an example of how a delay is used in an assignment within an always block.",
+            "Describe how Verilog's conditional operator ?: works and give an example.",
+            "How can you model an 8-bit shift register in Verilog?"
+        ],
+        "question_type": [
+            "short",
+            "short",
+            "short",
+            "short",
+            "short"
+        ],
+        "answer": [
+            "Verilog uses wired-and (wand) or wired-or (wor) types to resolve values by performing logic on multiple drivers.",
+            "The case statement selects among multiple branches, casex treats x and z as don't care, casez only treats z as don't care.",
+            "Example: always @(posedge clk) begin #5 signal = value; end assigns with a 5-time-unit delay.",
+            "The ?: operator assigns based on a condition, e.g., (a > b) ? a : b.",
+            "An 8-bit shift register can be modeled using an always block with sequential assignments shifting data left or right."
+        ],
+        "explanation": [
+            "Verilog's wand/wor types handle multiple drivers by performing logic like AND or OR.",
+            "casex and casez add flexibility for don't care conditions in case statements.",
+            "Delays in assignments simulate propagation delay in circuits.",
+            "The conditional (ternary) operator simplifies assignment based on conditions.",
+            "Shift registers can shift bits in and out by sequentially moving values through a register."
+        ],
+        "difficulty": [
+            "medium",
+            "medium",
+            "medium",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "comprehension",
+            "comprehension",
+            "application",
+            "application",
+            "application"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "None",
+            "The purpose of the `case` statement in Verilog is to implement multi-valued decision making. It differs from `casex` and `casez` in that `casex` is used for non- booleans and `casez` is used for booleans.",
+            "None",
+            "Verilog's conditional operator '?' (also known as the ternary operator) is used to return a value based on a condition. It takes three operands - a boolean expression, a value if the expression is true, and a value if the expression is false. The syntax for the operator is 'value_if_true ? true_value : false_value;'. For example, the following code snippet uses the '?' operator to set the value of variable 'a' based on the condition 'b > 5': \"a = b > 5 ? 10 : 20;\"",
+            "To model an 8-bit shift register in Verilog, you can use a combination of parameters and concurrent statements to define the behavior of the shift register. The parameters define the size and initial value of the shift register, while the concurrent statements define the logic for shifting the data and storing the result. The concurrent statements can be implemented using for loops, case statements, or a combination of both."
+        ],
+        "explanation_preds": [
+            "None",
+            "The `case` statement in Verilog is used to evaluate an expression and select one of multiple cases based on the value of the expression. It allows for multi-valued decision making, where the output depends on the value of the expression. In contrast, `casex` is used for non- booleans and `casez` is used for booleans. `casex` is used when the output depends on the truth value of the expression, while `casez` is used when the output depends on the zero or one value of the expression.",
+            "None",
+            "The '?' operator is commonly used in Verilog models to make decisions and control the flow of the design based on certain conditions.",
+            "To model the shift register, you can use parameters to define the size and initial value of the shift register, and then use concurrent statements to define the behavior for shifting the data. For example, you can use a for loop to shift the data one bit to the left, and then use a case statement to store the result in the appropriate register. By using parameters and concurrent statements, you can easily modify the behavior of the shift register and simulate its behavior in different scenarios."
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"Verilog resolves conflicting values on a net using wired logic by introducing a process called 'wiring'.\", \"explanation\": \"In Verilog, when multiple signals have the same value, the one that is connected to the net using an wire will take precedence over the others. This is because a wire is a physical connection between two signals, and the physical presence of the wire provides a higher priority to the signal connected to it.\"}}",
+            "None",
+            "{{\"answer\": \"A delay in Verilog is used to introduce a delay in the execution of a block of code. It is typically used in always blocks to simulate the delay of real-world systems. For example, a delay of 10 ns can be used to simulate a delay in a communication system where the data takes 10 ns to travel from the transmitter to the receiver. This delay can be used to model the behavior of the system and analyze the performance of the design.\", \"explanation\": \"Delays are an important aspect of real-world systems and can affect the performance of the design. By introducing delays in the model, the behavior of the system can be accurately simulated and analyzed.\"}}",
+            "None",
+            "None"
+        ]
+    }
+}

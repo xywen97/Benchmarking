@@ -6682,3 +6682,77 @@
         ]
     }
 }
+{
+    "rtl_149": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule altera_avalon_st_pipeline_base (\n   clk,          \n   reset,        \n   in_ready,     \n   in_valid,     \n   in_data,      \n   out_ready,    \n   out_valid,    \n   out_data      \n);\n   parameter  SYMBOLS_PER_BEAT  = 1; \n   parameter  BITS_PER_SYMBOL   = 8; \n   parameter  PIPELINE_READY    = 1; \n   localparam DATA_WIDTH = SYMBOLS_PER_BEAT * BITS_PER_SYMBOL;\n   input clk;\n   input reset;\n   output in_ready;\n   input  in_valid;\n   input [DATA_WIDTH-1:0] in_data;\n   input                  out_ready;\n   output                 out_valid;\n   output [DATA_WIDTH-1:0] out_data;\n   reg                     full0; \n   reg                     full1; \n   reg [DATA_WIDTH-1:0]    data0; \n   reg [DATA_WIDTH-1:0]    data1; \n   assign out_valid = full1; \n   assign out_data  = data1;  \n   generate\n   if (PIPELINE_READY == 1)\n     begin : REGISTERED_READY_PLINE\n        assign in_ready  = !full0;\n        always @(posedge clk, posedge reset) begin\n           if (reset) begin\n              data0 <= {DATA_WIDTH{1'b0}};\n              data1 <= {DATA_WIDTH{1'b0}};\n           end else begin\n              if (~full0)\n                data0 <= in_data;\n              if (~full1 || (out_ready && out_valid)) begin\n                 if (full0)\n                   data1 <= data0; \n                 else\n                   data1 <= in_data; \n              end\n           end\n        end\n        always @(posedge clk or posedge reset) begin\n           if (reset) begin\n              full0    <= 1'b0;\n              full1    <= 1'b0;\n           end else begin\n           end\n        end\n     end\n   else\n     begin : UNREGISTERED_READY_PLINE\n        assign in_ready = (~full1) | out_ready;\n        always @(posedge clk or posedge reset) begin\n           if (reset) begin\n              data1 <= 'b0;\n              full1 <= 1'b0;\n           end\n           else begin\n              if (in_ready) begin\n                 data1 <= in_data;\n                 full1 <= in_valid;\n              end\n           end\n        end\n     end\n   endgenerate\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `altera_avalon_st_pipeline_base` implements a two-stage pipeline for the Altera Avalon-ST protocol, offering configurable registered or unregistered ready signals and supporting parameterized data widths. It manages data movement, status flags, and reset operations according to the Avalon-ST protocol requirements."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Module Altera Avalon St Pipeline Base ( clk, reset, in_ready, in_valid, in_data, out_ready, out_valid, out_data); parameter SYMBOLS_PER_BEAT = 1; parameter BITS_PER_SYMBOL = 8; parameter PIPELINE_READY = 1; localparam DATA_WIDTH = SYMBOLS_PER_BEAT * BITS_PER_SYMBOL; input clk; input reset; output in_ready; input in_valid; input [DATA_WIDTH-1:0] in_data; input out_ready; output out_valid; output [DATA_WIDTH-1:0] out_data; reg full0; reg full1; reg [DATA_WIDTH-1:0] data0; reg [DATA_WIDTH-1:0] data1; assign out_valid = full1; assign out_data = data1; generate if (PIPELINE_READY == 1) begin : REGISTERED_READY_PLINE assign in_ready =!full0; always @(posedge clk, posedge reset) begin if (reset) begin data0 = DATA_WIDTH1'b0; data1 = DATA_WIDTH1'b0; end else begin if (full0) data0 = in_data; if (full1 || (out_ready && out_valid)) begin if (full0) data1 = data0; else data1 = in_data; end end end always @(posedge clk or posedge reset) begin if (reset) begin full0 = 1'b0; full1 = 1'b0; end else begin end end end end else begin : UNREGISTERED_READY_PLINE assign in_ready = (full1) | out_ready; always @(posedge clk or posedge reset) begin if (reset) begin data1 = 'b0; full1 = 1'b"
+        ]
+    }
+}
+{
+    "rtl_150": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule mc_dlp\n  #(parameter           BYTES = 16)  \n  (\n   input                reset_n,     \n   input                mclock,      \n   input                hst_clock,   \n   input                dlp_req,     \n   input [4:0]          dlp_wcnt,    \n   input [27:0]         dlp_org,     \n   input                dlp_gnt,     \n   input                dlp_push,    \n   output reg           dlp_mc_done, \n   output reg           dlp_arb_req, \n   output reg [4:0]     dlp_arb_wcnt,\n   output reg [27:0]    dlp_arb_addr,\n   output reg           dlp_ready    \n   );\n  reg [27:0]    capt_org;        \n  reg [4:0]     capt_wcnt;       \n  reg           dlp_req_toggle;  \n  reg           req_sync_1, req_sync_2, req_sync_3; \n  reg           dlp_gnt_toggle;  \n  reg           gnt_sync_1, gnt_sync_2, gnt_sync_3; \n  reg [1:0]     request_count;   \n  reg [4:0]     dlp_count;       \n  localparam    DLP = 3'h1;      \n  always @ (posedge hst_clock or negedge reset_n) begin\n    if(!reset_n) begin\n      dlp_ready      <= 1'b1;\n      dlp_req_toggle <= 1'b0;\n      gnt_sync_1     <= 1'b0;\n      gnt_sync_2     <= 1'b0;\n      gnt_sync_3     <= 1'b0;\n    end else begin\n      if(dlp_req==1'b1) begin\n        dlp_req_toggle <= ~dlp_req_toggle; \n        capt_org  <= dlp_org;              \n        capt_wcnt <= dlp_wcnt;             \n        dlp_ready <= 1'b0;                 \n      end\n      gnt_sync_1 <= dlp_gnt_toggle;\n      gnt_sync_2 <= gnt_sync_1;\n      gnt_sync_3 <= gnt_sync_2;\n      if(gnt_sync_2 ^ gnt_sync_3) dlp_ready <= 1'b1;\n    end\n  end\n  always @ (posedge mclock or negedge reset_n) begin\n    if(!reset_n) begin\n      dlp_arb_req    <= 1'b0;\n      dlp_gnt_toggle <= 1'b0;\n      req_sync_1     <= 1'b0;\n      req_sync_2     <= 1'b0;\n      req_sync_3     <= 1'b0;\n      dlp_mc_done    <= 1'b0;\n      dlp_arb_addr   <= 28'b0;\n     // dlp_arb_req    <= 1'b0;\n      dlp_count      <= 5'b0;\n    end else begin\n      req_sync_1 <= dlp_req_toggle;\n      req_sync_2 <= req_sync_1;\n      req_sync_3 <= req_sync_2;\n      if(req_sync_2 ^ req_sync_3) begin\n        dlp_arb_addr <= capt_org;         \n        dlp_arb_req  <= 1'b1;             \n        dlp_arb_wcnt <= capt_wcnt;        \n      end\n      if(dlp_gnt==1'b1) begin\n        dlp_arb_req <= 1'b0;              \n        dlp_gnt_toggle <= ~dlp_gnt_toggle;\n      end\n      if (dlp_push && ~dlp_mc_done)\n        dlp_count <= dlp_count + 5'h1;\n      else if(dlp_mc_done)\n        dlp_count <= 5'h0;                \n      if (dlp_push && ~dlp_mc_done) begin\n        if (BYTES == 4)      dlp_mc_done <= &dlp_count;    \n        else if (BYTES == 8) dlp_mc_done <= dlp_count[0];  \n        else                 dlp_mc_done <= (dlp_count == dlp_arb_wcnt); \n      end\n      else dlp_mc_done <= 1'b0;           \n    end\n  end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `mc_dlp` functions as a memory controller interacting with an arbiter to handle memory requests. It captures request details, syncs signals between clock domains, manages data transfers, and tracks completion status based on processed word count, addressing, and grant signals' state. The module initializes counters on reset and contains prompts to review completion conditions for specific byte sizes, despite having unused internal registers and parameters."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}

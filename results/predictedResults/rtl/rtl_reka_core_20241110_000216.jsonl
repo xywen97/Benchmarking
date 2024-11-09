@@ -4839,3 +4839,196 @@
         ]
     }
 }
+{
+    "rtl_105": {
+        "statement": "Usage of `case` Statements in Verilog",
+        "question": [
+            "How does a `case` statement differ from `if-else` in Verilog?",
+            "What precautions should be taken to avoid latch inference with `case` statements?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "`case` statements are more readable for selecting among multiple conditions, whereas `if-else` is better for binary conditions.",
+            "Ensure all possible cases are covered, including a default condition."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "In Verilog, `case` statements provide a more efficient and readable way to handle multiple comparison scenarios compared to nested `if-else` statements. They are particularly useful when there are many possible values to check against a single expression and when the actions for different cases do not overlap. `case` statements can also handle don't-care conditions (`x` and `z`) explicitly, which is not straightforward with `if-else`.",
+            "To avoid latch inference with `case` statements in Verilog, ensure that all possible input combinations are covered either explicitly with a `case` item or implicitly with a default statement. Additionally, use `nonblocking` assignments (`<=`) within `case` statements, especially when dealing with sequential logic, to maintain the correct order of operations and prevent unintended latches."
+        ],
+        "explanation_preds": [
+            "My thought process for this answer considered the key differences in syntax, efficiency, and functionality between `case` and `if-else` in Verilog. `case` statements are optimized for multiple comparisons, making them more efficient and easier to maintain when dealing with a large number of cases. Additionally, their support for don't-care conditions and the clear separation of cases enhance both the readability and robustness of the code.",
+            "The primary causes of latch inference in `case` statements are unhandled input cases and the use of `blocking` assignments (`=`) within sequential logic. By covering all cases and using nonblocking assignments, designers can ensure that the logic behaves as intended and avoids the creation of unintended latches."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_106": {
+        "statement": "Sensitivity Lists in Verilog",
+        "question": [
+            "What happens if a signal is missing from the sensitivity list in combinational logic?",
+            "How can you ensure correct behavior in an `always @(*)` block?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "If a signal is missing, the simulation may not properly reflect changes, potentially causing incorrect behavior.",
+            "Use `always @(*)` to automatically include all signals that affect the block's output."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "If a signal is missing from the sensitivity list in combinational logic in Verilog, the behavior of the circuit becomes undefined when that signal changes. The module will not re-evaluate the always block and update its outputs in response to changes in the missing signal.",
+            "To ensure correct behavior in an `always @(*)` block, use it sparingly and only when necessary to model combinational logic that depends on all of its inputs or when the exact sensitivity list is complex and difficult to define explicitly. Avoid using `always @(*)` for sequential logic, as it can lead to unintended behavior and race conditions."
+        ],
+        "explanation_preds": [
+            "In Verilog, the sensitivity list of an always block in combinational logic specifies which signals trigger a re-evaluation of the block. If a signal that affects the output is not included in this list, the module will not react to changes in that signal, leading to incorrect and potentially unpredictable behavior. This is because the compiler assumes that the output only depends on the signals listed, and thus does not check for changes in unlisted signals.",
+            "The `always @(*)` block in Verilog is used to model combinational logic, but its indiscriminate use can cause issues. It forces the simulator to re-evaluate the block whenever any of its variables change, which can lead to unnecessary simulation cycles and potentially incorrect results if not used correctly. It's crucial to understand the dependencies of your logic and define the sensitivity list explicitly whenever possible to maintain the integrity and performance of your design."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_107": {
+        "statement": "Introduction to Verilog and its Uses",
+        "question": [
+            "What is Verilog and why is it used?",
+            "List the key advantages of using Verilog for hardware design."
+        ],
+        "question_type": [
+            "open",
+            "multi"
+        ],
+        "answer": [
+            "Verilog is a hardware description language used to model and simulate digital circuits. It is used for designing, verifying, and synthesizing electronic systems.",
+            [
+                "Abstraction",
+                "Simulation",
+                "Synthesis",
+                "Verification"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "Verilog is a hardware description language (HDL) used primarily for designing and modeling digital circuits, including combinational logic, sequential logic, and integrated circuits at the gate, register-transfer, and behavioral levels. It is used extensively in the electronic design automation (EDA) industry for the development of field-programmable gate arrays (FPGAs), application-specific integrated circuits (ASICs), and system-on-chips (SoCs).",
+            "['Modularity and Reusability: Verilog promotes a hierarchical design approach, allowing designers to break down complex systems into smaller, manageable modules that can be reused across different projects.', 'Flexibility and Abstraction: Verilog supports multiple levels of abstraction, from gate-level to behavioral, enabling designers to model hardware at the appropriate level of detail for different stages of the design process.', \"Ease of Verification: Verilog's support for concurrent execution, procedural programming constructs, and built-in testbenches facilitates the development and execution of comprehensive verification strategies, ensuring the correctness of the design.\"]"
+        ],
+        "explanation_preds": [
+            "I defined Verilog as an HDL because its primary purpose is to describe digital hardware systems. I mentioned its application levels (gate, register-transfer, and behavioral) to highlight its versatility in modeling different aspects of digital circuits. Finally, I listed some of the key hardware platforms (FPGAs, ASICs, SoCs) where Verilog is commonly used to emphasize its importance in the EDA industry.",
+            "When considering the advantages of Verilog for hardware design, I focused on key features that enhance productivity, design quality, and verification efficiency. Modularity and reusability are crucial for managing complexity and reducing development time. Flexibility and abstraction allow designers to work at different levels of detail, adapting the design process to project requirements. Finally, the ease of verification is essential for ensuring the functional correctness of the hardware, which is critical in the design of complex systems."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_108": {
+        "statement": "Blocking vs Non-blocking Assignments in Verilog",
+        "question": [
+            "What is the difference between blocking and non-blocking assignments in Verilog?",
+            "When should non-blocking assignments be used?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments (`=`) execute sequentially, while non-blocking assignments (`<=`) execute concurrently.",
+            "Non-blocking assignments should be used for sequential logic to avoid race conditions."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "In Verilog, blocking assignments (using `=`) are evaluated and assigned sequentially within a procedural block (e.g., always block), ensuring that the right-hand side (RHS) is evaluated before the left-hand side (LHS) is updated. Non-blocking assignments (using `<=`) are evaluated concurrently at the end of the simulation time step, allowing the LHS to be updated with the new value in the next time step, which is useful for modeling sequential logic.",
+            "Non-blocking assignments should be used in sequential logic blocks (always @(*) or always @(posedge clk or negedge reset)) when modeling combinational logic with feedback or when multiple concurrent updates need to be handled correctly."
+        ],
+        "explanation_preds": [
+            "I differentiated between blocking and non-blocking assignments based on their evaluation and assignment timing within procedural blocks. Blocking assignments follow a strict sequential order, which is suitable for combinational logic, while non-blocking assignments mimic the behavior of registers and are essential for modeling sequential logic correctly.",
+            "Non-blocking assignments (`<=`) ensure that the right-hand side expression is evaluated before the assignment is made, simulating the behavior of concurrent updates in a sequential context. This is crucial for modeling correct timing and avoiding race conditions in designs with feedback loops or multiple simultaneous updates to the same variable."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}

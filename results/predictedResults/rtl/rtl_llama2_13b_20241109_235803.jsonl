@@ -2759,3 +2759,288 @@
         ]
     }
 }
+{
+    "rtl_54": {
+        "statement": "Verilog operators: == vs ===",
+        "question": [
+            "What is the difference between the `==` and `===` operators in Verilog?",
+            "Which operator should be used to compare unknown (X) values?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "`==` compares logical values and ignores unknowns, while `===` compares including unknowns.",
+            "==="
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "The `==` and `===` operators in Verilog have the same functionality, which is to compare two expressions for equality. However, the `===` operator has a stricter definition of equality, and it checks for both numerical and structural equality, while the `==` operator only checks for numerical equality.",
+            "=="
+        ],
+        "explanation_preds": [
+            "The `===` operator is useful when you want to ensure that two expressions have the same value and structure, while the `==` operator is sufficient when you only care about the value and not the structure.",
+            "To compare unknown (X) values, the == operator should be used instead of ===. This is because == checks for numerical equivalence, while === checks for structural equivalence, which may not be applicable for unknown values."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_55": {
+        "statement": "Tasks and functions in Verilog",
+        "question": [
+            "What are the five main differences between Verilog tasks and functions?",
+            "Can Verilog functions be used in expressions?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "Functions execute in one simulation time unit, cannot include timing controls, must return a value, while tasks can include timing controls, have multiple outputs, etc.",
+            "Yes"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "{'tasks': [' sequential logic', ' combinational logic', ' clocked logic', ' asynchronous logic', ' memory elements'], 'functions': [' modularize code', ' abstract data types', ' high-level abstractions', ' code reuse', ' modularize code']}",
+            "True"
+        ],
+        "explanation_preds": [
+            "The five main differences between Verilog tasks and functions are: tasks are used for sequential logic, combinational logic, clocked logic, asynchronous logic, and memory elements, while functions are used for modularize code, abstract data types, high-level abstractions, code reuse, and modularize code. Tasks are used to describe the behavior of a design, while functions are used to organize and reuse code.",
+            "Yes, Verilog functions can be used in expressions. In fact, functions are often used in expressions to implement complex logic or to perform calculations that are not possible with basic arithmetic operations. By using functions in expressions, you can create more powerful and flexible Verilog code."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_56": {
+        "statement": "Continuous assignments in Verilog",
+        "question": [
+            "What is continuous assignment in Verilog?",
+            "Which keyword is used for continuous assignment in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "Continuous assignment is used to assign values to a wire.",
+            "assign"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "Continuous assignments in Verilog refer to the ability to assign a value to a signal in a sequential logic circuit at any time, regardless of the clock cycle. This allows for more flexible and efficient design, as it eliminates the need for separate clock domains and enables signals to be updated as soon as their inputs change.",
+            "The keyword used for continuous assignment in Verilog is 'always'"
+        ],
+        "explanation_preds": [
+            "Continuous assignments in Verilog are useful when we need to update a signal based on the current input values, without waiting for the next clock cycle. This feature is particularly useful in digital circuits where we need to perform computations on the fly, without any latency.",
+            "The 'always' keyword is used to indicate that a statement or expression is always true or always false, and it is used to create a continuous assignment statement in Verilog. This allows the value of a variable to be constantly updated based on the evaluation of the expression."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_57": {
+        "statement": "Blocking vs non-blocking assignments",
+        "question": [
+            "What is the primary difference between blocking and non-blocking assignments in Verilog?",
+            "When should non-blocking assignments be used in sequential circuits?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments execute sequentially, while non-blocking assignments execute concurrently.",
+            "Non-blocking assignments should be used in sequential circuits to avoid race conditions."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "The primary difference between blocking and non-blocking assignments in Verilog is that blocking assignments wait for the value to be available before assigning it to a variable, while non-blocking assignments do not wait and instead return a special value indicating that the assignment is not yet complete.",
+            "Non-blocking assignments should be used in sequential circuits when the output of a logic gate or flip-flop depends on the current input and not on the previous state of the circuit."
+        ],
+        "explanation_preds": [
+            "Blocking assignments are useful when we need to ensure that the value is available before using it, while non-blocking assignments are useful when we need to perform other tasks while waiting for the value to become available.",
+            "Non-blocking assignments are useful when the output of a logic gate or flip-flop needs to be determined immediately based on the current input, rather than waiting for the previous state of the circuit to propagate through the logic gates. This can improve the performance of the circuit by reducing the latency and increasing the throughput."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_58": {
+        "statement": "Understanding HDL simulators",
+        "question": [
+            "What are HDL simulators, and why are they important in Verilog design?",
+            "Name two popular HDL simulators."
+        ],
+        "question_type": [
+            "open",
+            "multi"
+        ],
+        "answer": [
+            "HDL simulators are tools used to test and verify the functionality of HDL code before synthesis.",
+            [
+                "ModelSim",
+                "Vivado"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "HDL simulators are software tools that simulate the behavior of digital circuits described using Hardware Description Languages (HDLs) such as Verilog. They are important in Verilog design because they allow designers to test and verify their designs before implementing them on actual hardware, saving time and resources by identifying and fixing errors early in the design process.",
+            "['Two popular HDL simulators are Xilinx Vivado Simulator and ModelSim.']"
+        ],
+        "explanation_preds": [
+            "HDL simulators provide a virtual environment for Verilog designs to run in, allowing designers to observe the behavior of the design and make changes as needed. They are essential for verifying the correctness of a design before it is implemented on hardware, as they can catch errors and inconsistencies that might not be apparent during the design process.",
+            "Xilinx Vivado Simulator is a comprehensive tool that allows users to simulate, analyze, and test HDL designs on Xilinx FPGAs. ModelSim is a widely-used simulator for Verilog and VHDL models, offering a range of features and capabilities for simulating and verifying HDL designs."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_59": {
+        "statement": "Repeat loops in Verilog",
+        "question": [
+            "Explain how the repeat loop works in Verilog.",
+            "What is the difference between repeat and while loops in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Repeat loop runs a specific number of times, while the while loop runs until a condition is met.",
+            "Repeat loops are executed a fixed number of times, while while loops depend on a condition."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "True",
+            "Repeat loops and while loops are both used to execute a block of code repeatedly in Verilog, but they differ in their syntax and behavior."
+        ],
+        "explanation_preds": [
+            "Repeat loops in Verilog are implemented using a special type of module called a repeat block. The repeat block takes a single input signal and generates a sequence of outputs based on the number of times the input signal is asserted. The repeat loop can be thought of as a finite state machine that iterates over a set of states based on the input signal.",
+            "Repeat loops use the'repeat' keyword and are used for fixed-number-of-times iterations, whereas while loops use the 'while' keyword and are used for indefinite iterations based on a condition. Additionally, repeat loops do not support exiting the loop early, while while loops do support early exit through the 'break' statement."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}

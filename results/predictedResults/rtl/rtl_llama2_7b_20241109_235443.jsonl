@@ -5473,3 +5473,191 @@
         ]
     }
 }
+{
+    "rtl_118": {
+        "statement": "Modeling Techniques in Verilog",
+        "question": [
+            "Describe the differences between behavioral, structural, and dataflow modeling in Verilog.",
+            "Provide an example of behavioral modeling."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Behavioral modeling uses high-level constructs, structural modeling describes circuit connections, and dataflow modeling uses expressions to describe data movement.",
+            "module add(a, b, sum); input a, b; output sum; assign sum = a + b; endmodule"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "Behavioral modeling in Verilog focuses on describing the logical behavior of a digital circuit without worrying about its implementation details. Structural modeling, on the other hand, emphasizes the physical structure of the circuit, including the interconnections between components. Dataflow modeling is a combination of behavioral and structural modeling, where the flow of data is also taken into account. Each modeling technique has its own strengths and weaknesses, and the choice of technique depends on the complexity of the circuit and the goals of the simulation.",
+            "A simple example of behavioral modeling in Verilog is a model of a finite state machine (FSM) that implements a simple protocol for sending data between two devices. The model consists of a set of registers that represent the state of the FSM, and a set of gates that implement the transitions between states. The Verilog code for this model might look something like this:"
+        ],
+        "explanation_preds": [
+            "Behavioral modeling is useful for modeling complex digital circuits that involve multiple logic gates and flip-flops. It allows designers to describe the logical behavior of the circuit in a high-level language, without worrying about the physical implementation details. Structural modeling, on the other hand, is useful for modeling large-scale integrated circuits, where the interconnections between components are critical. Dataflow modeling is a combination of behavioral and structural modeling, and it is particularly useful for modeling circuits that involve data movement and synchronization. By combining both techniques, designers can create more accurate and comprehensive models of complex digital circuits.",
+            "Behavioral modeling in Verilog is a technique for modeling digital systems by describing their behavior in terms of their inputs and outputs, rather than their internal structure. By using a behavioral model, we can simulate the behavior of a system without having to explicitly model its internal workings. This can be particularly useful for systems that are complex or difficult to model using traditional structural modeling techniques."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_119": {
+        "statement": "Blocking and Non-blocking Assignments",
+        "question": [
+            "What is the difference between blocking (`=`) and non-blocking (`<=`) assignments?",
+            "When should non-blocking assignments be used in Verilog?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Blocking assignments execute sequentially, while non-blocking assignments allow parallel updates.",
+            "Non-blocking assignments should be used for sequential logic to avoid race conditions."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "Blocking assignments are assigned to a specific thread or process, while non-blocking assignments are not.",
+            "None"
+        ],
+        "explanation_preds": [
+            "Blocking assignments are used when the assignment operation must be completed before the program can continue executing. This is useful when the assignment is dependent on a specific event or action, such as reading from a file or network request. Non-blocking assignments, on the other hand, allow the program to continue executing without waiting for the assignment to complete. This is useful when the assignment is not dependent on a specific event or action, and the program can continue executing other tasks while waiting for the assignment to complete.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "{\"answer\": Non-blocking assignments should be used in Verilog when the assignment operation is not critical to the synchronization of the circuit, and when the assignment operation can be safely delayed without affecting the overall correctness of the design.\"explanation\": Non-blocking assignments are useful when the assignment operation is not the only operation that can be performed at a given time, and when the circuit can tolerate a delay in the assignment operation without affecting the overall correctness of the design. For example, when multiple assignments are being made in a pipeline fashion, it is often more efficient to use non-blocking assignments to avoid blocking the pipeline. Additionally, non-blocking assignments can be used to improve the performance of the circuit by reducing the number of stalls caused by blocking assignments. }"
+        ]
+    }
+}
+{
+    "rtl_120": {
+        "statement": "Synthesis vs Simulation",
+        "question": [
+            "What is the difference between synthesis and simulation in Verilog?",
+            "Why are some constructs allowed in simulation but not in synthesis?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Simulation checks the behavior of the design, while synthesis translates the design into hardware.",
+            "Some constructs, like `initial` blocks or delays, are for testing purposes only and cannot be mapped to hardware components."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "hard",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "Synthesis and simulation are two distinct phases in the design and verification of digital circuits using Verilog. Synthesis transforms the high-level language description of the circuit into a netlist, which is a circuit representation in terms of gates and their interconnections. Simulation, on the other hand, is the process of running the circuit on a digital device or a software model to verify its functionality and performance.In Verilog, synthesis is typically performed by a tool that takes the Verilog code as input and generates the netlist as output. The netlist can then be used to create a physical implementation of the circuit, such as a printed circuit board or an FPGA.Simulation, on the other hand, is typically performed using a software tool that takes the netlist or a behavioral model of the circuit as input and runs the circuit through a series of simulations to verify its functionality and performance. The results of the simulation can be used to optimize the circuit design or to identify potential problems that may arise during fabrication or operation.In summary, synthesis is the process of transforming a high-level language description of a circuit into a netlist, while simulation is the process of running the netlist or a behavioral model of the circuit on a digital device or a software model to verify its functionality and performance.",
+            "Some constructs are allowed in simulation but not in synthesis because simulation is focused on exploring and understanding the behavior of a system, while synthesis is focused on generating and creating new systems. In simulation, the constructs are allowed to facilitate the exploration and understanding of the system, even if they are not practical or feasible in the real world. In synthesis, the focus is on generating practical and feasible solutions, so only constructs that are possible and practical in the real world are allowed."
+        ],
+        "explanation_preds": [
+            "No explanation found",
+            "Simulation and synthesis are two distinct approaches to problem-solving, with different goals and constraints. Simulation is a tool for exploring and understanding the behavior of a system, and it allows for the use of constructs that may not be practical or feasible in the real world. Synthesis, on the other hand, is focused on generating and creating new systems, and it requires the use of constructs that are possible and practical in the real world. By allowing for the use of constructs in simulation that may not be practical in the real world, we can gain a deeper understanding of the system and its behavior, which can inform the synthesis process and lead to more practical and feasible solutions."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_121": {
+        "statement": "Finite State Machines (FSM) in Verilog",
+        "question": [
+            "What are the two types of FSM used in Verilog?",
+            "How do you implement a Moore state machine in Verilog?"
+        ],
+        "question_type": [
+            "single",
+            "open"
+        ],
+        "answer": [
+            "Moore and Mealy",
+            "A Moore state machine outputs depend only on the current state and can be implemented using an `always @(posedge clk)` block."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "knowledge",
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "maven-silicon",
+        "answer_preds": [
+            "The two types of Finite State Machines (FSM) used in Verilog are Mealy FSM and Moore FSM.",
+            "To implement a Moore state machine in Verilog, you can use the following code:"
+        ],
+        "explanation_preds": [
+            "Mealy FSMs are defined by a transition table that specifies the output for each state and input. Moore FSMs, on the other hand, are defined by a set of rules that describe the transitions between states. Both types of FSMs are used to model and design digital systems, but Mealy FSMs are more commonly used in Verilog due to their simplicity and ease of implementation.",
+            "A Moore state machine is a type of finite state machine (FSM) that has a single output for each state. In Verilog, you can implement a Moore state machine by using the `always` block to generate the output signals based on the current state. The `always` block is used to define a function that returns the output signals for each state. For example, you can use the `always` block to generate a signal that is 1 in state 0 and 0 in all other states."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}

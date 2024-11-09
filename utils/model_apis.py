@@ -230,6 +230,17 @@ def query_blip2_flan_t5_xxl(prompt, images=None, image_captions=None):
     else:
         return "Error: " + str(response.status_code)
 
+def query_chatglm3_6b(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5009/generate'
+    headers = {'Content-Type': 'application/json'}
+    data = json.dumps({"prompt": prompt, "image_paths": images})
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return "Error: " + str(response.status_code)
+
     
 def query_gpt35(prompt, images=None, image_captions=None):
     openai_api_key = api_key

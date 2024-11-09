@@ -9,4 +9,5 @@
 7. 5006: instructblip flan t5 xxl
 8. 5007: blip2 flan t5 xl
 9. 5008: blip2 flan t5 xxl
-4. 5010: blip captioning 
+10. 5009: chatglm3 6b
+11. 5010: blip captioning 

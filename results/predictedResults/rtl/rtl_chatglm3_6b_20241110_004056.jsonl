@@ -1,0 +1,204 @@
+{
+    "rtl_0": {
+        "statement": "Analyze the following Verilog questions about data types, operators, and syntax.",
+        "question": [
+            "What is the correct declaration for a 4-bit vector with a binary value of 1010?",
+            "Which keyword is used to create a continuous assignment in Verilog?",
+            "If a = 4'b1100 and b = 4'b0011, what is the result of {a, b}?",
+            "Which operator is used to perform bitwise XOR in Verilog?",
+            "What does reg [15:0] data [0:31] declare in terms of width and depth?",
+            "In an if-else statement, what symbol represents a conditional assignment?",
+            "For the assignment reg [7:0] num; num = 8'b11110000;, what type of assignment is used?",
+            "What does the following declaration represent: input [7:0] data_in;?",
+            "What is the primary difference between reg and wire declarations in Verilog?",
+            "Which Verilog operator can compare two 4-bit values for both logic and unknown states?"
+        ],
+        "question_type": [
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "4'b1010",
+            "assign",
+            "8'b11000011",
+            "^",
+            "16-bit width, 32-depth memory",
+            "?:",
+            "Blocking assignment",
+            "8-bit input port",
+            "reg stores values, wire represents connections",
+            "==="
+        ],
+        "explanation": [
+            "A binary vector is declared with size followed by the value in Verilog.",
+            "assign is the keyword for continuous assignments outside procedural blocks.",
+            "Concatenation joins a=4'b1100 and b=4'b0011 into 8'b11000011.",
+            "The symbol ^ represents bitwise XOR in Verilog.",
+            "This declaration specifies a memory with 16-bit elements and 32 addresses.",
+            "The ?: operator is a conditional assignment in Verilog.",
+            "In a blocking assignment, values are updated sequentially.",
+            "The keyword input specifies an input port in Verilog modules.",
+            "reg holds values, whereas wire connects components.",
+            "The === operator checks both logic and unknown states, unlike =="
+        ],
+        "difficulty": [
+            "easy",
+            "easy",
+            "medium",
+            "easy",
+            "medium",
+            "easy",
+            "medium",
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "recall",
+            "recall",
+            "computation",
+            "recall",
+            "inference",
+            "inference",
+            "recall",
+            "recall",
+            "inference",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "uint4_t",
+            "constant",
+            "{'a': 16, 'b': 15}",
+            "XOR",
+            "{{'width': 16, 'depth': 32}}",
+            "?",
+            "reg [7:0]",
+            "The declaration represents a 8-bit integer input named 'data_in' with a range of 7 bits from the most significant bit to the least significant bit.",
+            "The primary difference between reg and wire declarations in Verilog is that reg declarations are used to declare reusable variables, while wire declarations are used to declare global variables that are accessible throughout the module. Reg declarations are typically used in functional blocks, while wire declarations are used in the top block.",
+            "XOR"
+        ],
+        "explanation_preds": [
+            "To declare a 4-bit vector with a binary value of 1010, we need to use the 'uint4_t' data type. The 'uint4_t' data type represents a 4-bit unsigned integer, which is suitable for storing the binary value 1010.",
+            "In Verilog, the keyword 'constant' is used to create a continuous assignment, which means that the value of the variable assignment is constantly updated throughout the simulation.",
+            "To convert a 4-bit binary number to a 4-bit hexadecimal number, we group the bits into two groups of two and convert each group to its corresponding hexadecimal digit. In this case, 'a' represents 4^1 (16) and 'b' represents 4^0 (1) in hexadecimal notation.",
+            "The XOR operator in Verilog is represented by the '^' symbol. It is used to perform a bitwise XOR operation on two binary numbers.",
+            "In Verilog, the syntax for declaring a reg [15:0] data [0:31] is to use the 'reg' keyword followed by the width and depth of the register. The width represents the number of bits in the register, and the depth represents the number of times the register can be accessed. In this case, the width is 16 and the depth is 32, indicating a 16-bit register that can be accessed 32 times.",
+            "In a conditional assignment, the symbol '?' represents a conditional operator that is used to evaluate a condition and assign a value based on the result of the evaluation.",
+            "In this Verilog code snippet, a register named 'num' is declared with a size of 8 bits. The '= 8'b11110000' assigns the value '8' bits in binary representation to the register 'num'. The data type used in this assignment is 'reg'.",
+            "The input is specified as a 1-dimensional array with 8 elements, named 'data_in'. The data type of the input is 8-bit integer, which means it can store values between 0 and 255. The range of the input is from the most significant bit (7) to the least significant bit (0).",
+            "Reg declarations are used to declare variables that can be reused within a functional block. They are typically used to store intermediate results or state variables. Wire declarations, on the other hand, are used to declare global variables that are accessible throughout the entire module. They are typically used to store data that needs to be shared between different functional blocks or between the top and bottom blocks of a module.",
+            "The XOR operator (^) can compare two 4-bit values for both logic and unknown states in Verilog."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_1": {
+        "statement": "Fill in the blanks with the correct Verilog concepts.",
+        "question": [
+            "A signal declared with ___ type does not store a value.",
+            "The keyword used to define a tri-state output in Verilog is ___.",
+            "The concatenation of 2'b01 and 2'b10 yields ___.",
+            "The ___ statement is used for continuous assignments in Verilog.",
+            "A delay of 5 time units in an assignment is written as ___ in Verilog."
+        ],
+        "question_type": [
+            "blank",
+            "blank",
+            "blank",
+            "blank",
+            "blank"
+        ],
+        "answer": [
+            "wire",
+            "tri",
+            "4'b0110",
+            "assign",
+            "#5"
+        ],
+        "explanation": [
+            "Wire does not store a value and represents physical connections.",
+            "tri is the keyword used to create a tri-state buffer output.",
+            "Concatenation joins the two expressions into 4'b0110.",
+            "assign is used for driving signals with continuous assignments.",
+            "The delay operator #5 indicates a 5-time-unit delay."
+        ],
+        "difficulty": [
+            "easy",
+            "easy",
+            "medium",
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "recall",
+            "recall",
+            "computation",
+            "recall",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "springer",
+        "answer_preds": [
+            "bit",
+            "tri-state",
+            "{'b': '11'}",
+            "let",
+            "None"
+        ],
+        "explanation_preds": [
+            "A signal declared with 'bit' type does not store a value.",
+            "The keyword used to define a tri-state output in Verilog is 'tri-state'.",
+            "The concatenation of 2'b01 and 2'b10 yields 2'b11.",
+            "The `let` statement is used for continuous assignments in Verilog. It allows you to declare and initialize variables in a continuous block of code without the need for a loop or statement end.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "{{\"answer\": \"reg\", \"explanation\": \"A delay of 5 time units in an assignment is written as a regular variable in Verilog.\"}}"
+        ]
+    }
+}

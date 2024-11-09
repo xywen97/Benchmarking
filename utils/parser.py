@@ -1,5 +1,5 @@
 from pyexpat import model
-from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series, query_reka_series, query_instructblip_flan_t5_xl, query_instructblip_flan_t5_xxl, query_blip2_flan_t5_xl, query_blip2_flan_t5_xxl
+from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series, query_reka_series, query_instructblip_flan_t5_xl, query_instructblip_flan_t5_xxl, query_blip2_flan_t5_xl, query_blip2_flan_t5_xxl, query_chatglm3_6b
 import json
 import base64
 import time
@@ -67,7 +67,8 @@ def choose_model(model_name):
         "instructblip_flan_t5_xl": query_instructblip_flan_t5_xl,
         "instructblip_flan_t5_xxl": query_instructblip_flan_t5_xxl,
         "blip2_flan_t5_xl": query_blip2_flan_t5_xl,
-        "blip2_flan_t5_xxl": query_blip2_flan_t5_xxl
+        "blip2_flan_t5_xxl": query_blip2_flan_t5_xxl,
+        "chatglm3_6b": query_chatglm3_6b
     }
     if model_name in model_mapping:
         return model_mapping[model_name]
@@ -95,7 +96,8 @@ def check_if_multi_modal(model_name):
         "instructblip_flan_t5_xl": "type_raw",
         "instructblip_flan_t5_xxl": "type_raw",
         "blip2_flan_t5_xl": "type_raw",
-        "blip2_flan_t5_xxl": "type_raw"
+        "blip2_flan_t5_xxl": "type_raw",
+        "chatglm3_6b": False
     }
 
     return is_multi_mapping[model_name]
@@ -263,7 +265,10 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
                 if model_name in ['instructblip_flan_t5_xl', 'instructblip_flan_t5_xxl', 'blip2_flan_t5_xl', 'blip2_flan_t5_xxl']:
                     entire_question = prompt_mapping[question_type] + " " + statement_item + " " + question_item[i] + " " + "Answer:"
                 else:
-                    entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type] + " You may refer to the provided images."
+                    if len(images) == 0:
+                        entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
+                    else:
+                        entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type] + " You may refer to the provided images."
                 
             else:
                 print("not handled yet..")
@@ -285,6 +290,8 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
                         try:
                             # 尝试将响应解析为JSON对象
                             # 处理响应中包含的json``` ```的情况
+                            response = response.strip()
+                            response = response.replace("\n", "")
                             if response.startswith("```json") and response.endswith("```"):
                                 response = response[7:-3].strip()
                             # print(response)

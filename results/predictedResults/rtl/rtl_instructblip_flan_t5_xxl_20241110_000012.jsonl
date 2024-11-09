@@ -8461,3 +8461,114 @@
         ]
     }
 }
+{
+    "rtl_197": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule loadTrack (reset, clk, valid, productiveVector, pgEnable, portStatus, routerLoad, portLoad);\ninput\t\tclk, reset,pgEnable; \ninput [3:0] valid; \ninput [3:0] productiveVector; \ninput [4*`PORT_STAT_SIZE-1:0] portStatus; \noutput [`PG_ROUTER_LOAD_SIZE-1:0] routerLoad; \noutput [4*`PG_PORT_LOAD_SIZE-1:0] portLoad; \nwire [`PORT_STAT_SIZE-1:0] wPortStatus [3:0]; \ngenvar i;\ngenerate\n\tfor (i=0; i<4; i= i+1) begin : split_bus\n\t\tassign wPortStatus[i] = portStatus[i*`PORT_STAT_SIZE+:`PORT_STAT_SIZE];\n\tend\nendgenerate\nreg [`PG_PORT_LOAD_SIZE-1:0] portUtilization [3:0];\nreg [2:0] j;\nalways @ (posedge clk or negedge reset) begin\n\tif (~reset) begin\n\t\tfor (j=0;j<4;j=j+1)\n\t\t\tportUtilization[j] <= 0; \n\tend\n\telse begin\n\t\tif (~pgEnable) begin\n\t\t\tfor (j=0;j<4;j=j+1)\n\t\t\t\tif ((valid[j] && (wPortStatus[j] == `ACTIVE))| (productiveVector[j] && (wPortStatus[j] == `INACTIVE)))\n\t\t\t\t\tportUtilization[j] <= portUtilization[j] + 1; \n\t\tend\n\t\telse\n\t\t\tfor (j=0;j<4;j=j+1)\n\t\t\t\tportUtilization[j] <= 0; \n\tend\nend\nassign routerLoad = portUtilization[3]+portUtilization[2]+portUtilization[1]+portUtilization[0];\nassign portLoad = {portUtilization[3],portUtilization[2],portUtilization[1],portUtilization[0]};\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `loadTrack` implements a functionality to monitor the load on a router and its ports, updating the utilization based on port activity statuses and productive vectors, with router and port load outputs provided accordingly."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_198": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hs__tapvpwrvgnd (\n    input VPWR,\n    input VGND\n);\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_hs__tapvpwrvgnd` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "module sky130_fd_sc_hs__tapvpwrvgnd ( input VPWR, input VGND ); endmodule"
+        ]
+    }
+}
+{
+    "rtl_199": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule clk63_3hz(\n\tinput wire clk, \n\toutput wire outclk \n);\n\treg [19:0] cnt = 0;\n\tassign outclk = cnt == 789900;\n\talways @(posedge clk)\n\t\tif(outclk) \n\t\t\tcnt <= 0; \n\t\telse\n\t\t\tcnt <= cnt + 20'b1; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `clk63_3hz` implements a clock divider generating an output clock 'outclk' that toggles at 1/789901th the frequency of the input clock 'clk'."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Computers & Technology This is a Verilog code for clk63_3hz(input wire clk, output wire outclk); reg [19:0] cnt = 0; assign outclk = cnt == 789900; always @(posedge clk) if(outclk) cnt = 0; else cnt = cnt + 20'b1; endmodule"
+        ]
+    }
+}

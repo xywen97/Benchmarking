@@ -3669,3 +3669,218 @@
         ]
     }
 }
+{
+    "rtl_62": {
+        "statement": "FSM coding in Verilog",
+        "question": [
+            "What are the key steps involved in writing FSM code in Verilog?",
+            "Why is it recommended to separate combinational and sequential logic in FSM coding?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Define states, define inputs and outputs, use always blocks for sequential and combinational logic.",
+            "To simplify debugging and ensure proper synthesis."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "hard",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "[{'step': 'Define the Finite State Machine (FSM) structure', 'Description': 'Start by defining the states, inputs, outputs, and next states of the FSM.'}, {'step': 'Create a Verilog module', 'Description': 'Create a Verilog module that will hold the FSM code.'}, {'step': 'Declare the state variables', 'Description': 'Declare the state variables that will hold the current state of the FSM.'}, {'step': 'Declare the input variables', 'Description': 'Declare the input variables that will be used to update the state of the FSM.'}, {'step': 'Write the state transition logic', 'Description': 'Write the logic that determines the next state of the FSM based on the current state and input.'}, {'step': 'Write the output logic', 'Description': 'Write the logic that generates the output based on the current state.'}, {'step': 'Synthesize and simulate the code', 'Description': 'Synthesize the code and simulate it to verify its functionality.'}]",
+            "It is recommended to separate combinational and sequential logic in FSM coding because combinational logic can be described independently of the sequential logic, making the code more modular, reusable, and easier to understand and verify."
+        ],
+        "explanation_preds": [
+            "The key steps involved in writing FSM code in Verilog are defining the FSM structure, creating a Verilog module, declaring state and input variables, writing state transition and output logic, and synthesizing and simulating the code.",
+            "Separating combinational and sequential logic helps to reduce complexity and improve maintainability of the code. It also allows for easier debugging and testing of individual components."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_63": {
+        "statement": "Verilog casex and casez statements",
+        "question": [
+            "What is the difference between casex and casez statements in Verilog?",
+            "When should casex be used instead of casez?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Casez treats Z as a don't-care, while casex treats both X and Z as don't-cares.",
+            "Casex is used when both X and Z should be treated as don't-cares."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "The main difference between casex and casez statements in Verilog is that casex ignores x values while casez includes x values in the matching process.",
+            "Use casex when the default case is not needed, i.e., when the default behavior is to raise an error or undefined behavior. Use casez when the default case is needed, i.e., when the default behavior should be to propagate the default value."
+        ],
+        "explanation_preds": [
+            "The casex statement treats x values as don't cares and does not include them in the matching process, whereas the casez statement treats x values as a match and includes them in the matching process.",
+            "This is because casex will raise an error if there is no match, whereas casez will propagate the default value. If the default case is not needed, using casex can help catch errors early on, but if the default case is needed, using casez provides more flexibility and control."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_64": {
+        "statement": "Verilog testbenches and simulation",
+        "question": [
+            "What is a testbench in Verilog?",
+            "How do you use a testbench to verify RTL design functionality?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "A testbench is a piece of code used to simulate and verify the behavior of the design under test (DUT).",
+            "By applying inputs and checking the outputs of the DUT."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "intellipaat",
+        "answer_preds": [
+            "A testbench in Verilog is a module that is used to verify the functionality of a designed digital circuit or a module. It is a simulation environment that allows the user to test the circuit or module by providing inputs and checking the outputs. The testbench can be used to test the circuit or module in isolation, or as part of a larger system.",
+            "None"
+        ],
+        "explanation_preds": [
+            "I define a testbench as a module because it is a self-contained environment that is used to test the functionality of a digital circuit or module. It provides a controlled environment for testing, allowing the user to input specific values and observe the output. This allows for thorough testing and verification of the circuit or module.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "{\"answer\": \"A testbench is used to verify RTL design functionality by creating a simulation environment that mimics the real-world scenario, and then checking the output of the design against the expected results. The testbench consists of a clock, inputs, and expected outputs, which are compared to the actual outputs of the design using a comparator or assertion. This process allows for thorough testing and verification of the design's functionality.\",\"explanation\": \"The key idea is to create a controlled environment that allows for a precise simulation of the design's behavior, and then verify that it behaves as expected. This approach enables thorough testing and debugging of the design, reducing the risk of errors and improving overall design quality.\""
+        ]
+    }
+}
+{
+    "rtl_65": {
+        "statement": "Understanding Flip-Flops in Verilog",
+        "question": [
+            "Explain the concept of a flip-flop in Verilog and provide an example of its usage in a real-world application."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "In Verilog, a flip-flop is a fundamental sequential logic element used to store and synchronize data in digital circuits, commonly used in registers or memory elements."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "{'flip-flop': \"A flip-flop is a basic digital circuit that stores one bit of binary data, and it is used to store the output of a digital circuit. In Verilog, a flip-flop is typically implemented using a combination of digital gates such as AND, OR, and NOT gates. It has two main states, '0' and '1', which are determined by the input signals and the previous state of the flip-flop.\", 'example': \"A real-world application of a flip-flop is in a digital clock. In a digital clock, a flip-flop is used to store the hours and minutes, and the output of the flip-flop is used to display the time on the clock's display.\"}"
+        ],
+        "explanation_preds": [
+            "In this answer, I provided a detailed explanation of what a flip-flop is and how it is implemented in Verilog, and also provided an example of a real-world application of a flip-flop."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_66": {
+        "statement": "Role of Testbenches in Verilog",
+        "question": [
+            "What is the purpose of a testbench in Verilog, and why is it essential during the development process?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "A testbench in Verilog simulates and verifies design functionality, ensuring correctness before synthesis, by generating inputs and monitoring outputs."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "coderpad",
+        "answer_preds": [
+            "A testbench in Verilog is a software component that simulates the input stimuli and observes the output responses of a digital circuit or system under test (DUT) to verify its functionality, performance, and compatibility. The purpose of a testbench is to mimic the real-world operating conditions and validate the DUT's behavior, ensuring it meets the design specifications and requirements. It is essential during the development process as it allows designers to identify and fix bugs, optimize performance, and ensure reliability before the DUT is fabricated or manufactured."
+        ],
+        "explanation_preds": [
+            "I considered the importance of testbenches in the development process, their role in simulating real-world scenarios, and the need for thorough verification and validation of digital circuits."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}

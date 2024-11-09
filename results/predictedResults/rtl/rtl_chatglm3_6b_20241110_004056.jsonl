@@ -5133,3 +5133,40 @@
         ]
     }
 }
+{
+    "rtl_111": {
+        "statement": "Modeling a D Flip-Flop in Verilog",
+        "question": [
+            "How would you model a simple D flip-flop in Verilog?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "module dff (input clk, input d, output reg q); always @(posedge clk) begin q <= d; end endmodule"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "tainan-400",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"To model a simple D flip-flop in Verilog, we can use the following code: D Flip-Flop Model: `module DFlipFlop (input clk, input rst, input enable, output Q);` begin variable temp;"
+        ]
+    }
+}

@@ -8686,3 +8686,410 @@
         ]
     }
 }
+{
+    "rtl_203": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule INV(\n    (* clkbuf_inv = \"I\" *) \n    output O, \n    input I \n);\n  assign O = !I; \n  specify\n    (I => O) = 127; \n  endspecify \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `INV` implements a simple inverter operation and features a specified propagation delay of 127 time units.\n."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The `INV` module is a simple inverter that takes a single input `I` and outputs its logical negation `O`. The `assign` statement `O = !I` performs this inversion. The `specify` block with `(I => O) = 127` likely defines a timing constraint, specifying the propagation delay from input `I` to output `O` as 127 units, although the exact units are not specified in the given code."
+        ],
+        "explanation_preds": [
+            "I identified the module as an inverter based on the `assign` statement that negates the input to produce the output. The `specify` block is typically used for timing constraints, so I interpreted `(I => O) = 127` as a delay specification, even though the units are not provided."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_204": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule ripemd160_rol_s (\n\tinput clk, \n\tinput [6:0] rx_round, \n\toutput reg [3:0] tx_s0, \n\toutput reg [3:0] tx_s1 \n);\nlocalparam [319:0] first_sequence = {4'd6,4'd5,4'd8,4'd11,4'd14,4'd13,4'd12,4'd5,4'd12,4'd13,4'd8,4'd6,4'd11,4'd5,4'd15,4'd9,4'd12,4'd5,4'd6,4'd8,4'd6,4'd5,4'd14,4'd9,4'd8,4'd9,4'd15,4'd14,4'd15,4'd14,4'd12,4'd11,4'd5,4'd7,4'd12,4'd5,4'd6,4'd13,4'd8,4'd14,4'd15,4'd13,4'd9,4'd14,4'd7,4'd6,4'd13,4'd11,4'd12,4'd13,4'd7,4'd11,4'd9,4'd15,4'd12,4'd7,4'd15,4'd7,4'd9,4'd11,4'd13,4'd8,4'd6,4'd7,4'd8,4'd9,4'd7,4'd6,4'd15,4'd14,4'd13,4'd11,4'd9,4'd7,4'd8,4'd5,4'd12,4'd15,4'd14,4'd11};\nlocalparam [319:0] second_sequence = {4'd11,4'd11,4'd13,4'd15,4'd5,4'd6,4'd13,4'd8,4'd6,4'd14,4'd5,4'd12,4'd9,4'd12,4'd5,4'd8,4'd8,4'd15,4'd5,4'd12,4'd9,4'd12,4'd9,4'd6,4'd14,4'd6,4'd14,4'd14,4'd11,4'd8,4'd5,4'd15,4'd5,4'd7,4'd13,4'd13,4'd14,4'd5,4'd13,4'd12,4'd14,4'd6,4'd6,4'd8,4'd11,4'd15,4'd7,4'd9,4'd11,4'd13,4'd15,4'd6,4'd7,4'd12,4'd7,4'd7,4'd11,4'd9,4'd8,4'd12,4'd7,4'd15,4'd13,4'd9,4'd6,4'd12,4'd14,4'd14,4'd11,4'd8,4'd7,4'd7,4'd5,4'd15,4'd15,4'd13,4'd11,4'd9,4'd9,4'd8};\nalways @ (posedge clk)\nbegin\n\ttx_s0 <= first_sequence >> {rx_round, 2'b00}; \n\ttx_s1 <= second_sequence >> {rx_round, 2'b00}; \nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `ripemd160_rol_s` implements logical operations by right-shifting first_sequence and second_sequence based on the value of the input signal rx_round, and storing the results in the output registers."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The module `ripemd160_rol_s` performs a right circular rotation (ROL) on two predefined sequences of 320 bits each (`first_sequence` and `second_sequence`) based on the 7-bit input `rx_round`. The rotated values are then output as `tx_s0` and `tx_s1` on each positive edge of the clock signal `clk`. The rotation amount is determined by concatenating `rx_round` with two zeros, effectively allowing for rotations from 0 to 127 bits."
+        ],
+        "explanation_preds": [
+            "The module uses an `always @ (posedge clk)` block to ensure that the rotation operation is synchronized with the clock. The `>>` operator is used for the right circular rotation, and the rotation amount is dynamically set based on the `rx_round` input. The rotated values are then assigned to the output registers `tx_s0` and `tx_s1`."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_205": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule vga_controller(\n    vga_clock, resetn, pixel_colour, memory_address,\n    VGA_R, VGA_G, VGA_B,\n    VGA_HS, VGA_VS, VGA_BLANK,\n    VGA_SYNC, VGA_CLK\n);\nparameter BITS_PER_COLOUR_CHANNEL = 1; \nparameter MONOCHROME = \"FALSE\"; \nparameter RESOLUTION = \"320x240\"; \nparameter C_VERT_NUM_PIXELS  = 10'd480; \nparameter C_VERT_SYNC_START  = 10'd493; \nparameter C_VERT_SYNC_END    = 10'd494; \nparameter C_VERT_TOTAL_COUNT = 10'd525; \nparameter C_HORZ_NUM_PIXELS  = 10'd640; \nparameter C_HORZ_SYNC_START  = 10'd659; \nparameter C_HORZ_SYNC_END    = 10'd754; \nparameter C_HORZ_TOTAL_COUNT = 10'd800; \ninput vga_clock, resetn;\ninput [((MONOCHROME == \"TRUE\") ? (0) : (BITS_PER_COLOUR_CHANNEL*3-1)):0] pixel_colour;\noutput [((RESOLUTION == \"320x240\") ? (16) : (14)):0] memory_address;\noutput reg [9:0] VGA_R, VGA_G, VGA_B; \noutput reg VGA_HS, VGA_VS; \noutput reg VGA_BLANK; \noutput VGA_SYNC, VGA_CLK; \nreg VGA_HS1, VGA_VS1, VGA_BLANK1; \nreg [9:0] xCounter, yCounter; \nwire xCounter_clear, yCounter_clear; \nwire vcc; \nreg [((RESOLUTION == \"320x240\") ? (8) : (7)):0] x; \nreg [((RESOLUTION == \"320x240\") ? (7) : (6)):0] y; \nassign vcc = 1'b1;\nalways @(posedge vga_clock or negedge resetn) begin\n    if (!resetn)\n        xCounter <= 10'd0; \n    else if (xCounter_clear)\n        xCounter <= 10'd0; \n    else\n        xCounter <= xCounter + 1'b1; \nend\nassign xCounter_clear = (xCounter == (C_HORZ_TOTAL_COUNT-1)); \nalways @(posedge vga_clock or negedge resetn) begin\n    if (!resetn)\n        yCounter <= 10'd0; \n    else if (xCounter_clear && yCounter_clear)\n        yCounter <= 10'd0; \n    else if (xCounter_clear)\n        yCounter <= yCounter + 1'b1; \nend\nassign yCounter_clear = (yCounter == (C_VERT_TOTAL_COUNT-1)); \nalways @(*) begin\n    if (RESOLUTION == \"320x240\") begin\n        x = xCounter[9:1]; \n        y = yCounter[8:1]; \n    end else begin\n        x = xCounter[9:2]; \n        y = yCounter[8:2]; \n    end\nend\nvga_address_translator controller_translator(\n    .x(x), .y(y), .mem_address(memory_address)\n);\ndefparam controller_translator.RESOLUTION = RESOLUTION; \nalways @(posedge vga_clock) begin\n    VGA_HS1 <= ~((xCounter >= C_HORZ_SYNC_START) && (xCounter <= C_HORZ_SYNC_END));\n    VGA_VS1 <= ~((yCounter >= C_VERT_SYNC_START) && (yCounter <= C_VERT_SYNC_END));\n    VGA_BLANK1 <= ((xCounter < C_HORZ_NUM_PIXELS) && (yCounter < C_VERT_NUM_PIXELS));\n    VGA_HS <= VGA_HS1;\n    VGA_VS <= VGA_VS1;\n    VGA_BLANK <= VGA_BLANK1;\nend\nassign VGA_SYNC = vcc; \nassign VGA_CLK = vga_clock; \ninteger index, sub_index;\nalways @(pixel_colour) begin\n    VGA_R <= 'b0;\n    VGA_G <= 'b0;\n    VGA_B <= 'b0;\n    if (MONOCHROME == \"FALSE\") begin\n        for (index = 10-BITS_PER_COLOUR_CHANNEL; index >= 0; index = index - BITS_PER_COLOUR_CHANNEL) begin\n            for (sub_index = BITS_PER_COLOUR_CHANNEL - 1; sub_index >= 0; sub_index = sub_index - 1) begin\n                VGA_R[sub_index+index] <= pixel_colour[sub_index + BITS_PER_COLOUR_CHANNEL*2];\n                VGA_G[sub_index+index] <= pixel_colour[sub_index + BITS_PER_COLOUR_CHANNEL];\n                VGA_B[sub_index+index] <= pixel_colour[sub_index];\n            end\n        end\n    end else begin\n        for (index = 0; index < 10; index = index + 1) begin\n            VGA_R[index] <= pixel_colour[0:0];\n            VGA_G[index] <= pixel_colour[0:0];\n            VGA_B[index] <= pixel_colour[0:0];\n        end\n    end\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `vga_controller` implements signal generation for driving a VGA display, including synchronization, blanking, and color signal generation based on pixel position and input color data. It supports configurable color depth and resolution, operates in color or monochrome mode, utilizes counters for tracking positions, and scales down the pixel position for memory address calculation. Sync signals, blanking, and color processing are based on defined timing parameters, enhancing brightness by replicating bits for color channels, or replicating a single bit in monochrome mode. It outputs a constant high sync signal and directly passes the input clock as the VGA clock signal."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The module `vga_controller` generates VGA signals (HS, VS, BLANK, SYNC, CLK) and memory addresses based on an input pixel color and the specified resolution (320x240 or 640x480). It also handles monochrome vs. color modes and maps the input pixel color to the VGA RGB channels accordingly."
+        ],
+        "explanation_preds": [
+            "The module uses counters for horizontal and vertical positions, which are reset during vertical and horizontal sync periods. It translates these positions into memory addresses and generates the necessary VGA control signals. The pixel color is processed based on the color mode to set the RGB output values."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_206": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule pcie_7x_v1_3_fast_cfg_init_cntr #(\n  parameter PATTERN_WIDTH = 8,          \n  parameter INIT_PATTERN  = 8'hA5,      \n  parameter TCQ           = 1           \n) (\n  input                          clk,    \n  input                          rst,    \n  output reg [PATTERN_WIDTH-1:0] pattern_o \n);\nalways @(posedge clk) begin\n  if(rst) begin\n    pattern_o <= #TCQ {PATTERN_WIDTH{1'b0}};\n  end else begin\n    if(pattern_o != INIT_PATTERN) begin\n      pattern_o <= #TCQ pattern_o + 1;\n    end\n  end\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `pcie_7x_v1_3_fast_cfg_init_cntr` implements a counter that operates on the rising edge of the `clk` signal, resetting `pattern_o` to zeros on `rst` assertion, incrementing it by 1 on deassertion if not equal to `INIT_PATTERN`, with a delay specified by `TCQ`."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The module `pcie_7x_v1_3_fast_cfg_init_cntr` is a counter that initializes to a specified pattern (`INIT_PATTERN`) and increments on each clock cycle until it reaches the maximum value defined by `PATTERN_WIDTH`, then resets to the initial pattern on a reset signal."
+        ],
+        "explanation_preds": [
+            "The module uses an `always @(posedge clk)` block to update the `pattern_o` output register on each rising edge of the clock. On reset, `pattern_o` is set to all zeros. Otherwise, it increments by one each cycle unless it has reached the value of `INIT_PATTERN`, at which point it wraps around and starts counting up again."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_207": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule SUB(CLK,RST,IN, OUT); \n  input CLK, RST, IN; \n  output OUT; \n  reg reg1; \n  wire IN; \n  wire OUT = reg1; \n  always @(posedge CLK or negedge RST) begin\n    if(RST) begin \n      reg1 <= 1'b0; \n    end else begin \n      reg1 <= 1'b1; \n    end\n  end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `SUB` implements a simple synchronous reset flip-flop with an output that mirrors the state of an internal register based on clock and reset signals."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The module SUB is a synchronous D-flip flop with asynchronous reset. It takes a clock signal (CLK), a reset signal (RST), and an input signal (IN). On a positive edge of the clock or a negative edge of the reset, the output (OUT) is set to the value of the input signal (IN). If the reset is active low, the output is forced to 0 regardless of the clock or input signals."
+        ],
+        "explanation_preds": [
+            "The module uses an always block sensitive to the positive edge of the clock and the negative edge of the reset. Inside the block, it checks the reset condition first. If reset is active (low), it sets the internal register (reg1) to 0, which is then driven to the output (OUT). If reset is inactive (high), it updates the register with the value of the input signal (IN) on each positive clock edge. The output is directly connected to the register, reflecting its current value."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_208": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule comparador(\n\t\tinput wire clk, \n\t\toutput reg [3:0] sensores, \n\t\tinput wire [7:0]ps2_data_out, \n\t\tinput wire pulso_done \n\t\t);\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `comparador` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The `comparador` module is designed to compare data from an external source (`ps2_data_out`) with internal sensor values (`sensores`) triggered by a clock (`clk`) and a pulse completion signal (`pulso_done`). Upon receiving a pulse completion signal, it updates the sensor values based on the comparison result from the `ps2_data_out`."
+        ],
+        "explanation_preds": [
+            "The module takes inputs including a clock signal, sensor values, PS/2 data output, and a pulse done signal. The primary functionality revolves around comparing the PS/2 data with the sensor values, likely to make decisions or control actions based on the comparison. The update of sensor values is synchronized with the clock and occurs only when the pulse done signal indicates the completion of a specific operation."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_209": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule Apb3Decoder (\n      input  [19:0] io_input_PADDR, \n      input  [0:0] io_input_PSEL, \n      input   io_input_PENABLE, \n      output  io_input_PREADY, \n      input   io_input_PWRITE, \n      input  [31:0] io_input_PWDATA, \n      output [31:0] io_input_PRDATA, \n      output  io_input_PSLVERROR, \n      output [19:0] io_output_PADDR, \n      output reg [2:0] io_output_PSEL, \n      output  io_output_PENABLE, \n      input   io_output_PREADY, \n      output  io_output_PWRITE, \n      output [31:0] io_output_PWDATA, \n      input  [31:0] io_output_PRDATA, \n      input   io_output_PSLVERROR); \n  wire [19:0] _zz_1;\n  wire [19:0] _zz_2;\n  wire [19:0] _zz_3;\n  assign _zz_1 = (20'b11111111000000000000);\n  assign _zz_2 = (20'b11111111000000000000);\n  assign _zz_3 = (20'b11111111000000000000);\n  assign io_output_PADDR = io_input_PADDR;\n  assign io_output_PENABLE = io_input_PENABLE;\n  assign io_output_PWRITE = io_input_PWRITE;\n  assign io_output_PWDATA = io_input_PWDATA;\n  always @ (*) begin\n    io_output_PSEL[0] = (((io_input_PADDR & _zz_1) == (20'b00000000000000000000)) && io_input_PSEL[0]);\n    io_output_PSEL[1] = (((io_input_PADDR & _zz_2) == (20'b00010000000000000000)) && io_input_PSEL[0]);\n    io_output_PSEL[2] = (((io_input_PADDR & _zz_3) == (20'b00100000000000000000)) && io_input_PSEL[0]);\n  end\n  assign io_input_PREADY = io_output_PREADY;\n  assign io_input_PRDATA = io_output_PRDATA;\n  assign io_input_PSLVERROR = io_output_PSLVERROR;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `Apb3Decoder` decodes a 20-bit input address to select peripherals on an APB3 bus using bitwise operations for select signal generation. It passes through control and data signals between input and output ports."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The Apb3Decoder module is a slave device decoder for the APB3 bus protocol. It takes APB3 input signals, decodes the slave select based on the address, and forwards the signals to the appropriate slave device. The module also handles ready, data, and error signals between the master and the selected slave."
+        ],
+        "explanation_preds": [
+            "The module examines the input address (io_input_PADDR) and selects one of three output slave select signals (io_output_PSEL) based on predefined address ranges. It passes through other control signals (PENABLE, PWRITE, PWDATA) and relays responses (PREADY, PRDATA, PSLVERROR) between the APB3 master and the selected slave device."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_210": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule ORCY (output O, input CI, I); \n  assign O = CI | I; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `ORCY` implements a bitwise OR operation between input signals `CI` and `I`, producing the result at output `O`."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The ORCY module implements a 2-input OR gate with an additional carry-in (CI) input and produces an output O and a carry-out (which is the same as O)."
+        ],
+        "explanation_preds": [
+            "The module uses the `assign` statement to directly connect the output O to the logical OR operation of the inputs CI and I. This means that O will be high (1) if either CI or I (or both) are high. The carry-out is not explicitly defined but is implied to be the same as the output O, typical in ripple carry logic designs."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_211": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule Dflop (D, Clk, Q);\n  input D, Clk;\n  output reg Q;\n  always @ (D, Clk)\n    if (Clk)\n      Q = D;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `Dflop` implements combinational logic thatcaptures the value of the input signal D on the high level of the clock signal Clk and stores this value in the output signal Q. The output Q retains its value until the next high level of the clock signal Clk, at which point it updates to the new value of D."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "This Verilog module implements a D-type flip-flop with asynchronous reset. On the rising edge of the clock signal (Clk), the value present at the data input (D) is captured and stored in the output (Q)."
+        ],
+        "explanation_preds": [
+            "The `always @ (D, Clk)` block specifies that the code inside it should be executed whenever there is a change in the values of D or Clk. The `if (Clk)` condition checks for the rising edge of the clock, and if true, the value of D is assigned to Q using the non-blocking assignment `Q = D;`. This ensures that the change in Q occurs after the current clock cycle, maintaining the synchronous nature of the flip-flop."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_212": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule dragster_spi_adapter #\n(\n    EXTENDED_CLOCKS = 3,\n\tTRANSACTION_DEPTH = 128,\n\tDATA_WIDTH = 16\n)\n(\n    input wire clk,\n    input wire reset,\n    input wire internal_mosi,\n    output wire internal_miso,\n    input wire internal_sck,\n    input wire[1:0] internal_ss,\n    output reg external_mosi,\n    input wire external_miso,\n    output wire external_sck,\n    output reg[1:0] external_ss\n\t);\nreg[DATA_WIDTH - 1 : 0] transactions[TRANSACTION_DEPTH - 1 : 0];\nreg[1:0] slaves[TRANSACTION_DEPTH - 1 : 0];\nreg[3:0] bit_counter;\nreg[3:0] internal_bit_count;\nreg[7:0] external_clock_count;\nreg generate_external_clock;\nreg clock_enable;\nreg[7:0] buffered_transaction_count;\nreg[7:0] forwarded_transaction_count;\nreg[7:0] transaction_about_to_be_buffered;\ninteger counter;\nassign external_sck = clock_enable ? clk : 0;\nalways @ (negedge clk)\nbegin\n    if(!reset)\n    begin\n        forwarded_transaction_count <= 0;\n        bit_counter <= 0;\n        external_mosi <= 0;\n        external_ss <= 3;\n\t\tclock_enable <= 0;\n\t\tgenerate_external_clock <= 0;\n\t\texternal_clock_count <= 0;\n    end\n    else\n    begin\n        if(buffered_transaction_count > 0 && forwarded_transaction_count < buffered_transaction_count)\n        begin\n\t\t    clock_enable <= 1;\n\t\t    if(clock_enable && ~generate_external_clock)\n\t\t\tbegin\n\t\t\t    bit_counter <= bit_counter + 1;\n                external_ss <= slaves[forwarded_transaction_count];\n\t\t\t\texternal_mosi <= transactions[forwarded_transaction_count][bit_counter];\n                if(bit_counter == DATA_WIDTH - 1)\n\t\t\t\t    generate_external_clock <= 1;\n\t\t\tend\n\t\t\telse\n\t\t\tbegin\n\t\t\t    external_clock_count <= external_clock_count + 1;\n\t\t\t\tif(EXTENDED_CLOCKS == 0 || external_clock_count == EXTENDED_CLOCKS)\n\t\t\t\tbegin\n\t\t\t\t    external_clock_count <= 0;\n\t\t\t\t\tgenerate_external_clock <= 0;\n\t\t\t\t\tclock_enable <= 0;\n\t\t\t\t\texternal_ss <= 3;\n\t\t\t\t\texternal_mosi <= 0;\n\t\t\t\t\tif(forwarded_transaction_count == TRANSACTION_DEPTH - 1)\n\t\t\t\t\t    forwarded_transaction_count <= 0;\n\t\t\t\t\telse forwarded_transaction_count <= forwarded_transaction_count + 1;\n\t\t\t\t\tbit_counter <= 0;\n\t\t\t\tend\n\t\t\tend\n        end\n    end\nend\nreg[15:0] internal_transaction_buffer;\nalways @ (negedge reset or negedge internal_sck)\nbegin\n    if(!reset)\n    begin\n        for(counter = 0; counter < TRANSACTION_DEPTH; counter = counter + 1)\n        begin\n            slaves[counter] = 3;\n            transactions[counter] = 0;\n        end\n        buffered_transaction_count = 0;\n\t\tinternal_bit_count = 0;\n    end\n    else\n    begin\n\t    internal_bit_count = internal_bit_count + 1;\n        internal_transaction_buffer[internal_bit_count - 1] = internal_mosi;\n        if(internal_bit_count == 0) \n        begin\n\t\t    internal_transaction_buffer[15] = internal_mosi;\n            transactions[buffered_transaction_count] = internal_transaction_buffer;\n            slaves[buffered_transaction_count] = internal_ss;\n            if(buffered_transaction_count == TRANSACTION_DEPTH - 1)\n                buffered_transaction_count = 0;\n            else buffered_transaction_count = buffered_transaction_count + 1;\n\t\t\tinternal_bit_count = 0;\n        end\n    end\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `dragster_spi_adapter` implements a SPI bus adapter with transaction buffering and forwarding capabilities, operating on the negative edge of the clock and reset, handling bit counters, slave select signals, and buffering transactions. It features parameterized settings for clock extension, transaction depth, and data width to ensure flexibility in SPI bus interfacing."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The module `dragster_spi_adapter` acts as a bridge between two SPI interfaces with different configurations. It buffers incoming SPI transactions from the `internal` interface, which has a configurable number of extended clocks (`EXTENDED_CLOCKS`) and data width (`DATA_WIDTH`), and forwards them to the `external` interface. The module supports multiple slaves, identified by the `internal_ss` signal, and manages the transaction flow, ensuring proper clocking and slave selection on the external interface."
+        ],
+        "explanation_preds": [
+            "The key functionality is observed in the always blocks that handle the internal and external SPI interfaces. The internal transactions are buffered and associated with a slave, while the external transactions are controlled based on the buffer state and extended clock settings. The module uses counters and state machines to manage the bit-level transfer between interfaces and handle multiple transactions."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_213": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule LUT1(\n    output O, \n    input I0  \n);\n  parameter [1:0] INIT = 0;\n  assign O = I0 ? INIT[1] : INIT[0];\n  specify\n    (I0 => O) = 127;\n  endspecify\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `LUT1` implements a 1-bit Look-Up Table (LUT) functionality with output O determined by the 2-bit parameter INIT based on the input I0, and features a specified propagation delay of 127 time units."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The LUT1 module implements a 1-bit wide, 2-entry look-up table (LUT) with an input I0 and an output O. The LUT's contents are defined by the INIT parameter, which is a 2-bit value. The output O is selected based on the value of I0: if I0 is 1, O is set to INIT[1]; otherwise, O is set to INIT[0]. The specify block likely defines a timing constraint, stating that the propagation delay from I0 to O should be 127 units."
+        ],
+        "explanation_preds": [
+            "The module uses an assign statement to route the output based on the input, effectively acting as a LUT. The INIT parameter initializes the LUT's values, and the specify block likely sets a timing requirement for the module."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}

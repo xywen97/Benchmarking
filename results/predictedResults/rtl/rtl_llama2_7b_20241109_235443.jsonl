@@ -9100,3 +9100,262 @@
         ]
     }
 }
+{
+    "rtl_214": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hs__dfrbp (\n    input  D      ,\n    output Q      ,\n    output Q_N    ,\n    input  RESET_B,\n    input  CLK\n);\n    supply1 VPWR;\n    supply0 VGND;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_hs__dfrbp` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"The sky130_fd_sc_hs__dfrbp module is a digital logic module that implements a dual-port RAM (DPRAM) with a built-in buffered read port and a non-inverting buffered write port. The module takes in two input signals, D and RESET_B, and produces two output signals, Q and Q_N. The Q output is the data output from the DPRAM, while the Q_N output is a non-inverting buffered version of the Q output. The module also takes in a clock signal, CLK, which is used to clock the DPRAM.\"\"explanation\": \"The sky130_fd_sc_hs__dfrbp module is a digital logic module that is used to implement a dual-port RAM (DPRAM) in a digital circuit. The DPRAM is a memory element that can store data in two different ports, which are called ports A and B. The module implements a buffered read port that allows the user to read the data from either port A or port B, and a non-inverting buffered write port that allows the user to write data to either port A or port B. The module also includes a RESET_B input that allows the user to reset the contents of the DPRAM. The clock signal, CLK, is used to clock the DPRAM and ensure that the data is stored and retrieved correctly.\""
+        ]
+    }
+}
+{
+    "rtl_215": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule MUXF5(\n    output O,  \n    input I0,  \n    input I1,  \n    input S    \n);\nassign O = S ? I1 : I0;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `MUXF5` implements a 2-to-1 multiplexer, selecting between input `I0` and input `I1` based on the value of the select signal `S`."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The MUXF5 module is a 2-input, 1-output multiplexer that selects one of the two input signals (I0 or I1) based on the control signal (S). The output signal (O) is assigned to be the selected input signal when the control signal is high (S), and the other input signal when the control signal is low (S). In other words, the module acts as a selector that chooses which input signal to pass through based on the control signal."
+        ],
+        "explanation_preds": [
+            "No explanation found"
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_216": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule conled(\n    input clk,        \n    output led0,      \n    output led1,      \n    output led2,      \n    output led3,      \n    output led4,      \n    output led5       \n    );\nreg [25:0] counter;\nreg [5:0] ledout;\nassign {led0,led1,led2,led3,led4,led5}=6'b111111;\nassign duty0=0;\nassign duty1=counter[15]&counter[16]&counter[17];\nassign duty2=counter[15]&counter[16];\nassign duty3=counter[15];\nassign duty4=1;\nalways @(posedge clk)\nbegin\n    counter <= counter + 1;\n    case (counter[25:23])\n        3'b000: ledout = {duty0, duty4, duty3, duty2, duty1, duty0};\n        3'b001: ledout = {duty4, duty3, duty2, duty1, duty0, duty0};\n        3'b010: ledout = {duty3, duty2, duty1, duty0, duty0, duty0};\n        3'b011: ledout = {duty2, duty1, duty0, duty0, duty0, duty0};\n        3'b100: ledout = {duty1, duty0, duty0, duty0, duty0, duty4};\n        3'b101: ledout = {duty0, duty0, duty0, duty0, duty4, duty3};\n        3'b110: ledout = {duty0, duty0, duty0, duty4, duty3, duty2};\n        default: ledout = {duty0, duty0, duty4, duty3, duty2, duty1};\n    endcase\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `conled` implements a PWM controller for six LEDs, with individual brightness levels based on specific bits of a counter."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The module conled takes in six input signals (clk, led0-led5) and outputs the combined duty cycle of the five LEDs based on a counter value. The counter value is incremented on each positive edge of the input clk signal. The duty cycle of each LED is determined by a logic function that combines the current value of the counter with the previous values of the counter. The module also includes a default output for the sixth LED, which is always on (duty0=1)."
+        ],
+        "explanation_preds": [
+            "The module conled is a combinational logic circuit that takes in six input signals (clk, led0-led5) and outputs the combined duty cycle of the five LEDs based on a counter value. The counter value is incremented on each positive edge of the input clk signal, and the duty cycle of each LED is determined by a logic function that combines the current value of the counter with the previous values of the counter. The module also includes a default output for the sixth LED, which is always on (duty0=1). The logic functions used to determine the duty cycle of each LED are implemented using a case statement in the always block, which allows the duty cycle of each LED to be controlled independently."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_217": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule controller(\n  clock, reset, run,\n  wrSize, config_data,\n  validIn, dataIn, busy, arm,\n  send, memoryWrData, memoryRead,\n  memoryWrite, memoryLastWrite);\ninput clock;\ninput reset;\ninput run;\ninput wrSize;\ninput [31:0] config_data;\ninput validIn;\ninput [31:0] dataIn;\ninput busy;\ninput arm;\noutput send;\noutput [31:0] memoryWrData;\noutput memoryRead;\noutput memoryWrite;\noutput memoryLastWrite;\nreg [15:0] fwd, next_fwd; \nreg [15:0] bwd, next_bwd;\nreg send, next_send;\nreg memoryRead, next_memoryRead;\nreg memoryWrite, next_memoryWrite;\nreg memoryLastWrite, next_memoryLastWrite;\nreg [17:0] counter, next_counter;\nwire [17:0] counter_inc = counter+1'b1;\nreg [31:0] memoryWrData, next_memoryWrData;\nalways @(posedge clock)\nbegin\n  memoryWrData = next_memoryWrData;\nend\nalways @*\nbegin\n  #1; next_memoryWrData = dataIn;\nend\nparameter [2:0]\n  IDLE =     3'h0,\n  SAMPLE =   3'h1,\n  DELAY =    3'h2,\n  READ =     3'h3,\n  READWAIT = 3'h4;\nreg [2:0] state, next_state;\ninitial state = IDLE;\nalways @(posedge clock or posedge reset)\nbegin\n  if (reset)\n    begin\n      state = IDLE;\n      memoryWrite = 1'b0;\n      memoryLastWrite = 1'b0;\n      memoryRead = 1'b0;\n    end\n  else\n    begin\n      state = next_state;\n      memoryWrite = next_memoryWrite;\n      memoryLastWrite = next_memoryLastWrite;\n      memoryRead = next_memoryRead;\n    end\nend\nalways @(posedge clock)\nbegin\n  counter = next_counter;\n  send = next_send;\nend\nalways @*\nbegin\n  #1;\n  next_state = state;\n  next_counter = counter;\n  next_memoryWrite = 1'b0;\n  next_memoryLastWrite = 1'b0;\n  next_memoryRead = 1'b0;\n  next_send = 1'b0;\n  case(state)\n    IDLE :\n      begin\n        next_counter = 0;\n        next_memoryWrite = 1;\n\tif (run) next_state = DELAY;\n\telse if (arm) next_state = SAMPLE;\n      end\n    SAMPLE :\n      begin\n        next_counter = 0;\n        next_memoryWrite = validIn;\n        if (run) next_state = DELAY;\n      end\n    DELAY :\n      begin\n\tif (validIn)\n\t  begin\n\t    next_memoryWrite = 1'b1;\n            next_counter = counter_inc;\n            if (counter == {fwd,2'b11}) \t\n\t      begin\t\t\t\t\n\t\tnext_memoryLastWrite = 1'b1;\t\n\t\tnext_counter = 0;\n\t\tnext_state = READ;\n\t      end\n\t  end\n      end\n    READ :\n      begin\n        next_memoryRead = 1'b1;\n        next_send = 1'b1;\n        if (counter == {bwd,2'b11})\n\t  begin\n            next_counter = 0;\n            next_state = IDLE;\n          end\n        else\n\t  begin\n            next_counter = counter_inc;\n            next_state = READWAIT;\n          end\n      end\n    READWAIT :\n      begin\n        if (!busy && !send) next_state = READ;\n      end\n  endcase\nend\nalways @(posedge clock)\nbegin\n  fwd = next_fwd;\n  bwd = next_bwd;\nend\nalways @*\nbegin\n  #1;\n  next_fwd = fwd;\n  next_bwd = bwd;\n  if (wrSize)\n    begin\n      next_fwd = config_data[31:16];\n      next_bwd = config_data[15:0];\n    end\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `controller` implements a memory controller FSM managing data transactions, transitioning through IDLE, SAMPLE, DELAY, READ, and READWAIT states based on input conditions, handling memory read/write operations with control signals synchronized to the clock."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_218": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule random_gen(\n    input           reset,          \n    input           clock,          \n    input           init,           \n    input   [3:0]   retry_count,    \n    output reg      trigger         \n);\nreg [9:0]       random_sequence;\nreg [9:0]       random;\nreg [9:0]       random_counter;\nreg [7:0]       slot_time_counter;\nalways @ (posedge clock)\n    if (reset)\n        random_sequence <= 0;\n    else\n        random_sequence <= {random_sequence[8:0],~(random_sequence[2]^random_sequence[9])};\nalways @ (*)\n    case (retry_count)\n        4'h0    : random = {9'b0, random_sequence[0]};\n        4'h1    : random = {8'b0, random_sequence[1:0]};\n        4'h2    : random = {7'b0, random_sequence[2:0]};\n        4'h3    : random = {6'b0, random_sequence[3:0]};\n        4'h4    : random = {5'b0, random_sequence[4:0]};\n        4'h5    : random = {4'b0, random_sequence[5:0]};\n        4'h6    : random = {3'b0, random_sequence[6:0]};\n        4'h7    : random = {2'b0, random_sequence[7:0]};\n        4'h8    : random = {1'b0, random_sequence[8:0]};\n        4'h9    : random = {      random_sequence[9:0]};\n        default : random = {      random_sequence[9:0]};\n    endcase\nalways @ (posedge clock)\n    if (reset)\n        slot_time_counter <= 0;\n    else if(init)\n        slot_time_counter <= 0;\n    else if(!trigger)\n        slot_time_counter <= slot_time_counter + 1;\nalways @ (posedge clock)\n    if (reset)\n        random_counter <= 0;\n    else if (init)\n        random_counter <= random;\n    else if (random_counter != 0 && slot_time_counter == 255)\n        random_counter <= random_counter - 1;\nalways @ (posedge clock)\n    if (reset)\n        trigger <= 1;\n    else if (init)\n        trigger <= 0;\n    else if (random_counter == 0)\n        trigger <= 1;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `random_gen` implements a pseudo-random number generator using a linear feedback shift register (LFSR) and controls a trigger event based on the generated number and retry count. It incorporates signal synchronization on the positive clock edge."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The module generates a random binary sequence of length 9 bits, with the possibility of retrying the sequence up to 9 times. The sequence is generated using a random counter that is incremented each clock cycle, and the output is determined by the current value of the counter and the retry count. If the retry count is 0, the module resets the counter and generates a new sequence. If the retry count is non-zero, the module uses the current value of the counter to determine the output sequence."
+        ],
+        "explanation_preds": [
+            "The module is a random sequence generator that takes in a retry count and generates a random binary sequence of length 9 bits. The sequence is generated using a random counter that is incremented each clock cycle, and the output is determined by the current value of the counter and the retry count. The module has 9 possible output combinations, each with a different random sequence. The retry count determines how many times the sequence can be re-generated before it is reset. The module also has a trigger input that can be used to reset the counter and generate a new sequence."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_219": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule VGAFrequency (\n\tareset,  \n\tinclk0,  \n\tc0       \n);\n\tinput\t  areset;  \n\tinput\t  inclk0;  \n\toutput\t  c0;      \n`ifndef ALTERA_RESERVED_QIS\n`endif\n\ttri0\t  areset;\n`ifndef ALTERA_RESERVED_QIS\n`endif\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `VGAFrequency` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Sure, I'd be happy to help!The `VGAFrequency` module is a simple frequency divider that takes two input signals, `arest` and `inclk0`, and produces an output signal `c0` that is the divided version of `inclk0`. The module uses a simple frequency divider circuit to perform the division, and the output signal `c0` is generated by a flip-flop that is clocked by the divided version of `inclk0`.Here is the answer to your question in JSON format:{\"answer\": \"The `VGAFrequency` module is a simple frequency divider that takes two input signals, `arest` and `inclk0`, and produces an output signal `c0` that is the divided version of `inclk0`.\",\"explanation\": \"The module uses a simple frequency divider circuit to perform the division, and the output signal `c0` is generated by a flip-flop that is clocked by the divided version of `inclk0`.\",}"
+        ]
+    }
+}
+{
+    "rtl_220": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_lp__sdfbbp (\n    Q      , \n    Q_N    , \n    D      , \n    SCD    , \n    SCE    , \n    CLK    , \n    SET_B  , \n    RESET_B \n);\n    output Q      ; \n    output Q_N    ; \n    input  D      ; \n    input  SCD    ; \n    input  SCE    ; \n    input  CLK    ; \n    input  SET_B  ; \n    input  RESET_B; \n    supply1 VPWR; \n    supply0 VGND; \n    supply1 VPB ; \n    supply0 VNB ; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `sky130_fd_sc_lp__sdfbbp` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"The module'sky130_fd_sc_lp__sdfbbp' is a digital logic module that implements a buffered demultiplexer with a 4:1 selective drop multiplexer (SDM) and a bidirectional clock. The module has five inputs (D, SCD, SCE, CLK, and SET_B) and three outputs (Q, Q_N, and RESET_B). The module operates based on the clock signal and the control signals SET_B and RESET_B to selectively drop one of the five input signals and route it to one of the three output signals. The module also has power supply pins (VPWR, VGND, VPB, and VNB) to provide power to the module.\"\"explanation\": \"The module is designed to perform a specific function in a digital circuit. The SDM selects one of the five input signals and routes it to one of the three output signals based on the clock signal and the control signals SET_B and RESET_B. The module is designed to operate at high speeds and with low power consumption, making it suitable for use in high-speed digital applications. The power supply pins are used to provide power to the module and ensure that it operates correctly.\"}"
+        ]
+    }
+}

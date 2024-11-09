@@ -16,6 +16,7 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 - [x] Llama2-7b-chat-hf
 - [x] Llama2-13b-chat-hf
 - [x] Llama3-8b-instruct
+- [x] Llama3.1-70b-instruct
 - [ ] mistrial-7b
 - [x] ChatGLM3 6b
 

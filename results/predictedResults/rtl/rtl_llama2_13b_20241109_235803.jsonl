@@ -7243,3 +7243,225 @@
         ]
     }
 }
+{
+    "rtl_164": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hd__a22oi (\n    input  A1, \n    input  A2, \n    input  B1, \n    input  B2, \n    output Y   \n);\n    supply1 VPWR; \n    supply0 VGND; \n    supply1 VPB ; \n    supply0 VNB ; \nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "//The module `sky130_fd_sc_hd__a22oi` implements a logic gate combination known as an AND-OR-Invert operation, producing the output Y based on the logic defined for inputs A1, A2, B1, and B2.\nThe module `sky130_fd_sc_hd__a22oi` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The functionality of the module sky130_fd_sc_hd__a22oi is to implement a 2-input AND gate with inverted outputs. The inputs A1 and A2 are combined and the result is inverted using two inverters, producing the output Y. The module also includes power supply pins VPWR, VGND, VPB, and VNB to provide power to the circuit."
+        ],
+        "explanation_preds": [
+            "This module is a simple combinational logic circuit that implements a 2-input AND gate with inverted outputs. The inputs A1 and A2 are combined using a logic AND operation, and the result is inverted using two inverters. The output Y is the inverted result of the logic AND operation."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_165": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule bw_clk_gclk_inv_r90_192x (\n    clkout, \n    clkin   \n);\n    output clkout; \n    input  clkin;  \n    assign clkout = ~( clkin );\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "//The module `bw_clk_gclk_inv_r90_192x` implements a clock signal inverter utilizing the bitwise NOT operator to generate the inverse of the input clock signal.\nThe module `bw_clk_gclk_inv_r90_192x` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The module takes in a clock input (clkin) and produces an inverted version of that clock signal as the output (clkout)."
+        ],
+        "explanation_preds": [
+            "The module uses an assignment statement to invert the input clock signal, so the output will be the opposite of the input. This is useful for creating a phase-shifted clock signal or for debugging purposes."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_166": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule hardcopyiii_lcell_hsadder (\n                            dataa,\n                            datab,\n                            cin,\n                            sumout,\n                            cout\n                            );\n    parameter dataa_width = 2; \n    parameter datab_width = 2; \n    parameter cin_inverted = \"off\"; \n    parameter lpm_type = \"hardcopyiii_lcell_hsadder\"; \n    parameter sumout_width = (dataa_width >= datab_width) ? (dataa_width + 1) : (datab_width + 1);\n    input [dataa_width - 1 : 0] dataa; \n    input [datab_width - 1 : 0] datab; \n    input cin; \n    output [sumout_width - 1 : 0] sumout; \n    output cout; \n    wire cin_sel; \n    reg [sumout_width : 0] sumout_tmp; \n    specify\n        (dataa *> sumout) = (0, 0);\n        (datab *> sumout) = (0, 0);\n        (cin *> sumout) = (0, 0);\n        (dataa *> cout) = (0, 0);\n        (datab *> cout) = (0, 0);\n        (cin *> cout) = (0, 0);\n    endspecify\n    assign cin_sel = (cin_inverted == \"on\") ? !cin : cin;\n    always @(datab or dataa or cin_sel)\n    begin\n        sumout_tmp = dataa + datab + cin_sel;\n    end\n    assign sumout = sumout_tmp[sumout_width - 1 : 0];\n    assign cout = sumout_tmp[sumout_width - 1];\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `hardcopyiii_lcell_hsadder` implements a binary adder with optional carry-in inversion, producing the sum of 'dataa' and 'datab' inputs with an optional 'cin'. The 'sumout' output includes the carry-out, and 'cout' indicates the final carry-out."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The functionality of the module is to add three inputs (dataa, datab, and cin) and produce two outputs (sumout and cout). The addition is performed using a simple adder circuit with the input signals being added together and the result being stored in the sumout_tmp register. The output is then passed through a logic gate to produce the final outputs."
+        ],
+        "explanation_preds": [
+            "The module is a simple adder circuit with three inputs (dataa, datab, and cin) and two outputs (sumout and cout). The addition is performed using a register-level adder circuit, and the result is passed through a logic gate to produce the final outputs."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_167": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule hardcopyiii_pll_reg  ( q,\n                            clk,\n                            ena,\n                            d,\n                            clrn,\n                            prn);\n    input d; \n    input clk; \n    input clrn; \n    input prn; \n    input ena; \n    output q; \n    reg q; \n    reg clk_last_value; \n    tri1 prn, clrn, ena; \n    initial q = 0;\n    always @ (clk or negedge clrn or negedge prn )\n    begin\n        if (prn == 1'b0)\n            q <= 1;\n        else if (clrn == 1'b0)\n            q <= 0;\n        else if ((clk === 1'b1) && (clk_last_value === 1'b0) && (ena === 1'b1))\n            q <= d;\n        clk_last_value = clk;\n    end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `hardcopyiii_pll_reg` implements a register with asynchronous clear and preset functionality, capturing input data on the rising edge of the clock when enabled, and setting the output based on preset and clear signals, updating only with the input data under certain conditions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "The functionality of the module is to generate a pulse train based on the input signal 'd' and the clock signal 'clk'. The pulse train is generated when the clock signal is high and the enable signal 'ena' is high, and the pulse train is disabled when the clock signal is low or the enable signal is low. The module also includes a clear signal 'clrn' which can be used to reset the pulse train to its initial state."
+        ],
+        "explanation_preds": [
+            "The module uses a D flip-flop to generate the pulse train. The D flip-flop is triggered by the clock signal and the enable signal, and the output of the flip-flop is reset by the clear signal. The module also includes a register to store the last value of the clock signal, which is used to determine when the pulse train should be disabled."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_168": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule LAG_pl_free_pool (\n    flits_tail,             \n    flits_valid,            \n    pl_alloc_status,        \n    pl_allocated,           \n    pl_empty,               \n    clk,                    \n    rst_n                   \n);\nparameter num_pls = 4;  \nparameter fifo_free_pool = 0;  \nparameter only_allocate_pl_when_empty = 0;  \ninput [num_pls-1:0] flits_tail;\ninput [num_pls-1:0] flits_valid;\ninput [num_pls-1:0] pl_allocated;\noutput [num_pls-1:0] pl_alloc_status;\ninput [num_pls-1:0]  pl_empty;\ninput  clk, rst_n;\nlogic [num_pls-1:0] pl_alloc_status_reg;\npl_t fifo_out;\nfifov_flags_t fifo_flags;\nlogic push;\ninteger i;\ngenerate\n    always@(posedge clk) begin\n        if (!rst_n) begin\n            for (i=0; i<num_pls; i++) begin:forpls2\n                pl_alloc_status_reg[i] <= 1'b1;\n            end\n        end else begin\n            for (i=0; i<num_pls; i++) begin:forpls\n                if (pl_allocated[i])\n                    pl_alloc_status_reg[i] <= 1'b0;\n                if (flits_valid[i] && flits_tail[i]) begin\n                    assert (!pl_alloc_status_reg[i]);\n                    pl_alloc_status_reg[i] <= 1'b1;\n                end\n            end \n        end \n    end \n    if (only_allocate_pl_when_empty) begin\n        assign pl_alloc_status = pl_alloc_status_reg & pl_empty;\n    end else begin\n        assign pl_alloc_status = pl_alloc_status_reg;\n    end\nendgenerate\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `LAG_pl_free_pool` implements a pipeline lane allocation controller that updates the allocation status based on the presence of valid tail flits and previous allocations, following specific criteria, where pipeline lanes are marked as free or allocated accordingly. It initializes all pipeline lanes to a free state upon reset."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": The functionality of the module is to manage a free pool of ples, where each ple is a buffer in a pipeline. The module receives flits and checks if there is enough space in the free pool to store the flit. If there is enough space, the module allocates a ple and stores the flit in it. If there is no enough space, the module waits for a previous flit to be completed before allocating a new ple.\"explanation\": The module uses a register pl_alloc_status_reg to keep track of the allocation status of each ple. The register is updated based on the input flits_valid and pl_allocated. The module also uses a flag pl_empty to indicate when there are no more available ples in the free pool. The only_allocate_pl_when_empty input is used to control whether the module should only allocate a ple when the free pool is empty.}"
+        ]
+    }
+}
+{
+    "rtl_169": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule but used in infer_blkram_7series instantiation\n  parameter ONECLOCK   = 0, \n  parameter REGRAM     = 0, \n  parameter MODE       = \"READ_FIRST\",\n`ifdef NO_BRAM_READ_ENABLE\n  parameter USE_READ_ENABLE = 0 \n`else\n  parameter USE_READ_ENABLE = 1 \n`endif\n) (\n`ifdef ENABLE_ECC_DEBUG\n  input                        ecc_rst, \n`endif \n  output reg [D_WIDTH - 1:0]   o, \n  input                        we, \n  input                        wclk, \n  input                        re, \n  input                        reg_ce, \n  input                        rclk, \n  input     [D_WIDTH - 1:0]    d, \n  input     [ADDR_WIDTH - 1:0] raddr, \n  input     [ADDR_WIDTH - 1:0] waddr \n);"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `bram_module` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": The module implements a block RAM with read and write enable signals, and supports both single clock and dual clock modes. It also includes a parameter for ECC support and can be instantiated with or without read enable.\"explanation\": The module is a block RAM with multiple clock domains, allowing for flexible clock management. The parameter ONECLOCK controls the clock domain for the data memory, while REGRAM determines whether the block RAM should be read or written in a single clock cycle. The MODE parameter selects the read and write enable signals, and USE_READ_ENABLE determines whether to use read enable signals. Additionally, the module includes support for ECC debugging.}"
+        ]
+    }
+}

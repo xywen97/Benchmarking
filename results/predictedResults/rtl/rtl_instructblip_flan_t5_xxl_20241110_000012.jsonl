@@ -6685,3 +6685,410 @@
         ]
     }
 }
+{
+    "rtl_149": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule altera_avalon_st_pipeline_base (\n   clk,          \n   reset,        \n   in_ready,     \n   in_valid,     \n   in_data,      \n   out_ready,    \n   out_valid,    \n   out_data      \n);\n   parameter  SYMBOLS_PER_BEAT  = 1; \n   parameter  BITS_PER_SYMBOL   = 8; \n   parameter  PIPELINE_READY    = 1; \n   localparam DATA_WIDTH = SYMBOLS_PER_BEAT * BITS_PER_SYMBOL;\n   input clk;\n   input reset;\n   output in_ready;\n   input  in_valid;\n   input [DATA_WIDTH-1:0] in_data;\n   input                  out_ready;\n   output                 out_valid;\n   output [DATA_WIDTH-1:0] out_data;\n   reg                     full0; \n   reg                     full1; \n   reg [DATA_WIDTH-1:0]    data0; \n   reg [DATA_WIDTH-1:0]    data1; \n   assign out_valid = full1; \n   assign out_data  = data1;  \n   generate\n   if (PIPELINE_READY == 1)\n     begin : REGISTERED_READY_PLINE\n        assign in_ready  = !full0;\n        always @(posedge clk, posedge reset) begin\n           if (reset) begin\n              data0 <= {DATA_WIDTH{1'b0}};\n              data1 <= {DATA_WIDTH{1'b0}};\n           end else begin\n              if (~full0)\n                data0 <= in_data;\n              if (~full1 || (out_ready && out_valid)) begin\n                 if (full0)\n                   data1 <= data0; \n                 else\n                   data1 <= in_data; \n              end\n           end\n        end\n        always @(posedge clk or posedge reset) begin\n           if (reset) begin\n              full0    <= 1'b0;\n              full1    <= 1'b0;\n           end else begin\n           end\n        end\n     end\n   else\n     begin : UNREGISTERED_READY_PLINE\n        assign in_ready = (~full1) | out_ready;\n        always @(posedge clk or posedge reset) begin\n           if (reset) begin\n              data1 <= 'b0;\n              full1 <= 1'b0;\n           end\n           else begin\n              if (in_ready) begin\n                 data1 <= in_data;\n                 full1 <= in_valid;\n              end\n           end\n        end\n     end\n   endgenerate\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `altera_avalon_st_pipeline_base` implements a two-stage pipeline for the Altera Avalon-ST protocol, offering configurable registered or unregistered ready signals and supporting parameterized data widths. It manages data movement, status flags, and reset operations according to the Avalon-ST protocol requirements."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_150": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule mc_dlp\n  #(parameter           BYTES = 16)  \n  (\n   input                reset_n,     \n   input                mclock,      \n   input                hst_clock,   \n   input                dlp_req,     \n   input [4:0]          dlp_wcnt,    \n   input [27:0]         dlp_org,     \n   input                dlp_gnt,     \n   input                dlp_push,    \n   output reg           dlp_mc_done, \n   output reg           dlp_arb_req, \n   output reg [4:0]     dlp_arb_wcnt,\n   output reg [27:0]    dlp_arb_addr,\n   output reg           dlp_ready    \n   );\n  reg [27:0]    capt_org;        \n  reg [4:0]     capt_wcnt;       \n  reg           dlp_req_toggle;  \n  reg           req_sync_1, req_sync_2, req_sync_3; \n  reg           dlp_gnt_toggle;  \n  reg           gnt_sync_1, gnt_sync_2, gnt_sync_3; \n  reg [1:0]     request_count;   \n  reg [4:0]     dlp_count;       \n  localparam    DLP = 3'h1;      \n  always @ (posedge hst_clock or negedge reset_n) begin\n    if(!reset_n) begin\n      dlp_ready      <= 1'b1;\n      dlp_req_toggle <= 1'b0;\n      gnt_sync_1     <= 1'b0;\n      gnt_sync_2     <= 1'b0;\n      gnt_sync_3     <= 1'b0;\n    end else begin\n      if(dlp_req==1'b1) begin\n        dlp_req_toggle <= ~dlp_req_toggle; \n        capt_org  <= dlp_org;              \n        capt_wcnt <= dlp_wcnt;             \n        dlp_ready <= 1'b0;                 \n      end\n      gnt_sync_1 <= dlp_gnt_toggle;\n      gnt_sync_2 <= gnt_sync_1;\n      gnt_sync_3 <= gnt_sync_2;\n      if(gnt_sync_2 ^ gnt_sync_3) dlp_ready <= 1'b1;\n    end\n  end\n  always @ (posedge mclock or negedge reset_n) begin\n    if(!reset_n) begin\n      dlp_arb_req    <= 1'b0;\n      dlp_gnt_toggle <= 1'b0;\n      req_sync_1     <= 1'b0;\n      req_sync_2     <= 1'b0;\n      req_sync_3     <= 1'b0;\n      dlp_mc_done    <= 1'b0;\n      dlp_arb_addr   <= 28'b0;\n     // dlp_arb_req    <= 1'b0;\n      dlp_count      <= 5'b0;\n    end else begin\n      req_sync_1 <= dlp_req_toggle;\n      req_sync_2 <= req_sync_1;\n      req_sync_3 <= req_sync_2;\n      if(req_sync_2 ^ req_sync_3) begin\n        dlp_arb_addr <= capt_org;         \n        dlp_arb_req  <= 1'b1;             \n        dlp_arb_wcnt <= capt_wcnt;        \n      end\n      if(dlp_gnt==1'b1) begin\n        dlp_arb_req <= 1'b0;              \n        dlp_gnt_toggle <= ~dlp_gnt_toggle;\n      end\n      if (dlp_push && ~dlp_mc_done)\n        dlp_count <= dlp_count + 5'h1;\n      else if(dlp_mc_done)\n        dlp_count <= 5'h0;                \n      if (dlp_push && ~dlp_mc_done) begin\n        if (BYTES == 4)      dlp_mc_done <= &dlp_count;    \n        else if (BYTES == 8) dlp_mc_done <= dlp_count[0];  \n        else                 dlp_mc_done <= (dlp_count == dlp_arb_wcnt); \n      end\n      else dlp_mc_done <= 1'b0;           \n    end\n  end\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `mc_dlp` functions as a memory controller interacting with an arbiter to handle memory requests. It captures request details, syncs signals between clock domains, manages data transfers, and tracks completion status based on processed word count, addressing, and grant signals' state. The module initializes counters on reset and contains prompts to review completion conditions for specific byte sizes, despite having unused internal registers and parameters."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_151": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule pixel_ram\n#(parameter DATA_WIDTH=24, parameter ADDR_WIDTH=9)\n(\n\tinput [(DATA_WIDTH-1):0] data_a, \n\tinput [(ADDR_WIDTH-1):0] addr_a, addr_b, \n\tinput we_a, clk_a, clk_b, \n\toutput reg [(DATA_WIDTH-1):0] q_b \n);\n\treg [DATA_WIDTH-1:0] ram[2**ADDR_WIDTH-1:0];\n\talways @ (posedge clk_a)\n\tbegin\n\t\tif (we_a)\n\t\t\tram[addr_a] <= data_a;\n\tend\n\talways @ (posedge clk_b)\n\tbegin\n\t\tq_b <= ram[addr_b];\n\tend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `pixel ram` implements a parameterized dual port ram for different clock domain write and read operations, storing DATA_WIDTH bit data in an ADDR_WIDTH based storage location."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Computers & Internet: Books, Magazines & Newspapers, Science & Math: Books, Magazines & Newspapers, Engineering: Books, Magazines & Newspapers, Business: Books, Magazines & Newspapers, Education: Books, Magazines & Newspapers, Health & Fitness: Books, Magazines & Newspapers, Science & Mathematics: Books, Magazines & Newspapers, Sports: Books, Magazines & Newspapers, Technology: Books, Magazines & Newspapers, Travel: Books, Magazines & Newspapers, Writing: Books, Magazines & Newspapers"
+        ]
+    }
+}
+{
+    "rtl_152": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_hdll__buf (\n    input  A   , \n    output X   , \n    input  VPB , \n    input  VPWR, \n    input  VGND, \n    input  VNB  \n);\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "//The module `sky130_fd_sc_hdll__buf` implements a single-bit buffer with power and ground connections for CMOS IC operation. It does not perform any logical functions.\nThe module `sky130_fd_sc_hdll__buf` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Computers & Internet: Programming & Languages"
+        ]
+    }
+}
+{
+    "rtl_153": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule data_prbs_gen #  \n  (\n    parameter TCQ           = 100,          \n    parameter EYE_TEST   = \"FALSE\",         \n    parameter PRBS_WIDTH = 32,              \n    parameter SEED_WIDTH = 32               \n   )\n  (\n   input           clk_i,                  \n   input           clk_en,                 \n   input           rst_i,                  \n   input [31:0] prbs_fseed_i,              \n   input           prbs_seed_init,         \n   input [PRBS_WIDTH - 1:0]  prbs_seed_i,  \n   output  [PRBS_WIDTH - 1:0]  prbs_o      \n  );\nreg [PRBS_WIDTH - 1 :0] prbs;              \nreg [PRBS_WIDTH :1] lfsr_q;                \ninteger i;                                 \nalways @ (posedge clk_i)\nbegin\n   if (prbs_seed_init && EYE_TEST == \"FALSE\"  || rst_i )\n      begin\n        lfsr_q <= #TCQ  {prbs_seed_i + prbs_fseed_i[31:0] + 32'h55555555};\n      end\n   else   if (clk_en) begin\n        lfsr_q[32:9] <= #TCQ  lfsr_q[31:8];\n        lfsr_q[8]    <= #TCQ  lfsr_q[32] ^ lfsr_q[7];\n        lfsr_q[7]    <= #TCQ  lfsr_q[32] ^ lfsr_q[6];\n        lfsr_q[6:4]  <= #TCQ  lfsr_q[5:3];\n        lfsr_q[3]    <= #TCQ  lfsr_q[32] ^ lfsr_q[2];\n        lfsr_q[2]    <= #TCQ  lfsr_q[1] ;\n        lfsr_q[1]    <= #TCQ  lfsr_q[32];\n         end\nend\nalways @ (lfsr_q[PRBS_WIDTH:1]) begin\n       prbs = lfsr_q[PRBS_WIDTH:1];\nend\nassign prbs_o = prbs;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `data_prbs_gen` implements a pseudo-random bit sequence generator using a linear feedback shift register (LFSR). It initializes the LFSR with a seed value upon assertion of 'prbs_seed_init' or 'rst_i' signals when 'EYE_TEST' is \"FALSE\", updating the LFSR on the rising edge of 'clk_i' when 'clk_en' is active, determining the feedback logic internally. The output 'prbs_o' reflects the current PRBS value, changing with LFSR updates, while employing a timing control parameter 'TCQ' for simulation and supporting an optional eye test mode through 'EYE_TEST'."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_154": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule tx_phy(\ninput             clk          ,\ninput             rst          ,\ninput             reg_flush    ,\ninput             reg_scan     ,\ninput             tx_phy_start ,\ninput  [31:0]     tx_phy_sel   ,\noutput            tx_phy_done  ,\ninput  [31:0]     tx_dout      ,\noutput            tx_rd_en     ,\noutput reg        task_id_vld  ,\noutput reg [31:0] rx_phy_sel   ,\noutput reg [31:0] task_id_h    ,\noutput reg [31:0] task_id_l    ,\noutput reg [31:0] reg_tout     ,\noutput     [`PHY_NUM-1:0] TX_P ,\noutput     [`PHY_NUM-1:0] TX_N\n);\nparameter IDLE = 2'd0 ;\nparameter TASK = 2'd1 ;\nparameter HASH = 2'd2 ;\nparameter NONCE= 2'd3 ;\nreg [2:0] cur_state ;\nreg [2:0] nxt_state ;\nreg [4:0] word_cnt ;\nreg [3:0] timing_cnt ;\nreg       hash_pop ;\nreg [31:0] tx_buf_flg ;\nreg [31:0] tx_buf ;\nreg [2:0] tx_rd_en_cnt ;\nreg [31:0] reg_step    ;\nalways @ ( posedge clk ) begin\n\tif( rst || cur_state == IDLE )\n\t\ttx_rd_en_cnt <= 3'b0 ;\n\telse if( tx_rd_en && cur_state == TASK )\n\t\ttx_rd_en_cnt <= tx_rd_en_cnt + 3'b1 ;\nend\nalways @ ( posedge clk ) begin  // 定时计数\n\tif( rst )\n\t\ttiming_cnt <= 4'b0 ;\n\telse if( timing_cnt == `TX_PHY_TIMING )\n\t\ttiming_cnt <= 4'b0 ;\n\telse if( cur_state == HASH || cur_state == NONCE )\n\t\ttiming_cnt <= timing_cnt + 4'b1 ;\n\telse\n\t\ttiming_cnt <= 4'b0 ;\nend\nwire tick = ( timing_cnt == `TX_PHY_TIMING ) ;\nreg nonce_over_flow ;\nalways @ ( posedge clk ) begin\n\tif( rst )\n\t\tcur_state <= IDLE ;\n\telse\n\t\tcur_state <= nxt_state ;\nend\nalways @ ( * ) begin  //状态机\n\tnxt_state = cur_state ;\n\tcase( cur_state )\n\tIDLE : if( tx_phy_start ) nxt_state = TASK ;\n\tTASK : if( tx_rd_en_cnt == `TX_TASKID_LEN-1 ) nxt_state = HASH ;\n\tHASH : if( word_cnt == `TX_DATA_LEN-1 && ~|tx_buf_flg ) nxt_state = NONCE ;\n\tNONCE: if( nonce_over_flow&&tick ) nxt_state = IDLE ;\n\tendcase\nend\nassign tx_phy_done = (cur_state == NONCE)&&(nxt_state == IDLE) ; //判断物理层传输是否完成的信号\nalways @ ( posedge clk ) begin\n\tif( cur_state == IDLE && nxt_state == TASK ) begin\n\t\trx_phy_sel <= tx_phy_sel ;\n\tend\n\tif( cur_state == TASK && tx_rd_en_cnt == 2'd0 ) task_id_h <= tx_dout ;\n\tif( cur_state == TASK && tx_rd_en_cnt == 2'd1 ) task_id_l <= tx_dout ;\n\tif( cur_state == TASK && tx_rd_en_cnt == 2'd2 ) reg_step  <= tx_dout ;  tx_dout\n\tif( cur_state == TASK && tx_rd_en_cnt == 2'd3 ) reg_tout  <= tx_dout ;\n\tif( rst )\n\t\ttask_id_vld <= 1'b0 ;\n\telse if( cur_state == TASK && nxt_state == HASH )\n\t\ttask_id_vld <= 1'b1 ;\n\telse\n\t\ttask_id_vld <= 1'b0 ;\nend\nwire [31:0] scan_nonce = task_id_l ;\nwire [7:0]  scan_no   = task_id_h[7:0] ;\nreg  [7:0]  scan_cnt ;\nalways @ ( posedge clk ) begin  //单词数据计数\n\tif( rst || cur_state == IDLE )\n\t\tword_cnt <= 5'b0 ;\n\telse if( cur_state == HASH && ~|tx_buf_flg )\n\t\tword_cnt <= word_cnt + 5'b1 ;\nend\nassign tx_rd_en = ( cur_state == TASK ) || ( hash_pop ) ;   //指示接收器是否允许读取数据的信号\nreg TX_Px ;   //表示传输数据的正负端口\nreg TX_Nx ;\nalways @ ( posedge clk or posedge rst ) begin\n\tif( rst || (cur_state == NONCE && nxt_state == IDLE) || reg_flush ) begin\n\t\tTX_Px <= 1'b1 ;\n\t\tTX_Nx <= 1'b1 ;\n\tend else if( cur_state == IDLE && nxt_state == TASK ) begin \n\t\tTX_Px <= 1'b0 ;\n\t\tTX_Nx <= 1'b0 ;\n\tend else if( cur_state == HASH || cur_state == NONCE ) begin\n\t\tif( ~TX_Px && ~TX_Nx && tick ) begin\n\t\t\tTX_Px <= tx_buf[0]?1'b1:1'b0 ;\n\t\t\tTX_Nx <= (~tx_buf[0])?1'b1:1'b0 ;\n\t\tend else if( tick ) begin\n\t\t\tTX_Px <= 1'b0 ;\n\t\t\tTX_Nx <= 1'b0 ;\n\t\tend\n\tend\nend\ngenvar i;\ngenerate\nfor(i = 0; i < `PHY_NUM; i = i + 1) begin\n\tassign {TX_P[i],TX_N[i]} = rx_phy_sel[i] ? {TX_Px,TX_Nx} : 2'b11 ; //根据接收信号 rx_phy_sel[i] 的选择，将数据分发到对应的正负端口 TX_P[i] 和 TX_N[i]。\nend\nendgenerate\nreg [32:0] nonce_buf ;\nalways @ ( posedge clk or posedge rst ) begin\n\tif( rst ) begin\n\t\thash_pop <= 1'b0 ;\n\tend else if( cur_state == IDLE && nxt_state == TASK ) begin\n\t\thash_pop <= 1'b0 ;\n\tend else if( ~TX_Px && ~TX_Nx && tick ) begin\n\t\thash_pop <= 1'b0 ;\n\tend else if( cur_state == TASK && nxt_state == HASH ) begin\n        \thash_pop <= 1'b1 ;\n\tend else if( cur_state == HASH && nxt_state != NONCE && ~|tx_buf_flg ) begin\n        \thash_pop <= 1'b1 ;\n\tend else begin\n\t\thash_pop <= 1'b0 ;\n\tend\nend\nalways @ ( posedge clk or posedge rst ) begin\n\tif( rst ) begin\n\t\ttx_buf <= 32'b0 ;\n\t\tnonce_over_flow <= 1'b0 ;\n\t\tnonce_buf <= 33'b0 ;\n\t\tscan_cnt <= 8'b0 ;\n\tend else if( cur_state == IDLE && nxt_state == TASK ) begin\n\t\tnonce_over_flow <= 1'b0 ;\n\t\tnonce_buf <= 33'b0 ;\n\t\tscan_cnt <= 8'b0 ;\n\tend else if( ~TX_Px && ~TX_Nx && tick ) begin\n\t\ttx_buf <= {1'b0,tx_buf[31:1]} ;\n\tend else if( hash_pop ) begin\n\t\ttx_buf <= tx_dout ;\n\tend else if( cur_state == HASH && nxt_state == NONCE ) begin\n\t\ttx_buf <= (reg_scan && (scan_no == scan_cnt)) ? scan_nonce : {32{reg_scan}} | 32'b0 ;\n\t\tnonce_buf <= nonce_buf + {1'b0,reg_step} ;\n\t\tscan_cnt <= reg_scan + scan_cnt ;\n\tend else if( cur_state == NONCE && ~|tx_buf_flg ) begin\n\t\ttx_buf <= (reg_scan && (scan_no == scan_cnt)) ? scan_nonce : {32{reg_scan}} | nonce_buf[31:0] ;\n\t\tnonce_buf <= nonce_buf + {1'b0,reg_step} ;\n\t\tnonce_over_flow <= ((nonce_buf)>33'hffff_ffff) ? 1'b1:1'b0 ;\n\t\tscan_cnt <= reg_scan + scan_cnt ;\n\tend\nend\nalways @ ( posedge clk or posedge rst ) begin\n\tif( rst || cur_state == IDLE ) begin\n\t\ttx_buf_flg <= 32'hffffffff ;\n\tend else if( ~TX_Px && ~TX_Nx && tick ) begin\n\t\ttx_buf_flg <= {1'b0,tx_buf_flg[31:1]} ;\n\tend else if( (cur_state == HASH || cur_state == NONCE) && ~|tx_buf_flg ) begin\n\t\ttx_buf_flg <= 32'hffffffff ;\n\tend\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `tx_phy` implements a finite state machine (FSM) for controlling a transmitter PHY in a data transmission system, transitioning between states IDLE, TASK, HASH, and NONCE based on inputs and internal conditions, managing data transmission, task IDs, timeouts, and physical layer transmission signals."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_155": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule tcp_to_bus (\n    input wire           BUS_RST,\n    input wire           BUS_CLK,\n    output reg  [15:0]   TCP_RX_WC, \n    input wire           TCP_RX_WR, \n    input wire  [7:0]    TCP_RX_DATA, \n    input wire           RBCP_ACT,\n    input wire  [31:0]   RBCP_ADDR,\n    input wire  [7:0]    RBCP_WD,\n    input wire           RBCP_WE,\n    input wire           RBCP_RE,\n    output reg           RBCP_ACK,\n    output wire [7:0]    RBCP_RD,\n    output wire          BUS_WR,\n    output wire          BUS_RD,\n    output wire [31:0]   BUS_ADD,\n    inout wire  [7:0]    BUS_DATA,\n    output reg           INVALID\n);\nwire TCP_RESET;\nreg [15:0] LENGTH;\nreg [15:0] BYTE_CNT;\nreg [31:0] TCP_TO_BUS_ADD;\nreg [15:0] RX_DATA_255_CNT;\nwire TCP_TO_BUS_WR;\nalways @(posedge BUS_CLK)\n    if(BUS_RST) begin\n        TCP_RX_WC <= 0;\n    end else if(TCP_RX_WR) begin\n        TCP_RX_WC <= TCP_RX_WC + 1;\n    end else begin\n        TCP_RX_WC <= 0;\n    end\nalways @(posedge BUS_CLK)\n    if(BUS_RST) begin\n        BYTE_CNT <= 0;\n    end else if(INVALID || TCP_RESET) begin\n        BYTE_CNT <= 0;\n    end else if((BYTE_CNT >= 5) && ((BYTE_CNT - 5) == LENGTH)) begin\n        BYTE_CNT <= 0;\n    end else if(TCP_RX_WR) begin\n        BYTE_CNT <= BYTE_CNT + 1;\n    end else begin\n        BYTE_CNT <= BYTE_CNT;\n    end\nalways @(posedge BUS_CLK)\n    if (BUS_RST)\n        INVALID <= 1'b0;\n    else if (TCP_RESET)\n        INVALID <= 1'b0;\n    else if (({TCP_RX_DATA, LENGTH[7:0]} > 65529 && BYTE_CNT == 1) || ((LENGTH + {TCP_RX_DATA, TCP_TO_BUS_ADD[23:0]} > 33'h1_0000_0000) && BYTE_CNT == 5))\n        INVALID <= 1'b1;\n    else\n        INVALID <= INVALID;\nalways @(posedge BUS_CLK)\n    if(BUS_RST) begin\n        RX_DATA_255_CNT <= 0;\n    end else if(TCP_RX_WR && ~&TCP_RX_DATA) begin \n        RX_DATA_255_CNT <= 0;\n    end else if(TCP_RX_WR && &TCP_RX_DATA && ~&RX_DATA_255_CNT) begin \n        RX_DATA_255_CNT <= RX_DATA_255_CNT + 1;\n    end else begin\n        RX_DATA_255_CNT <= RX_DATA_255_CNT;\n    end\nassign TCP_RESET = (&TCP_RX_DATA && RX_DATA_255_CNT == 16'hff_fe && TCP_RX_WR) || ((&TCP_RX_DATA && &RX_DATA_255_CNT && TCP_RX_WR));\nalways @(posedge BUS_CLK)\n    if(BUS_RST) begin\n        LENGTH <= 0;\n    end else if(TCP_RX_WR && BYTE_CNT == 0) begin\n        LENGTH[7:0] <= TCP_RX_DATA;\n    end else if(TCP_RX_WR && BYTE_CNT == 1) begin\n        LENGTH[15:8] <= TCP_RX_DATA;\n    end else begin\n        LENGTH <= LENGTH;\n    end\nassign TCP_TO_BUS_WR = (TCP_RX_WR && BYTE_CNT > 5 && !INVALID) ? 1'b1 : 1'b0;\nalways @(posedge BUS_CLK)\n    if(BUS_RST) begin\n        TCP_TO_BUS_ADD <= 0;\n    end else if(TCP_RX_WR && BYTE_CNT == 2) begin\n        TCP_TO_BUS_ADD[7:0] <= TCP_RX_DATA;\n    end else if(TCP_RX_WR && BYTE_CNT == 3) begin\n        TCP_TO_BUS_ADD[15:8] <= TCP_RX_DATA;\n    end else if(TCP_RX_WR && BYTE_CNT == 4) begin\n        TCP_TO_BUS_ADD[23:16] <= TCP_RX_DATA;\n    end else if(TCP_RX_WR && BYTE_CNT == 5) begin\n        TCP_TO_BUS_ADD[31:24] <= TCP_RX_DATA;\n    end else if(TCP_RX_WR && BYTE_CNT > 5) begin\n        TCP_TO_BUS_ADD <= TCP_TO_BUS_ADD + 1;\n    end else begin\n        TCP_TO_BUS_ADD <= TCP_TO_BUS_ADD;\n    end\nwire RBCP_TO_BUS_WR;\nalways @(posedge BUS_CLK) begin\n    if(BUS_RST)\n        RBCP_ACK <= 0;\n    else begin\n        if (RBCP_ACK == 1)\n            RBCP_ACK <= 0;\n        else\n            RBCP_ACK <= (RBCP_WE | RBCP_RE) & ~TCP_TO_BUS_WR;\n    end\nend\nassign RBCP_TO_BUS_WR = RBCP_WE & RBCP_ACT;\nassign RBCP_RD[7:0] = BUS_WR ? 8'bz : BUS_DATA;\nassign BUS_WR = TCP_TO_BUS_WR | RBCP_TO_BUS_WR;\nassign BUS_RD = RBCP_RE & RBCP_ACT & ~BUS_WR;\nassign BUS_ADD = (TCP_TO_BUS_WR) ? TCP_TO_BUS_ADD : RBCP_ADDR;\nassign BUS_DATA = (BUS_WR) ? ((TCP_TO_BUS_WR) ? TCP_RX_DATA : RBCP_WD) : 8'bz;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `tcp_to_bus` interfaces TCP/RBCP with a bus system, managing data transfer and control signals, including incrementing the TCP RX write count, adjusting the byte count based on data length, handling invalid signals, updating the RX data count, determining `tcp_reset`, setting the length, managing write enable signals, addressing, and controlling bus signals for effective communication between the components involved."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_156": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_ls__dlymetal6s2s (\n    input  A,   \n    output X,   \n    input  VPB,  \n    input  VPWR, \n    input  VGND, \n    input  VNB   \n);\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "//The module `sky130_fd_sc_ls__dlymetal6s2s` implements a delay element that generates a delayed output signal `X` based on the input signal `A`, with power and ground connections for proper operation.\nThe module `sky130_fd_sc_ls__dlymetal6s2s` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Electronics & Photovoltaics"
+        ]
+    }
+}
+{
+    "rtl_157": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule ac97_deframer(\n\tinput sys_clk,\n\tinput sys_rst,\n\tinput up_stb,\n\toutput up_ack,\n\tinput up_sync,\n\tinput up_data,\n\tinput en,\n\toutput reg next_frame,\n\toutput reg frame_valid,\n\toutput reg addr_valid,\n\toutput reg [19:0] addr,\n\toutput reg data_valid,\n\toutput reg [19:0] data,\n\toutput reg pcmleft_valid,\n\toutput reg [19:0] pcmleft,\n\toutput reg pcmright_valid,\n\toutput reg [19:0] pcmright\n);\nreg [7:0] bitcounter;\nreg sync_old;\nalways @(posedge sys_clk) begin\n\tif(sys_rst) begin\n\t\tbitcounter <= 8'd253;\n\t\tnext_frame <= 1'b0;\n\t\tsync_old <= 1'b0;\n\tend else begin\n\t\tif(en)\n\t\t\tnext_frame <= 1'b0;\n\t\tif(up_stb & en) begin\n\t\t\tcase(bitcounter)\n\t\t\t\t8'd0: frame_valid <= up_data;\t\t\n\t\t\t\t8'd1: addr_valid <= up_data;\t\t\n\t\t\t\t8'd2: data_valid <= up_data;\t\t\n\t\t\t\t8'd3: pcmleft_valid <= up_data;\t\t\n\t\t\t\t8'd4: pcmright_valid <= up_data;\t\n\t\t\t\t8'd16: addr[19] <= up_data;\n\t\t\t\t8'd17: addr[18] <= up_data;\n\t\t\t\t8'd18: addr[17] <= up_data;\n\t\t\t\t8'd19: addr[16] <= up_data;\n\t\t\t\t8'd20: addr[15] <= up_data;\n\t\t\t\t8'd21: addr[14] <= up_data;\n\t\t\t\t8'd22: addr[13] <= up_data;\n\t\t\t\t8'd23: addr[12] <= up_data;\n\t\t\t\t8'd24: addr[11] <= up_data;\n\t\t\t\t8'd25: addr[10] <= up_data;\n\t\t\t\t8'd26: addr[9] <= up_data;\n\t\t\t\t8'd27: addr[8] <= up_data;\n\t\t\t\t8'd28: addr[7] <= up_data;\n\t\t\t\t8'd29: addr[6] <= up_data;\n\t\t\t\t8'd30: addr[5] <= up_data;\n\t\t\t\t8'd31: addr[4] <= up_data;\n\t\t\t\t8'd32: addr[3] <= up_data;\n\t\t\t\t8'd33: addr[2] <= up_data;\n\t\t\t\t8'd34: addr[1] <= up_data;\n\t\t\t\t8'd35: addr[0] <= up_data;\n\t\t\t\t8'd36: data[19] <= up_data;\n\t\t\t\t8'd37: data[18] <= up_data;\n\t\t\t\t8'd38: data[17] <= up_data;\n\t\t\t\t8'd39: data[16] <= up_data;\n\t\t\t\t8'd40: data[15] <= up_data;\n\t\t\t\t8'd41: data[14] <= up_data;\n\t\t\t\t8'd42: data[13] <= up_data;\n\t\t\t\t8'd43: data[12] <= up_data;\n\t\t\t\t8'd44: data[11] <= up_data;\n\t\t\t\t8'd45: data[10] <= up_data;\n\t\t\t\t8'd46: data[9] <= up_data;\n\t\t\t\t8'd47: data[8] <= up_data;\n\t\t\t\t8'd48: data[7] <= up_data;\n\t\t\t\t8'd49: data[6] <= up_data;\n\t\t\t\t8'd50: data[5] <= up_data;\n\t\t\t\t8'd51: data[4] <= up_data;\n\t\t\t\t8'd52: data[3] <= up_data;\n\t\t\t\t8'd53: data[2] <= up_data;\n\t\t\t\t8'd54: data[1] <= up_data;\n\t\t\t\t8'd55: data[0] <= up_data;\n\t\t\t\t8'd56: pcmleft[19] <= up_data;\n\t\t\t\t8'd57: pcmleft[18] <= up_data;\n\t\t\t\t8'd58: pcmleft[17] <= up_data;\n\t\t\t\t8'd59: pcmleft[16] <= up_data;\n\t\t\t\t8'd60: pcmleft[15] <= up_data;\n\t\t\t\t8'd61: pcmleft[14] <= up_data;\n\t\t\t\t8'd62: pcmleft[13] <= up_data;\n\t\t\t\t8'd63: pcmleft[12] <= up_data;\n\t\t\t\t8'd64: pcmleft[11] <= up_data;\n\t\t\t\t8'd65: pcmleft[10] <= up_data;\n\t\t\t\t8'd66: pcmleft[9] <= up_data;\n\t\t\t\t8'd67: pcmleft[8] <= up_data;\n\t\t\t\t8'd68: pcmleft[7] <= up_data;\n\t\t\t\t8'd69: pcmleft[6] <= up_data;\n\t\t\t\t8'd70: pcmleft[5] <= up_data;\n\t\t\t\t8'd71: pcmleft[4] <= up_data;\n\t\t\t\t8'd72: pcmleft[3] <= up_data;\n\t\t\t\t8'd73: pcmleft[2] <= up_data;\n\t\t\t\t8'd74: pcmleft[1] <= up_data;\n\t\t\t\t8'd75: pcmleft[0] <= up_data;\n\t\t\t\t8'd76: pcmright[19] <= up_data;\n\t\t\t\t8'd77: pcmright[18] <= up_data;\n\t\t\t\t8'd78: pcmright[17] <= up_data;\n\t\t\t\t8'd79: pcmright[16] <= up_data;\n\t\t\t\t8'd80: pcmright[15] <= up_data;\n\t\t\t\t8'd81: pcmright[14] <= up_data;\n\t\t\t\t8'd82: pcmright[13] <= up_data;\n\t\t\t\t8'd83: pcmright[12] <= up_data;\n\t\t\t\t8'd84: pcmright[11] <= up_data;\n\t\t\t\t8'd85: pcmright[10] <= up_data;\n\t\t\t\t8'd86: pcmright[9] <= up_data;\n\t\t\t\t8'd87: pcmright[8] <= up_data;\n\t\t\t\t8'd88: pcmright[7] <= up_data;\n\t\t\t\t8'd89: pcmright[6] <= up_data;\n\t\t\t\t8'd90: pcmright[5] <= up_data;\n\t\t\t\t8'd91: pcmright[4] <= up_data;\n\t\t\t\t8'd92: pcmright[3] <= up_data;\n\t\t\t\t8'd93: pcmright[2] <= up_data;\n\t\t\t\t8'd94: pcmright[1] <= up_data;\n\t\t\t\t8'd95: pcmright[0] <= up_data;\n\t\t\tendcase\n\t\t\tif(bitcounter == 8'd95)\n\t\t\t\tnext_frame <= 1'b1;\n\t\t\tsync_old <= up_sync;\n\t\t\tif(up_sync & ~sync_old)\n\t\t\t\tbitcounter <= 8'd0;\n\t\t\telse\n\t\t\t\tbitcounter <= bitcounter + 8'd1;\n\t\tend\n\tend\nend\nassign up_ack = en;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `ac97_deframer` implements the deframing of an AC'97 audio data stream with synchronization logic and bit tracking for processing input data bits and assembling them into different output registers for address, data, and PCM audio channels. It provides flags for frame validity and readiness while resetting the bit counter upon synchronization for the next frame. The module acknowledges data receipt through the `up_ack` signal."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Error: 500"
+        ]
+    }
+}
+{
+    "rtl_158": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule sky130_fd_sc_lp__or3b (\n    X   , \n    A   , \n    B   , \n    C_N , \n    VPWR, \n    VGND, \n    VPB , \n    VNB  \n);\n    output X;\n    input  A;\n    input  B;\n    input  C_N;\n    input  VPWR;\n    input  VGND;\n    input  VPB;\n    input  VNB;\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "//The module `sky130_fd_sc_lp__or3b` implements a 3-input OR gate with body biasing, where the output X is high if any of the inputs A, B, or not(C) is high, providing control over gate speed and power consumption through body biasing.\nThe module `sky130_fd_sc_lp__or3b` only implements some interface signals. It does not perform any logical functions."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "Verilog is a computer programming language"
+        ]
+    }
+}
+{
+    "rtl_159": {
+        "statement": "",
+        "question": [
+            "Given the Verilog code, describe the functionality of the module in a few sentences.\nmodule dc_video_reconfig(\n    input clock, \n    input [7:0] data_in, \n    output DCVideoConfig dcVideoConfig, \n    output forceVGAMode \n);\n`ifdef std\n    `include \"config/std/dc_config.v\" \n`elsif hq2x\n    `include \"config/hq2x/dc_config.v\" \n`endif\n`include \"config/dc_config.v\" \nreg [7:0] data_in_reg = 0; \nreg forceVGAMode_reg; \nDCVideoConfig dcVideoConfig_reg; \ninitial begin\n    dcVideoConfig_reg <= DC_VIDEO_CONFIG_1080P;\nend\nassign dcVideoConfig = dcVideoConfig_reg;\nassign forceVGAMode = forceVGAMode_reg;\nalways @(posedge clock) begin\n    data_in_reg <= data_in;\n    if (data_in_reg != data_in) begin\n        forceVGAMode_reg <= data_in[7];\n        case (data_in[6:0])\n            7'h00: dcVideoConfig_reg <= DC_VIDEO_CONFIG_1080P;\n            7'h01: dcVideoConfig_reg <= DC_VIDEO_CONFIG_960P;\n            7'h43: dcVideoConfig_reg <= DC_VIDEO_CONFIG_576I;\n        endcase\n    end\nend\nendmodule"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The module `dc_video_reconfig` implements video settings reconfiguration for a DC video system based on an 8-bit input signal, controlling the video configuration and VGA mode. It utilizes internal registers synchronized to a clock, updating the output settings based on the input data and predefined configuration files."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "rtl_benchmark",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "dc_video_reconfig(input clock, input [7:0] data_in, output DCVideoConfig dcVideoConfig, output forceVGAMode ); ifdef std include \"config/std/dc_config.v\" elsif hq2x include \"config/hq2x/dc_config.v\" endif include \"config/dc_config.v\" reg [7:0] data_in_reg = 0; reg forceVGAMode_reg; DCVideoConfig dcVideoConfig_reg; initial begin dcVideoConfig_reg = DC_VIDEO_CONFIG_1080P; end assign dcVideoConfig = dcVideoConfig_reg; assign forceVGAMode = forceVGAMode_reg; always @(posedge clock) begin data_in_reg = data_in; if (data_in_reg!= data_in) begin forceVGAMode_reg = data_in[7]; case (data_in[6:0]) 7'h00: dcVideoConfig_reg = DC_VIDEO_CONFIG_1080P; 7'h01: dcVideoConfig_reg = DC_VIDEO_CONFIG_960P; 7'h43: dcVideoConfig_reg = DC_VIDEO_CONFIG_576I; endcase end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end"
+        ]
+    }
+}

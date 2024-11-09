@@ -1756,3 +1756,506 @@
         ]
     }
 }
+{
+    "rtl_22": {
+        "statement": "Answer the following short answer questions to test your understanding of Verilog.",
+        "question": [
+            "Explain the difference between blocking and non-blocking assignments, and describe when each should be used.",
+            "What is a latch, and how can latches be avoided in Verilog?",
+            "What is the purpose of the assign statement in Verilog? Provide an example of its use in a synthesized design.",
+            "Describe the function of the generate statement in Verilog and explain how to use generate for to instantiate repetitive structures.",
+            "How does Verilog support the interconnection of multiple modules? Outline the steps for module instantiation and explain the key steps involved."
+        ],
+        "question_type": [
+            "short",
+            "short",
+            "short",
+            "short",
+            "short"
+        ],
+        "answer": [
+            "Blocking assignments (=) execute sequentially and are typically used in combinational logic. Non-blocking assignments (<=) update in parallel and are used for sequential logic to model clocked behavior.",
+            "A latch is a memory element that retains its value when not explicitly changed. To avoid latches, ensure that all branches of conditional statements (e.g., if-else) are covered.",
+            "The assign statement is used for continuous assignments in combinational logic. Example: assign sum = a + b; drives the output sum continuously based on inputs a and b.",
+            "generate is used for repetitive structure instantiation. Example with generate for: genvar i; generate for (i = 0; i < 8; i = i + 1) begin my_module inst (.a(a[i]), .b(b[i]), .c(c[i])); end endgenerate",
+            "Verilog modules can be interconnected by instantiating one module within another. This involves declaring inputs and outputs and mapping them correctly using .port(signal) in the top module. Example: my_module u1 (.a(signal_a), .b(signal_b), .c(signal_c));"
+        ],
+        "explanation": [
+            "Blocking vs Non-blocking: Blocking executes in the order written, Non-blocking happens concurrently, usually in clocked logic.",
+            "Latches can occur when not all branches of a combinational block are assigned. Cover all branches to avoid.",
+            "Assign: used for driving continuous logic outside of always blocks.",
+            "Generate allows code replication. It helps when instantiating multiple similar modules.",
+            "Interconnecting modules involves instantiating and connecting ports between modules."
+        ],
+        "difficulty": [
+            "medium",
+            "medium",
+            "easy",
+            "hard",
+            "medium"
+        ],
+        "ability": [
+            "comprehension",
+            "comprehension",
+            "comprehension",
+            "comprehension",
+            "comprehension"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "zhihu",
+        "answer_preds": [
+            "Blocking assignments in Verilog are used to specify a synchronous assignment, where the left-hand side of the assignment is evaluated first, and then the right-hand side is evaluated. Non-blocking assignments are used to specify an asynchronous assignment, where the right-hand side of the assignment is evaluated first, and then the result is assigned to the left-hand side. Blocking assignments should be used when the assignment needs to be synchronized with the clock, while non-blocking assignments should be used when the assignment does not need to be synchronized with the clock.",
+            "A latch is a type of flip-flop that does not have a clock signal to control its data transfer. Latches can be avoided in Verilog by using flip-flops with clock signals, which ensure that the data is transferred at the correct time. This helps to prevent metastability and ensures the correct operation of the digital circuit.",
+            "The purpose of the assign statement in Verilog is to assign a value to a variable or a net in the module. It is used to specify the output value of a module or a block in the design. This statement is used to define the behavior of the module and is essential for the synthesis of the design.",
+            "The generate statement in Verilog is used to create repetitive structures or arrays of modules, instances, or variables. It allows the designer to specify a block of code that should be replicated a specified number of times, making it easier to implement complex designs. The generate statement is typically used to instantiate arrays of modules, such as memory arrays or arrays of counters.",
+            "Verilog supports the interconnection of multiple modules through the use of instances, ports, and connections. Modules can be instantiated by declaring an instance name, specifying the module name and port connections. The module's ports are then connected to other modules' ports using the dot notation."
+        ],
+        "explanation_preds": [
+            "I answered this question by considering the behavior of blocking and non-blocking assignments in Verilog. I noted that blocking assignments are used for synchronous assignments, which are evaluated with respect to the clock, while non-blocking assignments are used for asynchronous assignments, which do not depend on the clock.",
+            "I considered the definition of a latch and how it differs from a flip-flop, and I realized that latches can be problematic in digital circuits. I then thought about how to avoid using latches in Verilog, and I came to the conclusion that using flip-flops with clock signals is the best approach.",
+            "The assign statement is used to specify the output value of a module or a block in the design. It is used to define the behavior of the module and is essential for the synthesis of the design.",
+            "I based my answer on the common use of the generate statement in Verilog to create repetitive structures, and the ability to specify a block of code that should be replicated a specified number of times.",
+            "Verilog allows modules to be connected by instantiating one module within another, creating a hierarchical design. This is done by declaring an instance name, specifying the module name and port connections, and then connecting the module's ports using the dot notation."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_23": {
+        "statement": "Reset signal types and their application in RTL design",
+        "question": [
+            "Which type of reset is preferred for design portability?",
+            "What are the advantages of using synchronous resets in RTL design?",
+            "Which of the following are typical elements found in an RTL design?"
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "multi"
+        ],
+        "answer": [
+            "Synchronous reset",
+            [
+                "Predictable timing",
+                "Better synthesis support",
+                "Easier debugging"
+            ],
+            [
+                "Registers",
+                "ALUs",
+                "State machines",
+                "Multiplexers"
+            ]
+        ],
+        "explanation": [
+            "",
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "inference",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text",
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "Synchronous Reset",
+            "Synchronous resets in RTL design ensure that all flip-flops and latches are reset simultaneously, which helps to prevent metastability and reduces the risk of incorrect output values. This is particularly important in high-speed designs where data signals may be changing rapidly. By using synchronous resets, designers can ensure that the reset signal is valid for all clock cycles, which simplifies the design and reduces the risk of errors.",
+            "['Flip Flops', 'Registers', 'Adders', 'Subtractors', 'AND Gates', 'OR Gates', 'XOR Gates', 'MUX', 'Counter', 'State Machines']"
+        ],
+        "explanation_preds": [
+            "Synchronous reset is preferred for design portability because it allows the design to be easily moved to different clock domains, and ensures that the reset is synchronized with the clock. This makes it easier to verify and test the design, and reduces the risk of timing issues. Additionally, synchronous reset is widely supported by most FPGA and ASIC devices.",
+            "In synchronous designs, the clock signal is used to synchronize the reset signal, ensuring that all flip-flops and latches are reset at the same time.",
+            "These elements are typical in RTL (Register Transfer Level) design as they are used to implement digital circuits that perform specific tasks, such as storing data, performing arithmetic operations, and making logical decisions."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_24": {
+        "statement": "Behavioral and RTL modeling in Verilog",
+        "question": [
+            "What is the difference between behavioral and RTL modeling in Verilog?",
+            "Explain the purpose of an FSM (Finite State Machine) in RTL design."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "Behavioral modeling in Verilog describes the functionality of a digital circuit without considering the physical implementation details, whereas RTL (Register-Transfer Level) modeling describes the circuit's behavior at a higher level of abstraction, focusing on the flow of data between registers and memory.",
+            "An FSM (Finite State Machine) in RTL (Register-Transfer Level) design is used to model the behavior of digital systems by defining the states and transitions between them, allowing for the implementation of complex logic and sequential circuits."
+        ],
+        "explanation_preds": [
+            "Behavioral modeling is useful for high-level system design and simulation, whereas RTL modeling is more suitable for synthesizable code and physical implementation.",
+            "I based my answer on the fact that FSMs are widely used in digital design to model the behavior of systems, and RTL is a level of abstraction where the focus is on the flow of data and control signals between registers and other components. By using an FSM, designers can abstract away low-level implementation details and focus on the overall behavior of the system."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_25": {
+        "statement": "Latch inference and its prevention in RTL",
+        "question": [
+            "How can a designer prevent latch inference in combinational circuits?",
+            "What happens if a combinational block is not fully specified?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "It infers a latch"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "inference",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "A designer can prevent latch inference in combinational circuits by using asynchronous reset, setting the initial state of the flip-flop to zero, and using the asynchronous set/reset signals. Additionally, using synthesis constraints and coding guidelines can also help in preventing latch inference. It is also recommended to use a clock enable signal to ensure that the flip-flop is only clocked when the enable signal is high.",
+            "If a combinational block is not fully specified, it may lead to latch inference, which can result in incorrect behavior, increased power consumption, and reduced performance."
+        ],
+        "explanation_preds": [
+            "To prevent latch inference, it is essential to ensure that the flip-flop is only clocked when the clock enable signal is high. This can be achieved by using asynchronous reset and set signals, and setting the initial state of the flip-flop to zero. By following these guidelines, the designer can ensure that the circuit remains combinational and latch-free.",
+            "A combinational block is expected to have a unique output for every possible input combination. If it's not fully specified, the block may behave as a latch, storing the previous output and not updating it correctly."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_26": {
+        "statement": "Blocking vs non-blocking assignments in Verilog",
+        "question": [
+            "Describe the difference between blocking and non-blocking assignments in Verilog.",
+            "What is the primary reason for using non-blocking assignments in sequential logic?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "",
+            "Prevents race conditions"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "Blocking assignments in Verilog are synchronous and execute in a single clock cycle, whereas non-blocking assignments are asynchronous and execute in a separate clock cycle. Blocking assignments use the '=' operator, while non-blocking assignments use the '<=' operator. Blocking assignments can be used for simple assignments, while non-blocking assignments are typically used in more complex designs to avoid race conditions.",
+            "To prevent races in sequential logic"
+        ],
+        "explanation_preds": [
+            "I based my answer on the official Verilog documentation and the most common use cases of blocking and non-blocking assignments in digital circuit design.",
+            "Non-blocking assignments in Verilog prevent races in sequential logic by ensuring that the assignment of a value to a variable does not interfere with the evaluation of the same variable in the same clock cycle. This is particularly important in sequential circuits where the output of one stage is used as the input to the next stage. Without non-blocking assignments, the output of the previous stage may not be stable before the next stage tries to use it, leading to incorrect behavior."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_27": {
+        "statement": "Parameterization in RTL design",
+        "question": [
+            "What are the benefits of using parameterized modules in RTL?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            ""
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "The benefits of using parameterized modules in RTL design include improved reusability, reduced design complexity, and easier modification of designs for different applications. Parameterized modules allow designers to create a single module that can be instantiated multiple times with different parameters, making it easier to reuse and modify designs. This can significantly reduce design time and improve overall design quality."
+        ],
+        "explanation_preds": [
+            "I based my answer on the common benefits of parameterization in RTL design, which are well-established in the industry. By using parameterized modules, designers can create more flexible and reusable designs that can be easily adapted to different applications and requirements."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_28": {
+        "statement": "Asynchronous vs synchronous signal handling",
+        "question": [
+            "How do synthesis tools handle asynchronous signals differently compared to synchronous ones?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            ""
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "Synthesis tools handle asynchronous signals differently compared to synchronous ones by treating them as separate clock domains, where each clock domain has its own clock signal and asynchronous signals are sampled at the rising edge of the clock signal, whereas synchronous signals are sampled at the same clock signal."
+        ],
+        "explanation_preds": [
+            "Asynchronous signals are sampled at the rising edge of their own clock signal, whereas synchronous signals are sampled at the same clock signal, this is because asynchronous signals are not tied to the same clock signal, hence they need to be sampled individually."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "rtl_29": {
+        "statement": "Handling of reset signals in RTL",
+        "question": [
+            "Which aspects should be considered during RTL code verification?",
+            "Which of the following are effects of improper handling of reset signals in RTL?"
+        ],
+        "question_type": [
+            "multi",
+            "multi"
+        ],
+        "answer": [
+            [
+                "Functional coverage",
+                "Latch inference",
+                "Timing violations",
+                "Synthesis warnings"
+            ],
+            [
+                "Functional failure at startup",
+                "High power consumption",
+                "Incorrect state machine transitions",
+                "Latch inference"
+            ]
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "inference",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "During RTL code verification, the following aspects should be considered when handling reset signals: 1) Correct reset polarity, 2) Reset timing, 3) Reset duration, 4) Reset propagation through the design, 5) Reset handling in finite state machines, 6) Reset handling in counters and registers, 7) Reset handling in clock domain crossings, and 8) Reset handling in asynchronous interfaces.",
+            "['Incorrect functionality', 'Increased power consumption', 'Infinite loops', 'Data corruption', 'System crashes']"
+        ],
+        "explanation_preds": [
+            "These aspects are crucial to ensure that the design behaves correctly during reset conditions, and that the reset signal is properly propagated and handled throughout the design, without causing any unintended behavior or errors.",
+            "Improper handling of reset signals in RTL can lead to incorrect functionality, increased power consumption, infinite loops, data corruption, and system crashes. If not properly handled, reset signals can cause the design to malfunction, leading to errors and instability."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_30": {
+        "statement": "Use of constants and delay in RTL coding",
+        "question": [
+            "In RTL coding, the ________ keyword in Verilog is used to define a constant value that can be used throughout the module.",
+            "The ________ delay in Verilog is used to model propagation delays in combinational logic."
+        ],
+        "question_type": [
+            "blank",
+            "blank"
+        ],
+        "answer": [
+            "parameter",
+            "#"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "define",
+            "#time"
+        ],
+        "explanation_preds": [
+            "In Verilog, the `define` keyword is used to define a constant value that can be used throughout the module. This is a way to declare a constant and assign a value to it, which can be used in the module's code. The `define` keyword is used to define a constant value that can be used throughout the module.",
+            "The #time delay in Verilog is used to model propagation delays in combinational logic, allowing for more accurate simulation of the timing behavior of digital circuits."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_31": {
+        "statement": "Simulation and synthesis viewpoints in RTL",
+        "question": [
+            "How does the delta time simulation work in Verilog, and why is it important in RTL simulation?",
+            "Describe the differences between simulation and synthesis viewpoints for an RTL designer."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "",
+            ""
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "chipverify",
+        "answer_preds": [
+            "Delta time simulation in Verilog is a method where the simulator advances time in small increments, typically in terms of clock cycles or simulation ticks, to ensure accurate simulation of digital circuits. This is important in RTL simulation because it allows for precise control over the timing of events and enables the detection of timing-related issues such as setup and hold time violations. By using delta time simulation, designers can verify the correct operation of their circuits and identify potential timing problems early in the design process.",
+            "Simulation viewpoint focuses on verifying the functional correctness of the RTL design, whereas synthesis viewpoint focuses on converting the RTL design into a netlist for manufacturing, considering factors like area, speed, and power consumption."
+        ],
+        "explanation_preds": [
+            "I answered this question by highlighting the importance of delta time simulation in Verilog for accurate and precise simulation of digital circuits. This approach is crucial in RTL simulation as it enables designers to identify potential timing-related issues and verify the correct operation of their circuits.",
+            "The simulation viewpoint is concerned with ensuring the design meets its functional requirements, whereas the synthesis viewpoint is concerned with optimizing the design for manufacturing, considering constraints like area, speed, and power consumption."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}

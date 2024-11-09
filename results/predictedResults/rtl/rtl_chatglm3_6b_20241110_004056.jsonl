@@ -4651,3 +4651,285 @@
         ]
     }
 }
+{
+    "rtl_101": {
+        "statement": "Finite State Machines (FSM) in Verilog",
+        "question": [
+            "How is an FSM implemented in Verilog?",
+            "Why is it important to separate state transition and output logic in FSM design?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "An FSM in Verilog is implemented using `always` blocks to manage states and transitions based on input conditions.",
+            "Separating state transition and output logic helps avoid unintended behavior and makes the design easier to debug."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "hard",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "An FSM in Verilog is implemented using a combination of logic gates and state transition blocks. The state transition block defines the transition between states based on the current input and the previous state. The logic gates are used to represent the computation within each state. The FSM is initialized to a specific state and transitions to other states based on the input and the definition of the state transition blocks.",
+            "None"
+        ],
+        "explanation_preds": [
+            "Verilog provides a set of built-in state transition blocks such as `case` and `assign` that can be used to define the transitions between states. The `case` block is used to define the conditions under which the FSM transitions to a different state, while the `assign` block is used to update the state after a transition. The logic gates, such as gates, are used to perform computations within each state. By combining these components, an FSM can be implemented in Verilog to model complex systems with multiple states and transitions.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "{{\"answer\": \"State transition and output logic should be separated in FSM design because it improves the readability and maintainability of the code. Separating the two allows for better control over the behavior of the FSM and simplifies the implementation of the FSM.\", \"explanation\": \"By separating the state transition logic from the output logic, the design of the FSM becomes more modular and easier to understand. This makes it simpler to modify or extend the design in the future.\", \"type\": \"answer\"}}"
+        ]
+    }
+}
+{
+    "rtl_102": {
+        "statement": "Simulation vs Synthesis Differences",
+        "question": [
+            "What is the difference between simulation and synthesis in Verilog?",
+            "Give an example of a construct that works in simulation but not in synthesis."
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "Simulation tests functional correctness without considering hardware constraints, while synthesis converts code into hardware.",
+            "`$display` works in simulation but is not synthesizable."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "Simulation vs Synthesis Differences",
+            "A simulation is a replication of a real-world system or process, while synthesis is the process of creating something new based on the components of a system or process."
+        ],
+        "explanation_preds": [
+            "Simulation in Verilog is the process of simulating the behavior of a digital circuit using a set of input signals and a set of predefined output signals. Synthesis, on the other hand, is the process of generating the physical implementation of a digital circuit from a high-level description written in Verilog or VHDL. The main difference between simulation and synthesis is that simulation is a behavioral description of the circuit while synthesis is a physical implementation of the same circuit.",
+            "An example of a construct that works in simulation but not in synthesis is a computer model of a financial market. The model can simulate the behavior of various financial instruments and their interactions in a virtual environment, but it cannot synthesize new investment strategies or predict future market trends that are beyond the parameters of the simulation."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_103": {
+        "statement": "Common Verilog Constructs and Their Use Cases",
+        "question": [
+            "What is the purpose of the `assign` statement in Verilog?",
+            "When should you use a `wire` type versus a `reg` type?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "`assign` is used for continuous assignments, typically to drive combinational logic outputs.",
+            "`wire` is used for signals driven by combinational logic, while `reg` is used for variables in procedural blocks."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "easy",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "The purpose of the `assign` statement in Verilog is to assign a value to a variable or parameter.",
+            "`wire` type should be used when you want to declare a variable that has a single value that changes infrequently and is not a register. `reg` type should be used when you want to declare a variable that has multiple values and is likely to change frequently."
+        ],
+        "explanation_preds": [
+            "The `assign` statement is used to define or initialize variables, parameters, or global variables in a Verilog module. It allows users to assign a value to a variable or parameter, which can then be used in the subsequent logic of the module.",
+            "In Verilog, `wire` and `reg` are two different types of variables that can be used to declare memory locations or registers. `wire` is used for variables that have a single value and infrequent changes, while `reg` is used for variables that have multiple values and are likely to change frequently. It is important to choose the appropriate type based on the characteristics of the variable being declared."
+        ],
+        "raw_preds": [
+            "None",
+            "None"
+        ]
+    }
+}
+{
+    "rtl_104": {
+        "statement": "Initial and Always Blocks in Verilog",
+        "question": [
+            "What is the difference between an `initial` block and an `always` block in Verilog?",
+            "Can `initial` blocks be synthesized?"
+        ],
+        "question_type": [
+            "open",
+            "single"
+        ],
+        "answer": [
+            "`initial` blocks run once at the beginning of the simulation, whereas `always` blocks are repeated based on sensitivity.",
+            "No"
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "knowledge",
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "An `initial` block is used to define the initial state of a module, while an `always` block is used to define the behavior of a module under all circumstances. The `initial` block is executed only once at the beginning of the simulation, while the `always` block is executed repeatedly during each simulation time step.",
+            "None"
+        ],
+        "explanation_preds": [
+            "In Verilog, `initial` blocks are used to initialize the state of a module, typically by setting some parameters to a specific value or state. On the other hand, `always` blocks are used to define the behavior of a module, which is executed repeatedly during each simulation time step. The `always` block can be thought of as a continuous block of code that is executed every time the module is executed. The main difference between the two is that `initial` blocks are executed only once at the beginning, while `always` blocks are executed repeatedly during the simulation.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "{{\"answer\": \"Yes\", \"explanation\": \"Initial blocks in Verilog can be synthesized using technology mapping techniques.\"}}"
+        ]
+    }
+}
+{
+    "rtl_105": {
+        "statement": "Usage of `case` Statements in Verilog",
+        "question": [
+            "How does a `case` statement differ from `if-else` in Verilog?",
+            "What precautions should be taken to avoid latch inference with `case` statements?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "`case` statements are more readable for selecting among multiple conditions, whereas `if-else` is better for binary conditions.",
+            "Ensure all possible cases are covered, including a default condition."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"A 'case' statement in Verilog is used to implement conditional logic similar to an 'if-else' statement, but with a more compact syntax. It allows users to define multiple cases that match a given condition and execute different code blocks for each case. The 'case' statement can only have one 'default' case that is executed when none of the other cases match the given condition. The 'default' case is optional. The 'if-else' statement, on the other hand, requires multiple 'if' clauses and a 'else' clause or single 'else' clause to achieve the same functionality. Overall, the 'case' statement provides a more concise and readable way to implement conditional logic in Verilog.\", \"explanation\": \"Verilog's 'case' statement is a more concise and readable way to implement conditional logic compared to the 'if-else' statement. It requires only one 'case' statement, which can have multiple 'default' cases, to match a given condition and execute different code blocks for each case. The 'default' case is optional. This makes the 'case' statement more readable and easier to understand than the 'if-else' statement, which requires multiple 'if' clauses and a 'else' clause or a single 'else' clause.\"}}",
+            "{{\"answer\": \"To avoid latch inference with `case` statements, it is important to properly define the cases and ensure that the logic for each case is not shared. Additionally, it is recommended to use a separate statement for each case to avoid confusion and potential errors.\", \"explanation\": \"Case statements in Verilog are used to implement a conditional logic based on the value of an input. However, if multiple cases share the same logic, it can lead to latch inference, where the output of one case depends on the input value of another case. To avoid this, it is important to ensure that each case has its own unique logic and that the statements within each case are not ambiguous or shared with other cases. By following these precautions, the design can be properly implemented and avoid latch inference issues.\"}}"
+        ]
+    }
+}
+{
+    "rtl_106": {
+        "statement": "Sensitivity Lists in Verilog",
+        "question": [
+            "What happens if a signal is missing from the sensitivity list in combinational logic?",
+            "How can you ensure correct behavior in an `always @(*)` block?"
+        ],
+        "question_type": [
+            "open",
+            "open"
+        ],
+        "answer": [
+            "If a signal is missing, the simulation may not properly reflect changes, potentially causing incorrect behavior.",
+            "Use `always @(*)` to automatically include all signals that affect the block's output."
+        ],
+        "explanation": [
+            "",
+            ""
+        ],
+        "difficulty": [
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "knowledge",
+            "inference"
+        ],
+        "image": [],
+        "modality": [
+            "text",
+            "text"
+        ],
+        "source": "stackoverflow",
+        "answer_preds": [
+            "If a signal is missing from the sensitivity list in combinational logic, the resulting truth table will have a gap or missing value.",
+            "None"
+        ],
+        "explanation_preds": [
+            "A sensitivity list represents the set of signals that are sensitive to changes in the input signals. If a signal is missing from the list, it means that the logic circuit cannot determine the output based on that input signal. Therefore, the resulting truth table will have a gap or missing value.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "To ensure correct behavior in an `always @(*)` block in Verilog, one approach is to use sensitivity lists. Sensitivity lists allow the designer to specify which inputs should be considered sensitive to changes in the design. By including the sensitive inputs in the `always @(*)` block, the design will only be affected by changes to those inputs, ensuring correct behavior.Example:```module my_module(input a, input b, output c);  sensitive [a, b];  always @(*) begin    if (a == 1'b0 || b == 1'b0) begin      c = 1'b0;    end else if (a == 1'b1 && b == 1'b1) begin      c = 1'b1;    end else if (a == 1'b0 && b == 1'b1) begin      c = 1'b1;    end else if (a == 1'b1 && b == 1'b0) begin      c = 1'b0;    end  endendmodule```In this example, the sensitivity list `[a, b]` specifies that `a` and `b` should be considered sensitive inputs. The `always @(*)` block will only affect the output `c` when changes to `a` or `b` occur. This ensures that the correct behavior is maintained even when the inputs change."
+        ]
+    }
+}

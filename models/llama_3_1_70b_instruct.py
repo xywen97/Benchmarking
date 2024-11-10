@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2,3"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 model_path = "/data/xiangyu/benchmarkModels/Meta-Llama-3___1-70B-Instruct"

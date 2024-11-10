@@ -39,7 +39,36 @@ def generate_text():
     for i in range(len(image_paths)):
         image = Image.open(image_paths[i]).convert("RGB")
         images.append(image)
-    images = images[:1]
+
+    def combine_images(images):
+        widths, heights = zip(*(i.size for i in images))
+
+        max_width = max(widths)
+        total_height = sum(heights)
+
+        # Calculate the number of rows needed
+        num_images = len(images)
+        num_rows = (num_images + 1) // 2  # Each row has 2 images
+
+        # Create a new image with the appropriate size
+        combined_image = Image.new('RGB', (max_width * 2, max(heights) * num_rows))
+
+        y_offset = 0
+        for i in range(0, num_images, 2):
+            x_offset = 0
+            for j in range(2):
+                if i + j < num_images:
+                    combined_image.paste(images[i + j], (x_offset, y_offset))
+                    x_offset += max_width
+            y_offset += max(heights)
+
+        return combined_image
+
+    # Combine images and use the combined image for processing
+    combined_image = combine_images(images)
+    # combined_image.save("combined_image.png")
+    images = [combined_image]
+    
     inputs = processor(images=images, text=prompt, return_tensors="pt").to(device)
 
     outputs = model.generate(

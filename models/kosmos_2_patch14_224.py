@@ -1,3 +1,7 @@
+import requests
+
+from PIL import Image
+from transformers import AutoProcessor, AutoModelForVision2Seq
 from transformers import InstructBlipProcessor, InstructBlipForConditionalGeneration
 import torch
 from PIL import Image
@@ -7,13 +11,12 @@ import os
 
 app = Flask(__name__)
 
-model = InstructBlipForConditionalGeneration.from_pretrained("/data/xiangyu/benchmarkModels/instructblip-flan-t5-xl")
-processor = InstructBlipProcessor.from_pretrained("/data/xiangyu/benchmarkModels/instructblip-flan-t5-xl")
+model = AutoModelForVision2Seq.from_pretrained("/data/xiangyu/benchmarkModels/kosmos-2-patch14-224")
+processor = AutoProcessor.from_pretrained("/data/xiangyu/benchmarkModels/kosmos-2-patch14-224")
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "7"
+os.environ["CUDA_VISIBLE_DEVICES"] = "6"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
-
 
 @app.route('/generate', methods=['POST'])
 def generate_text():
@@ -38,6 +41,7 @@ def generate_text():
 
     for i in range(len(image_paths)):
         image = Image.open(image_paths[i]).convert("RGB")
+        image = image.resize((512, 512))
         images.append(image)
 
     def combine_images(images):
@@ -68,25 +72,35 @@ def generate_text():
     combined_image = combine_images(images)
     # combined_image.save("combined_image.png")
     images = [combined_image]
-    
-    inputs = processor(images=images, text=prompt, return_tensors="pt").to(device)
 
-    outputs = model.generate(
-            **inputs,
-            do_sample=False,
-            num_beams=5,
-            max_length=512,
-            min_length=10,
-            top_p=0.9,
-            repetition_penalty=1.5,
-            length_penalty=1.0,
-            temperature=1,
+    inputs = processor(text=prompt, images=images, return_tensors="pt").to(device)
+
+    generated_ids = model.generate(
+        pixel_values=inputs["pixel_values"],
+        input_ids=inputs["input_ids"],
+        attention_mask=inputs["attention_mask"],
+        image_embeds=None,
+        image_embeds_position_mask=inputs["image_embeds_position_mask"],
+        use_cache=True,
+        max_new_tokens=512,
     )
+    generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
 
-    generated_text = processor.batch_decode(outputs, skip_special_tokens=True)[0].strip()
-    
-    print(generated_text)
-    return jsonify(generated_text)
+    # Specify `cleanup_and_extract=False` in order to see the raw model generation.
+    # processed_text = processor.post_process_generation(generated_text, cleanup_and_extract=True)
+
+    # print(processed_text)
+    # `<grounding> An image of<phrase> a snowman</phrase><object><patch_index_0044><patch_index_0863></object> warming himself by<phrase> a fire</phrase><object><patch_index_0005><patch_index_0911></object>.`
+
+    # By default, the generated  text is cleanup and the entities are extracted.
+    processed_text, entities = processor.post_process_generation(generated_text)
+
+    print(processed_text)
+    # `An image of a snowman warming himself by a fire.`
+
+    # print(entities)
+    # `[('a snowman', (12, 21), [(0.390625, 0.046875, 0.984375, 0.828125)]), ('a fire', (41, 47), [(0.171875, 0.015625, 0.484375, 0.890625)])]`
+    return jsonify(processed_text)
     
 if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0', port=5005)
+    app.run(debug=False, host='0.0.0.0', port=5015)

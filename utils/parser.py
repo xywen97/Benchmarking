@@ -1,5 +1,5 @@
 from pyexpat import model
-from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series, query_reka_series, query_instructblip_flan_t5_xl, query_instructblip_flan_t5_xxl, query_blip2_flan_t5_xl, query_blip2_flan_t5_xxl, query_chatglm3_6b, query_llama3_1_70b_instruct, query_llama3_1_8b_instruct, query_llama3_2_11b_vision_instruct, query_llama3_2_90b_vision_instruct
+from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series, query_reka_series, query_instructblip_flan_t5_xl, query_instructblip_flan_t5_xxl, query_blip2_flan_t5_xl, query_blip2_flan_t5_xxl, query_chatglm3_6b, query_llama3_1_70b_instruct, query_llama3_1_8b_instruct, query_llama3_2_11b_vision_instruct, query_llama3_2_90b_vision_instruct, query_kosmos_2_patch14_224
 import json
 import base64
 import time
@@ -72,7 +72,8 @@ def choose_model(model_name):
         "instructblip_flan_t5_xxl": query_instructblip_flan_t5_xxl,
         "blip2_flan_t5_xl": query_blip2_flan_t5_xl,
         "blip2_flan_t5_xxl": query_blip2_flan_t5_xxl,
-        "chatglm3_6b": query_chatglm3_6b
+        "chatglm3_6b": query_chatglm3_6b,
+        "kosmos2_patch14_224": query_kosmos_2_patch14_224
     }
     if model_name in model_mapping:
         return model_mapping[model_name]
@@ -105,7 +106,8 @@ def check_if_multi_modal(model_name):
         "blip2_flan_t5_xxl": "type_raw",
         "chatglm3_6b": False,
         "llama3_2_11b_vision_instruct": "type_raw",
-        "llama3_2_90b_vision_instruct": "type_raw"
+        "llama3_2_90b_vision_instruct": "type_raw",
+        "kosmos2_patch14_224": "type_raw"
     }
 
     return is_multi_mapping[model_name]
@@ -253,7 +255,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
             }
 
             if question_type not in prompt_mapping.keys():
-                if model_name in ['instructblip_flan_t5_xl', 'instructblip_flan_t5_xxl', 'blip2_flan_t5_xl', 'blip2_flan_t5_xxl']:
+                if model_name in ['instructblip_flan_t5_xl', 'instructblip_flan_t5_xxl', 'blip2_flan_t5_xl', 'blip2_flan_t5_xxl', 'kosmos2_patch14_224']:
                     prompt_mapping[question_type] = """
                         Question:
                     """.strip()
@@ -271,7 +273,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
             elif not is_multi_modal and len(image_captions) == 0:
                 entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
             elif is_multi_modal:
-                if model_name in ['instructblip_flan_t5_xl', 'instructblip_flan_t5_xxl', 'blip2_flan_t5_xl', 'blip2_flan_t5_xxl']:
+                if model_name in ['instructblip_flan_t5_xl', 'instructblip_flan_t5_xxl', 'blip2_flan_t5_xl', 'blip2_flan_t5_xxl', 'kosmos2_patch14_224']:
                     entire_question = prompt_mapping[question_type] + " " + statement_item + " " + question_item[i] + " " + "Answer:"
                 else:
                     if len(images) == 0:

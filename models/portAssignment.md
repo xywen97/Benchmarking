@@ -17,3 +17,5 @@
 15. 5014: llama3.2 90b vision instruct
 16. 5015: microsoft komos 2 patch14 224
 17. 5016: qwen2.5 7b instruct
+18. 5017: qwen2.5 72b instruct
+18. 5018: qwen2 7b instruct

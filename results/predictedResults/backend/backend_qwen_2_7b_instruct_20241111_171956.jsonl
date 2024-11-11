@@ -1,0 +1,522 @@
+{
+    "backend_0": {
+        "statement": "",
+        "question": [
+            "Brief me on OpenROAD Flow?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "OpenROAD-flow-scripts (ORFS) is a fully autonomous, RTL-GDSII flow for rapid architecture and design space exploration, early prediction of QoR, and detailed physical design implementation. However, ORFS also enables manual intervention for finer user control of individual flow stages through Tcl commands and Python APIs."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "OpenROAD Flow is a comprehensive design-to-silicon flow solution provided by Mentor Graphics, now part of Siemens EDA. It supports the entire process from high-level synthesis (HLS) and RTL design, through physical implementation, to final silicon verification."
+        ],
+        "explanation_preds": [
+            "I used my knowledge base on EDA tools and design flows to identify that OpenROAD Flow is designed for semiconductor design, covering various stages from initial design to final production."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_1": {
+        "statement": "",
+        "question": [
+            "What is OpenROAD Flow and its benefits?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "OpenROAD-flow-scripts (ORFS) is a fully autonomous, RTL-GDSII flow for rapid architecture and design space exploration, early prediction of QoR, and detailed physical design implementation. However, ORFS also enables manual intervention for finer user control of individual flow stages through Tcl commands and Python APIs."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "OpenROAD Flow is a comprehensive platform for system-level design, implementation, and verification of complex digital and mixed-signal systems. It offers a unified environment that integrates multiple tools and methodologies to optimize design efficiency and performance."
+        ],
+        "explanation_preds": [
+            "The platform's benefits include streamlined workflow, improved design accuracy, reduced time-to-market, and enhanced collaboration among design teams. By providing a single interface for various stages of system development, it facilitates better resource management and decision-making."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_2": {
+        "statement": "",
+        "question": [
+            "Brief me on OpenROAD Flow?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "OpenROAD-flow-scripts offer a comprehensive, autonomous RTL-GDSII flow for rapid design exploration and physical design, allowing for manual intervention at stages through Tcl commands and Python APIs for greater control."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "OpenROAD Flow is a comprehensive design environment used for creating advanced system-on-chip (SoC) designs in semiconductor industry."
+        ],
+        "explanation_preds": [
+            "This tool integrates various stages of the SoC design process, from logic synthesis and place-and-route to timing optimization and power analysis, enabling designers to efficiently develop complex integrated circuits."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_3": {
+        "statement": "",
+        "question": [
+            "I'm trying to port ORFS to a TSMC process. During the detailed route step, I get a lot of DRT-0073 errors. Utilization is set to 20% at the beginning of the P&R flow and it is a pretty simple design. Give me some tips about what to look into?\nI have tried to run the pin_access command directly but the -verbose parameter does not seem to work as I don't get any more information"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "You can try the developer debugs to get a sense of what is going on. Put detailed_route_debug -pa -pa_markers -pin _3504_:A1 before you call detailed_route and run it in the GUI. It will stop at the pin and show you how it is trying to access it and any associated drc markers. You click the continue button to see the various steps. Hopefully, that gives you an idea as to what is going on. The other option is a support contract with precisioninno.com where we can help under NDA.\n"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{'DRT-0073': 'This error typically indicates that the routing resources are insufficient for the given constraints or design complexity.', 'tips': '- Increase the utilization percentage gradually to identify the point where errors start occurring.\\n- Check for potential design simplifications such as removing redundant logic or optimizing nets.\\n- Ensure that power and ground planes are well-designed and have sufficient area for the required current flows.\\n- Consider using advanced routing techniques or tools provided by the EDA software to optimize resource usage.'}"
+        ],
+        "explanation_preds": [
+            "The DRT-0073 error points towards resource limitations in the routing process. By incrementally increasing the utilization and applying design optimizations, you can better understand and resolve the issue."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_4": {
+        "statement": "",
+        "question": [
+            "I'm encountering DRT-0073 errors during detailed routing in ORFS; any advice?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "You can try the developer debugs to get a sense of what is going on. Put detailed_route_debug -pa -pa_markers -pin _3504_:A1 before you call detailed_route and run it in the GUI. It will stop at the pin and show you how it is trying to access it and any associated drc markers. You click the continue button to see the various steps. Hopefully, that gives you an idea as to what is going on. The other option is a support contract with precisioninno.com where we can help under NDA.\n"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "Please check your design for any potential issues such as congestion, layer conflicts, or component placement that could cause DRT-0073 errors during detailed routing in ORFS. Also, ensure your routing resources (like via count, track width, and spacing) are correctly set."
+        ],
+        "explanation_preds": [
+            "DRT-0073 errors typically indicate problems during the detailed routing phase, which can stem from various sources like design complexity, resource limitations, or setup configurations. Addressing these common issues often resolves the error."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_5": {
+        "statement": "",
+        "question": [
+            "I'm trying to port ORFS to a TSMC process. During the detailed route step, I get a lot of DRT-0073 errors. Utilization is set to 20% at the beginning of the P&R flow and it is a pretty simple design. Give me some tips about what to look into?\nI have tried to run the pin_access command directly but the -verbose parameter does not seem to work as I don't get any more information"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Developer debug options in OpenROAD can give insights into detailed routing processes, offering visual debug aids in the GUI and the option for NDA-supported assistance from precisioninno.com."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{'1': 'Increase utilization', '2': 'Optimize routing strategy', '3': 'Check DRC rules'}"
+        ],
+        "explanation_preds": [
+            {
+                "1": "Increasing the utilization might help resolve the DRT-0073 errors by providing more resources for the detailed routing process.",
+                "2": "Optimizing the routing strategy could lead to more efficient use of the available resources, potentially avoiding errors related to congestion or resource allocation.",
+                "3": "Reviewing the Design Rule Check (DRC) rules can help identify specific constraints or violations that are causing the errors during detailed routing."
+            }
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_6": {
+        "statement": "",
+        "question": [
+            "What does the following argument do in the build command of ORFS: -o or —local?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The argument, o or —local, builds locally instead of building a Docker image."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "-o or --local option in the build command of ORFS specifies that the build process should use local resources instead of downloading them from the internet. This can save time and bandwidth."
+        ],
+        "explanation_preds": [
+            "When building an operating system with ORFS, using this flag tells the tool to look for necessary components within the local filesystem rather than fetching them over the network."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_7": {
+        "statement": "",
+        "question": [
+            "How does the -o or —local argument function in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The argument, o or —local, builds locally instead of building a Docker image."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": When the -o or --local argument is used in the build command of ORFS, it specifies that the output directory should be the local filesystem instead of being served over HTTP. This means the files will be written directly to the local file system path provided after the argument., \"explanation\": By using this argument, one can avoid setting up an HTTP server for temporary storage and directly write files to the desired location on their local machine, making the process simpler and quicker for small-scale operations or testing purposes.}"
+        ]
+    }
+}
+{
+    "backend_8": {
+        "statement": "",
+        "question": [
+            "What does the following argument do in the build command of ORFS: -o or —local?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -o or --local argument opts for a local build over Docker."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "-o or --local options in the build command of ORFS are used to specify that the build process should use local files instead of downloading dependencies from the internet. This can be useful when you want to build an application offline or when you have already downloaded the necessary dependencies."
+        ],
+        "explanation_preds": [
+            "These options direct the ORFS build system to look for resources in the local filesystem rather than fetching them over the network. This ensures that the build process is self-contained and does not rely on external internet access."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_9": {
+        "statement": "",
+        "question": [
+            "What operation does the -l or --latest argument perform in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -l or --latest argument specifies to use of the head of branch –or_branch or ‘master’ by default for tools/OpenROAD."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": The -l or --latest argument in the build command of ORFS performs an update operation, specifically fetching and installing the latest version of the software packages needed for building the system. This ensures that the build process utilizes the most recent versions of dependencies available., \"explanation\": When using the -l or --latest argument in the ORFS build command, it triggers an update mechanism that checks for the newest versions of all required software components. These updated components are then installed to guarantee that the final build is based on the latest and potentially improved versions of the necessary packages.}"
+        ]
+    }
+}
+{
+    "backend_10": {
+        "statement": "",
+        "question": [
+            "What is accomplished by the -l or --latest argument in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -l or --latest argument specifies to use of the head of branch –or_branch or ‘master’ by default for tools/OpenROAD."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": The -l or --latest argument in the build command of ORFS accomplishes fetching the latest version of the software package being built from the source repository. This ensures that the build process incorporates any recent updates or bug fixes made to the package., \"explanation\": When using the -l or --latest argument, ORFS retrieves the most recent version of the specified software package. This is particularly useful for maintaining up-to-date systems or applications, as it ensures that the build includes all the latest features and improvements made to the package since its last release.}"
+        ]
+    }
+}
+{
+    "backend_11": {
+        "statement": "",
+        "question": [
+            "What operation does the -l or --latest argument perform in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -l or --latest argument chooses the latest branch head for tools/OpenROAD, defaulting to master."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": In the context of ORFS (Open Resource File System), the -l or --latest argument in the build command specifies that the system should use the most recent version of the resources specified for the build process. This means that when you run the build command with this argument, ORFS will fetch and incorporate the latest available versions of the required files or components, ensuring that your final build includes the most up-to-date features and bug fixes. \"explanation\": When using the -l or --latest argument in ORFS's build command, the system prioritizes fetching the most recent versions of resources, which can be particularly useful for ensuring that applications or systems built with these resources benefit from the latest improvements and security patches.\""
+        ]
+    }
+}
+{
+    "backend_12": {
+        "statement": "",
+        "question": [
+            "How is this argument utilized in the build command of ORFS: --or_branch BRANCH_NAME?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -or_branch BRANCH_NAME argument stipulates the use of the head of branch BRANCH for tools/OpenROAD."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": In the build command of ORFS, --or_branch BRANCH_NAME argument is used to specify which branch of the Git repository to build. This allows developers to selectively build code from a specific branch rather than the default or latest version. \"explanation\": By using this argument, developers have control over which codebase to compile, facilitating testing, feature development, or building specific versions of an application.\"}"
+        ]
+    }
+}
+{
+    "backend_13": {
+        "statement": "",
+        "question": [
+            "How is the --or_branch BRANCH_NAME argument used in the build command of ORFS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The -or_branch BRANCH_NAME argument stipulates the use of the head of branch BRANCH for tools/OpenROAD."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": The --or_branch BRANCH_NAME argument in the ORFS build command specifies the branch name from which the code will be fetched and built. This allows developers to build specific branches of a repository without having to switch branches manually. For example, `orfs build --or_branch master` would fetch and build the 'master' branch., \"explanation\": When using the ORFS build command with the --or_branch argument, one can easily specify the branch they wish to build, streamlining the development workflow and enabling efficient testing and deployment of different versions of the codebase. This feature is particularly useful for maintaining multiple versions of an application or experimenting with new features without affecting the main branch.\"}"
+        ]
+    }
+}

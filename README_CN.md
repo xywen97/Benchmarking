@@ -18,6 +18,7 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 - [x] Llama3.1-70b-instruct
 - [ ] mistrial-7b
 - [x] ChatGLM3 6b
+- [x] QWen2.5 7b Instruct
 
 ### 多模态模型
 - [x] GPT-4o

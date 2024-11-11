@@ -18,4 +18,5 @@
 16. 5015: microsoft komos 2 patch14 224
 17. 5016: qwen2.5 7b instruct
 18. 5017: qwen2.5 72b instruct
-18. 5018: qwen2 7b instruct
+19. 5018: qwen2 7b instruct
+20. 5019: qwen2 72b instruct

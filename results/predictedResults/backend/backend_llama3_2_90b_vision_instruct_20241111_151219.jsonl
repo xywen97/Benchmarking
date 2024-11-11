@@ -3772,3 +3772,336 @@
         ]
     }
 }
+{
+    "backend_556": {
+        "statement": "",
+        "question": [
+            "Tell me about the Floorplan variable, MAKE_TRACKS."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "MAKE_TRACKS variable outlines the Tcl file that defines adding routing tracks to a floorplan."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": {\"MAKE_TRACKS\": \"A variable in the Floorplan that determines whether to create tracks (rows or columns) for the floor plan layout. It is a boolean value, where true means tracks will be created and false means they will not. This variable is used to customize the layout of the floor plan.\"}, \"explanation\": \"The MAKE_TRACKS variable is a key component in customizing the floor plan layout. By setting it to true or false, users can control whether tracks are created, which affects the overall structure and organization of the floor plan. This level of customization allows for more flexibility in designing and visualizing spaces.\"}<|eot_id|>"
+        ]
+    }
+}
+{
+    "backend_557": {
+        "statement": "",
+        "question": [
+            "What is the function of the Floorplan variable, IO_PLACER_H?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The metal layer on which to place the I/O pins horizontally (top and bottom of the die)."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"The Floorplan variable, IO_PLACER_H, is used to specify the height of the I/O placer in the floorplan of a design.\", \"explanation\": \"This variable is typically used in the context of FPGA design and is set in the UCF (User Constraints File) or XDC (Xilinx Design Constraints) file. The value of IO_PLACER_H determines the vertical space allocated for placing I/O components in the floorplan, allowing designers to control the layout and optimize the placement of these components.\"}<|eot_id|>"
+        ]
+    }
+}
+{
+    "backend_558": {
+        "statement": "",
+        "question": [
+            "Inform me about the Floorplan variable, IO_PLACER_V?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The metal layer on which to place the I/O pins vertically (sides of the die)."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"IO_PLACER_V is a variable in Floorplan that represents the vertical placement of input/output ports on a floorplan.\", \"explanation\": \"The variable is used to determine the position of I/O ports along the vertical axis of the floorplan, which is crucial for optimizing the placement and routing of components on an integrated circuit.\"}<|eot_id|>"
+        ]
+    }
+}
+{
+    "backend_559": {
+        "statement": "",
+        "question": [
+            "Tell me about the Floorplan variable, GUI_NO_TIMING?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Skip loading timing for a faster GUI load."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"The Floorplan variable GUI_NO_TIMING is a configuration option in the Floorplanner tool that determines whether or not to display timing information for each floor plan element.\", \"explanation\": \"When set to true, this variable hides the timing information, while setting it to false displays the timing details. This allows users to customize their floor plan view according to their needs. The default value of GUI_NO_TIMING is typically set to false, showing timing information by default.\"}<|eot_id|>"
+        ]
+    }
+}
+{
+    "backend_560": {
+        "statement": "",
+        "question": [
+            "Give me a description for the following ‘Placement’ tool variable, HAS_IO_CONSTRAINTS?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Skip the initial non-IO based global placement if IO constraints are present."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{  \"answer\": \"HAS_IO_CONSTRAINTS\",  \"explanation\": \"The Placement tool variable HAS_IO_CONSTRAINTS is a boolean value that indicates whether the placement has input/output constraints. This means it determines if there are specific requirements or limitations on how inputs and outputs are connected or arranged in the design. By setting this variable to true or false, designers can control the placement process according to their specific needs.\" }<|eot_id|>"
+        ]
+    }
+}
+{
+    "backend_561": {
+        "statement": "",
+        "question": [
+            "Tell me about the ‘Placement’ tool variable, CELL_PAD_IN_SITES_GLOBAL_PLACEMENT?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Cell padding on both sides in site widths to ease routability during global placement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"CELL_PAD_IN_SITES_GLOBAL_PLACEMENT is a variable in the Placement tool that controls the placement of cells within a site during global placement. It determines the padding between cells and the site boundaries, affecting the overall density and utilization of the site.\", \"explanation\": \"The value of this variable can be adjusted to optimize the placement of cells, taking into account factors such as wire length, timing, and power consumption. A higher value may result in more evenly distributed cells, while a lower value may lead to more compact placement but potentially increased congestion.\"}<|eot_id|>"
+        ]
+    }
+}
+{
+    "backend_562": {
+        "statement": "",
+        "question": [
+            "What does this ‘Placement’ tool variable, CELL_PAD_IN_SITES_DETAIL_PLACEMENT do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Cell padding on both sides in site widths to ease routability in detail placement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"CELL_PAD_IN_SITES_DETAIL_PLACEMENT is a variable used in the Placement tool to specify the padding between cells and sites in the detailed placement stage of the physical design flow. It controls the minimum distance between cells and sites to ensure proper spacing and prevent overlap. This variable is crucial for achieving optimal placement results and meeting design rules.\", \"explanation\": \"The Placement tool uses various variables to control the placement process, and CELL_PAD_IN_SITES_DETAIL_PLACEMENT is one such variable that focuses on the detailed placement stage. By adjusting this variable, designers can fine-tune the placement to meet specific design requirements and constraints. Understanding the role of this variable is essential for optimizing the placement process and ensuring high-quality results.\"}<|eot_id|>"
+        ]
+    }
+}
+{
+    "backend_563": {
+        "statement": "",
+        "question": [
+            "Give me a description for the following ‘Placement’ tool variable, PLACE_DENSITY?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The desired placement density of cells. It reflects how spread the cells would be on the core area. 1.0 = closely dense. 0.0 = widely spread."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"The PLACE_DENSITY variable in the 'Placement' tool controls the density of objects placed within a given area, with higher values resulting in more objects being placed and lower values resulting in fewer objects.\", \"explanation\": \"This variable is used to adjust the level of detail or population density in a scene, allowing for more or less objects to be placed based on the specific needs of the project.\"}<|eot_id|>"
+        ]
+    }
+}
+{
+    "backend_564": {
+        "statement": "",
+        "question": [
+            "What does this ‘Placement’ tool variable, PLACE_DENSITY_LB_ADDON do?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Check the lower boundary of the PLACE_DENSITY and add PLACE_DENSITY_LB_ADDON if it exists."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{\"answer\": \"PLACE_DENSITY_LB_ADDON is a placement tool variable that adds a density-based constraint to the placement process, ensuring that the density of cells in a given area does not exceed a specified threshold.\", \"explanation\": \"This variable is used to prevent overcrowding and ensure even distribution of cells during placement. It takes into account the size and shape of the cells, as well as the available space in the design, to determine the optimal placement configuration. By using PLACE_DENSITY_LB_ADDON, designers can achieve a more balanced and efficient layout.\"}<|eot_id|>"
+        ]
+    }
+}

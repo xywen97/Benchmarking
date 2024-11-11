@@ -1,0 +1,259 @@
+{
+    "backend_0": {
+        "statement": "",
+        "question": [
+            "Brief me on OpenROAD Flow?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "OpenROAD-flow-scripts (ORFS) is a fully autonomous, RTL-GDSII flow for rapid architecture and design space exploration, early prediction of QoR, and detailed physical design implementation. However, ORFS also enables manual intervention for finer user control of individual flow stages through Tcl commands and Python APIs."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"OpenROAD Flow is an open-source framework designed for the physical design of integrated circuits (ICs). It provides a comprehensive set of tools and scripts to automate the IC design process, including placement, routing, timing analysis, and more. It supports both digital and analog designs and is widely used in academia and industry.\", \"explanation\": \"I provided a concise overview of OpenROAD Flow, highlighting its purpose, key features, and applications to ensure a clear understanding.\"}}"
+        ]
+    }
+}
+{
+    "backend_1": {
+        "statement": "",
+        "question": [
+            "What is OpenROAD Flow and its benefits?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "OpenROAD-flow-scripts (ORFS) is a fully autonomous, RTL-GDSII flow for rapid architecture and design space exploration, early prediction of QoR, and detailed physical design implementation. However, ORFS also enables manual intervention for finer user control of individual flow stages through Tcl commands and Python APIs."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"OpenROAD Flow is an open-source framework for physical design automation in VLSI (Very Large Scale Integration) that supports the entire flow from synthesis to GDSII generation. Its benefits include cost reduction by eliminating the need for expensive proprietary tools, flexibility through customization and integration with other open-source tools, and a collaborative environment for continuous improvement and innovation.\", \"explanation\": \"OpenROAD Flow is designed to provide a comprehensive, open-source solution for VLSI physical design, offering significant cost savings and flexibility compared to proprietary tools.\"}}"
+        ]
+    }
+}
+{
+    "backend_2": {
+        "statement": "",
+        "question": [
+            "Brief me on OpenROAD Flow?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "OpenROAD-flow-scripts offer a comprehensive, autonomous RTL-GDSII flow for rapid design exploration and physical design, allowing for manual intervention at stages through Tcl commands and Python APIs for greater control."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"OpenROAD Flow is an open-source, fully automated digital design flow for ASIC and FPGA designs, focusing on providing a robust and flexible solution for physical synthesis, placement, routing, and timing closure. It supports various PDKs and libraries, making it accessible for both academic and industrial use.\", \"explanation\": \"I provided a concise overview of OpenROAD Flow, highlighting its key features and applications to ensure a clear understanding.\"}}"
+        ]
+    }
+}
+{
+    "backend_3": {
+        "statement": "",
+        "question": [
+            "I'm trying to port ORFS to a TSMC process. During the detailed route step, I get a lot of DRT-0073 errors. Utilization is set to 20% at the beginning of the P&R flow and it is a pretty simple design. Give me some tips about what to look into?\nI have tried to run the pin_access command directly but the -verbose parameter does not seem to work as I don't get any more information"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "You can try the developer debugs to get a sense of what is going on. Put detailed_route_debug -pa -pa_markers -pin _3504_:A1 before you call detailed_route and run it in the GUI. It will stop at the pin and show you how it is trying to access it and any associated drc markers. You click the continue button to see the various steps. Hopefully, that gives you an idea as to what is going on. The other option is a support contract with precisioninno.com where we can help under NDA.\n"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"Check for overlapping or congested areas in your layout, as DRT-0073 errors often indicate routing congestion. Also, verify that your pin placement and spacing are optimal for routing. Consider adjusting the pin layer or using the `set_pin_access` command with specific layers to improve accessibility.\", \"explanation\": \"DRT-0073 errors typically point to routing issues, so focusing on congestion and pin placement can help resolve them. Adjusting pin access settings can also enhance routability.\"}}"
+        ]
+    }
+}
+{
+    "backend_4": {
+        "statement": "",
+        "question": [
+            "I'm encountering DRT-0073 errors during detailed routing in ORFS; any advice?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "You can try the developer debugs to get a sense of what is going on. Put detailed_route_debug -pa -pa_markers -pin _3504_:A1 before you call detailed_route and run it in the GUI. It will stop at the pin and show you how it is trying to access it and any associated drc markers. You click the continue button to see the various steps. Hopefully, that gives you an idea as to what is going on. The other option is a support contract with precisioninno.com where we can help under NDA.\n"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"Check for overlapping or conflicting shapes in your layout, as DRT-0073 errors often indicate issues with the physical design that violate design rules. Ensure all layers and objects are correctly defined and spaced according to the design rules.\", \"explanation\": \"DRT-0073 errors typically arise from physical design issues such as overlaps or spacing violations. Addressing these issues should resolve the error.\"}}"
+        ]
+    }
+}
+{
+    "backend_5": {
+        "statement": "",
+        "question": [
+            "I'm trying to port ORFS to a TSMC process. During the detailed route step, I get a lot of DRT-0073 errors. Utilization is set to 20% at the beginning of the P&R flow and it is a pretty simple design. Give me some tips about what to look into?\nI have tried to run the pin_access command directly but the -verbose parameter does not seem to work as I don't get any more information"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Developer debug options in OpenROAD can give insights into detailed routing processes, offering visual debug aids in the GUI and the option for NDA-supported assistance from precisioninno.com."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"Check the following: 1) Ensure that the pin constraints and placement are correct. 2) Verify that the routing layers and vias are properly defined for the TSMC process. 3) Increase the number of routing layers if possible. 4) Adjust the congestion settings in the router configuration.\", \"explanation\": \"These steps address common causes of DRT-0073 errors, such as incorrect pin placement, insufficient routing resources, and high congestion.\"}}"
+        ]
+    }
+}
+{
+    "backend_6": {
+        "statement": "",
+        "question": [
+            "What does the following argument do in the build command of ORFS: -o or —local?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The argument, o or —local, builds locally instead of building a Docker image."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"-o orfs is used to specify the output file system in the build command of ORFS, while -o local is used to specify that the output should be written to the local file system.\", \"explanation\": \"The -o option in the build command of ORFS is used to specify output settings. 'orfs' indicates the output file system, and 'local' specifies that the output should be written to the local file system.\"}}"
+        ]
+    }
+}

@@ -30,6 +30,7 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 - [x] Blip + T5
 - [x] Llama3.2-11b-vision-instruct
 - [x] Llama3.2-90b-vision-instruct
+- [x] Kosmos2
 
 ### 多模态模型 (图片端还未成功)
 - [x] Gemini series

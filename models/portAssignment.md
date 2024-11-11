@@ -1,4 +1,4 @@
-### Port Arrangement
+### Port Assignment
 
 1. 5000: llama2 7b chat hf
 2. 5001: mistrial 7b
@@ -16,3 +16,4 @@
 14. 5013: llama3.2 11b vision instruct
 15. 5014: llama3.2 90b vision instruct
 16. 5015: microsoft komos 2 patch14 224
+17. 5016: qwen2.5 7b instruct

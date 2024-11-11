@@ -1,0 +1,296 @@
+{
+    "backend_454": {
+        "statement": "",
+        "question": [
+            "What are the Gate Resizer commands?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The resizer commands stop when the design area is -max_utilization util percent of the core area. util is between 0 and 100. The resizer stops and reports an error if the maximum utilization is exceeded."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "['gateresize', 'gate_resize']"
+        ],
+        "explanation_preds": [
+            "Gate Resizer commands are typically named 'gateresize' or 'gate_resize', depending on the software or tool being used."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_455": {
+        "statement": "",
+        "question": [
+            "What is macro placement?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The macro placement module in OpenROAD (mpl) is based on TritonMacroPlacer, an open-source ParquetFP-based macro cell placer. The macro placer places macros/blocks honoring halos, channels, and cell row \"snapping\". Run global_placement before macro placement."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "Macro placement is a process in semiconductor manufacturing where larger components or modules are placed on an integrated circuit (IC) during the chip design phase."
+        ],
+        "explanation_preds": [
+            "This involves strategic positioning of major circuit blocks to optimize performance, minimize signal delay, and reduce power consumption."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_456": {
+        "statement": "",
+        "question": [
+            "What is global routing?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The global routing module in OpenROAD (grt) is based on FastRoute, an open-source global router originally derived from Iowa State University's FastRoute4.1 algorithm. Global routing is responsible for creating routing guides for each net to simplify the job of the detailed router. The purpose of global routing is mainly to avoid overcongestion when creating the guides."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "Global routing refers to the process of determining the best path for data transmission across an entire network or the internet."
+        ],
+        "explanation_preds": [
+            "It involves selecting the optimal route based on network topology and current traffic conditions to ensure efficient data flow."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_457": {
+        "statement": "",
+        "question": [
+            "Elaborate on FastRoute?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "FastRoute is a global routing tool for VLSI back-end design. It is based on sequential rip-up and re-route (RRR) and a lot of novel techniques. FastRoute 1.0 first uses FLUTE to construct congestion-driven Steiner trees, which will later undergo the edge-shifting process to optimize tree structure to reduce congestion. It then uses pattern routing and maze routing with a logistic function-based cost function to solve the congestion problem. FastRoute 2.0 proposed monotonic routing and multi-source multi-sink maze routing techniques to enhance the capability to reduce congestion. FastRoute 3.0 introduced the virtual capacity technique to adaptively change the capacity associated with each global edge to divert wire usage from highly congested regions to less congested regions. FastRoute 4.0 proposed via-aware Steiner tree, 3-bend routing, and a delicate layer assignment algorithm to effectively reduce via count while maintaining outstanding congestion reduction capability. FastRoute 4.1 simplifies the way the virtual capacities are updated and applies a single set of tuning parameters to all benchmark circuits"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "FastRoute is a routing library used in PHP for handling URL routing in web applications. It efficiently maps URLs to specific controllers and actions."
+        ],
+        "explanation_preds": [
+            "FastRoute optimizes the process of determining which controller or action to call based on the URL, making it suitable for performance-critical applications."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_458": {
+        "statement": "",
+        "question": [
+            "Brief me on OpenROAD Flow?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "OpenROAD-flow-scripts (ORFS) is a fully autonomous, RTL-GDSII flow for rapid architecture and design space exploration, early prediction of QoR, and detailed physical design implementation. However, ORFS also enables manual intervention for finer user control of individual flow stages through Tcl commands and Python APIs."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "OpenROAD Flow is an open-source implementation of the industry-standard semiconductor design flow, designed to be highly customizable and extensible for use in research and development."
+        ],
+        "explanation_preds": [
+            "This flow integrates various EDA tools and methodologies to streamline the process of designing and verifying integrated circuits."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_459": {
+        "statement": "",
+        "question": [
+            "I'm trying to port ORFS to a TSMC process. During the detailed route step, I get a lot of DRT-0073 errors. Utilization is set to 20% at the beginning of the P&R flow and it is a pretty simple design. Give me some tips about what to look into?\r\nI have tried to run the pin_access command directly but the -verbose parameter does not seem to work as I don't get any more information"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "You can try the developer debugs to get a sense of what is going on. Put detailed_route_debug -pa -pa_markers -pin _3504_:A1 before you call detailed_route and run it in the GUI. It will stop at the pin and show you how it is trying to access it and any associated drc markers. You click the continue button to see the various steps. Hopefully, that gives you an idea as to what is going on. The other option is a support contract with precisioninno.com where we can help under NDA.\r\n"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "{'tips': ['Check routing resources', 'Review global routing settings', 'Examine design constraints'], 'actions': ['Increase utilization to 50% or higher', 'Adjust routing layer preferences', 'Verify timing and area constraints']}"
+        ],
+        "explanation_preds": [
+            "DRT-0073 errors often indicate insufficient routing resources. Adjusting utilization, reviewing settings, and checking constraints can help resolve these issues."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_460": {
+        "statement": "",
+        "question": [
+            "Is there any way I can use just the RTL-MP2 stand-alone on either an RTL design or a gate netlist? The issue is, that we use proprietary tools so do not have an OpenDB database for our designs."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "OpenROAD supports interoperability with other EDA tools through the industry standard Verilog, LEF, and DEF formats. In this case, you can import a DEF file into OpenROAD from an external tool, run RTL-MP2, and then export the DEF file. The DEF file format should be supported by nearly all EDA physical design tools."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "Yes, you can use the RTL-MP2 stand-alone on an RTL design or a gate netlist without needing an OpenDB database."
+        ],
+        "explanation_preds": [
+            "RTL-MP2 is designed to work independently of specific database formats, allowing flexibility in design flow integration."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "backend_461": {
+        "statement": "",
+        "question": [
+            "How do I check DRC?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "In OpenROAD, you can use the check_drc command to run the design rule check (DRC). It should be noted that check_drc is not a general-purpose checker and only verifies signal routing according to routing rules from the technology LEF file. check_drc also requires routing guides in order to run, so global routing must be performed first. DRC is also commonly performed by an external tool which will check all layers, not just the metal routing layers."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": [
+            "text"
+        ],
+        "source": "EDA-Corpus",
+        "answer_preds": [
+            "To check DRC (Design Rule Check), you typically use EDA (Electronic Design Automation) software specific to your design. Ensure your design adheres to manufacturer's rules and industry standards."
+        ],
+        "explanation_preds": [
+            "EDA tools automate the process of checking designs against predefined rules. This ensures that the physical layout meets all necessary specifications."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}

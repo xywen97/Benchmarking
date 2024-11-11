@@ -32,6 +32,7 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 - [x] Blip + T5
 - [x] Llama3.2-11b-vision-instruct
 - [x] Llama3.2-90b-vision-instruct
+- [x] Kosmos2
 
 ### Multi-modal Model (image not ready)
 - [x] Gemini series

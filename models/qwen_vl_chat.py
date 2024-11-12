@@ -51,7 +51,8 @@ class QWenVL:
             response = self.model.generate(**inputs)
             response = self.tokenizer.decode(
                 response.cpu()[0], skip_special_tokens=False)
-        return response[len(text):-13]
+        # return response[len(text):-13]
+        return response
 
 load_from = 'modelscope'
 
@@ -66,7 +67,7 @@ load_from = 'modelscope'
 # model_id = 'Qwen/Qwen2.5-32B-Instruct'
 # model_id = 'Qwen/Qwen2.5-72B-Instruct'
 
-model_id = "/data/xiangyu/benchmarkModels/CHENCHEN/modelscope/hub/Qwen/Qwen-VL"
+model_id = "/data/xiangyu/benchmarkModels/CHENCHEN/modelscope/hub/Qwen/Qwen-VL-Chat"
 
 model = QWenVL(model_id, device="auto", fp16=True, load_from=load_from)
 
@@ -126,7 +127,7 @@ def generate_text():
     # it reuqires the image path as input, not the loaded images
     if len(images) > 1:
         combined_image = combine_images(images)
-        combined_image_name = "combined_image_qwenvl.png"
+        combined_image_name = "combined_image_qwenvlchat.png"
         combined_image.save(combined_image_name)
         combined_image_path = f"/home/xiangyu/project/multimodalEDABenchmarking/models/{combined_image_name}"
         images = [combined_image_path]
@@ -135,11 +136,11 @@ def generate_text():
 
     response = model(prompt, imgs=images)
 
-    answer_start = response.find('</img>') + len('</img>')
-    answer = response[answer_start:].strip()
-    print(answer)
+    # answer_start = response.find('</img>') + len('</img>')
+    # answer = response[answer_start:].strip()
+    print(response)
 
-    return jsonify(answer)
+    return jsonify(response)
 
 if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0', port=5021)
+    app.run(debug=False, host='0.0.0.0', port=5024)

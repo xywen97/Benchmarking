@@ -24,3 +24,4 @@
 22. 5021: qwen VL
 23. 5022: qwen VL Plus
 24. 5023: qwen VL Max
+25. 5024: qwen VL Chat

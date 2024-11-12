@@ -1,0 +1,3017 @@
+{
+    "Accuracy": 0.0,
+    "Comparison": {
+        "backend_0": {
+            "question_0": {
+                "gt_answer": "OpenROAD-flow-scripts (ORFS) is a fully autonomous, RTL-GDSII flow for rapid architecture and design space exploration, early prediction of QoR, and detailed physical design implementation. However, ORFS also enables manual intervention for finer user control of individual flow stages through Tcl commands and Python APIs.",
+                "pred_answer": "OpenROAD Flow is an open-source physical design flow for digital integrated circuits. It includes tools for floorplanning, placement, routing, and timing analysis. This flow aims to provide an accessible solution for chip designers to create layouts for their designs.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_1": {
+            "question_0": {
+                "gt_answer": "OpenROAD-flow-scripts (ORFS) is a fully autonomous, RTL-GDSII flow for rapid architecture and design space exploration, early prediction of QoR, and detailed physical design implementation. However, ORFS also enables manual intervention for finer user control of individual flow stages through Tcl commands and Python APIs.",
+                "pred_answer": "OpenROAD Flow is an open-source physical design flow for nanometer-scale digital integrated circuits. Its benefits include the ability to handle large designs, support for multiple PDKs, and a growing community of users contributing to its development.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_2": {
+            "question_0": {
+                "gt_answer": "OpenROAD-flow-scripts offer a comprehensive, autonomous RTL-GDSII flow for rapid design exploration and physical design, allowing for manual intervention at stages through Tcl commands and Python APIs for greater control.",
+                "pred_answer": "OpenROAD Flow is an open-source physical design flow for digital integrated circuits, supporting nanometer-scale chip designs. It includes a suite of tools for floorplanning, placement, routing, timing analysis, and power grid synthesis. The flow aims to provide a complete solution for chip design from RTL to GDSII.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_3": {
+            "question_0": {
+                "gt_answer": "You can try the developer debugs to get a sense of what is going on. Put detailed_route_debug -pa -pa_markers -pin _3504_:A1 before you call detailed_route and run it in the GUI. It will stop at the pin and show you how it is trying to access it and any associated drc markers. You click the continue button to see the various steps. Hopefully, that gives you an idea as to what is going on. The other option is a support contract with precisioninno.com where we can help under NDA.\n",
+                "pred_answer": "Investigate the design for dense areas that could be causing routing congestion, check the connectivity of the power grid, and ensure that the placement is optimized before routing. Consider increasing the utilization percentage if possible, and manually adjust the floorplan if there are specific placement constraints.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_4": {
+            "question_0": {
+                "gt_answer": "You can try the developer debugs to get a sense of what is going on. Put detailed_route_debug -pa -pa_markers -pin _3504_:A1 before you call detailed_route and run it in the GUI. It will stop at the pin and show you how it is trying to access it and any associated drc markers. You click the continue button to see the various steps. Hopefully, that gives you an idea as to what is going on. The other option is a support contract with precisioninno.com where we can help under NDA.\n",
+                "pred_answer": "Check your design rules, ensure there's enough clearance between traces, and verify that your component placement doesn't violate any routing constraints.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_5": {
+            "question_0": {
+                "gt_answer": "Developer debug options in OpenROAD can give insights into detailed routing processes, offering visual debug aids in the GUI and the option for NDA-supported assistance from precisioninno.com.",
+                "pred_answer": "Check the design's metal layers distribution, ensure proper pin placement, and review the routing constraints.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_6": {
+            "question_0": {
+                "gt_answer": "The argument, o or —local, builds locally instead of building a Docker image.",
+                "pred_answer": "The '-o' or '--local' option in the build command of ORFS (Opportunistic Replication and Forwarding System) is used to specify that the build process should use local resources.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_7": {
+            "question_0": {
+                "gt_answer": "The argument, o or —local, builds locally instead of building a Docker image.",
+                "pred_answer": "The -o or --local option in the ORFS build command is used to specify that the build should use local resources instead of remote ones.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_8": {
+            "question_0": {
+                "gt_answer": "The -o or --local argument opts for a local build over Docker.",
+                "pred_answer": "The '-o' or '--local' option in the build command of ORFS (Object-based Remote File System) is used to specify that the build process should be executed locally rather than on a remote node.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_9": {
+            "question_0": {
+                "gt_answer": "The -l or --latest argument specifies to use of the head of branch –or_branch or ‘master’ by default for tools/OpenROAD.",
+                "pred_answer": "The -l or --latest argument in the ORFS build command is used to specify that the latest version of the components should be used during the build process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_10": {
+            "question_0": {
+                "gt_answer": "The -l or --latest argument specifies to use of the head of branch –or_branch or ‘master’ by default for tools/OpenROAD.",
+                "pred_answer": "The -l or --latest argument in the build command of ORFS (Open Replication Framework for Storage) specifies that the latest version of the Docker image should be used.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_11": {
+            "question_0": {
+                "gt_answer": "The -l or --latest argument chooses the latest branch head for tools/OpenROAD, defaulting to master.",
+                "pred_answer": "The -l or --latest argument in the ORFS build command is used to specify that the latest version of the objects should be built.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_12": {
+            "question_0": {
+                "gt_answer": "The -or_branch BRANCH_NAME argument stipulates the use of the head of branch BRANCH for tools/OpenROAD.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_13": {
+            "question_0": {
+                "gt_answer": "The -or_branch BRANCH_NAME argument stipulates the use of the head of branch BRANCH for tools/OpenROAD.",
+                "pred_answer": "The --or_branch BRANCH_NAME argument in the build command of ORFS is used to specify the branch name from which the build process should start.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_14": {
+            "question_0": {
+                "gt_answer": "The -or_branch BRANCH_NAME argument selects the branch head of BRANCH for tools/OpenROAD.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_15": {
+            "question_0": {
+                "gt_answer": " This argument enumerates to use of a fork at REPO-URL (https/ssh) for tools/OpenROAD.",
+                "pred_answer": "The --or_repo REPO_URL argument in the build command of ORFS specifies the URL of the repository from which the system fetches the necessary files and dependencies to build the overlay file system.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_16": {
+            "question_0": {
+                "gt_answer": " This argument enumerates to use of a fork at REPO-URL (https/ssh) for tools/OpenROAD.",
+                "pred_answer": "The --or_repo REPO_URL argument in the build command of ORFS specifies the URL of the repository from which ORFS should pull the required Docker images.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_17": {
+            "question_0": {
+                "gt_answer": "Specifies using a tools/OpenROAD fork at a given REPO-URL.",
+                "pred_answer": "The argument --or_repo REPO_URL in the build command of ORFS specifies the URL of the repository from which the system fetches the necessary files and resources to build the file system.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_18": {
+            "question_0": {
+                "gt_answer": "The --no_init argument prescribes skipping initializing submodules.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_19": {
+            "question_0": {
+                "gt_answer": "The --no_init argument prescribes skipping initializing submodules.",
+                "pred_answer": "The --no_init argument in the build command of ORFS prevents the automatic initialization of the file system.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_20": {
+            "question_0": {
+                "gt_answer": "The --no_init option omits submodule initialization.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_21": {
+            "question_0": {
+                "gt_answer": "The -t N or --threads N argument stipulates the use of N cpus when compiling software.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_22": {
+            "question_0": {
+                "gt_answer": "The -t N or --threads N argument stipulates the use of N cpus when compiling software.",
+                "pred_answer": "The -t N or --threads N argument in the build command of ORFS controls the number of threads used during the build process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_23": {
+            "question_0": {
+                "gt_answer": "The -t N or --threads N argument utilizes N CPUs for software compilation.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_24": {
+            "question_0": {
+                "gt_answer": "The -n or --nice flag in the build script instructs the build script to set all jobs to the maximim Unix \"niceness\". Niceness determines how much the operating system prefers to schedule process. The purpose of setting this flag is to ensure that a system is not overwhelmed by using all available processing primarily of the build jobs. The build will use all CPUs by default unless --threads is also given, then N threads are used instead.",
+                "pred_answer": "The purpose of the -n or --nice option in the build command of ORFS is to set the niceness value of the building process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_25": {
+            "question_0": {
+                "gt_answer": "The -n or --nice flag in the build script instructs the build script to set all jobs to the maximim Unix \"niceness\". Niceness determines how much the operating system prefers to schedule process. The purpose of setting this flag is to ensure that a system is not overwhelmed by using all available processing primarily of the build jobs. The build will use all CPUs by default unless --threads is also given, then N threads are used instead.",
+                "pred_answer": "The -n or --nice argument in the build command of ORFS sets the niceness of the process, allowing it to run with lower priority.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_26": {
+            "question_0": {
+                "gt_answer": "The build script's -n or --nice flag sets all jobs to the maximum Unix \"niceness\" level. This determines the priority with which the operating system schedules processes. The aim is to prevent system overload by allocating all processing power primarily to the build jobs. Without specifying otherwise, the build utilizes all CPUs, but specifying --threads allows for the use of a fixed number of threads.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_27": {
+            "question_0": {
+                "gt_answer": "This argument states to not use default flags set by this scrip during Yosys compilation.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_28": {
+            "question_0": {
+                "gt_answer": "This argument states to not use default flags set by this scrip during Yosys compilation.",
+                "pred_answer": "The --yosys-args-overwrite argument in the build command of ORFS modifies the arguments passed to Yosys during the synthesis process, allowing for customization and overriding of default settings.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_29": {
+            "question_0": {
+                "gt_answer": "This parameter instructs the script to ignore the default flags during Yosys compilation.",
+                "pred_answer": "The --yosys-args-overwrite argument in the build command of ORFS allows users to specify additional or modified arguments that will be passed to Yosys during the synthesis process, overriding any default settings.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_30": {
+            "question_0": {
+                "gt_answer": "The '—yosys-args STRING' argument adds additional compilation flags for Yosys compilation.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_31": {
+            "question_0": {
+                "gt_answer": "The '—yosys-args STRING' argument adds additional compilation flags for Yosys compilation.",
+                "pred_answer": "The --yosys-args STRING argument in ORFS allows customizing the build process by passing additional flags or arguments directly to Yosys during synthesis.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_32": {
+            "question_0": {
+                "gt_answer": "The '--yosys-args STRING' option allows for the inclusion of extra flags in Yosys compilations.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_33": {
+            "question_0": {
+                "gt_answer": "The '—openroad-args-overwrite' argument specifies to not use default flags set by this script during OpenROAD app compilation.",
+                "pred_answer": "The --openroad-args-overwrite argument in the build command of ORFS serves the function of allowing the user to overwrite default or previously set arguments for OpenROAD tool.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_34": {
+            "question_0": {
+                "gt_answer": "The '—openroad-args-overwrite' argument specifies to not use default flags set by this script during OpenROAD app compilation.",
+                "pred_answer": "The --openroad-args-overwrite argument in the build command of ORFS allows users to overwrite default OpenROAD arguments with their own custom arguments.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_35": {
+            "question_0": {
+                "gt_answer": "The '--openroad-args-overwrite' option commands the script not to apply its default flags during OpenROAD app compilations.",
+                "pred_answer": "The --openroad-args-overwrite argument in the build command of ORFS serves the function of allowing command line arguments to override configuration file settings.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_36": {
+            "question_0": {
+                "gt_answer": "The '—openroad-args STRING' argument adds aditional compilation flags for OpenROAD app compilation.",
+                "pred_answer": "The --openroad-args STRING argument in the build command of OpenROAD is used to pass additional arguments to the OpenROAD tool.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_37": {
+            "question_0": {
+                "gt_answer": "The '—openroad-args STRING' argument adds aditional compilation flags for OpenROAD app compilation.",
+                "pred_answer": "The --openroad-args STRING argument in ORFS allows passing additional arguments to OpenROAD during the build process, which can alter the way the tool processes the design, such as changing floorplanning, placement, or routing strategies.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_38": {
+            "question_0": {
+                "gt_answer": "The '--openroad-args STRING' option introduces additional flags for compiling the OpenROAD app.",
+                "pred_answer": "The --openroad-args STRING argument in the build command of OpenROAD is used to pass additional arguments to the OpenROAD tool.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_39": {
+            "question_0": {
+                "gt_answer": "This argument initiates compiling LSOracle since it is disabled by default as it is not currently used on the flow.",
+                "pred_answer": "The purpose of the --lsoracle-enable argument in the build command of ORFS is to enable the use of the Large Scale Oracle feature.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_40": {
+            "question_0": {
+                "gt_answer": "This argument initiates compiling LSOracle since it is disabled by default as it is not currently used on the flow.",
+                "pred_answer": "The --lsoracle-enable argument in the build command of ORFS is used to enable the Logical Snippet Oracle (LSOracle) feature.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_41": {
+            "question_0": {
+                "gt_answer": "Activates the compilation of LSOracle, which is off by default as it's not part of the current workflow.",
+                "pred_answer": "The purpose of the --lsoracle-enable argument in the build command of ORFS is to enable the use of the Large Scale Oracle feature during the building process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_42": {
+            "question_0": {
+                "gt_answer": "The '—lsoracle-args-overwrite' argument stipulates not to use default flags set by this script during LSOracle compilation.",
+                "pred_answer": "The --lsoracle-args-overwrite argument in the build command of ORFS is used to overwrite the existing arguments for the Logical Volume Manager (LVM) Oracle ASM disk group.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_43": {
+            "question_0": {
+                "gt_answer": "The '—lsoracle-args-overwrite' argument stipulates not to use default flags set by this script during LSOracle compilation.",
+                "pred_answer": "The --lsoracle-args-overwrite argument in the build command of ORFS changes the default arguments passed to the lsoracle tool, allowing for customization or modification of parameters that control how the filesystem's block size, allocation, and other attributes are determined.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_44": {
+            "question_0": {
+                "gt_answer": "The '--lsoracle-args-overwrite' command directs the script to bypass default flags for LSOracle compilations.",
+                "pred_answer": "The --lsoracle-args-overwrite argument in the build command of ORFS is used to overwrite the existing Large Scale Oracle (LSOracle) arguments with new ones during the build process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_45": {
+            "question_0": {
+                "gt_answer": "This argument adds aditional compilation flags for LSOracle compilation.",
+                "pred_answer": "The --lsoracle-args STRING argument in the build command of ORFS is used to pass additional arguments to the Lustre Striping Oracle (LSO) when configuring the file system. It allows users to customize striping parameters.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_46": {
+            "question_0": {
+                "gt_answer": "This argument adds aditional compilation flags for LSOracle compilation.",
+                "pred_answer": "The --lsoracle-args STRING argument allows passing custom arguments to the lsOracle component during the ORFS build process, enabling users to fine-tune the behavior of the logical sector oracle used by ORFS.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_47": {
+            "question_0": {
+                "gt_answer": "This command introduces extra compilation flags for LSOracle.",
+                "pred_answer": "The --lsoracle-args STRING argument in the build command of ORFS is used to pass additional arguments to the Lustre layout solver oracle (LSOracle) algorithm.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_48": {
+            "question_0": {
+                "gt_answer": "The '—install-path PATH' delineates the path to install tools. Default is ${INSTALL_PATH}.",
+                "pred_answer": "The --install-path PATH argument in the build command of ORFS specifies the directory where the built files will be installed.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_49": {
+            "question_0": {
+                "gt_answer": "The '—install-path PATH' delineates the path to install tools. Default is ${INSTALL_PATH}.",
+                "pred_answer": "The --install-path PATH argument in the build command of ORFS specifies the directory where the built files will be installed.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_50": {
+            "question_0": {
+                "gt_answer": "The '--install-path PATH' option specifies the installation directory for tools, with ${INSTALL_PATH} as the default.",
+                "pred_answer": "The --install-path PATH argument in the build command of ORFS specifies the directory where the built files will be installed.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_51": {
+            "question_0": {
+                "gt_answer": "The '—clean' argument calls the git clean command interactively before compiling. It is useful to remove old build files.",
+                "pred_answer": "The --clean argument in the build command of ORFS (or any similar build system) is used to remove previously built files before rebuilding them.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_52": {
+            "question_0": {
+                "gt_answer": "The '—clean' argument calls the git clean command interactively before compiling. It is useful to remove old build files.",
+                "pred_answer": "The --clean argument in the build command of ORFS removes all previously built objects and starts the build process from scratch.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_53": {
+            "question_0": {
+                "gt_answer": "The '--clean' argument triggers an interactive git clean command before compiling, helping remove outdated build files.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_54": {
+            "question_0": {
+                "gt_answer": "This '—clean-force' argument will call git clean before compiling but WARNING: this option will not ask for confirmation. It is useful to remove old build files.",
+                "pred_answer": "The --clean-force option in the build command of ORFS forcefully removes all temporary files and previously built objects without prompting for confirmation.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_55": {
+            "question_0": {
+                "gt_answer": "This '—clean-force' argument will call git clean before compiling but WARNING: this option will not ask for confirmation. It is useful to remove old build files.",
+                "pred_answer": "The --clean-force argument in the build command of ORFS forcefully removes all previously built artifacts and dependencies before building the project from scratch.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_56": {
+            "question_0": {
+                "gt_answer": "The '--clean-force' command enforces a git clean operation before compilation without seeking user confirmation, aiding in the deletion of old build files.",
+                "pred_answer": "The --clean-force argument in the build command of ORFS forcefully removes all temporary files and artifacts generated during previous builds, ensuring a clean slate for the new build process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_57": {
+            "question_0": {
+                "gt_answer": "This argument is only applicable to docker builds. It is used to copy platforms inside the docker image.",
+                "pred_answer": "The -c or --copy-platforms option in the build command of ORFS is used to copy platform-specific files into the build directory.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_58": {
+            "question_0": {
+                "gt_answer": "This argument is only applicable to docker builds. It is used to copy platforms inside the docker image.",
+                "pred_answer": "The -c or --copy-platforms argument in the ORFS build command is used to specify a comma-separated list of platforms from which files will be copied into the output image.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_59": {
+            "question_0": {
+                "gt_answer": "This command is tailored for docker builds, enabling the copying of platforms into the docker image.",
+                "pred_answer": "The -c or --copy-platforms option in the build command of ORFS is used to copy platform-specific files into the output directory.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_60": {
+            "question_0": {
+                "gt_answer": "The ' —docker-args-overwrite' argument is only applicable for docker builds. They specify to not use default flags set by this script for Docker builds.",
+                "pred_answer": "The --docker-args-overwrite argument in the build command of ORFS allows users to overwrite default Docker build arguments with custom values.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_61": {
+            "question_0": {
+                "gt_answer": "The ' —docker-args-overwrite' argument is only applicable for docker builds. They specify to not use default flags set by this script for Docker builds.",
+                "pred_answer": "The --docker-args-overwrite argument in the ORFS build command allows users to overwrite default Docker build arguments with their own values.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_62": {
+            "question_0": {
+                "gt_answer": "The '--docker-args-overwrite' command is designated for docker builds, instructing not to use the script's default Docker build flags.",
+                "pred_answer": "The --docker-args-overwrite argument in the build command of ORFS allows for overwriting default Docker arguments with custom values.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_63": {
+            "question_0": {
+                "gt_answer": "This argument is only applicable to docker builds. It is used to add additional compilation flags for the Docker build.",
+                "pred_answer": "The --docker-args STRING argument in the build command of ORFS allows passing custom arguments to the Docker build process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_64": {
+            "question_0": {
+                "gt_answer": "This argument is only applicable to docker builds. It is used to add additional compilation flags for the Docker build.",
+                "pred_answer": "The --docker-args STRING argument allows passing custom arguments to the Docker build process when building ORFS, enabling users to customize container settings such as memory limits, build context, or file copying options.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_65": {
+            "question_0": {
+                "gt_answer": "This command, specific to docker builds, allows adding extra compilation flags for Docker builds.",
+                "pred_answer": "The --docker-args STRING argument in the build command of ORFS allows passing additional arguments to the Docker build process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_66": {
+            "question_0": {
+                "gt_answer": "The variable  SYNTH_HIERARCHICAL enables synthesis hierarchically, otherwise considered flat synthesis.",
+                "pred_answer": "The SYNTH_HIERARCHICAL variable in synthesis scripts is used to control hierarchical synthesis behavior.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_67": {
+            "question_0": {
+                "gt_answer": "The variable  SYNTH_HIERARCHICAL enables synthesis hierarchically, otherwise considered flat synthesis.",
+                "pred_answer": "The SYNTH_HIERARCHICAL variable in Synthesis controls whether the synthesis tool performs hierarchical or flat synthesis.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_68": {
+            "question_0": {
+                "gt_answer": "SYNTH_HIERARCHICAL toggles between hierarchical and flat synthesis.",
+                "pred_answer": "The SYNTH_HIERARCHICAL variable controls whether hierarchical synthesis is enabled or not.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_69": {
+            "question_0": {
+                "gt_answer": "LATCH_MAP_FILE variable specifies the list of latches treated as a black box by Yosys.",
+                "pred_answer": "The LATCH_MAP_FILE variable in Synthesis directs the synthesis tool to use a specific latch mapping file.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_70": {
+            "question_0": {
+                "gt_answer": "LATCH_MAP_FILE variable specifies the list of latches treated as a black box by Yosys.",
+                "pred_answer": "The LATCH_MAP_FILE variable in synthesis is used to specify a file that contains latch mapping information.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_71": {
+            "question_0": {
+                "gt_answer": "LATCH_MAP_FILE lists latches considered as black boxes by Yosys.",
+                "pred_answer": "The LATCH_MAP_FILE variable in Synthesis is used to specify a file that contains mappings for latch insertion during the synthesis process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_72": {
+            "question_0": {
+                "gt_answer": "This variable specifies a list of cells for the gating clock treated as a black box by Yosys.",
+                "pred_answer": "The CLKGATE_MAP_FILE variable in synthesis specifies the location of a file that contains clock gating information.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_73": {
+            "question_0": {
+                "gt_answer": "This variable specifies a list of cells for the gating clock treated as a black box by Yosys.",
+                "pred_answer": "The CLKGATE_MAP_FILE variable in Synthesis is used to specify a file that contains clock gating map information.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_74": {
+            "question_0": {
+                "gt_answer": "Specifies cells to treat as black boxes for clock gating in Yosys.",
+                "pred_answer": "The CLKGATE_MAP_FILE variable is used in synthesis processes to specify the location of a mapping file that contains information about clock gating.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_75": {
+            "question_0": {
+                "gt_answer": "List of adders treated as a black box by Yosys.",
+                "pred_answer": "The ADDER_MAP_FILE variable is used in synthesis scripts to specify the location of a file that contains mapping information for adder components. This file helps the synthesis tool understand how to optimize the implementation of addition operations in the hardware description.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_76": {
+            "question_0": {
+                "gt_answer": "List of adders treated as a black box by Yosys.",
+                "pred_answer": "The ADDER_MAP_FILE variable in Synthesis specifies the location of a file that contains mapping information for adder components.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_77": {
+            "question_0": {
+                "gt_answer": "Lists adders treated as black boxes by Yosys.",
+                "pred_answer": "The ADDER_MAP_FILE variable is used in synthesis scripts to specify the location of a file that maps the adder components used in the design. This mapping can help optimize the design by choosing the most appropriate adder implementation based on the design requirements.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_78": {
+            "question_0": {
+                "gt_answer": "The variable, TIEHI_CELL_AND_PORT is used to tie high cells used in Yosys synthesis to replace a logical 1 in the Netlist.",
+                "pred_answer": "The TIEHI_CELL_AND_PORT variable in Synthesis is used to specify the cell and port names for the tie-high cells in the design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_79": {
+            "question_0": {
+                "gt_answer": "The variable, TIEHI_CELL_AND_PORT is used to tie high cells used in Yosys synthesis to replace a logical 1 in the Netlist.",
+                "pred_answer": "TIEHI_CELL_AND_PORT is a synthesis directive used in RTL design to specify that a particular net should be tied to a high impedance state or Vcc under certain conditions.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_80": {
+            "question_0": {
+                "gt_answer": "TIEHI_CELL_AND_PORT identifies high tie cells used in Yosys synthesis to replace logical 1 in the Netlist.",
+                "pred_answer": "The TIEHI_CELL_AND_PORT synthesis variable is used to control the generation of high-impedance cells and ports in the design during synthesis.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_81": {
+            "question_0": {
+                "gt_answer": "This variable is used to tie low cells used in Yosys synthesis to replace a logical 0 in the Netlist.",
+                "pred_answer": "The TIELO_CELL_AND_PORT variable in Synthesis is used to tie a specific cell to a port. This is typically used in scenarios where there is a need to explicitly connect an internal cell's port to an external interface or to resolve ambiguity in port connections.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_82": {
+            "question_0": {
+                "gt_answer": "This variable is used to tie low cells used in Yosys synthesis to replace a logical 0 in the Netlist.",
+                "pred_answer": "TIELO_CELL_AND_PORT is a variable used in synthesis scripts to specify a tie-off cell type and its associated port. This is typically used when there are unused ports in the design that need to be tied to a known state (either high or low) to prevent unknown states and improve predictability of the circuit behavior during simulation and physical implementation.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_83": {
+            "question_0": {
+                "gt_answer": "Defines low tie cells used in Yosys synthesis to replace logical 0 in the Netlist.",
+                "pred_answer": "The TIELO_CELL_AND_PORT variable in Synthesis is used to specify a particular cell and its port for tie-off optimization during the synthesis process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_84": {
+            "question_0": {
+                "gt_answer": "The MIN_BUF_CELL_AND_PORTS variable is used to insert a buffer cell to pass through wires. Used in synthesis.",
+                "pred_answer": "The MIN_BUF_CELL_AND_PORTS variable is used in synthesis tools to specify the minimum buffer cell and its associated ports for buffering signals in the circuit design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_85": {
+            "question_0": {
+                "gt_answer": "The MIN_BUF_CELL_AND_PORTS variable is used to insert a buffer cell to pass through wires. Used in synthesis.",
+                "pred_answer": "The MIN_BUF_CELL_AND_PORTS variable in Synthesis is used to specify the minimum number of buffer cells and ports that should be included in the synthesized design. It ensures that the design has enough buffering resources to meet timing requirements without excessive resource usage.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_86": {
+            "question_0": {
+                "gt_answer": "MIN_BUF_CELL_AND_PORTS inserts a buffer cell for wire pass-through, used in synthesis.",
+                "pred_answer": "MIN_BUF_CELL_AND_PORTS is a synthesis variable used to minimize the number of buffer cells and associated ports in the generated netlist during the synthesis process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_87": {
+            "question_0": {
+                "gt_answer": "The variable,  ABC_CLOCK_PERIOD_IN_PS is used to specify the clock period to be used by STA during synthesis. Default value read from constraint.sdc.",
+                "pred_answer": "ABC_CLOCK_PERIOD_IN_PS is a variable used in synthesis scripts to define the clock period of the design in picoseconds.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_88": {
+            "question_0": {
+                "gt_answer": "The variable,  ABC_CLOCK_PERIOD_IN_PS is used to specify the clock period to be used by STA during synthesis. Default value read from constraint.sdc.",
+                "pred_answer": "ABC_CLOCK_PERIOD_IN_PS is a variable that sets the clock period used by the synthesis tool in picoseconds.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_89": {
+            "question_0": {
+                "gt_answer": "ABC_CLOCK_PERIOD_IN_PS sets the clock period for STA during synthesis, with a default from constraint.sdc.",
+                "pred_answer": "ABC_CLOCK_PERIOD_IN_PS is a variable used in synthesis scripts to define the clock period of the design in picoseconds.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_90": {
+            "question_0": {
+                "gt_answer": "Default driver cell used during ABC synthesis.",
+                "pred_answer": "The ABC_DRIVER_CELL variable in Synthesis is used to specify the default driver cell for signals in the circuit design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_91": {
+            "question_0": {
+                "gt_answer": "Default driver cell used during ABC synthesis.",
+                "pred_answer": "ABC_DRIVER_CELL specifies the target driver cell type for the synthesis tool to use when optimizing the design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_92": {
+            "question_0": {
+                "gt_answer": "Specifies the default driver cell for ABC synthesis.",
+                "pred_answer": "ABC_DRIVER_CELL is a synthesis variable used in electronic design automation (EDA) tools to specify the driver cell for signals in a digital circuit design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_93": {
+            "question_0": {
+                "gt_answer": "During synthesis, the set_load value specified by this, ABC_LOAD_IN_FF variable is used.",
+                "pred_answer": "The ABC_LOAD_IN_FF variable is likely used to control or indicate the loading of data into flip-flops during synthesis in digital circuit design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_94": {
+            "question_0": {
+                "gt_answer": "During synthesis, the set_load value specified by this, ABC_LOAD_IN_FF variable is used.",
+                "pred_answer": "ABC_LOAD_IN_FF is a synthesis directive used in formal verification tools, specifically in the context of equivalence checking, to model flip-flop loading during logic synthesis.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_95": {
+            "question_0": {
+                "gt_answer": "ABC_LOAD_IN_FF sets the load value during synthesis.",
+                "pred_answer": "The variable ABC_LOAD_IN_FF is likely used to indicate whether a load operation is being performed on a flip-flop (FF) in a digital circuit design during synthesis.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_96": {
+            "question_0": {
+                "gt_answer": "For hierarchical synthesis, this variable ungroups modules of the size given by this variable.",
+                "pred_answer": "The MAX_UNGROUP_SIZE variable in Synthesis determines the maximum number of elements that can be left ungrouped or not assigned to any group during the synthesis process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_97": {
+            "question_0": {
+                "gt_answer": "For hierarchical synthesis, this variable ungroups modules of the size given by this variable.",
+                "pred_answer": "The MAX_UNGROUP_SIZE variable in Synthesis controls the maximum size of ungrouped logic before it is automatically grouped into a cell.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_98": {
+            "question_0": {
+                "gt_answer": "For hierarchical synthesis, ungroups modules based on specified size.",
+                "pred_answer": "MAX_UNGROUP_SIZE is a variable that specifies the maximum number of members allowed in an ungrouped set in Synthesis.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_99": {
+            "question_0": {
+                "gt_answer": "FLOORPLAN_DEF is used to specify the use of the DEF file to initialize floorplan.",
+                "pred_answer": "FLOORPLAN_DEF is a variable that typically holds the definition or details of a specific floor plan in building design software or databases.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_100": {
+            "question_0": {
+                "gt_answer": "FLOORPLAN_DEF is used to specify the use of the DEF file to initialize floorplan.",
+                "pred_answer": "FLOORPLAN_DEF is a variable in the context of electronic design automation (EDA) that defines the layout or floorplan of an integrated circuit (IC). It specifies how different components such as cells, memories, and input/output (I/O) blocks are arranged on the chip.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_101": {
+            "question_0": {
+                "gt_answer": "FLOORPLAN_DEF uses a DEF file to initialize the floorplan.",
+                "pred_answer": "FLOORPLAN_DEF is a variable used in architectural design software to define the layout of a building or room. It typically includes information about walls, doors, windows, and other structural elements.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_102": {
+            "question_0": {
+                "gt_answer": "Placement site for core cells defined in the technology LEF file.",
+                "pred_answer": "PLACE_SITE is a variable used in floor planning to define the location of components or elements within a design space. It specifies the coordinates or grid positions where specific parts of the design, such as cells, modules, or macroblocks, are placed on the chip or board.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_103": {
+            "question_0": {
+                "gt_answer": "Placement site for core cells defined in the technology LEF file.",
+                "pred_answer": "PLACE_SITE is a variable used in Floorplan to define the grid location where a cell or a group of cells should be placed.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_104": {
+            "question_0": {
+                "gt_answer": "Defines the placement site for core cells in the technology LEF file.",
+                "pred_answer": "PLACE_SITE is a variable within the floorplan context that typically refers to the specific location or site where a building or structure is planned to be constructed. It could encompass details about the geographic location, dimensions of the land, and possibly existing structures or features on the site.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_105": {
+            "question_0": {
+                "gt_answer": "TAPCELL_TCL specifies the path to the Endcap and Welltie cells file.",
+                "pred_answer": "TAPCELL_TCL is used in floorplanning to define tap cell placement rules and configurations in a semiconductor design. It specifies the pitch, orientation, and other parameters for placing tap cells, which are used for power distribution and noise reduction.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_106": {
+            "question_0": {
+                "gt_answer": "TAPCELL_TCL specifies the path to the Endcap and Welltie cells file.",
+                "pred_answer": "The TAPCELL_TCL variable in Floorplan is used to define the tap cells for power grid design in IC layout. It specifies the type and location of tap cells that are required to ensure proper power delivery and noise isolation within the chip.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_107": {
+            "question_0": {
+                "gt_answer": "TAPCELL_TCL points to the Endcap and Welltie cells file.",
+                "pred_answer": "TAPCELL_TCL is a variable used in floorplanning to define the tap cell parameters in a technology computer-aided design (TCAD) tool. It specifies the layout and electrical characteristics of tap cells used for substrate biasing or power distribution in integrated circuits.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_108": {
+            "question_0": {
+                "gt_answer": "This variable, RTLMP_FLOW enables the Hierarchical RTLMP flow. By default it is disabled.",
+                "pred_answer": "RTLMP_FLOW is a variable in the Floorplan that controls the flow direction of the design process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_109": {
+            "question_0": {
+                "gt_answer": "This variable, RTLMP_FLOW enables the Hierarchical RTLMP flow. By default it is disabled.",
+                "pred_answer": "RTLMP_FLOW variable in Floorplan controls the flow of the design process from RTL (Register Transfer Level) to MP (Mask Production).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_110": {
+            "question_0": {
+                "gt_answer": "RTLMP_FLOW toggles the Hierarchical RTLMP flow, defaulting to off.",
+                "pred_answer": "RTLMP_FLOW is a variable in the Floorplan that controls the flow direction of the routing resources between the blocks.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_111": {
+            "question_0": {
+                "gt_answer": "MACRO_HALO specifies to keep out a distance from macro, in X and Y, to standard cell row.",
+                "pred_answer": "MACRO_HALO is a variable used in floor planning to define the minimum spacing or clearance required around macro blocks in an integrated circuit design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_112": {
+            "question_0": {
+                "gt_answer": "MACRO_HALO specifies to keep out a distance from macro, in X and Y, to standard cell row.",
+                "pred_answer": "MACRO_HALO is a variable used in floorplanning to define the boundary or spacing around a macro block to ensure sufficient room for routing and to avoid potential interference with adjacent blocks.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_113": {
+            "question_0": {
+                "gt_answer": "MACRO_HALO sets the keep-out distance around macros in X and Y to standard cell rows.",
+                "pred_answer": "MACRO_HALO is a variable in the context of floor planning that defines the minimum spacing or clearance required around a macro block to ensure proper electrical performance and avoid signal interference with adjacent components.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_114": {
+            "question_0": {
+                "gt_answer": "MACRO_PLACEMENT specifies the path of a file on how to place certain macros manually using read_macro_placement.",
+                "pred_answer": "MACRO_PLACEMENT is a variable in floorplanning that refers to the positioning of large blocks or components on an integrated circuit (IC) design. It determines where macros, which are pre-designed circuit blocks, are placed on the chip to optimize performance, power consumption, and area.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_115": {
+            "question_0": {
+                "gt_answer": "MACRO_PLACEMENT specifies the path of a file on how to place certain macros manually using read_macro_placement.",
+                "pred_answer": "MACRO_PLACEMENT in Floorplan specifies the location and orientation of macros or large cells within the design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_116": {
+            "question_0": {
+                "gt_answer": "MACRO_PLACEMENT defines manual macro placement through a specified file.",
+                "pred_answer": "MACRO_PLACEMENT is a variable in floorplanning that determines the location of large components or macros on an integrated circuit (IC).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_117": {
+            "question_0": {
+                "gt_answer": "This variable specifies the path of a TCL file on how to place certain macros manually.",
+                "pred_answer": "The MACRO_PLACEMENT_TCL variable is used in floorplanning to specify the Tcl script that controls the placement of macro cells in an integrated circuit design. It allows designers to define custom placement rules and constraints for large cells such as memory blocks or intellectual property (IP) cores.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_118": {
+            "question_0": {
+                "gt_answer": "This variable specifies the path of a TCL file on how to place certain macros manually.",
+                "pred_answer": "The MACRO_PLACEMENT_TCL variable in Floorplan is used to specify the placement constraints of macros using a TCL script. It allows designers to define the location and orientation of macros on the chip.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_119": {
+            "question_0": {
+                "gt_answer": "Specifies a TCL file for manual macro placement.",
+                "pred_answer": "MACRO_PLACEMENT_TCL is a variable used in floorplanning to define the placement constraints of macro blocks in an integrated circuit design using a TCL script. It specifies the location, orientation, and sometimes the density of macro cells on the chip.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_120": {
+            "question_0": {
+                "gt_answer": "Horizontal /vertical halo around macros (microns). Used by automatic macro placement.",
+                "pred_answer": "MACRO_PLACE_HALO is a variable used in floorplanning that defines the minimum spacing or buffer area required around macro blocks (large components) to ensure proper placement and routing of other components and wires in an integrated circuit design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_121": {
+            "question_0": {
+                "gt_answer": "Horizontal /vertical halo around macros (microns). Used by automatic macro placement.",
+                "pred_answer": "The MACRO_PLACE_HALO variable in Floorplan indicates the minimum spacing or buffer area required around macro blocks to ensure proper routing and avoid congestion.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_122": {
+            "question_0": {
+                "gt_answer": "Sets the halo around macros for automatic placement, in microns.",
+                "pred_answer": "MACRO_PLACE_HALO is a variable used in floorplanning to define the minimum spacing or buffer zone around macro blocks when placing them on the chip. This ensures that there is enough room for routing and other design rules.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_123": {
+            "question_0": {
+                "gt_answer": "Horizontal/vertical channel width between macros (microns). Used by automatic macro placement when RTLMP_FLOW is disabled. Imagine channel=10 and halo=5. Then macros must be 10 apart but standard cells must be 5 away from a macro.",
+                "pred_answer": "MACRO_PLACE_CHANNEL is a variable used in floorplanning to define the channels where macros can be placed. It helps in specifying the regions or layers in the design where large components like memory blocks or I/O pads can be located.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_124": {
+            "question_0": {
+                "gt_answer": "Horizontal/vertical channel width between macros (microns). Used by automatic macro placement when RTLMP_FLOW is disabled. Imagine channel=10 and halo=5. Then macros must be 10 apart but standard cells must be 5 away from a macro.",
+                "pred_answer": "MACRO_PLACE_CHANNEL is a variable used in the floorplanning process of chip design to define the channels or spaces between macros (large circuit blocks) where the routing of signals between these blocks will take place.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_125": {
+            "question_0": {
+                "gt_answer": "Determines the channel width between macros for automatic placement, in microns.",
+                "pred_answer": "MACRO_PLACE_CHANNEL is a variable used in floorplanning to define the channels where macro cells can be placed. It specifies the regions or layers in the design where macros such as memory blocks, I/O pads, and other large components are allowed to be placed.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_126": {
+            "question_0": {
+                "gt_answer": "Blockage width overridden from default calculation.",
+                "pred_answer": "{'variable': 'MACRO_BLOCKAGE_HALO', 'type': 'Floorplan variable', 'description': 'The MACRO_BLOCKAGE_HALO variable is used in floor planning to define the halo or clearance area around macro blocks to avoid blockage or interference with other components.', 'unit': 'Length (e.g., um)'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_127": {
+            "question_0": {
+                "gt_answer": "Blockage width overridden from default calculation.",
+                "pred_answer": "MACRO_BLOCKAGE_HALO is a variable used in floorplanning to define the boundary or buffer around a macro block where no other cells can be placed. This ensures that there is enough space for routing and prevents potential interference between neighboring blocks.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_128": {
+            "question_0": {
+                "gt_answer": "Overrides the default blockage width calculation.",
+                "pred_answer": "{'variable': 'MACRO_BLOCKAGE_HALO', 'type': 'Floorplan', 'description': 'The MACRO_BLOCKAGE_HALO variable in floorplan refers to the additional space or halo around a macro block that is considered as blockage for routing purposes. It is used to ensure there is enough space around the macro to avoid routing congestion and potential signal integrity issues.'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_129": {
+            "question_0": {
+                "gt_answer": "This variable specifies the file path which has a set of power grid policies used by pdn to be applied to the design, such as layers to use, stripe width and spacing to generate the actual metal straps.",
+                "pred_answer": "PDN_TCL is a variable in the context of power distribution network (PDN) design in semiconductor manufacturing, specifically within the realm of floorplanning. It is used to define the parameters and constraints for the placement of power grid components in the chip layout.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_130": {
+            "question_0": {
+                "gt_answer": "This variable specifies the file path which has a set of power grid policies used by pdn to be applied to the design, such as layers to use, stripe width and spacing to generate the actual metal straps.",
+                "pred_answer": "PDN_TCL is used to define power and ground networks in a design floorplan.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_131": {
+            "question_0": {
+                "gt_answer": "Specifies the file path for power grid policies used by pdn.",
+                "pred_answer": "PDN_TCL is a variable in the context of floorplan design in electronic design automation (EDA) that stands for Power Delivery Network Technology Computer Language. It is used to describe the power grid structure in integrated circuit designs.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_132": {
+            "question_0": {
+                "gt_answer": "MAKE_TRACKS variable outlines the Tcl file that defines adding routing tracks to a floorplan.",
+                "pred_answer": "The Floorplan variable, MAKE_TRACKS, is not a standard or widely recognized term in architectural design, construction, or computer-aided design (CAD) software. It appears to be a custom variable that could be used in specific floor planning or interior design software to control the creation or visibility of pathways, corridors, or tracks within a floor plan.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_133": {
+            "question_0": {
+                "gt_answer": "MAKE_TRACKS variable outlines the Tcl file that defines adding routing tracks to a floorplan.",
+                "pred_answer": "The MAKE_TRACKS variable in Floorplan is used to control the generation of routing tracks in the design. When set to true, it enables the creation of these tracks which are used for wiring between components. This variable is crucial for the physical layout and connectivity of the design elements.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_134": {
+            "question_0": {
+                "gt_answer": "MAKE_TRACKS outlines a Tcl file for adding routing tracks to a floorplan.",
+                "pred_answer": "The MAKE_TRACKS variable in the context of Floorplan is not a standard or widely recognized term in architectural design or software development. It could potentially refer to a feature or function within a specific floor planning tool that allows users to create pathways or track movement through a space.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_135": {
+            "question_0": {
+                "gt_answer": "The metal layer on which to place the I/O pins horizontally (top and bottom of the die).",
+                "pred_answer": "The IO_PLACER_H floorplan variable is used to define the placement of I/O pads or blocks on the periphery of an integrated circuit design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_136": {
+            "question_0": {
+                "gt_answer": "The metal layer on which to place the I/O pins horizontally (top and bottom of the die).",
+                "pred_answer": "The IO_PLACER_H variable in Floorplan specifies the height of the I/O ring or the height of the core area, depending on the context in which it is used.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_137": {
+            "question_0": {
+                "gt_answer": "Specifies the metal layer for horizontal I/O pin placement.",
+                "pred_answer": "The IO_PLACER_H floorplan variable is used to control the placement of input/output (I/O) pins on the chip.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_138": {
+            "question_0": {
+                "gt_answer": "The metal layer on which to place the I/O pins vertically (sides of the die).",
+                "pred_answer": "The IO_PLACER_V variable in floorplanning refers to a design parameter used in the placement of Input/Output (I/O) pads in integrated circuit design. It influences how I/O pads are arranged around the perimeter of the chip, impacting signal integrity, power delivery, and routing efficiency.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_139": {
+            "question_0": {
+                "gt_answer": "The metal layer on which to place the I/O pins vertically (sides of the die).",
+                "pred_answer": "The IO_PLACER_V variable in Floorplan is used to control the placement of I/O pads vertically on the chip perimeter. It specifies the vertical placement strategy for I/O pads, which can help in managing signal integrity, power delivery, and routability.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_140": {
+            "question_0": {
+                "gt_answer": "Specifies the metal layer for vertical I/O pin placement.",
+                "pred_answer": "IO_PLACER_V is a variable used in floorplanning to control the placement of Input/Output (I/O) pads vertically along the perimeter of an integrated circuit (IC).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_141": {
+            "question_0": {
+                "gt_answer": "Skip loading timing for a faster GUI load.",
+                "pred_answer": "GUI_NO_TIMING is a variable used in the context of Floorplan design tools, typically in software like Cadence or Synopsys, to control the timing analysis during the graphical user interface (GUI) operations.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_142": {
+            "question_0": {
+                "gt_answer": "Skip loading timing for a faster GUI load.",
+                "pred_answer": "The GUI_NO_TIMING variable in Floorplan controls whether the timing analysis is displayed in the graphical user interface.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_143": {
+            "question_0": {
+                "gt_answer": "Skips loading timing for faster GUI loading.",
+                "pred_answer": "GUI_NO_TIMING is a variable used in the context of the Floorplan module, typically in EDA (Electronic Design Automation) software. It is used to control certain aspects of the graphical user interface, specifically disabling timing-related visualizations or updates during the floorplanning process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_144": {
+            "question_0": {
+                "gt_answer": "Skip the initial non-IO based global placement if IO constraints are present.",
+                "pred_answer": "{'variable_name': 'HAS_IO_CONSTRAINTS', 'description': 'A boolean flag indicating whether the current design has any input/output constraints set. If true, it means there are specific timing or placement constraints defined for the input/output pins of the design.'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_145": {
+            "question_0": {
+                "gt_answer": "Skip the initial non-IO based global placement if IO constraints are present.",
+                "pred_answer": "HAS_IO_CONSTRAINTS is a boolean variable used in the Placement tool to indicate whether a design has input/output (IO) constraints that need to be considered during placement optimization.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_146": {
+            "question_0": {
+                "gt_answer": "Skips initial non-IO based global placement if IO constraints exist.",
+                "pred_answer": "HAS_IO_CONSTRAINTS is a boolean variable used in placement tools to indicate whether a design has input/output constraints that need to be considered during the placement process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_147": {
+            "question_0": {
+                "gt_answer": "Cell padding on both sides in site widths to ease routability during global placement.",
+                "pred_answer": "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT is a variable used in the placement phase of the digital circuit design process. It specifies the number of sites by which cells are padded during global placement. This padding helps to ensure sufficient space between cells for routing and other purposes.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_148": {
+            "question_0": {
+                "gt_answer": "Cell padding on both sides in site widths to ease routability during global placement.",
+                "pred_answer": "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT is a variable in the Placement phase that specifies the padding between cells when placing them globally across the design. It helps in avoiding initial placement conflicts and facilitates a more balanced distribution of components.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_149": {
+            "question_0": {
+                "gt_answer": "Defines cell padding in site widths for global placement routability.",
+                "pred_answer": "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT is a variable used in the placement phase of the digital circuit design process. It specifies the minimum number of sites (rows where cells can be placed) between any two cells during global placement, aiming to ensure sufficient spacing for routing and avoid congestion.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_150": {
+            "question_0": {
+                "gt_answer": "Cell padding on both sides in site widths to ease routability in detail placement.",
+                "pred_answer": "The 'CELL_PAD_IN_SITES_DETAIL_PLACEMENT' variable in the Placement tool is used to specify the padding or spacing around cells during the placement process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_151": {
+            "question_0": {
+                "gt_answer": "Cell padding on both sides in site widths to ease routability in detail placement.",
+                "pred_answer": "CELL_PAD_IN_SITES_DETAIL_PLACEMENT is a parameter used in placement algorithms to specify padding or buffer around cells during detailed placement phase. It helps in avoiding overcrowding of cells and ensures a certain minimum distance between them.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_152": {
+            "question_0": {
+                "gt_answer": "Defines cell padding in site widths for detail placement routability.",
+                "pred_answer": "The 'CELL_PAD_IN_SITES_DETAIL_PLACEMENT' variable in the Placement tool is used to specify the padding or spacing between cells during detailed placement.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_153": {
+            "question_0": {
+                "gt_answer": "The desired placement density of cells. It reflects how spread the cells would be on the core area. 1.0 = closely dense. 0.0 = widely spread.",
+                "pred_answer": "PLACE_DENSITY is a variable used in the Placement tool that determines how densely components are packed onto a circuit board during the placement process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_154": {
+            "question_0": {
+                "gt_answer": "The desired placement density of cells. It reflects how spread the cells would be on the core area. 1.0 = closely dense. 0.0 = widely spread.",
+                "pred_answer": "The PLACE_DENSITY variable in Placement controls the density of components placed on the board.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_155": {
+            "question_0": {
+                "gt_answer": "Sets the desired placement density of cells on the core area.",
+                "pred_answer": "PLACE_DENSITY is a variable used in the Placement tool that represents the density of components or elements placed on a layout or design. It can be used to optimize the placement of components to achieve a desired level of compactness or spacing.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_156": {
+            "question_0": {
+                "gt_answer": "Check the lower boundary of the PLACE_DENSITY and add PLACE_DENSITY_LB_ADDON if it exists.",
+                "pred_answer": "The 'PLACE_DENSITY_LB_ADDON' variable in the Placement tool is used to adjust the density of placement for objects or elements in a design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_157": {
+            "question_0": {
+                "gt_answer": "Check the lower boundary of the PLACE_DENSITY and add PLACE_DENSITY_LB_ADDON if it exists.",
+                "pred_answer": "The PLACE_DENSITY_LB_ADDON variable in Placement operates by adding a density-based cost to the placement of each block. This cost is calculated based on the local density of blocks in the area where the block is placed. The purpose of this variable is to discourage dense packing of blocks in certain areas of the design, which can lead to routing congestion and other layout-related issues.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_158": {
+            "question_0": {
+                "gt_answer": "Adjusts the lower boundary of PLACE_DENSITY with an addon if present.",
+                "pred_answer": "PLACE_DENSITY_LB_ADDON is a variable in the Placement tool that adjusts the density of the placement grid for components on a circuit board.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_159": {
+            "question_0": {
+                "gt_answer": "Remove power grid vias which generate DRC violations after detailed routing.",
+                "pred_answer": "The function of the REPAIR_PDN_VIA_LAYER variable in the OpenROAD 'Placement' tool is to specify whether or not to repair power distribution network (PDN) vias during placement optimization.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_160": {
+            "question_0": {
+                "gt_answer": "Remove power grid vias which generate DRC violations after detailed routing.",
+                "pred_answer": "The REPAIR_PDN_VIA_LAYER variable in Placement specifies the layer on which vias will be placed to repair the Power Distribution Network (PDN) during the placement optimization process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_161": {
+            "question_0": {
+                "gt_answer": "Removes power grid vias causing DRC violations after detailed routing.",
+                "pred_answer": "The function of the OpenROAD 'Placement' tool variable REPAIR_PDN_VIA_LAYER is to specify the layer on which vias will be placed during power distribution network (PDN) repair operations.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_162": {
+            "question_0": {
+                "gt_answer": "Use additional tuning parameters during global placement other than default args defined in gloabl_place.tcl.",
+                "pred_answer": "{\\n   \"name\": \"GLOBAL_PLACEMENT_ARGS\",\\n   \"description\": \"A variable that specifies the global placement arguments for the OpenROAD Placement tool. It allows users to customize the global placement process by setting parameters such as initial placement strategy, placement density, and timing constraints. The values of this variable are typically passed as command-line arguments or through a script file.\\n\"}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_163": {
+            "question_0": {
+                "gt_answer": "Use additional tuning parameters during global placement other than default args defined in gloabl_place.tcl.",
+                "pred_answer": "GLOBAL_PLACEMENT_ARGS is a variable used in the Placement service of OpenStack to store global placement arguments that can be applied to all resources. These arguments are used to dictate where resources, such as virtual machines, should be placed within the infrastructure.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_164": {
+            "question_0": {
+                "gt_answer": "Uses additional parameters for global placement beyond default args.",
+                "pred_answer": "{\\n   \"name\": \"GLOBAL_PLACEMENT_ARGS\",\\n   \"description\": \"A variable that holds arguments for global placement in the OpenROAD tool. These arguments can include settings for initial placement, macro placement, and congestion-driven placement, which guide the overall placement of cells in the design before detailed placement optimization.\\n\"}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_165": {
+            "question_0": {
+                "gt_answer": "Enable detail placement with improve_placement feature.",
+                "pred_answer": "The ENABLE_DPO variable in the OpenROAD 'Placement' tool enables the use of Detailed Placement Optimization (DPO).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_166": {
+            "question_0": {
+                "gt_answer": "Enable detail placement with improve_placement feature.",
+                "pred_answer": "The ENABLE_DPO variable in Placement is used to enable or disable the Data Protection Officer (DPO) feature.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_167": {
+            "question_0": {
+                "gt_answer": "Enables detailed placement improvement.",
+                "pred_answer": "The ENABLE_DPO variable in the OpenROAD 'Placement' tool enables the use of Detailed Placement Optimization (DPO) during placement operations.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_168": {
+            "question_0": {
+                "gt_answer": "Specifies how far an instance can be moved when optimizing.",
+                "pred_answer": "DPO_MAX_DISPLACEMENT is a variable in the OpenROAD 'Placement' tool that sets the maximum displacement allowed during detailed placement optimization.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_169": {
+            "question_0": {
+                "gt_answer": "Specifies how far an instance can be moved when optimizing.",
+                "pred_answer": "DPO_MAX_DISPLACEMENT is a variable used in the Direct Positioning (Placement) algorithm to limit the maximum displacement of a point from its initial position. It acts as a threshold value.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_170": {
+            "question_0": {
+                "gt_answer": "Limits instance movement distance during optimization.",
+                "pred_answer": "DPO_MAX_DISPLACEMENT is a variable in the OpenROAD 'Placement' tool that defines the maximum allowed displacement of any cell during detailed placement optimization.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_171": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts (ORFS), the GPL_TIMING_DRIVEN variable specifies whether the global placer (gpl) should use timing driven-placement. Timing-driven placement will cause gpl to ocassionally run static timing analysis (sta) during placement in order to determine the timing on each net. gpl will then reweight the nets based on how timing-critical they are. This process improves the timing of the netlist by decreasing the distance between timing-critical cells, but it also causes an increase in gpl runtime due to running timing analysis.",
+                "pred_answer": "GPL_TIMING_DRIVEN is a variable in the OpenROAD Placement tool that, when set to true, enables timing-driven placement optimization. This means the placement engine will consider timing constraints during the placement process to improve the overall timing performance of the design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_172": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts (ORFS), the GPL_TIMING_DRIVEN variable specifies whether the global placer (gpl) should use timing driven-placement. Timing-driven placement will cause gpl to ocassionally run static timing analysis (sta) during placement in order to determine the timing on each net. gpl will then reweight the nets based on how timing-critical they are. This process improves the timing of the netlist by decreasing the distance between timing-critical cells, but it also causes an increase in gpl runtime due to running timing analysis.",
+                "pred_answer": "The GPL_TIMING_DRIVEN variable in Placement controls whether the placement process is timing-driven or not.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_173": {
+            "question_0": {
+                "gt_answer": "GPL_TIMING_DRIVEN toggles timing-driven global placement, affecting gpl runtime and netlist timing.",
+                "pred_answer": "GPL_TIMING_DRIVEN is a variable in the OpenROAD Placement tool that determines whether the placement process is timing-driven or not. When set to true, the placement engine will prioritize meeting timing constraints during the placement process. This can result in better timing closure at the cost of potentially longer runtime.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_174": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts (ORFS), the GPL_ROUTABILITY_DRIVEN variable specifies whether the global placer (gpl) should use routability driven-placement. Routability-driven placement will cause gpl to ocassionally run global routing (grt) during placement in order to determine routing congestion hotspots. gpl will then reweight the nets based on how congestion data. This process improves the routability of the netlist by spacing out cells in routing congested areas, but it also causes an increase in gpl runtime due to running global routing.",
+                "pred_answer": "GPL_ROUTABILITY_DRIVEN is a variable in the OpenROAD Placement tool that enables or disables routability-driven placement.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_175": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts (ORFS), the GPL_ROUTABILITY_DRIVEN variable specifies whether the global placer (gpl) should use routability driven-placement. Routability-driven placement will cause gpl to ocassionally run global routing (grt) during placement in order to determine routing congestion hotspots. gpl will then reweight the nets based on how congestion data. This process improves the routability of the netlist by spacing out cells in routing congested areas, but it also causes an increase in gpl runtime due to running global routing.",
+                "pred_answer": "The GPL_ROUTABILITY_DRIVEN variable in Placement operates by enabling a placement strategy that takes into account the ease of routing between components. When set to true, the placement engine will attempt to place components in positions that minimize the complexity of interconnections, thereby improving the overall routability of the design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_176": {
+            "question_0": {
+                "gt_answer": "GPL_ROUTABILITY_DRIVEN toggles routability-driven global placement, influencing gpl runtime and netlist routability.",
+                "pred_answer": "GPL_ROUTABILITY_DRIVEN is a variable in the OpenROAD 'Placement' tool that enables placement optimization based on routing congestion and routability analysis.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_177": {
+            "question_0": {
+                "gt_answer": "Specifies a capacitance margin when fixing max capacitance violations. This option allow you to overfix.",
+                "pred_answer": "CAP_MARGIN is a variable in the OpenROAD 'Placement' tool that defines the additional capacitance margin to be considered during placement optimization. This parameter helps ensure that the design has enough capacitive coupling to neighboring nets to prevent signal integrity issues while meeting timing constraints.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_178": {
+            "question_0": {
+                "gt_answer": "Specifies a capacitance margin when fixing max capacitance violations. This option allow you to overfix.",
+                "pred_answer": "CAP_MARGIN is a parameter used in the Placement feature that specifies the minimum distance between the center of a component and the edge of a placement area or another component.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_179": {
+            "question_0": {
+                "gt_answer": "Sets a capacitance margin for overfixing max capacitance violations.",
+                "pred_answer": "CAP_MARGIN is a variable in the OpenROAD 'Placement' tool that defines the additional capacitance margin used during placement optimization to ensure timing constraints are met.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_180": {
+            "question_0": {
+                "gt_answer": "Specifies a slew margin when fixing max slew violations. This option allow you to overfix.",
+                "pred_answer": "SLEW_MARGIN is a variable in the OpenROAD 'Placement' tool that defines the additional time margin used to adjust the slew rate of signals during placement optimization, aiming to improve timing performance.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_181": {
+            "question_0": {
+                "gt_answer": "Specifies a slew margin when fixing max slew violations. This option allow you to overfix.",
+                "pred_answer": "The SLEW_MARGIN variable in Placement is used to ensure timing closure by adding a buffer to the required slew rate. This buffer helps to account for variations in the manufacturing process and other uncertainties that could affect the timing of signals in the circuit.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_182": {
+            "question_0": {
+                "gt_answer": "Sets a slew margin for overfixing max slew violations.",
+                "pred_answer": "SLEW_MARGIN is a variable in the OpenROAD 'Placement' tool that defines the additional time margin added to the slew rate of signals to account for variations and uncertainties in the design process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_183": {
+            "question_0": {
+                "gt_answer": "Override clock_tree_synthesis arguments",
+                "pred_answer": "The CTS_ARGS variable in OpenROAD Clock Tree Synthesis is used to pass arguments to the clock tree synthesis process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_184": {
+            "question_0": {
+                "gt_answer": "Override clock_tree_synthesis arguments",
+                "pred_answer": "The CTS_ARGS variable in Clock Tree Synthesis controls various parameters that influence how the clock tree is synthesized, including but not limited to, the aggressiveness of the synthesis, the type of buffer to be used, and the optimization goals such as skew or latency.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_185": {
+            "question_0": {
+                "gt_answer": "Overrides arguments for clock tree synthesis.",
+                "pred_answer": "The CTS_ARGS variable in OpenROAD Clock Tree Synthesis is used to pass arguments to the clock tree synthesis tool.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_186": {
+            "question_0": {
+                "gt_answer": "The CTS_BUF_CELL variable sets the root buffer cell used in the clock tree during clock tree synthesis (CTS)",
+                "pred_answer": "CTS_BUF_CELL is a configuration parameter in ORFS that specifies the number of cells to be buffered in the client's send queue before flow control is applied.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_187": {
+            "question_0": {
+                "gt_answer": "The CTS_BUF_CELL variable sets the root buffer cell used in the clock tree during clock tree synthesis (CTS)",
+                "pred_answer": "CTS_BUF_CELL is used as a buffer cell for Contention Test Slot (CTS) in ORFS ( Opportunistic Routing File System).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_188": {
+            "question_0": {
+                "gt_answer": "CTS_BUF_CELL selects the root buffer cell for clock tree synthesis.",
+                "pred_answer": "CTS_BUF_CELL is a configuration parameter in Oracle Real-Time File System (ORFS) that specifies the number of buffer cells used for coalescing write operations.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_189": {
+            "question_0": {
+                "gt_answer": "The FILL_CELLS variable holds a list of cell names to use as filler cells. Wildcard patterns (*) are supported. Fill cells are used to fill empty cell sites which aids in satisfying design rules and density rules.",
+                "pred_answer": "The ORFS variable FILL_CELLS is used to control whether the model fills empty cells with interpolated values.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_190": {
+            "question_0": {
+                "gt_answer": "The FILL_CELLS variable holds a list of cell names to use as filler cells. Wildcard patterns (*) are supported. Fill cells are used to fill empty cell sites which aids in satisfying design rules and density rules.",
+                "pred_answer": "The FILL_CELLS variable in ORFS (Optimized Regularization of Fluxes Solver) is used to control which cells in the computational grid receive fluxes during the simulation. It typically contains a boolean mask that specifies whether a cell should be filled with fluid or left empty.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_191": {
+            "question_0": {
+                "gt_answer": "FILL_CELLS lists cell names for filler cells, supporting wildcards.",
+                "pred_answer": "The ORFS variable FILL_CELLS is used to determine whether cells should be filled during the rendering process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_192": {
+            "question_0": {
+                "gt_answer": "Specifies a time margin for the slack when fixing hold violations. This option allow you to overfix.",
+                "pred_answer": "The HOLD_SLACK_MARGIN variable in OpenROAD Clock Tree Synthesis (CTS) is used to specify an additional margin of time that needs to be met for hold timing constraints during clock network optimization.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_193": {
+            "question_0": {
+                "gt_answer": "Specifies a time margin for the slack when fixing hold violations. This option allow you to overfix.",
+                "pred_answer": "The HOLD_SLACK_MARGIN variable in Clock Tree Synthesis specifies the amount of time by which the clock signal arrives before the data signal at the register's clock edge to ensure reliable data capture.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_194": {
+            "question_0": {
+                "gt_answer": "Specifies a time margin for fixing hold violations.",
+                "pred_answer": "The HOLD_SLACK_MARGIN variable in OpenROAD Clock Tree Synthesis (CTS) is used to specify the additional buffer required at each clock pin to ensure that the hold time violations are met.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_195": {
+            "question_0": {
+                "gt_answer": "Specifies a time margin for the slack when fixing setup violations.",
+                "pred_answer": "The SETUP_SLACK_MARGIN variable in OpenROAD Clock Tree Synthesis (CTS) is used to specify an additional margin on the setup time constraint.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_196": {
+            "question_0": {
+                "gt_answer": "Specifies a time margin for the slack when fixing setup violations.",
+                "pred_answer": "The SETUP_SLACK_MARGIN variable in Clock Tree Synthesis (CTS) is used to set a minimum required margin on the setup time of all registers in the clock network. This margin is added to the setup time to ensure that the clock arrives at the register's data input with enough time before the clock edge for proper latching.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_197": {
+            "question_0": {
+                "gt_answer": "Specifies a time margin for setup violation fixes.",
+                "pred_answer": "The SETUP_SLACK_MARGIN variable in OpenROAD Clock Tree Synthesis (CTS) is used to define the amount of setup slack that is acceptable during clock tree optimization.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_198": {
+            "question_0": {
+                "gt_answer": "Do not use gate cloning transform to fix timing violations (default: use gate cloning)",
+                "pred_answer": "The SKIP_GATE_CLONING variable in OpenROAD Clock Tree Synthesis (CTS) is used to control whether gate cloning is skipped during CTS.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_199": {
+            "question_0": {
+                "gt_answer": "Do not use gate cloning transform to fix timing violations (default: use gate cloning)",
+                "pred_answer": "The SKIP_GATE_CLONING variable in Clock Tree Synthesis controls whether or not gate cloning is skipped during the clock tree synthesis process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_200": {
+            "question_0": {
+                "gt_answer": "Disables gate cloning for timing violation fixes.",
+                "pred_answer": "The SKIP_GATE_CLONING variable in OpenROAD Clock Tree Synthesis (CTS) is used to control whether gate cloning is skipped during the CTS process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_201": {
+            "question_0": {
+                "gt_answer": "Do not use pin swapping as a transform to fix timing violations (default: use pin swapping)",
+                "pred_answer": "The SKIP_PIN_SWAP variable in OpenROAD Clock Tree Synthesis (CTS) is used to control whether the tool should attempt to swap pin locations to improve clock tree quality.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_202": {
+            "question_0": {
+                "gt_answer": "Do not use pin swapping as a transform to fix timing violations (default: use pin swapping)",
+                "pred_answer": "The SKIP_PIN_SWAP variable in Clock Tree Synthesis is a control flag that, when set, prevents the swapping of pin assignments during the optimization process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_203": {
+            "question_0": {
+                "gt_answer": "Disables pin swapping for timing violation fixes.",
+                "pred_answer": "The SKIP_PIN_SWAP variable in OpenROAD Clock Tree Synthesis (CTS) is used to control whether the tool should attempt to swap pin assignments to improve clock quality.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_204": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts, the TNS_END_PERCENT variable specifies what percent of violating timing paths will be fixed during timing optimization. TNS_END_PERCENT must be a floating point value between 0-100. However, even if TNS_END_PERCENT is 0, the worst path will always be fixed. The purpose of this flag is to allow the user some control over how much runtime and logic area is spent on timing optimization, with a higher value leading to more runtime/area and a lower value leading to less runtime/area.",
+                "pred_answer": "The TNS_END_PERCENT variable in OpenROAD Clock Tree Synthesis (CTS) is used to set the target percentage of timing violations that should be met at the end of the CTS process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_205": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts, the TNS_END_PERCENT variable specifies what percent of violating timing paths will be fixed during timing optimization. TNS_END_PERCENT must be a floating point value between 0-100. However, even if TNS_END_PERCENT is 0, the worst path will always be fixed. The purpose of this flag is to allow the user some control over how much runtime and logic area is spent on timing optimization, with a higher value leading to more runtime/area and a lower value leading to less runtime/area.",
+                "pred_answer": "The TNS_END_PERCENT variable in Clock Tree Synthesis is used to specify the percentage of end points that must meet timing requirements. It helps in determining how much of the clock network needs to adhere to timing constraints during synthesis.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_206": {
+            "question_0": {
+                "gt_answer": "TNS_END_PERCENT defines the percent of timing path fixes during optimization.",
+                "pred_answer": "The TNS_END_PERCENT variable in OpenROAD Clock Tree Synthesis (CTS) is used to specify the target percentage of timing violations that should be met after CTS optimization.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_207": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts, the EQUIVALENCE_CHECK variable toggles whether a logical equivalence check is run after timing optimization to ensure logical correctness of the circuit. If EQUIVALENCE_CHECK is 1, the check is performed. If EQUIVALENCE_CHECK is any other value or unset, the check is not run. The default value is unset.",
+                "pred_answer": "The EQUIVALENCE_CHECK variable in OpenROAD Clock Tree Synthesis (CTS) is used to enable or disable equivalence checking between the input and output timing constraints.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_208": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts, the EQUIVALENCE_CHECK variable toggles whether a logical equivalence check is run after timing optimization to ensure logical correctness of the circuit. If EQUIVALENCE_CHECK is 1, the check is performed. If EQUIVALENCE_CHECK is any other value or unset, the check is not run. The default value is unset.",
+                "pred_answer": "The EQUIVALENCE_CHECK variable in Clock Tree Synthesis specifies the method for checking equivalence between the input and output timing constraints.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_209": {
+            "question_0": {
+                "gt_answer": "EQUIVALENCE_CHECK toggles logical equivalence checks post-optimization.",
+                "pred_answer": "The EQUIVALENCE_CHECK variable in OpenROAD Clock Tree Synthesis (CTS) is used to enable or disable equivalence checking during the clock tree synthesis process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_210": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts, the REMOVE_CELLS_FOR_EQY variable sets the list of cells to remove from the verilog netlist file produced specifically for netlist equivalence checking. Netlist equivalence checking is performed with the Yosys EQY tool. Wildcard patterns (*) are supported. This variable is passed directly to write_verilog -remove_cells <>.",
+                "pred_answer": "The REMOVE_CELLS_FOR_EQY variable in OpenROAD Clock Tree Synthesis (CTS) is used to specify whether to remove cells that are used for equalization during the clock tree synthesis process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_211": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts, the REMOVE_CELLS_FOR_EQY variable sets the list of cells to remove from the verilog netlist file produced specifically for netlist equivalence checking. Netlist equivalence checking is performed with the Yosys EQY tool. Wildcard patterns (*) are supported. This variable is passed directly to write_verilog -remove_cells <>.",
+                "pred_answer": "The REMOVE_CELLS_FOR_EQY variable in Clock Tree Synthesis is used to eliminate certain cells from being considered during the equalization process. This can help in optimizing the clock tree by removing unnecessary or problematic components.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_212": {
+            "question_0": {
+                "gt_answer": "REMOVE_CELLS_FOR_EQY lists cells to exclude from equivalence checking netlist files.",
+                "pred_answer": "The REMOVE_CELLS_FOR_EQY variable in OpenROAD Clock Tree Synthesis (CTS) is used to control whether or not certain cells should be removed during equalization.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_213": {
+            "question_0": {
+                "gt_answer": "Yosys is a logic synthesis tool which is responsible for transforming register transfer-level (RTL) code into a gate-level netlist. OpenROAD is a place and route (P&R) tool which is responsible for implementing a gale-level netlist into a chip layout. Yosys is developed by the YosysHQ organization whereas OpenROAD is developed by The OpenROAD Project. OpenROAD Flow Scripts (ORFS) makes use of both of these tools (as well as KLayout) to form a full RTL-to-GDS flow.",
+                "pred_answer": "Yosys is an open-source synthesis tool used primarily for digital circuit design, focusing on RTL (Register-Transfer Level) synthesis. OpenROAD, on the other hand, is a full-custom and standard-cell ASIC (Application-Specific Integrated Circuit) physical design suite that includes placement, routing, and timing analysis.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_214": {
+            "question_0": {
+                "gt_answer": "Yosys is a logic synthesis tool which is responsible for transforming register transfer-level (RTL) code into a gate-level netlist. OpenROAD is a place and route (P&R) tool which is responsible for implementing a gale-level netlist into a chip layout. Yosys is developed by the YosysHQ organization whereas OpenROAD is developed by The OpenROAD Project. OpenROAD Flow Scripts (ORFS) makes use of both of these tools (as well as KLayout) to form a full RTL-to-GDS flow.",
+                "pred_answer": "{'Yosys': 'Yosys is an RTL synthesis tool that takes Verilog input and generates netlists targeted at FPGAs or ASICs. It focuses on logic synthesis, optimization, and mapping.', 'OpenROAD': 'OpenROAD is a physical design tool for ICs, providing place-and-route capabilities. It takes the netlist as input from synthesis tools like Yosys and completes the physical layout for manufacturing.'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_215": {
+            "question_0": {
+                "gt_answer": "Yosys transforms RTL code into a gate-level netlist, while OpenROAD handles P&R from netlist to chip layout.",
+                "pred_answer": "Yosys is an open-source synthesis tool primarily used for RTL (Register-Transfer Level) synthesis targeting FPGAs and ASICs, while OpenROAD is an open-source physical design tool suite for IC (Integrated Circuit) layout targeting ASICs.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_216": {
+            "question_0": {
+                "gt_answer": "OpenROAD Flow Scripts (ORFS) includes Makefile targets to open the GUI after each step. You can use the command make gui_*, where * is the name of the flow step (e.g. make_floorplan).",
+                "pred_answer": "No, there is no direct graphical user interface (GUI) available in ORFS.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_217": {
+            "question_0": {
+                "gt_answer": "OpenROAD Flow Scripts (ORFS) includes Makefile targets to open the GUI after each step. You can use the command make gui_*, where * is the name of the flow step (e.g. make_floorplan).",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_218": {
+            "question_0": {
+                "gt_answer": "OpenROAD Flow Scripts include Makefile targets for GUI access after flow steps.",
+                "pred_answer": "No, there is no direct graphical user interface (GUI) provided by ORFS.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_219": {
+            "question_0": {
+                "gt_answer": "During power switch insertion, the -switch_cell argument is used to specify the name of a coarse-grain power switch cell that is to be inserted wherever the standard cell rail connects to the rest of the power grid. The mesh layers are associated with the unswitched power net of the voltage domain, whereas the standard cell rail is associated with the switched power net of the voltage domain. The placement of a power switch cell connects the unswitched power mesh to the switched power rail through a power switch defined by the define_power_switch_cell command.",
+                "pred_answer": "The -switch_cell argument in PDN is used to specify the type of switch cell to be inserted during power switch insertion.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_220": {
+            "question_0": {
+                "gt_answer": "During power switch insertion, the -switch_cell argument is used to specify the name of a coarse-grain power switch cell that is to be inserted wherever the standard cell rail connects to the rest of the power grid. The mesh layers are associated with the unswitched power net of the voltage domain, whereas the standard cell rail is associated with the switched power net of the voltage domain. The placement of a power switch cell connects the unswitched power mesh to the switched power rail through a power switch defined by the define_power_switch_cell command.",
+                "pred_answer": "The -switch_cell argument in PDNGEN is used to specify the cell that models the power switch behavior during power distribution network (PDN) generation. This cell is critical for integrating power switches into the PDN design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_221": {
+            "question_0": {
+                "gt_answer": "For inserting power switches, the -switch_cell parameter is utilized to denote a coarse-grain power switch cell's name for insertion at points where the standard cell rail merges with the broader power grid. The mesh layers correspond with the voltage domain's unswitched power net, and the standard cell rail links to the switched power net. Inserting a power switch cell bridges the unswitched power mesh and the switched power rail, facilitated by the define_power_switch_cell command.",
+                "pred_answer": "The -switch_cell argument in PDN (Power Distribution Network) is used to specify the type of switch cell to be inserted during power switch insertion process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_222": {
+            "question_0": {
+                "gt_answer": "The partitioning module (par) is based on TritonPart, an open-source constraints-driven partitioner. par can be used to partition a hypergraph or a gate-level netlist. TritonPart solves multi-way partitioning by 1) constraints-driven coarsening, 2) initial partitioning, 3) refinement, 4) cut-overlay clustering and partitioning (COCP), and 5) V-cycle refinement. The purpose of partitioning a netlist is to reduce the complexity of a circuit so that algorithms can operate on smaller chunks of the netlist at a time. Partitioning a netlist may slightly reduce the optimization opportunities compared to a non-partitioned approach, but it greatly benefits the runtime. Partitioning a netlist may be the only option to feasibly operate on very large circuits.",
+                "pred_answer": "The par module is used for parallel processing in programming languages like R, allowing users to run computations across multiple cores or processors to speed up execution.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_223": {
+            "question_0": {
+                "gt_answer": "The partitioning module (par) is based on TritonPart, an open-source constraints-driven partitioner. par can be used to partition a hypergraph or a gate-level netlist. TritonPart solves multi-way partitioning by 1) constraints-driven coarsening, 2) initial partitioning, 3) refinement, 4) cut-overlay clustering and partitioning (COCP), and 5) V-cycle refinement. The purpose of partitioning a netlist is to reduce the complexity of a circuit so that algorithms can operate on smaller chunks of the netlist at a time. Partitioning a netlist may slightly reduce the optimization opportunities compared to a non-partitioned approach, but it greatly benefits the runtime. Partitioning a netlist may be the only option to feasibly operate on very large circuits.",
+                "pred_answer": "The 'par' module is not a standard Python library or module. It seems there might be confusion with the 'pathlib' module, which provides an object-oriented interface for working with filesystem paths, or the 'concurrent.futures' module that can be used to run tasks concurrently using threads or processes. Without further context, it's difficult to specify exactly what functionality a hypothetical 'par' module might provide.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_224": {
+            "question_0": {
+                "gt_answer": "The partitioning tool, par, leverages TritonPart, a freely available constraint-based partitioning software. It enables the partitioning of hypergraphs or gate-level netlists through a process involving constraint-led coarsening, initial partitioning, refinement, cut-overlay clustering and partitioning (COCP), and V-cycle refinement. The main goal is to simplify the circuit's complexity, allowing algorithms to manage smaller sections of the netlist efficiently. Though partitioning may slightly limit optimization chances, it significantly enhances runtime and is often the sole strategy for managing vast circuits.",
+                "pred_answer": "The par module is used for parallel processing in programming languages like R, allowing users to run computations concurrently on multiple cores or nodes.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_225": {
+            "question_0": {
+                "gt_answer": "The Detailed Routing (drt) module in OpenROAD is based on the open-source detailed router TritonRoute. TritonRoute consists of several main building blocks, including pin access analysis, track assignment, initial detailed routing, search and repair, and a DRC engine. The initial development of the router is inspired by the ISPD-2018 initial detailed routing contest. However, the current drt framework differs and is built from scratch, aiming for an industrial-oriented, scalable, and flexible flow.",
+                "pred_answer": "False",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_226": {
+            "question_0": {
+                "gt_answer": "The Detailed Routing (drt) module in OpenROAD is based on the open-source detailed router TritonRoute. TritonRoute consists of several main building blocks, including pin access analysis, track assignment, initial detailed routing, search and repair, and a DRC engine. The initial development of the router is inspired by the ISPD-2018 initial detailed routing contest. However, the current drt framework differs and is built from scratch, aiming for an industrial-oriented, scalable, and flexible flow.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_227": {
+            "question_0": {
+                "gt_answer": "The Detailed Routing (drt) module of OpenROAD, founded on the open-source detailed router TritonRoute, incorporates key components like pin access analysis, track assignment, initial routing, search and repair, and a DRC (Design Rule Checking) engine. Initially inspired by the ISPD-2018 detailed routing challenge, the current drt architecture is entirely new, designed for industrial-grade scalability and flexibility.",
+                "pred_answer": "False",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_228": {
+            "question_0": {
+                "gt_answer": "Messages with the MPL prefix are from the macro placement (mpl) module. These messages are progress messages, informing the user which step of the HierRTLMP flow is being executed.",
+                "pred_answer": "{'INFO MPL-0024': 'Indicates the start of creating a clustered netlist using multilevel autoclustering.', 'INFO MPL-0039': 'Signals the determination of shape functions for clusters during coarse shaping.', 'INFO MPL-0028': 'Shows the placement phase for clusters and macros in hierarchical macro placement.', 'INFO MPL-0037': 'Confirms the update of locations for 95 macros.', 'INFO RSZ-0026': 'Indicates that 0 buffers were removed, possibly after checking or optimization.'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_229": {
+            "question_0": {
+                "gt_answer": "In global_placement, -pad_right and -pad_left add padding which is measured in cell sites to effectively make the cell appear wider. pad_left adds a pad to the left side, pad_right adds it to the right side. Wider cells during global placement can help reduce placement congestion and make finding a valid placement easier.",
+                "pred_answer": "The units of the -pad_right and -pad_left arguments of the global_placement function are typically in the unit of length as defined by the design kit being used, often nanometers (nm).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_230": {
+            "question_0": {
+                "gt_answer": "In global_placement, -pad_right and -pad_left add padding which is measured in cell sites to effectively make the cell appear wider. pad_left adds a pad to the left side, pad_right adds it to the right side. Wider cells during global placement can help reduce placement congestion and make finding a valid placement easier.",
+                "pred_answer": "The measurement units for the -pad_right and -pad_left arguments in the global_placement function are typically in the unit of distance used by the design tool, often nanometers or database units (dbu).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_231": {
+            "question_0": {
+                "gt_answer": "In the global placement process, the options -pad_right and -pad_left introduce padding in terms of cell sites, effectively broadening the cell. This padding on either side aids in alleviating placement congestion and facilitates easier placement validation.",
+                "pred_answer": "Pixels",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_232": {
+            "question_0": {
+                "gt_answer": "Cell padding only impacts the way the global placer (gpl) and detailed placer (dpl) sees the cells. Cell padding does not change the logic area of the cell from the user perspective. If you were to use the report_design_area command, you would see the unpadded design utilization reported.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_233": {
+            "question_0": {
+                "gt_answer": "Cell padding only impacts the way the global placer (gpl) and detailed placer (dpl) sees the cells. Cell padding does not change the logic area of the cell from the user perspective. If you were to use the report_design_area command, you would see the unpadded design utilization reported.",
+                "pred_answer": "True",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_234": {
+            "question_0": {
+                "gt_answer": "Padding adjustments affect only how global and detailed placers view the cells, leaving the cell's logical area as perceived by the user unchanged. Utilizing the report_design_area command will display the design's utilization without the padding.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_235": {
+            "question_0": {
+                "gt_answer": "Cell padding can reduce the maximum possible design utilization. If you don't want padding in your design, you can reduce the default padding or turn it off. However, padding is usually necessary to achieve a cleanly routed design, because cells which are too close together may make routing impossible. If you want to optimize for very high-density designs, I believe you can also set padding on a master-by-master basis so that only the most difficult cells are padded. This process may take some trial and error.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_236": {
+            "question_0": {
+                "gt_answer": "Cell padding can reduce the maximum possible design utilization. If you don't want padding in your design, you can reduce the default padding or turn it off. However, padding is usually necessary to achieve a cleanly routed design, because cells which are too close together may make routing impossible. If you want to optimize for very high-density designs, I believe you can also set padding on a master-by-master basis so that only the most difficult cells are padded. This process may take some trial and error.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_237": {
+            "question_0": {
+                "gt_answer": "Implementing cell padding may limit the maximum design utilization achievable. Adjusting or disabling default padding is an option, though padding is often crucial for achieving a neatly routed design by preventing overly congested cell placements. For high-density design optimization, padding can be selectively applied to particularly challenging cells, requiring some experimentation.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_238": {
+            "question_0": {
+                "gt_answer": "If you are using ORFS, the CORE_UTILIZATION variable only determines the core utilization after Yosys (synthesis) runs using the netlist data. The utilization can change dramatically as OpenROAD performs timing optimization, which will insert buffers, remove buffers, and resize cells. For example, if you set CORE_UTILIZATION to 70% utilization during the initialization step, you may end up with 90%+ utilization because of optimization to meet timing constraints. It is currently up to the designer to ensure that the CORE_UTILIZATION is set appropriately, which may require some trial and error.",
+                "pred_answer": "The issue with CORE_UTILIZATION when aiming for a DU of 70% on the ASAP7 PDK might be due to design-specific constraints, suboptimal floorplanning, or routing congestion.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_239": {
+            "question_0": {
+                "gt_answer": "If you are using ORFS, the CORE_UTILIZATION variable only determines the core utilization after Yosys (synthesis) runs using the netlist data. The utilization can change dramatically as OpenROAD performs timing optimization, which will insert buffers, remove buffers, and resize cells. For example, if you set CORE_UTILIZATION to 70% utilization during the initialization step, you may end up with 90%+ utilization because of optimization to meet timing constraints. It is currently up to the designer to ensure that the CORE_UTILIZATION is set appropriately, which may require some trial and error.",
+                "pred_answer": "The CORE_UTILIZATION issue might have arisen due to excessive resource consumption by the design beyond the 70% target DU (Design Utilization) limit.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_240": {
+            "question_0": {
+                "gt_answer": "With ORFS, the CORE_UTILIZATION variable reflects core utilization post-Yosys synthesis, based on netlist data. Subsequent timing optimization in OpenROAD, which includes buffer insertion, deletion, and cell resizing, can significantly alter utilization levels. Designers must judiciously set CORE_UTILIZATION, anticipating possible adjustments through trial and error.",
+                "pred_answer": "The issue with CORE_UTILIZATION when aiming for a DU of 70% might be due to design complexity, placement constraints, or PnR tool limitations.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_241": {
+            "question_0": {
+                "gt_answer": "Relaxing timing constraints can usually reduce your design utilization because fewer buffers will need to be inserted. However, detailed placement can fail for several reasons, including 1) setting core utilization too high, 2) not having enough cell padding during global placement, 3) having too much cell padding during detailed placement, 4) having a poor macro placement which will block placement of some standard cells",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_242": {
+            "question_0": {
+                "gt_answer": "Relaxing timing constraints can usually reduce your design utilization because fewer buffers will need to be inserted. However, detailed placement can fail for several reasons, including 1) setting core utilization too high, 2) not having enough cell padding during global placement, 3) having too much cell padding during detailed placement, 4) having a poor macro placement which will block placement of some standard cells",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_243": {
+            "question_0": {
+                "gt_answer": "Easing timing constraints can lead to lower design utilization by reducing the need for buffer insertion. However, detailed placement might fail due to reasons like excessive core utilization, insufficient global placement padding, excessive detailed placement padding, or suboptimal macro placement impeding standard cell placement.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_244": {
+            "question_0": {
+                "gt_answer": "Empiracally, the OpenROAD team has found that OpenROAD optimizes better when the buffers from Yosys are removed, because Yosys does not do physical synthesis.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_245": {
+            "question_0": {
+                "gt_answer": "Empiracally, the OpenROAD team has found that OpenROAD optimizes better when the buffers from Yosys are removed, because Yosys does not do physical synthesis.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_246": {
+            "accuracy": 0
+        },
+        "backend_247": {
+            "accuracy": 0
+        },
+        "backend_248": {
+            "accuracy": 0
+        },
+        "backend_249": {
+            "accuracy": 0
+        },
+        "backend_250": {
+            "accuracy": 0
+        },
+        "backend_251": {
+            "accuracy": 0
+        },
+        "backend_252": {
+            "accuracy": 0
+        },
+        "backend_253": {
+            "accuracy": 0
+        },
+        "backend_254": {
+            "accuracy": 0
+        },
+        "backend_255": {
+            "accuracy": 0
+        },
+        "backend_256": {
+            "accuracy": 0
+        },
+        "backend_257": {
+            "accuracy": 0
+        },
+        "backend_258": {
+            "accuracy": 0
+        },
+        "backend_259": {
+            "accuracy": 0
+        },
+        "backend_260": {
+            "accuracy": 0
+        },
+        "backend_261": {
+            "accuracy": 0
+        },
+        "backend_262": {
+            "accuracy": 0
+        },
+        "backend_263": {
+            "accuracy": 0
+        },
+        "backend_264": {
+            "accuracy": 0
+        },
+        "backend_265": {
+            "accuracy": 0
+        },
+        "backend_266": {
+            "accuracy": 0
+        },
+        "backend_267": {
+            "accuracy": 0
+        },
+        "backend_268": {
+            "accuracy": 0
+        },
+        "backend_269": {
+            "accuracy": 0
+        },
+        "backend_270": {
+            "accuracy": 0
+        },
+        "backend_271": {
+            "accuracy": 0
+        },
+        "backend_272": {
+            "accuracy": 0
+        },
+        "backend_273": {
+            "accuracy": 0
+        },
+        "backend_274": {
+            "accuracy": 0
+        },
+        "backend_275": {
+            "accuracy": 0
+        },
+        "backend_276": {
+            "accuracy": 0
+        },
+        "backend_277": {
+            "accuracy": 0
+        },
+        "backend_278": {
+            "accuracy": 0
+        },
+        "backend_279": {
+            "accuracy": 0
+        },
+        "backend_280": {
+            "accuracy": 0
+        },
+        "backend_281": {
+            "accuracy": 0
+        },
+        "backend_282": {
+            "accuracy": 0
+        },
+        "backend_283": {
+            "accuracy": 0
+        },
+        "backend_284": {
+            "accuracy": 0
+        },
+        "backend_285": {
+            "accuracy": 0
+        },
+        "backend_286": {
+            "accuracy": 0
+        },
+        "backend_287": {
+            "accuracy": 0
+        },
+        "backend_288": {
+            "accuracy": 0
+        },
+        "backend_289": {
+            "accuracy": 0
+        },
+        "backend_290": {
+            "accuracy": 0
+        },
+        "backend_291": {
+            "accuracy": 0
+        },
+        "backend_292": {
+            "accuracy": 0
+        },
+        "backend_293": {
+            "accuracy": 0
+        },
+        "backend_294": {
+            "accuracy": 0
+        },
+        "backend_295": {
+            "accuracy": 0
+        },
+        "backend_296": {
+            "accuracy": 0
+        },
+        "backend_297": {
+            "accuracy": 0
+        },
+        "backend_298": {
+            "accuracy": 0
+        },
+        "backend_299": {
+            "accuracy": 0
+        },
+        "backend_300": {
+            "accuracy": 0
+        },
+        "backend_301": {
+            "accuracy": 0
+        },
+        "backend_302": {
+            "accuracy": 0
+        },
+        "backend_303": {
+            "accuracy": 0
+        },
+        "backend_304": {
+            "accuracy": 0
+        },
+        "backend_305": {
+            "accuracy": 0
+        },
+        "backend_306": {
+            "accuracy": 0
+        },
+        "backend_307": {
+            "accuracy": 0
+        },
+        "backend_308": {
+            "accuracy": 0
+        },
+        "backend_309": {
+            "accuracy": 0
+        },
+        "backend_310": {
+            "accuracy": 0
+        },
+        "backend_311": {
+            "accuracy": 0
+        },
+        "backend_312": {
+            "accuracy": 0
+        },
+        "backend_313": {
+            "accuracy": 0
+        },
+        "backend_314": {
+            "accuracy": 0
+        },
+        "backend_315": {
+            "accuracy": 0
+        },
+        "backend_316": {
+            "accuracy": 0
+        },
+        "backend_317": {
+            "accuracy": 0
+        },
+        "backend_318": {
+            "accuracy": 0
+        },
+        "backend_319": {
+            "accuracy": 0
+        },
+        "backend_320": {
+            "accuracy": 0
+        },
+        "backend_321": {
+            "accuracy": 0
+        },
+        "backend_322": {
+            "accuracy": 0
+        },
+        "backend_323": {
+            "accuracy": 0
+        },
+        "backend_324": {
+            "accuracy": 0
+        },
+        "backend_325": {
+            "accuracy": 0
+        },
+        "backend_326": {
+            "accuracy": 0
+        },
+        "backend_327": {
+            "accuracy": 0
+        },
+        "backend_328": {
+            "accuracy": 0
+        },
+        "backend_329": {
+            "accuracy": 0
+        },
+        "backend_330": {
+            "accuracy": 0
+        },
+        "backend_331": {
+            "accuracy": 0
+        },
+        "backend_332": {
+            "accuracy": 0
+        },
+        "backend_333": {
+            "accuracy": 0
+        },
+        "backend_334": {
+            "accuracy": 0
+        },
+        "backend_335": {
+            "accuracy": 0
+        },
+        "backend_336": {
+            "accuracy": 0
+        },
+        "backend_337": {
+            "accuracy": 0
+        },
+        "backend_338": {
+            "accuracy": 0
+        },
+        "backend_339": {
+            "accuracy": 0
+        },
+        "backend_340": {
+            "accuracy": 0
+        },
+        "backend_341": {
+            "accuracy": 0
+        },
+        "backend_342": {
+            "accuracy": 0
+        },
+        "backend_343": {
+            "accuracy": 0
+        },
+        "backend_344": {
+            "accuracy": 0
+        },
+        "backend_345": {
+            "accuracy": 0
+        },
+        "backend_346": {
+            "accuracy": 0
+        },
+        "backend_347": {
+            "accuracy": 0
+        },
+        "backend_348": {
+            "accuracy": 0
+        },
+        "backend_349": {
+            "accuracy": 0
+        },
+        "backend_350": {
+            "accuracy": 0
+        },
+        "backend_351": {
+            "accuracy": 0
+        },
+        "backend_352": {
+            "accuracy": 0
+        },
+        "backend_353": {
+            "accuracy": 0
+        },
+        "backend_354": {
+            "accuracy": 0
+        },
+        "backend_355": {
+            "accuracy": 0
+        },
+        "backend_356": {
+            "accuracy": 0
+        },
+        "backend_357": {
+            "accuracy": 0
+        },
+        "backend_358": {
+            "accuracy": 0
+        },
+        "backend_359": {
+            "accuracy": 0
+        },
+        "backend_360": {
+            "accuracy": 0
+        },
+        "backend_361": {
+            "accuracy": 0
+        },
+        "backend_362": {
+            "accuracy": 0
+        },
+        "backend_363": {
+            "accuracy": 0
+        },
+        "backend_364": {
+            "accuracy": 0
+        },
+        "backend_365": {
+            "accuracy": 0
+        },
+        "backend_366": {
+            "accuracy": 0
+        },
+        "backend_367": {
+            "accuracy": 0
+        },
+        "backend_368": {
+            "accuracy": 0
+        },
+        "backend_369": {
+            "accuracy": 0
+        },
+        "backend_370": {
+            "accuracy": 0
+        },
+        "backend_371": {
+            "accuracy": 0
+        },
+        "backend_372": {
+            "accuracy": 0
+        },
+        "backend_373": {
+            "accuracy": 0
+        },
+        "backend_374": {
+            "accuracy": 0
+        },
+        "backend_375": {
+            "accuracy": 0
+        },
+        "backend_376": {
+            "accuracy": 0
+        },
+        "backend_377": {
+            "accuracy": 0
+        },
+        "backend_378": {
+            "accuracy": 0
+        },
+        "backend_379": {
+            "accuracy": 0
+        },
+        "backend_380": {
+            "accuracy": 0
+        },
+        "backend_381": {
+            "accuracy": 0
+        },
+        "backend_382": {
+            "accuracy": 0
+        },
+        "backend_383": {
+            "accuracy": 0
+        },
+        "backend_384": {
+            "accuracy": 0
+        },
+        "backend_385": {
+            "accuracy": 0
+        },
+        "backend_386": {
+            "accuracy": 0
+        },
+        "backend_387": {
+            "accuracy": 0
+        },
+        "backend_388": {
+            "accuracy": 0
+        },
+        "backend_389": {
+            "accuracy": 0
+        },
+        "backend_390": {
+            "accuracy": 0
+        },
+        "backend_391": {
+            "accuracy": 0
+        },
+        "backend_392": {
+            "accuracy": 0
+        },
+        "backend_393": {
+            "accuracy": 0
+        },
+        "backend_394": {
+            "accuracy": 0
+        },
+        "backend_395": {
+            "accuracy": 0
+        },
+        "backend_396": {
+            "accuracy": 0
+        },
+        "backend_397": {
+            "accuracy": 0
+        },
+        "backend_398": {
+            "accuracy": 0
+        },
+        "backend_399": {
+            "accuracy": 0
+        },
+        "backend_400": {
+            "accuracy": 0
+        },
+        "backend_401": {
+            "accuracy": 0
+        },
+        "backend_402": {
+            "accuracy": 0
+        },
+        "backend_403": {
+            "accuracy": 0
+        },
+        "backend_404": {
+            "accuracy": 0
+        },
+        "backend_405": {
+            "accuracy": 0
+        },
+        "backend_406": {
+            "accuracy": 0
+        },
+        "backend_407": {
+            "accuracy": 0
+        },
+        "backend_408": {
+            "accuracy": 0
+        },
+        "backend_409": {
+            "accuracy": 0
+        },
+        "backend_410": {
+            "accuracy": 0
+        },
+        "backend_411": {
+            "accuracy": 0
+        },
+        "backend_412": {
+            "accuracy": 0
+        },
+        "backend_413": {
+            "accuracy": 0
+        },
+        "backend_414": {
+            "accuracy": 0
+        },
+        "backend_415": {
+            "accuracy": 0
+        },
+        "backend_416": {
+            "accuracy": 0
+        },
+        "backend_417": {
+            "accuracy": 0
+        },
+        "backend_418": {
+            "accuracy": 0
+        },
+        "backend_419": {
+            "accuracy": 0
+        },
+        "backend_420": {
+            "accuracy": 0
+        },
+        "backend_421": {
+            "accuracy": 0
+        },
+        "backend_422": {
+            "accuracy": 0
+        },
+        "backend_423": {
+            "accuracy": 0
+        },
+        "backend_424": {
+            "accuracy": 0
+        },
+        "backend_425": {
+            "accuracy": 0
+        },
+        "backend_426": {
+            "accuracy": 0
+        },
+        "backend_427": {
+            "accuracy": 0
+        },
+        "backend_428": {
+            "accuracy": 0
+        },
+        "backend_429": {
+            "accuracy": 0
+        },
+        "backend_430": {
+            "accuracy": 0
+        },
+        "backend_431": {
+            "accuracy": 0
+        },
+        "backend_432": {
+            "accuracy": 0
+        },
+        "backend_433": {
+            "accuracy": 0
+        },
+        "backend_434": {
+            "accuracy": 0
+        },
+        "backend_435": {
+            "accuracy": 0
+        },
+        "backend_436": {
+            "accuracy": 0
+        },
+        "backend_437": {
+            "accuracy": 0
+        },
+        "backend_438": {
+            "accuracy": 0
+        },
+        "backend_439": {
+            "accuracy": 0
+        },
+        "backend_440": {
+            "accuracy": 0
+        },
+        "backend_441": {
+            "accuracy": 0
+        },
+        "backend_442": {
+            "accuracy": 0
+        },
+        "backend_443": {
+            "accuracy": 0
+        },
+        "backend_444": {
+            "accuracy": 0
+        },
+        "backend_445": {
+            "accuracy": 0
+        },
+        "backend_446": {
+            "accuracy": 0
+        },
+        "backend_447": {
+            "accuracy": 0
+        },
+        "backend_448": {
+            "accuracy": 0
+        },
+        "backend_449": {
+            "accuracy": 0
+        },
+        "backend_450": {
+            "accuracy": 0
+        },
+        "backend_451": {
+            "accuracy": 0
+        },
+        "backend_452": {
+            "accuracy": 0
+        },
+        "backend_453": {
+            "accuracy": 0
+        },
+        "backend_454": {
+            "accuracy": 0
+        },
+        "backend_455": {
+            "accuracy": 0
+        },
+        "backend_456": {
+            "accuracy": 0
+        },
+        "backend_457": {
+            "accuracy": 0
+        },
+        "backend_458": {
+            "accuracy": 0
+        },
+        "backend_459": {
+            "accuracy": 0
+        },
+        "backend_460": {
+            "accuracy": 0
+        },
+        "backend_461": {
+            "accuracy": 0
+        },
+        "backend_462": {
+            "accuracy": 0
+        },
+        "backend_463": {
+            "accuracy": 0
+        },
+        "backend_464": {
+            "accuracy": 0
+        },
+        "backend_465": {
+            "accuracy": 0
+        },
+        "backend_466": {
+            "accuracy": 0
+        },
+        "backend_467": {
+            "accuracy": 0
+        },
+        "backend_468": {
+            "accuracy": 0
+        },
+        "backend_469": {
+            "accuracy": 0
+        },
+        "backend_470": {
+            "accuracy": 0
+        },
+        "backend_471": {
+            "accuracy": 0
+        },
+        "backend_472": {
+            "accuracy": 0
+        },
+        "backend_473": {
+            "accuracy": 0
+        },
+        "backend_474": {
+            "accuracy": 0
+        },
+        "backend_475": {
+            "accuracy": 0
+        },
+        "backend_476": {
+            "accuracy": 0
+        },
+        "backend_477": {
+            "accuracy": 0
+        },
+        "backend_478": {
+            "accuracy": 0
+        },
+        "backend_479": {
+            "accuracy": 0
+        },
+        "backend_480": {
+            "accuracy": 0
+        },
+        "backend_481": {
+            "accuracy": 0
+        },
+        "backend_482": {
+            "accuracy": 0
+        },
+        "backend_483": {
+            "accuracy": 0
+        },
+        "backend_484": {
+            "accuracy": 0
+        },
+        "backend_485": {
+            "accuracy": 0
+        },
+        "backend_486": {
+            "accuracy": 0
+        },
+        "backend_487": {
+            "accuracy": 0
+        },
+        "backend_488": {
+            "accuracy": 0
+        },
+        "backend_489": {
+            "accuracy": 0
+        },
+        "backend_490": {
+            "accuracy": 0
+        },
+        "backend_491": {
+            "accuracy": 0
+        },
+        "backend_492": {
+            "accuracy": 0
+        },
+        "backend_493": {
+            "accuracy": 0
+        },
+        "backend_494": {
+            "accuracy": 0
+        },
+        "backend_495": {
+            "accuracy": 0
+        },
+        "backend_496": {
+            "accuracy": 0
+        },
+        "backend_497": {
+            "accuracy": 0
+        },
+        "backend_498": {
+            "accuracy": 0
+        },
+        "backend_499": {
+            "accuracy": 0
+        },
+        "backend_500": {
+            "accuracy": 0
+        },
+        "backend_501": {
+            "accuracy": 0
+        },
+        "backend_502": {
+            "accuracy": 0
+        },
+        "backend_503": {
+            "accuracy": 0
+        },
+        "backend_504": {
+            "accuracy": 0
+        },
+        "backend_505": {
+            "accuracy": 0
+        },
+        "backend_506": {
+            "accuracy": 0
+        },
+        "backend_507": {
+            "accuracy": 0
+        },
+        "backend_508": {
+            "accuracy": 0
+        },
+        "backend_509": {
+            "accuracy": 0
+        },
+        "backend_510": {
+            "accuracy": 0
+        },
+        "backend_511": {
+            "accuracy": 0
+        },
+        "backend_512": {
+            "accuracy": 0
+        },
+        "backend_513": {
+            "accuracy": 0
+        },
+        "backend_514": {
+            "accuracy": 0
+        },
+        "backend_515": {
+            "accuracy": 0
+        },
+        "backend_516": {
+            "accuracy": 0
+        },
+        "backend_517": {
+            "accuracy": 0
+        },
+        "backend_518": {
+            "accuracy": 0
+        },
+        "backend_519": {
+            "accuracy": 0
+        },
+        "backend_520": {
+            "accuracy": 0
+        },
+        "backend_521": {
+            "accuracy": 0
+        },
+        "backend_522": {
+            "accuracy": 0
+        },
+        "backend_523": {
+            "accuracy": 0
+        },
+        "backend_524": {
+            "accuracy": 0
+        },
+        "backend_525": {
+            "accuracy": 0
+        },
+        "backend_526": {
+            "accuracy": 0
+        },
+        "backend_527": {
+            "accuracy": 0
+        },
+        "backend_528": {
+            "accuracy": 0
+        },
+        "backend_529": {
+            "accuracy": 0
+        },
+        "backend_530": {
+            "accuracy": 0
+        },
+        "backend_531": {
+            "accuracy": 0
+        },
+        "backend_532": {
+            "accuracy": 0
+        },
+        "backend_533": {
+            "accuracy": 0
+        },
+        "backend_534": {
+            "accuracy": 0
+        },
+        "backend_535": {
+            "accuracy": 0
+        },
+        "backend_536": {
+            "accuracy": 0
+        },
+        "backend_537": {
+            "accuracy": 0
+        },
+        "backend_538": {
+            "accuracy": 0
+        },
+        "backend_539": {
+            "accuracy": 0
+        },
+        "backend_540": {
+            "accuracy": 0
+        },
+        "backend_541": {
+            "accuracy": 0
+        },
+        "backend_542": {
+            "accuracy": 0
+        },
+        "backend_543": {
+            "accuracy": 0
+        },
+        "backend_544": {
+            "accuracy": 0
+        },
+        "backend_545": {
+            "accuracy": 0
+        },
+        "backend_546": {
+            "accuracy": 0
+        },
+        "backend_547": {
+            "accuracy": 0
+        },
+        "backend_548": {
+            "accuracy": 0
+        },
+        "backend_549": {
+            "accuracy": 0
+        },
+        "backend_550": {
+            "accuracy": 0
+        },
+        "backend_551": {
+            "accuracy": 0
+        },
+        "backend_552": {
+            "accuracy": 0
+        },
+        "backend_553": {
+            "accuracy": 0
+        },
+        "backend_554": {
+            "accuracy": 0
+        },
+        "backend_555": {
+            "accuracy": 0
+        },
+        "backend_556": {
+            "accuracy": 0
+        },
+        "backend_557": {
+            "accuracy": 0
+        },
+        "backend_558": {
+            "accuracy": 0
+        },
+        "backend_559": {
+            "accuracy": 0
+        },
+        "backend_560": {
+            "accuracy": 0
+        },
+        "backend_561": {
+            "accuracy": 0
+        },
+        "backend_562": {
+            "accuracy": 0
+        },
+        "backend_563": {
+            "accuracy": 0
+        },
+        "backend_564": {
+            "accuracy": 0
+        },
+        "backend_565": {
+            "accuracy": 0
+        },
+        "backend_566": {
+            "accuracy": 0
+        },
+        "backend_567": {
+            "accuracy": 0
+        },
+        "backend_568": {
+            "accuracy": 0
+        },
+        "backend_569": {
+            "accuracy": 0
+        },
+        "backend_570": {
+            "accuracy": 0
+        },
+        "backend_571": {
+            "accuracy": 0
+        },
+        "backend_572": {
+            "accuracy": 0
+        },
+        "backend_573": {
+            "accuracy": 0
+        },
+        "backend_574": {
+            "accuracy": 0
+        },
+        "backend_575": {
+            "accuracy": 0
+        },
+        "backend_576": {
+            "accuracy": 0
+        },
+        "backend_577": {
+            "accuracy": 0
+        },
+        "backend_578": {
+            "accuracy": 0
+        },
+        "backend_579": {
+            "accuracy": 0
+        },
+        "backend_580": {
+            "accuracy": 0
+        },
+        "backend_581": {
+            "accuracy": 0
+        },
+        "backend_582": {
+            "accuracy": 0
+        },
+        "backend_583": {
+            "accuracy": 0
+        },
+        "backend_584": {
+            "accuracy": 0
+        },
+        "backend_585": {
+            "accuracy": 0
+        },
+        "backend_586": {
+            "accuracy": 0
+        },
+        "backend_587": {
+            "accuracy": 0
+        },
+        "backend_588": {
+            "accuracy": 0
+        },
+        "backend_589": {
+            "accuracy": 0
+        },
+        "backend_590": {
+            "accuracy": 0
+        },
+        "backend_591": {
+            "accuracy": 0
+        },
+        "backend_592": {
+            "accuracy": 0
+        },
+        "backend_593": {
+            "accuracy": 0
+        }
+    }
+}

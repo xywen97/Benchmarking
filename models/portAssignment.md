@@ -20,3 +20,4 @@
 18. 5017: qwen2.5 72b instruct
 19. 5018: qwen2 7b instruct
 20. 5019: qwen2 72b instruct
+21. 5020: qwen2 0.5b instruct

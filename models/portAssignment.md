@@ -27,3 +27,5 @@
 25. 5024: qwen VL Chat
 26. 5025: bunny v1.0 3b
 27. 5026: fuyu 8b
+28. 5027: hpt 1.5 edge
+29. 5028: internlm chat 7b

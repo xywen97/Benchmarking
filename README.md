@@ -23,6 +23,7 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 - [x] QWen2.5 7b Instruct
 - [x] QWen2.5 72b Instruct
 - [x] QWen2 7b Instruct
+- [x] QWen2 0.5b Instruct
 
 ### Multi-modal Model
 - [x] GPT-4o
@@ -36,6 +37,8 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 - [x] Llama3.2-11b-vision-instruct
 - [x] Llama3.2-90b-vision-instruct
 - [x] Kosmos2
+- [x] QWen VL
+- [x] QWen VL Chat
 
 ### Multi-modal Model (image not ready)
 - [x] Gemini series

@@ -21,6 +21,7 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 - [x] QWen2.5 7b Instruct
 - [x] QWen2.5 72b Instruct
 - [x] QWen2 7b Instruct
+- [x] QWen2 0.5b Instruct
 
 ### 多模态模型
 - [x] GPT-4o
@@ -34,6 +35,8 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 - [x] Llama3.2-11b-vision-instruct
 - [x] Llama3.2-90b-vision-instruct
 - [x] Kosmos2
+- [x] QWen VL
+- [x] QWen VL Chat
 
 ### 多模态模型 (图片端还未成功)
 - [x] Gemini series

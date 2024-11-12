@@ -1,0 +1,61 @@
+{
+    "tmp_0": {
+        "statement": "Here are several images",
+        "question": [
+            "Whats in these images?",
+            "What's the difference between these images?",
+            "How many images are there?"
+        ],
+        "question_type": [
+            "blank",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "2",
+            "b",
+            "b"
+        ],
+        "explanation": [
+            "Input Y arrives at at 0ns, so the output of that adder changes at 2ns.",
+            "We need a hold time of 4ns but the input changes at 2ns, so the hold time requirement is not satisfied.",
+            "The hold time requirement is not satisfied, so the circuit will not be consistent."
+        ],
+        "difficulty": [
+            "medium",
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "inference",
+            "inference",
+            "inference"
+        ],
+        "image": [
+            "data/tmp/image_0.png",
+            "data/tmp/image_1.png",
+            "data/tmp/image_2.png"
+        ],
+        "modality": [
+            "text&image",
+            "text&image",
+            "text&image"
+        ],
+        "source": "ucb_course",
+        "answer_preds": [
+            "None",
+            "None",
+            "None"
+        ],
+        "explanation_preds": [
+            "None",
+            "None",
+            "None"
+        ],
+        "raw_preds": [
+            "Figure 1: Examples of the SD and Ours models on the Sculpture and Cat datasets. The SD model is unable to capture the 3D structure of the sculpture. The Ours model, however, is able to capture the 3D structure of the sculpture.",
+            "A sculpture of two children reading a book in a garden, with corresponding outputs from a network trained to generate new sculptures",
+            "A cat is lying on the table next to a statue of two children reading a book in a garden."
+        ]
+    }
+}

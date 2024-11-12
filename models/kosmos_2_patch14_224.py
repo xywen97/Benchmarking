@@ -69,9 +69,10 @@ def generate_text():
         return combined_image
 
     # Combine images and use the combined image for processing
-    combined_image = combine_images(images)
-    # combined_image.save("combined_image.png")
-    images = [combined_image]
+    if len(images) > 1:
+        combined_image = combine_images(images)
+        # combined_image.save("combined_image.png")
+        images = [combined_image]
 
     inputs = processor(text=prompt, images=images, return_tensors="pt").to(device)
 

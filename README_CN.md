@@ -39,6 +39,7 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 - [x] QWen VL
 - [x] QWen VL Plus
 - [x] QWen VL Max
+- [ ] Bunny 1.0 3b (some bugs on the same device requirement)
 
 ### 多模态模型 (图片端还未成功)
 - [x] Gemini series

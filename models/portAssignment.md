@@ -26,3 +26,4 @@
 24. 5023: qwen VL Max
 25. 5024: qwen VL Chat
 26. 5025: bunny v1.0 3b
+27. 5026: fuyu 8b

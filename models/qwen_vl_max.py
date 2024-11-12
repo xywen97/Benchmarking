@@ -52,7 +52,7 @@ class QWenVLWeb:
 # model_id = 'Qwen/Qwen2.5-32B-Instruct'
 # model_id = 'Qwen/Qwen2.5-72B-Instruct'
 
-model_id = "qwen-vl-plus"
+model_id = "qwen-vl-max"
 
 api_key = 'sk-120232fab1ad45cb8b043be1c6c5517f'
 
@@ -72,7 +72,7 @@ def generate_text():
         The image path is: {image_paths}
     """)
     if model_id == 'qwen-vl-max':
-        text += ' (you need to answer in English)'
+        prompt += ' (you need to answer in English)'
     response = model(prompt, imgs=image_paths)
 
     # answer_start = response.find('</img>') + len('</img>')
@@ -82,4 +82,4 @@ def generate_text():
     return jsonify(response)
 
 if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0', port=5022)
+    app.run(debug=False, host='0.0.0.0', port=5023)

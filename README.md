@@ -38,7 +38,8 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 - [x] Llama3.2-90b-vision-instruct
 - [x] Kosmos2
 - [x] QWen VL
-- [x] QWen VL Chat
+- [x] QWen VL Plus
+- [x] QWen VL Max
 
 ### Multi-modal Model (image not ready)
 - [x] Gemini series

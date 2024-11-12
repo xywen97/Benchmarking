@@ -22,4 +22,5 @@
 20. 5019: qwen2 72b instruct
 21. 5020: qwen2 0.5b instruct
 22. 5021: qwen VL
-23. 5022: qwen VL Chat
+23. 5022: qwen VL Plus
+24. 5023: qwen VL Max

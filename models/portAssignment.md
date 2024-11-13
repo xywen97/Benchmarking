@@ -29,3 +29,5 @@
 27. 5026: fuyu 8b
 28. 5027: hpt 1.5 edge
 29. 5028: internlm chat 7b
+30. 5029: internlm chat 20b
+31. 5030: internlm xcomposer vl 7b

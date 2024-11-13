@@ -29,6 +29,8 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 - [x] Internlm chat 20b
 - [x] Internlm2 chat 7b
 - [x] Internlm2 chat 20b
+- [x] Internlm2.5 7b chat
+- [x] Internlm2.5 20b chat
 
 ### Multi-modal Model
 - [x] GPT-4o

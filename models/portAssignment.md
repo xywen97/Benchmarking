@@ -32,5 +32,7 @@
 30. 5029: internlm chat 20b
 31. 5030: internlm xcomposer vl 7b
 32. 5031: internlm xcomposer2 vl 7b
-33. 5032: internlm2 7b
-34. 5033: internlm2 20b
+33. 5032: internlm2 chat 7b
+34. 5033: internlm2 chat 20b
+35. 5034: internlm2.5 7b chat
+36. 5035: internlm2.5 20b chat

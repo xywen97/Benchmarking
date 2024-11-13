@@ -1,0 +1,61 @@
+{
+    "tmp_0": {
+        "statement": "Here are several images",
+        "question": [
+            "Whats in these images?",
+            "What's the difference between these images?",
+            "How many images are there?"
+        ],
+        "question_type": [
+            "blank",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "2",
+            "b",
+            "b"
+        ],
+        "explanation": [
+            "Input Y arrives at at 0ns, so the output of that adder changes at 2ns.",
+            "We need a hold time of 4ns but the input changes at 2ns, so the hold time requirement is not satisfied.",
+            "The hold time requirement is not satisfied, so the circuit will not be consistent."
+        ],
+        "difficulty": [
+            "medium",
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "inference",
+            "inference",
+            "inference"
+        ],
+        "image": [
+            "data/tmp/image_0.png",
+            "data/tmp/image_1.png",
+            "data/tmp/image_2.png"
+        ],
+        "modality": [
+            "text&image",
+            "text&image",
+            "text&image"
+        ],
+        "source": "ucb_course",
+        "answer_preds": [
+            "The images depict scenes of tranquility and reflection, possibly in a garden setting. The first and third images show a statue of a child reading a book, suggesting themes of learning, imagination, and peace. The second image features a cat resting on a table with a checkered cloth, evoking a sense of domesticity and contentment.",
+            "The images depict similar scenes, but there are key differences. In the first image, the focus is on a close-up of a statue of a child reading a book in a garden. In the second image, the focus shifts to a cat laying on a table with a blue and white checkered tablecloth. The repetition of the close-up of a statue of a child reading a book in a garden in the provided cues suggests that this scene is a common element across the images, while the cat on the table with the checkered cloth introduces a new element.",
+            "3"
+        ],
+        "explanation_preds": [
+            "The recurring element of a child reading a book in the first and third images symbolizes the value of education and the joy of immersing oneself in literature. The cat in the second image is a common symbol of relaxation and companionship, while the checkered tablecloth adds a touch of traditional homey decor. Together, these images paint a picture of a serene, contemplative environment.",
+            "The images appear to be part of a series or set, with a recurring theme of a child statue in a garden, but each image introduces a new element or perspective. The cat on the table adds a new character and setting to the scene, distinguishing it from the others.",
+            "Based on the provided descriptions, there are three distinct images. The first is a close-up of a statue of a child reading a book in a garden. The second is of a cat laying on a table with a blue and white checkered tablecloth. The third image is again a close-up of a statue of a child reading a book in a garden. It is important to note that while the descriptions for the first and third images are identical, they are likely separate images due to the uniqueness of each statue or the angle of the photograph."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}

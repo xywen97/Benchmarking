@@ -27,6 +27,8 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 - [x] Internlm chat 20b
 - [x] Internlm2 chat 7b
 - [x] Internlm2 chat 20b
+- [x] Internlm2.5 7b chat
+- [x] Internlm2.5 20b chat
 
 ### 多模态模型
 - [x] GPT-4o

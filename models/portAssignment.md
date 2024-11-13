@@ -36,3 +36,4 @@
 34. 5033: internlm2 chat 20b
 35. 5034: internlm2.5 7b chat
 36. 5035: internlm2.5 20b chat
+37. 5036: miniCPM-V

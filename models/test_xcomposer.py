@@ -1,21 +1,23 @@
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoModel, AutoTokenizer
 
-model_path = "/data/xiangyu/benchmarkModels/CHENCHEN/huggingface/hub/models--internlm--internlm2-chat-7b/snapshots/e7c2e16310627a098500e3ca30eaf4cd2690b9fc"
+torch.set_grad_enabled(False)
 
+# init model and tokenizer
+# model_path = "/data/xiangyu/benchmarkModels/CHENCHEN/huggingface/hub/models--internlm--internlm-xcomposer-vl-7b/snapshots/8a8a3ae062068c45a0c25875146237cc8b5e20e1"
+model_path = "/data/xiangyu/benchmarkModels/internlm-xcomposer2-vl-7b"
+model = AutoModel.from_pretrained(model_path, trust_remote_code=True).cuda().eval()
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
-# Set `torch_dtype=torch.float16` to load model in float16, otherwise it will be loaded as float32 and cause OOM Error.
-model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16, trust_remote_code=True).cuda()
-model = model.eval()
-response, history = model.chat(tokenizer, "hello", history=[])
+# model.tokenizer = tokenizer
+
+# support only one image
+query = '<ImageHere><ImageHere>Please describe this image in detail.'
+image = ['aiyinsitan.jpg', 'combined_image_hpt_1_5_edge.png']
+with torch.cuda.amp.autocast():
+  response, _ = model.chat(tokenizer, query=query, image=image, history=[], do_sample=False)
 print(response)
-# Hello! How can I help you today?
-response, history = model.chat(tokenizer, "please provide three suggestions about time management. You should answer in English.", history=history)
-print(response)
-# Sure, here are three tips for effective time management:
-#
-# 1. Prioritize tasks based on importance and urgency: Make a list of all your tasks and categorize them into "important and urgent," "important but not urgent," and "not important but urgent." Focus on completing the tasks in the first category before moving on to the others.
-# 2. Use a calendar or planner: Write down deadlines and appointments in a calendar or planner so you don't forget them. This will also help you schedule your time more effectively and avoid overbooking yourself.
-# 3. Minimize distractions: Try to eliminate any potential distractions when working on important tasks. Turn off notifications on your phone, close unnecessary tabs on your computer, and find a quiet place to work if possible.
-# 
-# Remember, good time management skills take practice and patience. Start with small steps and gradually incorporate these habits into your daily routine.
+#The image features a quote by Oscar Wilde, "Live life with no excuses, travel with no regret,"
+# set against a backdrop of a breathtaking sunset. The sky is painted in hues of pink and orange,
+# creating a serene atmosphere. Two silhouetted figures stand on a cliff, overlooking the horizon.
+# They appear to be hiking or exploring, embodying the essence of the quote.
+# The overall scene conveys a sense of adventure and freedom, encouraging viewers to embrace life without hesitation or regrets.

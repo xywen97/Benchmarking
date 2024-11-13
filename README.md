@@ -51,6 +51,7 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 - [ ] hpt 1.5 edge (some bugs about input of size)
 - [x] internlm xcomposer vl 7b
 - [x] miniCPM-V
+- [x] miniCPM-V2
 
 ### Multi-modal Model (image not ready)
 - [x] Gemini series

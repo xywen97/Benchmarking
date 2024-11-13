@@ -10,9 +10,9 @@ app = Flask(__name__)
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-model_path = "/data/xiangyu/benchmarkModels/CHENCHEN/huggingface/hub/models--internlm--internlm-xcomposer-vl-7b/snapshots/8a8a3ae062068c45a0c25875146237cc8b5e20e1"
+# model_path = "/data/xiangyu/benchmarkModels/CHENCHEN/huggingface/hub/models--internlm--internlm-xcomposer-vl-7b/snapshots/8a8a3ae062068c45a0c25875146237cc8b5e20e1"
 # model_path = "/data/xiangyu/benchmarkModels/CHENCHEN/huggingface/hub/models--internlm--internlm2_5-7b-chat/snapshots/9b8d9553846ecf6393f3408fa9d3ec9928fdab4d"
-# model_path = "/data/xiangyu/benchmarkModels/CHENCHEN/huggingface/hub/models--internlm--internlm-xcomposer2-vl-7b/snapshots/c67bd06390dbe068a582c6561570725b1289a7c5"
+model_path = "/data/xiangyu/benchmarkModels/CHENCHEN/huggingface/hub/models--internlm--internlm-xcomposer2-vl-7b/snapshots/c67bd06390dbe068a582c6561570725b1289a7c5"
 
 model = AutoModel.from_pretrained(model_path, trust_remote_code=True).cuda().eval()
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
@@ -59,8 +59,9 @@ def generate_text():
                     combined_image.paste(images[i + j], (x_offset, y_offset))
                     x_offset += max_width
             y_offset += max(heights)
+
         combined_image = combined_image.resize((512, 512))
-        
+
         return combined_image
 
     # Combine images and use the combined image for processing
@@ -68,21 +69,12 @@ def generate_text():
     # it reuqires the image path as input, not the loaded images
     if len(images) > 1:
         combined_image = combine_images(images)
-        combined_image_name = "combined_image_internlm_xcomposer_vl.png"
+        combined_image_name = "combined_image_internlm_xcomposer2_vl.png"
         combined_image.save(combined_image_name)
         combined_image_path = f"/home/xiangyu/project/multimodalEDABenchmarking/models/{combined_image_name}"
         images = [combined_image_path]
     else:
         images = image_paths
-
-    # imagesPrompt = []
-    # for i in range(len(images)):
-    #     imagesPrompt.append(f"Image{i+1} <ImageHere>; ")
-    
-    # image_prompt = ''.join(imagesPrompt) 
-
-
-    # query = image_prompt + " " + prompt
 
     print(f"""
         This is the Llama-3___2-90B-Vision-Instruct.py script.
@@ -92,12 +84,22 @@ def generate_text():
     # with torch.cuda.amp.autocast():
     #     response, _ = model.chat(tokenizer, query=query, image=image_paths, history=[], do_sample=False)
     if len(images) > 0:
-        response = model.generate(prompt, images[0])
+        imagesPrompt = []
+        for i in range(len(images)):
+            imagesPrompt.append(f"<ImageHere>; ")
+        
+        image_prompt = ''.join(imagesPrompt) 
+        prompt = image_prompt + " " + prompt
+
+        # response = model.generate(prompt, images[0])
+        with torch.cuda.amp.autocast():
+            response, _ = model.chat(tokenizer, query=prompt, image=images[0], history=[], do_sample=False)
     else:
-        response = model.generate(prompt)
+        with torch.cuda.amp.autocast():
+            response, _ = model.chat(tokenizer, query=prompt, image=None, history=[], do_sample=False)
     print(response)
 
     return jsonify(response)
 
 if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0', port=5030)
+    app.run(debug=False, host='0.0.0.0', port=5031)

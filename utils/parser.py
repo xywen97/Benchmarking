@@ -1,5 +1,5 @@
 from pyexpat import model
-from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series, query_reka_series, query_instructblip_flan_t5_xl, query_instructblip_flan_t5_xxl, query_blip2_flan_t5_xl, query_blip2_flan_t5_xxl, query_chatglm3_6b, query_llama3_1_70b_instruct, query_llama3_1_8b_instruct, query_llama3_2_11b_vision_instruct, query_llama3_2_90b_vision_instruct, query_kosmos_2_patch14_224, query_qwen_2_5_7b_instruct, query_qwen_2_5_72b_instruct, query_qwen_2_7b_instruct, query_qwen_2_72b_instruct, query_qwen_2_0_5b_instruct, query_qwen_vl, query_qwen_vl_plus, query_qwen_vl_max, query_qwen_vl_chat, query_bunny_1_0_3b, query_fuyu_8b, query_hpt_1_5_edge, query_internlm_chat_7b, query_internlm_chat_20b, query_internlm_xcomposer_vl_7b, query_internlm_xcomposer2_vl_7b, query_internlm2_chat_7b, query_internlm2_chat_20b, query_internlm2_5_chat_7b, query_internlm2_5_chat_20b, query_miniCPM_V, query_miniCPM_V2
+from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series, query_reka_series, query_instructblip_flan_t5_xl, query_instructblip_flan_t5_xxl, query_blip2_flan_t5_xl, query_blip2_flan_t5_xxl, query_chatglm3_6b, query_llama3_1_70b_instruct, query_llama3_1_8b_instruct, query_llama3_2_11b_vision_instruct, query_llama3_2_90b_vision_instruct, query_kosmos_2_patch14_224, query_qwen_2_5_7b_instruct, query_qwen_2_5_72b_instruct, query_qwen_2_7b_instruct, query_qwen_2_72b_instruct, query_qwen_2_0_5b_instruct, query_qwen_vl, query_qwen_vl_plus, query_qwen_vl_max, query_qwen_vl_chat, query_bunny_1_0_3b, query_fuyu_8b, query_hpt_1_5_edge, query_internlm_chat_7b, query_internlm_chat_20b, query_internlm_xcomposer_vl_7b, query_internlm_xcomposer2_vl_7b, query_internlm2_chat_7b, query_internlm2_chat_20b, query_internlm2_5_chat_7b, query_internlm2_5_chat_20b, query_miniCPM_V, query_miniCPM_V2, query_miniCPM3_4b
 import json
 import base64
 import time
@@ -96,6 +96,7 @@ def choose_model(model_name):
         "internlm2_5_chat_20b": query_internlm2_5_chat_20b,
         "minicpm_v": query_miniCPM_V,
         "minicpm_v2": query_miniCPM_V2,
+        "minicpm3_4b": query_miniCPM3_4b,
     }
     if model_name in model_mapping:
         return model_mapping[model_name]
@@ -151,7 +152,8 @@ def check_if_multi_modal(model_name):
         "internlm2_5_chat_7b": False,
         "internlm2_5_chat_20b": False,
         "minicpm_v": "type_raw",
-        "minicpm_v2": "type_raw"
+        "minicpm_v2": "type_raw",
+        "minicpm3_4b": False
     }
 
     return is_multi_mapping[model_name]

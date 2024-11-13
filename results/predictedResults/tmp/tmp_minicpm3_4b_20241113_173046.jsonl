@@ -1,0 +1,61 @@
+{
+    "tmp_0": {
+        "statement": "Here are several images",
+        "question": [
+            "Whats in these images?",
+            "What's the difference between these images?",
+            "How many images are there?"
+        ],
+        "question_type": [
+            "blank",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "2",
+            "b",
+            "b"
+        ],
+        "explanation": [
+            "Input Y arrives at at 0ns, so the output of that adder changes at 2ns.",
+            "We need a hold time of 4ns but the input changes at 2ns, so the hold time requirement is not satisfied.",
+            "The hold time requirement is not satisfied, so the circuit will not be consistent."
+        ],
+        "difficulty": [
+            "medium",
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "inference",
+            "inference",
+            "inference"
+        ],
+        "image": [
+            "data/tmp/image_0.png",
+            "data/tmp/image_1.png",
+            "data/tmp/image_2.png"
+        ],
+        "modality": [
+            "text&image",
+            "text&image",
+            "text&image"
+        ],
+        "source": "ucb_course",
+        "answer_preds": [
+            "The images show a statue of a child reading a book in a garden, a cat laying on a table with a blue and white checkered tablecloth, and another statue of a child reading a book in a garden.",
+            "The first two images are similar as they both show a close-up of a statue of a child reading a book in a garden. The third image shows a cat lying on a table with a blue and white checkered tablecloth, which is different from the first two images.",
+            "3"
+        ],
+        "explanation_preds": [
+            "By analyzing the provided images, I identified the different scenes depicted. The first image shows a statue of a child reading a book in a garden, the second image shows a cat laying on a table with a specific tablecloth, and the third image shows another statue of a child reading a book in a garden.",
+            "The key difference lies in the subjects of the images. The first two images have a child statue in a garden, while the third image features a cat on a table.",
+            "The provided descriptions mention three distinct images: a statue of a child reading a book in a garden, a cat on a table with a checkered cloth, and another statue of a child reading a book in a garden."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}

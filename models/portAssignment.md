@@ -39,3 +39,5 @@
 37. 5036: miniCPM-V
 38. 5037: miniCPM-V2
 39. 5038: miniCPM3-4b
+40. 5039: miniCPM-1b-sft-bf16
+41. 5040: miniCPM-2b-sft-bf16

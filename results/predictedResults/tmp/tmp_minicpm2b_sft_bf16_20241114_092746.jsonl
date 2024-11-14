@@ -1,0 +1,61 @@
+{
+    "tmp_0": {
+        "statement": "Here are several images",
+        "question": [
+            "Whats in these images?",
+            "What's the difference between these images?",
+            "How many images are there?"
+        ],
+        "question_type": [
+            "blank",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "2",
+            "b",
+            "b"
+        ],
+        "explanation": [
+            "Input Y arrives at at 0ns, so the output of that adder changes at 2ns.",
+            "We need a hold time of 4ns but the input changes at 2ns, so the hold time requirement is not satisfied.",
+            "The hold time requirement is not satisfied, so the circuit will not be consistent."
+        ],
+        "difficulty": [
+            "medium",
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "inference",
+            "inference",
+            "inference"
+        ],
+        "image": [
+            "data/tmp/image_0.png",
+            "data/tmp/image_1.png",
+            "data/tmp/image_2.png"
+        ],
+        "modality": [
+            "text&image",
+            "text&image",
+            "text&image"
+        ],
+        "source": "ucb_course",
+        "answer_preds": [
+            "A close-up of a statue of a child reading a book in a garden, and a cat laying on a table with a blue and white checkered tablecloth.",
+            "The images differ in their subjects and settings. The first image features a statue of a child reading a book in a garden, while the second image shows a cat laying on a table with a blue and white checkered tablecloth. The third image is also in a garden but features a different setting, possibly a different statue of a child.",
+            "There are 3 images."
+        ],
+        "explanation_preds": [
+            "Based on the provided images, the answer can be deduced by analyzing the content and context of each image. The first image shows a statue of a child reading a book in a garden, while the second image features a cat lying on a table with a blue and white checkered tablecloth. These two images together provide a complete answer to the question.",
+            "The images are different in their subjects and settings, showcasing variations in composition and context.",
+            "The first image shows a statue of a child reading a book in a garden. The second image is a close up of a cat laying on a table with a blue and white checkered tablecloth. The third image is also a close up of a statue of a child reading a book in a garden."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}

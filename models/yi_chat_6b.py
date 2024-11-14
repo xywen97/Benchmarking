@@ -1,3 +1,6 @@
+# Transformers: 4.36/4.37
+# Environment: minigpt4v
+
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from flask import Flask, request, jsonify
 import torch

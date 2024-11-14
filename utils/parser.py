@@ -202,8 +202,8 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
     if save_path is None:
         raise ValueError("The save_path cannot be None. Please provide a valid path to save the results.")
 
-    if field.lower() not in ['architecture', 'backend', 'general', 'netlist', 'rtl', 'spec', 'tmp']:
-        raise ValueError(f"Field '{field}' is not recognized. Please choose from 'architecture', 'backend', 'general', 'netlist', 'rtl', 'spec'.")
+    if field.lower() not in ['backend', 'general', 'netlist', 'rtl', 'spec', 'tmp', 'frontend']:
+        raise ValueError(f"Field '{field}' is not recognized. Please choose from: 'backend', 'general', 'netlist', 'rtl', 'spec', 'frontend'.")
     
     field_responses = {}
 
@@ -331,7 +331,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
                     """.strip()
                 else:
                     prompt_mapping[question_type] = """
-                        Answer this question in Json format and return Json object only. The response format should be {{"answer": your answer to this question, "explanation": no more than 3 sentences for explanation on your thought to give the answer.}}
+                        Answer this question and return in Json format only. The response format should be {{"answer": your answer to this question, "explanation": no more than 3 sentences for explanation on your thought to give the answer.}}
                     """.strip()
 
 
@@ -349,7 +349,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
                     if len(images) == 0:
                         entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
                     else:
-                        entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type] + " You may refer to the provided images."
+                        entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type] + " You may refer to the provided images. "
                 
             else:
                 print("not handled yet..")

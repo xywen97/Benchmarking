@@ -11,6 +11,7 @@ def main():
     parser = argparse.ArgumentParser(description="Benchmarking script for model evaluation.")
     parser.add_argument('--field', type=str, required=True, help='Field to benchmark, e.g., spec, general, etc.')
     parser.add_argument('--model', type=str, required=True, help='Model to use, e.g., gpt4o, llama2_7b, etc.')
+    
     args = parser.parse_args()
 
     data_path = f"data/{args.field}.json"

@@ -46,3 +46,5 @@
 44. 5043: intern VL2 40b
 45. 5044: internvl-chat-v1.5
 46. 5045: mini internvl-chat-2b-v1.5
+47. 5046: Yi VL 6b
+48. 5047: Yi VL 34b

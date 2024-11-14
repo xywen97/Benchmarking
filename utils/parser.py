@@ -1,5 +1,5 @@
 from pyexpat import model
-from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series, query_reka_series, query_instructblip_flan_t5_xl, query_instructblip_flan_t5_xxl, query_blip2_flan_t5_xl, query_blip2_flan_t5_xxl, query_chatglm3_6b, query_llama3_1_70b_instruct, query_llama3_1_8b_instruct, query_llama3_2_11b_vision_instruct, query_llama3_2_90b_vision_instruct, query_kosmos_2_patch14_224, query_qwen_2_5_7b_instruct, query_qwen_2_5_72b_instruct, query_qwen_2_7b_instruct, query_qwen_2_72b_instruct, query_qwen_2_0_5b_instruct, query_qwen_vl, query_qwen_vl_plus, query_qwen_vl_max, query_qwen_vl_chat, query_bunny_1_0_3b, query_fuyu_8b, query_hpt_1_5_edge, query_internlm_chat_7b, query_internlm_chat_20b, query_internlm_xcomposer_vl_7b, query_internlm_xcomposer2_vl_7b, query_internlm2_chat_7b, query_internlm2_chat_20b, query_internlm2_5_chat_7b, query_internlm2_5_chat_20b, query_miniCPM_V, query_miniCPM_V2, query_miniCPM3_4b, query_miniCPM1b_sft_bf16, query_miniCPM2b_sft_bf16, query_miniCPM_llama3_v_2_5, query_internvl2_8b, query_internvl2_40b, query_internvl_chat_v1_5, query_internvl_mini_chat_2b_v1_5
+from .model_apis import query_llama2_7b, query_llama2_13b, query_llama3_8b_instruct, query_mistrial_7b, query_gpt35, query_gpt4o, query_gpt4, query_gpt4_turbo, query_gpt4v, image_captioning, query_minigpt4_vicuna7b, query_gemini_series, query_claude_series, query_reka_series, query_instructblip_flan_t5_xl, query_instructblip_flan_t5_xxl, query_blip2_flan_t5_xl, query_blip2_flan_t5_xxl, query_chatglm3_6b, query_llama3_1_70b_instruct, query_llama3_1_8b_instruct, query_llama3_2_11b_vision_instruct, query_llama3_2_90b_vision_instruct, query_kosmos_2_patch14_224, query_qwen_2_5_7b_instruct, query_qwen_2_5_72b_instruct, query_qwen_2_7b_instruct, query_qwen_2_72b_instruct, query_qwen_2_0_5b_instruct, query_qwen_vl, query_qwen_vl_plus, query_qwen_vl_max, query_qwen_vl_chat, query_bunny_1_0_3b, query_fuyu_8b, query_hpt_1_5_edge, query_internlm_chat_7b, query_internlm_chat_20b, query_internlm_xcomposer_vl_7b, query_internlm_xcomposer2_vl_7b, query_internlm2_chat_7b, query_internlm2_chat_20b, query_internlm2_5_chat_7b, query_internlm2_5_chat_20b, query_miniCPM_V, query_miniCPM_V2, query_miniCPM3_4b, query_miniCPM1b_sft_bf16, query_miniCPM2b_sft_bf16, query_miniCPM_llama3_v_2_5, query_internvl2_8b, query_internvl2_40b, query_internvl_chat_v1_5, query_internvl_mini_chat_2b_v1_5, query_yi_vl_6b, query_yi_vl_34b
 
 
 import json
@@ -105,7 +105,9 @@ def choose_model(model_name):
         "internvl2_8b": query_internvl2_8b,
         "internvl2_40b": query_internvl2_40b,
         "internvl_chat_v1_5": query_internvl_chat_v1_5,
-        "internvl_mini_chat_2b_v1_5": query_internvl_mini_chat_2b_v1_5
+        "internvl_mini_chat_2b_v1_5": query_internvl_mini_chat_2b_v1_5, 
+        "yi_vl_6b": query_yi_vl_6b,
+        "yi_vl_34b": query_yi_vl_34b,
     }
     if model_name in model_mapping:
         return model_mapping[model_name]
@@ -169,7 +171,9 @@ def check_if_multi_modal(model_name):
         "internvl2_8b": "type_raw",
         "internvl2_40b": "type_raw",
         "internvl_chat_v1_5": "type_raw",
-        "internvl_mini_chat_2b_v1_5": "type_raw"
+        "internvl_mini_chat_2b_v1_5": "type_raw",
+        "yi_vl_6b": "type_raw",
+        "yi_vl_34b": "type_raw",
     }
 
     return is_multi_mapping[model_name]
@@ -369,14 +373,21 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
                                 response = response[7:-3].strip()
                             # print(response)
                             response_data = json.loads(response)
-                            answer_pred = response_data.get("answer", "No answer found")
-                            explanation_pred = response_data.get("explanation", "No explanation found")
-                            print(f"--> Extracted Answer: {answer_pred}")
-                            print(f"--> Extracted Explanation: {explanation_pred}")
-                            answer_preds.append(str(answer_pred))
-                            explanation_preds.append(explanation_pred)
-                            raw_preds.append("None")
-                            break
+                            if isinstance(response_data, int):
+                                answer_preds.append("None")
+                                explanation_preds.append("None")
+                                raw_preds.append(response)
+                                print(f"Int Type, the raw answer: {response}")
+                                break
+                            else:
+                                answer_pred = response_data.get("answer", "No answer found")
+                                explanation_pred = response_data.get("explanation", "No explanation found")
+                                print(f"--> Extracted Answer: {answer_pred}")
+                                print(f"--> Extracted Explanation: {explanation_pred}")
+                                answer_preds.append(str(answer_pred))
+                                explanation_preds.append(explanation_pred)
+                                raw_preds.append("None")
+                                break
                         except json.JSONDecodeError:
                             print("Failed to decode JSON from response.")
                             if attempt == 2:

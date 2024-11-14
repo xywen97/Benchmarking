@@ -638,9 +638,31 @@ def query_yi_vl_6b(prompt, images=None, image_captions=None):
         return response.json()
     else:
         return "Error: " + str(response.status_code)
-    
+
 def query_yi_vl_34b(prompt, images=None, image_captions=None):
     url = 'http://127.0.0.1:5047/generate'
+    headers = {'Content-Type': 'application/json'}
+    data = json.dumps({"prompt": prompt, "image_paths": images})
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return "Error: " + str(response.status_code)
+    
+def query_yi_chat_6b(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5048/generate'
+    headers = {'Content-Type': 'application/json'}
+    data = json.dumps({"prompt": prompt, "image_paths": images})
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return "Error: " + str(response.status_code)
+
+def query_yi_chat_34b(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5049/generate'
     headers = {'Content-Type': 'application/json'}
     data = json.dumps({"prompt": prompt, "image_paths": images})
 

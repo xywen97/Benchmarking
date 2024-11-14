@@ -1,0 +1,61 @@
+{
+    "tmp_0": {
+        "statement": "Here are several images",
+        "question": [
+            "Whats in these images?",
+            "What's the difference between these images?",
+            "How many images are there?"
+        ],
+        "question_type": [
+            "blank",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "2",
+            "b",
+            "b"
+        ],
+        "explanation": [
+            "Input Y arrives at at 0ns, so the output of that adder changes at 2ns.",
+            "We need a hold time of 4ns but the input changes at 2ns, so the hold time requirement is not satisfied.",
+            "The hold time requirement is not satisfied, so the circuit will not be consistent."
+        ],
+        "difficulty": [
+            "medium",
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "inference",
+            "inference",
+            "inference"
+        ],
+        "image": [
+            "data/tmp/image_0.png",
+            "data/tmp/image_1.png",
+            "data/tmp/image_2.png"
+        ],
+        "modality": [
+            "text&image",
+            "text&image",
+            "text&image"
+        ],
+        "source": "ucb_course",
+        "answer_preds": [
+            "The images depict a serene and educational environment, with a statue of a child reading a book in a garden, a cat resting on a tablecloth, and a close-up of the same statue.",
+            "{'statue_child_reading': 'The first image is a close-up of a statue of a child reading a book in a garden.', 'cat_on_table': 'The second image is of a cat that is laying on a table with a blue and white checkered table cloth.', 'statue_child_reading_garden': 'The third image is another close-up of a statue of a child reading a book in a garden.'}",
+            "3"
+        ],
+        "explanation_preds": [
+            "The presence of a child reading and a cat in a garden suggests a peaceful and nurturing setting. The checkered tablecloth may imply a setting for a meal or a place of gathering. The repetition of the statue of the child reading a book emphasizes the importance of learning and literacy.",
+            "The main difference between these images is the presence of the cat on the table, which is not present in the other two images. The first and third images are both close-ups of statues of children reading books, but they are taken in different contexts (garden versus indoor setting).",
+            "The images provided include a close up of a statue of a child reading a book in a garden, a cat laying on a table with a blue and white checkered table cloth, and another close up of the same statue of a child reading a book in a garden. Therefore, there are 3 images in total."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "tmp_0": {
+        "statement": "Here are several images",
+        "question": [
+            "Whats in these images?",
+            "What's the difference between these images?",
+            "How many images are there?"
+        ],
+        "question_type": [
+            "blank",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "2",
+            "b",
+            "b"
+        ],
+        "explanation": [
+            "Input Y arrives at at 0ns, so the output of that adder changes at 2ns.",
+            "We need a hold time of 4ns but the input changes at 2ns, so the hold time requirement is not satisfied.",
+            "The hold time requirement is not satisfied, so the circuit will not be consistent."
+        ],
+        "difficulty": [
+            "medium",
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "inference",
+            "inference",
+            "inference"
+        ],
+        "image": [
+            "data/tmp/image_0.png",
+            "data/tmp/image_1.png",
+            "data/tmp/image_2.png"
+        ],
+        "modality": [
+            "text&image",
+            "text&image",
+            "text&image"
+        ],
+        "source": "ucb_course",
+        "answer_preds": [
+            "['(a) SD', '(b) Pose', '(c) ControlNet', '(d) Adaptor', '(e) Ours']",
+            "Images (a), (b), and (c) depict a sculpture of children reading, while images (d) and (e) show different iterations of the same sculpture in more detail. Unlike the others, image (d) focuses on a single child sitting alone, and image (e) shows a similar pair of children together. Images (b), (c), and (d) appear to be digitally manipulated or transformed versions of the physical sculpture.",
+            "None"
+        ],
+        "explanation_preds": [
+            "The images display a series of results related to generative models for sculptures of two children reading a book. Each letter represents a different stage or output of the model from left to right: (a) SD (Single Diffusion), (b) Pose where the sculpture is in a desired pose, (c) ControlNet, (d) Adaptor, and (e) Ours which likely refers to a generated sculpture based on the specifications provided to the model.",
+            "Images (a), (b), and (c) show a sculpture with two children reading a book, set in an outdoor environment. Images (b), (c), and (d) look like they're altered or manipulated versions of the original. The sculpture's pose changes from a single child reading (on a bench, as in image (a) and (c)) to a child reading with an adult (in image (e)). Image (d) seems to be digitally altered to show only one child sitting, perhaps showing the 'before' and 'after' effects of a certain digital transformation. The differences indicate that the sculpture itself may have more variations in pose or context than initially apparent.",
+            "None"
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "{{\"answer\": 5, \"explanation\": The image provided contains five distinct parts, each labelled with a letter, representing five different models or data examples used for comparison or reference.\"}}"
+        ]
+    }
+}

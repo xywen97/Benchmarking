@@ -54,6 +54,10 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 - [x] miniCPM-V
 - [x] miniCPM-V2
 - [x] miniCPM-LLaMa3-V-2.5
+- [x] internvl2-8b
+- [x] internvl2-40b
+- [x] internvl-chat-v1.5
+- [x] mini-internvl-chat-2b-v1.5
 
 ### 多模态模型 (图片端还未成功)
 - [x] Gemini series

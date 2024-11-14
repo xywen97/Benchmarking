@@ -56,6 +56,10 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 - [x] miniCPM-V
 - [x] miniCPM-V2
 - [x] miniCPM-LLaMa3-V-2.5
+- [x] internvl2-8b
+- [x] internvl2-40b
+- [x] internvl-chat-v1.5
+- [x] mini-internvl-chat-2b-v1.5
 
 ### Multi-modal Model (image not ready)
 - [x] Gemini series

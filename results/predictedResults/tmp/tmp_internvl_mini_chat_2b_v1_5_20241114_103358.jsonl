@@ -1,0 +1,61 @@
+{
+    "tmp_0": {
+        "statement": "Here are several images",
+        "question": [
+            "Whats in these images?",
+            "What's the difference between these images?",
+            "How many images are there?"
+        ],
+        "question_type": [
+            "blank",
+            "single",
+            "single"
+        ],
+        "answer": [
+            "2",
+            "b",
+            "b"
+        ],
+        "explanation": [
+            "Input Y arrives at at 0ns, so the output of that adder changes at 2ns.",
+            "We need a hold time of 4ns but the input changes at 2ns, so the hold time requirement is not satisfied.",
+            "The hold time requirement is not satisfied, so the circuit will not be consistent."
+        ],
+        "difficulty": [
+            "medium",
+            "easy",
+            "easy"
+        ],
+        "ability": [
+            "inference",
+            "inference",
+            "inference"
+        ],
+        "image": [
+            "data/tmp/image_0.png",
+            "data/tmp/image_1.png",
+            "data/tmp/image_2.png"
+        ],
+        "modality": [
+            "text&image",
+            "text&image",
+            "text&image"
+        ],
+        "source": "ucb_course",
+        "answer_preds": [
+            "Sculpture, a statue of two children reading a book in garden",
+            "The texts in the image focus on different image processing techniques and the outcome of applying various algorithms/visualizations.",
+            "4"
+        ],
+        "explanation_preds": [
+            "These images showcase various artistic renderings of sculptures depicting children reading in a garden. Each artwork is associated with specific creative methods and algorithms, represented in terms of graphical depiction in (a) SD, (b) Pose, (c) ControlNet, (d) Adapter, and (e) Ours.",
+            "The image provides multiple graphical representations and sculptures of children reading together in a garden, each depicting the unique outcomes obtained from respective applications of a style (SD), pose (Pose), a neural network (ControlNet), an adaptive technique (Adapter), and the original image (Ours) methodology. The visual differences illustrate how different techniques contribute to reinterpreting and enhancing the image quality.",
+            "The provided images are five different images. They are labeled as (a) SD, (b) Pose, (c) ControlNet, (d) Adapter, and (e) Ours."
+        ],
+        "raw_preds": [
+            "None",
+            "None",
+            "None"
+        ]
+    }
+}

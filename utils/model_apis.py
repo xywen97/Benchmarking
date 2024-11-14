@@ -584,6 +584,50 @@ def query_miniCPM_llama3_v_2_5(prompt, images=None, image_captions=None):
     else:
         return "Error: " + str(response.status_code)
 
+def query_internvl2_8b(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5042/generate'
+    headers = {'Content-Type': 'application/json'}
+    data = json.dumps({"prompt": prompt, "image_paths": images})
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return "Error: " + str(response.status_code)
+
+def query_internvl2_40b(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5043/generate'
+    headers = {'Content-Type': 'application/json'}
+    data = json.dumps({"prompt": prompt, "image_paths": images})
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return "Error: " + str(response.status_code)
+
+def query_internvl_chat_v1_5(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5044/generate'
+    headers = {'Content-Type': 'application/json'}
+    data = json.dumps({"prompt": prompt, "image_paths": images})
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return "Error: " + str(response.status_code)
+
+def query_internvl_mini_chat_2b_v1_5(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5045/generate'
+    headers = {'Content-Type': 'application/json'}
+    data = json.dumps({"prompt": prompt, "image_paths": images})
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return "Error: " + str(response.status_code)
+
 def query_gpt35(prompt, images=None, image_captions=None):
     openai_api_key = api_key
     openai_api_base = base_url

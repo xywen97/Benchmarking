@@ -42,3 +42,7 @@
 40. 5039: miniCPM-1b-sft-bf16
 41. 5040: miniCPM-2b-sft-bf16
 42. 5041: miniCPM-llama3-V-2.5
+43. 5042: intern VL2 8b
+44. 5043: intern VL2 40b
+45. 5044: internvl-chat-v1.5
+46. 5045: mini internvl-chat-2b-v1.5

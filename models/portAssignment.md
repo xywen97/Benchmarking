@@ -41,3 +41,4 @@
 39. 5038: miniCPM3-4b
 40. 5039: miniCPM-1b-sft-bf16
 41. 5040: miniCPM-2b-sft-bf16
+42. 5041: miniCPM-llama3-V-2.5

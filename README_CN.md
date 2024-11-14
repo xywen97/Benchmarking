@@ -53,6 +53,7 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 - [x] internlm xcomposer vl 7b
 - [x] miniCPM-V
 - [x] miniCPM-V2
+- [x] miniCPM-LLaMa3-V-2.5
 
 ### 多模态模型 (图片端还未成功)
 - [x] Gemini series

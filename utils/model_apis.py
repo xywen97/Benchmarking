@@ -573,6 +573,17 @@ def query_miniCPM2b_sft_bf16(prompt, images=None, image_captions=None):
     else:
         return "Error: " + str(response.status_code)
 
+def query_miniCPM_llama3_v_2_5(prompt, images=None, image_captions=None):
+    url = 'http://127.0.0.1:5041/generate'
+    headers = {'Content-Type': 'application/json'}
+    data = json.dumps({"prompt": prompt, "image_paths": images})
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return "Error: " + str(response.status_code)
+
 def query_gpt35(prompt, images=None, image_captions=None):
     openai_api_key = api_key
     openai_api_base = base_url

@@ -128,7 +128,7 @@ def generate_text():
                                 img_list=img_list,
                                 num_beams=num_beams,
                                 temperature=temperature,
-                                max_new_tokens=300,
+                                max_new_tokens=1024,
                                 max_length=2000)[0]
         print(llm_message)
 
@@ -164,7 +164,7 @@ def query(text: str, img_paths: Optional[str]) -> str:
                                   img_list=img_list,
                                   num_beams=num_beams,
                                   temperature=temperature,
-                                  max_new_tokens=300,
+                                  max_new_tokens=1024,
                                   max_length=2000)[0]
 
         return jsonify(llm_message)

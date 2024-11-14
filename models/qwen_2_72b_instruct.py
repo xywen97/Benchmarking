@@ -43,7 +43,7 @@ class QWen:
         model_inputs = self.tokenizer(
             [prompt], return_tensors='pt').to(self.model.device)
         generated_ids = self.model.generate(
-            model_inputs.input_ids, max_new_tokens=512)
+            model_inputs.input_ids, max_new_tokens=1024)
         generated_ids = [
             output_ids[len(input_ids):] for input_ids, output_ids in
             zip(model_inputs.input_ids, generated_ids)]

@@ -41,8 +41,20 @@ def generate_text():
 
     for i in range(len(image_paths)):
         image = Image.open(image_paths[i]).convert("RGB")
-        image = image.resize((512, 512))
-        images.append(image)
+        # 获取图像的宽度和高度
+        width, height = image.size
+        # 计算新的尺寸，保持长边为512
+        if width > height:
+            new_width = 1024
+            new_height = int((1024 / width) * height)
+        else:
+            new_height = 1024
+            new_width = int((1024 / height) * width)
+
+        # 调整图像大小
+        resized_image = image.resize((new_width, new_height))
+
+        images.append(resized_image)
 
     def combine_images(images):
         widths, heights = zip(*(i.size for i in images))
@@ -83,7 +95,7 @@ def generate_text():
         image_embeds=None,
         image_embeds_position_mask=inputs["image_embeds_position_mask"],
         use_cache=True,
-        max_new_tokens=512,
+        max_new_tokens=1024,
     )
     generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
 

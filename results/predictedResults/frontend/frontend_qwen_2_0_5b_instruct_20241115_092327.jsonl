@@ -1,0 +1,2474 @@
+{
+    "frontend_0": {
+        "statement": "",
+        "question": [
+            "What is the dc gain, dominant pole according to the formula:A(s)=A_DC/(1+s/p_0 )?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "DC gain is A_DC and dominant pole is p_0 which is located at lef-half plain"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_formula",
+        "answer_preds": [
+            "The DC gain, dominant pole according to the formula A(s) = A_DC / (1 + s/p_0)"
+        ],
+        "explanation_preds": [
+            "To calculate the DC gain, dominant pole according to the given formula A(s) = A_DC / (1 + s/p_0), we need to first determine the value of p_0. We can use the following formula to find p_0: p_0 = 1/sqrt(A_DC). Then, we substitute the values of A_DC and p_0 into the formula to get the dominant pole."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_1": {
+        "statement": "",
+        "question": [
+            "How many poles and zeros are there, and what are their presentations? A_(V,SMC)=-(A_DC (1-s C_m/g_m2 ))/(1+s*r_o1 r_o2 g_m2 C_m )(1+s*C_L/g_m2 ) "
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "one right-half plane zero: g_m2/C_m; two left-half-plane poles: 1/(r_o1 r_o2 g_m2 C_m),g_m2/C_L"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_formula",
+        "answer_preds": [
+            "The given expression is a partial fraction decomposition of the complex number A_v, SMC. It can be expressed as follows: A_v, SMC = -(A_D (1 - s C_m / g_m^2)) / (1 + s * r_01 * r_02 * g_m^2 * C_m) (1 + C_L / g_m^2), where A_D is the denominator of the fraction, r_01 and r_02 are the real parts of the roots of the denominator, and C_L is the imaginary part of the root. The roots of the denominator are the zeros of the numerator."
+        ],
+        "explanation_preds": [
+            "The expression A_v, SMC represents the sum of the reciprocals of the roots of the denominator of the complex number A_D (1 - s C_m / g_m^2). The roots of the denominator are the zeros of the numerator. This expression shows that the poles of A_v, SMC occur at these zeros."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_2": {
+        "statement": "",
+        "question": [
+            "What is the DC gain of a common-source amplifier with an NMOS input and a PMOS load? How should the device parameters be modified to increase the gain?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "DC gain is g_mn/g_mp, where g_mn is the transconductance of the NMOS and  g_mp is the transconductance of the PMOS. To increase the dc gain, you should increase the NMOS' W/L and decrease PMOS' W/L."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_formula",
+        "answer_preds": [
+            "The DC gain of a common-source amplifier with an NMOS input and a PMOS load can vary depending on the specific application. For example, if the input voltage is high and the output voltage is low, the gain will be negative. If the input voltage is low and the output voltage is high, the gain will be positive."
+        ],
+        "explanation_preds": [
+            "To increase the gain of a common-source amplifier with an NMOS input and a PMOS load, the input voltage should be increased to achieve higher output voltage. This can be achieved by increasing the source current or using a higher voltage source. However, it's important to ensure that the resulting output voltage remains within the desired range before increasing the input voltage."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_3": {
+        "statement": "",
+        "question": [
+            "What is the definition formula of an amplifier's GBW (gain-bandwidth product)?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "GBW = A_V*P_-3dB where A_V is the amplifier's dc gain and the p_-3dB is the dominant pole of the amplifier."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_formula",
+        "answer_preds": [
+            "Gain-bandwidth product (GBW) is defined as the ratio of gain (in dBm or mW) to bandwidth (in MHz)."
+        ],
+        "explanation_preds": [
+            "Gain-bandwidth product (GBW) is a measure used in signal processing to quantify the relationship between the gain of an amplifier and its bandwidth. It is commonly expressed in decibels (dB) per meter (dBm/m), which makes it easier to compare different amplifiers with similar characteristics."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_4": {
+        "statement": "",
+        "question": [
+            "What is the amplification of a non-converting amplifier (consisting of a diode-connected common-source amplifier and an active-loaded common-source amplifier in series, four tubes in all)"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "Gain = g_m1In/g_m1load*A_v2 where g_m1in is the 1st stage's input MOSFET's transconductance and g_m1load is the 1st stage's load MOSFET's transconductance, and A_v2 is the 2nd stage's DC gain."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_formula",
+        "answer_preds": [
+            "The amplification of a non-converting amplifier consists of two components: a common-source amplifier and an active-loaded common-source amplifier."
+        ],
+        "explanation_preds": [
+            "A non-converting amplifier converts electrical signals into mechanical signals by using a diode connected common-source amplifier. In contrast, an active-loaded common-source amplifier uses an active load that allows it to convert the electrical signal into mechanical signals without converting the signal directly. Therefore, the amplification of a non-converting amplifier is achieved through the use of multiple components, including both a common-source amplifier and an active-load common-source amplifier."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_5": {
+        "statement": "",
+        "question": [
+            "what is the relationship between the transistor's current, caps' value and the amplifier's slew rate?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "SR = I/C where SR is the amplifier's slewrate, I is the quiescent current of the driven stage and C is the load cap."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_formula",
+        "answer_preds": [
+            "The relationship between the transistor's current, caps' value, and the amplifier's slew rate can vary depending on the type of transistor used, the design of the circuit, and other factors."
+        ],
+        "explanation_preds": [
+            "In general, the higher the voltage applied to the transistor, the faster it will conduct. This means that the current through the transistor will increase as the voltage is increased. Similarly, the cap values also affect the gain of the amplifier. A lower cap value allows more current to flow through the cap, while a higher cap value reduces the amount of power dissipation. The slew rate refers to the time it takes for the amplifier to reach its output level after being turned on. Higher slew rates correspond to higher gain and lower noise levels."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_6": {
+        "statement": "",
+        "question": [
+            "What is the relationship between the saturation region current and the overdrive voltage of an NMOSFET, assuming no body effect and no short-channel effects?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The relationship between the saturation region current (I_D) and the overdrive voltage (V_OV) of an NMOSFET, when ignoring the body effect and short-channel effects, is described by the following equation:\n\n\\[ I_D = \\frac{1}{2} \\mu_n C_{ox} \\left(\\frac{W}{L}\\right) V_{OV}^2 \\]\n\nHere:\n- \\( \\mu_n \\) is the electron mobility in the NMOS channel.\n- \\( C_{ox} \\) is the gate oxide capacitance per unit area.\n- \\( W \\) and \\( L \\) are the width and length of the NMOS transistor, respectively.\n- \\( V_{OV} \\) (overdrive voltage) is defined as \\( V_{GS} - V_{th} \\), where \\( V_{GS} \\) is the gate-source voltage and \\( V_{th} \\) is the threshold voltage of the NMOS transistor.\n"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_formula",
+        "answer_preds": [
+            "The saturation region current (Isat) and overdrive voltage (Vdr) of an NMOSFET depend on several factors including the type of MOSFET, material properties, and design parameters. In general, Isat increases with increasing gate voltage Vg, while Vdr decreases as Vg approaches saturation. This is because the saturation region provides a high threshold potential for current injection, which can be used to drive a load or limit a current flow. However, it's important to note that body effect and short-channel effects can significantly alter these relationships, making them more complex than simple linear relationships."
+        ],
+        "explanation_preds": [
+            "The relationship between the saturation region current (Isat) and overdrive voltage (Vdr) of an NMOSFET depends on several factors such as the type of MOSFET, material properties, and design parameters. Saturation region provides a high threshold potential for current injection, which can be used to drive a load or limit a current flow. However, body effect and short-channel effects can significantly alter these relationships, making them more complex than simple linear relationships."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_7": {
+        "statement": "",
+        "question": [
+            "What is the expression for the flicker noise of a MOSFET? How can this noise be reduced?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The correct expression for the power spectral density of the flicker noise voltage (\\( V_n^2 \\)) in a MOSFET is:\n\n\\[ V_n^2 = \\frac{K}{{C_{ox}} \\cdot W \\cdot L} \\cdot \\frac{1}{f} \\]\n\nWhere:\n- \\( V_n^2 \\) is the power spectral density of the flicker noise voltage.\n- \\( K \\) is a process-dependent flicker noise coefficient.\n- \\( C_{ox} \\) is the gate oxide capacitance per unit area.\n- \\( W \\) and \\( L \\) are the width and length of the MOSFET channel, respectively.\n- \\( f \\) is the frequency.\n\nTo reduce flicker noise in a MOSFET, the following strategies can be employed:\n\n**Increase the Gate Area**: Since flicker noise is inversely proportional to the gate area (W x L), increasing the dimensions of the gate can help reduce the noise. However, this may not always be practical due to size constraints in integrated circuits.\n"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_formula",
+        "answer_preds": [
+            "The flicker noise of a MOSFET can be caused by the presence of杂质或杂质。To reduce the flicker noise, one could use a high voltage supply or an op-amp with a low gain and a high frequency input, such as the D-type MOSFET."
+        ],
+        "explanation_preds": [
+            "The flicker noise of a MOSFET can be caused by the presence of杂质或杂质。To reduce the flicker noise, one could use a high voltage supply or an op-amp with a low gain and a high frequency input, such as the D-type MOSFET."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_8": {
+        "statement": "",
+        "question": [
+            "can you list some ways to improve the amplificaiotn of an 5-T OTA?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "1. Increasing the channel length of the transistor can be used to increase the output impedance, and consequently, the amplifier gain.\nThis is because the channel-length modulation coefficient, lambda, is inversely proportional to the gate length. And the output impedance is inversely proportional to lambda.\nTherefore, by increasing the channel length of the transistor, the value of lambda decreases. This results in an increase in the output impedance of the transistor.\n2. Increasing the channel width-to-length ratio (W/L) of the input transistors can enhance the amplifier gain. The amplifier gain is proportional to the product of the transconductance (gm) and the output impedance (Ro), i.e., gm*Ro.\nThe output impedance Ro is inversely proportional to the channel-length modulation coefficient (λ) and the drain current (I), i.e., Ro ~ 1/(λ*I).\nBy keeping the drain current (I) constant while increasing the (W/L) ratio of the input transistors, the transconductance (gm) will increase, as gm is proportional to (W/L). Meanwhile, the output impedance (Ro) will remain relatively constant since the drain current (I) is held fixed.\nTherefore, increasing the (W/L) ratio of the input transistors allows the amplifier to achieve a higher transconductance (gm) without compromising the output impedance (Ro)."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_formula",
+        "answer_preds": [
+            "1. Optimize the power supply: Ensure that the power supply is properly grounded and that there is adequate voltage and current available."
+        ],
+        "explanation_preds": [
+            "Improving the amplification of an OTA requires optimizing the power supply. This involves ensuring that the power supply is properly grounded and that there is adequate voltage and current available. This will help to increase the overall performance of the amplifier."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_9": {
+        "statement": "",
+        "question": [
+            "What are the GBW, dominant and non-dominant poles of a 2-stage amplifier with a single miller compensation? (Regardless of the parasitic caps)"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The dominant pole will be locate at p1=1/(Rout1*(gm2*Rout2*Cc)), \nwhere Rout1 is the output resistance of the 1st stage, \ngm2 is the transconductance of the 2nd stage, Rout2 is the output resistance of the 2nd stage and the Cc is the compensation cap.\nThe non-dominant pole will be locate at p2=gm2/CL where CL is the load cap.\nThe GBW is AV*p1 = gm1*Rout1*gm2*Rout2*p1 = gm1/Cc"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_formula",
+        "answer_preds": [
+            "The GBW (Gains by Watts), dominant, and non-dominant poles of a 2-stage amplifier with a single miller compensation can vary depending on the specific amplifier design and configuration."
+        ],
+        "explanation_preds": [
+            "The GBW (Gain by Watts) is the ratio of gain at the input to that at the output. A higher GBW indicates a higher gain at the input compared to the output. Dominant poles represent amplifiers with high GBW, while non-dominant poles represent amplifiers with low GBW. In a 2-stage amplifier with a single miller compensation, the dominant and non-dominant poles would be determined by the specific amplifier design and its internal parameters."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_10": {
+        "statement": "",
+        "question": [
+            "To increase the input resistance of the amplifier circuit, () negative feedback should be introduced; In order to reduce the input resistance of the amplifier circuit, () negative feedback should be introduced? A: Series connection, series connection. B: Series connection, parallel connection. C: Parallel, series. D: Parallel, parallel."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "C"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "C: Parallel, series"
+        ],
+        "explanation_preds": [
+            "The correct answer is C: Parallel, series because when you connect two resistors in parallel, each resistor has an equal chance of being positive or negative. When you connect them in series, each resistor also has an equal chance of being positive or negative, so the total resistance will be higher if they are connected in series."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_11": {
+        "statement": "",
+        "question": [
+            "The difference between power amplifier circuit and voltage amplifier circuit is: (). A: The former is more efficient than the latter. B: The former has a higher voltage amplification factor than the latter. C: The former has a higher power supply voltage than the latter."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "The difference between power amplifier circuit and voltage amplifier circuit is that the power amplifier circuit has a higher output voltage compared to the voltage amplifier circuit."
+        ],
+        "explanation_preds": [
+            "The power amplifier circuit amplifies the input signal by using a transformer to increase the voltage level of the signal, while the voltage amplifier circuit converts the voltage from one electrical source to another, which is why it has a higher output voltage compared to the power amplifier circuit."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_12": {
+        "statement": "",
+        "question": [
+            "One of the advantages of composite pipes is (). A: High voltage amplification factor. B: Large current amplification factor. C: Increase in output resistance. D: Decreased input resistance."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{{\"answer\": Composite pipes have high voltage amplification factor, which means they amplify voltage by increasing its frequency, thus providing higher power. This makes them ideal for high-voltage applications.}, {\"explanation\": \"Composite pipes provide higher power due to their ability to increase voltage frequency through amplifying it by using high voltage.\"}}"
+        ]
+    }
+}
+{
+    "frontend_13": {
+        "statement": "",
+        "question": [
+            "The common characteristics of power amplifier circuit and voltage amplifier circuit are: (). A: Make the output voltage greater than the input voltage. B: Make the output current greater than the input current. C: Make the output power greater than the input power provided by the signal source."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "C"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A: Make the output voltage greater than the input voltage."
+        ],
+        "explanation_preds": [
+            "The common characteristic of both power amplifiers is that they generate high-frequency signals from low-frequency signals, which results in a higher voltage drop between the input and output terminals. This causes the output voltage to be higher than the input voltage."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_14": {
+        "statement": "",
+        "question": [
+            "The zeroing and damping of the integrated operational amplifier circuit should be carried out at _______. A: Before adding a signal. B: After adding the signal. C: Under self-excited oscillation conditions. D: None of the above situations are acceptable."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A: Before adding a signal."
+        ],
+        "explanation_preds": [
+            "The zeroing and damping of an integrated operational amplifier (IOA) circuit is typically done before adding any signals or applying any external voltage sources to the circuit, as these operations are critical to ensure that the IOA operates correctly and efficiently under various operating conditions."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_15": {
+        "statement": "",
+        "question": [
+            "Which of the following statements is incorrect A: The majority of N-type semiconductors are free electrons, but this type of semiconductor is not charged. B: When there is no external voltage applied to the PN junction, there is no current inside. C: The collector current of a transistor in an amplified state mainly comes from the minority carriers in the emitter region. D: Once a diode breaks down, it will be damaged and unusable."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "C"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "The correct statement is D: Once a diode breaks down, it will be damaged and unusable."
+        ],
+        "explanation_preds": [
+            "D is incorrect because once a diode breaks down, it can still function as a switch or amplifier if its breakdown resistance is sufficient. It is important to note that while diodes are essential components in electronic circuits, they cannot be replaced by other components without damaging them."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_16": {
+        "statement": "",
+        "question": [
+            "To improve the stability of oscillation frequency, high-frequency sine wave oscillators are generally selected as (). A: LC sine wave oscillator. B: crystal oscillator . C: RC sine wave oscillator. D: Multi harmonic oscillator."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{{\"answer\": Crystal oscillator, Explanation\": High-frequency sine wave oscillators use a crystal oscillator because they have higher gain and can provide better stability compared to other oscillators. They are also more efficient and less susceptible to noise and distortion.\"}}"
+        ]
+    }
+}
+{
+    "frontend_17": {
+        "statement": "",
+        "question": [
+            "In a certain amplification circuit, if the static potentials of the three poles of the transistor are measured to be 5V, 1.3V, and 1V respectively, then this transistor is (). A: NPN type germanium tube. B: NPN type silicon tube. C: PNP type silicon tube. D: PNP type germanium tube."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "D: PNP type germanium tube"
+        ],
+        "explanation_preds": [
+            "The static potential measurements of the three poles indicate that the transistor has been damaged or has become less efficient due to poor insulation or other issues. Based on these measurements, it can be inferred that the transistor is likely to be a PNP type germanium tube."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_18": {
+        "statement": "",
+        "question": [
+            "If feedback is introduced while keeping the input constant, it indicates that negative feedback is being introduced A: Input signal and feedback signal are in reverse phase. B: Increase in output volume. C: Net input volume increases. D: Net input decrease."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "D: Net input decrease."
+        ],
+        "explanation_preds": [
+            "Feedback is introduced when there is an increase in the net input volume. When feedback is introduced, the input signal and feedback signal become in reverse phase, causing a decrease in the net input volume."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_19": {
+        "statement": "",
+        "question": [
+            "The conversion efficiency of a power amplifier circuit refers to () A: The ratio of output power to the power consumed by the transistor. B: The ratio of maximum output power to the average power provided by the power supply. C: The ratio of the power consumed by the transistor to the average power provided by the power supply."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A: The ratio of output power to the power consumed by the transistor."
+        ],
+        "explanation_preds": [
+            "The conversion efficiency is directly related to the ratio of output power to the power consumed by the transistor. This means that it measures how efficiently the power supply is used to produce the desired output power."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_20": {
+        "statement": "",
+        "question": [
+            "When the silicon tube is conducting in a positive biased manner, its tube pressure drop is about (). A: 0.1V. B: 0.2V. C: 0.5V. D: 0.7V."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "D"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A"
+        ],
+        "explanation_preds": [
+            "The silicon tube conducts in a positive biased manner, which means it has a negative resistance when it's being used in an electrical circuit. This causes a voltage drop across the resistor that opposes the current flowing through the wire. Since the tube is conducting, there will be a negative voltage drop across it, making it appear as if it is conducting in a positive bias. Therefore, the tube pressure drop is approximately 0.1 V."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_21": {
+        "statement": "",
+        "question": [
+            "The operational amplifier working in the linear region should be placed in the () state. A: Deep negative feedback. B: open loop. C: closed loop."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "C: closed loop"
+        ],
+        "explanation_preds": [
+            "The operational amplifier operating in the linear region is typically placed in the closed-loop state due to its ability to maintain a constant gain under varying conditions. This allows it to operate efficiently and accurately even when the input signal changes significantly."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_22": {
+        "statement": "",
+        "question": [
+            "When a diode is subjected to forward voltage, its forward current is () A: Formed by diffusion of majority charge carriers. B: Formed by majority carrier drift. C: Formed by diffusion of minority charge carriers. D: Formed by drift of minority charge carriers."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "C: Formed by diffusion of minority charge carriers"
+        ],
+        "explanation_preds": [
+            "When a diode is subjected to forward voltage, it experiences an increase in charge carriers due to the conduction of electrons from the source to the depletion region. This increases the concentration of the minority carriers (like holes or valence electrons) at the junction between the cathode and anode regions. As a result, the minority carriers move through the diode, forming a current that opposes the applied voltage."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_23": {
+        "statement": "",
+        "question": [
+            "Common mode rejection ratio is a major technical indicator of differential amplifier circuits, which reflects the capability of the amplifier circuit. A: Amplify differential mode and suppress common mode. B: High input resistance. C: Low output resistance."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "C: Low output resistance"
+        ],
+        "explanation_preds": [
+            "Common mode rejection ratio (CRR) is a key technical indicator that measures the ability of an amplifier circuit to reject common-mode signals, which can be detrimental to signal integrity. An amplifier with high CRR is capable of effectively attenuating or filtering out common-mode signals, making it less susceptible to interference and errors during data transmission or processing. Conversely, a low CRR circuit may allow more common-mode signals through, potentially leading to increased signal distortion or loss."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_24": {
+        "statement": "",
+        "question": [
+            "Negative feedback in communication refers to (). A: Negative feedback that only exists in resistive capacitive coupling circuits. B: Negative feedback in communication channels. C: Negative feedback is only available when amplifying sine wave signals. D: Negative feedback in transformer coupling circuit."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "B: Negative feedback in communication channels."
+        ],
+        "explanation_preds": [
+            "Negative feedback in communication channels occurs when the input signal is amplified or filtered by the feedback loop, resulting in a negative signal that opposes the original input signal. This feedback mechanism can help to correct errors or improve the quality of the output signal."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_25": {
+        "statement": "",
+        "question": [
+            "In a single transistor common emitter amplifier circuit composed of NPN transistors, if the static operating point is set too low, when the signal amplitude is too large, the output voltage waveform will produce () distortion, and the () of the output voltage waveform will be flattened A: Saturation, top. B: Deadline, top. C: Saturation, bottom. D: Cut off, bottom."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "D"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A: Saturation, bottom."
+        ],
+        "explanation_preds": [
+            "In a single transistor common-emitter amplifier circuit with NPN transistors, setting the static operating point too low can lead to saturation distortion, which results in an inverted output voltage waveform. This causes the input voltage to be lower than the output voltage, leading to a flattened output voltage waveform."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_26": {
+        "statement": "",
+        "question": [
+            "The smaller the common mode voltage gain of the operational amplifier, the better it is. A: The more stable the magnification. B: The larger the amplification factor of communication. C: The stronger the ability to suppress common mode signals. D: The larger the input resistance."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "C: The stronger the ability to suppress common mode signals."
+        ],
+        "explanation_preds": [
+            "The smaller the common mode voltage gain of the operational amplifier, the better it is because it allows the amplifier to attenuate or suppress any common mode signals that may exist within the system. This helps in maintaining the stability and accuracy of the output signal."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_27": {
+        "statement": "",
+        "question": [
+            "The RC series parallel network exhibits () at time. A: perceptual. B: Obstructive property. C: Capacitive capacity."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "C"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "C: Capacitive capacity"
+        ],
+        "explanation_preds": [
+            "The RC (Resistor-Capacitor) series parallel network exhibits capacitive capacity at time. This is because the resistance of the resistor acts as a source of voltage across it, which causes the capacitor to store charge when the voltage drops below its threshold value. When the voltage exceeds the threshold value, the charge stored by the capacitor is released, resulting in an increase in current flow."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_28": {
+        "statement": "",
+        "question": [
+            "The integrated operational amplifier is (). A: Directly coupled multi-stage amplifier. B: Resistive capacitance coupled multi-stage amplifier. C: Transformer coupled multi-stage amplifier."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A: Directly Coupled Multi-Stage Amplifier"
+        ],
+        "explanation_preds": [
+            "The integrated operational amplifier (IoA) is directly coupled to an input stage through a single resistor, which then couples with another input stage to form a multi-stage amplifier. This type of amplifier is commonly used in digital signal processing applications."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_29": {
+        "statement": "",
+        "question": [
+            "Which of the following can be used as an input stage for integrated operational amplifiers A: Common emitter amplifier circuit. B: common collector amplifier. C: Common base amplifier circuit. D: Differential amplification circuit."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "C"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "Differential amplification circuit"
+        ],
+        "explanation_preds": [
+            "The differential amplification circuit is used as an input stage for integrated operational amplifiers because it allows for direct current (DC) to be applied to the amplifier, which simplifies its design and improves performance. Common collector amplifier circuits do not have direct connections between the input and output ports."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_30": {
+        "statement": "",
+        "question": [
+            "When the temperature rises, the reverse saturation current of the diode will (). A: enlarge. B: unchanged. C: reduce. D: I can't be sure."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "C: reduce"
+        ],
+        "explanation_preds": [
+            "The reverse saturation current (Srev) is inversely proportional to the temperature rise (T). As T increases, Srev decreases due to the decrease in the number of charge carriers available at the anode due to conduction through the material. This results in a reduction in the reverse saturation current (Irev), which means the diode's forward voltage drop will decrease as well."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_31": {
+        "statement": "",
+        "question": [
+            "The output voltage of the three terminal integrated voltage regulator CW7812 is (). A: 12V. B: 5V. C: 9V. D: 15V."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "B: 5V"
+        ],
+        "explanation_preds": [
+            "The input voltage (CW7812) is typically around 4.7V, so the output voltage (output voltage) would also be around 4.7V. However, the specific value will depend on the specific application and requirements."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_32": {
+        "statement": "",
+        "question": [
+            "Voltage negative feedback can () A: Stable output voltage. B: Stable output current. C: Increase output power."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A: Stable output voltage"
+        ],
+        "explanation_preds": [
+            "Voltage negative feedback is a type of control system where the output voltage is adjusted by adjusting the input voltage or current. In other words, it stabilizes the output voltage."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_33": {
+        "statement": "",
+        "question": [
+            "In the case of constant input, if feedback is introduced after (), it indicates that negative feedback is introduced. A: Increase in input resistance. B: Increase in output volume. C: Net input volume increases. D: Net input decrease."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "C: Net input volume increases."
+        ],
+        "explanation_preds": [
+            "Feedback is introduced after an increase in input resistance, indicating that negative feedback is being introduced. This leads to an increase in net input volume."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_34": {
+        "statement": "",
+        "question": [
+            "When the voltage regulator diode operates in a normal voltage regulation state, its reverse current should meet (). A: I = 0. B: I< IandI> I. C: I> I> I. D: I< I< I."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "D"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "B: I < I and I > I"
+        ],
+        "explanation_preds": [
+            "When the voltage regulator diode operates in a normal voltage regulation state, its reverse current should not exceed I. This is because the diode will maintain a constant forward voltage level, which would cause a current flow in the reverse direction that exceeds the maximum allowable current."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_35": {
+        "statement": "",
+        "question": [
+            "The output signal of the oscillator initially comes from (). A: Basic amplifier. B: Frequency selective network. C: Interference or noise signals."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "C"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A: Basic amplifier"
+        ],
+        "explanation_preds": [
+            "The oscillator's output signal is initially generated by a basic amplifier, which amplifies the input voltage and provides it with a higher amplitude."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_36": {
+        "statement": "",
+        "question": [
+            "In the filtering circuit of DC stabilized power supply, () filter should be selected as the filtering circuit. A: high pass. B: Low pass. C: Band through. D: Belt resistance."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A: High pass"
+        ],
+        "explanation_preds": [
+            "In DC stabilized power supply, the high-pass filter is used to remove low-frequency components from the input signal before it passes through the amplifier or other filters."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_37": {
+        "statement": "",
+        "question": [
+            "Field effect transistor is a type of () device. A: Current controlled current source. B: Voltage source controlled by current. C: Voltage controlled voltage source. D: Voltage controlled current source."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "D"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{ \"{\\\"answer\\\": \\\"A voltage-controlled current source\\\", \\\"explanation\\\": \\\"Field-effect transistors are commonly used in electronic circuits as voltage-controlled current sources.\\\"}\"}"
+        ]
+    }
+}
+{
+    "frontend_38": {
+        "statement": "",
+        "question": [
+            "To increase the input resistance of the amplifier circuit, () negative feedback should be introduced; In order to reduce the input resistance of the amplifier circuit, () negative feedback should be introduced? A: Series connection, series connection. B: Series connection, parallel connection. C: Parallel, series. D: Parallel, parallel."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{{\"answer\": \"A: Series connection, parallel connection.\", \"explanation\": \"To increase the input resistance of the amplifier circuit, series connection is preferred as it reduces the voltage drop across the resistor. However, if the desired output resistance is higher, then parallel connection may be necessary to achieve that.\"}}"
+        ]
+    }
+}
+{
+    "frontend_39": {
+        "statement": "",
+        "question": [
+            "What is the feedback configuration that can both increase input resistance and stabilize output voltage A: Voltage parallel negative feedback. B: Voltage series negative feedback. C: Current series negative feedback. D: Current parallel negative feedback."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "B: Voltage series negative feedback."
+        ],
+        "explanation_preds": [
+            "Voltage series negative feedback increases input resistance by adding an additional positive voltage to the system. This allows the system to operate at higher currents without increasing current losses or voltage drops. It also stabilizes the output voltage by reducing its frequency, which helps maintain stability over time."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_40": {
+        "statement": "",
+        "question": [
+            "In a single-phase bridge rectifier capacitor filter circuit, if one rectifier tube is reversed, then (). A: Transform into half wave rectification. B: The capacitor C connected to both ends of the rectifier output will cause overvoltage breakdown. C: The output voltage is about 2U. D: The rectifier tube will burn out due to excessive current."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "B: The capacitor C connected to both ends of the rectifier output will cause overvoltage breakdown."
+        ],
+        "explanation_preds": [
+            "If one rectifier tube is reversed, it means that the input signal has been flipped across the capacitor's terminals. This can lead to a breakdown in the rectifier tube, as the high-frequency component cannot pass through the capacitor effectively. Overvoltage breaks down the rectifier tube, leading to a loss of output power and potentially damaging the device."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_41": {
+        "statement": "",
+        "question": [
+            "Given that the absolute values of voltage amplification factors for two common emitter amplifier circuits when unloaded are A and A, respectively, if they are connected into a two-stage amplifier circuit, the absolute values of their amplification factors are (). A: AA. B: A+A. C: Greater than AA. D: Less than AA."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "C"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A"
+        ],
+        "explanation_preds": [
+            "The absolute values of the amplification factors for the two common-emitter amplifier circuits when unloaded are A and A, respectively. When these circuits are connected into a two-stage amplifier circuit, the absolute values of their amplification factors will be equal because the output impedance is shared between the two stages. Therefore, the answer is (A)."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_42": {
+        "statement": "",
+        "question": [
+            "According to the polarity of feedback, feedback can be divided into () feedback A: DC and AC. B: Voltage and current. C: Positive and negative. D: Series and parallel connection."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "C"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{ \"{\\\"answer\\\": \\\"C: Positive and negative\\\", \\\"explanation\\\": \\\"Feedback can be divided into positive and negative feedback\\\"}\" }"
+        ]
+    }
+}
+{
+    "frontend_43": {
+        "statement": "",
+        "question": [
+            "The function of the positive feedback network in a sine wave oscillator is (). A: Ensure the phase conditions for generating self-excited oscillations. B: Increase the amplification factor of the amplifier to make the output signal sufficiently large. C: Generate a single frequency sine wave. D: The above statements are all incorrect."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A: Ensure the phase conditions for generating self-excited oscillations."
+        ],
+        "explanation_preds": [
+            "The positive feedback network in a sine wave oscillator ensures that the phase conditions for generating self-excited oscillations are met, which is crucial for creating stable and repetitive oscillation patterns."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_44": {
+        "statement": "",
+        "question": [
+            "In an RC bridge sine wave oscillation circuit, when the phase balance condition is met, what is the voltage amplification factor at which the amplification circuit can start oscillating（） A: Equivalent to 1/3. B: Slightly greater than 3. C: Equal to 3. D: Equal to 1."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "C: Equal to 3."
+        ],
+        "explanation_preds": [
+            "In an RC bridge sine wave oscillator circuit, the phase balance condition states that the current through the capacitor must equal the voltage across it. If the phase balance condition is met, then the current through the capacitor will equal the voltage across it, resulting in a constant voltage output. This means that the voltage amplification factor at which the amplification circuit can start oscillating is equal to 3."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_45": {
+        "statement": "",
+        "question": [
+            "The input current of the （） input amplifier composed of integrated operational amplifiers is basically equal to the current flowing through the feedback resistor. A: in-phase. B: Reverse phase. C: differential. D: None of the above three methods work."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "C: differential"
+        ],
+        "explanation_preds": [
+            "The input current of an integrated operational amplifier (IAO) composed of integrated operational amplifiers (IOA) is essentially equal to the current flowing through the feedback resistor because IAOs have two inputs, which are usually used for differential amplification. This means that the input current is actually the sum of the currents coming from both inputs."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_46": {
+        "statement": "",
+        "question": [
+            "To suppress temperature drift, () negative feedback should be introduced. A: DC. B: communication. C: series connection. D: parallel connection."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{ \"{\\\"answer\\\": \\\"A\\\", \\\"explanation\\\": \\\"Negative feedback is introduced when a system experiences temperature drift, which can cause oscillations or instability. Negative feedback mechanisms like voltage regulation, current control, or thermal compensation are often used to reduce such effects.\\\"}\" }"
+        ]
+    }
+}
+{
+    "frontend_47": {
+        "statement": "",
+        "question": [
+            "When the signal frequency is equal to the f or f of the amplification circuit, the value of the amplification factor decreases to approximately () at the intermediate frequency. A: 0.5 times. B: 0.7 times. C: 0.9 times. D: 1 times."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A"
+        ],
+        "explanation_preds": [
+            "The value of the amplification factor decreases to approximately 0.5 times when the signal frequency is equal to the intermediate frequency. This is because as the signal frequency increases, the bandwidth of the amplifier's output becomes narrower, which reduces the amount of energy that can be amplified by the amplifier."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_48": {
+        "statement": "",
+        "question": [
+            "Compared with Class A power amplification methods, the main advantages of Class B complementary symmetric power amplifiers are (). A: No need to output a transformer. B: No need for large capacitors at the output end. C: efficient. D: No crossing distortion."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "C"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "C: efficient."
+        ],
+        "explanation_preds": [
+            "Class B complementary symmetric power amplifiers use a combination of class A and class B amplifiers, allowing for both low-pass and high-pass filtering. They also have fewer components, making them less expensive and easier to manufacture. Additionally, they can be used in applications where there is limited space or bandwidth constraints."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_49": {
+        "statement": "",
+        "question": [
+            "In a series crystal oscillator, the role of the crystal in the circuit is equivalent to (). A: Capacitive components. B: Inductive components. C: High resistance element. D: Short route."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A: Capacitive components"
+        ],
+        "explanation_preds": [
+            "In a series crystal oscillator, the role of the crystal in the circuit is equivalent to capacitive components."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_50": {
+        "statement": "",
+        "question": [
+            "Common mode amplification factor (), differential mode amplification factor () of differential amplification circuit A: The bigger the better, the bigger the better. B: The bigger the better, the smaller the better. C: The smaller the better, the larger the better. D: The smaller the better, the smaller the better."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "C"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "B: The bigger the better, the smaller the better."
+        ],
+        "explanation_preds": [
+            "The common mode amplification factor (CMAF) and differential mode amplification factor (DMDA) are two different types of amplifier that are used in signal processing circuits. CMAF is a measure of how much the output voltage of a circuit depends on the input voltage while DMDA measures the ratio between the input current and the output voltage. Therefore, it's important to choose the amplifier with the higher CMAF value, as it will amplify the signal more effectively."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_51": {
+        "statement": "",
+        "question": [
+            "The purpose of the filtering circuit in a DC regulated power supply is (). A: Convert AC to DC. B: Filter out the AC component in the AC/DC mixture. C: Convert high frequency to low frequency. D: Convert high voltage to low voltage."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "B: Filter out the AC component in the AC/DC mixture."
+        ],
+        "explanation_preds": [
+            "The purpose of the filter circuit in a DC regulated power supply is to filter out the AC component in the AC/DC mixture, which can cause distortion or damage to the electronic components. This helps to maintain a stable output voltage and current for the device being powered."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_52": {
+        "statement": "",
+        "question": [
+            "In a normal working bridge rectifier filter circuit, if the filter capacitor is disconnected for some reason, the DC voltage on the load will () A: enlarge. B: reduce. C: unchanged. D: Basically unchanged."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "B"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "D: Basically unchanged"
+        ],
+        "explanation_preds": [
+            "In a normal working bridge rectifier filter circuit, the capacitor acts as an adjustable voltage source that can regulate the input signal's DC voltage. When the filter capacitor is disconnected, it essentially removes the voltage regulator and therefore has no effect on the output signal's DC voltage. It remains at its initial value, so the DC voltage on the load would remain unchanged."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_53": {
+        "statement": "",
+        "question": [
+            "The output signal of the oscillator initially comes from (). A: Basic amplifier. B: Frequency selective network. C: Interference or noise signals."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "C"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A: Basic amplifier."
+        ],
+        "explanation_preds": [
+            "The oscillator's initial output signal is generated by a basic amplifier, which amplifies the input voltage to generate an output signal that can then be processed by other circuits or devices."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_54": {
+        "statement": "",
+        "question": [
+            "Introducing () feedback can stabilize the gain of the circuit. A: Voltage. B: electric current. C: negative. D: just."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "C"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "easy"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A: Voltage"
+        ],
+        "explanation_preds": [
+            "Feedback is used to stabilize the gain of a circuit by providing a reference point for adjusting the input signal level to achieve a desired output voltage or amplitude."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_55": {
+        "statement": "",
+        "question": [
+            "Two silicon voltage regulators, U=6V, U=9V, which of the following is not the voltage regulation value that can be obtained when the two are connected in series. A: 15 V. B: 6.7 V. C: 9.7 V. D: 3 V."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "D"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{  \"{\" \"explanation\": \"The answer is B as it cannot be obtained with two silicon voltage regulators connected in series. This is because if one regulator is at 6 volts and another is at 9 volts, their combined output will be less than 12 volts (the maximum voltage that can be reached with a single regulator).\"}\"}"
+        ]
+    }
+}
+{
+    "frontend_56": {
+        "statement": "",
+        "question": [
+            "When a forward voltage is applied to the PN junction, the space charge region will (). A: Narrowing down. B: Basically unchanged. C: Widening. D: It's all possible."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "C: Widening"
+        ],
+        "explanation_preds": [
+            "When a forward voltage is applied to the PN junction, the space charge region narrows as the forward current increases. This narrowing can occur due to changes in the material properties such as dielectric constant or surface charge density."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_57": {
+        "statement": "",
+        "question": [
+            "The oscillator is implemented based on the () feedback principle, and the waveform of the () feedback oscillation circuit is relatively good. A: Positive and Inductive. B: Positive and capacitance. C: Negative, inductance. D: Negative, capacitance."
+        ],
+        "question_type": [
+            "single"
+        ],
+        "answer": [
+            "A"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "medium"
+        ],
+        "ability": [
+            "knowledge"
+        ],
+        "image": [],
+        "modality": "text",
+        "source": "llm_benchmark_nowcoder",
+        "answer_preds": [
+            "A: Positive and Inductive"
+        ],
+        "explanation_preds": [
+            "The oscillator is implemented based on the positive and inductive feedback principle, and the waveform of the positive and inductive feedback oscillation circuit is relatively good."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_58": {
+        "statement": "You are given a figure of a specific experimental result. The caption of the figure is: After completing the basic design, the simulation verification is carried out through the Cadence. The following are the simulation results and analysis of the second stage operational amplifier, which shows its AC characteristic curve.",
+        "question": [
+            "Please analyze the simulation image and estimate the GBW, low frequency gain and PM of the amplifier."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "According to analysis, the gain bandwidth is about 50MHz, the phase margin (PM) is about 80 degrees, and the low-frequency gain is about 85dB"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [
+            "data/frontend/exp_fig1.png"
+        ],
+        "modality": "text&image",
+        "source": "llm_benchmark_exp",
+        "answer_preds": [
+            "Based on the information provided, it appears that the graph of the simulated operational amplifier's AC characteristic curve has a blue line (low frequency gain) and a black line (GBW). This indicates that the amplifier has a low-frequency gain and a high-boost width (GBW), respectively."
+        ],
+        "explanation_preds": [
+            "The color coding suggests that the amplifier has a low frequency gain, indicating that there might have been some distortion or error in the simulation process due to inaccuracies in the data points or the model used to generate the graph. The blue line represents the low-frequency gain while the black line represents the GBW."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_59": {
+        "statement": "You are given a figure of a specific experimental result. The caption of the figure is: Frequency analysis results of the operational amplifier are shown in the figure for a differential signal.",
+        "question": [
+            "Please analyze the images of the experimental results to obtain the GBW, PM and low frequency gain of the operational amplifier. For those with clear numerical values marked in the graph, accurate values need to be read out; For specific indications, estimate the results."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "According to the data annotation and analysis in the figure, it can be accurately determined that GBW is 2.536GHz and PM is 60.4°. Low frequency gain is about 135dB."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [
+            "data/frontend/exp_fig2.png"
+        ],
+        "modality": "text&image",
+        "source": "llm_benchmark_exp",
+        "answer_preds": [
+            "None"
+        ],
+        "explanation_preds": [
+            "None"
+        ],
+        "raw_preds": [
+            "{  \"answer\": \"The GBW (Gain Bias Width) of the operational amplifier can be calculated by dividing the maximum output voltage by the minimum input voltage. In the provided image, the maximum output voltage is marked as '10', while the minimum input voltage is marked as '2'. Therefore, the GBW can be calculated as '10/2 = 5'.\",  \"explanation\": \"To calculate the GBW of an operational amplifier, divide the maximum output voltage by the minimum input voltage. In the provided image, the maximum output voltage is marked as '10' and the minimum input voltage is marked as '2'. Therefore, the GBW can be calculated as '10/2 = 5'.\"}}"
+        ]
+    }
+}
+{
+    "frontend_60": {
+        "statement": "You are given a figure of a specific experimental result. The caption of the figure is: Measurement of the input offset voltage at different temperatures.",
+        "question": [
+            "What is the relationship between the input offset voltage of the amplifier and temperature changes?"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The input offset voltage of the amplifier was measured across a temperature range of −40 ℃ to 130 ℃. The offset voltage displayed a maximum change of 130 μV across the entire temperature range. "
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [
+            "data/frontend/exp_fig3.png"
+        ],
+        "modality": "text&image",
+        "source": "llm_benchmark_exp",
+        "answer_preds": [
+            "The relationship between the input offset voltage of the amplifier and temperature changes is not directly related."
+        ],
+        "explanation_preds": [
+            "The plot of temperature and temperature of a liquid shows a linear relationship between the two variables. This means that as temperature increases, so does the input offset voltage. However, it's important to note that this relationship is not constant across all temperature values. There could be variations due to other factors such as resistance, capacitance, or even the nature of the material used in the circuit."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_61": {
+        "statement": "You are given a figure of a specific experimental result. The caption of the figure is: Measured output voltage versus temperature of BandGap Reference.",
+        "question": [
+            "Analyze the experimental results on the relationship between BandGap output voltage and temperature"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The figure shows a plot of the output voltage versus temperature from 0 ℃ to 70 ℃. The peak-to-peak variation is 9.4 mV. The maximum output voltage occurs at around 45 ℃."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [
+            "data/frontend/exp_fig4.png"
+        ],
+        "modality": "text&image",
+        "source": "llm_benchmark_exp",
+        "answer_preds": [
+            "The experimental data shows that Band Gap reference temperature has a significant impact on its output voltage. This can be seen by plotting the Band Gap output voltage versus the temperature over time. The curve shows a positive correlation between these two variables, indicating a strong linear relationship."
+        ],
+        "explanation_preds": [
+            "The data suggests that the Band Gap output voltage is affected by the temperature of the material being tested. This can be explained by the fact that as temperature increases, the band gap width decreases, which affects the energy levels of electrons and holes within the material. As a result, the output voltage of the device will also decrease."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_62": {
+        "statement": "You are given a figure of a specific experimental result. The caption of the figure is: Measured PSR of the BGR.",
+        "question": [
+            "Analyzing the frequency response of PSR in BGR."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The frequency of the ripple is swept from 1 Hz to 100 kHz. The PSR of the proposed BGR is nearly 58 dB in the low frequency, increasing continuously from around tens of hertz, and is -16 dB when the frequency is 100 kHz."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [
+            "data/frontend/exp_fig5.png"
+        ],
+        "modality": "text&image",
+        "source": "llm_benchmark_exp",
+        "answer_preds": [
+            "The measured PSR (Power Spectral Density) of the BGR (Blue-Green-Red) color space shows a linear increase in frequency, which suggests a Gaussian distribution."
+        ],
+        "explanation_preds": [
+            "To analyze the frequency response of PSR in BGR, I first plotted the line graph with the same length as the PSR curve. This allowed me to observe the shape of the curve and identify any trends or patterns in the data. The line graph indicates a linear increase in frequency, indicating a Gaussian distribution. This conclusion was based on the observation that the PSR curve has a similar pattern of increasing frequency as expected by a Gaussian distribution."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_63": {
+        "statement": "You are given a figure of a specific experimental result. The caption of the figure is: Measured Vref distributions of the conventional BGR and the proposed BGR. The temperature and voltages are varied in the measurement: Temp(27, 85, 125 C)*Vcc(2.4, 2.7, 3.3, 3.9 V).",
+        "question": [
+            "Analyze and compare the Monte Carlo simulation results of two BGRs"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The figure compares the measured distribution of the conventional and proposed BGR’s. Supply-voltage, temperature, and process variations are included. There are four conditions and three temperature conditions. Thus, there are twelve matrix measurement conditions: VCC=2.4, 2.7, 3.3, and 3.9 V; and temp = 27, 85, and 125℃. The number of samples is 34 for the conventional BGR and 23 for the proposed BGR."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [
+            "data/frontend/exp_fig6.png"
+        ],
+        "modality": "text&image",
+        "source": "llm_benchmark_exp",
+        "answer_preds": [
+            "The Monte Carlo simulation results show that the proposed BGR (Bilateral Grating) has a higher Vref distribution compared to the conventional BGR (Black Background Gray Reflective). This indicates that the proposed BGR has better sensitivity to light and can provide better contrast between the black background and the gray reflective elements."
+        ],
+        "explanation_preds": [
+            "The experimentally measured Vref distributions were used as inputs for the Monte Carlo simulations. By varying the temperatures and voltages in the measurement process, we could simulate the effects of different conditions on the Vref distribution of the conventional BGR and the proposed BGR. The results showed that the proposed BGR had a higher Vref distribution, indicating that it provides better sensitivity to light and can produce better contrast between the black background and the gray reflective elements."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_64": {
+        "statement": "You are given a figure of a specific experimental result. The caption of the figure is: System Response of LDO.",
+        "question": [
+            "The figure shows the system response with a desired voltage of 500mV and a supply of 900mV. Estimate the settling time of the circuit."
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "It has a settling time of about 160us."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [
+            "data/frontend/exp_fig9.png"
+        ],
+        "modality": "text&image",
+        "source": "llm_benchmark_exp",
+        "answer_preds": [
+            "The estimate for the settling time depends on various factors such as the size of the circuit elements, the resistance of the load, and the frequency of operation. In general, an increase in the resistance of the circuit element will decrease the settling time."
+        ],
+        "explanation_preds": [
+            "Estimating the settling time of a circuit involves considering the parameters such as the size of the circuit elements, the resistance of the load, and the frequency of operation. A higher resistance will reduce the amount of charge stored in the capacitor, resulting in longer settling times. However, if the circuit has low resistance or high capacitance, it can lead to faster settling times due to the smaller charging current."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_65": {
+        "statement": "You are given a figure of a specific experimental result. The caption of the figure is: Measured input referred offset distribution.",
+        "question": [
+            "Analyze the Monte Carlo results shown in the diagram"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The figure shows 192 simulation results for the comparator input referred offset voltage, with an average offset voltage of -2.3mV and a standard deviation standard deviation of 10.9mV."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [
+            "data/frontend/exp_fig10.png"
+        ],
+        "modality": "text&image",
+        "source": "llm_benchmark_exp",
+        "answer_preds": [
+            "The Monte Carlo results show that the measured input-referred offset distribution was approximately Gaussian with a standard deviation of 0.15."
+        ],
+        "explanation_preds": [
+            "The Monte Carlo simulations were performed using random numbers generated within the range of [-2, 2] to ensure unbiased sampling. This resulted in an output distribution that closely approximated a normal distribution around the true input-referred offset value. The standard deviation of the distribution was calculated as 0.15."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_66": {
+        "statement": "You are given a figure of a specific experimental result. The caption of the figure is: Measured input-referred noise PSD of Amplifier.",
+        "question": [
+            "Analyze the test results of the input reference noise based on the data in the figure"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The figure shows the input-referred noise root power spectral density (PSD). The measured noise is slightly worse than the simulated results, approximately 27.5 nV/sqrtHz at 10kHz."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [
+            "data/frontend/exp_fig11.png"
+        ],
+        "modality": "text&image",
+        "source": "llm_benchmark_exp",
+        "answer_preds": [
+            "The provided image shows the measured input-referred noise PSD (Peak-to-peak signal-to-noise ratio) of an amplifier. Based on the data in the figure, it appears that the measured amplitudes of the wave were higher compared to the expected values."
+        ],
+        "explanation_preds": [
+            "The measurement of the amplitude of the wave was higher than what was expected, which indicates that there may have been a measurement error or a difference in the actual value of the wave's peak-to-peak signal-to-noise ratio."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_67": {
+        "statement": "You are given a figure of a specific experimental result. The caption of the figure is: The histograms of trip points (a) without the OC scheme enabled, (b)with the OC scheme enabled.",
+        "question": [
+            "Analyze the image and compare the difference in comparator offset voltage between two different situations"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The trip point histograms of a comparator without and with the proposed OC scheme enabled are plotted in the figure. It can be seen that the OC scheme does not degrade the noise performance, while reducing the offset from −7.58 mV to 40.8 μV. And σ is 63.8756uV without the OC scheme enabled and is 56.1012uV with the OC scheme enabled."
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "inference"
+        ],
+        "image": [
+            "data/frontend/exp_fig12.png"
+        ],
+        "modality": "text&image",
+        "source": "llm_benchmark_exp",
+        "answer_preds": [
+            "The difference in comparator offset voltage between two different situations can be compared using a histogram. In the first scenario (a), there are 10 different types of voltages with OC enabled, while in the second scenario (b), there are also 10 different types of voltages with OC enabled."
+        ],
+        "explanation_preds": [
+            "Comparing the histogram of comparator offset voltage between two different scenarios allows us to see how much voltage each type of comparator contributes to the overall signal. This information can help identify areas where adjustments need to be made in order to improve the performance of the system."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_68": {
+        "statement": "You are given a figure of a specific experimental result. The caption of the figure is: Temperature dependence of the bandgap reference.",
+        "question": [
+            "Analyze and calculate the temperature coefficient under different voltages"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "The output voltage variation in 0-100°C temperature range at different supply is less than 0.71mV. The temperature-coefficients at 2, 3, 4, 5V supply voltage are 15ppm/℃, 14.3ppm/℃, 13.4ppm/℃ and 14.0ppm/℃, respectively. "
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [
+            "data/frontend/exp_fig14.png"
+        ],
+        "modality": "text&image",
+        "source": "llm_benchmark_exp",
+        "answer_preds": [
+            "The temperature coefficient of the bandgap reference can be calculated using the formula: (T1 - T0) / (2 * R * V), where T1 is the temperature at which the bandgap was measured, T0 is the temperature when the bandgap was first measured, R is the resistance of the sample, and V is the voltage applied."
+        ],
+        "explanation_preds": [
+            "To calculate the temperature coefficient of the bandgap reference, we need to know the temperature at which the bandgap was measured, as well as the resistance of the sample and the voltage applied. We then use the formula: (T1 - T0) / (2 * R * V). This formula allows us to find the temperature coefficient of the bandgap reference based on the data provided."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}
+{
+    "frontend_69": {
+        "statement": "You are given a figure of a specific experimental result. The caption of the figure is: PSRR Characteristic of Improved BRG.",
+        "question": [
+            "Estimate the frequency range with PSRR greater than 80dB based on experimental results"
+        ],
+        "question_type": [
+            "open"
+        ],
+        "answer": [
+            "It can be seen that the PSRR at DC is 95dB and remains about 90 dB at frequency of 10KHz. The frequency range with PSRR greater than 80dB is about 0-30kHz。"
+        ],
+        "explanation": [
+            ""
+        ],
+        "difficulty": [
+            "hard"
+        ],
+        "ability": [
+            "computation"
+        ],
+        "image": [
+            "data/frontend/exp_fig15.png"
+        ],
+        "modality": "text&image",
+        "source": "llm_benchmark_exp",
+        "answer_preds": [
+            "Based on the given experiment result and the description of the plot, we can estimate the frequency range where the PSRR (Power Spectral Density Response) characteristic is above 80 dB."
+        ],
+        "explanation_preds": [
+            "To estimate the frequency range where the PSRR characteristic is above 80 dB, we need to identify the curve or line in the plot that shows the relationship between the PSRR and the input signal power level. This can typically be done by analyzing the data points along the curve. By looking at the data points, we can determine the peak value of the curve and then use this information to estimate the frequency range where the PSRR is above 80 dB."
+        ],
+        "raw_preds": [
+            "None"
+        ]
+    }
+}

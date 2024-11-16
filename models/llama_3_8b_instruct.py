@@ -1,3 +1,6 @@
+# Transformers >= 4.44
+# env: benchmark
+
 from flask import Flask, request, jsonify
 import torch
 from transformers import pipeline
@@ -6,7 +9,7 @@ import os
 
 app = Flask(__name__)
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 
 model_path = "/data/xiangyu/benchmarkModels/Meta-Llama-3-8B-Instruct"
 

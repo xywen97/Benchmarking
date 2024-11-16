@@ -13,7 +13,7 @@ app = Flask(__name__)
 model_path = "/data/xiangyu/benchmarkModels/CHENCHEN/huggingface/hub/models--openbmb--MiniCPM-V-2/snapshots/ee00ff7ce36667e7df81cb2a018951b663bdcc59"
 model = AutoModel.from_pretrained(model_path, trust_remote_code=True, torch_dtype=torch.bfloat16)
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "4"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model = model.to(device=device, dtype=torch.bfloat16)
 

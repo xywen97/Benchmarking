@@ -6,6 +6,15 @@
 
 The Multimodal EDA Benchmarking project aims to provide a framework for evaluating and comparing the performance of different models on multimodal data. This project supports various data formats and models, helping researchers and developers better understand the capabilities of models in handling multimodal data.
 
+## Tested Models
+- [x] GPT-3.5-turbo
+- [x] QWen2 0.5b Instruct
+- [x] internvl2-8b
+- [x] instructBlip flan T5 xxl
+- [x] Llama3.1-8b-instruct
+- [x] miniCPM-V2
+- [x] yi vl 6b
+
 ## TODO
 
 ### Image Captioning
@@ -43,7 +52,10 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 - [x] GPT-4-turbo
 - [x] GPT-4-vision
 - [x] Reka series
-- [x] Blip + T5
+- [x] instructBlip flan T5 xl
+- [x] instructBlip flan T5 xxl
+- [x] blip2 flan t5 xl
+- [x] blip2 flan t5 xxl
 - [x] Llama3.2-11b-vision-instruct
 - [x] Llama3.2-90b-vision-instruct
 - [x] Kosmos2
@@ -60,6 +72,8 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 - [x] internvl2-40b
 - [x] internvl-chat-v1.5
 - [x] mini-internvl-chat-2b-v1.5
+- [x] yi vl 6b
+- [x] yi vl 34b
 
 ### Multi-modal Model (image not ready)
 - [x] Gemini series

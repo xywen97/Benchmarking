@@ -344,7 +344,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
                 entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
             elif is_multi_modal:
                 if model_name in ['instructblip_flan_t5_xl', 'instructblip_flan_t5_xxl', 'blip2_flan_t5_xl', 'blip2_flan_t5_xxl', 'kosmos2_patch14_224']:
-                    entire_question = prompt_mapping[question_type] + " " + statement_item + " " + question_item[i] + " " + "Answer:"
+                    entire_question = prompt_mapping[question_type] + " " + statement_item + " " + question_item[i] + " " + "Answer: "
                 else:
                     if len(images) == 0:
                         entire_question = statement_item + " " + question_item[i] + " " + prompt_mapping[question_type]
@@ -443,7 +443,9 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
         field_responses[key] = returned_response
 
         with open(save_path, 'a', encoding='utf-8') as f:
-            json.dump({key: returned_response}, f, ensure_ascii=False, indent=4)
+            # Remove indent to ensure we can directly load the file using jsonlines
+            json.dump({key: returned_response}, f, ensure_ascii=False)
+            # json.dump({key: returned_response}, f, ensure_ascii=False, indent=4)
             f.write('\n')
 
     return field_responses

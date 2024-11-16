@@ -34,7 +34,7 @@ app = Flask(__name__)
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Demo")
-    parser.add_argument("--cfg-path", default="eval_configs/minigpt4_eval.yaml", help="path to configuration file.")
+    parser.add_argument("--cfg-path", default="eval_configs/minigpt4_vicuna13b_eval.yaml", help="path to configuration file.")
     parser.add_argument("--gpu-id", type=int, default=5, help="specify the gpu to load the model.")
     parser.add_argument(
         "--options",
@@ -94,7 +94,7 @@ def generate_text():
     img_paths = data.get("image_paths", [])
 
     print(f"""
-        This is the minigpt4-vicuna7b script.
+        This is the minigpt4-vicuna13b script.
         The prompt is: {text}
         The image paths are: {img_paths}
     """)

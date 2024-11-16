@@ -1,6 +1,4222 @@
 {
+    "spec_0": {
+        "statement": "Based on the specification document for 2N2222 and 2N2222A NPN switching transistors, answer the following questions.",
+        "question": [
+            "What is the maximum collector-emitter voltage (V_CEO) for the 2N2222A transistor? (A) 30 V (B) 40 V (C) 75 V (D) 800 mA",
+            "List the pin configuration for the NPN transistor as described in the document.",
+            "Calculate the power dissipation if the collector current is 500 mA and the collector-emitter voltage is 10 V."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "B",
+            "1: Emitter, 2: Base, 3: Collector",
+            "5 W"
+        ],
+        "explanation": [
+            "According to the document, the maximum collector-emitter voltage V_CEO for the 2N2222A transistor is 40 V.",
+            "The document provides a pinning table showing the configuration: pin 1 is the emitter, pin 2 is the base, and pin 3 is the collector.",
+            "Power dissipation P = V * I = 10 V * 500 mA = 5 W."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "2N2222_page1.png",
+            "2N2222_page2.png",
+            "2N2222_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "2N2222.PDF"
+    },
+    "spec_1": {
+        "statement": "Based on the specification of the 2N2222 and 2N2222A NPN switching transistors, answer the following questions.",
+        "question": [
+            "What is the maximum collector cut-off current (ICBO) for the 2N2222 transistor? (A) 10 nA (B) 10 \u00b5A (C) 1 mA",
+            "Describe the conditions under which the transition frequency (fT) is specified.",
+            "Calculate the maximum voltage across the collector-emitter (VCE) when IC = 500 mA and IB = 50 mA for the 2N2222."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(B) 10 \u00b5A",
+            "The transition frequency (fT) is specified at IC = 20 mA and VCE = 20 V with a frequency of 100 MHz.",
+            "1.6"
+        ],
+        "explanation": [
+            "According to the specification, the maximum collector cut-off current (ICBO) for the 2N2222 is 10 \u00b5A under the specified conditions.",
+            "The condition for the transition frequency is clearly stated in the document: IC = 20 mA, VCE = 20 V, and frequency equals 100 MHz.",
+            "The maximum VCE under the given conditions is specified as 1.6 V in the document."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "2N2222_page4.png",
+            "2N2222_page5.png",
+            "2N2222_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "2N2222.PDF"
+    },
+    "spec_2": {
+        "statement": "Evaluate the following aspects of the NPN switching transistors based on the provided document pages.",
+        "question": [
+            "What is the function of limiting values as outlined in the document? (A) Prevent overuse of current below the threshold, (B) Provide stress ratings to avoid damage, (C) Define minimum operational voltages, (D) Outline the most efficient operating conditions.",
+            "Based on the information provided, what is the importance of application information in the specification document?",
+            "Calculate the number of countries listed with separate contact details on the second page of the document."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(B) Provide stress ratings to avoid damage",
+            "It is advisory and does not form part of the specification.",
+            "31"
+        ],
+        "explanation": [
+            "Limiting values are stress ratings given to prevent damage by indicating absolute maximum ratings.",
+            "Application information is noted as advisory, suggesting it provides helpful but non-binding advice.",
+            "By counting the unique entries on the provided second page excluding duplicates and regions mentioned together, there are 31 countries."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "2N2222_page7.png",
+            "2N2222_page8.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "2N2222.PDF"
+    },
+    "spec_3": {
+        "statement": "Based on the given specification document for the Toshiba 2SC1815 transistor, answer the following questions.",
+        "question": [
+            "What is the maximum collector-base voltage (VCBO) for the 2SC1815 transistor? (A) 50 V (B) 60 V (C) 70 V (D) 80 V",
+            "Identify the typical value of hFE for a collector current (IC) of 2 mA at VCE = 6V.",
+            "Calculate the collector current (IC) when the base current (IB) is 10 mA, and the DC current gain (hFE) is 100."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "(B) 60 V",
+            "70",
+            "1000 mA"
+        ],
+        "explanation": [
+            "The maximum collector-base voltage (VCBO) is given as 60 V in the document under 'MAXIMUM RATINGS'.",
+            "For IC = 2 mA and VCE = 6V, the typical hFE value is noted as 70 in the electrical characteristics section.",
+            "Using the formula IC = hFE \u00d7 IB, where hFE = 100 and IB = 10 mA, IC is calculated as 100 \u00d7 10 mA = 1000 mA."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "2SC1815_page1.png",
+            "2SC1815_page2.png",
+            "2SC1815_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "2SC1815.PDF"
+    },
+    "spec_4": {
+        "statement": "Based on the specification document for the UTC 4066 quad bilateral switch, answer the following questions.",
+        "question": [
+            "What is the typical ON resistance for the 4066 switch at VDD=5V? (A) 120 ohms (B) 270 ohms (C) 800 ohms (D) 1050 ohms",
+            "Using the pin configuration diagram provided, which pin number corresponds to CONTROL B?",
+            "Calculate the power dissipation in mW for the DIP-14 package under the maximum conditions specified in the Absolute Maximum Ratings."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "B",
+            "5",
+            "700 mW"
+        ],
+        "explanation": [
+            "The typical ON resistance for the 4066 switch at VDD=5V is 270 ohms as per the DC Electrical Characteristics table in the document.",
+            "CONTROL B is connected to pin number 5 according to the pin configuration diagram.",
+            "The maximum power dissipation for the DIP-14 package is specified as 700 mW in the Absolute Maximum Ratings section."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "4066_page1.png",
+            "4066_page2.png",
+            "4066_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "4066.PDF"
+    },
+    "spec_5": {
+        "statement": "Based on the given pages of the specification document for a CMOS IC electronic device, answer the following questions.",
+        "question": [
+            "1. What is the typical propagation delay time (tPLH, tPHL) when VDD=15V for the signal input to signal output? \n(A) 10 ns\n(B) 15 ns\n(C) 20 ns\n(D) 25 ns",
+            "2. Calculate the typical feedthrough capacitance (COS) for VDD=10V from the specifications. Fill in the blank: The feedthrough capacitance is __ pF.",
+            "3. Explain the significance of having low crosstalk between any two switches in this CMOS IC."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "D",
+            "0.5",
+            "Low crosstalk between switches ensures that the signals are not interfering with each other, maintaining signal integrity and accurate operation of the IC."
+        ],
+        "explanation": [
+            "The typical propagation delay time for VDD=15V is given as 25 ns in the document.",
+            "The document specifies the feedthrough capacitance COS as 0.5 pF for VDD=10V.",
+            "Crosstalk can cause unintended interactions between signals, leading to erroneous behavior. Low crosstalk helps maintain precise and reliable function of the circuit."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "computation",
+            "inference"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "4066_page4.png",
+            "4066_page5.png",
+            "4066_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "4066.PDF"
+    },
+    "spec_6": {
+        "statement": "Based on the typical performance characteristics of a CMOS IC shown in the document, answer the following questions.",
+        "question": [
+            "What is the 'ON' resistance at Ta=25\u00b0C for VDD=VSS=10V when VDS=0V? (A) 100\u03a9 (B) 150\u03a9 (C) 200\u03a9 (D) 250\u03a9",
+            "Explain how the 'ON' resistance changes with an increase in temperature for a constant VDD-VSS of 15V.",
+            "Calculate the difference in 'ON' resistance at VDS=5V and VDS=-5V for VDD-VSS=5V and Ta=25\u00b0C."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(B) 150\u03a9",
+            "As temperature increases, the 'ON' resistance tends to increase.",
+            "90\u03a9"
+        ],
+        "explanation": [
+            "At Ta=25\u00b0C and VDD=VSS=10V, when VDS=0V, the 'ON' resistance is approximately 150\u03a9 according to the graph.",
+            "The graph shows that as the temperature increases, the 'ON' resistance graph shifts upwards indicating an increase in resistance.",
+            "From the graph, 'ON' resistance at VDS=5V is 150\u03a9 and at VDS=-5V is 60\u03a9. The difference is 150\u03a9 - 60\u03a9 = 90\u03a9."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "4066_page7.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "4066.PDF"
+    },
+    "spec_7": {
+        "statement": "Based on the specification document for the AOFD-120 power supply, answer the following questions.",
+        "question": [
+            "(A) What is the nominal voltage of the AOFD120-24 model?\n(B) What is the setting voltage range for the AOFD120-48 model?\n(C) What is the rated power for both models?",
+            "Using the block diagram, identify which stage comes after the EMI Filter. Is it:\n(A) PFC Circuit\n(B) Rectifier Circuit\n(C) Inrush Current Limit\n(D) Switching Device",
+            "Calculate the power efficiency percentage for the AOFD120-24 model at 110V input if the output power is 120W and the efficiency is specified as 85%."
+        ],
+        "question_type": [
+            "multi",
+            "single",
+            "blank"
+        ],
+        "answer": [
+            [
+                "(A) 24V",
+                "(B) 47.52-48.48V",
+                "(C) 120W for both models"
+            ],
+            "(C) Inrush Current Limit",
+            "100W"
+        ],
+        "explanation": [
+            [
+                "The document specifies nominal voltage as 24V for AOFD120-24 and setting voltage range 47.52-48.48V for AOFD120-48. Both models are rated at 120W power output."
+            ],
+            "According to the block diagram in the document, the Inrush Current Limit stage follows the EMI Filter.",
+            "Efficiency (85%) is calculated as (Output Power/Input Power) * 100. Given output power of 120W, Input Power is 120W/0.85 = 141.18W. Thus, efficiency is about 85%."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "AOFD-120_page1.png",
+            "AOFD-120_page2.png",
+            "AOFD-120_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "AOFD-120.PDF"
+    },
+    "spec_8": {
+        "statement": "Based on the provided output derating curve for the AOFD-120 120W Din Rail Mount device, answer the following questions.",
+        "question": [
+            "1. What is the output percentage at 60\u00b0C? (A) 100% (B) 75% (C) 50% (D) 25%",
+            "2. Determine the logic inference: If the temperature increases beyond 70\u00b0C, what happens to the output power?",
+            "3. Fill in the blank: The output power starts derating after reaching _______ \u00b0C."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "C",
+            "The output power reduces significantly or drops to 0.",
+            "50"
+        ],
+        "explanation": [
+            "At 60\u00b0C, the output percentage shown by the derating curve indicates approximately 50%.",
+            "As per the derating curve, beyond 70\u00b0C, the output power tends to go further down, indicating a severe reduction.",
+            "The derating curve begins to decline from 50\u00b0C onwards as shown in the graph."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "",
+        "image": [
+            "AOFD-120_page4.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "AOFD-120.PDF"
+    },
+    "spec_9": {
+        "statement": "Based on the Atmel ATmega128 microcontroller specification document provided, answer the following questions.",
+        "question": [
+            "1. Which port on the ATmega128 microcontroller is used for ADC input channels? (A) PORTA (B) PORTB (C) PORTC (D) PORTD",
+            "2. How many 8-bit PWM channels does the ATmega128 microcontroller have? _______",
+            "3. Determine the maximum throughput in MIPS that the ATmega128 achieves per MHz and explain why this might be beneficial for power consumption."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "A",
+            "6",
+            "The ATmega128 achieves a maximum throughput of 1 MIPS per MHz. This is beneficial for power consumption as it allows efficient processing with minimal cycles, optimizing the trade-off between speed and power usage."
+        ],
+        "explanation": [
+            "PORTA is used for ADC input channels as indicated in the pin configuration diagram.",
+            "The document states there are two 8-bit PWM channels, which allows for precise control of analog signals.",
+            "Achieving 1 MIPS per MHz ensures that the device processes instructions efficiently, reducing the power consumed in high-speed operations."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "computation",
+            "inference"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA128_page1.png",
+            "ATMEGA128_page2.png",
+            "ATMEGA128_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA128.PDF"
+    },
+    "spec_10": {
+        "statement": "Based on the provided specification of the ATmega128 microcontroller, answer the following questions.",
+        "question": [
+            "What is the flash memory size of the ATmega128? (A) 64Kbytes (B) 128Kbytes (C) 256Kbytes (D) 512Kbytes",
+            "Identify the correct compatibility feature for ATmega103 in the ATmega128 document.",
+            "Calculate the total number of bits for Port A to Port G combined in the ATmega128."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(B) 128Kbytes",
+            "The ATmega128 is pin compatible with ATmega103.",
+            "50"
+        ],
+        "explanation": [
+            "The document states that the flash memory size is 128Kbytes.",
+            "The ATmega128 is 100% pin compatible with the ATmega103 as described.",
+            "Port A (8 bits), Port B (8 bits), Port C (8 bits), Port D (8 bits), Port E (8 bits), Port F (8 bits), Port G (5 bits) sum up to 50 bits."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA128_page4.png",
+            "ATMEGA128_page5.png",
+            "ATMEGA128_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA128.PDF"
+    },
+    "spec_11": {
+        "statement": "Based on the provided specification document about the ATMega128 microcontroller, answer the following questions:",
+        "question": [
+            "Which pin is used as the analog reference for the A/D Converter?\n(A) AVCC\n(B) AREF\n(C) PEN\n(D) XTAL2",
+            "Identify the operation performed by the SBC instruction from the instruction set summary table.",
+            "Calculate the number of clock cycles needed to execute an RCALL instruction."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "B",
+            "Subtract with Carry",
+            "3"
+        ],
+        "explanation": [
+            "The AREF pin is mentioned as the analog reference for the A/D Converter in the specification.",
+            "The SBC instruction description is provided as 'Subtract with Carry from Register,' indicating the operation it performs.",
+            "From the instruction set summary, the RCALL instruction takes 3 clock cycles as listed under '#Clocks'."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA128_page7.png",
+            "ATMEGA128_page8.png",
+            "ATMEGA128_page9.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA128.PDF"
+    },
+    "spec_12": {
+        "statement": "Based on the provided specification documents of the ATmega128 microcontroller, answer the following questions:",
+        "question": [
+            "What is the operation of the CLI instruction? \n(A) Set Global Interrupt Enable \n(B) Clear Global Interrupt Flag \n(C) Clear Global Interrupt Enable \n(D) Set Global Interrupt Flag",
+            "Identify the number of clock cycles required for the MOV instruction from the instruction set summary.",
+            "If a microcontroller operates at 8 MHz and has a power supply range of 3.0 to 5.5V, determine the package type available based on the ordering information."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "C",
+            "1",
+            "64A or 64M1"
+        ],
+        "explanation": [
+            "The CLI instruction clears the Global Interrupt Enable bit, disabling all interrupts.",
+            "The MOV instruction is listed with 1 clock cycle in the instruction set summary.",
+            "According to the ordering information, for an 8 MHz microcontroller with 3.0 to 5.5V, the available package types are 64A and 64M1."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "computation",
+            "inference"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA128_page10.png",
+            "ATMEGA128_page11.png",
+            "ATMEGA128_page12.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA128.PDF"
+    },
+    "spec_13": {
+        "statement": "Based on the specifications and errata of the ATmega128 device packaging information and functionalities, answer the following questions:",
+        "question": [
+            "1. Based on the package information for ATmega128 64A, what is the nominal dimension for the thickness (A) of the package?\n(A) 0.80 mm\n(B) 0.95 mm\n(C) 1.20 mm\n(D) 1.40 mm",
+            "2. What is the purpose of the NOP instructions as mentioned in the errata related to the 'Stabilizing time needed when changing XDIV Register'?",
+            "3. Calculate the maximum body area for the ATmega128 64M1 package if the dimensions are given as 9 x 9 mm. Provide your answer in square millimeters."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "C",
+            "The NOP instructions are used to ensure correct execution of subsequent instructions after a frequency change by providing delay for stabilization.",
+            "81 square millimeters"
+        ],
+        "explanation": [
+            "The nominal thickness (A) for the ATmega128 64A package is provided as 1.20 mm in the packaging information.",
+            "After a change in frequency, there might be incorrect execution of instructions. NOP instructions allow time for stabilization, ensuring proper execution.",
+            "The maximum body area is calculated using the formula for the area of a square (side x side), which is 9 mm x 9 mm = 81 mm\u00b2."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA128_page13.png",
+            "ATMEGA128_page14.png",
+            "ATMEGA128_page15.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA128.PDF"
+    },
+    "spec_14": {
+        "statement": "Based on the specified pages from the ATmega128 document, answer the following questions:",
+        "question": [
+            "What workaround is suggested for solving unexpected EEPROM interrupt requests? (A) Use OUT or SBI to set EERE in EECR. (B) Use ST or STS to set EERE in EECR. (C) Disable all interrupts before setting EERE.",
+            "Which revision corrected typos in the Ordering Information? (Rev. 2467X-06/11, Rev. 2467W-05/11, Rev. 2467V-02/11)",
+            "Calculate the percentage increase required if the source clock frequency is initially set to 10MHz but needs to be increased above the threshold found in the OSSCAL section?"
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "A",
+            "Rev. 2467X-06/11",
+            "2%"
+        ],
+        "explanation": [
+            "The document specifies using OUT or SBI to set EERE in EECR to avoid unexpected EEPROM interrupt requests.",
+            "The revision history on page 17 states that Rev. 2467X-06/11 corrected typos in the Ordering Information.",
+            "The OSSCAL section mentions a 2% increase; therefore, from 10MHz, you only need to calculate the increase percentage, which is specified as 2%."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA128_page16.png",
+            "ATMEGA128_page17.png",
+            "ATMEGA128_page18.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA128.PDF"
+    },
+    "spec_15": {
+        "statement": "Based on the ATmega128 specification document revisions, answer the following questions:",
+        "question": [
+            "What section of the document was updated to include information on the 'Analog to Digital Converter'?",
+            "Which page discusses the updates made for the 'JTDC Bit'? (A) Page 255 (B) Page 256 (C) Page 257 (D) Page 258",
+            "Calculate the average page number for the updates made to tables in the section 'External Clock' and 'Typical Characteristics'. Fill in the blank: The average page number is ____."
+        ],
+        "question_type": [
+            "open",
+            "single",
+            "blank"
+        ],
+        "answer": [
+            "Page 230",
+            "A",
+            "326.5"
+        ],
+        "explanation": [
+            "The 'Analog to Digital Converter' information was added on Page 230 as per the revision update notes.",
+            "The document specifies that the update for the JTDC Bit was discussed on Page 255.",
+            "External Clock: Page 320, Typical Characteristics: Page 333. Average = (320 + 333) / 2 = 326.5."
+        ],
+        "difficulty": [
+            "medium",
+            "easy",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA128_page19.png",
+            "ATMEGA128_page20.png",
+            "ATMEGA128_page21.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA128.PDF"
+    },
+    "spec_16": {
+        "statement": "Based on the given specification document of the ATmega128, answer the following questions.",
+        "question": [
+            "What is the purpose of the OC0DEN Fuse as per the document? (A) Enable high-speed ADC operation, (B) Disable timer/counter functions, (C) Connect external oscillator, (D) None of the above",
+            "Review the updated data for JTAG version numbers. What inference can be made regarding its importance for device compatibility?",
+            "Calculate the total number of pages referenced for programming-related updates. Fill in the blank: _______ pages."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(D) None of the above",
+            "The updated JTAG version numbers indicate necessity for correct programming and debugging, ensuring compatibility with existing tools.",
+            "6"
+        ],
+        "explanation": [
+            "The document does not specify the OC0DEN Fuse as having any of the listed purposes.",
+            "JTAG updates are crucial for ensuring that the device can be properly programmed and debugged with the correct tool versions, avoiding any compatibility issues.",
+            "The pages referenced for programming-related updates include: 278, 280, 307, 315, 317, and 317, totaling 6 pages."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA128_page22.png",
+            "ATMEGA128_page23.png",
+            "ATMEGA128_page24.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA128.PDF"
+    },
+    "spec_17": {
+        "statement": "Based on the specification document for the 8-bit AVR Microcontroller, answer the following questions:",
+        "question": [
+            "1. Which operating voltage range is applicable for the ATmega48P/88P/168P microcontroller?\n(A) 1.8 - 5.5V\n(B) 2.7 - 5.5V\n(C) 1.8 - 3.3V\n(D) 3.0 - 5.5V",
+            "2. What is the maximum throughput of the microcontroller at 20 MHz?",
+            "3. Calculate the power consumption in Active Mode for the ATmega48P at 1 MHz, 1.8V."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "A",
+            "20 MIPS",
+            "3.3 mA"
+        ],
+        "explanation": [
+            "The ATmega48P/88P/168P operates within the range of 1.8 - 5.5V as per the document's features.",
+            "The document states that the throughput is up to 20 MIPS at 20 MHz.",
+            "The document specifies the power consumption for Active Mode at 1 MHz, 1.8V as 3 mA."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA48P_page1.png",
+            "ATMEGA48P_page2.png",
+            "ATMEGA48P_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA48P.PDF"
+    },
+    "spec_18": {
+        "statement": "Based on the given pages from the ATmega48P/88P/168P/328P datasheet, answer the following questions.",
+        "question": [
+            "What is the main architecture of the ATmega48P/88P/168P/328P microcontroller? (A) ARM (B) AVR (C) MIPS (D) PIC",
+            "Identify the components labeled 'AVCC' and 'AREF' in the block diagram on page 5.",
+            "Calculate the total number of bytes of Flash and EEPROM memory combined, for the ATmega168P."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "B",
+            "AVCC is the supply voltage pin for A/D Converter and AREF is the analog reference pin for A/D Converter.",
+            "17 KB"
+        ],
+        "explanation": [
+            "The ATmega48P/88P/168P/328P microcontroller is described as using the AVR architecture.",
+            "According to section 1.1.7 and 1.1.8, AVCC is used for the A/D Converter and AREF serves as the analog reference pin for the A/D Converter.",
+            "The ATmega168P has 16K Bytes of Flash and 1K Bytes of EEPROM. Therefore, the total is 16K + 1K = 17K Bytes."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA48P_page4.png",
+            "ATMEGA48P_page5.png",
+            "ATMEGA48P_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA48P.PDF"
+    },
+    "spec_19": {
+        "statement": "Based on the ATmega specification document, answer the following questions regarding register and data handling.",
+        "question": [
+            "What is the purpose of the register TWBR in the ATmega series? (A) USART Control, (B) Timer Operation, (C) 2-wire Serial Interface Bit Rate, (D) ADC Configuration",
+            "From the document, what is the page number for the information on the USART I/O Data Register?",
+            "If the data retention failure rate is less than 1 PPM over 100 years at 25\u00b0C, what would be the estimated failure rate over 50 years assuming linear characteristics?"
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "C",
+            "195",
+            "0.5 PPM"
+        ],
+        "explanation": [
+            "The register TWBR is specifically used for configuring the 2-wire Serial Interface Bit Rate, as stated in the register summary.",
+            "Page 195 contains information about the USART I/O Data Register according to the register summary.",
+            "Assuming a linear failure model, if the failure rate is less than 1 PPM over 100 years, it would be approximately 0.5 PPM over 50 years: (1 PPM / 100 years) * 50 years = 0.5 PPM."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA48P_page7.png",
+            "ATMEGA48P_page8.png",
+            "ATMEGA48P_page9.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA48P.PDF"
+    },
+    "spec_20": {
+        "statement": "Based on the specification document of the ATmega48P/88P/168P/328P microcontroller, answer the following questions.",
+        "question": [
+            "Which register is used for controlling the Oscillator Calibration? (A) ADCL (B) SMCR (C) OSCCAL (D) EEARH",
+            "Identify the purpose of the ADCSRA register based on the given document.",
+            "Calculate the number of clock cycles required to execute the instruction `FMUL` if each clock cycle takes 62.5 ns."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "C",
+            "The ADCSRA register is used for defining the features related to the ADC, like enabling the ADC, starting a conversion, and setting the prescaler.",
+            "125 ns"
+        ],
+        "explanation": [
+            "OSCCAL is specifically listed as the Oscillator Calibration Register in the document.",
+            "ADCSRA stands for ADC Control and Status Register A and is responsible for various ADC configurations as per the document description.",
+            "The `FMUL` instruction requires 2 clock cycles. Thus, 2 cycles \u00d7 62.5 ns = 125 ns."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA48P_page10.png",
+            "ATMEGA48P_page11.png",
+            "ATMEGA48P_page12.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA48P.PDF"
+    },
+    "spec_21": {
+        "statement": "Based on the ATmega48P/88P/168P/328P specification document provided, answer the following questions:",
+        "question": [
+            "1. What operation does the LSR instruction perform? (A) Rotate Left with Carry, (B) Logical Shift Right, (C) Logical Shift Left, (D) Rotate Right through Carry",
+            "2. Which instruction is used to clear the Carry Flag? (A) CLC, (B) SEC, (C) CLN, (D) SEZ",
+            "3. Fill in the blank: The standard operation speed for the ATmega48P using a 32A package is up to __ MHz."
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "blank"
+        ],
+        "answer": [
+            "B",
+            [
+                "A"
+            ],
+            "20"
+        ],
+        "explanation": [
+            "LSR performs a Logical Shift Right operation, moving all bits in the register one position to the right.",
+            "CLC is the instruction used to clear the Carry Flag.",
+            "The standard operation speed for the ATmega48P using a 32A package is up to 20 MHz, as specified in the ordering information."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA48P_page13.png",
+            "ATMEGA48P_page14.png",
+            "ATMEGA48P_page15.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA48P.PDF"
+    },
+    "spec_22": {
+        "statement": "Based on the specification document of the ATmega series, answer the following questions.",
+        "question": [
+            "What is the power supply range for the ATmega328P? (A) 1.8 - 5.5V (B) 2.0 - 6.0V (C) 2.7 - 5.5V (D) 3.0 - 5.5V",
+            "Which of the following packages is available for the ATmega88P?",
+            "Calculate the maximum operating frequency for ATmega88P with a power supply of 5V."
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "blank"
+        ],
+        "answer": [
+            "(A) 1.8 - 5.5V",
+            [
+                "32A",
+                "32M1-A",
+                "28P3"
+            ],
+            "20 MHz"
+        ],
+        "explanation": [
+            "The document specifies that the ATmega328P has a power supply range of 1.8 - 5.5V.",
+            "The document lists the available packages for ATmega88P as 32A, 32M1-A, and 28P3.",
+            "At a higher power supply (such as 5V), the document indicates the ATmega88P can operate at a maximum frequency of 20 MHz."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "inference"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA48P_page16.png",
+            "ATMEGA48P_page17.png",
+            "ATMEGA48P_page18.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA48P.PDF"
+    },
+    "spec_23": {
+        "statement": "Based on the provided specification document of the ATmega48P/88P/168P/328P packages, answer the following questions.",
+        "question": [
+            "(a) What is the maximum allowable dimension for 'D' in the 32A TQFP package? (A) 8.75 mm (B) 9.00 mm (C) 9.25 mm (D) 9.50 mm",
+            "(b) Identify the correct top view layout orientation for the 28M1 package from the document.",
+            "(c) Calculate the nominal total area in square millimeters of the top view of the 32M1-A package given that the length of side 'D' is 5.00 mm and 'E' is also 5.00 mm."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(C) 9.25 mm",
+            "The top view of the 28M1 package shows a square with a diagonal pin #1 identifier.",
+            "25.00 mm\u00b2"
+        ],
+        "explanation": [
+            "The maximum dimension for 'D' is given in the document as 9.25 mm.",
+            "The document's top view for 28M1 clearly illustrates a square layout with a marked pin #1.",
+            "The area is calculated as D x E = 5.00 mm * 5.00 mm = 25.00 mm\u00b2."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA48P_page19.png",
+            "ATMEGA48P_page20.png",
+            "ATMEGA48P_page21.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA48P.PDF"
+    },
+    "spec_24": {
+        "statement": "Based on the provided specification document for the ATmega48P/88P/168P/328P microcontrollers, answer the following questions.",
+        "question": [
+            "Which revision of the ATmega328P has a known errata related to the 32 kHz oscillator?\n(A) Rev A\n(B) Rev B\n(C) Rev 2545F-08/08",
+            "What is the nominal dimension for the width (E1) of the 28P3 package, as shown in the document?",
+            "Calculate the range difference for dimension B (max - min) of the 28P3 package."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "B",
+            "7.311 mm",
+            "0.152 mm"
+        ],
+        "explanation": [
+            "Rev B of the ATmega328P has a known errata related to the instability of the 32 kHz oscillator.",
+            "The nominal dimension for E1 is given as 7.311 mm in the document.",
+            "The range for dimension B is calculated as Max (0.533 mm) - Min (0.381 mm) = 0.152 mm."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA48P_page22.png",
+            "ATMEGA48P_page23.png",
+            "ATMEGA48P_page24.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA48P.PDF"
+    },
+    "spec_25": {
+        "statement": "Based on the ATmega48P/88P/168P/328P specification document, answer the following questions.",
+        "question": [
+            "Which page contains updates on 'System and Reset Characteristics'? (A) 314 (B) 320 (C) 328",
+            "List two specific pages where 'DC Characteristics' are mentioned.",
+            "Calculate the hypothetical total number of pages if each characteristic update mentioned took up 2 pages in the document. Consider only the following: 'DC Characteristics', 'Typical Characteristics', and 'System and Reset Characteristics'."
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "open"
+        ],
+        "answer": [
+            "B",
+            [
+                "316",
+                "314"
+            ],
+            "8"
+        ],
+        "explanation": [
+            "The updates on 'System and Reset Characteristics' are mentioned on page 320, as specified in the document.",
+            "The 'DC Characteristics' are updated on pages 314 and 316.",
+            "The document mentions updates on 'DC Characteristics' (2 occurrences), 'Typical Characteristics' (3 occurrences), and 'System and Reset Characteristics' (1 occurrence). Total updates = 2 + 3 + 1 = 6. Each update taking 2 pages results in 6 * 2 = 12 pages."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ATMEGA48P_page25.png",
+            "ATMEGA48P_page26.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ATMEGA48P.PDF"
+    },
+    "spec_26": {
+        "statement": "Based on the specifications of the BC546, BC547, and BC548 transistors, answer the following questions related to EDA.",
+        "question": [
+            "What is the maximum Collector\u2014Emitter Voltage (VCEO) for the BC548? (A) 30 Vdc (B) 50 Vdc (C) 45 Vdc (D) 65 Vdc",
+            "Identify the correct condition for the DC current gain (hFE) of the BC547 under which it ranges from 110 to 800. (A) IC = 10 \u00b5A, VCE = 5.0 V (B) IC = 2.0 mA, VCE = 5.0 V (C) IC = 100 mA, VCE = 5.0 V",
+            "Calculate the total device dissipation in mW at TA = 25\u00b0C for one BC548 transistor and provide the numerical answer: ________ mW"
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "blank"
+        ],
+        "answer": [
+            "(A) 30 Vdc",
+            "(B) IC = 2.0 mA, VCE = 5.0 V",
+            "500"
+        ],
+        "explanation": [
+            "According to the document, the maximum VCEO for the BC548 is 30 Vdc, as listed in the Maximum Ratings table.",
+            "The DC current gain (hFE) for the BC547 at the given condition IC = 2.0 mA, VCE = 5.0 V ranges from 110 to 800. The other conditions do not match this range.",
+            "The document states that the total device dissipation for the BC548 is 500 mW at TA = 25\u00b0C."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "BC546_page1.png",
+            "BC546_page2.png",
+            "BC546_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "BC546.PDF"
+    },
+    "spec_27": {
+        "statement": "Based on the provided specifications for the BC546/B BC547/B BC548 transistors, answer the following questions.",
+        "question": [
+            "What is the DC current gain for a collector current (IC) of 10 mA as shown in Figure 7? (A) 0.5 (B) 1.0 (C) 1.5 (D) 2.0",
+            "Identify the pin configuration of the transistor package from Figure. Is the emitter, base, and collector arrangement as (1) E-B-C (2) C-B-E (3) B-E-C?",
+            "Calculate the current-gain bandwidth product for a collector current (IC) of 50 mA as shown in Figure 12. ____ MHz"
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "blank"
+        ],
+        "answer": [
+            "(C) 1.5",
+            "(3) B-E-C",
+            "200"
+        ],
+        "explanation": [
+            "At IC = 10 mA, Figure 7 shows the DC current gain to be approximately 1.5.",
+            "From the package dimensions, pin 1 is Collector (C), pin 2 is Base (B), and pin 3 is Emitter (E), hence the arrangement is B-E-C.",
+            "Figure 12 shows that for IC = 50 mA, the current-gain bandwidth product is about 200 MHz."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "BC546_page4.png",
+            "BC546_page5.png",
+            "BC546_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "BC546.PDF"
+    },
+    "spec_28": {
+        "statement": "Questions based on the BCM5221 10/100BASE-TX Transceiver specification.",
+        "question": [
+            "Which power supply voltage levels are specified for the BCM5221 transceiver? (A) 1.8V or 2.5V (B) 2.5V or 3.3V (C) 3.3V or 5V (D) 1.8V or 3.3V",
+            "Infer the primary benefit of DSP-based Signi-PHY architecture in the BCM5221 specification.",
+            "Calculate the theoretical power consumption of the BCM5221 transceiver in kilowatts if it operates at maximum power consumption for 24 hours continuously. Provide your answer in kilowatts."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(B) 2.5V or 3.3V",
+            "Ensures performance over temperature, voltage, and process variation, providing reliable operation.",
+            "0.0066 kW"
+        ],
+        "explanation": [
+            "The specification states power supply voltage levels as 2.5V or 3.3V.",
+            "The DSP-based architecture is designed to ensure stable performance despite variations, as mentioned in the document.",
+            "Maximum power consumption is given as 275 mW. Over 24 hours, the energy consumed is 275 mW * 24 = 6600 mWh, which is 0.0066 kW."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "BCM5221_page1.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "BCM5221.PDF"
+    },
+    "spec_29": {
+        "statement": "Based on the specification document of the BD777, BD776, BD778, and BD780 transistors, answer the following questions.",
+        "question": [
+            "What is the maximum Collector-Emitter Voltage (VCEO) for the BD780 transistor? (A) 45 Vdc (B) 60 Vdc (C) 80 Vdc",
+            "List all the parameters contributing to the calculation of thermal resistance R\u03b8JC.",
+            "Calculate the typical power dissipation of the transistor at a junction temperature (Tj) of 125\u00b0C, if the power derating above 25\u00b0C is 0.12 W/\u00b0C. Fill in the blank: ___ W"
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(C) 80 Vdc",
+            "Thermal resistance from junction to case (R\u03b8JC) is influenced by the contact area, thermal conductivity of the materials, and the thickness of the material between junction and case.",
+            "0.12"
+        ],
+        "explanation": [
+            "From the table on the first page, the maximum Collector-Emitter Voltage (VCEO) for the BD780 transistor is 80 Vdc.",
+            "Thermal resistance R\u03b8JC is the thermal resistance from the semiconductor junction to the case. It depends on the contact area, thermal conductivity, and material thickness, as these factors influence the ability of heat to transfer from the junction to the case.",
+            "Given the derating of 0.12 W/\u00b0C, from the standard 25\u00b0C to 125\u00b0C, the power dissipation reduction is (125\u00b0C - 25\u00b0C) * 0.12 W/\u00b0C = 12 W."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "BD777_page1.png",
+            "BD777_page2.png",
+            "BD777_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "BD777.PDF"
+    },
+    "spec_30": {
+        "statement": "Based on the specification document for the BD777 to BD780 series, answer the following questions:",
+        "question": [
+            "Which company is responsible for the distribution of this document? (A) Sony (B) Panasonic (C) Motorola (D) Samsung",
+            "Identify the type of warranty statement provided by the company regarding the use of the product.",
+            "Calculate the contact time if the fax machine in the USA sends 50 pages at a rate of 5 pages per minute."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "C",
+            "The company does not assume any liability for the use of the product, as stated in the disclaimer.",
+            "10 minutes"
+        ],
+        "explanation": [
+            "The document header indicates that Motorola is responsible.",
+            "The disclaimer mentions that the company does not assume any liability for potential damages arising from usage.",
+            "50 pages at 5 pages per minute results in 50 / 5 = 10 minutes."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "BD777_page4.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "BD777.PDF"
+    },
+    "spec_31": {
+        "statement": "Based on the overview provided for the ESP32 Wi-Fi and Bluetooth chip, answer the following questions:",
+        "question": [
+            "What is the maximum transmitting power for the Bluetooth feature of the ESP32? (A) +10 dBm, (B) +12 dBm, (C) +15 dBm (D) +20 dBm",
+            "Fill in the blank: The ESP32 chip integrates an __________, RF balun, power amplifier, low-noise receive amplifier, filters, and power management modules.",
+            "If the ESP32 supports up to 150 Mbps for 802.11n in a 2.4 GHz band, how long will it take to download a 300 MB file assuming maximum data rate with no overhead?"
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "B",
+            "antenna switch",
+            "16 seconds"
+        ],
+        "explanation": [
+            "The datasheet specifies that the enhanced power control provides a +12 dBm transmitting power for Bluetooth.",
+            "According to the integration feature list, the ESP32 includes an antenna switch among other components.",
+            "At a rate of 150 Mbps (150 million bits per second), a 300 MB file (2400 million bits) would take 16 seconds (2400/150) to download."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page1.png",
+            "ESP32_page2.png",
+            "ESP32_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_32": {
+        "statement": "Based on the ESP32 datasheet provided, answer the following questions.",
+        "question": [
+            "Which one of the following is NOT listed as an application for the ESP32?\n(A) Smart Agriculture\n(B) Home Automation\n(C) Automotive Systems",
+            "Refer to the block diagram. List three components found in the ESP32 block diagram.",
+            "Calculate the total number of GPIO pins available from the pin layout diagram."
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "blank"
+        ],
+        "answer": [
+            "(C) Automotive Systems",
+            [
+                "Embedded Flash",
+                "Wi-Fi MAC",
+                "Bluetooth link controller"
+            ],
+            "34"
+        ],
+        "explanation": [
+            "The document lists Smart Agriculture and Home Automation, but not Automotive Systems.",
+            "The block diagram shows various components including 'Embedded Flash', 'Wi-Fi MAC', and 'Bluetooth link controller'.",
+            "The pin layout diagram shows GPIO0 through GPIO39 with some pins missing, totaling 34 GPIO pins."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page4.png",
+            "ESP32_page5.png",
+            "ESP32_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_33": {
+        "statement": "Based on the ESP32 specifications provided, answer the following questions related to its electronic design.",
+        "question": [
+            "What is the function of the VDDA pin on the ESP32? (A) Digital power supply (B) RF input (C) Analog power supply (D) Ground",
+            "Based on the ESP32 power scheme, if the VDD_SDIO is connected together with VDD3P3_RTC, what happens to the internal LDO? Explain your answer.",
+            "Calculate the total voltage if the internal LDO is set to 1.8 V for the RTC domain and 3.0 V for the VDD3P3_RTC."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "C",
+            "The internal LDO is disabled automatically. This happens because the VDD_SDIO connects to the output of an internal LDO with VDD3P3_RTC as the input, disabling the LDO when connected together.",
+            "4.8 V"
+        ],
+        "explanation": [
+            "The VDDA pin is an analog power supply with a range of 2.3 V \u2013 3.6 V, as stated in the pin description table.",
+            "As per the ESP32 power scheme, the connection of VDD_SDIO with VDD3P3_RTC leads to the automatic disabling of the internal LDO.",
+            "Adding the voltage settings: 1.8 V (for RTC) + 3.0 V (for VDD3P3_RTC) equals 4.8 V."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page7.png",
+            "ESP32_page8.png",
+            "ESP32_page9.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_34": {
+        "statement": "Based on the ESP32 specification document provided, answer the following questions.",
+        "question": [
+            "What is the recommended operating voltage for ESP32? (A) 1.8 V (B) 3.3 V (C) 5 V (D) 12 V",
+            "How does ESP32 determine the boot mode using strapping pins?",
+            "Calculate the total time required for a complete setup and hold during the strapping pin process, given that setup time (t0) is 0 ms and hold time (t1) is 1 ms."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(B) 3.3 V",
+            "ESP32 uses the values of strapping pins at boot. Depending on whether the pins are pulled high or low, it configures the boot mode, such as SPI Boot or Download Boot.",
+            "1 ms"
+        ],
+        "explanation": [
+            "The recommended operating voltage for ESP32 listed in the document is 3.3 V.",
+            "The strapping pins determine boot mode by sampling their voltage levels at boot, which influence settings like boot mode and operating voltage.",
+            "Setup time is 0 ms and hold time is 1 ms, making the total time 1 ms."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page10.png",
+            "ESP32_page11.png",
+            "ESP32_page12.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_35": {
+        "statement": "Based on the functional description of the ESP32, answer the following questions.",
+        "question": [
+            "What is the maximum clock frequency supported by the ESP32's CPU? (A) 160 MHz (B) 180 MHz (C) 240 MHz (D) 260 MHz",
+            "Describe the purpose of the JTAG interface in the ESP32 CPU architecture.",
+            "Calculate the total size of the embedded memory in the ESP32, considering ROM and SRAM only."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "C",
+            "The JTAG interface is used for debugging the ESP32 CPU.",
+            "964 KB"
+        ],
+        "explanation": [
+            "The ESP32 CPU supports a maximum clock frequency of 240 MHz, as mentioned in the document.",
+            "The JTAG interface provides a means to debug and inspect the CPU operation, allowing developers to troubleshoot and optimize code.",
+            "Embedded memory consists of 448 KB of ROM and 520 KB of SRAM, totaling 964 KB (448 KB + 520 KB = 968 KB)."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page13.png",
+            "ESP32_page14.png",
+            "ESP32_page15.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_36": {
+        "statement": "Based on the provided sections of the ESP32 datasheet, answer the following questions regarding its timers and clocks.",
+        "question": [
+            "1. How many general-purpose timers are embedded in the ESP32? (A) Two (B) Three (C) Four (D) Five",
+            "2. Based on the ESP32's clock section, which clock has a possible frequency of 31.25 kHz?",
+            "3. Calculate the time period in microseconds of a signal with a frequency of 160 MHz."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "C",
+            "RTC Clock",
+            "6.25 \u00b5s"
+        ],
+        "explanation": [
+            "The document lists four general-purpose timers in the ESP32.",
+            "The RTC Clock section describes an option with an internal oscillator derived at 31.25 kHz.",
+            "Time period (T) is the inverse of frequency (f), so T = 1/f = 1/160 MHz = 6.25 \u00b5s."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page16.png",
+            "ESP32_page17.png",
+            "ESP32_page18.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_37": {
+        "statement": "Based on the ESP32 specification document, answer the following questions related to electronic design automation (EDA) features:",
+        "question": [
+            "What type of modulation is supported by the ESP32 Bluetooth Radio? (A) BPSK (B) DQPSK (C) QAM (D) FSK",
+            "What are the three major states of the Bluetooth Link Controller? List them in order.",
+            "Calculate the range of power consumption in modem-sleep mode at Normal speed (80 MHz) for a dual-core chip."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "B",
+            "standby, connection, sniff",
+            "20 mA to 31 mA"
+        ],
+        "explanation": [
+            "The ESP32 Bluetooth Radio supports \u03c0/4 DQPSK and 8 DPSK modulation as per the document, making DQPSK the correct answer.",
+            "The document states that the Bluetooth Link Controller operates in three major states: standby, connection, and sniff.",
+            "The document lists the power consumption of a dual-core chip at normal speed as 20 mA to 31 mA."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page19.png",
+            "ESP32_page20.png",
+            "ESP32_page21.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_38": {
+        "statement": "Based on the ESP32 datasheet, answer the following questions.",
+        "question": [
+            "How many ADC channels does the ESP32 support? (A) 15 (B) 18 (C) 20 (D) 22",
+            "Which subsystem remains powered during the Deep-sleep mode in the ESP32?",
+            "Calculate the approximate total error range for an ADC operating with Atten=2 based on the datasheet. Fill in the blank: ___ mV."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(B) 18",
+            "ULP co-processor",
+            "80"
+        ],
+        "explanation": [
+            "The ESP32 has 18 ADC channels according to the description of peripherals.",
+            "The ULP co-processor and RTC memory remain powered during Deep-sleep mode as stated in the datasheet.",
+            "For Atten=2, the total error range is -40 mV to 40 mV, which results in a total range of 80 mV."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page22.png",
+            "ESP32_page23.png",
+            "ESP32_page24.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_39": {
+        "statement": "Based on the ESP32 datasheet, answer the following questions.",
+        "question": [
+            "What is the maximum clock frequency supported by the SPI interface on the ESP32? (A) 40 MHz (B) 50 MHz (C) 80 MHz (D) 100 MHz",
+            "Identify three features of the SDIO/SPI slave controller.",
+            "Calculate the data rate in Mbps for a UART interface operating at 5 Mbps over a 10-bit configuration, including start, stop, and parity bits."
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "blank"
+        ],
+        "answer": [
+            "C",
+            [
+                "Configurable sampling and driving clock edge",
+                "Block size of up to 512 bytes",
+                "Interrupts for host to initiate data transfer"
+            ],
+            "4 Mbps"
+        ],
+        "explanation": [
+            "The maximum clock frequency for the SPI interface as stated on page 27 of the datasheet is 80 MHz.",
+            "The SDIO/SPI slave controller supports features like configurable clock edge, block size up to 512 bytes, and initiating data transfer interrupts.",
+            "The data rate is calculated by subtracting the additional bits (start, stop, parity) from the total, thus 5 Mbps * (8/10) = 4 Mbps."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page25.png",
+            "ESP32_page26.png",
+            "ESP32_page27.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_40": {
+        "statement": "Based on the peripheral pin configurations of an electronic device, answer the following questions.",
+        "question": [
+            "1. What is the function of the pin labeled GPIO04 associated with the SD/SDIO/MMC Host Controller?\n(A) GPIO output\n(B) PWM output\n(C) SD DATA1\n(D) Touch sensor input",
+            "2. Identify all interfaces that utilize the MTCK pin from the table.",
+            "3. Calculate the total number of channels available for LED PWM if the document specifies '16 independent channels @80 MHz clock/RTC CLK.'"
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "open"
+        ],
+        "answer": [
+            "C",
+            [
+                "SD/SDIO/MMC Host Controller",
+                "JTAG",
+                "SDIO/SPI Slave Controller"
+            ],
+            "16"
+        ],
+        "explanation": [
+            "GPIO04 is connected to SD DATA1 as per the document.",
+            "The interfaces that mention using the MTCK pin are SD/SDIO/MMC Host Controller, JTAG, and SDIO/SPI Slave Controller.",
+            "The document states '16 independent channels @80 MHz' for LED PWM, indicating there are 16 channels."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "easy"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page28.png",
+            "ESP32_page29.png",
+            "ESP32_page30.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_41": {
+        "statement": "Based on the provided pages from the ESP32 datasheet, answer the following questions.",
+        "question": [
+            "Which pin function supports Quad SPI in the Parallel QSPI interface?\n(A) SD_DATA_0\n(B) MTMS\n(C) GPIO18\n(D) MTDO",
+            "What is the required minimum voltage for the VDD_SDIO power domain in the recommended operating conditions?",
+            "Calculate the voltage drop across a 6 \u03a9 resistor if the VDD3P3_RTC voltage is 3.3 V and internally sourced by the ESP32."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "D",
+            "2.3 V",
+            "0.3 V"
+        ],
+        "explanation": [
+            "The function MTDO is associated with Quad SPI in the given pin function table for Parallel QSPI.",
+            "According to Table 12 in the document, the minimum recommended voltage for VDD_SDIO is 2.3 V.",
+            "Using Ohm's Law (V = IR), given I is 0.05 A (maximum as per external power supply current) and R is 6 \u03a9, the voltage drop V = 0.05 * 6 = 0.3 V."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page31.png",
+            "ESP32_page32.png",
+            "ESP32_page33.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_42": {
+        "statement": "Based on the ESP32 datasheet V3.0 provided, answer the following questions.",
+        "question": [
+            "What is the maximum high-level output voltage (V_OH) specified for the device? (A) 0.75xVDD (B) 0.8xVDD (C) VDD+0.3 (D) VDD-0.3",
+            "Identify the typical output power for the Wi-Fi radio at 72.2 Mbps.",
+            "Calculate the total current consumption if the device operates at the maximum power consumption for Transmit 802.11b, DSSS 1 Mbps and Transmit BT/BLE. Provide the result in mA."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "(B) 0.8xVDD",
+            "14 dBm",
+            "370 mA"
+        ],
+        "explanation": [
+            "According to Table 13: DC Characteristics, the maximum high-level output voltage (V_OH) is 0.8xVDD.",
+            "From Table 16: Wi-Fi Radio Characteristics, the typical output power for 72.2 Mbps is 14 dBm.",
+            "Referencing Table 15, the maximum current for Transmit 802.11b, DSSS 1 Mbps is 240 mA, and for Transmit BT/BLE it is 130 mA. Thus, the total is 240 + 130 = 370 mA."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page34.png",
+            "ESP32_page35.png",
+            "ESP32_page36.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_43": {
+        "statement": "Based on the provided specifications for the electronic device, answer the following questions.",
+        "question": [
+            "Which modulation scheme shows better sensitivity for the receiver at a 0.01% BER?\n(A) \u03c0/4 DQPSK\n(B) 8DPSK",
+            "Identify the maximum typical gain control step value for the transmitter.",
+            "Calculate the difference in sensitivity at 30.8% PER between the receiver characteristics BLE table and \u03c0/4 DQPSK modulation in the enhanced data rate."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "A",
+            "3 dBm",
+            "-7 dBm"
+        ],
+        "explanation": [
+            "According to Table 19, the sensitivity for \u03c0/4 DQPSK is -90 dBm, and for 8DPSK it is -84 dBm. Therefore, \u03c0/4 DQPSK shows better sensitivity.",
+            "From Table 20, the typical gain control step value is 3 dBm.",
+            "Sensitivity at 30.8% PER for BLE is -97 dBm and for the \u03c0/4 DQPSK is -90 dBm. Therefore, the difference is -97 dBm - (-90 dBm) = -7 dBm."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "computation",
+            "inference"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page37.png",
+            "ESP32_page38.png",
+            "ESP32_page39.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_44": {
+        "statement": "Based on the given ESP32 specification document concerning part number and ordering information:",
+        "question": [
+            "1. Which package type does the part number ESP32-D0WDQ6 belong to?\n(A) QFN 6*6\n(B) QFN 5*5\n(C) OFN 5*5",
+            "2. Identify the connection type for the ESP32-S0WD from the document.",
+            "3. Calculate the total embedded flash memory size for 3 units of ESP32-D2WD."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "A",
+            "Wi-Fi b/g/n + BT/BLE Dual Mode",
+            "48 Mbit"
+        ],
+        "explanation": [
+            "ESP32-D0WDQ6 is listed with the package type QFN 6*6 in the table.",
+            "The ESP32-S0WD is described as having Wi-Fi b/g/n + BT/BLE Dual Mode connections.",
+            "Each ESP32-D2WD has 16-Mbit embedded flash. For 3 units: 16 Mbit * 3 = 48 Mbit."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "ESP32_page40.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "ESP32.PDF"
+    },
+    "spec_45": {
+        "statement": "Considering the specifications of the HZ Series Zener Diodes provided in the document, answer the following questions.",
+        "question": [
+            "What is the maximum power dissipation for the HZ Series Zener Diodes? (A) 500 mW (B) 175\u00b0C (C) 5 mA",
+            "Identify the maximum Zener voltage for the HZ4 grade A1 diode.",
+            "Calculate the total dynamic resistance if five HZ6 grade A1 diodes are connected in series."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "(A) 500 mW",
+            "5.5 V",
+            "200 \u03a9"
+        ],
+        "explanation": [
+            "The maximum power dissipation is specified as 500 mW under Absolute Maximum Ratings in the document.",
+            "The Zener voltage for HZ4 grade A1 ranges from 3.4 V to 3.6 V, so the maximum Zener voltage is 5.5 V for HZ6.",
+            "The dynamic resistance for a single HZ6 grade A1 diode is 40 \u03a9. When connected in series, the resistances add up: 40 \u03a9 * 5 = 200 \u03a9."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "HZ11B1_page1.png",
+            "HZ11B1_page2.png",
+            "HZ11B1_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "HZ11B1.PDF"
+    },
+    "spec_46": {
+        "statement": "Based on the given specification document for the HZ Series, answer the following questions related to its electronic design features.",
+        "question": [
+            "1. What is the maximum Zener voltage (Vz) for the HZ16 Type 3?\n(A) 16.5 V\n(B) 17.1 V\n(C) 15.5 V\n(D) 14.3 V",
+            "2. Which types have a Zener voltage range with a maximum value of 10.8 V or less?",
+            "3. Calculate the difference between the maximum Zener voltages for HZ30 Type 1 and HZ27 Type 3."
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "blank"
+        ],
+        "answer": [
+            "B",
+            [
+                "HZ11 Type B2",
+                "HZ11 Type B1"
+            ],
+            "3.0 V"
+        ],
+        "explanation": [
+            "For HZ16 Type 3, the maximum Zener voltage is given as 17.1 V.",
+            "HZ11 Type B2 has a maximum Zener voltage of 10.8 V and HZ11 Type B1 has a maximum Zener voltage of 10.6 V, which are both 10.8 V or less.",
+            "HZ30 Type 1 has a maximum Zener voltage of 29.6 V, while HZ27 Type 3 has a maximum Zener voltage of 26.6 V. The difference is 29.6 - 26.6 = 3.0 V."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "HZ11B1_page4.png",
+            "HZ11B1_page5.png",
+            "HZ11B1_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "HZ11B1.PDF"
+    },
+    "spec_47": {
+        "statement": "Based on the given specification document of the HZ Series electronic device, answer the following questions.",
+        "question": [
+            "What is the JEDEC code for the package type of this electronic device? (A) DO-35 (B) DO-214 (C) DO-41",
+            "Determine if the statement 'Hitachi products are designed to be radiation resistant' is true or false.",
+            "Calculate the total length of the electronic component based on the package dimensions: __ mm."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "A",
+            "False",
+            "56.4"
+        ],
+        "explanation": [
+            "The JEDEC code listed in the document is DO-35.",
+            "The document states 'This product is not designed to be radiation resistant.'",
+            "The total length is calculated by summing the minimum lengths and the maximum center part: 26.0 + 4.2 + 26.0 = 56.2 mm."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "HZ11B1_page7.png",
+            "HZ11B1_page8.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "HZ11B1.PDF"
+    },
+    "spec_48": {
+        "statement": "Based on the specification document for the IRF3205 HEXFET Power MOSFET, answer the following questions:",
+        "question": [
+            "1. What is the maximum continuous drain current (I_D) at T_C = 25\u00b0C and V_GS = 10V? (A) 80 A (B) 110 A (C) 390 A (D) 200 A",
+            "2. True or False: The gate threshold voltage range is between 2.0 V and 4.0 V as per the electrical characteristics.",
+            "3. Calculate the junction-to-case thermal resistance (R_\u03b8JC) if the junction-to-ambient thermal resistance (R_\u03b8JA) is 62\u00b0C/W and the power dissipation (P_D) is 200 W."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "B",
+            "True",
+            "R_\u03b8JC = 0.75\u00b0C/W"
+        ],
+        "explanation": [
+            "The document specifies the maximum continuous drain current at T_C = 25\u00b0C and V_GS = 10V is 110 A.",
+            "The gate threshold voltage range is explicitly stated as ranging from 2.0 V to 4.0 V.",
+            "Based on the thermal resistance given in the document, R_\u03b8JC = 0.75\u00b0C/W. This value is directly provided and supports thermal analysis."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "IRF3205_page1.png",
+            "IRF3205_page2.png",
+            "IRF3205_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "IRF3205.PDF"
+    },
+    "spec_49": {
+        "statement": "Based on the IRF3205 specification document, answer the following questions:",
+        "question": [
+            "1. What is the typical total gate charge (QG) at VDS = 27V according to Fig 6? (A) 60 nC, (B) 80 nC, (C) 100 nC, (D) 120 nC",
+            "2. Identify the factor that limits the maximum drain current in Fig 9.",
+            "3. Calculate the thermal response ZthJC given a rectangular pulse duration t1 = 0.01 sec and a duty factor D = 0.2 using Fig 11."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(A) 60 nC",
+            "Limited by package",
+            "0.1"
+        ],
+        "explanation": [
+            "The typical total gate charge (QG) at VDS = 27V is marked on the graph in Fig 6 as approximately 60 nC.",
+            "Fig 9 shows the maximum drain current is limited by the package.",
+            "Using Fig 11, with t1 = 0.01 sec and D = 0.2, the thermal response ZthJC is found at the intersection, approximately 0.1."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "IRF3205_page4.png",
+            "IRF3205_page5.png",
+            "IRF3205_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "IRF3205.PDF"
+    },
+    "spec_50": {
+        "statement": "Based on the provided documentation of IRF3205 HEXFET transistors, answer the following questions.",
+        "question": [
+            "What does D.U.T stand for in the test circuit schematic? (A) Device Under Test (B) Diode Under Test (C) Direct Under Test",
+            "Identify the characteristics essential for the Circuit Layout Considerations described in the schematic.",
+            "If the Duty Factor 'D' is 0.5 and the period is 20 microseconds, calculate the pulse width (P.W.)."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "A",
+            "Low stray inductance, Ground plane, Low leakage inductance",
+            "10 microseconds"
+        ],
+        "explanation": [
+            "D.U.T is commonly used to denote 'Device Under Test'.",
+            "The schematic specifically lists these characteristics for good circuit performance.",
+            "P.W. is calculated as D multiplied by the period: 0.5 * 20 microseconds = 10 microseconds."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "IRF3205_page7.png",
+            "IRF3205_page8.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "IRF3205.PDF"
+    },
+    "spec_51": {
+        "statement": "Based on the specification of the LM124/224/324/324A/SA534/LM2902 low power quad op amps, answer the following questions:",
+        "question": [
+            "According to the document, what is the unity gain bandwidth of the LM124/224/324/324A/SA534/LM2902 op amps? (A) 1 MHz (B) 10 MHz (C) 100 kHz (D) 5 kHz",
+            "Explain the significance of temperature compensation in this op amp's features.",
+            "Calculate the power dissipation for the N package at an ambient temperature of 40\u00b0C."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "A",
+            "Temperature compensation minimizes the variation in the amplifier's performance over a range of temperatures, ensuring stability and reliability.",
+            "1464 mW"
+        ],
+        "explanation": [
+            "The document specifies a unity gain bandwidth of 1 MHz.",
+            "Temperature compensation helps maintain consistent performance by minimizing changes in gain, offset voltage, and bias current due to temperature fluctuations.",
+            "The power dissipation for the N package is 1420 mW at 25\u00b0C. With a derating factor of 11.4 mW/\u00b0C, at 40\u00b0C, the dissipation is 1420 + (15\u00b0C * 11.4 mW/\u00b0C) = 1464 mW."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "LM124_page1.png",
+            "LM124_page2.png",
+            "LM124_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "LM124.PDF"
+    },
+    "spec_52": {
+        "statement": "Based on the provided specification document of a low power quad op amp, answer the following questions.",
+        "question": [
+            "What is the typical input bias current (I_BIAS) for the LM324A op amp?\n(A) 45 nA\n(B) 100 nA\n(C) 200 nA\n(D) 400 nA",
+            "According to the equivalent circuit diagram, what is the primary function of transistors Q1 and Q2?\n(A) Output buffering\n(B) Input differential pair\n(C) Voltage regulation\n(D) Current limiting",
+            "Calculate the maximum output current capability when V_IN+ = 1V and V_IN- = 0V, assuming V_CC = 15V, from the given electrical characteristics."
+        ],
+        "question_type": [
+            "single",
+            "single",
+            "open"
+        ],
+        "answer": [
+            "A",
+            "B",
+            "40 mA"
+        ],
+        "explanation": [
+            "The typical input bias current I_BIAS is specified in the document as 45 nA.",
+            "In the equivalent circuit, Q1 and Q2 form an input differential pair, which is common in op-amp input stages.",
+            "The document specifies that the output current source capability for such conditions is 40 mA."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "LM124_page4.png",
+            "LM124_page5.png",
+            "LM124_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "LM124.PDF"
+    },
+    "spec_53": {
+        "statement": "Consider the specification document for low power quad operational amplifiers.",
+        "question": [
+            "Based on the document, what is the frequency at which the large-scale frequency response curve intersects 10 V/V? (A) 1 kHz (B) 10 kHz (C) 100 kHz (D) 1 MHz",
+            "Describe what is meant by 'common-mode rejection ratio' as shown in the document.",
+            "Calculate the Common-Mode Rejection Ratio (CMRR) in dB when V+ = +5 VDC and VCM = 0 VDC."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "C",
+            "Common-Mode Rejection Ratio (CMRR) is the ability of an operational amplifier to reject input signals common to both input leads. It is often expressed in decibels (dB).",
+            "70"
+        ],
+        "explanation": [
+            "At 100 kHz, the large-scale frequency response intersects 10 V/V according to the graph.",
+            "The CMRR indicates how well an op amp can suppress common-mode signals, which affects the precision of differential measurements.",
+            "From the graph, when V+ = +5 VDC and VCM = 0 VDC, the CMRR is approximately 70 dB as visible."
+        ],
+        "difficulty": [
+            "medium",
+            "easy",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "LM124_page7.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "LM124.PDF"
+    },
+    "spec_54": {
+        "statement": "Based on the specification document of Motorola's Quad Single Supply Comparators, answer the following questions.",
+        "question": [
+            "(A) What is the typical input offset voltage for the LM339? \n(B) Which temperature range corresponds to the LM2901 operating limits? \n(C) What is the value of the typical saturation voltage Vsat at an output current of 4.0 mA?",
+            "Considering the circuit schematic shown in the document, which pins correspond to the input and output of the comparator?",
+            "Calculate the approximate power dissipation at a junction temperature TJ of 150\u00b0C, using the derating above 25\u00b0C of 8.0 mW/\u00b0C."
+        ],
+        "question_type": [
+            "multi",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            [
+                "A",
+                "TA = -40 to +105\u00b0C",
+                "130 mV"
+            ],
+            "Pin 4 and Pin 5 are inputs; Pin 2 is output.",
+            "Power dissipation = 1.0 W + 8.0 mW/\u00b0C * (150\u00b0C - 25\u00b0C) = 1.0 W + 1.0 W = 2.0 W"
+        ],
+        "explanation": [
+            [
+                "The typical input offset voltage for LM339A is \u00b17.0 mV.",
+                "The operating temperature range for LM2901 is -40 to +105\u00b0C.",
+                "The typical Vsat is mentioned as 130 mV for an output current of 4.0 mA."
+            ],
+            "The schematic illustrates that Pin 4 and Pin 5 are connected as inputs, while Pin 2 serves as the output.",
+            "The power dissipation is calculated by adding the initial power to the derated power based on the temperature difference."
+        ],
+        "difficulty": [
+            "medium",
+            "easy",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "LM339_page1.png",
+            "LM339_page2.png",
+            "LM339_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "LM339.PDF"
+    },
+    "spec_55": {
+        "statement": "Analyze the specification document for the LM339 and related devices.",
+        "question": [
+            "1. According to the document, what is the recommended use for the \"+15 V\" type comparator circuit? (A) Driving heavy loads (B) Low-frequency audio amplification (C) Zero crossing detection (D) Power regulation",
+            "2. Fill in the blank: In Figure 8, the frequency 'f' of the square wave oscillator is determined by the formula f = _____.",
+            "3. Considering the zero crossing detector circuit with single supply from the document, calculate the maximum value of R3 allowed for a small error in zero crossing, given R1 = 8.2k\u03a9 and R2 = 6.8k\u03a9."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "C",
+            "1 / (2.2 * R * C) Hz",
+            "10 k\u03a9"
+        ],
+        "explanation": [
+            "According to the document, Figure 9 represents a zero crossing detector with single supply, which suggests the recommended use.",
+            "The frequency 'f' is derived from the formula mentioned in Figure 8: f = 1 / (2.2 * R * C) Hz",
+            "For small error in zero crossing, R3 should be less than or equal to 10k\u03a9 as inferred from Figure 9's note \"R3 \u2264 10\"."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "LM339_page4.png",
+            "LM339_page5.png",
+            "LM339_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "LM339.PDF"
+    },
+    "spec_56": {
+        "statement": "Based on the specifications of the LR38820 QVGA TFT-LCD controller, answer the following questions.",
+        "question": [
+            "How much built-in display memory does the LR38820 have? (A) 100 KB (B) 150 KB (C) 200 KB (D) 250 KB",
+            "Identify two functions of the PxBLT feature mentioned in the given document. (A) Image rotation (B) 16-bit asynchronous bus interface (C) Image inversion (D) Mirror image (E) 5-bit color palette",
+            "Compute the number of display colors that can be supported if a 24-bit address space is utilized entirely with a 65,536 color display mode."
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "blank"
+        ],
+        "answer": [
+            "B",
+            [
+                "C",
+                "D"
+            ],
+            "16,777,216"
+        ],
+        "explanation": [
+            "The document mentions that the LR38820 has a built-in display memory of 150 KB.",
+            "The PxBLT function includes features like image inversion and mirror image, as indicated in the document.",
+            "A 24-bit address space can support 2^24 different color combinations, resulting in 16,777,216 possible colors."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "LR38820_page1.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "LR38820.PDF"
+    },
+    "spec_57": {
+        "statement": "Based on the specifications of an 80Msps, 12-bit ADC (LTC1749), answer the following questions:",
+        "question": [
+            "1. What is the maximum supply voltage (VDD) for the LTC1749 ADC?\n\n(A) 5V\n(B) 5.5V\n(C) 3.3V\n(D) 6V",
+            "2. List the typical SNR values for the LTC1749 at 5MHz and 70MHz input frequencies with PGA set to 0.",
+            "3. Calculate the full-scale output voltage variation (VCM) when the temperature changes by 50\u00b0C."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "open"
+        ],
+        "answer": [
+            "B",
+            "5MHz: 71.8 dB, 70MHz: 71.4 dB",
+            "The variation is 1.5 mV."
+        ],
+        "explanation": [
+            "The maximum supply voltage is specified as 5.5V under Absolute Maximum Ratings.",
+            "From the Dynamic Accuracy table, the specified typical SNR at 5MHz (PGA = 0) and 70MHz (PGA = 0) are 71.8 dB and 71.4 dB respectively.",
+            "The VCM Tempco is \u00b130 ppm/\u00b0C. For a 50\u00b0C change, the variation is 2V * (30 ppm/\u00b0C * 50\u00b0C) = 3 mV."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "LTC1749_page1.png",
+            "LTC1749_page2.png",
+            "LTC1749_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "LTC1749.PDF"
+    },
+    "spec_58": {
+        "statement": "Based on the specification document for the LTC1749 electronic device, answer the following questions.",
+        "question": [
+            "What is the typical power dissipation of the device? (A) 1.45 W (B) 1.69 W (C) 2.0 W",
+            "Fill in the blank: The high-level input voltage (V_IH) is ______ volts.",
+            "Calculate the ENC to CLCKOUT rising time if t0 = 12.5 ns and t4 = 2.4 ns. Provide your answer in nanoseconds."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "A",
+            "2.4",
+            "14.9"
+        ],
+        "explanation": [
+            "The typical power dissipation from the power requirements table is given as 1.45 W, so the correct option is (A).",
+            "The digital input specifications table shows that V_IH is 2.4 V, as per the typical conditions.",
+            "The ENC to CLCKOUT rising time is the sum of t0 and t4, which is 12.5 ns + 2.4 ns = 14.9 ns."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "LTC1749_page4.png",
+            "LTC1749_page5.png",
+            "LTC1749_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "LTC1749.PDF"
+    },
+    "spec_59": {
+        "statement": "Based on the typical performance characteristics and pin functions of the LTC1749 ADC.",
+        "question": [
+            "1. (Single) Which pin is used for the positive differential analog input? (A) Pin 10 (B) Pin 4 (C) Pin 24",
+            "2. (Multi) What characteristics graphs can you find for SFDR in the document? (Select all that apply) (A) SFDR vs Input Level (B) SFDR vs Sampling Rate (C) SFDR vs Frequency",
+            "3. (Blank) Calculate the supply current for a sample rate of 60 Msps: ____ mA"
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "blank"
+        ],
+        "answer": [
+            "(B) Pin 4",
+            "(A) SFDR vs Input Level, (B) SFDR vs Sampling Rate",
+            "270"
+        ],
+        "explanation": [
+            "Pin 4 is designated as AIN+ for the positive differential analog input.",
+            "The document includes graphs for SFDR vs Input Level and SFDR vs Sampling Rate, as shown on pages 7 and 8.",
+            "The graph on page 8 shows the relationship of supply current vs sample rate, where 60 Msps corresponds to 270 mA."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "LTC1749_page7.png",
+            "LTC1749_page8.png",
+            "LTC1749_page9.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "LTC1749.PDF"
+    },
+    "spec_60": {
+        "statement": "Based on the document pages from the specification of the LTC1749 ADC, answer the following questions.",
+        "question": [
+            "What is the primary function of the ADC in the LTC1749 as described in the document? (A) Digital Signal Processing (DSP), (B) Digital-to-Analog Conversion (DAC), (C) Analog-to-Digital Conversion (ADC), (D) Voltage Regulation",
+            "Based on the timing diagram, if t1 equals 5 ns, t2 equals 10 ns, and t3 equals 15 ns, what is the total time period 't0'?",
+            "Explain the role of the residue amplifier in the ADC operation as mentioned in the document."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "(C) Analog-to-Digital Conversion (ADC)",
+            "30 ns",
+            "The residue amplifier amplifies the difference between the actual analog input and its quantized digital representation to improve conversion accuracy in subsequent stages."
+        ],
+        "explanation": [
+            "The primary function of the ADC is to convert analog signals into digital signals, which is the fundamental operation of an Analog-to-Digital Converter.",
+            "t0 is the sum of t1, t2, and t3 according to the timing diagram, which is 5 ns + 10 ns + 15 ns = 30 ns.",
+            "The residue amplifier serves to amplify the residuals of the conversion errors from one stage before moving to the next conversion stage, ensuring improved accuracy of the ADC over multiple pipelined stages."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "computation",
+            "inference"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "LTC1749_page10.png",
+            "LTC1749_page11.png",
+            "LTC1749_page12.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "LTC1749.PDF"
+    },
+    "spec_61": {
+        "statement": "Based on the LTC1749 specification document, answer the following questions related to electronic design automation.",
+        "question": [
+            "What is the primary function of transformers in the input drive circuits? (A) To convert analog signals to digital, (B) To provide poor low-frequency performance, (C) To convert single-ended signals to differential signals.",
+            "Examine Figure 3a. How does using a 1:1 transformer affect the analog input signal in high frequency applications? Explain your reasoning.",
+            "Calculate the input range (in V_p-p Differential) of the ADC when SENSE is tied to GND and PGA is set to 1."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(C)",
+            "Using a 1:1 transformer without a center tap provides better support for high-frequency applications as it maintains better balance.",
+            "0.84V_p-p"
+        ],
+        "explanation": [
+            "Transformers convert a single-ended signal to a differential signal, which is the correct function for option (C).",
+            "The document states that transformers without a center tap generally provide better performance at higher frequencies due to improved balance.",
+            "According to Table 1, when SENSE is set to GND and PGA is set to 1, the input range is 0.84V_p-p Differential."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "LTC1749_page13.png",
+            "LTC1749_page14.png",
+            "LTC1749_page15.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "LTC1749.PDF"
+    },
+    "spec_62": {
+        "statement": "Based on the LTC1749 specification document, answer the following questions.",
+        "question": [
+            "1. What is the maximum encode rate for the LTC1749? (A) 60Msps (B) 80Msps (C) 100Msps (D) 120Msps",
+            "2. Explain how the output loading affects the performance of the LTC1749.",
+            "3. Calculate the duty cycle if the fall time of the single-ended encode signal is 8ns and the rise time is 4ns."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "B",
+            "Output loading can affect the performance by increasing the capacitive load, which affects signal integrity and timing.",
+            "_____33.33%"
+        ],
+        "explanation": [
+            "The document states that the maximum encode rate for the LTC1749 is 80Msps.",
+            "The digital outputs should drive minimal capacitive loads to avoid interaction with input circuitry, minimizing timing errors.",
+            "Duty cycle is calculated as (Rise Time / (Rise Time + Fall Time)) * 100 = (4/(4+8))*100 = 33.33%"
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "LTC1749_page16.png",
+            "LTC1749_page17.png",
+            "LTC1749_page18.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "LTC1749.PDF"
+    },
+    "spec_63": {
+        "statement": "Based on the given specification document pages, answer the following questions.",
+        "question": [
+            "What is the primary purpose of the LTC1749 device, as indicated in the document? (A) Microprocessor (B) ADC (C) DAC (D) Mixer",
+            "Identify the package type of the LTC1749 device based on the illustration provided in the document.",
+            "Calculate the maximum width of the mold flash for the LTC1749 package, given that it should not exceed 0.152mm per side. Provide your answer in millimeters."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "B",
+            "FW Package, 48-Lead Plastic TSSOP",
+            "0.304mm"
+        ],
+        "explanation": [
+            "According to the related parts list, the LTC1749 is a 14-bit, 80Megasamples per second (MSps) ADC.",
+            "The document specifies that the LTC1749 comes in an FW Package, 48-Lead Plastic TSSOP (6.1mm).",
+            "Since the mold flash should not exceed 0.152mm per side, the total maximum width of the mold flash is 2 * 0.152mm = 0.304mm."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "LTC1749_page19.png",
+            "LTC1749_page20.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "LTC1749.PDF"
+    },
+    "spec_64": {
+        "statement": "Based on the specification document for the MAX202E\u2013MAX241E \u00b115kV ESD-Protected, +5V RS-232 Transceivers.",
+        "question": [
+            "1. Which MAX transceiver model supports the highest number of RS-232 drivers? (A) MAX203E (B) MAX211E (C) MAX241E (D) MAX205E",
+            "2. Calculate the total Input Leakage Current for the configuration: all inputs of MAX202E and MAX203E are at 0V. Use the typical values given.",
+            "3. Explain how ESD protection is achieved in the MAX232E transceivers."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "C",
+            "\u00b120 \u00b5A",
+            "ESD protection in the MAX232E transceivers is achieved using robust design techniques allowing \u00b115kV protection according to the Human Body Model. This involves design features that absorb the electrostatic discharge and protect the internal circuit from damage."
+        ],
+        "explanation": [
+            "MAX241E supports 4 drivers and 5 receivers, which is the highest among the listed options.",
+            "The Input Leakage Current for each device (MAX202E and MAX203E) is \u00b110 \u00b5A at typical performance. With both having all inputs at 0V, the total becomes \u00b110 \u00b5A + \u00b110 \u00b5A = \u00b120 \u00b5A.",
+            "The document specifies \u00b115kV ESD protection under the Human Body Model, achieved through internal circuitry designed to handle such volts without damage."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "computation",
+            "inference"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MAX202E_page1.png",
+            "MAX202E_page2.png",
+            "MAX202E_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MAX202E.PDF"
+    },
+    "spec_65": {
+        "statement": "Based on the given pages from the specification document of \u00b115kV ESD-Protected, +5V RS-232 Transceivers, answer the following questions.",
+        "question": [
+            "1. What is the range of supply voltage input for MAX202E/MAX232E? \n\n(A) +3.0V to +3.5V \n(B) +4.5V to +5.5V \n(C) +5.0V to +6.0V \n(D) +4.0V to +5.0V.",
+            "2. Based on the graph of MAX211E/MAX213E Transmitter Output Voltage vs. Load Capacitance, if Vcc = 5.5V, infer the approximate output voltage at a load capacitance of 2000 pF.",
+            "3. Calculate the expected supply current for MAX205E\u2013MAX208E at a load capacitance of 3000 pF and data rate of 240 kbps."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "B",
+            "Approximately 7.0V",
+            "_____"
+        ],
+        "explanation": [
+            "The range is specified as +4.5V to +5.5V in the Pin Descriptions section for MAX202E/MAX232E on the specification document.",
+            "From the graph, the output voltage for a load capacitance of 2000 pF is shown to be approximately 7.0V at Vcc = 5.5V.",
+            "Using the graph 'Supply Current vs. Load Capacitance', find the value corresponding to 3000 pF and 240 kbps, which is approximately 40 mA."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MAX202E_page4.png",
+            "MAX202E_page5.png",
+            "MAX202E_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MAX202E.PDF"
+    },
+    "spec_66": {
+        "statement": "Based on the specification document of the \u00b115kV ESD-Protected, +5V RS-232 Transceivers, answer the following questions.",
+        "question": [
+            "1. (Single Choice) What is the typical output voltage swing of the RS-232 drivers with a nominal 5k\u03a9 load? \n (A) \u00b115V \n (B) \u00b18V \n (C) \u00b110V \n (D) \u00b15V",
+            "2. (Fill in the Blank) For the device MAX211E, MAX213E, and MAX241E, the receivers are in shutdown mode when EN = ___.",
+            "3. (Open) Calculate the expected output voltage when the receiver output is disabled as shown in Figure 2, given that the input (\u00c9N) is 0V and the output load is 1k\u03a9."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "(B) \u00b18V",
+            "0",
+            "Vout = -0.1V"
+        ],
+        "explanation": [
+            "The document specifies that when VCC = 5V, the typical driver output voltage swing is \u00b18V with a nominal 5k\u03a9 RS-232 receiver load.",
+            "The document indicates that the receivers are inactive (shutdown) when EN = 0 for these specific models.",
+            "According to Figure 2, when the input (\u00c9N) is 0V, the disabled output voltage is VOl = -0.1V."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MAX202E_page7.png",
+            "MAX202E_page8.png",
+            "MAX202E_page9.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MAX202E.PDF"
+    },
+    "spec_67": {
+        "statement": "Based on the given specification of the \u00b115kV ESD-Protected, +5V RS-232 Transceivers, answer the following questions.",
+        "question": [
+            "1. What is the purpose of the ESD protection on the RS-232 transceivers? (A) To increase data transmission speed (B) To protect against electrostatic discharges (C) To enhance power efficiency (D) To enable back-driving beyond 0V",
+            "2. According to Table 1a, which control pin configuration corresponds to normal operation with all transmitter and receiver pins active? _______________",
+            "3. Calculate the maximum propagation delay in shutdown mode for the MAX213E receiver."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "B",
+            "01",
+            "4 \u00b5s"
+        ],
+        "explanation": [
+            "The ESD protection is designed to protect against electrostatic discharges as mentioned in the document.",
+            "In Table 1a, the control pin configuration 'SHDN=0, EN=0' corresponds to normal operation where both transmitter and receiver are active.",
+            "The maximum propagation delay in shutdown mode is 4 \u00b5s, as specified in the document."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "MAX202E_page10.png",
+            "MAX202E_page11.png",
+            "MAX202E_page12.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MAX202E.PDF"
+    },
+    "spec_68": {
+        "statement": "Based on the specification document for \u00b115kV ESD-Protected, +5V RS-232 Transceivers, please answer the following questions.",
+        "question": [
+            "What is the maximum data rate supported by the RS-232E transceivers? (A) 10kbps (B) 20kbps (C) 30kbps",
+            "Which capacitors are recommended to bypass VCC to ground according to the document?",
+            "Calculate the maximum instantaneous slew rate if RL is 5k\u03a9 and CL is 2000pF."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "(B) 20kbps",
+            "0.1\u00b5F",
+            "The maximum instantaneous slew rate is 30V/\u00b5s as stated in the specification."
+        ],
+        "explanation": [
+            "The data rate is given as up to 20kbps for the RS-232E transceivers.",
+            "The document specifies that a capacitor of at least 0.1\u00b5F should be used to bypass VCC to ground.",
+            "The table in the document provides the maximum instantaneous slew rate under specified conditions."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MAX202E_page13.png",
+            "MAX202E_page14.png",
+            "MAX202E_page15.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MAX202E.PDF"
+    },
+    "spec_69": {
+        "statement": "Based on the presented pin configurations and operating circuits of the MAX202E/MAX213E/MAX232E/MAX241E transceivers, answer the following questions:",
+        "question": [
+            "1. What is the typical voltage input for the RS-232 transceiver according to the document? (A) -5V (B) +5V (C) +15V (D) +3.3V",
+            "2. Identify the correct sequence of operations that occur in the circuit as an input signal is transferred from TTL/CMOS to RS-232 levels.",
+            "3. Calculate the total resistance seen by the input T1IN, considering the series and shunt resistors given in the circuit diagram."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(B) +5V",
+            "The TTL/CMOS input undergoes signal inversion and level shifting through the internal transceiver before being output as RS-232 levels.",
+            "400k\u03a9"
+        ],
+        "explanation": [
+            "The document specifies the transceivers as +5V input devices, which is typical for RS-232 transceivers.",
+            "The circuit diagram shows the flow from TTL/CMOS inputs through multiple inverters and level shifters before reaching RS-232 outputs.",
+            "The input T1IN goes through a 400k\u03a9 resistor as shown in the circuit diagram."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "MAX202E_page16.png",
+            "MAX202E_page17.png",
+            "MAX202E_page18.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MAX202E.PDF"
+    },
+    "spec_70": {
+        "statement": "Based on the provided pages of the `\u00b115kV ESD-Protected, +5V RS-232 Transceivers` document, answer the following questions related to the pin configurations and circuit types.",
+        "question": [
+            "(A) EN (Enable) is a pin used to activate the functionality of the device. Which page lists devices incorporating an EN pin? (A) Page 19, (B) Page 20, (C) Page 21",
+            "Identify the maximum voltage rating for the capacitors in the voltage inverter circuit. Fill in the blank: ______ V",
+            "Explain how the voltage inverter facilitates the conversion of input signals and why this is essential for RS-232 communication."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "(B) Page 20",
+            "16",
+            "The voltage inverter converts +5V to both +10V and -10V, enabling the transceiver to meet the voltage levels required for RS-232 communication."
+        ],
+        "explanation": [
+            "The pin configuration mentioned on Page 20 includes an EN pin for the MAX211E/MAX213E/MAX241E devices.",
+            "The capacitor ratings in the voltage inverter circuit shown indicate a maximum of 16V, according to the specification.",
+            "RS-232 communication requires specific voltage levels, generally between +3V to +15V for logical '1' and -3V to -15V for logical '0'. The inverter generates these levels from a single +5V supply."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "computation",
+            "inference"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MAX202E_page19.png",
+            "MAX202E_page20.png",
+            "MAX202E_page21.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MAX202E.PDF"
+    },
+    "spec_71": {
+        "statement": "Based on the specification document of the \u00b115kV ESD-Protected, +5V RS-232 Transceivers, answer the following questions.",
+        "question": [
+            "Which of the following is a true statement about the transistor count for MAX202E/MAX232E? \n(A) 123 \n(B) 328 \n(C) 542 \n(D) 428",
+            "Identify the correct package outline dimensions for MAX211E in millimeters from the document.",
+            "Calculate the difference in millimeters between the maximum and minimum height (H) for the SSOP package outline."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "A",
+            "PDIP: 315 Max, Package Outline: 5.3 mm",
+            "0.23 mm"
+        ],
+        "explanation": [
+            "According to the document, the transistor count for MAX202E/MAX232E is listed as 123.",
+            "PDIP package dimensions can be found in the drawings as 315 Max, and the SSOP is 5.3 mm.",
+            "The maximum height is 7.90 mm and the minimum height is 7.67 mm. The difference is 7.90 - 7.67 = 0.23 mm."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MAX202E_page22.png",
+            "MAX202E_page23.png",
+            "MAX202E_page24.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MAX202E.PDF"
+    },
+    "spec_72": {
+        "statement": "Based on the RS-232 Transceivers specification document:",
+        "question": [
+            "What is the maximum height (H) of the package in millimeters? (A) 3.0 (B) 4.0 (C) 5.0 (D) 6.0",
+            "Which dimension (in inches) corresponds to the width (E) of the package as shown in the diagram?",
+            "Compute the maximum volume of the package if its length, width, and height are given as 0.439 inches, 0.298 inches, and 0.150 inches respectively. Provide your answer in cubic inches."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "(B) 4.0",
+            "0.298",
+            "0.019629"
+        ],
+        "explanation": [
+            "The maximum height (H) of the package is listed as 4.0 millimeters in the document.",
+            "The width (E) is given as 0.298 inches in the package drawing specifications.",
+            "The volume is calculated by multiplying the dimensions: Volume = Length \u00d7 Width \u00d7 Height = 0.439 \u00d7 0.298 \u00d7 0.150."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MAX202E_page25.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MAX202E.PDF"
+    },
+    "spec_73": {
+        "statement": "Based on the MPU-6000/MPU-6050 product specification document, answer the following questions.",
+        "question": [
+            "According to the document, what type of circuits do the MPU-6000/MPU-6050 devices primarily use for motion tracking?\n(A) Digital \n(B) Analog \n(C) Mixed-signal",
+            "What is the VLOGIC voltage range for the MPU-6050?",
+            "Calculate the total range of the accelerometer's programmable full-scale range given in the document."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "C",
+            "1.71V to VDD",
+            "\u00b116g (total range is 32g)"
+        ],
+        "explanation": [
+            "The MPU-6000/MPU-6050 devices utilize mixed-signal circuits for their motion tracking capabilities, combining both analog and digital components.",
+            "The VLOGIC voltage range for MPU-6050 is specified as 1.71V to VDD in the document.",
+            "The accelerometer has a programmable full-scale range of \u00b12g, \u00b14g, \u00b18g, and \u00b116g. The largest range, \u00b116g, spans from -16g to +16g, resulting in a total range of 32g."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page1.png",
+            "MPU-6000_page2.png",
+            "MPU-6000_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_74": {
+        "statement": "Consider the MPU-6000/MPU-6050 product specification document.",
+        "question": [
+            "1. What is the programmable range of the low-pass filter response for the gyroscope? (A) 5 to 256 Hz (B) 4 to 256 Hz (C) 30 to 256 kHz (D) 27 to 256 kHz",
+            "2. Analyze the document to describe the role of the FIFO in reducing power consumption.",
+            "3. Calculate the range of possible sensitivity scale factors for the gyroscope using FS_SEL=3 at a temperature of 25\u00b0C and providing the tolerance range."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "A",
+            "The FIFO buffers the complete data set, which reduces timing requirements, allowing the processor to read the data in bursts. After reading, the processor can enter a low-power sleep mode, thus saving power.",
+            "16.4 \u00b1 3 LSB/\u00b0/s"
+        ],
+        "explanation": [
+            "The document lists the gyroscope low-pass filter programmable range as 5 to 256 Hz.",
+            "The FIFO allows batch processing of data, so the host processor doesn't have to be active all the time, hence saving energy.",
+            "The scale factor for FS_SEL=3 is 16.4 LSB/\u00b0/s. With a tolerance of \u00b13%, the range is 16.4 \u00b1 0.492 LSB/\u00b0/s, which simplifies to 16.4 \u00b1 3 LSB/\u00b0/s."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page4.png",
+            "MPU-6000_page5.png",
+            "MPU-6000_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_75": {
+        "statement": "Based on the specifications of the MPU-6050 device provided in the document, answer the following questions.",
+        "question": [
+            "1. What is the full-scale range for the accelerometer when AFS_SEL=2? (A) \u00b12g (B) \u00b14g (C) \u00b18g (D) \u00b116g",
+            "2. For the I2C address given ADD0 = 0, fill in the binary address: 110100__.",
+            "3. Calculate the difference in typical current consumption between the 'Gyroscope + Accelerometer + DMP' and 'Gyroscope only (DMP & Accelerometer disabled)' modes."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "C",
+            "0",
+            "0.3 mA"
+        ],
+        "explanation": [
+            "The document states that the full-scale range for AFS_SEL=2 is \u00b18g.",
+            "The binary representation for ADD0 = 0 is 1101000 as per the table.",
+            "The typical current for 'Gyroscope + Accelerometer + DMP' is 3.9 mA and for 'Gyroscope only' is 3.6 mA, giving a difference of 0.3 mA."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page7.png",
+            "MPU-6000_page8.png",
+            "MPU-6000_page9.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_76": {
+        "statement": "Based on the specification document for the MPU-6000/MPU-6050 device:",
+        "question": [
+            "1. What is the typical voltage range for VLOGIC of MPU-6050? (A) 1.8V (B) 2.5V (C) 3.3V (D) 5V",
+            "2. Identify the maximum SCL Clock Frequency for I2C Fast-Mode as per the document.",
+            "3. Calculate the total t_su,dat (Data Setup Time) and t_hd,dat (Data Hold Time) in I2C timing if each is at its minimum value."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "blank"
+        ],
+        "answer": [
+            "(A) 1.8V",
+            "400 kHz",
+            "0.6 \u00b5s"
+        ],
+        "explanation": [
+            "The typical VLOGIC range for MPU-6050 is specified as 1.8V\u00b15% or VDD, which corresponds to option (A).",
+            "According to the I2C timing specifications, the maximum SCL Clock Frequency for I2C Fast-Mode is 400 kHz.",
+            "The minimum t_su,dat is 100 ns and t_hd,dat is 0 ns. Therefore, t_total = 100 ns + 0 ns = 100 ns = 0.6 \u00b5s."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page10.png",
+            "MPU-6000_page11.png",
+            "MPU-6000_page12.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_77": {
+        "statement": "Based on the MPU-6000/MPU-6050 product specification, answer the following questions.",
+        "question": [
+            "What is the minimum SCLK Low Period for the MPU-6000? (A) 400 ns (B) 450 ns (C) 500 ns (D) 600 ns",
+            "Identify which pin is used for SPI chip select on the MPU-6050.",
+            "Calculate the maximum clock frequency for SCLK in MHz."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "(A)",
+            "CS",
+            "1 MHz"
+        ],
+        "explanation": [
+            "The minimum SCLK Low Period is given as 400 ns in the SPI Timing Characterization section.",
+            "The pin used for SPI chip select on the MPU-6050 is labeled as /CS in the Pin Out and Signal Description section.",
+            "According to the SPI Timing Characterization, the SCLK Clock Frequency is specified as 1 MHz, which results in a maximum frequency of 1 MHz."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page13.png",
+            "MPU-6000_page14.png",
+            "MPU-6000_page15.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_78": {
+        "statement": "Based on the specifications and diagrams provided for the MPU-6000/MPU-6050, answer the following questions:",
+        "question": [
+            "Which component is used as a VDD Bypass Capacitor in the MPU-6000 typical operating circuit?\n(A) C1\n(B) C2\n(C) C3\n(D) C4",
+            "In the power-up sequence, what can be inferred if the condition T_VLGR \u2264 3ms is not met?",
+            "Calculate the total capacitance when C1, C2, and C3 are connected in parallel in the MPU-6000 operating circuit."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "B",
+            "If T_VLGR is not \u2264 3ms, it implies that the VLOGIC voltage rise may not be synchronized with VDD as required, potentially causing improper initialization.",
+            "2.4 \u00b5F"
+        ],
+        "explanation": [
+            "C2 is specified as the VDD Bypass Capacitor in the bill of materials table.",
+            "The requirement T_VLGR \u2264 3ms ensures timely voltage rise, maintaining proper sequencing to avoid initialization issues.",
+            "The total capacitance in parallel is C_total = C1 + C2 + C3 = 0.1 \u00b5F + 0.1 \u00b5F + 2.2 \u00b5F = 2.4 \u00b5F."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page16.png",
+            "MPU-6000_page17.png",
+            "MPU-6000_page18.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_79": {
+        "statement": "Based on the provided documentation pages for the MPU-6000/MPU-6050, answer the following questions.",
+        "question": [
+            "What is the primary purpose of the Digital Motion Processor (DMP) in the MPU-6000/MPU-6050? (A) To provide direct access to sensor data (B) To reduce processing load on the host processor (C) To manage power consumption of the device (D) To handle all communication interfaces",
+            "According to the document, when operating in I2C Master Mode, what is the total number of bytes the MPU-60X0 can read from auxiliary sensors in burst reads? ___",
+            "Explain how the self-test response is calculated according to the document."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "B",
+            "24",
+            "The self-test response is calculated as the difference between the sensor output with self-test enabled and the sensor output without self-test enabled."
+        ],
+        "explanation": [
+            "The DMP is used to offload timing requirements and processing power from the host processor, as mentioned in section 7.9 of the document.",
+            "In I2C Master Mode, the MPU-60X0 can perform burst reads for up to 24 bytes from auxiliary sensors, as described in section 7.11.",
+            "Section 7.12 describes the self-test response as the difference between the sensor output with the self-test enabled and without the self-test enabled."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "computation",
+            "inference"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page19.png",
+            "MPU-6000_page20.png",
+            "MPU-6000_page21.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_80": {
+        "statement": "Based on the MPU-6000/MPU-6050 product specification document, answer the following questions.",
+        "question": [
+            "What is the purpose of the Interface Bypass Mux in the MPU-60X0 architecture? (A) To enable I2C communication for internal sensors (B) To allow direct control of auxiliary sensors by the system processor (C) To bypass the FIFO for faster data read (D) To maintain power management operations",
+            "Which registers in the MPU-60X0 hold the latest sensor data and are accessed via the serial interface?",
+            "Calculate the frequency ratio between the allowable external clocking sources of 32.768kHz and 19.2MHz."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "(B) To allow direct control of auxiliary sensors by the system processor",
+            "Sensor Data Registers",
+            "The frequency ratio is 1:585.9375"
+        ],
+        "explanation": [
+            "The Interface Bypass Mux allows the system processor to directly configure the auxiliary sensors as described in the specification document.",
+            "The Sensor Data Registers are described in the document section related to sensor data registers, noting their function to hold and provide access to the latest measurement data.",
+            "The frequency ratio is calculated as 32.768kHz divided by 19.2MHz, resulting in approximately 1:585.9375."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page22.png",
+            "MPU-6000_page23.png",
+            "MPU-6000_page24.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_81": {
+        "statement": "Based on the specifications of the MPU-6000/MPU-6050, answer the following questions related to its interrupt and power management features.",
+        "question": [
+            "What is the purpose of the Digital-Output Temperature Sensor in the MPU-60X0? (A) To detect motion, (B) To measure the internal chip temperature, (C) To provide external temperature readings, (D) To regulate power supplies.",
+            "Identify the register used to increment for each qualifying motion sample and decrement for non-qualifying samples.",
+            "Calculate the total duration (in ms) of a motion interrupt if the MOT_DUR is set to 20 and each increment is specified in 1 ms increments."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "B",
+            "MOT_DETECT_CTRL",
+            "20"
+        ],
+        "explanation": [
+            "The Digital-Output Temperature Sensor is used to measure the internal chip temperature, as specified in Section 7.19.",
+            "The specification document specifies the MOT_DETECT_CTRL register for handling increments and decrements for motion detection.",
+            "The MOT_DUR register is used to set motion duration, and with each increment in 1 ms increments, a setting of 20 gives a total duration of 20 ms."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page25.png",
+            "MPU-6000_page26.png",
+            "MPU-6000_page27.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_82": {
+        "statement": "Based on the given pages from the MPU-6000/MPU-6050 specification document, answer the following questions concerning the I2C interface.",
+        "question": [
+            "Which of the following is the correct sequence for starting communication in an I2C protocol? (A) STOP condition -> Address -> START condition, (B) START condition -> Address -> STOP condition, (C) START condition -> Address -> DATA -> STOP condition",
+            "What action must a slave device take if it cannot transmit or receive another byte of data?",
+            "Calculate the number of bytes transmitted if the master writes a complete single-byte write sequence followed by a burst write sequence of 4 data bytes. Provide the total number of bytes transferred including acknowledgments."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "C",
+            "If a slave cannot transmit or receive another byte of data, it can hold the SCL line LOW, thus forcing the master into a wait state.",
+            "15"
+        ],
+        "explanation": [
+            "In the I2C protocol, communication starts with a START condition, followed by the address of the device, then data transfer, and ends with a STOP condition.",
+            "The slave device holds SCL LOW when unable to process more data, keeping the master in a wait state to prevent data overflow or communication errors.",
+            "In the single-byte write sequence, 7 bytes are transferred (1 start, 1 address, 1 data, 1 stop, and 3 ACKs). In the burst write sequence for 4 data bytes, a total of 8 bytes (4 data and 4 ACKs) are transferred. Therefore, the total is 7 + 8 = 15."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page28.png",
+            "MPU-6000_page29.png",
+            "MPU-6000_page30.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_83": {
+        "statement": "Based on the MPU-6000/MPU-6050 Product Specification, answer the following questions:",
+        "question": [
+            "What is the maximum frequency of the SCLK in the SPI interface?\n(A) 500kHz\n(B) 1MHz\n(C) 2MHz\n(D) 4MHz",
+            "Explain the role of the 'ACK' signal in the I\u00b2C read sequence.",
+            "Calculate the number of clock cycles needed for a complete SPI read and write operation with a 2-byte data transfer."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(B)",
+            "The 'ACK' signal is used to indicate that the data has been successfully received by the slave device.",
+            "16"
+        ],
+        "explanation": [
+            "The document specifies that the maximum frequency of the SCLK is 1MHz.",
+            "The 'ACK' signal acknowledges the receipt of each byte by keeping the SDA line low while the SCL line is high at the 9th clock cycle.",
+            "For a 2-byte data transfer, at least 16 or more clock cycles are required as specified in SPI operations."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page31.png",
+            "MPU-6000_page32.png",
+            "MPU-6000_page33.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_84": {
+        "statement": "Consider the MPU-6000/MPU-6050 product specifications related to I/O voltage levels and logic circuits.",
+        "question": [
+            "1. What determines the I/O voltage levels of AUX_DA and AUX_CL in the MPU-6050? (A) VLOGIC, (B) VDD, (C) AUX_VDDIO, (D) CLKOUT",
+            "2. If AUX_VDDIO is set to 0, which voltage level do the IOs AUX_DA and AUX_CL reference? (A) VLOGIC (B) VDD (C) 0V (D) System Bus",
+            "3. Calculate the difference in VLOGIC voltage levels between Configuration 1 and Configuration 2 as given for AUX_VDDIO = 1."
+        ],
+        "question_type": [
+            "single",
+            "single",
+            "blank"
+        ],
+        "answer": [
+            "C",
+            "A",
+            "1.2V"
+        ],
+        "explanation": [
+            "AUX_VDDIO determines the I/O voltage levels according to the notes in the specification.",
+            "For AUX_VDDIO = 0, the I/O levels are set relative to VLOGIC.",
+            "Configuration 1 VLOGIC is 1.8V, and Configuration 2 VLOGIC is 3.0V. The difference is 1.2V."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page34.png",
+            "MPU-6000_page35.png",
+            "MPU-6000_page36.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_85": {
+        "statement": "Based on the MPU-6000/MPU-6050 Product Specification, answer the following questions.",
+        "question": [
+            "1. What is the nominal package I/O pad length according to the PCB layout diagram? (A) 0.35 mm (B) 0.25 mm (C) 0.40 mm (D) 0.50 mm",
+            "2. Using the information provided about PCB mounting and cross-axis sensitivity, explain the importance of placement symmetry for traces connected to pads.",
+            "3. Compute the total length of the outward and inward extensions if both are at their nominal values."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "A",
+            "Placement symmetry helps in optimizing component self-alignment and improves control over solder paste reduction after reflow, minimizing package stress effects.",
+            "0.45 mm"
+        ],
+        "explanation": [
+            "The nominal package I/O pad length is specified as 0.35 mm in the PCB Layout Diagram table.",
+            "Symmetric placement reduces stress and potential misalignment, thereby optimizing performance and reducing defects in the electronic assembly process.",
+            "Nominal values from the table are Tout = 0.40 mm, Tin = 0.05 mm. Adding them gives 0.45 mm."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page37.png",
+            "MPU-6000_page38.png",
+            "MPU-6000_page39.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_86": {
+        "statement": "Based on the MPU-6000/MPU-6050 specification document, answer the following questions related to EDA.",
+        "question": [
+            "What is the cross-axis sensitivity when the orientation error is 0.5\u00b0? (A) 0% (B) 0.87% (C) 1.75% (D) 2%",
+            "List two precautions mentioned for handling MEMS devices.",
+            "Given a solder reflow cycle duration of 600 seconds, calculate how many cycles could be performed in two hours. Provide your answer in numeric form."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(B) 0.87%",
+            "Do not drop packaged gyroscopes; do not clean MEMS gyroscopes in ultrasonic baths.",
+            "12"
+        ],
+        "explanation": [
+            "Cross-axis sensitivity for 0.5\u00b0 orientation error is given as 0.87% in the table.",
+            "The document mentions not dropping gyroscopes and not using ultrasonic baths as precautions.",
+            "With each cycle lasting 600 seconds, in two hours (7200 seconds) you can perform 7200/600 = 12 cycles."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "MPU-6000_page40.png",
+            "MPU-6000_page41.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "MPU-6000.PDF"
+    },
+    "spec_87": {
+        "statement": "Evaluate the understanding and application of the NE/SA/SE555 timer circuit specifications.",
+        "question": [
+            "According to the block diagram, which component is directly connected to the OUTPUT pin? (A) Comparator, (B) Flip Flop, (C) Threshold, (D) Discharge",
+            "What is the purpose of the CONTROL VOLTAGE pin in the context of the block diagram?",
+            "Calculate the frequency of an astable oscillator using the 555 timer with R1 = 4.7k\u03a9, R2 = 10k\u03a9, and C = 10\u00b5F. Provide your answer in Hz."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "B",
+            "The CONTROL VOLTAGE pin allows external control of the output frequency by overriding the 2/3 Vcc level.",
+            "6.62"
+        ],
+        "explanation": [
+            "The Flip Flop in the block diagram is directly connected to the OUTPUT pin.",
+            "The CONTROL VOLTAGE pin is used to adjust the voltage reference in the comparator network, thus influencing timing intervals.",
+            "The frequency of an astable 555 timer is given by f = 1.44 / ((R1 + 2*R2) * C). Substituting the given values: f = 1.44 / ((4.7k\u03a9 + 2*10k\u03a9) * 10\u00b5F) = 6.62 Hz."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "NE555_page1.png",
+            "NE555_page2.png",
+            "NE555_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "NE555.PDF"
+    },
+    "spec_88": {
+        "statement": "Based on the specification document for the NE/SA/SE555/SE555C Timer, answer the following questions.",
+        "question": [
+            "1. What is the minimum supply voltage (VCC) for the SE555? (A) 4.5V (B) 3.0V (C) 2.9V (D) 5.0V",
+            "2. Identify the highest temperature coefficient for drift with temperature in monostable operation. (A) 30 ppm/\u00b0C (B) 50 ppm/\u00b0C (C) 100 ppm/\u00b0C (D) 500 ppm/\u00b0C",
+            "3. Calculate the frequency of the output in astable operation if RA = 1k\u03a9, RB = 2k\u03a9, and C = 0.1\u00b5F. Fill in the blank: The frequency is _____ Hz."
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "blank"
+        ],
+        "answer": [
+            "(A) 4.5V",
+            "(C) 100 ppm/\u00b0C",
+            "3.03 kHz"
+        ],
+        "explanation": [
+            "The document specifies the minimum supply voltage for the SE555 as 4.5V.",
+            "The highest temperature coefficient is listed as 100 ppm/\u00b0C for monostable operation in the document.",
+            "The frequency in astable mode is calculated using the formula: f = 1.49 / ((RA + 2 * RB) * C). Substituting the values, f = 1.49 / ((1k\u03a9 + 2 * 2k\u03a9) * 0.1\u00b5F) = 3.03 kHz."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "NE555_page4.png",
+            "NE555_page5.png",
+            "NE555_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "NE555.PDF"
+    },
+    "spec_89": {
+        "statement": "Based on the specification document of NE/SA/SE555/SE555C timers, answer the following questions.",
+        "question": [
+            "What is the primary function of AC coupling in the context of the NE/SA/SE555/SE555C timer? (A) To increase the output voltage. (B) To create a short negative going pulse. (C) To extend the trigger pulse duration. (D) To reduce the switching noise.",
+            "Explain in your own words the concept of 'trigger release time' as discussed in the document.",
+            "Calculate the maximum delay time if the delay steps provided are equal to 2\u03bcs and there are 5 delay steps involved."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(B) To create a short negative going pulse.",
+            "The trigger release time is the period taken for the circuit to reactivate the output after the trigger condition has been removed, following a specific pathway that involves the turning on and off of specific transistors in the circuit.",
+            "10"
+        ],
+        "explanation": [
+            "AC coupling as specified in the document is used to create a short negative going pulse, which helps the timer trigger correctly.",
+            "The document explains that trigger release time is important for output signal stability, involving a sequence of transistor operations.",
+            "The computation is 2\u03bcs per delay step multiplied by 5 steps, resulting in 10\u03bcs."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "NE555_page7.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "NE555.PDF"
+    },
+    "spec_90": {
+        "statement": "Based on the TDA2030 specification document, answer the following questions:",
+        "question": [
+            "What is the maximum supply voltage for the TDA2030? (A) \u00b16V (B) \u00b114V (C) \u00b118V (D) \u00b124V",
+            "According to the diagram, which pin is connected to -Vs? (A) Pin 1 (B) Pin 2 (C) Pin 3 (D) Pin 5",
+            "Calculate the input offset voltage, V_os, if the range provided is \u00b120 mV, what is the maximum possible offset?"
+        ],
+        "question_type": [
+            "single",
+            "multi",
+            "blank"
+        ],
+        "answer": [
+            "(C) \u00b118V",
+            "(C) Pin 3",
+            "20"
+        ],
+        "explanation": [
+            "The document specifies the maximum supply voltage (Vs) as \u00b118V under Absolute Maximum Ratings.",
+            "The pin connection diagram shows -Vs connected to Pin 3.",
+            "The maximum possible input offset voltage based on \u00b120 mV range is 20 mV."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "TDA2030_page1.png",
+            "TDA2030_page2.png",
+            "TDA2030_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "TDA2030.PDF"
+    },
+    "spec_91": {
+        "statement": "Based on the figures provided in the TDA2030 specification document, answer the following questions:",
+        "question": [
+            "1. According to Figure 10, what is the supply voltage rejection at a voltage gain of 40 dB? (A) 60 dB, (B) 55 dB, (C) 50 dB, (D) 45 dB",
+            "2. Identify the purpose of the component labeled C8 in Figure 13. Explain your reasoning.",
+            "3. Calculate the output power if the supply voltage is 15V using Figure 1."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "(A) 60 dB",
+            "C8 is used to manage frequency response, affecting the roll-off characteristics.",
+            "10W"
+        ],
+        "explanation": [
+            "The graph in Figure 10 shows a line that corresponds to the gain of 40 dB intersecting at around 60 dB on the supply voltage rejection axis.",
+            "Figure 13 is a typical amplifier circuit, and C8 is noted for affecting frequency response as shown in the related descriptions.",
+            "Using Figure 1, the output power at 15V intersects with the line showing approximately 10 watts."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "TDA2030_page4.png",
+            "TDA2030_page5.png",
+            "TDA2030_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "TDA2030.PDF"
+    },
+    "spec_92": {
+        "statement": "Based on the given pages of the TDA2030 specification document, answer the following questions.",
+        "question": [
+            "According to the table on page 7, what happens if R1 has a value larger than recommended? (A) Decrease of gain, (B) Increase of gain, (C) No effect.",
+            "What is the recommended purpose of the component C2?",
+            "Calculate the upper frequency cutoff if C8 has a value of 1 \u00b5F, R1 is 22 k\u2126, and B is 1, using the formula provided on page 7."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "B",
+            "Inverting DC decoupling",
+            "Approximately 7.23 Hz"
+        ],
+        "explanation": [
+            "The table states that a larger R1 value results in an increase of gain.",
+            "The component C2 is listed with the purpose of 'Inverting DC decoupling' in the table.",
+            "The upper frequency cutoff for C8 is calculated using the formula 1 / (2\u03c0 * B * R1 * C8). Substituting for R1 = 22,000 \u2126, B = 1, C8 = 1 \u00b5F gives approximately 7.23 Hz."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "perception",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "TDA2030_page7.png",
+            "TDA2030_page8.png",
+            "TDA2030_page9.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "TDA2030.PDF"
+    },
+    "spec_93": {
+        "statement": "Based on the given pages of the specification document for the TDA2030 electronic device, answer the following questions.",
+        "question": [
+            "What is the typical dimension of L in millimeters? \n(A) 17.85 \n(B) 15.75 \n(C) 10.05 \n(D) 3.65",
+            "List the steps to convert dimension D from millimeters to inches.",
+            "Calculate the difference between the maximum and minimum values of dimension E in millimeters."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "A",
+            "To convert dimension D from millimeters to inches, use the conversion factor where 1 mm = 0.03937 inches. Multiply the millimeter values by this factor to obtain the inch values.",
+            "0.21"
+        ],
+        "explanation": [
+            "The typical dimension of L is listed as 17.85 mm in the table provided.",
+            "Conversion involves using the factor 1 mm = 0.03937 inches. This ensures that dimension D is accurately converted from millimeters to inches.",
+            "The maximum value of dimension E is 0.55 mm and the minimum value is 0.35 mm. The difference is 0.55 - 0.35 = 0.21 mm."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "medium"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "TDA2030_page10.png",
+            "TDA2030_page11.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "TDA2030.PDF"
+    },
+    "spec_94": {
+        "statement": "Based on the specification document for the TPA3116D2, TPA3118D2, and TPA3130D2 Class-D stereo amplifiers, answer the following questions.",
+        "question": [
+            "What is the purpose of the SYNC pin in the terminal assignment? (A) Analog Supply (B) Ground (C) Clock input/output (D) Power Supply",
+            "Identify the correct function of the PLIMIT pin from the document.",
+            "Calculate the required capacitance value for the bootstrap capacitor connected to OUTPL."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "C",
+            "Power limit level adjust. Connect a resistor divider from GVDD to GND to set power limit.",
+            "220 nF"
+        ],
+        "explanation": [
+            "The SYNC pin is described as a Clock input/output for synchronizing multiple class-D devices.",
+            "The document states that PLIMIT is used to connect a resistor divider from GVDD to GND to set the power limit.",
+            "The document specifies using a 220 nF capacitor for the bootstrap connection with the OUTPL terminal."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "TPA3116D2_page1.png",
+            "TPA3116D2_page2.png",
+            "TPA3116D2_page3.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "TPA3116D2.PDF"
+    },
+    "spec_95": {
+        "statement": "Based on the given specification document of the electronic device, answer the following questions.",
+        "question": [
+            "1. What is the high-level input voltage (V_IH) specified for inputs AM0, AM1, AM2, MUTE, SDZ, SYNC, and MODSEL?\n\n(A) 0.8 V\n(B) 2 V\n(C) 2.5 V\n(D) 5 V",
+            "2. Based on the system block diagram, which module seems to be responsible for thermal protection?\n\n(A) PWM Logic\n(B) Gate Drive\n(C) Thermal Detect\n(D) Input Sense",
+            "3. Calculate the output voltage (V_O) when V(PLIMIT) = 2 V and V_I = 1 Vrms. The formula provided in the document suggests V_O = 3*V(PLIMIT) + 1.75*V_I - 0.5."
+        ],
+        "question_type": [
+            "single",
+            "single",
+            "blank"
+        ],
+        "answer": [
+            "(B) 2 V",
+            "(C) Thermal Detect",
+            "8.625 V"
+        ],
+        "explanation": [
+            "The high-level input voltage (V_IH) for these pins is specified as 2 V in the recommended operating conditions.",
+            "The 'Thermal Detect' module is responsible for thermal protection, as it indicates thermal management in its name.",
+            "Using the formula V_O = 3*V(PLIMIT) + 1.75*V_I - 0.5, substituting V(PLIMIT) = 2 V and V_I = 1 Vrms gives V_O = 8.625 V."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "digital",
+        "image": [
+            "TPA3116D2_page4.png",
+            "TPA3116D2_page5.png",
+            "TPA3116D2_page6.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "TPA3116D2.PDF"
+    },
+    "spec_96": {
+        "statement": "Based on the typical characteristics of the given electronic device, answer the following questions.",
+        "question": [
+            "What does the graph in Figure 6 represent?\n(A) THD+N vs Frequency\n(B) THD+N vs Temperature\n(C) THD+N vs Output Power\n(D) THD+N vs Input Voltage",
+            "Refer to Figure 3: What is the trend in THD+N as frequency increases from 100 Hz to 10 kHz at a constant power output of 10W?",
+            "Calculate the output power when the PLIMIT voltage is 2.5V in Figure 11. The graph follows a linear relationship."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "C",
+            "The THD+N generally increases as frequency increases from 100 Hz to 10 kHz at 10W.",
+            "31.25W"
+        ],
+        "explanation": [
+            "Figure 6 shows the relationship between Total Harmonic Distortion + Noise (THD+N) and Output Power at various frequencies.",
+            "From the graph, THD+N shows an upward trend as frequency increases, especially at a higher power output of 10W.",
+            "Using the slope from the graph in Figure 11, you can calculate: Slope = (50 - 0) / (4 - 0) = 12.5 W/V. Output Power = 12.5 * 2.5V = 31.25W."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "TPA3116D2_page7.png",
+            "TPA3116D2_page8.png",
+            "TPA3116D2_page9.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "TPA3116D2.PDF"
+    },
+    "spec_97": {
+        "statement": "Examine the characteristics and performance of the TPA3116D2 device based on the provided specification document pages.",
+        "question": [
+            "(A) What is the maximum output power (BTL) at a supply voltage of 20V with an 8\u03a9 load? (B) What is the power efficiency at an output power of 10W with PVCC = 12V and an 8\u03a9 load?",
+            "Identify the graph representing the total harmonic distortion (THD+N) versus frequency for PBTL mode with an output power of 5W.",
+            "Calculate the power efficiency when the output power is 25W and the supply voltage is 24V for an 8\u03a9 load. Use the graph from Figure 15 for reference."
+        ],
+        "question_type": [
+            "multi",
+            "single",
+            "blank"
+        ],
+        "answer": [
+            "(A) 35W, (B) 90%",
+            "Figure 20",
+            "89%"
+        ],
+        "explanation": [
+            "Based on Figure 13, the maximum output power at 20V for an 8\u03a9 load is approximately 35W. For power efficiency at 10W with PVCC = 12V, Figure 15 shows around 90%.",
+            "Figure 20 illustrates THD+N versus frequency for different output power levels (1W, 5W, and 10W), and the curve for 5W is marked.",
+            "At an output power of 25W with PVCC = 24V, Figure 15 shows the power efficiency to be approximately 89%."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "TPA3116D2_page10.png",
+            "TPA3116D2_page11.png",
+            "TPA3116D2_page12.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "TPA3116D2.PDF"
+    },
+    "spec_98": {
+        "statement": "Based on the specification document for the TPA31xxD2 family of electronic devices, answer the following questions related to electronic design automation (EDA).",
+        "question": [
+            "1. Identify the recommended R1 resistor value for setting a gain of 32 dB in Master mode from Table 1. (A) 5.6 k\u03a9 (B) 39 k\u03a9 (C) 47 k\u03a9 (D) 100 k\u03a9",
+            "2. From the schematic in Figure 27, how many distinct PVCC decoupling capacitors are recommended for each amplifier channel?",
+            "3. Calculate the high-pass filter cut-off frequency for a 32 dB gain using the formula provided, given that the input capacitance is 5.6 \u03bcF and input impedance is 15 k\u03a9. Provide the result in Hertz, rounded to the nearest tenth."
+        ],
+        "question_type": [
+            "single",
+            "blank",
+            "open"
+        ],
+        "answer": [
+            "(B) 39 k\u03a9",
+            "3",
+            "1.9 Hz"
+        ],
+        "explanation": [
+            "The document lists 39 k\u03a9 as the recommended R1 value for a 32 dB gain in Master mode.",
+            "Reviewing the schematic in Figure 27 shows each channel needs three PVCC decoupling capacitors.",
+            "The high-pass filter cut-off frequency is calculated using the formula f = 1 / (2\u03c0Z_iC_i), substituting Z_i = 15,000 \u03a9 and C_i = 5.6\u00d710^-6 F. This yields approximately 1.9 Hz."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "TPA3116D2_page13.png",
+            "TPA3116D2_page14.png",
+            "TPA3116D2_page15.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "TPA3116D2.PDF"
+    },
+    "spec_99": {
+        "statement": "Based on the specification document of the TPA31xxD2 amplifier, answer the following questions.",
+        "question": [
+            "Which condition triggers the 'Over Temperature' fault in the TPA31xxD2 amplifier? \n(A) Tj > 150\u00b0C \n(B) Tj < 100\u00b0C \n(C) PVCC < 4.5V \n(D) DC output voltage",
+            "Describe the purpose of the PLIMIT feature in the TPA31xxD2 amplifier.",
+            "Calculate the output power (P_OUT) if the following parameters are given: R_L = 4\u03a9, R_S = 0.1\u03a9, Vp = 3V."
+        ],
+        "question_type": [
+            "single",
+            "open",
+            "blank"
+        ],
+        "answer": [
+            "A",
+            "The PLIMIT feature is used to limit the output peak-to-peak voltage, effectively reducing the power consumption by simulating a lower supply voltage.",
+            "P_OUT = 3.24 W"
+        ],
+        "explanation": [
+            "The 'Over Temperature' fault is triggered when the junction temperature (Tj) exceeds 150\u00b0C, as specified in the fault reporting table.",
+            "The document highlights that the PLIMIT feature limits the duty cycle to a specific value, thus controlling the peak-to-peak output voltage to manage power output efficiently.",
+            "Using the formula P_OUT = ((R_L / (R_L + 2 * R_S) * Vp)^2) / (2 * R_L), substitute R_L = 4\u03a9, R_S = 0.1\u03a9, Vp = 3V: P_OUT = ((4 / (4 + 0.2) * 3)^2) / (2 * 4) = 3.24 W."
+        ],
+        "difficulty": [
+            "easy",
+            "medium",
+            "hard"
+        ],
+        "ability": [
+            "perception",
+            "inference",
+            "computation"
+        ],
+        "ic_type": "analog",
+        "image": [
+            "TPA3116D2_page16.png",
+            "TPA3116D2_page17.png",
+            "TPA3116D2_page18.png"
+        ],
+        "modality": "text&image",
+        "source": "datasheet",
+        "extra": "TPA3116D2.PDF"
+    },
     "spec_100": {
-        "statement": "You are given a list of pages extracted from the specification document of an electronic device. The content of the pages is:\nWM8725 \nProduction Data \nw \nPD Rev 4.1 August 2004 \n \n8 \n \n \nThe outputs of the 2 DACs are buffered out of the device by buffer amplifiers. These \namplifiers will source load current of several mA and sink current up to 1.5mA, so allowing \nsignificant loads to be driven. The output source is active and the sink is Class A, i.e. fixed \nvalue, so greater loads might be driven if an external \u2018pull-down\u2019 resistor is connected at the \noutput.  ",
+        "statement": "You are given a list of pages extracted from the specification document of an electronic device. The content of the pages is:\nWM8725 \nProduction Data \nw \nPD Rev 4.1 August 2004 \n \n8 \n \n \nThe outputs of the 2 DACs are buffered out of the device by buffer amplifiers. These \namplifiers will source load current of several mA and sink current up to 1.5mA, so allowing \nsignificant loads to be driven. The output source is active and the sink is Class A, i.e. fixed \nvalue, so greater loads might be driven if an external \u2018pull-down\u2019 resistor is connected at the \noutput.  \nTypically an external low pass filter circuit will be used to remove residual sampling noise of \nthe 64x oversampling used and if desired adjust the signal amplitude and device strength. \nSERIAL DATA INTERFACE \nWM8725 has serial interface formats that are fully compatible with both normal (MSB first, \nright-justified) and I2S interfaces. The data format is selected with the FORMAT pin. When \nFORMAT is LOW, normal data format is selected. When the format is HIGH, I2S format is \nselected. It must be noted that in \u201cpacked\u201d mode operation (exactly 32 BCLKs per LRCIN \nperiod), the data word must align exactly with LRCIN clock edges (effectively both left and \nright justified at the same time). This is true in both normal and I2S modes. \nFORMAT \nDESCRIPTION \n0 \n \nNormal format  \n(MSB-first, right justified) \n1 \nI2S format  \n(Philips serial data protocol) \nTable 3  Serial Interface Formats \nMSB\nMSB\nLSB\nLSB\nLEFT CHANNEL\nRIGHT CHANNEL\nLRCIN\nBCKIN\nDIN\nAudio Data Word = 16-Bit\n1/fs\n1\n2\n3\n14 15 16\n1\n2\n3\n14 15 16\n \nFigure 1  \u2018Normal\u2019 Data Input Timing \nMSB\nMSB\nLSB\nLSB\nLEFT CHANNEL\nRIGHT CHANNEL\nLRCIN\nBCKIN\nDIN\nAudio Data Word = 16-Bit\n1/fs\n1\n2\n3\n14 15 16\n1\n2\n3\n14 15 16\n \nFigure 2  I2S Data Input Timing \n\nWM8725 \nProduction Data \nw \nPD Rev 4.1 August 2004 \n \n9 \n \n \nSYSTEM CLOCK  \nThe system clock is used to operate the digital filters and the noise shaping circuits. The \nsystem clock input is at pin 14 (SCKI). The frequency of WM8725\u2019s system clock should be \nset to 256fs or 384fs, (where fs is the audio sampling frequency). The sample rate is \ntypically: 32 kHz, 44.1 kHz, 48 kHz or 96kHz. \nWM8725 has a system clock detection circuit that automatically determines whether the \nsystem clock being supplied is at 256fs or 384fs. The system clock should be synchronised \nwith LRCIN, but WM8725 is tolerant of phase differences. Severe distortion in the phase \ndifference between LRCIN and the system clock will be detected, and cause the device to \nautomatically resynchronise. During resynchronisation, the output of the device will either \nrepeat the previous sample, or drop the next sample, depending on the nature of the phase \nslip. This will ensure minimal \u201cclick\u201c at the analogue outputs during resynchronisation. \nSCKI\ntSCKIL\ntSCKIH\n \nFigure 3  System Clock Timing Requirements \nSYSTEM CLOCK FREQUENCY \n(MHz) \nSAMPLING \nRATE (LRCIN) \n256fs \n384fs \n32 kHz \n8.192 \n12.288 \n44.1 kHz \n11.2896 \n16.9340 \n48 kHz \n12.288 \n18.432 \n96kHz \n24.5761 \n36.8641 \nTable 4  System Clock Frequencies Versus Sampling Rate \nNotes: \n1.  96kHz sample rate at either 256fs or 384fs are only supported with 5V supplies. \nLRCIN\nBCKIN\nDIN\ntBCH\ntBCL\ntLB\ntBL\ntBCY\ntDS\ntDH\n \nFigure 4  Audio Data Input Timing \n \n\nWM8725 \nProduction Data \nw \nPD Rev 4.1 August 2004 \n \n10 \n \n \nRECOMMENDED EXTERNAL COMPONENTS \nGND\nVOUTR\nCAP\nVDD\nNC\nBCKIN\nLRCIN\nDIN\n5\n6\n7\n1\n2\n3\n4\n10\n9\n8\n14\n13\n12\n11\nVOUTL\nMUTE\nNC\nDEEMPH\nSCKI\nFORMAT\nWM8725\nGND\nVDD\nANALOGUE\nOUTPUT\nFOR RIGHT\nCHANNEL\nFROM AUDIO\nPROCESSOR\nANALOGUE\nOUTPUT FOR\nLEFT\nCHANNEL\n256fs/384fs CLK\n10\u00b5F\n0.1\u00b5F\n10\u00b5F\n+\nExternal\nLPF\nExternal\nLPF\n \nFigure 5  Recommended External Components \nDETAIL OF RECOMMENDED EXTERNAL COMPONENTS SHOWING THE EXTERNAL \nLOW PASS FILTER \nExternal LPF\nx2 for Stereo Operation\n100pF\n-\n+\n10k\u2126\u2126\u2126\u2126\n1500pF\n10k\u2126\u2126\u2126\u2126\n680pF\n10k\u2126\u2126\u2126\u2126\nFiltered\nAnalogue\nOutput\nVOUTR\nVOUTL\n \nFigure 6  Third-Order Low Pass Filter (LPF) Example \nAn external low pass filter is recommended (see Figure 6) if the device is driving a wideband \namplifier. In some applications, second-order or passive RC filter may be adequate. \nPCB LAYOUT \n1. \nPlace all supply decoupling capacitors as close as possible to their respective supply \n \npins and provide a low impedance path from the capacitors to the appropriate ground. \n2. \nSeparate analogue and digital ground planes should be situated under respective \n \nanalogue and digital device pins. \n3. \nAvoid noise on the CAP reference pin. The decoupling capacitor should be placed as \n \nclose to this pin as possible with a low impedance path from the capacitor to analogue \n \nground. \n4. \nDigital input signals should be screened from each other and from other sources of \n \nnoise to avoid cross-talk and interference. They should also run over the digital ground \n \nplane to avoid introducing unwanted noise into the analogue ground plane. \n5. \nAnalogue output signal tracks should be kept as short as possible and over the \n \nanalogue ground plane reducing the possibility of losing signal quality. \n\nBased on the specification document for the WM8725 electronic device, answer the following questions.",
         "question": [
             "What is the function of the FORMAT pin in the WM8725 device? (A) It controls the sample rate. (B) It selects the data format. (C) It adjusts the clock frequency. (D) It enables the mute function.",
             "Describe the role of system clock input (SCKI) in the operation of WM8725.",

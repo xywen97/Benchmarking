@@ -713,12 +713,6 @@ def query_gpt4v(prompt, images=None, image_captions=None):
                             "type": "text",
                             "text": f"You are a helpful assistant. {prompt}. You can refer to the provided images."
                         },
-                        {
-                            "type": "image_url",
-                                "image_url": {
-                                    "url": f"data:image/jpeg;base64,{images[0]}"
-                            }
-                        }
                     ]
                 }
             ],
@@ -807,12 +801,6 @@ def query_gpt4o(prompt, images=None, image_captions=None):
                             "type": "text",
                             "text": f"You are a helpful assistant. {prompt}. You can refer to the provided images."
                         },
-                        {
-                            "type": "image_url",
-                                "image_url": {
-                                    "url": f"data:image/jpeg;base64,{images[0]}"
-                            }
-                        }
                     ]
                 }
             ],
@@ -874,12 +862,6 @@ def query_gpt4_turbo(prompt, images=None, image_captions=None):
                             "type": "text",
                             "text": f"You are a helpful assistant. {prompt}. You can refer to the provided images."
                         },
-                        {
-                            "type": "image_url",
-                                "image_url": {
-                                    "url": f"data:image/jpeg;base64,{images[0]}"
-                            }
-                        }
                     ]
                 }
             ],
@@ -941,12 +923,6 @@ def query_gpt4(prompt, images=None, image_captions=None):
                             "type": "text",
                             "text": f"You are a helpful assistant. {prompt}. You can refer to the provided images."
                         },
-                        {
-                            "type": "image_url",
-                                "image_url": {
-                                    "url": f"data:image/jpeg;base64,{images[0]}"
-                            }
-                        }
                     ]
                 }
             ],
@@ -965,6 +941,7 @@ def query_gpt4(prompt, images=None, image_captions=None):
 
         llm_outputs = requests.post(f"{openai_api_base}/chat/completions", headers=headers, json=payload)
         llm_outputs = llm_outputs.json()
+        print(llm_outputs)
         llm_outputs = llm_outputs['choices'][0]['message']['content']
 
     else:

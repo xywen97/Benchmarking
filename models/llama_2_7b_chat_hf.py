@@ -1,3 +1,6 @@
+# transformers >= 4.44
+# env: benchmark
+
 from flask import Flask, request, jsonify
 import torch
 from transformers import pipeline

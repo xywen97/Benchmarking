@@ -50,3 +50,4 @@
 47. 5047: Yi VL 34b
 48. 5048: Yi chat 6b
 49. 5049: Yi chat 34b
+50. 5050: minigpt4 vicuna-13b

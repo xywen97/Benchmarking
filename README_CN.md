@@ -5,6 +5,7 @@
 Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比较不同模型在多模态数据上的表现。该项目支持多种数据格式和模型，帮助研究人员和开发者更好地理解模型在处理多模态数据时的能力。
 
 ## Tested Models
+#### 2024.11.15
 - [x] GPT-3.5-turbo
 - [x] QWen2 0.5b Instruct
 - [x] internvl2-8b
@@ -13,8 +14,23 @@ Multimodal EDA Benchmarking项目旨在提供一个框架，用于评估和比�
 - [x] miniCPM-V2
 - [x] yi vl 6b
 
-## TODO
+#### 2024.11.17
+- [x] MiniGPT4-vicuna7b
+- [x] Llama 2-7b
+- [x] Llama 2-13b
+- [x] Internlm chat 7b
+- [x] InternVL-Chat-V1.5
+- [x] InternLM2 chat 7b
+- [x] InternLM2 Chat 20b
+- [x] InternLM2.5 Chat 7b
+- [x] InternLM2.5 Chat 20b
+- [x] Qwen2 72b instruct
+- [x] QWen 2.5 7b instruct
+- [x] QWen 2.5 72b instruct
+- [x] MiniCPM-V
 
+
+## TODO
 ### 图片标题生成
 - [x] Blip-image-captioning-large
 

@@ -223,6 +223,9 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
         ability_item = data['abilities']
         source_item = data['source']
 
+        # if field == "spec":
+        statement_item = ' '.join(statement_item.split()[:512])
+
         '''
         Check if the elements in each item is full filled
         '''
@@ -355,7 +358,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
                 print("not handled yet..")
                 pass
             
-            print(f"QUESTION: {entire_question}")
+            # print(f"QUESTION: {entire_question}")
             
             for attempt in range(3):
                 try:

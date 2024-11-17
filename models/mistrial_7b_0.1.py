@@ -1,10 +1,13 @@
+# transformers >= 4.44
+# env: benchmark
+
 from flask import Flask, request, jsonify
 import torch
 from transformers import pipeline
 from transformers import AutoTokenizer
 import os
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 app = Flask(__name__)
 
@@ -37,7 +40,7 @@ def generate_text():
         num_return_sequences=1, 
         eos_token_id=tokenizer.eos_token_id,
         truncation=True, 
-        max_length=1024
+        max_length=2048
     )
 
     return jsonify(response[0]['generated_text'])

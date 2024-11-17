@@ -40,7 +40,7 @@ def generate_text():
 
     model_outputs = model.generate(
         model_inputs,
-        max_new_tokens=1024,
+        max_new_tokens=2048,
         top_p=0.7,
         temperature=0.7
     )

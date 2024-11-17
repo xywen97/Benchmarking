@@ -7,7 +7,7 @@ from transformers import pipeline
 from transformers import AutoTokenizer
 import os
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "7"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 app = Flask(__name__)
@@ -50,7 +50,7 @@ def generate_text():
         num_return_sequences=1, 
         eos_token_id=tokenizer.eos_token_id,
         truncation=True, 
-        max_length=1024,
+        max_length=2048,
         temperature=0.7,
     )
 

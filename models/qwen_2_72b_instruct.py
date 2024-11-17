@@ -1,3 +1,6 @@
+# Transformers >= 4.44
+# env: benchmark
+
 # modality: text
 import sys
 import torch
@@ -11,7 +14,7 @@ from flask import Flask, request, jsonify
 import os
 
 app = Flask(__name__)
-os.environ["CUDA_VISIBLE_DEVICES"] = "3,6,7"
+os.environ["CUDA_VISIBLE_DEVICES"] = "4,5,6"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 torch.set_grad_enabled(False)

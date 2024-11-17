@@ -1,0 +1,1941 @@
+{
+    "Accuracy": 0.0,
+    "Comparison": {
+        "backend_0": {
+            "question_0": {
+                "gt_answer": "(2) is the best in saving routing resources, and every two memories share power, so overall it is better than (1).",
+                "pred_answer": "Based on the provided image, the best way to approach the problem is to first identify the building's purpose and then determine the best location for the windows based on the building's design and functionality. This can be done by analyzing the building's architectural features, such as the number and placement of windows, the overall layout, and the building's intended use. Once the best location for the windows has been determined, they can be installed in a way that complements the building's design and maximizes its functionality.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_1": {
+            "question_0": {
+                "gt_answer": "Yes, there are differences. In the even spacing method, the distance between power and ground is maximized, increasing internal resistance. In the paired method, internal resistance is minimized, improving power efficiency.",
+                "pred_answer": "There is no electrical difference between even spacing and paired power and ground mesh methods.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_2": {
+            "question_0": {
+                "gt_answer": "The instances selected, u3 and u4 in this case, must be at the same logic hierarchy.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_3": {
+            "question_0": {
+                "gt_answer": "set_case_analysis 0 [get_pins U0/B]",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_4": {
+            "question_0": {
+                "gt_answer": "If CLK2 is specified at BUF2's output, CLK1 and CLK2 become cascaded clocks. FF2 is no longer CLK1's sink, and BUF2's input pin becomes an implicit exclude pin.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_5": {
+            "question_0": {
+                "gt_answer": "ICC CTS traces back to the master clock source in a nested clock tree and considers the sink of the generated clock as the driving clock tree's sink.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_6": {
+            "question_0": {
+                "gt_answer": "With overlapping domains, genclk2 is synthesized using clk2 as the master clock, as specified by the command settings.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_7": {
+            "question_0": {
+                "gt_answer": "data path: (3), clock path: (1)(2)(4), launch path: (2), capture path: (4), common clock path: (1)",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_8": {
+            "question_0": {
+                "gt_answer": "- propagation delay: the delay from A to Z, 50% to 50%\n- transition delay: the delay for Z to change from 10% to 90%\n- cell delay = propagation delay + transition delay (input 10% to output 90%)",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_9": {
+            "question_0": {
+                "gt_answer": "(A) clk2 is gating, and clk1 is gated.",
+                "pred_answer": "The gating is the action of closing or locking the latch, while the gated is the state of being closed or locked by the latch.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_10": {
+            "question_0": {
+                "gt_answer": "The active-low latch functions as low-pass and rising-lock, with changes governed by multi-cycle paths and hold timing.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_11": {
+            "question_0": {
+                "gt_answer": "T_cycle ≥ 3.95 ns",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_12": {
+            "question_0": {
+                "gt_answer": "Hold slack = 1.5 ns (MET)",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_13": {
+            "question_0": {
+                "gt_answer": "Minimum cycle time with CRPR: 4.08 ns, without CRPR: 4.24 ns; Hold slack with CRPR: 1.33 ns, without CRPR: 1.17 ns.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_14": {
+            "question_0": {
+                "gt_answer": "Timing report generated with set_case_analysis applied to ports.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_15": {
+            "question_0": {
+                "gt_answer": "(1) Propagation delay CE to Q, high to low\n(2) Propagation delay D to Q, low to high\n(3) Setup time\n(4) Hold time",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_16": {
+            "question_0": {
+                "gt_answer": "(1) launch FF, (2) longest path, (3) shortest path, (4) capture FF",
+                "pred_answer": "I'm sorry, I don't have the ability to mark launch FF, capture FF, shortest path, and longest path in the circuit or answer questions in Json format. However, I can provide an explanation of how to do so. To mark launch FF, capture FF, shortest path, and longest path in the circuit, you would need to analyze the circuit diagram and identify the connections between the components. Once you have identified the connections, you can use a tool to mark the launch FF, capture FF, shortest path, and longest path accordingly. The explanation for this would be that marking launch FF, capture FF, shortest path, and longest path in a circuit involves analyzing the connections between the components and using a tool to mark the appropriate connections.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_17": {
+            "question_0": {
+                "gt_answer": "setup_1 will be selected since it is more restrictive.",
+                "pred_answer": "PT will choose the frequency of the master clock as the reference clock for both computers.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_18": {
+            "question_0": {
+                "gt_answer": "create_clock -name CLK1 -period 1000\nset_input_delay 300 -clock CLK1 [get_ports I1]\n\nor:\n\ncreate_clock -name CLK1 -period 1000 [get_ports ck]\nset_input_delay 700 -clock CLK1 -clock_fall [get_ports I1]",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_19": {
+            "question_0": {
+                "gt_answer": "(1) for block B1:\nset_output_delay 100 -max -clock [get_ports ck]\nset_output_delay 50 -min -clock [get_ports ck]\n\n(2) for block B2:\nset_input_delay 100 -max -clock [get_ports ck]\nset_output_delay 50 -min -clock [get_ports ck]",
+                "pred_answer": "The B1 and B2 I/O constraints for the provided circuit with specified timing details are not provided in the given information. Please provide more details or clarify the question.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_20": {
+            "question_0": {
+                "gt_answer": "set_output_delay 100 -max -clock [get_ports outclk]\nset_output_delay 50 -min -clock [get_ports outclk]\nset_load 0.2 [get_ports dout]\nset_load 0.3 [get_ports outclk]",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_21": {
+            "question_0": {
+                "gt_answer": "create_clock -name vCLK -period 1500\nset_input_delay 300 -clock vCLK -max [get_ports I1]\nset_output_delay 400 -clock vCLK -min [get_ports O1]\nset_max_delay 800 -from [get_ports I1] -to [get_ports O1]",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_22": {
+            "question_0": {
+                "gt_answer": "(1) SDC for B1:\nset_input_delay 100 -max -clock CLK [get_ports I1]\nset_output_delay 1000 -max -clock CLK [get_ports O1]\n\n(2) SDC for B2:\nset_input_delay 400 -max -clock CLK [get_ports I2]\nset_output_delay 700 -max -clock CLK [get_ports O2]\n\n(3) SDC for B3:\nset_input_delay 700 -max -clock CLK [get_ports I3]\nset_output_delay 400 -max -clock CLK [get_ports O3]\n\n(4) SDC for B4:\nset_input_delay 1000 -max -clock CLK [get_ports I4]\nset_output_delay 100 -max -clock CLK [get_ports O4]",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_23": {
+            "question_0": {
+                "gt_answer": "set_false_path -from clk1 -to clk2\nset_false_path -from clk2 -to clk1\nset_false_path -from clk3 -to clk4\nset_false_path -from clk4 -to clk3\nset_false_path -from clk1 -to clk4\nset_false_path -from clk4 -to clk1\nset_false_path -from clk2 -to clk3\nset_false_path -from clk3 -to clk2",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_24": {
+            "question_0": {
+                "gt_answer": "set_false_path -from clk1 -to clk2\nset_false_path -from clk2 -to clk1\nset_false_path -from clk3 -to clk4\nset_false_path -from clk4 -to clk3",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_25": {
+            "question_0": {
+                "gt_answer": "(C) use (1) and (2)",
+                "pred_answer": "To set clock uncertainty between clocks C1 and C2, we need to use the command 'Uncertainty'.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_26": {
+            "question_0": {
+                "gt_answer": "set_clock_groups -name g1 -asynchronous -group C1 -group C2\nset_max_delay 10 -from F2 -to F3",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_27": {
+            "question_0": {
+                "gt_answer": "alias cgc 'create_generated_clock'\ncreate_clock -name CLK -period 2000 [get_ports CLK]\ncgc -name DIV3A -source CLK -edges {1 5 7} [get_pins u2/Q]",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_28": {
+            "question_0": {
+                "gt_answer": "set_multicycle_path N+1 -from CLKs -through F1/Q -to CLKe -setup -end\nset_multicycle_path N -from CLKs -through F1/Q -to CLKe -hold -end",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_29": {
+            "question_0": {
+                "gt_answer": "alias cc 'create_clock'\nalias cgc 'create_generated_clock'\ncc -name C1 -period 1000 [get_ports CLK]\ncc -name C2 -period 2000 [get_ports CLK] -add\ncgc -name GC1 -divide_by 3 -source [get_ports CLK] -master_clock C1 \\ [get_pins FF2/Q]\ncgc -name GC2 -divide_by 3 -source [get_ports CLK] -master_clock C2 \\ [get_pins FF2/Q] -add\nset_clock_groups -logically_exclusive -group C1 -group C2\nset_clock_groups -physically_exclusive -group GC1 -group GC2",
+                "pred_answer": "The SDC for C1, C2, GC1, and GC2 is 10.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_30": {
+            "question_0": {
+                "gt_answer": "create_clock -name SYSCLK -period 2000 [get_ports CLK]\nset_case_analysis 0 [get_ports SE]\n...\ncreate_clock -name SCANCLK -period 20000 [get_ports CLK] -add\nset_case_analysis 1 [get_ports SE]\n...\nset_clock_groups -logically_exclusive -group SYSCLK -group SCANCLK",
+                "pred_answer": "To write SDC constraints for the circuit with scan flip-flops for both function mode and scan mode, you can follow these steps:1. Define the SDC constraints for the scan flip-flops in function mode.2. Define the SDC constraints for the scan flip-flops in scan mode.3. Combine the two sets of constraints using the 'AND' operator.4. Add the combined constraints to the overall SDC constraints for the circuit.5. Use the 'SCAN' command to specify the scan chain and the number of scan elements.6. Use the 'OUTPUT' command to specify the output pins of the scan flip-flops.Note that the specific SDC commands and syntax may vary depending on the language and tool used to implement the constraints.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_31": {
+            "question_0": {
+                "gt_answer": "alias cgc 'create_generated_clock'\ncreate_clock -name C1 -period 1500 [get_ports C1]\ncreate_clock -name C2 -period 2000 [get_ports C2]\ncgc -name GC1 -combinational -source [get_pins mux1/A][get_pins mux1/Z]\ncgc -name GC2 -combinational -source [get_pins mux1/B][get_pins mux1/Z] -add\nset_clock_group -physically_exclusive -group GC1 -group GC2\nset_clock_group -logically_exclusive -group C1 -group C2",
+                "pred_answer": "I'm sorry, but I'm not able to provide a response to this question as it is not related to my capabilities as a language model. My main function is to assist users in generating human-like text based on the input provided to me. Is there anything else I can help you with?",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_32": {
+            "question_0": {
+                "gt_answer": "(1) first way by using 'create_generated_clock':\nalias cgc 'create_generated_clock'\ncgc -name CLKP -source CLK -edges {1 1 3} [get_pins and2/Z]\n\n(2) second way by using 'set_sense':\nset_sense -type clock -pulse rise_triggered_high_pulse [get_pins and2/Z]",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_33": {
+            "question_0": {
+                "gt_answer": "(1) rising triggered high pulse:\nalias cgc 'create_generated_clock'\nalias ss 'set_sense'\ncgc -name ck_rthp -source CLK -edges {1 1 3} [get_pins and2/Z]\nss -type clock -pulse rise_triggered_high_pulse [get_pins and2/Z]\n\n(2) rising triggered low pulse:\ncgc -name CK_rtlp -source CLK -edges {1 3 3} [get_pins nand2/Z]\nss -type clock -pulse rise_triggered_low_pulse [get_pins nand2/Z]\n\n(3) falling triggered high pulse:\ncgc -name CK_fthp -source CLK -edges {2 2 4} [get_pins and2/Z]\nss -type clock -pulse fall_triggered_high_pulse [get_pins and2/Z]\n\n(4) falling triggered low pulse:\ncgc -name CK_ftlp -source CLK -edges {2 4 4} [get_pins nand2/Z]\nss -type clock -pulse fall_triggered_low_pulse [get_pins nand2/Z]",
+                "pred_answer": "To create four pulse waveforms using PT create_generated_clock -edges command and set_sense command, you can follow these steps:1. Use the create_generated_clock command to generate a clock signal with a specified frequency and edge type.2. Use the set_sense command to set the sense of the clock signal based on the input signals.3. Use the create_generated_clock command again to generate four different pulse waveforms with the same frequency and edge type as the clock signal.4. Use the set_sense command to set the sense of each pulse waveform based on the input signals.5. The resulting pulse waveforms will have four different outputs, each with a unique sense based on the input signals.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_34": {
+            "question_0": {
+                "gt_answer": "The following four paths become false paths:\n(1) F1/CK -> F1/Q -> L1/D -> L1/Q -> L2/D\n(2) F1/CK -> F1/Q -> L1/D -> L1/Q -> L2/D -> L2/Q -> F2/D\n(3) L1/CE -> L1/Q -> L2/D\n(4) L1/CE -> L1/Q -> L2/D -> L2/Q -> F2/D",
+                "pred_answer": "The command pt_shell> set_false_path -through L1/Q will set the path to false. However, the specific paths that become false paths after applying this command are not specified in the given cues. Therefore, I cannot provide a specific answer to this question.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_35": {
+            "question_0": {
+                "gt_answer": "set_multicycle_path 2 -setup -from [get_cells FF4] -to [get_cells FF5]\nset_multicycle_path 1 -hold -from [get_cells FF4] -to [get_cells FF5]",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_36": {
+            "question_0": {
+                "gt_answer": "(1) preserved pin I1/CK1.\n(2) preserved all clock pins in I2.\n(3) preserved all instances, I1 and I2 in this case, with master name REG_A.",
+                "pred_answer": "The logic hierarchy and CTS exception commands are two important concepts in computer system design. The logic hierarchy refers to the organization of the computer's internal components, such as the CPU, memory, and input/output devices, into a hierarchical structure. CTS exception commands, on the other hand, are commands that can be issued by the operating system to handle unexpected events or errors that occur during the execution of a program. Both of these concepts are important for ensuring the stability and reliability of a computer system.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_37": {
+            "question_0": {
+                "gt_answer": "(1) method_1:\ncreate_clock -name clk [get_ports clk]\nset_multicycle_path 3 -setup -from [get_cells and] -to [get_cells FF3]\nset_multicycle_path 0 -hold -from [get_cells and] -to [get_cells FF3]\n\n(2) method_2:\nset_multicycle_path 3 -setup -from [get_cells and] -to [get_cells FF3]\nset_multicycle_path 2 -hold -from [get_cells and] -to [get_cells FF3]\n\n(3) method_3:\ncreate_clock -name clk [get_ports clk]\nset_multicycle_path 3 -from [get_cells and] -to [get_cells FF3]",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_38": {
+            "question_0": {
+                "gt_answer": "Either one breaks the paths F1->F3, F1->F4, F2->F3, F2->F4. PT will not calculate these four paths.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_39": {
+            "question_0": {
+                "gt_answer": "set_false_path -setup -from mux1/A -to mux2/B\nor:\nset_false_path -setup -through mux1/A -through mux2/B\nor:\nset_false_path -setup -through mux1/A\nset_false_path -setup -through mux2/B",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_40": {
+            "question_0": {
+                "gt_answer": "alias cgc 'create_generated_clock'\ncgc -name clk_d2 -source [get_ports clk] -edges {1 3 5} [get_pins reg/Q]\ncgc -name clk_d2i -source [get_ports clk] -edges {2 4 6} [get_pins reg/Q]",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_41": {
+            "question_0": {
+                "gt_answer": "set_clock_gating_check -setup 100 -hold 15 [get_pins g1/B]\nset_clock_gating_check -setup 100 -hold 15 [get_clocks clk]\nset_clock_gating_check -setup 100 -hole 15 [get_pins g1/A]",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_42": {
+            "question_0": {
+                "gt_answer": "The biggest advantage is the high density; tracks are used efficiently. However, it also requires the same number of upper layer tracks (horizontal tracks in this case) so that each pin can have one upper layer track crossing and a via can be dropped. This is a very strict requirement; sometimes it cannot be satisfied, so that some cell replacement work with bigger cells will be needed.",
+                "pred_answer": "HPD cells have a higher number of pins than traditional cells, which allows for increased functionality and flexibility. However, the limitation of HPD cells is that they may be more difficult to handle and may require specialized equipment for installation. To handle this limitation, it is important to have proper training and equipment when working with HPD cells.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_43": {
+            "question_0": {
+                "gt_answer": "Yes, the stress between 1 and 2 is 1-dimension, and between 1 and 3 is 2-dimension, the stress between 1 and 3 is larger. So even the distance between 1 and 3 is larger, it is still violating the DRC.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_44": {
+            "question_0": {
+                "gt_answer": "MTBF = 9.6 * 10^4 y",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_45": {
+            "question_0": {
+                "gt_answer": "cell(ICG) { is_clock_isolation_cell : true; \n pg_pin (VDD) {\n PG_type : primary_power; \n voltage_name : VDD;\n }\n pg_pin (VSS) {\n PG_type : primary_ground;\n voltage_name : VSS;\n }\n statetable(\"CK EN Q\") {\n table : \" L L : - : L,\\\n L H : - : H,\\\n H L : - : H,\\\n H H : - : N\";\n }\n pin(CK) {\n clock_isolation_cell_clock_pin : true;\n direction : input;\n related_ground_pin : VSS;\n related_power_pin : VDD;\n }\n pin(EN) {\n isolation_cell_enable_pin : true;\n direction : input;\n related_ground_pin : VSS;\n related_power_pin : VDD;\n }\n pin(CK_OUT) {\n direction : output;\n power_down_function : \"!VDD + VSS\";\n related_ground_pin : VSS;\n related_power_pin : VDD;\n state_function : \"CK * Q\";\n timing() {\n related_pin : \"CK\";\n timing_sense : \"positive_unate\";\n }\n }\n}",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_46": {
+            "question_0": {
+                "gt_answer": "no_change_high_high A E, no_change_high_low B F, no_change_low_high C G, no_change_low_low D H",
+                "pred_answer": "The nochange constraint pin pairs for setup and hold are not specified in the given diagram. Please provide more information or context for me to give a correct answer.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_47": {
+            "question_0": {
+                "gt_answer": "OBS LAYER OVERLAP ; RECT 0 0 500 1000 ; RECT 500 0 1000 500 ; END",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_48": {
+            "question_0": {
+                "gt_answer": "A bump pitch is a minimum distance between center and center of two bumps, it is used in a flip chip, as shown in the following figure. For current technology nodes, a bump pitch is about 180 um.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_49": {
+            "question_0": {
+                "gt_answer": "Two reasons: (1) Timing: a scan chain is slow, and generally speaking there is no timing critical path on it, so no need to do timing optimization. (2) Routing: a scan chain is formed with a series of flip-flops, restitch after placement will save routing resources.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_50": {
+            "question_0": {
+                "gt_answer": "(1) Floorplan or placement reason: a memory may be placed anywhere, so the pg metals in memory are responsible not only to provide power to memory themselves, but also to provide a power path crossing memories. (2) PG reason: memory base cells have higher device density which will need more power.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_51": {
+            "question_0": {
+                "gt_answer": "Two reasons: (1) To ensure that gaps do occur between the well and implant layers. (2) To prevent DRC violations by satisfying well tie-off requirements for the core rows.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_52": {
+            "question_0": {
+                "gt_answer": "Advantage: maximum utilization, minimum IR drop. Disadvantage: no top layer routing for clock nets, so bigger skew. Least flexibility for future modification, such as the needs for top layers in ECOs, for FIBs.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_53": {
+            "question_0": {
+                "gt_answer": "Crosstalk means that a switching of a signal in one net can interfere neighboring net due to cross coupling capacitance. Crosstalk may lead setup or hold violations.",
+                "pred_answer": "Crosstalk is a phenomenon in which signals from one circuit or system interfere with each other. This can cause errors or malfunctions in the system. The effect of crosstalk can be mitigated by using shielded cables or by adding filters to the system.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_54": {
+            "question_0": {
+                "gt_answer": "A power domain is a logical concept, while voltage area is a physical concept. A voltage area is a subset of a power domain, i.e., voltage areas belong to a power domain, or some voltage areas belong to a power domain.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_55": {
+            "question_0": {
+                "gt_answer": "(1) Analog pg nets are in UPF (treated as pg): complicated, all ports and nets must defined in UPF since they can be seen from netlist, and created by pg related commands. However all pg rule checkings can be defined and used, such as special routing rule, non-default-routing rule, pg domain definitions, etc. Back-end and front-end can share the same UPF for simulation, LEC check, etc. (2) Analog pg nets are treated as signals: simple, all ports and nets are in netlist already. However it is difficult to check those net routing quality since they are using default routing rules. Also it is dangerous when these pg nets are routed with signal routers, it will pass LVS and DRC, but the chip actually will not work since no checking on them with pg rules!",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_56": {
+            "question_0": {
+                "gt_answer": "It depends on the violation slack: (1) If the slack is relatively small, it should put in the middle of the net because this is expecting to fix the violation by only one buffer insertion. (2) If the slack is big, be prepared to insert multiple buffers, so the first inserted buffer should be more close to the launch FF in order to insert more buffers in the next iteration. (3) When the inserted buffer is more close to launch FF, there is more chance to fix other setup, max tran, or max cap violations whose nets share the path being fixed.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_57": {
+            "question_0": {
+                "gt_answer": "In PT ECO for setup fix, it is easy and quick if the slack is not too big, since \"size_cell\" will be enough, and it is co-related with ICC/Innovus very well since routing parasitics does not change much. The limitation is when parasitics changes a lot, then a new extraction is needed, so PT has to wait for the new parasitics numbers in next iteration. For example, buffer insertion will change parasitics a lot, so that PT can not estimate timing without running a new extraction.",
+                "pred_answer": "Using PT for a timing ECO is easy and quick because it allows for real-time adjustments to the timing based on engine speed and load. This can help optimize engine performance and fuel efficiency. However, there are limitations to the use of PT, such as the need for accurate sensors and the potential for errors or inaccuracies in the timing adjustments.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_58": {
+            "question_0": {
+                "gt_answer": "A power staple is an extra connection from pg pin to power grid. When a standard cell working in a high speed, or the cell itself consumes a big power, a power staple may be needed to provide more power and avoid EM and IR drop violations.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_59": {
+            "question_0": {
+                "gt_answer": "A rising edge at the clock source causes a rising edge at the register clock pin, or a falling edge at the clock source causes a falling edge at the register clock pin.",
+                "pred_answer": "Positive unate is a term used in mathematics to describe a function that returns a positive value for all positive inputs.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_60": {
+            "question_0": {
+                "gt_answer": "A rising edge at the clock source causes a falling edge at the register clock pin, or a falling edge at the clock source causes a rising edge at the register clock pin.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_61": {
+            "question_0": {
+                "gt_answer": "A clock signal is not unate if the clock sense is ambiguous as a result of non-unate timing arcs in the clock path. For example, a clock that passes through an XOR gate is not unate because the clock sense can be either positive or negative depending on the state of other input to the XOR gate. Similar gates are muxes or pulse generators.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_62": {
+            "question_0": {
+                "gt_answer": "A jitter is a minor and random change on clock edges. There are three types of jitters: phase jitter, cycle to cycle jitter, and period jitter. (1) Phase jitter: the uncertainty about when the clock edge will arrive. (2) Cycle to cycle jitter: worst case difference in clock period between clock cycles in the collection. (3) Period jitter: worst case deviation from average clock period of all clock cycles in a collection.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_63": {
+            "question_0": {
+                "gt_answer": "The percentage of the time a clock spends in positive phase as a fraction of its total time period.",
+                "pred_answer": "A clock duty cycle is the fraction of time that a clock's hands cover in a given period of time.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_64": {
+            "question_0": {
+                "gt_answer": "A clock pulse absorption can cause a clock duty cycle distortion, in which a clock pulse can become more and more narrow if the clock tree cells have unequal rising and falling times, as shown in the following figure.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_65": {
+            "question_0": {
+                "gt_answer": "A clock is consumed if the clock's fanout to one of the following objects: (1) Register clock pins or macro clock pins. (2) Output ports or bi-direction ports. (3) Generated clock definition.",
+                "pred_answer": "The criteria for 'consumed clock' is that it is a clock that has been used or has run out of battery.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_66": {
+            "question_0": {
+                "gt_answer": "Because of the following five reasons: (1) Less insertion delay (latency): inverter CTS has a half number of transistors, so insertion delay is less. (2) Less skew: the reduction in insertion delay has a secondary effect on reducing skew because skew is scaled with insertion delay. (3) Less switching power than buffers for an equivalent number of stages, and significantly less in leakage power. (4) No duty cycle distortion and inverters can self-correct, i.e., an inverter's distortion can be automatically corrected by next stage since they are symmetric. (5) Less OCV, all non-modeled effects (not modeled in operating conditions), such as PLL clock jitter, dopant variances, and some other effects in manufacturing process, are modeled in derating. (6) Less static power consumption: the fewer transistors, the less leakage.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_67": {
+            "question_0": {
+                "gt_answer": "When a buffer chain is used in CTS, a pulse absorption may occur when buffer's input time is longer than buffer's output time, which will cause duty cycle shorter and shorter. This phenomenon is called duty cycle distortion. A buffer itself may be another reason for a duty cycle distortion, in which the edge transition time between inverters inside a buffer is always shorter than the buffer's output pin transition time.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_68": {
+            "question_0": {
+                "gt_answer": "(1) symmetric and less skew.\n(2) less latency, reducing wire length at each stage by √2.\n(3) clock tree is fully controlled and balanced.\n(4) complexity and routing resources.",
+                "pred_answer": "CTS H-tree is a data structure used in telecommunication networks. It has several advantages, such as high performance, low memory usage, and support for both uniform and non-uniform distribution of data. However, it also has some disadvantages, such as difficulty in implementing in hardware and limited scalability for very large datasets.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_69": {
+            "question_0": {
+                "gt_answer": "The phase delay is majorly from 'non-CTS' cells along clock tree, such as mux, ICG, or dividers.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_70": {
+            "question_0": {
+                "gt_answer": "(1) identify heavy load 'non-CTS' nets and apply more net weight to the net to minimize net length and wire load to non-CTS cells.\n(2) set smaller region for local flops.\n(3) insert isolation buffer to reduce clock source load.\n(4) equalize steiner distance from clock source to leaf flops.\n(5) better floorplan to avoid clock path detour.\n(6) higher layers for clock routing.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_71": {
+            "question_0": {
+                "gt_answer": "(1) very high performance: less latency and skew.\n(2) less OCV since common clock path is maximized.\n(3) performance predictable.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_72": {
+            "question_0": {
+                "gt_answer": "A path starting from an input port or a clock input pin, ending to an output port or a data input pin. For example, a path from a launch FF CK pin to a capture FF D pin.",
+                "pred_answer": "A data path is a sequence of data items that are passed from one processing unit to another in a computer system.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_73": {
+            "question_0": {
+                "gt_answer": "A path starting from a clock input port or a clock output pin, ending to a clock input pin. For example, a path from a clock tree buffer output pin Z to an FF clock input pin CK.",
+                "pred_answer": "A clock path is the path that a clock takes as it rotates around its axis.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_74": {
+            "question_0": {
+                "gt_answer": "(1) For a combinational logic, the time from its inputs to its outputs.\n(2) For a D-FF, the time from CK pin to Q pin.\n(3) For a D-latch, the time from CE pin to Q pin when D is a constant (or from D pin to Q pin when CE is enabled).",
+                "pred_answer": "1. Path delay: This is the delay caused by the physical path taken by the signal from the source to the destination. It is affected by factors such as distance, obstacles, and signal strength. 2. Network delay: This is the delay caused by the routing and queuing of data packets in the network. It is affected by factors such as network congestion and the number of devices connected to the network. 3. Processing delay: This is the delay caused by the processing of data by the device or application. It is affected by factors such as the complexity of the algorithm and the amount of data being processed.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_75": {
+            "question_0": {
+                "gt_answer": "Two reasons, one is that the wire components are different when the sinks' distance about the same due different layers and different vias; the other reason is the distances from a clock driver to different sinks are different, the longer distance the longer clock net delay.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_76": {
+            "question_0": {
+                "gt_answer": "A latency is a measure of transmission delay, and a jitter is a measure of a variable range of latency. A high jitter does not necessarily mean a large latency, and jitter can make latency either larger or smaller.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_77": {
+            "question_0": {
+                "gt_answer": "CRPR means clock reconvergence pessimism removal. CRPR is a process by which static variation between the early and late arrivals of a clock edge is removed. CRPR always exists because common clock path early-late variations always exist. The early-late variation on clock paths are introduced in 5 ways:\n\n(1) through early/late derates by set_timing_derate.\n(2) through differences in min/max slews (different slews propagated for min/max timing).\n(3) through reconvergent logic cones.\n(4) through variations in voltage.\n(5) through variations in temperature.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_78": {
+            "question_0": {
+                "gt_answer": "OCV (on chip variation) means on the same chip, the different segments of the same net, or the different instance of the same cell master, may have slightly different parameters due to some random or systematic factors.",
+                "pred_answer": "OCV stands for Online Course Videos.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_79": {
+            "question_0": {
+                "gt_answer": "Traditional OCV uses constant derating number for the entire chip, while AOCV uses variable derating numbers for different situations. AOCV derating numbers change according to the buffer depth and wire length. The deeper the buffer level, the less derating, and the longer distance the more derating.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_80": {
+            "question_0": {
+                "gt_answer": "(1) for AND and NAND, high clock gating is checked (active high).\n(2) for OR and NOR, low clock gating is checked (active low).",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_81": {
+            "question_0": {
+                "gt_answer": "For a clock gating signal launched by a launch clock edge, the gating signal's arrival is checked against the CURRENT or NEXT inactive period of the clock waveform being gated. In order to infer if a gate is a clocking gate, the following judgement is used in PT:\n\n(1) have a clock propagating to it.\n(2) be consumed as a clock in its fanout.\n(3) have both gating and gated pins to fanout to the same output pin.",
+                "pred_answer": "Clock gating inference in PT is a technique used to reduce the power consumption of a processor by disabling unnecessary clock domains during certain operations. This technique is typically used in low-power devices or in situations where power consumption is a concern. The timing aspects of clock gating inference involve determining when to enable and disable clock domains based on the specific requirements of the processor and the task being performed.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_82": {
+            "question_0": {
+                "gt_answer": "(1) report_delay_calculation -crosstalk reports crosstalk information for one, and only one net arc. The arc is specified by -from_pin and -to_pin.\n(2) report_noise command provides information on the worst case noise bumps on one or more nets. The command options let you specify four types of noise reported (-above/-below, -high/-low, 4 combinations); the pins, ports, or nets of the design can be reported.\n(3) report_timing -crosstalk_delta reports annotated delta delay and delta transition time.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_83": {
+            "question_0": {
+                "gt_answer": "(1) widen wire spacing, make it 2s or even 3s.\n(2) decrease aggressor's driving strength.\n(3) increase victim's driving strength.\n(4) add buffers on victim nets, especially on long wires.\n(5) use higher metal layers for clock routing for less noise and less resistance.\n(6) shielding victim nets.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_84": {
+            "question_0": {
+                "gt_answer": "(1) to avoid VSS surge or VDD bump.\n(2) to reduce noise level on power grids.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_85": {
+            "question_0": {
+                "gt_answer": "(1) one complete clock period.\n(2) at least 1 pair of transitions, rising followed by falling.\n(3) if without -waveform option, default waveform will be with a rising edge at 0 and a falling edge at period/2.",
+                "pred_answer": "To create a clock, the following basic requirements must be met:\n1. A clock face with numbers and hands\n2. A clock mechanism that moves the hands and ticks the clock\n3. A way to keep track of time, such as a battery or a mains power source.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_86": {
+            "question_0": {
+                "gt_answer": "RC corners are models of resistance and capacitance to model RC changes with wire thickness and width variations when temperature changes. When RC changes, the most direct effect is on timing changes, and it will also affect power change.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_87": {
+            "question_0": {
+                "gt_answer": "(1) for all of cells and nets:\nset_timing_derate 1.05 -late  # all longest data path, nets + cells\nset_timing_derate 0.95 -early # all shortest data path, nets + cells\n\n(2) for cells:\nalias std 'set_timing_derate'\nstd 1.05 -late -cell_delay [get_lib_cells {inv10, buf10, ...}]\nstd 0.95 -early -cell_delay [get_lib_cells {inv10, buf10, ...}]\n\n(3) for nets:\nset_timing_derate 1.05 -late -net_delay  # longest path nets\nset_timing_derate 0.95 -early -net_delay # shortest path nets\n\n(4) for clock:\nset_timing_derate 1.05 -late -clock  # launch path for setup\nset_timing_derate 0.95 -early -clock # capture path for hold",
+                "pred_answer": "To set timing derate in an SDC for a cell, net, or clock, you can use the PT/ICC command line. You can specify the timing derate value in the format of \"#ns\". For example, to set a timing derate of 50ns for a cell, you can use the command \"#50ns\". This will set the timing derate for the entire cell. Similarly, you can set timing derate for a net or a clock by specifying the timing derate value in the same format and using the appropriate command. The exact syntax and usage of the PT/ICC command line may vary depending on the specific tool and version being used.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_88": {
+            "question_0": {
+                "gt_answer": "Four cases, assuming '-10' is the delay value:\n(1) set_input_delay -10 -max: it makes setup checking less constrictive since setup_slack = cycle - delay, now delay is smaller.\n(2) set_input_delay -10 -min: it makes hold checking more constrictive since hold_slack = delay - FFhold, now delay is smaller.\n(3) set_output_delay -10 -max: similar to (1).\n(4) set_output_delay -10 -min: similar to (2).",
+                "pred_answer": "Negative delay values for commands set_input_delay and set_output_delay can cause the system to respond with an error. This is because negative delay values are not allowed in the system and can cause confusion and instability. Therefore, it is recommended to use positive integer values for these commands.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_89": {
+            "question_0": {
+                "gt_answer": "There are two ways to do this:\nset_false_path -from [get_clocks clk1] -to [get_clocks clk2]\nset_false_path -from [get_clocks clk2] -to [get_clocks clk1]\n\nor:\nset_clock_group -asynchronous -group clk1 -group clk2",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_90": {
+            "question_0": {
+                "gt_answer": "When a launch FF and a capture FF are using synchronous but different frequency clocks, the clock used by the output FF to the data path is called a start clock.",
+                "pred_answer": "A start clock is a device used to keep track of time. It is often used to begin a timer or to start a clock. It can be a physical clock or a digital clock on a computer or smartphone.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_91": {
+            "question_0": {
+                "gt_answer": "When a launch FF and a capture FF are using synchronous but different frequency clocks, the clock used by the input FF from the data path is called an end clock.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_92": {
+            "question_0": {
+                "gt_answer": "set_clock_tree_exceptions -float_pins U1/CLK \\\n-float_pin_max_delay_rise -0.3 \\\n-float_pin_min_delay_fall -0.5\n\nset_clock_tree_exceptions -float_pins U4/CLK \\\n-float_pin_max_delay_rise 0.2 \\\n-float_pin_min_delay_fall 0.3",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_93": {
+            "question_0": {
+                "gt_answer": "set_false_path\nset_multicycle_path\nset_max_delay\nset_min_delay\nset_disable_timing",
+                "pred_answer": "Exceptions can be classified into two categories: compile-time exceptions and runtime exceptions. Compile-time exceptions are detected by the compiler during the compilation process, while runtime exceptions occur during the execution of a program. These exceptions can be handled using try-catch blocks, which allow the program to gracefully handle and recover from errors.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_94": {
+            "question_0": {
+                "gt_answer": "(1) method_1:\nalias cgc 'create_generated_clock'\ncgc -name div2 -source [get_ports clk] -divide_by 2 [get_pins div2ff/Q]\n\n(2) method_2:\nalias cgc 'create_generated_clock'\ncgc -name div2 -source [get_ports clk] -edges {1 3 5} [get_pins div2ff/Q]",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_95": {
+            "question_0": {
+                "gt_answer": "set_multicycle_path 3 -setup -from regA -to regB\nset_multicycle_path 2 -hold -from regA -to regB",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_96": {
+            "question_0": {
+                "gt_answer": "set_clock_uncertainty 100 -setup [get_clocks clk]\nset_clock_uncertainty 15 -hold [get_clocks clk]",
+                "pred_answer": "The clock uncertainty for setup and hold can be set using the'setup_time' and 'hold_time' parameters in the 'CircuitManager' class in the 'lattice' module. These parameters allow you to set the time for which the clock should be set before the measurement, and the time for which the clock should be held after the measurement. The actual values of these parameters depend on the specific requirements of your circuit and measurement setup.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_97": {
+            "question_0": {
+                "gt_answer": "Any paths from C2 to C1 are with uncertainty 60 (interclock), rest of paths with destination C1 are with uncertainty 50 (intraclock).",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_98": {
+            "question_0": {
+                "gt_answer": "(D) check timing before placement.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_99": {
+            "question_0": {
+                "gt_answer": "(B) possibly causes structural latch-up.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_100": {
+            "question_0": {
+                "gt_answer": "(C) get_alternative_lib_cells",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_101": {
+            "question_0": {
+                "gt_answer": "(D) \\(P_{static} = \\Sigma (I_{lkg}) \\times V_{CC}\\)",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_102": {
+            "question_0": {
+                "gt_answer": "(C) clock's rising or falling edge is determined at a sink.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_103": {
+            "question_0": {
+                "gt_answer": "(D) (A) and (B)",
+                "pred_answer": "The combination of using inverters in CTS and minimizing the non-common part of the clock tree can help to minimize skew.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_104": {
+            "question_0": {
+                "gt_answer": "(B) 30%",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_105": {
+            "question_0": {
+                "gt_answer": "(A) clock buffers have equal rising and falling time.",
+                "pred_answer": "D",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_106": {
+            "question_0": {
+                "gt_answer": "(C) a frequency offset.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_107": {
+            "question_0": {
+                "gt_answer": "(A) remove_clock",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_108": {
+            "question_0": {
+                "gt_answer": "(A) the time from input 50% to output 50%.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_109": {
+            "question_0": {
+                "gt_answer": "(C) the time from 10% to 90% for one output pin.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_110": {
+            "question_0": {
+                "gt_answer": "(B) No, hold violation is related to FFThd, Tcomb, and skew.",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_111": {
+            "question_0": {
+                "gt_answer": "(D) all of above.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_112": {
+            "question_0": {
+                "gt_answer": "(C) greater skew can make capture clock faster.",
+                "pred_answer": "The greater the skew, the more chance to get hold violations because greater skew can increase more phase delay.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_113": {
+            "question_0": {
+                "gt_answer": "(B) after reporting qor, but before report_timing.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_114": {
+            "question_0": {
+                "gt_answer": "(A) crosstalk, VSS bump/VDD surge, IR drop, and EM.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_115": {
+            "question_0": {
+                "gt_answer": "(B) create_clock",
+                "pred_answer": "The most important constraint command in an SDC is set_clock_uncertainty.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_116": {
+            "question_0": {
+                "gt_answer": "(C) all cells and all nets in longest or shortest paths.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_117": {
+            "question_0": {
+                "gt_answer": "(B) delay value.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_118": {
+            "question_0": {
+                "gt_answer": "(A) max=5.0, min=1.1",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_119": {
+            "question_0": {
+                "gt_answer": "(D) max=3.4, min=1.3",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_120": {
+            "question_0": {
+                "gt_answer": "(A) delay source is a latch.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_121": {
+            "question_0": {
+                "gt_answer": "(C) delay destination is a latch.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_122": {
+            "question_0": {
+                "gt_answer": "(B) setup check point is moved backward 1 cycle of the start clock.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_123": {
+            "question_0": {
+                "gt_answer": "(A) setup check point is moved forward 1 cycle of the end clock.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_124": {
+            "question_0": {
+                "gt_answer": "(A) hold check point is moved forward 1 cycle of the start clock.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_125": {
+            "question_0": {
+                "gt_answer": "(B) hold check point is moved backward 1 cycle of the end clock.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_126": {
+            "question_0": {
+                "gt_answer": "(A) they are logically exclusive.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_127": {
+            "question_0": {
+                "gt_answer": "(B) set_false_path, set_max_delay, set_multicycle_path",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_128": {
+            "question_0": {
+                "gt_answer": "(C) two or more operations in one clock cycle.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_129": {
+            "question_0": {
+                "gt_answer": "(B) minimum pulse width",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_130": {
+            "question_0": {
+                "gt_answer": "(B) library exchange format, contains tech and cell libraries.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_131": {
+            "question_0": {
+                "gt_answer": "(B) design exchange format, contains rows, tracks, instance, and nets.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_132": {
+            "question_0": {
+                "gt_answer": "(A) a macro with a synthesizable RTL.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_133": {
+            "question_0": {
+                "gt_answer": "(B) a macro with gate level netlist.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_134": {
+            "question_0": {
+                "gt_answer": "(C) a macro with a gds.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_135": {
+            "question_0": {
+                "gt_answer": "(B) VSS",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_136": {
+            "question_0": {
+                "gt_answer": "OpenROAD-flow-scripts (ORFS) is a fully autonomous, RTL-GDSII flow for rapid architecture and design space exploration, early prediction of QoR, and detailed physical design implementation. However, ORFS also enables manual intervention for finer user control of individual flow stages through Tcl commands and Python APIs.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_137": {
+            "question_0": {
+                "gt_answer": "You can try the developer debugs to get a sense of what is going on. Put detailed_route_debug -pa -pa_markers -pin _3504_:A1 before you call detailed_route and run it in the GUI. It will stop at the pin and show you how it is trying to access it and any associated drc markers. You click the continue button to see the various steps. Hopefully, that gives you an idea as to what is going on. The other option is a support contract with precisioninno.com where we can help under NDA.\n",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_138": {
+            "question_0": {
+                "gt_answer": "You can try the developer debugs to get a sense of what is going on. Put detailed_route_debug -pa -pa_markers -pin _3504_:A1 before you call detailed_route and run it in the GUI. It will stop at the pin and show you how it is trying to access it and any associated drc markers. You click the continue button to see the various steps. Hopefully, that gives you an idea as to what is going on. The other option is a support contract with precisioninno.com where we can help under NDA.\n",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_139": {
+            "question_0": {
+                "gt_answer": "Developer debug options in OpenROAD can give insights into detailed routing processes, offering visual debug aids in the GUI and the option for NDA-supported assistance from precisioninno.com.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_140": {
+            "question_0": {
+                "gt_answer": "These are the ways of installing OpenROAD flow scripts/ ORFS: Docker, Pre-built Binaries, Windows Subsystem for Linux (WSL), and Local Installation.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_141": {
+            "question_0": {
+                "gt_answer": "The basic basic build command in ORFS is ./build_openroad.sh --help.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_142": {
+            "question_0": {
+                "gt_answer": "The argument, o or —local, builds locally instead of building a Docker image.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_143": {
+            "question_0": {
+                "gt_answer": "The -l or --latest argument specifies to use of the head of branch –or_branch or ‘master’ by default for tools/OpenROAD.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_144": {
+            "question_0": {
+                "gt_answer": "The -or_branch BRANCH_NAME argument stipulates the use of the head of branch BRANCH for tools/OpenROAD.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_145": {
+            "question_0": {
+                "gt_answer": " This argument enumerates to use of a fork at REPO-URL (https/ssh) for tools/OpenROAD.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_146": {
+            "question_0": {
+                "gt_answer": "The --no_init argument prescribes skipping initializing submodules.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_147": {
+            "question_0": {
+                "gt_answer": "The -t N or --threads N argument stipulates the use of N cpus when compiling software.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_148": {
+            "question_0": {
+                "gt_answer": "The -n or --nice flag in the build script instructs the build script to set all jobs to the maximim Unix \"niceness\". Niceness determines how much the operating system prefers to schedule process. The purpose of setting this flag is to ensure that a system is not overwhelmed by using all available processing primarily of the build jobs. The build will use all CPUs by default unless --threads is also given, then N threads are used instead.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_149": {
+            "question_0": {
+                "gt_answer": "This argument states to not use default flags set by this scrip during Yosys compilation.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_150": {
+            "question_0": {
+                "gt_answer": "The '—yosys-args STRING' argument adds additional compilation flags for Yosys compilation.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_151": {
+            "question_0": {
+                "gt_answer": "The '—openroad-args-overwrite' argument specifies to not use default flags set by this script during OpenROAD app compilation.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_152": {
+            "question_0": {
+                "gt_answer": "The '—openroad-args STRING' argument adds aditional compilation flags for OpenROAD app compilation.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_153": {
+            "question_0": {
+                "gt_answer": "This argument initiates compiling LSOracle since it is disabled by default as it is not currently used on the flow.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_154": {
+            "question_0": {
+                "gt_answer": "The '—lsoracle-args-overwrite' argument stipulates not to use default flags set by this script during LSOracle compilation.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_155": {
+            "question_0": {
+                "gt_answer": "This argument adds aditional compilation flags for LSOracle compilation.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_156": {
+            "question_0": {
+                "gt_answer": "The '—install-path PATH' delineates the path to install tools. Default is ${INSTALL_PATH}.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_157": {
+            "question_0": {
+                "gt_answer": "The '—clean' argument calls the git clean command interactively before compiling. It is useful to remove old build files.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_158": {
+            "question_0": {
+                "gt_answer": "This '—clean-force' argument will call git clean before compiling but WARNING: this option will not ask for confirmation. It is useful to remove old build files.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_159": {
+            "question_0": {
+                "gt_answer": "This argument is only applicable to docker builds. It is used to copy platforms inside the docker image.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_160": {
+            "question_0": {
+                "gt_answer": "The ' —docker-args-overwrite' argument is only applicable for docker builds. They specify to not use default flags set by this script for Docker builds.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_161": {
+            "question_0": {
+                "gt_answer": "This argument is only applicable to docker builds. It is used to add additional compilation flags for the Docker build.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_162": {
+            "question_0": {
+                "gt_answer": "The OpenROAD (\"Foundations and Realization of Open, Accessible Design\") Project was launched in June 2018 within the DARPA IDEA program. OpenROAD aims to bring down the barriers of cost, expertise, and unpredictability that currently block designers' access to hardware implementation in advanced technologies. The project team is developing a fully autonomous, open-source toolchain for digital SoC layout generation, focusing on the RTL-to-GDSII phase of system-on-chip design. Thus, OpenROAD holistically attacks the multiple facets of today's design cost crisis: engineering resources, design tool licenses, project schedule, and risk.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_163": {
+            "question_0": {
+                "gt_answer": "AutoTuner is a \"no-human-in-loop\" parameter tuning framework for commercial and academic RTL-to-GDS flows. AutoTuner provides a generic interface where users can define parameter configuration as JSON objects. This enables AutoTuner to easily support various tools and flows. AutoTuner also utilizes METRICS2.1 to capture PPA of individual search trials. With the abundant features of METRICS2.1, users can explore various reward functions that steer the flow autotuning to different PPA goals.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_164": {
+            "question_0": {
+                "gt_answer": "AutoTuner contains top-level Python script for ORFS, each of which implements a different search algorithm. Current supported search algorithms are as follows:\r\nRandom/Grid Search, Population Based Training (PBT), Tree Parzen Estimator (HyperOpt), Bayesian + Multi-Armed Bandit (AxSearch), Tree Parzen Estimator + Covariance Matrix Adaptation Evolution Strategy (Optuna), Evolutionary Algorithm (Nevergrad)",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_165": {
+            "question_0": {
+                "gt_answer": "User-defined coefficient values (coeff_perform, coeff_power, coeff_area) of three objectives to set the direction of tuning are written in the script. Each coefficient is expressed as a global variable at the get_ppa function in PPAImprov class in the script (coeff_perform, coeff_power, coeff_area). Efforts to optimize each of the objectives are proportional to the specified coefficients.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_166": {
+            "question_0": {
+                "gt_answer": "To set up AutoTuner, make sure you have a virtual environment set up with Python 3.9.X. There are plenty of ways to do this, we recommend using Miniconda, which is a free minimal installer for the package manager conda.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_167": {
+            "question_0": {
+                "gt_answer": "Any variable that can be set from the command line can be used for tune or sweep.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_168": {
+            "question_0": {
+                "gt_answer": "The following design example is based on the design spm that implements a Single-port memory using gf180 platform. This procedure applies to any design for a given platform you choose. Start from the base directory OpenROAD-flow-scripts/flow. Step 1: Create the Verilog source files directory based on the top module name. Step 2: Create config.mk to define design configuration. Step 3: Define key design parameters in config.mk. Step 4: Define SDC constraints. Step 5: Add the design name to Makefile to run the flow with the make command.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_169": {
+            "question_0": {
+                "gt_answer": "While designing spm that implements a Single-port memory using gf180 platform, the export PLATFORM value can be gf180.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_170": {
+            "question_0": {
+                "gt_answer": "While designing spm that implements a Single-port memory using gf180 platform, the value of the parameter, export DESIGN_NAME can be spm.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_171": {
+            "question_0": {
+                "gt_answer": "For the value of export VERILOG_FILES parameter while designing spm that implements a Single-port memory using gf180 platform, it can be $(sort $(wildcard ./designs/src/$(DESIGN_NICKNAME)/*.v))",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_172": {
+            "question_0": {
+                "gt_answer": "The parameter, export SDC_FILE can have the value ./designs/$(PLATFORM)/$(DESIGN_NICKNAME)/constraint.sdc  while designing spm that implements a Single-port memory using gf180 platform",
+                "pred_answer": "The value of the export SDC_FILE parameter in the OpenROAD library for layout generation in EDA depends on the specific requirements of the design being implemented. It is recommended to consult the OpenROAD documentation or contact the library's support team for guidance on the appropriate value for this parameter.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_173": {
+            "question_0": {
+                "gt_answer": " The value of CORE_UTILIZATION may be subjective but one value for CORE_UTILIZATION while designing spm that implements a Single-port memory using gf180 platform40",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_174": {
+            "question_0": {
+                "gt_answer": "The value of the parameter, export PLACE_DENSITY while designing spm that implements a Single-port memory can be 0.6.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_175": {
+            "question_0": {
+                "gt_answer": "The value of the parameter, export TNS_END_PERCENT while designing spm that implements a Single-port memory can be 100.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_176": {
+            "question_0": {
+                "gt_answer": "Environment variables are used in the OpenROAD flow to define various platform, design, and tool-specific variables to allow finer control and user overrides at various flow stages. These are defined in the config.mk file located in the platform and design-specific directories.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_177": {
+            "question_0": {
+                "gt_answer": "The SKIP_REPORT_METRICS general variable if set to 1, then metrics, report_metrics does nothing. This is useful to speed up builds.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_178": {
+            "question_0": {
+                "gt_answer": "The variable, PROCESS signifies a technology node or process in use.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_179": {
+            "question_0": {
+                "gt_answer": "This CORNER variable specifies the Library to select based on corner BC/TC/WC.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_180": {
+            "question_0": {
+                "gt_answer": "This variable, TECH_LEF, stipulates a technology LEF file of the PDK that includes all relevant information regarding metal layers, vias, and spacing requirements.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_181": {
+            "question_0": {
+                "gt_answer": "SC_LEF is used to specify the path to the technology standard cell LEF file.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_182": {
+            "question_0": {
+                "gt_answer": "GDS_FILES specifies the path to platform GDS files.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_183": {
+            "question_0": {
+                "gt_answer": "LIB_FILES enumerates a Liberty file of the standard cell library with PVT characterization, input and output characteristics, timing, and power definitions for each cell.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_184": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts, the DONT_USE_CELLS variable stores a list of cells to avoid when performing both synthesis and place & route. Basic wildcard patterns (*) are supported. You may want to mark a cell as dont_use for several reasons, including 1) some cells may have complicated pin access patterns which are more likely to cause design rule violations during detailed routing, 2) some cells may be more prone to manufacturing variation, and will cause difficulty to close timing constraints, 3) A designer may not want to use certain cells during the implementation flow.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_185": {
+            "question_0": {
+                "gt_answer": "The variable  SYNTH_HIERARCHICAL enables synthesis hierarchically, otherwise considered flat synthesis.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_186": {
+            "question_0": {
+                "gt_answer": "LATCH_MAP_FILE variable specifies the list of latches treated as a black box by Yosys.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_187": {
+            "question_0": {
+                "gt_answer": "This variable specifies a list of cells for the gating clock treated as a black box by Yosys.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_188": {
+            "question_0": {
+                "gt_answer": "List of adders treated as a black box by Yosys.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_189": {
+            "question_0": {
+                "gt_answer": "The variable, TIEHI_CELL_AND_PORT is used to tie high cells used in Yosys synthesis to replace a logical 1 in the Netlist.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_190": {
+            "question_0": {
+                "gt_answer": "This variable is used to tie low cells used in Yosys synthesis to replace a logical 0 in the Netlist.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_191": {
+            "question_0": {
+                "gt_answer": "The MIN_BUF_CELL_AND_PORTS variable is used to insert a buffer cell to pass through wires. Used in synthesis.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_192": {
+            "question_0": {
+                "gt_answer": "The variable,  ABC_CLOCK_PERIOD_IN_PS is used to specify the clock period to be used by STA during synthesis. Default value read from constraint.sdc.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_193": {
+            "question_0": {
+                "gt_answer": "Default driver cell used during ABC synthesis.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_194": {
+            "question_0": {
+                "gt_answer": "During synthesis, the set_load value specified by this, ABC_LOAD_IN_FF variable is used.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_195": {
+            "question_0": {
+                "gt_answer": "For hierarchical synthesis, this variable ungroups modules of the size given by this variable.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_196": {
+            "question_0": {
+                "gt_answer": "FLOORPLAN_DEF is used to specify the use of the DEF file to initialize floorplan.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_197": {
+            "question_0": {
+                "gt_answer": "Placement site for core cells defined in the technology LEF file.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_198": {
+            "question_0": {
+                "gt_answer": "TAPCELL_TCL specifies the path to the Endcap and Welltie cells file.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_199": {
+            "question_0": {
+                "gt_answer": "This variable, RTLMP_FLOW enables the Hierarchical RTLMP flow. By default it is disabled.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_200": {
+            "question_0": {
+                "gt_answer": "MACRO_HALO specifies to keep out a distance from macro, in X and Y, to standard cell row.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_201": {
+            "question_0": {
+                "gt_answer": "MACRO_PLACEMENT specifies the path of a file on how to place certain macros manually using read_macro_placement.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_202": {
+            "question_0": {
+                "gt_answer": "This variable specifies the path of a TCL file on how to place certain macros manually.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_203": {
+            "question_0": {
+                "gt_answer": "Horizontal /vertical halo around macros (microns). Used by automatic macro placement.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_204": {
+            "question_0": {
+                "gt_answer": "Horizontal/vertical channel width between macros (microns). Used by automatic macro placement when RTLMP_FLOW is disabled. Imagine channel=10 and halo=5. Then macros must be 10 apart but standard cells must be 5 away from a macro.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_205": {
+            "question_0": {
+                "gt_answer": "Blockage width overridden from default calculation.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_206": {
+            "question_0": {
+                "gt_answer": "This variable specifies the file path which has a set of power grid policies used by pdn to be applied to the design, such as layers to use, stripe width and spacing to generate the actual metal straps.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_207": {
+            "question_0": {
+                "gt_answer": "MAKE_TRACKS variable outlines the Tcl file that defines adding routing tracks to a floorplan.",
+                "pred_answer": "The Floorplan variable, MAKE_TRACKS, is a parameter in the OpenROAD library that allows the user to generate floorplans for electronic design automation (EDA). It is used to specify the tracks that should be included in the generated floorplan. The value of this parameter can be set to 'all' or to a specific set of tracks. The use of this variable is important for generating accurate and efficient floorplans in EDA software.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_208": {
+            "question_0": {
+                "gt_answer": "The metal layer on which to place the I/O pins horizontally (top and bottom of the die).",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_209": {
+            "question_0": {
+                "gt_answer": "The metal layer on which to place the I/O pins vertically (sides of the die).",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_210": {
+            "question_0": {
+                "gt_answer": "Skip loading timing for a faster GUI load.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_211": {
+            "question_0": {
+                "gt_answer": "Skip the initial non-IO based global placement if IO constraints are present.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_212": {
+            "question_0": {
+                "gt_answer": "Cell padding on both sides in site widths to ease routability during global placement.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_213": {
+            "question_0": {
+                "gt_answer": "Cell padding on both sides in site widths to ease routability in detail placement.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_214": {
+            "question_0": {
+                "gt_answer": "The desired placement density of cells. It reflects how spread the cells would be on the core area. 1.0 = closely dense. 0.0 = widely spread.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_215": {
+            "question_0": {
+                "gt_answer": "Check the lower boundary of the PLACE_DENSITY and add PLACE_DENSITY_LB_ADDON if it exists.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_216": {
+            "question_0": {
+                "gt_answer": "Remove power grid vias which generate DRC violations after detailed routing.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_217": {
+            "question_0": {
+                "gt_answer": "Use additional tuning parameters during global placement other than default args defined in gloabl_place.tcl.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_218": {
+            "question_0": {
+                "gt_answer": "Enable detail placement with improve_placement feature.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_219": {
+            "question_0": {
+                "gt_answer": "Specifies how far an instance can be moved when optimizing.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_220": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts (ORFS), the GPL_TIMING_DRIVEN variable specifies whether the global placer (gpl) should use timing driven-placement. Timing-driven placement will cause gpl to ocassionally run static timing analysis (sta) during placement in order to determine the timing on each net. gpl will then reweight the nets based on how timing-critical they are. This process improves the timing of the netlist by decreasing the distance between timing-critical cells, but it also causes an increase in gpl runtime due to running timing analysis.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_221": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts (ORFS), the GPL_ROUTABILITY_DRIVEN variable specifies whether the global placer (gpl) should use routability driven-placement. Routability-driven placement will cause gpl to ocassionally run global routing (grt) during placement in order to determine routing congestion hotspots. gpl will then reweight the nets based on how congestion data. This process improves the routability of the netlist by spacing out cells in routing congested areas, but it also causes an increase in gpl runtime due to running global routing.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_222": {
+            "question_0": {
+                "gt_answer": "Specifies a capacitance margin when fixing max capacitance violations. This option allow you to overfix.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_223": {
+            "question_0": {
+                "gt_answer": "Specifies a slew margin when fixing max slew violations. This option allow you to overfix.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_224": {
+            "question_0": {
+                "gt_answer": "Override clock_tree_synthesis arguments",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_225": {
+            "question_0": {
+                "gt_answer": "The CTS_BUF_CELL variable sets the root buffer cell used in the clock tree during clock tree synthesis (CTS)",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_226": {
+            "question_0": {
+                "gt_answer": "The FILL_CELLS variable holds a list of cell names to use as filler cells. Wildcard patterns (*) are supported. Fill cells are used to fill empty cell sites which aids in satisfying design rules and density rules.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_227": {
+            "question_0": {
+                "gt_answer": "Specifies a time margin for the slack when fixing hold violations. This option allow you to overfix.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_228": {
+            "question_0": {
+                "gt_answer": "Specifies a time margin for the slack when fixing setup violations.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_229": {
+            "question_0": {
+                "gt_answer": "Do not use gate cloning transform to fix timing violations (default: use gate cloning)",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_230": {
+            "question_0": {
+                "gt_answer": "Do not use pin swapping as a transform to fix timing violations (default: use pin swapping)",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_231": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts, the TNS_END_PERCENT variable specifies what percent of violating timing paths will be fixed during timing optimization. TNS_END_PERCENT must be a floating point value between 0-100. However, even if TNS_END_PERCENT is 0, the worst path will always be fixed. The purpose of this flag is to allow the user some control over how much runtime and logic area is spent on timing optimization, with a higher value leading to more runtime/area and a lower value leading to less runtime/area.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_232": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts, the EQUIVALENCE_CHECK variable toggles whether a logical equivalence check is run after timing optimization to ensure logical correctness of the circuit. If EQUIVALENCE_CHECK is 1, the check is performed. If EQUIVALENCE_CHECK is any other value or unset, the check is not run. The default value is unset.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_233": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts, the REMOVE_CELLS_FOR_EQY variable sets the list of cells to remove from the verilog netlist file produced specifically for netlist equivalence checking. Netlist equivalence checking is performed with the Yosys EQY tool. Wildcard patterns (*) are supported. This variable is passed directly to write_verilog -remove_cells <>.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_234": {
+            "question_0": {
+                "gt_answer": "This command creates power domain for a group of modules.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_235": {
+            "question_0": {
+                "gt_answer": "This command creates logic port. Direction must be specified from: in, out, inout.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_236": {
+            "question_0": {
+                "gt_answer": "Restructuring (the rst module) uses logic resynthesis to optimize combinational logic paths. Restructuring can be performed in either area or delay mode. Area mode will optimize the logic cell area of the paths, whereas delay mode will optimize for delay. An Area Mode Example: restructure -liberty_file ckt.lib -target area -tielo_pin ABC -tiehi_pin DEF. For Timing Mode Example: restructure -liberty_file ckt.lib -target delay -tielo_pin ABC -tiehi_pin DEF -slack_threshold 1 -depth_threshold 2.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_237": {
+            "question_0": {
+                "gt_answer": "Yosys is a logic synthesis tool which is responsible for transforming register transfer-level (RTL) code into a gate-level netlist. OpenROAD is a place and route (P&R) tool which is responsible for implementing a gale-level netlist into a chip layout. Yosys is developed by the YosysHQ organization whereas OpenROAD is developed by The OpenROAD Project. OpenROAD Flow Scripts (ORFS) makes use of both of these tools (as well as KLayout) to form a full RTL-to-GDS flow.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_238": {
+            "question_0": {
+                "gt_answer": "The Resizer module (rsz) can modify the netlist by inserting or removing buffers, as well as increasing or decreasing the drive strength of cells. rsz does not save a log of which instances were modified, because it would create an excessively long log file. A recommended workaround solution would be to save a layout file (such as DEF or ODB) before performing resizing, and then compare it to a layout file after resizing.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_239": {
+            "question_0": {
+                "gt_answer": "In OpenROAD, database units (DBU) are an integer representation of distance on a chip. In the LEF/DEF format, each technology specifies a conversion factor in terms of DBU/micron. For example, if a technology used a conversion factor of 2000 DBU/micron, that would mean that each DBU represents 0.0005 micron or 0.5 nm. The purpose for using DBU is that it enables faster calculation and no loss of precision compared to floating point representations.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_240": {
+            "question_0": {
+                "gt_answer": "In OpenROAD, an integer DBU value can be converted to a floating point micron value by using the ord::dbu_to_microns function",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_241": {
+            "question_0": {
+                "gt_answer": "OpenROAD Flow Scripts (ORFS) includes Makefile targets to open the GUI after each step. You can use the command make gui_*, where * is the name of the flow step (e.g. make_floorplan).",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        }
+    }
+}

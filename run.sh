@@ -20,4 +20,4 @@
 # minicpm_v, minicpm_v2, minicpm3_4b, minicpm1b_sft_bf16, minicpm2b_sft_bf16, minicpm_llama3_v_2_5, 
 # yi_vl_6b, yi_vl_34b, yi_chat_6b, yi_chat_34b
 
-python main.py --field spec --model instructblip_flan_t5_xxl
+python main.py --field spec --model internvl_chat_v1_5

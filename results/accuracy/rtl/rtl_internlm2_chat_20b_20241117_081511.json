@@ -1,0 +1,1172 @@
+{
+    "Accuracy": 0.0,
+    "Comparison": {
+        "rtl_0": {
+            "question_0": {
+                "gt_answer": "The module `lo_simulate` implements clock division, ADC monitoring, and control signal generation functionalities. Inputs are divided to generate slower clock signals, control signals based on ADC thresholds, and manage power control signals. It also provides debugging functionality by aligning the debug signal `dbg` with `ssp_frame`.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_1": {
+            "question_0": {
+                "gt_answer": "The module `WireDelay` implements a configurable delay wire with optional error insertion functionality, utilizing bidirectional ports A and B to simulate signal propagation delays and errors with dynamic line enable control based on signal changes.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_2": {
+            "question_0": {
+                "gt_answer": "The module \"Quad\" implements a sophisticated counter that can increment or decrement. It manages a W-bit counter, register, and control logic based on inputs A, B, Z, and zr. It employs shift registers, counters, and condition monitoring to accurately track and update the count state, index pulse, and output signals.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_3": {
+            "question_0": {
+                "gt_answer": "The module `fifo_generator_v13_1_3_beh_ver_ll_afifo` implements a parameterized asynchronous FIFO for data buffering between different clock domains, featuring separate read and write clocks and pointer management to handle data reads and writes efficiently. It includes flags for full and empty conditions, \n//the C_HAS_RD_DATA_COUNT and C_HAS_WR_DATA_COUNT parameter have been set,but they does not perform any logical functions.//support for data count features, and ensures data integrity during resets.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_4": {
+            "question_0": {
+                "gt_answer": "The module `mux` implements a 4-to-1 multiplexer where the output selection is based on the 2-bit control signal `dsp_sel`. Depending on the value of `dsp_sel`, the output is either the lower 4 bits of `sum`, the internal register `cout`, input `opB`, or input `opA`. The internal register `cout` is set based on the most significant bit of `sum`.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_5": {
+            "question_0": {
+                "gt_answer": "The module `beh_vlog_ff_ce_clr_v8_2` implements a D-type flip-flop with clock enable and asynchronous clear functionality, incorporating a simulation delay for data capture on the rising edge of the clock.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_6": {
+            "question_0": {
+                "gt_answer": "The module `increment_axaddr` manages memory transactions with features like address calculation based on conditions, incrementing transaction addresses, updating transaction length counters, and determining the need for additional transactions using flags like `next` and `next_pending`. It allows for efficient control and handling of memory accesses within the system.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_7": {
+            "question_0": {
+                "gt_answer": "The module `blk_mem_axi_regs_fwd_v8_2` implements an AXI register forwarder that stores incoming slave data and forwards it to the master side upon readiness. It involves data transfer synchronization between the slave and master sides, with support for asynchronous reset functionality.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_8": {
+            "question_0": {
+                "gt_answer": "The module `BLK_MEM_GEN_v8_2_softecc_output_reg_stage` implements an optional output register stage for a memory block, registering input data and error signals based on the value of `C_HAS_SOFTECC_OUTPUT_REGS_B`.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_9": {
+            "question_0": {
+                "gt_answer": "//The module `system_buffer_register_1_0` only defines interface signals for a 32-bit input 'val_in' captured on the //rising edge of 'clk' and output on 'val_out'. It does not perform any logical functions.\nThe module `system_buffer_register_1_0` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_10": {
+            "question_0": {
+                "gt_answer": "The module `usb_system_jtag_uart_sim_scfifo_w` implements a FIFO write interface for a USB system with JTAG UART, generating simulation outputs based on the input data and control signals.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_11": {
+            "question_0": {
+                "gt_answer": "The module `orangeTSMC180nm__wire_R_26m_675_C_0_025f` only implements the interface signal `a` and a supply0 connection, gnd. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_12": {
+            "question_0": {
+                "gt_answer": "The module `usb_system_jtag_uart_sim_scfifo_r` implements a FIFO unit within a USB system with JTAG UART functionality, synchronized with the clock and reset signals, managing read operations and status outputs based on the FIFO occupancy level.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_13": {
+            "question_0": {
+                "gt_answer": "//The module `sky130_fd_sc_ls__udp_pwrgood_pp$PG` implements a power-good monitoring functionality based on the comparison of input signals against specified power thresholds.\nThe module `sky130_fd_sc_ls__udp_pwrgood_pp$PG` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_14": {
+            "question_0": {
+                "gt_answer": "The module `unnamed_module` implements an AXI transaction manager for handling transactions that may wrap around a boundary. It calculates command byte addresses, manages wrap boundary and offset calculations triggered by the \n//`axhandshake` signal, maintains transaction progress counters, and utilizes a selector for identifying the first transaction, with the `next_pending` output signaling whether additional transactions are pending. It operates synchronously with a clock signal and supports a reset functionality.\nbut, in this module, cmd_byte-addr, axaddr, CYAXIADDR_WIDTH, reset, axhandshake, and axsize are used without being defined",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_15": {
+            "question_0": {
+                "gt_answer": "The module `watchdog` implements a watchdog timer that resets the system upon detecting unresponsiveness, utilizing a 4-bit counter incremented by WDCLK, resetting on specific conditions indicated by WDRESET, and offering active low outputs nRESET and nHALT to manage system responsiveness.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_16": {
+            "question_0": {
+                "gt_answer": "The module `orangeTSMC180nm__wire_R_26m_1500_C_0_025f` only implements a single input port 'a' and does not have any logical functionality or output ports. //It is a placeholder module likely used for documentation purposes in larger systems.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_17": {
+            "question_0": {
+                "gt_answer": "The module `soc_design_JTAG_sim_scfifo_w` implements a simulated FIFO write operation for testing purposes, where data is written to the simulation output upon each positive clock edge if a write operation is enabled. The outputs `fifo_FF` and `wfifo_empty` are fixed at 0 and 1, respectively, indicating the FIFO is never full and always empty, while `r_dat` and `wfifo_used` are fixed at 0 and 6'b0, showing that no data is read or stored in the FIFO, respectively.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_18": {
+            "question_0": {
+                "gt_answer": "//The module `mux2to1` implements a 2-to-1 multiplexer with two 32-bit input ports, datain0 and datain1, a 1-bit select input, and a 32-bit output dataout, where the select input controls the output selection between datain0 and datain1.\nThe module \"mux2to1\" only implements some interface signals and signal initialization. It does not perform any logical functions. The clock, four, yesItAlwaysTure, yesItAlwyasFalse, and clear signals in this module were not defined earlier.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_19": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hs__udp_dlatch$PR_pp$sN` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_20": {
+            "question_0": {
+                "gt_answer": "The module `spi_slave_0_base` implements an SPI slave device that communicates with an SPI master, sampling incoming data on the mosi line with each rising edge of sck when ssel is active and sending data back on the miso line, shifting out data on each falling edge of sck when ssel is active. It tracks received bits and bytes, sets a flag on byte reception, and indicates status when a specific number of valid bytes have been received.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_21": {
+            "question_0": {
+                "gt_answer": "The module `Decodificador` implements a decoder that drives four 8-bit cathode outputs based on the 7-bit input 'Cuenta', displaying corresponding patterns for a 7-segment display with specific digit mappings as described in the specification.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_22": {
+            "question_0": {
+                "gt_answer": "//The module `sky130_fd_sc_ms__a2111oi` performs a logical function involving AND and OR operations with inverted and non-inverted inputs implemented using CMOS technology; however, the exact relationship between the inputs (A1, A2, B1, C1, D1) and the output (Y) is not explicitly defined in the provided document.\nThe module `sky130_fd_sc_ms__a2111oi` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_23": {
+            "question_0": {
+                "gt_answer": "The module `DataMemory` implements a memory array with read and write functionality controlled by CLK. It initializes 10 32-bit registers, sets registers 2 and 5 to 2, and outputs specific register values based on Address. When CLK is low, it writes data to the memory array based on MouseEnable and WriteEnable, with MouseData having priority over WriteData. DATO1, DATO2, and RESULTADO display specific register values irrespective of CLK.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_24": {
+            "question_0": {
+                "gt_answer": "The module `altera_avalon_st_pipeline_base` implements a two-stage pipeline for the Altera Avalon-ST protocol, offering configurable registered or unregistered ready signals and supporting parameterized data widths. It manages data movement, status flags, and reset operations according to the Avalon-ST protocol requirements.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_25": {
+            "question_0": {
+                "gt_answer": "The module `mc_dlp` functions as a memory controller interacting with an arbiter to handle memory requests. It captures request details, syncs signals between clock domains, manages data transfers, and tracks completion status based on processed word count, addressing, and grant signals' state. The module initializes counters on reset and contains prompts to review completion conditions for specific byte sizes, despite having unused internal registers and parameters.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_26": {
+            "question_0": {
+                "gt_answer": "The module `pixel ram` implements a parameterized dual port ram for different clock domain write and read operations, storing DATA_WIDTH bit data in an ADDR_WIDTH based storage location.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_27": {
+            "question_0": {
+                "gt_answer": "//The module `sky130_fd_sc_hdll__buf` implements a single-bit buffer with power and ground connections for CMOS IC operation. It does not perform any logical functions.\nThe module `sky130_fd_sc_hdll__buf` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_28": {
+            "question_0": {
+                "gt_answer": "The module `data_prbs_gen` implements a pseudo-random bit sequence generator using a linear feedback shift register (LFSR). It initializes the LFSR with a seed value upon assertion of 'prbs_seed_init' or 'rst_i' signals when 'EYE_TEST' is \"FALSE\", updating the LFSR on the rising edge of 'clk_i' when 'clk_en' is active, determining the feedback logic internally. The output 'prbs_o' reflects the current PRBS value, changing with LFSR updates, while employing a timing control parameter 'TCQ' for simulation and supporting an optional eye test mode through 'EYE_TEST'.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_29": {
+            "question_0": {
+                "gt_answer": "The module `tx_phy` implements a finite state machine (FSM) for controlling a transmitter PHY in a data transmission system, transitioning between states IDLE, TASK, HASH, and NONCE based on inputs and internal conditions, managing data transmission, task IDs, timeouts, and physical layer transmission signals.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_30": {
+            "question_0": {
+                "gt_answer": "The module `tcp_to_bus` interfaces TCP/RBCP with a bus system, managing data transfer and control signals, including incrementing the TCP RX write count, adjusting the byte count based on data length, handling invalid signals, updating the RX data count, determining `tcp_reset`, setting the length, managing write enable signals, addressing, and controlling bus signals for effective communication between the components involved.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_31": {
+            "question_0": {
+                "gt_answer": "//The module `sky130_fd_sc_ls__dlymetal6s2s` implements a delay element that generates a delayed output signal `X` based on the input signal `A`, with power and ground connections for proper operation.\nThe module `sky130_fd_sc_ls__dlymetal6s2s` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_32": {
+            "question_0": {
+                "gt_answer": "The module `ac97_deframer` implements the deframing of an AC'97 audio data stream with synchronization logic and bit tracking for processing input data bits and assembling them into different output registers for address, data, and PCM audio channels. It provides flags for frame validity and readiness while resetting the bit counter upon synchronization for the next frame. The module acknowledges data receipt through the `up_ack` signal.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_33": {
+            "question_0": {
+                "gt_answer": "//The module `sky130_fd_sc_lp__or3b` implements a 3-input OR gate with body biasing, where the output X is high if any of the inputs A, B, or not(C) is high, providing control over gate speed and power consumption through body biasing.\nThe module `sky130_fd_sc_lp__or3b` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_34": {
+            "question_0": {
+                "gt_answer": "The module `dc_video_reconfig` implements video settings reconfiguration for a DC video system based on an 8-bit input signal, controlling the video configuration and VGA mode. It utilizes internal registers synchronized to a clock, updating the output settings based on the input data and predefined configuration files.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_35": {
+            "question_0": {
+                "gt_answer": "//The module `decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix` only serves as a black box placeholder without any specified internal logic or functionality; it acts as a stand-in for a module whose implementation is externally defined or provided.\nThe module `sky130_fd_sc_ls__udp_pwrgood_pp$PG` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_36": {
+            "question_0": {
+                "gt_answer": "The module `hardcopyiii_delay_chain` implements a configurable delay chain that adjusts the input signal 'datain' based on 'delayctrlin' for coarse delay and 'finedelayctrlin' for fine delay. It utilizes internal delay tables for rising and falling edge delays, providing a delayed output 'dataout' reflecting the input with precise delay amounts determined by the control inputs. The module includes reset functionality, filters out invalid input states, and adheres to specified timing constraints.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_37": {
+            "question_0": {
+                "gt_answer": "//The module `hardcopyiii_tsdblock` implements temperature sensor diode calibration functionality, accepting input signals for calibration and generating calibrated values based on defined parameters.\nThe module `hardcopyiii_tsdblock` only implements some interface signals and parameters. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_38": {
+            "question_0": {
+                "gt_answer": "The module `hardcopyiii_first_stage_add_sub` implements a 72-bit arithmetic unit capable of addition and subtraction based on the 4-bit operation code, considering sign extension and arithmetic operations on input operands `dataa` and `datab`, with the result available at the `dataout` output port.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_39": {
+            "question_0": {
+                "gt_answer": "//The module `sky130_fd_sc_hd__a22oi` implements a logic gate combination known as an AND-OR-Invert operation, producing the output Y based on the logic defined for inputs A1, A2, B1, and B2.\nThe module `sky130_fd_sc_hd__a22oi` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_40": {
+            "question_0": {
+                "gt_answer": "//The module `bw_clk_gclk_inv_r90_192x` implements a clock signal inverter utilizing the bitwise NOT operator to generate the inverse of the input clock signal.\nThe module `bw_clk_gclk_inv_r90_192x` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_41": {
+            "question_0": {
+                "gt_answer": "The module `hardcopyiii_lcell_hsadder` implements a binary adder with optional carry-in inversion, producing the sum of 'dataa' and 'datab' inputs with an optional 'cin'. The 'sumout' output includes the carry-out, and 'cout' indicates the final carry-out.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_42": {
+            "question_0": {
+                "gt_answer": "The module `hardcopyiii_pll_reg` implements a register with asynchronous clear and preset functionality, capturing input data on the rising edge of the clock when enabled, and setting the output based on preset and clear signals, updating only with the input data under certain conditions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_43": {
+            "question_0": {
+                "gt_answer": "The module `LAG_pl_free_pool` implements a pipeline lane allocation controller that updates the allocation status based on the presence of valid tail flits and previous allocations, following specific criteria, where pipeline lanes are marked as free or allocated accordingly. It initializes all pipeline lanes to a free state upon reset.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_44": {
+            "question_0": {
+                "gt_answer": "The module `bram_module` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_45": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hd__xnor3`only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_46": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hd__lpflow_clkbufkapwr` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_47": {
+            "question_0": {
+                "gt_answer": "The module `Alu` implements an Arithmetic Logic Unit (ALU) that performs various operations based on a 3-bit control signal, including Addition, Subtraction, Bitwise AND, OR, Shift Left, Shift Right, and Bitwise NOT. It operates on two 8-bit input operands and generates an 8-bit output, with a zero flag indicating if the output is zero or not.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_48": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_lp__nand3b` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_49": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hdll__dfrtp` only implements some interface signals. It does not perform any logical functions..",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_50": {
+            "question_0": {
+                "gt_answer": "The module `incif_wrapuint32_646_inc2` implements conditional incrementing logic for a 33-bit input, where the lower 32 bits are modified based on the 33rd bit value, with specific handling for the value 646. It operates synchronously with clock signal and includes clock enable input, though not utilized in the provided code.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_51": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hvl__lsbuflv2hv_symmetric` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_52": {
+            "question_0": {
+                "gt_answer": "The module `decoder` decodes a 16-bit instruction to generate control signals for a processor based on the opcode extracted from the instruction, setting control signals for different instruction types within a case statement.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_53": {
+            "question_0": {
+                "gt_answer": "The module `reg_43` functions as a synchronous 32-bit register capturing 'new_value' on the rising edge of 'clk' when 'new_en' is active, presenting the data on 'output_payload' with a corresponding 'output_valid' signal. 'output_valid' reflects the acceptance status indicated by 'output_ready' and resets upon 'rst' assertion, with data updates synchronized to 'clk' rising edges.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_54": {
+            "question_0": {
+                "gt_answer": "The module `CC_Decoder` implements a one-hot decoder that converts a binary input signal to a one-hot encoded output, where only one bit is high based on the input value.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_55": {
+            "question_0": {
+                "gt_answer": "The module `mux` implements a 2-to-1 multiplexer function, selecting between inputs 'x' and 'y' based on the value of 'select'.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_56": {
+            "question_0": {
+                "gt_answer": "The module `reg_41` implements a 32-bit storage element that updates its content based on control signals, updating the stored value upon a positive clock edge when enabled and managing the validity signal based on downstream logic readiness while also handling asynchronous resets.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_57": {
+            "question_0": {
+                "gt_answer": "The module `trainsim` implements a state machine simulating a train system with two trains, controlling track switches and train directions based on sensor inputs, transitioning between five states ('ABOUT', 'AIN', 'BIN', 'ASTOP', 'BSTOP') and setting outputs accordingly while using a clock signal and reset to manage state changes.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_58": {
+            "question_0": {
+                "gt_answer": "The module `JTAGG` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_59": {
+            "question_0": {
+                "gt_answer": "The module `pipeline_control_spr_exchange` orchestrates the data exchange between the processor's pipeline and special purpose registers (SPRs) using a state machine to handle read and write requests, managing transitions between idle, load, and store states based on the readiness of the load/store unit. Signals are generated to indicate operation completion and control the load/store unit, ensuring smooth pipeline operation without stalling.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_60": {
+            "question_0": {
+                "gt_answer": "The module `step_id` implements an instruction decoder that generates ready signals for various instructions based on the instruction content, an enable signal, and a condition output signal, with specific conditions for each instruction type.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_61": {
+            "question_0": {
+                "gt_answer": "The module `neg` demonstrates the toggling behavior of registers with negative indexing on the positive edge of the input clock signal.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_62": {
+            "question_0": {
+                "gt_answer": "The module `PCIEBus_gtp_pipe_drp` implements a parameterized finite state machine (FSM) for managing Dynamic Reconfiguration Port (DRP) operations in a PCIe application, facilitating configuration and data transfer between the module and a GTP transceiver's DRP. It accepts 16-bit configuration data, generates a 9-bit address and 16-bit output data, controls DRP enablement and writes, and indicates operation completion through various output signals like `DRP_DONE` and `DRP_FSM`.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_63": {
+            "question_0": {
+                "gt_answer": "The module `nios_solo_pio_0` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_64": {
+            "question_0": {
+                "gt_answer": "The module `SingleCycleProcessor` implements a basic processor with a two-cycle operation (fetch and execute), supporting various arithmetic, logical, memory access, and control flow operations. It includes internal registers for managing the execution flow, extracting instruction fields, and updating the program counter and register file based on the instruction executed. It also handles asynchronous reset functionality for clearing the processor state.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_65": {
+            "question_0": {
+                "gt_answer": "The module `alu` implements an Arithmetic Logic Unit (ALU) that performs addition operations on two 32-bit input operands based on a specified command, transitioning through states to handle input processing and result generation.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_66": {
+            "question_0": {
+                "gt_answer": "The module `step_ex_cpf` implements a state machine-controlled data flow unit managing register 0 within a register file, featuring conditional signal controls and a tri-state buffer array for data routing based on register ID, ensuring controlled operation based on clock, reset, and enable signals.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_67": {
+            "question_0": {
+                "gt_answer": "The module `ODDRX2DQSB` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_68": {
+            "question_0": {
+                "gt_answer": "The module `sp_find_segment_stn1` implements direct signal routing, passing inputs to corresponding outputs without alteration, establishing one-to-one mappings between input and output signals.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_69": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hs__tapvgnd2` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_70": {
+            "question_0": {
+                "gt_answer": "The module `DemoInterconnect_axi_spi_master_0_1` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_71": {
+            "question_0": {
+                "gt_answer": "The module `readonly_register` implements a logic whereby it outputs a predefined value on the `reg_data` bus when the `reg_addr` matches a specified address and the `reg_wr` signal is low; otherwise, it sets the `reg_data` bus to high-impedance ('32'hZZ') to prevent bus contention.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_72": {
+            "question_0": {
+                "gt_answer": "The module `loadTrack` implements a functionality to monitor the load on a router and its ports, updating the utilization based on port activity statuses and productive vectors, with router and port load outputs provided accordingly.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_73": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hs__tapvpwrvgnd` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_74": {
+            "question_0": {
+                "gt_answer": "The module `clk63_3hz` implements a clock divider generating an output clock 'outclk' that toggles at 1/789901th the frequency of the input clock 'clk'.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_75": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_lp__inputiso1p`only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_76": {
+            "question_0": {
+                "gt_answer": "The module `IBUF` implements a simple buffer that directly forwards the input signal `I` to the output `O` without introducing any delay.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_77": {
+            "question_0": {
+                "gt_answer": "The module `system_zed_vga_0_0` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_78": {
+            "question_0": {
+                "gt_answer": "The module `INV` implements a simple inverter operation and features a specified propagation delay of 127 time units.\n.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_79": {
+            "question_0": {
+                "gt_answer": "The module `ripemd160_rol_s` implements logical operations by right-shifting first_sequence and second_sequence based on the value of the input signal rx_round, and storing the results in the output registers.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_80": {
+            "question_0": {
+                "gt_answer": "The module `vga_controller` implements signal generation for driving a VGA display, including synchronization, blanking, and color signal generation based on pixel position and input color data. It supports configurable color depth and resolution, operates in color or monochrome mode, utilizes counters for tracking positions, and scales down the pixel position for memory address calculation. Sync signals, blanking, and color processing are based on defined timing parameters, enhancing brightness by replicating bits for color channels, or replicating a single bit in monochrome mode. It outputs a constant high sync signal and directly passes the input clock as the VGA clock signal.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_81": {
+            "question_0": {
+                "gt_answer": "The module `pcie_7x_v1_3_fast_cfg_init_cntr` implements a counter that operates on the rising edge of the `clk` signal, resetting `pattern_o` to zeros on `rst` assertion, incrementing it by 1 on deassertion if not equal to `INIT_PATTERN`, with a delay specified by `TCQ`.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_82": {
+            "question_0": {
+                "gt_answer": "The module `SUB` implements a simple synchronous reset flip-flop with an output that mirrors the state of an internal register based on clock and reset signals.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_83": {
+            "question_0": {
+                "gt_answer": "The module `comparador` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_84": {
+            "question_0": {
+                "gt_answer": "The module `Apb3Decoder` decodes a 20-bit input address to select peripherals on an APB3 bus using bitwise operations for select signal generation. It passes through control and data signals between input and output ports.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_85": {
+            "question_0": {
+                "gt_answer": "The module `ORCY` implements a bitwise OR operation between input signals `CI` and `I`, producing the result at output `O`.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_86": {
+            "question_0": {
+                "gt_answer": "The module `Dflop` implements combinational logic thatcaptures the value of the input signal D on the high level of the clock signal Clk and stores this value in the output signal Q. The output Q retains its value until the next high level of the clock signal Clk, at which point it updates to the new value of D.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_87": {
+            "question_0": {
+                "gt_answer": "The module `dragster_spi_adapter` implements a SPI bus adapter with transaction buffering and forwarding capabilities, operating on the negative edge of the clock and reset, handling bit counters, slave select signals, and buffering transactions. It features parameterized settings for clock extension, transaction depth, and data width to ensure flexibility in SPI bus interfacing.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_88": {
+            "question_0": {
+                "gt_answer": "The module `LUT1` implements a 1-bit Look-Up Table (LUT) functionality with output O determined by the 2-bit parameter INIT based on the input I0, and features a specified propagation delay of 127 time units.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_89": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_hs__dfrbp` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_90": {
+            "question_0": {
+                "gt_answer": "The module `MUXF5` implements a 2-to-1 multiplexer, selecting between input `I0` and input `I1` based on the value of the select signal `S`.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_91": {
+            "question_0": {
+                "gt_answer": "The module `conled` implements a PWM controller for six LEDs, with individual brightness levels based on specific bits of a counter.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_92": {
+            "question_0": {
+                "gt_answer": "The module `controller` implements a memory controller FSM managing data transactions, transitioning through IDLE, SAMPLE, DELAY, READ, and READWAIT states based on input conditions, handling memory read/write operations with control signals synchronized to the clock.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_93": {
+            "question_0": {
+                "gt_answer": "The module `random_gen` implements a pseudo-random number generator using a linear feedback shift register (LFSR) and controls a trigger event based on the generated number and retry count. It incorporates signal synchronization on the positive clock edge.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_94": {
+            "question_0": {
+                "gt_answer": "The module `VGAFrequency` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_95": {
+            "question_0": {
+                "gt_answer": "The module `sky130_fd_sc_lp__sdfbbp` only implements some interface signals. It does not perform any logical functions.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_96": {
+            "question_0": {
+                "gt_answer": "The module `UDP_LATCH1` implements a latch that stores data from D1 or D2 based on the control signals G1 and G2, updating the output Q_ after a 1-time unit delay and remaining in the current state if both control signals are the same.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_97": {
+            "question_0": {
+                "gt_answer": "The module `beh_vlog_ff_ce_clr_v8_0` implements a flip-flop with clock enable and clear functionality, where the output Q is asynchronously reset to 0 on a positive clock edge if the clear input CLR is high; otherwise, Q captures the input D after a delay specified by FLOP_DELAY when the clock enable input CE is high, retaining its state if CE is inactive.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_98": {
+            "question_0": {
+                "gt_answer": "The module `Event_Pulse` implements a detector for rising and falling edge transitions of the input signal, generating separate outputs for rising edges, falling edges, and both edges based on the sampled input signal at the rising clock edge.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "rtl_99": {
+            "accuracy": 0
+        },
+        "rtl_100": {
+            "accuracy": 0
+        },
+        "rtl_101": {
+            "accuracy": 0
+        },
+        "rtl_102": {
+            "accuracy": 0
+        },
+        "rtl_103": {
+            "accuracy": 0
+        },
+        "rtl_104": {
+            "accuracy": 0
+        },
+        "rtl_105": {
+            "accuracy": 0
+        },
+        "rtl_106": {
+            "accuracy": 0
+        },
+        "rtl_107": {
+            "accuracy": 0
+        },
+        "rtl_108": {
+            "accuracy": 0
+        },
+        "rtl_109": {
+            "accuracy": 0
+        },
+        "rtl_110": {
+            "accuracy": 0
+        },
+        "rtl_111": {
+            "accuracy": 0
+        },
+        "rtl_112": {
+            "accuracy": 0
+        },
+        "rtl_113": {
+            "accuracy": 0
+        },
+        "rtl_114": {
+            "accuracy": 0
+        },
+        "rtl_115": {
+            "accuracy": 0
+        },
+        "rtl_116": {
+            "accuracy": 0
+        },
+        "rtl_117": {
+            "accuracy": 0
+        },
+        "rtl_118": {
+            "accuracy": 0
+        },
+        "rtl_119": {
+            "accuracy": 0
+        },
+        "rtl_120": {
+            "accuracy": 0
+        },
+        "rtl_121": {
+            "accuracy": 0
+        },
+        "rtl_122": {
+            "accuracy": 0
+        },
+        "rtl_123": {
+            "accuracy": 0
+        },
+        "rtl_124": {
+            "accuracy": 0
+        },
+        "rtl_125": {
+            "accuracy": 0
+        },
+        "rtl_126": {
+            "accuracy": 0
+        },
+        "rtl_127": {
+            "accuracy": 0
+        },
+        "rtl_128": {
+            "accuracy": 0
+        },
+        "rtl_129": {
+            "accuracy": 0
+        },
+        "rtl_130": {
+            "accuracy": 0
+        },
+        "rtl_131": {
+            "accuracy": 0
+        },
+        "rtl_132": {
+            "accuracy": 0
+        },
+        "rtl_133": {
+            "accuracy": 0
+        },
+        "rtl_134": {
+            "accuracy": 0
+        },
+        "rtl_135": {
+            "accuracy": 0
+        },
+        "rtl_136": {
+            "accuracy": 0
+        },
+        "rtl_137": {
+            "accuracy": 0
+        },
+        "rtl_138": {
+            "accuracy": 0
+        },
+        "rtl_139": {
+            "accuracy": 0
+        },
+        "rtl_140": {
+            "accuracy": 0
+        },
+        "rtl_141": {
+            "accuracy": 0
+        },
+        "rtl_142": {
+            "accuracy": 0
+        },
+        "rtl_143": {
+            "accuracy": 0
+        },
+        "rtl_144": {
+            "accuracy": 0
+        },
+        "rtl_145": {
+            "accuracy": 0
+        },
+        "rtl_146": {
+            "accuracy": 0
+        },
+        "rtl_147": {
+            "accuracy": 0
+        },
+        "rtl_148": {
+            "accuracy": 0
+        },
+        "rtl_149": {
+            "accuracy": 0
+        },
+        "rtl_150": {
+            "accuracy": 0
+        },
+        "rtl_151": {
+            "accuracy": 0
+        },
+        "rtl_152": {
+            "accuracy": 0
+        },
+        "rtl_153": {
+            "accuracy": 0
+        },
+        "rtl_154": {
+            "accuracy": 0
+        },
+        "rtl_155": {
+            "accuracy": 0
+        },
+        "rtl_156": {
+            "accuracy": 0
+        },
+        "rtl_157": {
+            "accuracy": 0
+        },
+        "rtl_158": {
+            "accuracy": 0
+        },
+        "rtl_159": {
+            "accuracy": 0
+        },
+        "rtl_160": {
+            "accuracy": 0
+        },
+        "rtl_161": {
+            "accuracy": 0
+        },
+        "rtl_162": {
+            "accuracy": 0
+        },
+        "rtl_163": {
+            "accuracy": 0
+        },
+        "rtl_164": {
+            "accuracy": 0
+        },
+        "rtl_165": {
+            "accuracy": 0
+        },
+        "rtl_166": {
+            "accuracy": 0
+        },
+        "rtl_167": {
+            "accuracy": 0
+        },
+        "rtl_168": {
+            "accuracy": 0
+        },
+        "rtl_169": {
+            "accuracy": 0
+        },
+        "rtl_170": {
+            "accuracy": 0
+        },
+        "rtl_171": {
+            "accuracy": 0
+        },
+        "rtl_172": {
+            "accuracy": 0
+        },
+        "rtl_173": {
+            "accuracy": 0
+        },
+        "rtl_174": {
+            "accuracy": 0
+        },
+        "rtl_175": {
+            "accuracy": 0
+        },
+        "rtl_176": {
+            "accuracy": 0
+        },
+        "rtl_177": {
+            "accuracy": 0
+        },
+        "rtl_178": {
+            "accuracy": 0
+        },
+        "rtl_179": {
+            "accuracy": 0
+        },
+        "rtl_180": {
+            "accuracy": 0
+        },
+        "rtl_181": {
+            "accuracy": 0
+        },
+        "rtl_182": {
+            "accuracy": 0
+        },
+        "rtl_183": {
+            "accuracy": 0
+        },
+        "rtl_184": {
+            "accuracy": 0
+        },
+        "rtl_185": {
+            "accuracy": 0
+        },
+        "rtl_186": {
+            "accuracy": 0
+        },
+        "rtl_187": {
+            "accuracy": 0
+        },
+        "rtl_188": {
+            "accuracy": 0
+        },
+        "rtl_189": {
+            "accuracy": 0
+        },
+        "rtl_190": {
+            "accuracy": 0
+        },
+        "rtl_191": {
+            "accuracy": 0
+        },
+        "rtl_192": {
+            "accuracy": 0
+        },
+        "rtl_193": {
+            "accuracy": 0
+        },
+        "rtl_194": {
+            "accuracy": 0
+        },
+        "rtl_195": {
+            "accuracy": 0
+        },
+        "rtl_196": {
+            "accuracy": 0
+        },
+        "rtl_197": {
+            "accuracy": 0
+        },
+        "rtl_198": {
+            "accuracy": 0
+        },
+        "rtl_199": {
+            "accuracy": 0
+        },
+        "rtl_200": {
+            "accuracy": 0
+        },
+        "rtl_201": {
+            "accuracy": 0
+        },
+        "rtl_202": {
+            "accuracy": 0
+        },
+        "rtl_203": {
+            "accuracy": 0
+        },
+        "rtl_204": {
+            "accuracy": 0
+        },
+        "rtl_205": {
+            "accuracy": 0
+        },
+        "rtl_206": {
+            "accuracy": 0
+        },
+        "rtl_207": {
+            "accuracy": 0
+        },
+        "rtl_208": {
+            "accuracy": 0
+        },
+        "rtl_209": {
+            "accuracy": 0
+        },
+        "rtl_210": {
+            "accuracy": 0
+        },
+        "rtl_211": {
+            "accuracy": 0
+        },
+        "rtl_212": {
+            "accuracy": 0
+        },
+        "rtl_213": {
+            "accuracy": 0
+        },
+        "rtl_214": {
+            "accuracy": 0
+        },
+        "rtl_215": {
+            "accuracy": 0
+        },
+        "rtl_216": {
+            "accuracy": 0
+        },
+        "rtl_217": {
+            "accuracy": 0
+        },
+        "rtl_218": {
+            "accuracy": 0
+        },
+        "rtl_219": {
+            "accuracy": 0
+        },
+        "rtl_220": {
+            "accuracy": 0
+        },
+        "rtl_221": {
+            "accuracy": 0
+        },
+        "rtl_222": {
+            "accuracy": 0
+        },
+        "rtl_223": {
+            "accuracy": 0
+        }
+    }
+}

@@ -1,0 +1,565 @@
+{
+    "Accuracy": 0.14285714285714285,
+    "Comparison": {
+        "frontend_0": {
+            "question_0": {
+                "gt_answer": "DC gain is A_DC and dominant pole is p_0 which is located at lef-half plain",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_1": {
+            "question_0": {
+                "gt_answer": "one right-half plane zero: g_m2/C_m; two left-half-plane poles: 1/(r_o1 r_o2 g_m2 C_m),g_m2/C_L",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_2": {
+            "question_0": {
+                "gt_answer": "DC gain is g_mn/g_mp, where g_mn is the transconductance of the NMOS and  g_mp is the transconductance of the PMOS. To increase the dc gain, you should increase the NMOS' W/L and decrease PMOS' W/L.",
+                "pred_answer": "The DC gain of a common-source amplifier with an NMOS input and a PMOS load is typically very low, often around 1 or less. To increase the gain, the channel length modulation (body effect) of the NMOS transistor can be utilized by applying a backgate voltage, or the transconductance can be increased by reducing the channel length.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_3": {
+            "question_0": {
+                "gt_answer": "GBW = A_V*P_-3dB where A_V is the amplifier's dc gain and the p_-3dB is the dominant pole of the amplifier.",
+                "pred_answer": "The gain-bandwidth product (GBW) of an amplifier is defined as the product of its gain and bandwidth, which remains constant at different gains or bandwidths.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_4": {
+            "question_0": {
+                "gt_answer": "Gain = g_m1In/g_m1load*A_v2 where g_m1in is the 1st stage's input MOSFET's transconductance and g_m1load is the 1st stage's load MOSFET's transconductance, and A_v2 is the 2nd stage's DC gain.",
+                "pred_answer": "The amplification depends on the specific gain characteristics of each stage, but it can be approximated as the product of the individual gains.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_5": {
+            "question_0": {
+                "gt_answer": "SR = I/C where SR is the amplifier's slewrate, I is the quiescent current of the driven stage and C is the load cap.",
+                "pred_answer": "The amplifier's slew rate is influenced by the transistor's current and capacitors' values. Higher transistor current can increase the slew rate by providing more power, while larger capacitor values can decrease it by requiring more time to charge or discharge.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_6": {
+            "question_0": {
+                "gt_answer": "The relationship between the saturation region current (I_D) and the overdrive voltage (V_OV) of an NMOSFET, when ignoring the body effect and short-channel effects, is described by the following equation:\n\n\\[ I_D = \\frac{1}{2} \\mu_n C_{ox} \\left(\\frac{W}{L}\\right) V_{OV}^2 \\]\n\nHere:\n- \\( \\mu_n \\) is the electron mobility in the NMOS channel.\n- \\( C_{ox} \\) is the gate oxide capacitance per unit area.\n- \\( W \\) and \\( L \\) are the width and length of the NMOS transistor, respectively.\n- \\( V_{OV} \\) (overdrive voltage) is defined as \\( V_{GS} - V_{th} \\), where \\( V_{GS} \\) is the gate-source voltage and \\( V_{th} \\) is the threshold voltage of the NMOS transistor.\n",
+                "pred_answer": "The saturation region current of an NMOSFET is directly proportional to the square of the overdrive voltage.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_7": {
+            "question_0": {
+                "gt_answer": "The correct expression for the power spectral density of the flicker noise voltage (\\( V_n^2 \\)) in a MOSFET is:\n\n\\[ V_n^2 = \\frac{K}{{C_{ox}} \\cdot W \\cdot L} \\cdot \\frac{1}{f} \\]\n\nWhere:\n- \\( V_n^2 \\) is the power spectral density of the flicker noise voltage.\n- \\( K \\) is a process-dependent flicker noise coefficient.\n- \\( C_{ox} \\) is the gate oxide capacitance per unit area.\n- \\( W \\) and \\( L \\) are the width and length of the MOSFET channel, respectively.\n- \\( f \\) is the frequency.\n\nTo reduce flicker noise in a MOSFET, the following strategies can be employed:\n\n**Increase the Gate Area**: Since flicker noise is inversely proportional to the gate area (W x L), increasing the dimensions of the gate can help reduce the noise. However, this may not always be practical due to size constraints in integrated circuits.\n",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_8": {
+            "question_0": {
+                "gt_answer": "1. Increasing the channel length of the transistor can be used to increase the output impedance, and consequently, the amplifier gain.\nThis is because the channel-length modulation coefficient, lambda, is inversely proportional to the gate length. And the output impedance is inversely proportional to lambda.\nTherefore, by increasing the channel length of the transistor, the value of lambda decreases. This results in an increase in the output impedance of the transistor.\n2. Increasing the channel width-to-length ratio (W/L) of the input transistors can enhance the amplifier gain. The amplifier gain is proportional to the product of the transconductance (gm) and the output impedance (Ro), i.e., gm*Ro.\nThe output impedance Ro is inversely proportional to the channel-length modulation coefficient (λ) and the drain current (I), i.e., Ro ~ 1/(λ*I).\nBy keeping the drain current (I) constant while increasing the (W/L) ratio of the input transistors, the transconductance (gm) will increase, as gm is proportional to (W/L). Meanwhile, the output impedance (Ro) will remain relatively constant since the drain current (I) is held fixed.\nTherefore, increasing the (W/L) ratio of the input transistors allows the amplifier to achieve a higher transconductance (gm) without compromising the output impedance (Ro).",
+                "pred_answer": "['Optimize biasing conditions', 'Improve input matching networks', 'Use higher quality factor capacitors']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_9": {
+            "question_0": {
+                "gt_answer": "The dominant pole will be locate at p1=1/(Rout1*(gm2*Rout2*Cc)), \nwhere Rout1 is the output resistance of the 1st stage, \ngm2 is the transconductance of the 2nd stage, Rout2 is the output resistance of the 2nd stage and the Cc is the compensation cap.\nThe non-dominant pole will be locate at p2=gm2/CL where CL is the load cap.\nThe GBW is AV*p1 = gm1*Rout1*gm2*Rout2*p1 = gm1/Cc",
+                "pred_answer": "{'GBW': 'The GBW is the product of gain and bandwidth without any compensation, which is reduced by Miller effect with single Miller compensation.', 'dominant pole': \"The dominant pole is typically introduced by the Miller compensation capacitor, which forms a pole at a frequency where the feedback network's gain is unity.\", 'non-dominant pole': 'The non-dominant pole is usually determined by the highest frequency component in the circuit, often associated with the second stage or parasitic elements.'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_10": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_11": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A: The former is more efficient than the latter.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_12": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "D",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_13": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_14": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A: Before adding a signal.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_15": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_16": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B: crystal oscillator.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_17": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_18": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A: Input signal and feedback signal are in reverse phase.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_19": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_20": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "D: 0.7V",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_21": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A: Deep negative feedback.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_22": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A: Formed by diffusion of majority charge carriers.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_23": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A: Amplify differential mode and suppress common mode.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_24": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_25": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "D: Cut off, bottom.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_26": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_27": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C: Capacitive capacity",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_28": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A: Directly coupled multi-stage amplifier.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_29": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "D",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_30": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A: enlarge.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_31": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A: 12V",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_32": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A: Stable output voltage.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_33": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "D: Net input decrease.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_34": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "D",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_35": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "A: Basic amplifier.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_36": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_37": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_38": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_39": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B: Voltage series negative feedback.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_40": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "D",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_41": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "D: Less than AA",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_42": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C: Positive and negative",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_43": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_44": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_45": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_46": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A: DC",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_47": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B: 0.7 times.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_48": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C: efficient",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_49": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "C: High resistance element",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_50": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_51": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_52": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_53": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "A: Basic amplifier.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_54": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C: negative",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_55": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "D: 3 V.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_56": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A: Narrowing down.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_57": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_58": {
+            "question_0": {
+                "gt_answer": "According to analysis, the gain bandwidth is about 50MHz, the phase margin (PM) is about 80 degrees, and the low-frequency gain is about 85dB",
+                "pred_answer": "{'GBW': 'Based on the AC characteristic curve, the GBW (Gain Bandwidth Product) can be estimated by finding the product of the gain and the bandwidth at the -3dB point. From the graph, the low-frequency gain appears to be around 100 V/V and the bandwidth is approximately 1 MHz, giving a GBW of 100 MHz.', 'low frequency gain': 'The low-frequency gain can be estimated as the slope of the blue line near the origin. From the graph, it seems to be around 100 V/V.', 'PM': 'The phase margin (PM) can be estimated by finding the phase shift when the gain drops to 0 dB (or unity gain). From the graph, the phase margin appears to be around 60 degrees.'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_59": {
+            "question_0": {
+                "gt_answer": "According to the data annotation and analysis in the figure, it can be accurately determined that GBW is 2.536GHz and PM is 60.4°. Low frequency gain is about 135dB.",
+                "pred_answer": "{'GBW': '10 MHz', 'PM': '90 dB', 'low frequency gain': '10000'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_60": {
+            "question_0": {
+                "gt_answer": "The input offset voltage of the amplifier was measured across a temperature range of −40 ℃ to 130 ℃. The offset voltage displayed a maximum change of 130 μV across the entire temperature range. ",
+                "pred_answer": "The input offset voltage of the amplifier increases with increasing temperature.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_61": {
+            "question_0": {
+                "gt_answer": "The figure shows a plot of the output voltage versus temperature from 0 ℃ to 70 ℃. The peak-to-peak variation is 9.4 mV. The maximum output voltage occurs at around 45 ℃.",
+                "pred_answer": "The output voltage of the BandGap Reference decreases as the temperature increases.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_62": {
+            "question_0": {
+                "gt_answer": "The frequency of the ripple is swept from 1 Hz to 100 kHz. The PSR of the proposed BGR is nearly 58 dB in the low frequency, increasing continuously from around tens of hertz, and is -16 dB when the frequency is 100 kHz.",
+                "pred_answer": "The figure shows a line graph with a curve representing the measured Phase Shift Ratio (PSR) of the BGR. The curve likely indicates how the PSR varies with frequency.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_63": {
+            "question_0": {
+                "gt_answer": "The figure compares the measured distribution of the conventional and proposed BGR’s. Supply-voltage, temperature, and process variations are included. There are four conditions and three temperature conditions. Thus, there are twelve matrix measurement conditions: VCC=2.4, 2.7, 3.3, and 3.9 V; and temp = 27, 85, and 125℃. The number of samples is 34 for the conventional BGR and 23 for the proposed BGR.",
+                "pred_answer": "The conventional BGR has a wider distribution compared to the proposed BGR across all temperatures and voltages tested. This suggests the proposed BGR offers better stability and consistency in Vref. ",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_64": {
+            "question_0": {
+                "gt_answer": "It has a settling time of about 160us.",
+                "pred_answer": "The settling time cannot be accurately estimated without the actual figure.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_65": {
+            "question_0": {
+                "gt_answer": "The figure shows 192 simulation results for the comparator input referred offset voltage, with an average offset voltage of -2.3mV and a standard deviation standard deviation of 10.9mV.",
+                "pred_answer": "The figure shows the measured input referred offset distribution based on Monte Carlo simulation results. The blue and red graphs likely represent different conditions or components, with the red line indicating the mean or central tendency of the offsets.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_66": {
+            "question_0": {
+                "gt_answer": "The figure shows the input-referred noise root power spectral density (PSD). The measured noise is slightly worse than the simulated results, approximately 27.5 nV/sqrtHz at 10kHz.",
+                "pred_answer": "The figure shows the measured input-referred noise PSD (Power Spectral Density) of an amplifier. Without the actual image, it's impossible to provide specific details, but generally, the noise PSD indicates how the noise power is distributed over frequency. Higher values at certain frequencies suggest more noise power in those regions.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_67": {
+            "question_0": {
+                "gt_answer": "The trip point histograms of a comparator without and with the proposed OC scheme enabled are plotted in the figure. It can be seen that the OC scheme does not degrade the noise performance, while reducing the offset from −7.58 mV to 40.8 μV. And σ is 63.8756uV without the OC scheme enabled and is 56.1012uV with the OC scheme enabled.",
+                "pred_answer": "The histogram with the OC scheme enabled shows a narrower distribution of trip points compared to the one without the OC scheme enabled. This indicates that enabling the OC scheme reduces the variability in comparator offset voltage.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_68": {
+            "question_0": {
+                "gt_answer": "The output voltage variation in 0-100°C temperature range at different supply is less than 0.71mV. The temperature-coefficients at 2, 3, 4, 5V supply voltage are 15ppm/℃, 14.3ppm/℃, 13.4ppm/℃ and 14.0ppm/℃, respectively. ",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_69": {
+            "question_0": {
+                "gt_answer": "It can be seen that the PSRR at DC is 95dB and remains about 90 dB at frequency of 10KHz. The frequency range with PSRR greater than 80dB is about 0-30kHz。",
+                "pred_answer": "{'frequency_range': '100kHz to 500kHz'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        }
+    }
+}

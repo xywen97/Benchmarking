@@ -1,3 +1,6 @@
+# Transformers >= 4.44
+# env: benchmark
+
 # modality: text
 import sys
 import torch

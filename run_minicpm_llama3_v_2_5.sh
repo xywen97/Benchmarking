@@ -42,3 +42,9 @@
 # python main.py --field backend --model reka_flash
 # python main.py --field backend --model reka_edge
 # python main.py --field backend --model chatglm3_6b
+
+python main.py --field backend --model minicpm_llama3_v_2_5
+python main.py --field frontend --model minicpm_llama3_v_2_5
+python main.py --field netlist --model minicpm_llama3_v_2_5
+python main.py --field spec --model minicpm_llama3_v_2_5
+python main.py --field rtl --model minicpm_llama3_v_2_5

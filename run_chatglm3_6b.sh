@@ -27,18 +27,22 @@
 # python main.py --field spec --model llama3_2_90b_vision_instruct
 # python main.py --field rtl --model intern_chat_20b (done)
 # python main.py --field rtl --model internvl_mini_chat_2b_v1_5 (Done)
-# python main.py --field rtl --model internvl2_40b (Done)
-# python main.py --field rtl --model internlm_xcomposer_vl_7b (Done)
+# python main.py --field rtl --model internvl2_40b
+# python main.py --field rtl --model internlm_xcomposer_vl_7b
 # python main.py --field spec --model internlm_xcomposer2_vl_7b
 # python main.py --field rtl --model qwen_2_7b_instruct (Done)
 # python main.py --field rtl --model qwen_vl_chat
 # python main.py --field spec --model qwen_vl
 # python main.py --field rtl --model gpt4o (done)
 # python main.py --field netlist --model gpt4
-# python main.py --field rtl --model gpt4_turbo (done)
+# python main.py --field rtl --model gpt4_turbo
 # python main.py --field rtl --model gpt4v (done)
 
 # python main.py --field backend --model reka_core
 # python main.py --field backend --model reka_flash
 # python main.py --field backend --model reka_edge
-# python main.py --field backend --model chatglm3_6b
+python main.py --field backend --model chatglm3_6b
+python main.py --field frontend --model chatglm3_6b
+python main.py --field netlist --model chatglm3_6b
+python main.py --field spec --model chatglm3_6b
+python main.py --field rtl --model chatglm3_6b

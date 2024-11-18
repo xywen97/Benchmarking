@@ -8,7 +8,7 @@ import requests
 from flask import Flask, request, jsonify
 import os
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 app = Flask(__name__)

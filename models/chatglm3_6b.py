@@ -1,4 +1,5 @@
 # pip install transformers==4.41.2
+
 from modelscope import AutoTokenizer, AutoModel, snapshot_download
 import torch
 import os
@@ -6,7 +7,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "7"  # 设置可见设备为GPU 0
+os.environ["CUDA_VISIBLE_DEVICES"] = "5"  # 设置可见设备为GPU 0
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 

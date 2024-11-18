@@ -35,10 +35,16 @@
 # python main.py --field spec --model qwen_vl
 # python main.py --field rtl --model gpt4o (done)
 # python main.py --field netlist --model gpt4
-# python main.py --field rtl --model gpt4_turbo (done)
+# python main.py --field rtl --model gpt4_turbo
 # python main.py --field rtl --model gpt4v (done)
 
 # python main.py --field backend --model reka_core
 # python main.py --field backend --model reka_flash
 # python main.py --field backend --model reka_edge
 # python main.py --field backend --model chatglm3_6b
+
+python main.py --field backend --model minicpm1b_sft_bf16
+python main.py --field frontend --model minicpm1b_sft_bf16
+python main.py --field netlist --model minicpm1b_sft_bf16
+python main.py --field spec --model minicpm1b_sft_bf16
+python main.py --field rtl --model minicpm1b_sft_bf16

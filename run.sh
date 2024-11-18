@@ -1,4 +1,4 @@
-# available fields: backend, general, netlist, rtl, spec, frontend
+# available fields: backend, frontend, netlist, spec, rtl, general
 
 # models: 
 
@@ -20,4 +20,24 @@
 # minicpm_v, minicpm_v2, minicpm3_4b, minicpm1b_sft_bf16, minicpm2b_sft_bf16, minicpm_llama3_v_2_5, 
 # yi_vl_6b, yi_vl_34b, yi_chat_6b, yi_chat_34b
 
-python main.py --field spec --model internvl_chat_v1_5
+# 2024.11.18
+# python main.py --field rtl --model llama3_1_70b_instruct (Done)
+# python main.py --field rtl --model llama3_8b_instruct (Done)
+# python main.py --field rtl --model llama3_2_11b_vision_instruct (Done)
+# python main.py --field spec --model llama3_2_90b_vision_instruct
+# python main.py --field rtl --model intern_chat_20b
+# python main.py --field rtl --model internvl_mini_chat_2b_v1_5 (Done)
+# python main.py --field rtl --model internvl2_40b
+# python main.py --field rtl --model internlm_xcomposer_vl_7b
+# python main.py --field spec --model internlm_xcomposer2_vl_7b
+# python main.py --field rtl --model qwen_2_7b_instruct (Done)
+# python main.py --field spec --model qwen_vl_chat
+# python main.py --field spec --model qwen_vl
+# python main.py --field rtl --model gpt4o
+# python main.py --field frontend --model gpt4
+# python main.py --field rtl --model gpt4_turbo
+# python main.py --field rtl --model gpt4v
+
+# python main.py --field backend --model reka_core
+# python main.py --field backend --model reka_flash
+# python main.py --field backend --model reka_edge

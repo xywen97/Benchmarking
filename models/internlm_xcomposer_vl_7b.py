@@ -1,3 +1,6 @@
+# Transformers=4.36/37
+# env: minigpt4v
+
 from flask import Flask, request, jsonify
 import torch
 from transformers import pipeline
@@ -8,7 +11,7 @@ from PIL import Image
 
 app = Flask(__name__)
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "7"
 
 model_path = "/data/xiangyu/benchmarkModels/CHENCHEN/huggingface/hub/models--internlm--internlm-xcomposer-vl-7b/snapshots/8a8a3ae062068c45a0c25875146237cc8b5e20e1"
 # model_path = "/data/xiangyu/benchmarkModels/CHENCHEN/huggingface/hub/models--internlm--internlm2_5-7b-chat/snapshots/9b8d9553846ecf6393f3408fa9d3ec9928fdab4d"

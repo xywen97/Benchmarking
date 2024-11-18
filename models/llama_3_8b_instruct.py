@@ -9,7 +9,7 @@ import os
 
 app = Flask(__name__)
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "5"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 model_path = "/data/xiangyu/benchmarkModels/Meta-Llama-3-8B-Instruct"
 

@@ -1,0 +1,726 @@
+{
+    "Accuracy": 0.0,
+    "Comparison": {
+        "netlist_0": {
+            "question_0": {
+                "gt_answer": "Technology mapping covers must meet compatibility and feasibility conditions. A unate condition is when every path through a graph is consistently increasing or decreasing, while a binate condition involves paths that can both increase and decrease.",
+                "pred_answer": "The collection of pattern graphs that form a legal cover of technology mapping must satisfy three criteria:",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_1": {
+            "question_0": {
+                "gt_answer": "Arrival Times: X1: 0ns, X2: 0ns, X3: 0ns, After Inverter(X2): 1ns, After NAND(X1 and inverted X2): 0ns+2ns=2ns, After NAND(X1 and N3): 0ns+2ns=2ns, After NOR(X1 and inverted X2): 2ns+3ns=5ns, after NAND(x1 and x3): 2ns+2ns=4ns, after NAND(x1 and inverted X2):5ns+2ns=7ns, after NAND(X1 and X3): 4ns+2ns=6ns, finally Z1: 7ns, Z2:6ns; Required times: Z1, Z2: 8ns. Slack at Z1: 8-7=1ns; Z2:8-6=2ns There are no nets with negative slacks, hence no critical region with negative slacks.",
+                "pred_answer": "{'arrival_times': {'Z1': 24, 'Z2': 23}, 'required_times': {'Z1': 8, 'Z2': 8}, 'slacks': {'Z1': -16, 'Z2': -15}, 'critical_region': 'The critical path goes through net Z2, as it has the tightest slack of -15ns.'}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "The slack of a net is defined as the difference between its required time and its arrival time. For a net to have a slack less than or equal to some constant c, its arrival time must be close to its required time. The arrival time of a net depends on the delays of the gates and wires along the path from the primary inputs to that net. Therefore, the region with slack less than or equal to c must consist of paths from primary inputs to primary outputs, as these paths determine the arrival times of the nets.",
+                "pred_answer": "The region with slack less than or equal to some constant c indeed consists of paths from primary inputs to primary outputs. These paths are significant for the circuit's timing analysis as they represent the critical paths that can determine the overall delay of the circuit. As depicted in Image-1, these paths carry the signals from the inputs through various logic gates to arrive at the outputs. By computing the slack of these paths, we can identify potential timing violations and ensure the circuit meets its design specifications.",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "SAT-based functional timing analysis involves formulating the problem as a satisfiability problem and solving it using a SAT solver. However, without specific details about the SAT formulation and solver, we can estimate the longest true delay manually: The longest path in the circuit is from  x1 to z1 via the inverter, two NAND gates, and one NOR gate. Longest Path Delay: 1ns (inverter) + 2ns (first NAND) + 2ns (second NAND) + 3ns (NOR) = 8ns. Therefore, the longest true delay is 8ns.",
+                "pred_answer": "{'X1': 1, 'X2': 1, 'X3': 1}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_2": {
+            "question_0": {
+                "gt_answer": "^Multiple criteria including covering all nodes, respecting input-output relations, and minimizing cost.",
+                "pred_answer": "A collection of pattern graphs is considered a legal cover of technology mapping if it satisfies the following criteria:1. Each gate in the technology library is covered by at least one pattern in the collection.2. Each fan-out combination of library elements is covered by at least one pattern in the collection.3. The pattern graph must be acyclic to avoid any loops or deadlock situations.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_3": {
+            "question_0": {
+                "gt_answer": "Calculate based on given parameters. the minimum clock period achievable by clock skew scheduling is 5ns.",
+                "pred_answer": "5",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "r2 = r3 = r4 = 0ns.",
+                "pred_answer": "{'r2_skew': 2.0, 'r3_skew': 2.0, 'r4_skew': 3.0}",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "r2-r1 >= 0, r3-r1>5, r4-r1>4, r3-r2>5, r4-r2>4, c<5",
+                "pred_answer": "The inequality constraints are:       r1 + r2 + r3 + r4 + (1ns * 5) <= c   r1 + r2 + r3 + r4 + r1 + r4 + (2ns * 4) <= c   r1 + r3 + r5 + r2 + r5 + (3ns * 6) <= c   This ensures that the total delay for each path of the circuit is less than or equal to the clock period 'c' less the corresponding gate delays.",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "There is no negative-weighted cycle in the constraint graph because all delays are positive. A feasible retime function could be: r1=0, r2=0, r3=5, r4=4, This satisfies all the constraints and ensures that the clock period is less than 5ns.",
+                "pred_answer": "{'negative_weight_cycle': False, 'constraint_graph': 'No negative-weighted cycle exists in the constraint graph.', 'feasible_retime_function': 'There is no feasible retime function available.'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_4": {
+            "question_0": {
+                "gt_answer": "Tansition functions: M1: s_next = X ^s; M2: to_next = x & t0 | ~x & t1; t1_next = x & t1 | ~x & t0; Output functions: M1: z1 = s; M2: z2 = t0 ^ t1;  initial state: (s, t0, t1) = (0, 0, 0)",
+                "pred_answer": "The transition function of the product machine M1x2 of M1 and M2 is a concatenation of the transition functions of M1 and M2 over the Cartesian product of their respective alphabets, i.e., gamma (M1x2) = gamma (M1) @ gamma (M2), where @ is the concatenation operation. The output function of M1x2 is also a concatenation of the output functions of M1 and M2 over their respective alphabets, i.e., delta (M1x2) = delta (M1) @ delta (M2). The initial state of M1x2 is the tuple (init_state1, init_state2), where init_state1 is the initial state of M1 and init_state2 is the initial state of M2, initialized using a product characteristic function defined for M1x2.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "The Boolean expression is T(X, s, t0, t1, s', t0', t1' = (s' == (X ^ s)) && (t0' == (X & t0 | ~X & t1)) && (t1' == (X & t1 | ~X & t0)) ",
+                "pred_answer": "[t0 == s[0] && t1 == s[1] && s'[0] == t0' && s'[1] == t1' || (!t0 && !t1 && s'[0] == t0' && s'[1] == t1)]",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "Initial State : (s, t_0, t_1) = (0, 0, 0)  Iteration 1: (s, t_0, t_1) = (0, 0, 0) Iteration 2: (s, t_0, t_1) = (0, 0, 0)  or  (s, t_0, t_1) = (1, 0, 0) Iteration 3:  (s, t_0, t_1) = (0, 0, 0)  or  (s, t_0, t_1) = (1, 0, 0)",
+                "pred_answer": "No answer found",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "Since the reachable states and their corresponding outputs match for both ( M_1 ) and ( M_2 ), we conclude that ( M_1 ) and ( M_2 ) are equivalent",
+                "pred_answer": "No, M1 and M2 are not equivalent.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_5": {
+            "question_0": {
+                "gt_answer": "^(a) To find all possible topological orders of the logic gates, we need to list the gates in an order that respects their dependencies. The gates can be listed as follows: Inverters NAND gates connected directly to inverters NAND gates connected to other NAND gates NAND gates connected to both inverters and NAND gates Possible topological orders include: Inverter -> NAND1 -> NAND2 -> NAND3 -> NAND4 Inverter -> NAND1 -> NAND2 -> NAND4 -> NAND3 Inverter -> NAND1 -> NAND3 -> NAND2 -> NAND4 Inverter -> NAND1 -> NAND3 -> NAND4 -> NAND2 Inverter -> NAND1 -> NAND4 -> NAND2 -> NAND3 Inverter -> NAND1 -> NAND4 -> NAND3 -> NAND2 ",
+                "pred_answer": "The possible topological orders of the logic gates are as follows:1) Inverter (X3) - Inverter (Z2) - Inverter (Z2) - NOR Gate (Z2) - NOR Gate (Z1) - NAND Gate (Z1)2) Inverter (X1) - NOR Gate (Z2) - NOR Gate (X2, Z2) - AND Gate (Z1, Z2) - NAND Gate (Z1)",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^(b) First, let's compute the arrival times: val time at the inverter output: 0 + 1ns = 1ns Arrival time at the first NAND gate output: 1ns + 2ns = 3ns Arrival time at the second NAND gate output: 3ns + 2ns = 5ns Arrival time at the third NAND gate output: 5ns + 2ns = 7ns Arrival time at the fourth NAND gate output: 7ns + 2ns = 9ns Now, let's compute the required times and slacks: Required time at each primary output: 9ns Slack = Required Time - Arrival Time For the primary outputs: Slack at z1: 9ns - 9ns = 0ns Slack at z2: 9ns - 9ns = 0ns The critical paths are those with slacks ≤ 1ns. Both paths from the primary inputs to the primary outputs have slacks of 0ns, so they are both critical.",
+                "pred_answer": "{'arrival_time_net_Z1': 9, 'required_time_net_Z1': 9, 'slack_net_Z1': 0, 'arrival_time_net_Z2': 10, 'required_time_net_Z2': 9, 'slack_net_Z2': 1, 'critical_path_slack': 0}",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "^(c) In a sequential circuit, the arrival time and required time at the output and input of a register are determined as follows: Arrival Time at Register Output: This is the time it takes for a signal to propagate through the combinational logic before reaching the register output. It includes the delays of all gates along the path from the primary inputs to the register output. Required Time at Register Input: This is the latest time by which the signal must arrive at the register input to ensure correct operation. It is typically determined by the setup time requirement of the register plus any additional constraints such as clock skew and hold time requirements. These times are used to check if there are any timing violations in the circuit. If the arrival time exceeds the required time, then there will be a timing violation, and the design needs to be adjusted accordingly.",
+                "pred_answer": "The arrival time at the output of a sequential circuit is the sum of the delay from the primary inputs to the register and the delay of the internal circuit (which includes inverters, NAND gates, and NOR gates). The required time at the input of the register is the sum of the delay from the preceding gates back to the input inverters, plus the delay of the inverters and other gates along the critical path.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_6": {
+            "question_0": {
+                "gt_answer": "C₁: transition function: s₁ = X & r₁ + r₁ & r₂, s₂ = X & r₂ + r₂ & r₃, s₃ = X & r₃ + r₃ & r₁, output function: z₁ = s₁ & s₃; C₂: transition function: s₁ = X & r₁ + r₁ & r₂, s₂ = X & r₂ + r₂ & r₁, output function: z₁ = s₁ & s₂; - Initial States Characteristic Functions:   - ( C_1 ): ( (s_1, s_2, s_3) = (0, 0, 0) )   - ( C_2 ): ( (t_1, t_2) = (0, 0) )   - ( C_1 \times C_2 ): ( (s_1, s_2, s_3, t_1, t_2) = (0, 0, 0, 0, 0) )",
+                "pred_answer": "{'C1_trans_func': \"X, r2', r3'\", 'C2_trans_func': \"X, r'2, r'3\", 'C1_output_func': \"Z1 = X OR r1', Z2 = X AND r1' OR (X AND r2')\", 'C2_output_func': \"Z1' = r'1, Z2' = r'1 AND r'2 OR r'3\", 'C1_char_func': \"Initial C1: {r1, r2, r3} = {0,0,0}, (r1', r2', r3') = {0,0,0}, {Z1, Z2} = {'X', 'x'}\", 'C2_char_func': \"Initial C2: {r'1, r'2, r'3} = {0,0,0}, {Z1', Z2'} = {'X', 'x'}\", 'C1X2_char_func': \"{r1, r2, r3, r'2, r'3, r'1} = {(0,0,0,0,0)}, {Z1, Z2, Z1', Z2'} = {'X', 'x', 'X', 'x'}\"}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "- Transition Function:  - ( s_1' = X & r_1 + r_1 & r_2 )  - ( s_2' = X & r_2 + r_2 & r_3 )   - ( s_3' = X & r_3 + r_3 & r_1 ) - ( t_1' = X & r_1' + r_1' & r_2' ) - ( t_2' = X & r_2' + r_2' & r_1' ) - Initial State of ( C_1 times C_2 ): - ( (s_1, s_2, s_3, t_1, t_2) = (0, 0, 0, 0, 0) )",
+                "pred_answer": "{'transitions': [{'inputs': ['x', 'x', '0', '0', '0'], 'states': ['0', '0', '1']}, {'inputs': ['x', '0', 'x', '0', '1'], 'states': ['0', '1', '0']}, {'inputs': ['1', '0', 'x', '0', '0'], 'states': ['1', '0', '0']}, {'inputs': ['1', '1', 'x', '0', '1'], 'states': ['1', '1', '1']}], 'outputs': {'0': ['0', '0', '0'], '1': ['0', '1', '1']}, 'initial_states': ['0']}",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "- With Input Variable:  - ( T(X, s_1, s_2, s_3, t_1, t_2, s_1', s_2', s_3', t_1', t_2') ):    - ( s_1' = X & r_1 + r_1 & r_2 ) - ( s_2' = X & r_2 + r_2 & r_3 ) - ( s_3' = X & r_3 + r_3 & r_1)    - ( t_1' = X & r_1' + r_1' & r_2' ) - ( t_2' = X & r_2' + r_2' & r_1' ) t Variable:- ( T_j(s_1, s_2, s_3, t_1, t_2, s_1', s_2', s_3', t_1', t_2') ): - ( s_1' = r_1 & r_2 ) - ( s_2' = r_2 & r_3 )  - ( s_3' = r_3 & r_1 )  - ( t_1' = r_1' & r_2' ) - ( t_2' = r_2' & r_1' )",
+                "pred_answer": "{'T_j without input variable': \"S'2 → S'1\", 'T_j including input variable': \"S'2 → T_j = not(S'2) and not(S1 and S3)\"}",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "Iteration 1: - Reached State Set: (s_1, s_2, s_3, t_1, t_2) = (0, 0, 0, 0, 0) - Iteration 2: - Reached State Set: ( (s_1, s_2, s_3, t_1, t_2) = (0, 0, 0, 0, 0), (1, 0, 0, 0, 0), (0, 1, 0, 0, 0), (0, 0, 1, 0, 0), (0, 0, 0, 1, 0), (0, 0, 0, 0, 1) ) - Reachable State Space: - Characteristic Function: ( (s_1, s_2, s_3, t_1, t_2) = (0, 0, 0, 0, 0), (1, 0, 0, 0, 0), (0, 1, 0, 0, 0), (0, 0, 1, 0, 0), (0, 0, 0, 1, 0), (0, 0, 0, 0, 1) )",
+                "pred_answer": "The reachable state space of C₁×C₂ can be expressed as {T₁ & T₂ | r₁ ⊨ x & r₂ ⊨ x & r₃ ⊨ x}, where T₁ and T₂ are the characteristic functions of the state transitions within C₁ and C₂ respectively.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_7": {
+            "question_0": {
+                "gt_answer": "A1 $t_{clk} \\geq 2 \\times t_d + t_{cq} + t_{su}$ Therefore, $t_{clk} \\geq 2 \\times 1ns + 1ns + 1.3ns = 4.3ns$ Hence $f_{clk(max)} = 232.6MHz$",
+                "pred_answer": "0.5",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "A2 The shortest delay from Q2 (FF2 Q output) to D1 (FF1 D input) is: $t_{cq(min)} + t_d(min) = 1.0ns$ which is shorter than the hold time requirement of FF1, i.e. 1.1ns, indicating a hold time violation at FF1 D input.",
+                "pred_answer": "There is a hold time violation for FF1.",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "A3 To eliminate the hold time violation, the arrival time at D1 needs to be delayed by at least 0.1ns. $t_{dly} = 0.1ns$ ensures this delay, hence eliminating the hold time violation.",
+                "pred_answer": "{'condition': 'If $t_{dly} > 0.1 ns$', 'explanation': 'The hold time violation for FF2 occurs when the clock arrives at FF2 before the setup time minus hold time has passed (1.3 ns - 1.1 ns = 0.2 ns). Therefore, if the delay $t_{dly}$ is greater than 0.1 ns, it provides sufficient delay to ensure the hold time violation does not occur.'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_8": {
+            "question_0": {
+                "gt_answer": "A1 module hex_to_BCD (dgt_1, dgt_0, in); output reg [6:0] dgt_1, dgt_0; input [3:0] in;  case(in) 4'd0: begin dgt_0 = 7'b100_0000; dgt_1 = 7'b100_0000; end  4'd0: begin dgt_0 = 7'b100_0000; dgt_1 = 7'b100_0000; end 4'd1: begin dgt_0 = 7'b111_1001; dgt_1 = 7'b100_0000; end 4'd2: begin dgt_0 = 7'b010_0100; dgt_1 = 7'b100_0000; end 4'd3: begin dgt_0 = 7'b011_0000; dgt_1 = 7'b100_0000; end 4'd4: begin dgt_0 = 7'b001_1001; dgt_1 = 7'b100_0000; end 4'd5: begin dgt_0 = 7'b001_0010; dgt_1 = 7'b100_0000; end 4'd6: begin dgt_0 = 7'b000_0010; dgt_1 = 7'b100_0000; end 4'd7: begin dgt_0 = 7'b111_1000; dgt_1 = 7'b100_0000; end 4'd8: begin dgt_0 = 7'b000_0000; dgt_1 = 7'b100_0000; end  4'd9: begin dgt_0 = 7'b001_0000; dgt_1 = 7'b100_0000; end 4'd10: begin dgt_0 = 7'b100_0000; dgt_1 = 7'b111_1001; end 4'd11: begin dgt_0 = 7'b111_1001; dgt_1 = 7'b111_1001; end 4'd12: begin dgt_0 = 7'b010_0100; dgt_1 = 7'b111_1001; end 4'd13: begin dgt_0 = 7'b011_0000; dgt_1 = 7'b111_1001; end 4'd14: begin dgt_0 = 7'b001_1001; dgt_1 = 7'b111_1001; end 4'd15: begin dgt_0 = 7'b001_0010; dgt_1 = 7'b111_1001; end endcase endmodule",
+                "pred_answer": "module hex_to_BCD(dgt_1, dgt_0, in); \n   output [6:0] dgt_1, dgt_0; \n   input [3:0] in; \n   assign dgt_1 = cat(seg_code[in[0]], seg_code[in[1]], \n                                        seg_code[in[2]], seg_code[in[3]]), \n                                        seg_code[in[3]+4], seg_code[in[3]+5], \n                                        seg_code[in[3]+6]); \n   assign dgt_0 = cat(seg_code[in[3]+1], seg_code[in[3]+2], \n                                        seg_code[in[3]+3], seg_code[in[3]+4], seg_code[in[3]+5], \n                                        seg_code[in[3]+6], seg_code[in[3]]); \n endmodule",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "A2 If one considers those outputs that are permanently ‘1’ do not need logic, then there are only 9 outputs that are dependent on 4 inputs, requiring about 9 LEs.",
+                "pred_answer": "Approximately 2 Logic Elements (LEs)",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_9": {
+            "question_0": {
+                "gt_answer": "module fsm (input wire X, Y, CLK, output reg Z); \n reg [1:0] state; \n parameter A = 2'b00; \n parameter B = 2'b01; \n parameter C = 2'b10; \n parameter D = 2'b11; initial begin \n state <= A; \n end \n always @(posedge CLK or negedge reset) begin if (!reset) begin state <= A; end else begin case (state) A: begin if (X&& (~Y)) state <= B; else if ((~X) && (~Y)) state <= A; else if ((~X) && Y) state <= D; else state <= C; end B: begin if ((~X) && (~Y)) state <= A; else if (X && Y) state <= C; end C: begin if (X && Y) state <= C; end D: begin if ((~X) && (~Y)) state <= A; end endcase end end assign Z = (state == C); endmodule",
+                "pred_answer": "The following is a Verilog HDL design of a finite state machine using one-hot state encoding for transitions from state A to other states, based on the diagram provided in Figure 1.4.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_10": {
+            "question_0": {
+                "gt_answer": "A1 Address: 12 bits, Data: 4 bits.",
+                "pred_answer": "The address bus is 12 bits (4k x 4 ram requires 12 bits to address 4k locations), and the data bus is 4 bits.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "A2 CS1 address range: 16’h8000 to 16’h8fff. CS2 address range: 16’h9000 to 16’h9fff. Therefore: CS1 = A15 & !A14 & !A13 & !A12 CS2 = A15 & !A14 & !A13 & A12",
+                "pred_answer": "To implement the 8k x 8 RAM module using four 4k x 4 RAM chips, the following circuit and Boolean expressions for the chip select signals can be designed:1. Design circuit:   - Connect four 4k x 4 RAM chips in parallel.   - Connect the address bus ADR to all four RAM chips.   - Connect the data bus DATA to the output of the four RAM chips.   - Connect the write enable signal WR to all four RAM chips.   - Connect the synchronizing clock CLK to all four RAM chips.2. Derive Boolean expressions for chip select signals:   - CS_RAM1: ADR[15]'bar & ADR[14..12]   - CS_RAM2: ADR[15]'bar & ADR[11..9]   - CS_RAM3: ADR[15]'bar & ADR[8..6]   - CS_RAM4: ADR[15]'bar & ADR[5..3]",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_11": {
+            "question_0": {
+                "gt_answer": "^The resistor network divides 5V into 1024 voltage values. IN[9:0] is converted to a one-hot code, which turns on one of the 1024 switches to route the voltage from the resistor-divider to the amplifier input.",
+                "pred_answer": "The resistor network DAC works by using a series of 1024 resistors connected to switches, controlled by the input bits from IN[9:0]. The input bits, upon decoding, determine which switches are closed, thus connecting the input voltage (+5V) to the appropriate resistor. The operational amplifier sums these input voltages to produce the output voltage Vout. The digital decoder circuit is used to interpret the binary input data and control the switches accordingly to select the proper resistors in the network.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^Vout = 5 x (IN[9:0]+1) / 1025 (volts)",
+                "pred_answer": "Vout can be derived as Vout = [(V_ref / (Rterm + Rinv)) * (IN[9:0] * Rterm)], where V_ref is the reference voltage (+5V in this case), Rterm is the terminating resistor value (e.g., R1024), and Rinv is the inverse resistor value (e.g., R0-R9).",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "^Range = 4.89mV to 4.995V, resolution = 4.89mV",
+                "pred_answer": "Range: 0V to 4.995V, Resolution: 0.005V or 10 bits",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "^SW282 is turned ON, and Vout = 5*(282+1)/1025 = 1.38V",
+                "pred_answer": "Switch SW0 will be closed. The expected voltage at Vout will be approximately 2.7V.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_12": {
+            "question_0": {
+                "gt_answer": "If the initial value is not 4’b0100, sequence of Q3:0 will be 4, 7, 10, 5, 8, 3, 6, ….",
+                "pred_answer": "It depends on the initial value of the register. If the initial value is different from 4'b0100, the sequence of Q3:0 will also change accordingly.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Average frequency of Q3 is (3/8) x 50MHz = 18.75MHz. X3 frequency is 18.75/16 = 1.172MHz.",
+                "pred_answer": "45000",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "M1: 3 LEs, M2: part of M1 LEs, M3: Each counter bit requires one LE, total LE usage is 7.",
+                "pred_answer": "5",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "The worst-case delay is 0.93ns, circuit can support up to 1075MHz. Alternative scenario is 1.18ns that supports up to 847.5MHz.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_13": {
+            "question_0": {
+                "gt_answer": "^A2 Identify all 1s in the K-map and group them so that each group contains the maximum number of 1s possible in powers of two. Combine groups to form product terms. Each group represents a prime implicant.",
+                "pred_answer": "{'step1': 'Identify groups of min-terms that have the same variables and variable values in a K-map grid.', 'step2': \"Group these min-terms together and create a new variable OR'ing all the variables that are 1 in the min-terms.\", 'step3': \"Keep adding additional min-terms to the group by repeating the above step until all min-terms are grouped and the resulting OR'd expressions is reduced as much as possible.\"}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "A3 SOP can be implemented using AND-OR gates and POS using OR-AND gates.",
+                "pred_answer": "SOP (Sum of Products) can be implemented using AND gates and then connecting the outputs to an OR gate. POS (Product of Sums) can be implemented by first connecting all inputs in an OR gate, and then connecting the outputs to AND gates. This can be done for both combinational and sequential circuits.",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "A4 F=A'",
+                "pred_answer": "F = B' + A'B",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "^A5 K-maps provide a systematic method for simplifying Boolean expressions which reduces complexity and avoids errors in finding the minimum solution.",
+                "pred_answer": "K-maps offer advantages over algebraic simplification by providing an intuitive graphical representation of Boolean functions, making it easier to spot patterns and group minterms, thus simplifying the design and debugging process of logic circuits.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_14": {
+            "question_0": {
+                "gt_answer": "^The five-tuple does not form a Boolean algebra because the postulate of complements is not satisfied for elements b and a.",
+                "pred_answer": "No, the five-tuple does not form a Boolean algebra.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Satisfied: Closure, Associativity, Commutativity, Distributivity, Identity Elements; Not Satisfied: Complements (for elements b and a)",
+                "pred_answer": "True",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_15": {
+            "question_0": {
+                "gt_answer": "By the complement law, a' is the complemeent of a, the complement of a' is a itself, because a'+a=1 and a' and a = 0",
+                "pred_answer": "True",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "a · b + a′ · c + b · c = a · b + a′ · c + b · (a + c) = a · b + a′ · c",
+                "pred_answer": "a · b + (a′ · c + b · c) = a · b + a′ · c",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_16": {
+            "question_0": {
+                "gt_answer": "Number of Boolean functions consistent with the function table: 4096. The missing entries in the function table correspond to the cases where x=a or x=a′. Since f is a Boolean function over B = {0, 1, a, a′}, thus missing entry can take any value from set and there are 6 missing entries in the table, which means the total number of possible functions are 4^6 = 4094",
+                "pred_answer": "4",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_17": {
+            "question_0": {
+                "gt_answer": "^The new Boolean algebra depends on the functional mapping defined by g(y, z).",
+                "pred_answer": "{'Boolean_algebra': 'B={0,1}, + is the XOR operation, · is the AND operation, 0 and 1 are the identity elements', 'f_function': 'f(x, y, z) = xy + xʹyʹ + yʹzʹ', 'g_function': 'g(y, z) = (xyʹ + yʹzʹ) ≡ (y + zʹ)ʹz + z'}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^Variables y and z take binary values {0, 1} because multiplexors operate on binary signals.",
+                "pred_answer": "{'y': 0, 'z': 0}",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "^They are equivalent under conditions that satisfy the defined logic equations.",
+                "pred_answer": "f(x, y, z) and g(y, z) can be equivalent because a multiplexer can be used to replace the inputs x and x' in f(x, y, z) by g(y, z)",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_18": {
+            "question_0": {
+                "gt_answer": "Consider a counterexample where f(x, y, z) is true is and only if x=y. For any x, there exists a y such that f(x, y, z) is true (specifically, y=x). There ∀x, ∃y. f(x, y, z) is true. however, there does not exist a single y such that f(x, y, z) is true for all x. For exaple, if y=0 then f(1, 0, z) is false. Therefore ∃y, ∀x. f(x, y, z) is false",
+                "pred_answer": "False",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Assume ∃x. (f(x, y) ∧ g(y)) is ture. This means there exists some x0 such that f(x0, y) ∧ g(y) is true. Therefore f(x0, y) is true, so (∃x. f(x, y)) is true. Aose g(y) is true. Hence (∃x. f(x, y)) ∧ g(y) is true. Assume (∃x. f(x, y)) ∧ g(y) is ture, this means there exists some x0 such that f(x0, y) is true. Also g(y) is true. There,  (f(x, y) ∧ g(y)) is ture, hence ∃x. (f(x, y) ∧ g(y)) is ture",
+                "pred_answer": "False",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "Assume ∃x. (f(x, y) ∨ g(x, y)). This means there exists some x0 such that f(x0, y) ∨ g(x0, y) is true. Therefore f(x0, y) is true, then ∃x, f(x,y) is true. if g(x0, y) is true, then ∃x. g(x,y) is true. Therefore ∃x. (f(x, y) ∨ g(x, y)) is true. Assume ∃x. (f(x, y) ∨ g(x, y)) is true, if ∃x. f(x,y) is true, then there exists some x0 such that f(x0, y) is true. Similarly, if ∃x. g(x,y) is true, then there exists some x0 such that g(x0, y) is true. Therefore ∃x. (f(x, y) ∨ g(x, y))is true",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_19": {
+            "question_0": {
+                "gt_answer": "Step-by-step proceduure: 1. Identify the variables: identify the variables x1, ..., xi that will be universally quantified. Identify the remaining variables xi+1, ..., xn. 2. Covert to skolem normal form; 3. Generate clauses for all assignments. 4. combine the clauses into a single formula.",
+                "pred_answer": "{'phiToPsi': {'formula': 'ψ = ∀x1, ⋯ , ∀xi. φ', 'variables': 'variables xi+1, ..., xn', 'procedure': 'The linear-time procedure to derive the CNF formula ψ from φ is to eliminate all variables x1, ..., xi from the formula φ. Replace each occurrence of any variable xj (j ≤ i) in φ with a fresh new variable, say z_j, and add the axiom z_j implies x_j to ψ. This way, ψ only depends on variables xi+1, ..., xn. Repeat this process for each variable xj (j ≤ i) in φ to get the desired formula ψ.'}}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_20": {
+            "question_0": {
+                "gt_answer": "There are 3 steps to compute the ROBDD: 1. Compute the ROBDD for f. 2. Compute the ROBDD for g. 3. Use the ITE operation to combine the two ROBDDs.",
+                "pred_answer": "To compute the ROBDD of f ∧ g using the ITE operation, we first need to represent f and g as Boolean functions. Afterwards, we can apply the ITE operation to optimize the ROBDDs of both functions. Once optimized, we can find the intersection of the two ROBDDs to obtain the final answer.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_21": {
+            "question_0": {
+                "gt_answer": "^A1 False, because a function can be symmetric in pairs (a, b) and (b, c) without being symmetric in the pair (a, c).",
+                "pred_answer": "No",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^A2 False, as there can be prime implicants which are not essential.",
+                "pred_answer": "False",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_22": {
+            "question_0": {
+                "gt_answer": "^A1 Ture, g · co(¬f, g) + ¬g · ¬co(¬f, ¬g) = g · (¬f · g + f · ¬g) + ¬g (1 - (¬f · ¬g +  f · g) = ¬f",
+                "pred_answer": "True",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^A2 True, co(co(f, g), h) = (f · g + ¬ f · ¬g) · h + (f · g + ¬ f · ¬g)¬ · h¬ = co(f, g · h)",
+                "pred_answer": "False",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "^A3 True, use distributive and associative properties.",
+                "pred_answer": "False",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "^A4 True, based on DeMorgan's laws and cofactor properties.",
+                "pred_answer": "True",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_23": {
+            "question_0": {
+                "gt_answer": "^A1 True, as the conjunction of orthogonal lists maintains orthogonality.",
+                "pred_answer": "false",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^A2 Resulting cube list will include the cube by specific combination logic.",
+                "pred_answer": "{'cube_list': [{'position': [0, 0], 'sign': '+'}, {'position': [1, -1], 'sign': '-'}, {'position': [0, 0], 'sign': '+'}]}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_24": {
+            "question_0": {
+                "gt_answer": "^Result obtained by applying unate recursive methods to deduce the complement.",
+                "pred_answer": "Not applicable for this type of question.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_25": {
+            "question_0": {
+                "gt_answer": "^A1 The minimized form is obtained by applying the Quine-McCluskey procedure.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^A2 Essential prime implicants are identified through the Quine-McCluskey algorithm table.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "^A3 The minimum sum-of-products expressions are derived from the final step of the Quine-McCluskey process.",
+                "pred_answer": "The minimum sum-of-products expressions are F = XY + X'Y'Z + XYZ'.",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "^A4 Intermediate results show grouping, comparison, and elimination steps.",
+                "pred_answer": "{'essential_prime_implicants': [{'product': '000a', 'contribution': {'mask': '0001', 'contribution': 'a'}}, {'product': '001b', 'contribution': {'mask': '0011', 'contribution': 'b'}}, {'product': '010c', 'contribution': {'mask': '0101', 'contribution': 'c'}}, {'product': '0c', 'contribution': {'mask': '1000', 'contribution': \"c'\"}}, {'product': '101d', 'contribution': {'mask': '1011', 'contribution': 'd'}}, {'product': '0d', 'contribution': {'mask': '1100', 'contribution': \"d'\"}}, {'product': '0e', 'contribution': {'mask': '1100', 'contribution': \"e'\"}}, {'product': '001111', 'contribution': {'mask': '001111', 'contribution': \"f'b\"}}, {'product': '001100', 'contribution': {'mask': '110000', 'contribution': \"f'b'\"}}], 'minimum_sum-of-products': [{'product': '000a + 001b + 010c', 'contribution': 4}, {'product': '000a + 001b + 010c + 0c', 'contribution': 6}, {'product': '000a + 001b + 010c + 0c + 10d + 0d / 0e', 'contribution': 11}]}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_26": {
+            "question_0": {
+                "gt_answer": "^A1. The answer depends on the definition of SCC. Typically, this is false because SCC does not distribute over addition.",
+                "pred_answer": "False",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^A2. This is generally false as complementing a cube and complementing an SCC may lead to different results.",
+                "pred_answer": "disproved",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "^A3. Usually false, as multiplying by a cube does not necessarily distribute over SCC.",
+                "pred_answer": "True",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "^A4. Generally false for similar reasons as above.",
+                "pred_answer": "True",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_27": {
+            "question_0": {
+                "gt_answer": "^A1 (a) The SDC formula involves analyzing the Boolean conditions satisfied by the network as a whole, derived from the given variables and nodes.",
+                "pred_answer": "¬x1 ∧ x2 ∧ ¬x3 ↔ x4 ∧ y1 ∧ ¬y2",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^A2 (b) Similarly, the SDC_4 can be calculated by considering only the fanins of Node 4.",
+                "pred_answer": "f4 = (∨ x1 ∧ x2 ∧ y2 ∧ ¬y3) ∨ (¬y1 ∧ ∨ ×2 ∧ ∨ x1 ∧ ¬x4)",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "^A3 (c) The ODC_4 is computed by determining how changes affect the network, focusing on Node 4's outputs.",
+                "pred_answer": "ODC_4 = {x1'x2'x3'x4', x1'x2'x3'x4, x1'x2'x3'x4'y1', x1'x2'x3'x4'y2', x1'x2'x3'x4'y1'y2', x1'x2'x3'x4'y1'y2'y3', x1'x2'x3'x4'y1'y2'y3'y4'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_28": {
+            "question_0": {
+                "gt_answer": "^Yes, ({0, 1}, ⊕, ∙, 0, 1) forms a Boolean algebra after verifying against the postulates.",
+                "pred_answer": "Yes",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^The satisfied postulates need to be verified for this specific set and operations.",
+                "pred_answer": "1, 3, and 5",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_29": {
+            "question_0": {
+                "gt_answer": "^Associativity proves (a + b) + c = a + (b + c).",
+                "pred_answer": "a + (b + c) = (a + b) + c",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^De Morgan's Theorems are used.",
+                "pred_answer": "(a + b)' = a' ∙ b'",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_30": {
+            "question_0": {
+                "gt_answer": "^The properties of ≤ are defined based on the Boolean operations and laws.",
+                "pred_answer": "True",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^Combining both conditions gives a ≤ b ∙ c.",
+                "pred_answer": "The property a ≤ b and a ≤ c if and only if a ≤ b ∙ c holds in a Boolean algebra with carrier B under the relation ≤ defined as a ∙ b' = 0. This can be proven by the principle of distribution stating that a ∙ b' = 0 if and only if a ∙ (b ∙ c' ∨ (¬b ∨ c)) = a ∙ b ∙ c' ∨ (a ∙ ¬b ∨ a ∙ c) = 0. This proves that the distributive laws hold in a Boolean algebra, thus proving the property.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_31": {
+            "question_0": {
+                "gt_answer": "^There are m^(2^n) Boolean functions due to the mapping between input and Boolean sets.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_32": {
+            "question_0": {
+                "gt_answer": "^Function f2 can be derived by evaluating terms in f1 based on y and z.",
+                "pred_answer": "x'y'z' + xy'z'",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_33": {
+            "question_0": {
+                "gt_answer": "^Plug in h(0), h(1) to g for f(x) = g(h(x)) to get f(0), f(1).",
+                "pred_answer": "f(0) = g(h(0)) = g(0) and f(1) = g(h(1)) = g(1). So, f(0) = g(0) and f(1) = g(1)",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^Negate h(0), h(1) and apply to g for f(x) = g(h'(x)).",
+                "pred_answer": "{'f(0)': \"g(h'(0))\", 'f(1)': \"g(h'(1))\"}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_34": {
+            "question_0": {
+                "gt_answer": "Proof is related to Boolean algebra properties and can be shown using truth tables or algebraic manipulation.",
+                "pred_answer": "(¬f)_v = ¬(f_v) and (f op g)_v = (f_v) op (g_v).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_35": {
+            "question_0": {
+                "gt_answer": "The function g(x, y) can be determined through examining the structure of f with respect to existential quantification.",
+                "pred_answer": "To find a function g(x,y) such that ∃x.(f(x,y,z) ∧ g(x,y)) = f(x,y,g(x,y)), you can simply set g(x,y) = y. This gives the equation ∃x.(f(x,y,z) ∧ y) = f(x,y,y) which is obviously true.",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "Onset, offset, and don't-care sets can be described based on evaluating f for different conditions of x with y and z fixed.",
+                "pred_answer": "{\"onset\": set(), \"offset\": set(), \"dont_care\": set()}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_36": {
+            "question_0": {
+                "gt_answer": "Yes, S1 forms an equivalence relation but S2 does not. S1 satisfies reflexive, symmetry, and transitive properties. S2 does not satisfy the reflexive property.",
+                "pred_answer": "No, neither S1 nor S2 form equivalence relations. S1 is not transitive because swapping x and y only twice doesn't result in the same expression. S2 is not reflexive because negating the original expression doesn't give the same expression back.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_37": {
+            "question_0": {
+                "gt_answer": "^A literal in a unate function appears in a consistent phase throughout the function, ensuring no redundant implicants exist.",
+                "pred_answer": "Yes",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_38": {
+            "question_0": {
+                "gt_answer": "A) False.",
+                "pred_answer": "False",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "B) True.",
+                "pred_answer": "False",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "C) True.",
+                "pred_answer": "True",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "D) True.",
+                "pred_answer": "Prove",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_39": {
+            "question_0": {
+                "gt_answer": "^The complement using unate recursive paradigm involves recursively breaking down the terms into simpler complements and using distribution and absorption laws.",
+                "pred_answer": "1'a + a'b + c'dd' + a'b'c' + bb'd'",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_40": {
+            "question_0": {
+                "gt_answer": "^Convert the matrix covering condition into CNF clauses, each clause representing a requirement for column inclusion such that it must cover a particular set of rows.",
+                "pred_answer": "{'encode': 'To encode the MINIMUM column covering problem into CNF formulas using a SAT solver, you can first create a clause for each row of the matrix, requiring that at least one of the columns in that row is set to true. Then, you can add negated clauses for each pair of columns, ensuring that no more than one of those columns can be set to true.', 'apply': 'Once the problem is encoded into CNF formulas, you can apply a SAT solver to find the minimum number of columns that must be set to true in order to satisfy all the clauses. The solver will return the satisfying assignment as a solution to the problem.'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_41": {
+            "question_0": {
+                "gt_answer": "^List all prime implicants, eliminate dominated rows/columns, and apply essentiality checking to achieve the minimized form. The final boolean expression is f=a'b'c'd'e + a'b'c'de' + a'b'c'de + a'b'cd'e + a'b'cde' + a'b'cde + ab'c'd'e + ab'cde + abcd'e' ",
+                "pred_answer": "000011, 100001, 111100",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_42": {
+            "question_0": {
+                "gt_answer": "(a) Prove",
+                "pred_answer": "False",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "(b) Disprove",
+                "pred_answer": "False",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "(c) Prove",
+                "pred_answer": "SCC(c ⋅ f) = c ⋅ SCC(f)",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_43": {
+            "question_0": {
+                "gt_answer": "^Kernel computation involves analyzing the shared literals across terms, resulting in reduced expression representation.",
+                "pred_answer": "KERNEL(0, F) = {abch, abge, bcdh}.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_44": {
+            "question_0": {
+                "gt_answer": "^Perform scheduling by evaluating each node as soon as possible given its dependencies.",
+                "pred_answer": "{'clockCycles': 6}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_45": {
+            "question_0": {
+                "gt_answer": "(a) Both directions",
+                "pred_answer": "True",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "(b) Only ⇒",
+                "pred_answer": "Both directions ⇔",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "(c) Only ⇔",
+                "pred_answer": "both",
+                "is_correct": false
+            },
+            "question_3": {
+                "gt_answer": "(d) Only ⇒",
+                "pred_answer": "both ⇔ hold",
+                "is_correct": false
+            },
+            "question_4": {
+                "gt_answer": "(e) Neither direction",
+                "pred_answer": "⇒",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_46": {
+            "question_0": {
+                "gt_answer": "^The Quine-McCluskey algorithm follows systematic steps for logical minimization. The essential prime implicants are derived by identifying commonalities in binary representations of minterms. The final minimized sum-of-products expressions are obtained by following these straightforward derivations.",
+                "pred_answer": "The minimum function would be 11101.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_47": {
+            "question_0": {
+                "gt_answer": "^New and existing nodes depend on the merging of f and g structures through the ITE operation.",
+                "pred_answer": "{'existing': {'nodes_F': ['F(b, c)', 'F(b, c, d)'], 'nodes_G': ['G(b)', 'G(b, c)', 'G(b, c, d)']}, 'newly_created': {'nodes_h': ['H(g(b, c, d), b, c, d)']}}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_48": {
+            "question_0": {
+                "gt_answer": "^Utilize implication and analyze conflicts to draw the graph; derive a clause based on conflict analysis.",
+                "pred_answer": "UNSAT",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_49": {
+            "question_0": {
+                "gt_answer": "^Construct AIG by creating nodes representing AND/NOT gates of z1 and z2 expressions. Use a miter to XOR the outputs, transforming the equivalence check to satisfiability in CNF, and format as DIMACS.",
+                "pred_answer": "z1 does not equal z2.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_50": {
+            "question_0": {
+                "gt_answer": "^An example of M₂ can be defined based on the design requirements.",
+                "pred_answer": "{'example_M_2': \"A Turing machine that counts up when it receives an '0' and down when it receives a '1'. This M_2 will have the same reachable states as the product machine M_1 XOR 2, meaning that two states from M_1 will be equal to a single state in M_2.\", 'explaination': 'Turing machine works by following certain rules of the game, M_1 and M_2 should have the same states in order for R_1, R_2, and R_1 XOR 2 to be the same. If states are different, even if they have the same rules, reachable states will not be equal.'}",
+                "is_correct": false
+            },
+            "question_1": {
+                "gt_answer": "^There can be two such finite state machines; the explanation involves understanding state transitions and reachability sets.",
+                "pred_answer": "Yes, there can be two finite state machines M₁ and M₂ with R₁ × R₂ ⊂ R₁×₂. The reachable states of the product machine, R₁×₂, include all possible pairs of states from machines M₁ and M₂. Even if there are duplicates in these pairs, the set of all possible pairs will be larger than R₁ × R₂. Therefore, there can exist examples where R₁ × R₂ is a strict subset of R₁×₂.",
+                "is_correct": false
+            },
+            "question_2": {
+                "gt_answer": "^An n-state machine can be constructed with specific state transition rules that achieve the desired time complexity for reachability analysis.",
+                "pred_answer": "An example M₂ of an 8-state, 000, 001,..., 111, up-down counter that makes the reachable states of product machine M₁×₂ be the same as M₁'s reachable states. A n-state finite state machine with n states should be able to solve these problems in O(n) steps forward and O(1) steps backward in reachability analysis.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_51": {
+            "question_0": {
+                "gt_answer": "^Partition 1: {a, b, c}, {d, e, f}. Partition 2: {a, b, f}, {c, d, e}. Continue steps to finalize partitions. Final partition: {d ,b, c}, {a, e, f}",
+                "pred_answer": "The best partition is {a, b, c} and {d, e, f}.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        }
+    }
+}

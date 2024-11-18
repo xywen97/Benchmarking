@@ -1,3 +1,6 @@
+# transformers=4.44
+# env: benchmark
+
 from flask import Flask, request, jsonify
 import torch
 from transformers import pipeline
@@ -7,7 +10,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 app = Flask(__name__)
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 model_path = "/data/xiangyu/benchmarkModels/CHENCHEN/huggingface/hub/models--internlm--internlm-chat-20b/snapshots/ce6e0150bc4b525c44f6e450569a05705dcb4e72"
 

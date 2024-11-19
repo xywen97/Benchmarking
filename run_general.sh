@@ -58,7 +58,7 @@
 # python main.py --field general --model gpt4o (Done)
 # python main.py --field general --model gpt4_turbo (Done)
 # python main.py --field general --model gpt4v (Done)
-python main.py --field general --model qwen_2_72b_instruct
+# python main.py --field general --model qwen_2_72b_instruct
 
 # 2024.11.16
 # python main.py --field general --model gpt35 (Done)

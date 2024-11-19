@@ -6,6 +6,67 @@
 
 The Multimodal EDA Benchmarking project aims to provide a framework for evaluating and comparing the performance of different models on multimodal data. This project supports various data formats and models, helping researchers and developers better understand the capabilities of models in handling multimodal data.
 
+## Final Model List:
+```
+GPT
+    3.5-Turbo  (text-only)
+    4 (base64)
+    4-Turbo (base64)
+    4v (base64)
+    4o (base64)
+Reka
+    Core (base64)
+    Flash (base64)
+    Edge (base64)
+Gemini
+    1.5 Pro (text-only)
+Claude3.5
+    Sonnet (text-only)
+MiniGPT4
+    Vicuna-7B (image-encoder)
+QWen
+    2-0.5B-Instruct (text-only)
+    2-7B-Instruct (text-only)
+    2-72B-Instruct (text-only)
+    VL (image-encoder)
+    VL-Chat (image-encoder)
+InternLM
+    Chat-20B (text-only)
+    XComposer-VL-7B (image-encoder)
+InternVL
+    2-8B (image-encoder)
+    2-40B (image-encoder)
+InstructBLIP
+    Flan-T5-XL (image-encoder)
+    Flan-T5-XXL (image-encoder)
+Blip2
+    Flan-T5-XL (image-encoder)
+    Flan-T5-XXL (image-encoder)
+LlaMa
+    2-7B-Chat-HF (text-only)
+    2-13B-Chat-HF (text-only)
+    3-8B-Instruct (text-only)
+    3.1-8B-Instruct (text-only)
+    3.2-11B-Vision-Instruct (image-encoder)
+    3.2-90B-Vision-Instruct (image-encoder)
+MiniCPM
+    1B-SFT (text-only)
+    2B-SFT (text-only)
+    3-4B (text-only)
+    V (image-encoder)
+    V2 (image-encoder)
+    LlaMa-3-V2.5 (image-encoder)
+YiVL
+    6B (image-encoder)
+    34B (image-encoder)
+YiChat
+    6B (text-only)
+ChatGLM3
+    6B (text-only)
+Kosmos
+    2 (image-encoder)
+```
+
 ## Tested Models
 
 #### 2024.11.19
@@ -61,6 +122,7 @@ The Multimodal EDA Benchmarking project aims to provide a framework for evaluati
 - [x] miniCPM-V2
 - [x] yi vl 6b
 
+#### Running scripts
 ```
 # python main.py --field rtl --model reka_core
 # python main.py --field general --model reka_flash (Done)

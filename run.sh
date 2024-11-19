@@ -27,7 +27,8 @@
 # python main.py --field rtl --model reka_edge (Done)
 # python main.py --field rtl --model blip2_flan_t5_xl (Done)
 # python main.py --field rtl --model blip2_flan_t5_xxl (Done)
-# python main.py --field rtl --model gemini_1_0_pro
+# python main.py --field rtl --model gemini_1_5_pro
+# python main.py --field rtl --model claude_3_sonnet
 # python main.py --field rtl --model instructblip_flan_t5_xl (Done)
 # python main.py --field rtl --model kosmos2_patch14_224 (Done)
 # python main.py --field rtl --model minicpm1b_sft_bf16 (Done)
@@ -51,7 +52,7 @@
 # python main.py --field rtl --model internvl_mini_chat_2b_v1_5 (spec)
 # python main.py --field rtl --model internvl2_40b (spec)
 # python main.py --field rtl --model internlm_xcomposer_vl_7b (Done)
-# python main.py --field rtl --model internlm_xcomposer2_vl_7b --start 36
+# python main.py --field rtl --model internlm_xcomposer2_vl_7b --start 36 (Done)
 # python main.py --field rtl --model qwen_2_7b_instruct (Done)
 # python main.py --field rtl --model qwen_vl_chat (Done)
 # python main.py --field rtl --model qwen_vl (Done)

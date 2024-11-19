@@ -374,7 +374,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
                 try:
                     if model_name.startswith("gemini") or model_name.startswith("claude"):
                         response = query_model(entire_question, images, model_name=model_name)
-                        time.sleep(15)
+                        # time.sleep(15)
                     elif model_name.startswith("reka"):
                         response = query_model(entire_question, images, model_name=model_name)
                     else:

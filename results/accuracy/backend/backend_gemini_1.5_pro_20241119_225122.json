@@ -1,0 +1,277 @@
+{
+    "Accuracy": 0.0,
+    "Comparison": {
+        "backend_208": {
+            "question_0": {
+                "gt_answer": "The metal layer on which to place the I/O pins horizontally (top and bottom of the die).",
+                "pred_answer": "In OpenROAD's floorplanning, the IO_PLACER_H variable determines which horizontal IO placement algorithm to use.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_209": {
+            "question_0": {
+                "gt_answer": "The metal layer on which to place the I/O pins vertically (sides of the die).",
+                "pred_answer": "In OpenROAD's floorplanning, `IO_PLACER_V` is not a standard or documented variable.  Floorplanning variables typically deal with core area, aspect ratio, and pin placement strategies, but `IO_PLACER_V` doesn't fit within this recognized set.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_210": {
+            "question_0": {
+                "gt_answer": "Skip loading timing for a faster GUI load.",
+                "pred_answer": "In OpenROAD's Floorplan exploration, GUI_NO_TIMING is a variable that, when set to 1 (true), disables timing-driven floorplanning.  This means the floorplanner will not consider timing constraints during optimization and will focus primarily on other metrics like area, wirelength, and density.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_211": {
+            "question_0": {
+                "gt_answer": "Skip the initial non-IO based global placement if IO constraints are present.",
+                "pred_answer": "The variable `HAS_IO_CONSTRAINTS` indicates whether input/output (IO) pins have pre-defined location constraints.  When true, the placement engine must place IO pins at their specified locations. When false, the placement engine can freely place IO pins, usually along the periphery of the die or macro.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_212": {
+            "question_0": {
+                "gt_answer": "Cell padding on both sides in site widths to ease routability during global placement.",
+                "pred_answer": "The `CELL_PAD_IN_SITES_GLOBAL_PLACEMENT` variable in OpenROAD's Placement tool dictates whether cell padding should be considered during global placement.  When set to `true`, cells are treated as larger than their actual dimensions, effectively creating a buffer zone around them.  This padding helps prevent overlaps and congestion, ultimately leading to a more routable design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_213": {
+            "question_0": {
+                "gt_answer": "Cell padding on both sides in site widths to ease routability in detail placement.",
+                "pred_answer": "The variable `CELL_PAD_IN_SITES_DETAIL_PLACEMENT`, when set to true in OpenROAD's placement stage, instructs the detailed placement engine to consider cell padding. This means cells will be placed within their respective sites (rows) while maintaining the specified padding.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_214": {
+            "question_0": {
+                "gt_answer": "The desired placement density of cells. It reflects how spread the cells would be on the core area. 1.0 = closely dense. 0.0 = widely spread.",
+                "pred_answer": "PLACE_DENSITY is a parameter in OpenROAD's placement stage that controls the target density of the placement. It influences how tightly packed the standard cells are within the placement area.  A higher value leads to a denser placement.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_215": {
+            "question_0": {
+                "gt_answer": "Check the lower boundary of the PLACE_DENSITY and add PLACE_DENSITY_LB_ADDON if it exists.",
+                "pred_answer": "The `PLACE_DENSITY_LB_ADDON` variable in OpenROAD's placement tool specifies an additional buffer to the lower bound of the target density during global placement.  It influences the density map generation.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_216": {
+            "question_0": {
+                "gt_answer": "Remove power grid vias which generate DRC violations after detailed routing.",
+                "pred_answer": "The `REPAIR_PDN_VIA_LAYER` variable in OpenROAD's placement stage specifies the highest metal layer to be used for automated via insertion during power delivery network (PDN) repair after global placement.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_217": {
+            "question_0": {
+                "gt_answer": "Use additional tuning parameters during global placement other than default args defined in gloabl_place.tcl.",
+                "pred_answer": "GLOBAL_PLACEMENT_ARGS is a variable in OpenROAD flow that allows users to pass additional arguments directly to the global placement engine. This offers flexibility to control the placement process by utilizing engine-specific options which may not be directly exposed through the OpenROAD API.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_218": {
+            "question_0": {
+                "gt_answer": "Enable detail placement with improve_placement feature.",
+                "pred_answer": "In OpenROAD's placement tool, the variable `ENABLE_DPO` enables/disables Detailed Placement Optimization (DPO).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_219": {
+            "question_0": {
+                "gt_answer": "Specifies how far an instance can be moved when optimizing.",
+                "pred_answer": "DPO_MAX_DISPLACEMENT in OpenROAD's placement stage refers to the maximum displacement allowed for any instance during the detailed placement optimization (DPO) phase. It constrains how far a cell can be moved from its initial position.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_220": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts (ORFS), the GPL_TIMING_DRIVEN variable specifies whether the global placer (gpl) should use timing driven-placement. Timing-driven placement will cause gpl to ocassionally run static timing analysis (sta) during placement in order to determine the timing on each net. gpl will then reweight the nets based on how timing-critical they are. This process improves the timing of the netlist by decreasing the distance between timing-critical cells, but it also causes an increase in gpl runtime due to running timing analysis.",
+                "pred_answer": "GPL_TIMING_DRIVEN is a boolean variable in OpenROAD's global placement stage that, when set to true, enables timing-driven placement. This means the placement engine will prioritize minimizing wire delays and meeting timing constraints during the initial placement of cells.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_221": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts (ORFS), the GPL_ROUTABILITY_DRIVEN variable specifies whether the global placer (gpl) should use routability driven-placement. Routability-driven placement will cause gpl to ocassionally run global routing (grt) during placement in order to determine routing congestion hotspots. gpl will then reweight the nets based on how congestion data. This process improves the routability of the netlist by spacing out cells in routing congested areas, but it also causes an increase in gpl runtime due to running global routing.",
+                "pred_answer": "GPL_ROUTABILITY_DRIVEN is a boolean variable in OpenROAD's global placement that controls whether or not to optimize placement for routability. When set to true, the placement engine considers routing congestion and wirelength during optimization, attempting to generate a placement solution that is easier to route.  If false, the placer prioritizes other objectives, like minimizing wirelength or meeting timing constraints, without explicitly considering routability.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_222": {
+            "question_0": {
+                "gt_answer": "Specifies a capacitance margin when fixing max capacitance violations. This option allow you to overfix.",
+                "pred_answer": "The `CAP_MARGIN` variable in OpenROAD's placement stage specifies the extra space allocated for decap (decoupling capacitance) insertion during placement.  This value is expressed as a percentage of the total core area.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_223": {
+            "question_0": {
+                "gt_answer": "Specifies a slew margin when fixing max slew violations. This option allow you to overfix.",
+                "pred_answer": "SLEW_MARGIN is a parameter during placement in OpenROAD that adds a margin to the slew (transition time) of a net.  It influences the placement by encouraging the placer to place cells driving high-slew nets closer to their sinks to minimize delay and improve timing.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_224": {
+            "question_0": {
+                "gt_answer": "Override clock_tree_synthesis arguments",
+                "pred_answer": "The CTS_ARGS variable in OpenROAD allows users to pass custom arguments directly to the underlying clock tree synthesis (CTS) engine.  This provides flexibility for controlling specific behaviors and options of the chosen CTS tool, which might not be directly exposed through OpenROAD's configuration parameters.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_225": {
+            "question_0": {
+                "gt_answer": "The CTS_BUF_CELL variable sets the root buffer cell used in the clock tree during clock tree synthesis (CTS)",
+                "pred_answer": "In OpenROAD's ORFS (OpenROAD Flow Script), `CTS_BUF_CELL` specifies the name of the buffer cell to be used during the clock tree synthesis (CTS) stage.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_226": {
+            "question_0": {
+                "gt_answer": "The FILL_CELLS variable holds a list of cell names to use as filler cells. Wildcard patterns (*) are supported. Fill cells are used to fill empty cell sites which aids in satisfying design rules and density rules.",
+                "pred_answer": "In OpenROAD, the `FILL_CELLS` variable within the ORFS (OpenROAD Flow Settings) configuration specifies the names of standard cell types that should be used as filler cells during the placement and routing stages of the physical design flow.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_227": {
+            "question_0": {
+                "gt_answer": "Specifies a time margin for the slack when fixing hold violations. This option allow you to overfix.",
+                "pred_answer": "The OpenROAD CTS variable `HOLD_SLACK_MARGIN` is used to set a margin on hold slack during clock tree synthesis.  It ensures that the hold time constraint is met with some extra margin to account for variations and uncertainties.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_228": {
+            "question_0": {
+                "gt_answer": "Specifies a time margin for the slack when fixing setup violations.",
+                "pred_answer": "The OpenROAD CTS variable `SETUP_SLACK_MARGIN` is used to add a margin to the setup time requirement during clock tree synthesis.  This helps to ensure that the generated clock tree meets timing even under process variations and other uncertainties.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_229": {
+            "question_0": {
+                "gt_answer": "Do not use gate cloning transform to fix timing violations (default: use gate cloning)",
+                "pred_answer": "In OpenROAD CTS, the variable `SKIP_GATE_CLONING` prevents the clock tree synthesis tool from creating copies (clones) of clock gates during optimization.  This is typically used to preserve existing clock gating structures.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_230": {
+            "question_0": {
+                "gt_answer": "Do not use pin swapping as a transform to fix timing violations (default: use pin swapping)",
+                "pred_answer": "The OpenROAD CTS variable `SKIP_PIN_SWAP` prevents the clock tree synthesis (CTS) tool from swapping clock pins during the optimization process.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_231": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts, the TNS_END_PERCENT variable specifies what percent of violating timing paths will be fixed during timing optimization. TNS_END_PERCENT must be a floating point value between 0-100. However, even if TNS_END_PERCENT is 0, the worst path will always be fixed. The purpose of this flag is to allow the user some control over how much runtime and logic area is spent on timing optimization, with a higher value leading to more runtime/area and a lower value leading to less runtime/area.",
+                "pred_answer": "In OpenROAD CTS, the variable `TNS_END_PERCENT` specifies the percentage of the clock period at which the total negative slack (TNS) should be calculated and optimized.  Instead of optimizing TNS at the very end of the clock period (100%), it targets an earlier point.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_232": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts, the EQUIVALENCE_CHECK variable toggles whether a logical equivalence check is run after timing optimization to ensure logical correctness of the circuit. If EQUIVALENCE_CHECK is 1, the check is performed. If EQUIVALENCE_CHECK is any other value or unset, the check is not run. The default value is unset.",
+                "pred_answer": "The OpenROAD CTS variable `EQUIVALENCE_CHECK` enables logical equivalence checking between the pre- and post-CTS netlists. This ensures that the clock tree insertion hasn't introduced any unintended logical changes to the design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_233": {
+            "question_0": {
+                "gt_answer": "In OpenROAD Flow Scripts, the REMOVE_CELLS_FOR_EQY variable sets the list of cells to remove from the verilog netlist file produced specifically for netlist equivalence checking. Netlist equivalence checking is performed with the Yosys EQY tool. Wildcard patterns (*) are supported. This variable is passed directly to write_verilog -remove_cells <>.",
+                "pred_answer": "The OpenROAD CTS variable `REMOVE_CELLS_FOR_EQY` controls whether the clock tree synthesis (CTS) tool should remove existing clock buffers/inverters in the design before building the clock tree.  When set to `true`, it allows the CTS tool to start with a clean slate, potentially leading to a better clock tree.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_234": {
+            "question_0": {
+                "gt_answer": "This command creates power domain for a group of modules.",
+                "pred_answer": "In an UPF (Unified Power Format) file used within OpenROAD and other EDA tools, the `create_power_domain` command defines a power domain, which is a hierarchical group of logic elements and their associated power supply network.  It essentially sets a boundary within which specific power management strategies can be applied.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_235": {
+            "question_0": {
+                "gt_answer": "This command creates logic port. Direction must be specified from: in, out, inout.",
+                "pred_answer": "The `create_logic_port` command in a UPF (Unified Power Format) file, when used within the OpenROAD flow, defines a logical connection point for power domains.  It doesn't directly create a physical port in the layout but rather specifies how power and ground nets should be connected to the design's logic, enabling power intent analysis and optimization during placement and routing.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_236": {
+            "question_0": {
+                "gt_answer": "Restructuring (the rst module) uses logic resynthesis to optimize combinational logic paths. Restructuring can be performed in either area or delay mode. Area mode will optimize the logic cell area of the paths, whereas delay mode will optimize for delay. An Area Mode Example: restructure -liberty_file ckt.lib -target area -tielo_pin ABC -tiehi_pin DEF. For Timing Mode Example: restructure -liberty_file ckt.lib -target delay -tielo_pin ABC -tiehi_pin DEF -slack_threshold 1 -depth_threshold 2.",
+                "pred_answer": "Restructuring in OpenROAD refers to the process of optimizing the placement and routing of the netlist to improve key metrics such as wirelength, timing, and congestion. It typically involves detailed placement legalization, global routing, and detailed routing stages.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_237": {
+            "question_0": {
+                "gt_answer": "Yosys is a logic synthesis tool which is responsible for transforming register transfer-level (RTL) code into a gate-level netlist. OpenROAD is a place and route (P&R) tool which is responsible for implementing a gale-level netlist into a chip layout. Yosys is developed by the YosysHQ organization whereas OpenROAD is developed by The OpenROAD Project. OpenROAD Flow Scripts (ORFS) makes use of both of these tools (as well as KLayout) to form a full RTL-to-GDS flow.",
+                "pred_answer": "Yosys is a logic synthesis tool that takes RTL designs as input and generates a gate-level netlist. OpenROAD, on the other hand, is a complete RTL-to-GDSII flow that includes Yosys as one of its components. OpenROAD uses Yosys for logic synthesis but also incorporates other tools for floorplanning, placement, routing, and other physical design steps.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_238": {
+            "question_0": {
+                "gt_answer": "The Resizer module (rsz) can modify the netlist by inserting or removing buffers, as well as increasing or decreasing the drive strength of cells. rsz does not save a log of which instances were modified, because it would create an excessively long log file. A recommended workaround solution would be to save a layout file (such as DEF or ODB) before performing resizing, and then compare it to a layout file after resizing.",
+                "pred_answer": "No, the `resize` command in OpenROAD doesn't directly provide information about which specific instances were modified.  You can indirectly infer changes by comparing pre- and post-resize databases.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_239": {
+            "question_0": {
+                "gt_answer": "In OpenROAD, database units (DBU) are an integer representation of distance on a chip. In the LEF/DEF format, each technology specifies a conversion factor in terms of DBU/micron. For example, if a technology used a conversion factor of 2000 DBU/micron, that would mean that each DBU represents 0.0005 micron or 0.5 nm. The purpose for using DBU is that it enables faster calculation and no loss of precision compared to floating point representations.",
+                "pred_answer": "DBU stands for Database Unit. It is the smallest unit of measurement used in a layout database.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_240": {
+            "question_0": {
+                "gt_answer": "In OpenROAD, an integer DBU value can be converted to a floating point micron value by using the ord::dbu_to_microns function",
+                "pred_answer": "In OpenROAD, you convert from DBU (Database Units) to microns by dividing the DBU value by the LEF/DEF database units per micron (DBU_PER_MICRON) value.  This value is specified in the LEF file and typically 2000, meaning 2000 DBU represents 1 micron.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "backend_241": {
+            "question_0": {
+                "gt_answer": "OpenROAD Flow Scripts (ORFS) includes Makefile targets to open the GUI after each step. You can use the command make gui_*, where * is the name of the flow step (e.g. make_floorplan).",
+                "pred_answer": "No, there is no built-in GUI within OpenROAD or ORFS (OpenROAD Flow Script).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        }
+    }
+}

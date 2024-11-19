@@ -27,7 +27,8 @@
 # python main.py --field general --model reka_edge (Done)
 # python main.py --field general --model blip2_flan_t5_xl (Done)
 # python main.py --field general --model blip2_flan_t5_xxl (Done)
-# python main.py --field rtl --model gemini_1_0_pro
+# python main.py --field general --model gemini_1_5_pro
+# python main.py --field general --model claude_3_sonnet
 # python main.py --field general --model instructblip_flan_t5_xl (Done)
 # python main.py --field general --model kosmos2_patch14_224 (Done)
 # python main.py --field general --model minicpm1b_sft_bf16
@@ -38,9 +39,9 @@
 # python main.py --field general --model gpt4 (Done)
 # python main.py --field general --model yi_chat_6b (Done)
 # python main.py --field general --model yi_vl_34b (Done)
-# python main.py --field general --model qwen_2_5_7b_instruct
-# python main.py --field general --model internlm2_chat_7b
-# python main.py --field general --model internlm2_5_chat_7b
+# python main.py --field general --model qwen_2_5_7b_instruct (Done)
+# python main.py --field general --model internlm2_chat_7b (Done)
+# python main.py --field general --model internlm2_5_chat_7b (Done)
 
 
 # 2024.11.18
@@ -49,10 +50,10 @@
 # python main.py --field rtl --model llama3_1_70b_instruct
 # python main.py --field general --model llama3_8b_instruct (Done)
 # python main.py --field general --model llama3_2_11b_vision_instruct (Done)
-# python main.py --field general --model llama3_2_90b_vision_instruct
+# python main.py --field general --model llama3_2_90b_vision_instruct (Done)
 # python main.py --field general --model intern_chat_20b (Done)
 # python main.py --field rtl --model internvl_mini_chat_2b_v1_5
-# python main.py --field general --model internvl2_40b
+# python main.py --field general --model internvl2_40b (Done)
 # python main.py --field general --model internlm_xcomposer_vl_7b (Done)
 # python main.py --field rtl --model internlm_xcomposer2_vl_7b
 # python main.py --field general --model qwen_2_7b_instruct (Done)
@@ -61,7 +62,7 @@
 # python main.py --field general --model gpt4o (Done)
 # python main.py --field general --model gpt4_turbo (Done)
 # python main.py --field general --model gpt4v (Done)
-# python main.py --field general --model qwen_2_72b_instruct
+# python main.py --field general --model qwen_2_72b_instruct (Done)
 
 # 2024.11.16
 # python main.py --field general --model gpt35 (Done)

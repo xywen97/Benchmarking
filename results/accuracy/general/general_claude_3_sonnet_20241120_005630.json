@@ -1,0 +1,1529 @@
+{
+    "Accuracy": 0.3333333333333333,
+    "Comparison": {
+        "general_401": {
+            "question_0": {
+                "gt_answer": " \n\nThe polarization of an antenna refers to the orientation of the electromagnetic waves it transmits or receives. There are several common polarization methods used in antennas:\n\n1. Linear Polarization: This method involves orienting the antenna elements along a single plane, resulting in a linearly polarized wave. The direction of the electric field vector determines the polarization angle.\n\n2. Circular Polarization: In this method, the antenna radiates left-hand circularly polarized (LHCP) or right-hand circularly polarized (RHCP) waves. These waves have a rotating electric field vector, which can be detected by a receiving antenna with the appropriate polarization.\n\n3. Elliptical Polarization: This type of polarization occurs when the antenna radiates elliptically polarized waves. The major axis of the ellipse defines the polarization angle, while the minor axis determines the degree of circularity.\n\n4. Dual Polarization: Some antennas are designed to transmit or receive signals with two different polarization states simultaneously. This allows for more flexibility in communication systems and reduces the impact of polarization mismatch between transmitter and receiver.\n\n5. Cross-Polarization: This technique involves orienting the antenna elements at an angle to the main polarization. It is commonly used to reduce interference from other sources transmitting in the same frequency band but with different polarization.\n",
+                "pred_answer": "1. Linear Polarization (Vertical and Horizontal)\n2. Circular Polarization (Right-hand and Left-hand)\n3. Elliptical Polarization\n4. Slant Polarization",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_402": {
+            "question_0": {
+                "gt_answer": " \n\nAntenna efficiency is a measure of how effectively an antenna converts the radio frequency (RF) power applied at its terminals into radiated electromagnetic (EM) waves. It is defined as the ratio of the total power radiated by the antenna to the net power accepted by it from the connected transmitter or receiver. In other words, it represents the percentage of the input RF power that is actually transmitted or received by the antenna in the form of EM radiation. A higher antenna efficiency indicates better performance and less loss of signal strength during transmission or reception.\n",
+                "pred_answer": "Antenna efficiency is the ratio of the power radiated by an antenna to the total input power supplied to the antenna, typically expressed as a percentage.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_403": {
+            "question_0": {
+                "gt_answer": " \n\nThe distinction between far field and near field refers to the region around an antenna where electromagnetic waves propagate. The boundary between these two regions is determined by the wavelength of the signal being transmitted or received. In the far field, also known as the Fraunhofer region, the wavefronts are nearly planar and the electric and magnetic fields are perpendicular to each other. This region extends from a distance equal to 2D^2 / λ, where D is the largest dimension of the antenna and λ is the wavelength of the signal. Beyond this distance, the radiation pattern becomes approximately constant and independent of the size of the antenna. On the other hand, in the near field, also known as the Fresnel region, the wavefronts are curved and the electric and magnetic fields are not perpendicular to each other. This region extends up to a distance of approximately 0.62D^3 / λ, which is much shorter than the far field distance. Near-field coupling occurs when antennas are placed close together within this region, resulting in strong mutual interactions between them. Understanding the distinction between far field and near field is crucial for designing efficient antenna systems and analyzing their performance in various applications.\n",
+                "pred_answer": "In electromagnetic radiation, the near field is the region close to an antenna where the electric and magnetic fields do not behave like propagating waves, while the far field is the region sufficiently distant from the antenna where electromagnetic waves propagate and radiate as plane waves, following the inverse square distance law.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_404": {
+            "question_0": {
+                "gt_answer": " \n\n1. Frequency: The operating frequency of the antenna, which determines its size, radiation pattern, and bandwidth.\n2. Gain: The ratio of the antenna's directivity in a given direction to the maximum directivity of any possible isotropic antenna.\n3. Radiation Pattern: A graphical representation of the directional characteristics of the antenna, showing how much power is radiated in different directions relative to the antenna's main beam.\n4. Efficiency: The ratio of the total power radiated by the antenna to the net power accepted by it from the connected transmitter or receiver.\n5. Bandwidth: The range of frequencies over which the antenna can effectively operate, determined by factors such as the antenna's physical dimensions and the matching network between the antenna and the feedline.\n6. Polarization: The orientation of the electric field generated by the antenna, which can be linear (horizontal or vertical) or circular.\n7. Impedance: The complex impedance presented by the antenna at its terminals, which must be matched to the characteristic impedance of the connecting transmission line for optimal performance.\n8. Directivity: A measure of the antenna's ability to concentrate power in a particular direction, typically expressed as a 3-dimensional radiation pattern plot.\n9. Effective Area: The effective area of the antenna, which represents the portion of the antenna's aperture that captures incoming electromagnetic waves.\n10. Beamwidth: The angular width of the antenna's main lobe, measured between the points where the radiation intensity falls to half of its peak value.\n",
+                "pred_answer": "['Frequency', 'Gain', 'Bandwidth', 'Polarization', 'Radiation Pattern']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_405": {
+            "question_0": {
+                "gt_answer": " \n\n- Adjusting the length of the stubs connected to the ground plane can be used to tune the resonant frequency of the PIFA antenna.\n\n- Changing the dimensions of the radiating patch, such as its width or length, can also affect the resonant frequency and radiation pattern of the PIFA antenna.\n\n- The distance between the radiating patch and the ground plane can be varied to modify the antenna's impedance characteristics and radiation efficiency.\n\n- Adding a matching network, such as a series inductor or parallel capacitor, can be employed to optimize the antenna's impedance matching and improve its performance at specific frequencies.\n",
+                "pred_answer": "['Inset feed technique', 'Shorting pin placement', 'Impedance transformer', 'Matching stub', 'Capacitive loading', 'Series or parallel tuning networks']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_406": {
+            "question_0": {
+                "gt_answer": " A coupled line coupler is a passive microwave device used for power division or power combining in various applications such as directional couplers, power dividers, and hybrid couplers. It consists of two parallel transmission lines that are closely spaced over a certain length, allowing electromagnetic energy to couple between them. The coupling strength depends on factors like the spacing between the lines, their physical dimensions, and the frequency of operation. Coupled line couplers can be designed to provide different coupling ratios, isolation levels, and phase relationships between the output ports.\n",
+                "pred_answer": "A coupled line coupler is a passive microwave circuit component that enables power division or coupling between two transmission lines through electromagnetic or electrostatic interaction.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_407": {
+            "question_0": {
+                "gt_answer": " \n\nAntennas are passive devices because they do not have any active components or power sources within them. However, antennas can still exhibit gain, which refers to the increase in signal strength as it propagates from the antenna's input to its output. This apparent contradiction arises from the fact that antennas are designed to efficiently transfer electromagnetic energy from free space into a transmission line or vice versa.\n\nWhen an antenna is connected to a transmission line, such as a coaxial cable, it acts as a transducer, converting the electromagnetic waves in free space into electrical signals on the transmission line, or vice versa. The key point here is that the antenna does not generate new electromagnetic energy; rather, it transfers existing energy from one form (electromagnetic) to another (electric).\n\nThe efficiency of this energy transfer process depends on various factors, including the antenna's geometry, orientation, and impedance matching with the transmission line. When an antenna is well-designed and properly matched, it can effectively couple the incoming electromagnetic waves to the transmission line, resulting in a higher signal level at the antenna's output compared to its input.\n\nThis increased signal level is often referred to as \"antenna gain,\" even though it is not due to any active amplification within the antenna itself. Instead, antenna gain is a consequence of the antenna's ability to efficiently transfer energy between the electromagnetic field and the transmission line, without introducing significant losses.\n\nIn summary, while antennas are passive devices, they can exhibit gain because they act as efficient transducers, transferring electromagnetic energy from free space to a transmission line or vice versa. This energy transfer process allows for an increase in signal strength at the antenna's output relative to its input, despite the absence of any active components inside the antenna.\n",
+                "pred_answer": "Antenna gain is related to directivity, not power amplification.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_408": {
+            "question_0": {
+                "gt_answer": " \n\nTo properly adjust an antenna to match:\n\n1. Identify the type of antenna you have: There are several types of antennas such as dipole, monopole, loop, or yagi. Each type requires different adjustments for proper matching.\n\n2. Use an SWR meter: An SWR (standing wave ratio) meter is used to measure the standing waves on the transmission line. It will indicate if the antenna is matched correctly or not.\n\n3. Adjust the length of the antenna: If the antenna is too short or too long, it can cause mismatch. You can adjust its length by cutting off some sections or adding extensions until the correct length is achieved.\n\n4. Rotate the antenna: The direction in which the antenna is pointing can also affect its performance. Try rotating it slightly to see if there is any improvement in the signal strength or quality.\n\n5. Check the ground plane: For monopole antennas, a good ground plane is essential for proper matching. Make sure the ground plane is large enough and connected properly to the antenna.\n\n6. Use antenna tuner: In case none of the above methods work, you may consider using an antenna tuner. This device helps to match the antenna to the feedline by adjusting its capacitance and inductance.\n\nBy following these steps, you should be able to adjust the antenna to achieve optimal matching.\n",
+                "pred_answer": "Consult the antenna's user manual, align it towards the broadcast tower, and fine-tune the positioning to maximize signal reception.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_409": {
+            "accuracy": 0
+        },
+        "general_410": {
+            "accuracy": 0
+        },
+        "general_411": {
+            "accuracy": 0
+        },
+        "general_412": {
+            "accuracy": 0
+        },
+        "general_413": {
+            "accuracy": 0
+        },
+        "general_414": {
+            "accuracy": 0
+        },
+        "general_415": {
+            "accuracy": 0
+        },
+        "general_416": {
+            "accuracy": 0
+        },
+        "general_417": {
+            "accuracy": 0
+        },
+        "general_418": {
+            "question_0": {
+                "gt_answer": " \n\nAXI3 (Advanced eXtensible Interface version 3) and AXI4 are both protocols used for communication in electronic systems, specifically in the field of Field Programmable Gate Arrays (FPGAs). The main differences between them lie in their features and capabilities.\n\nAXI3 was introduced as a successor to the previous AXI2 protocol. It supports up to four independent channels for data transfer: read address channel, write address channel, read data channel, and write data channel. Each channel has its own set of control signals, allowing for simultaneous read and write operations. However, AXI3 does not support burst transfers, which can be inefficient for certain types of data transactions.\n\nOn the other hand, AXI4 builds upon the features of AXI3 while adding several enhancements. One significant improvement is the addition of burst transfers, which allow for multiple data words to be transferred consecutively using a single set of control signals. This reduces the overhead associated with setting up each transaction separately, resulting in more efficient data transfer. Additionally, AXI4 includes support for split transactions, where a single transaction can be split across multiple clock cycles, enabling higher bandwidth and improved performance.\n\nAnother key feature of AXI4 is the introduction of lock and unlock signals, which provide additional synchronization mechanisms for shared resources. These signals help ensure that only one master can access a particular slave at any given time, preventing conflicts and ensuring data integrity.\n\nIn summary, AXI4 offers enhanced features such as burst transfers, split transactions, and lock/unlock signals compared to AXI3, making it better suited for applications requiring high-performance, efficient data transfer, and robust synchronization.\n",
+                "pred_answer": "The key differences between AXI3 and AXI4 include signal modifications, optional burst support, improved performance features, and enhanced flexibility in interconnect design.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_419": {
+            "question_0": {
+                "gt_answer": " \n\nAXI (Advanced eXtensible Interface) and AHB (Advanced High-performance Bus) are both bus protocols used in System-on-Chip (SoC) designs. However, they differ in their design philosophy and intended use cases.\n\nAXI was designed as a high-performance, high-bandwidth interface protocol for connecting components within an SoC. It supports multiple outstanding transactions, allowing for concurrent data transfers and improved overall system throughput. AXI also includes features such as burst transactions, which enable efficient transfer of large blocks of data, and split transactions, which allow for pipelined operation and reduced latency.\n\nIn contrast, AHB was originally developed as a simpler, lower-cost alternative to AXI. It focuses on providing a basic, reliable interconnect mechanism for connecting peripherals and other components within an SoC. While AHB can support higher bandwidths compared to its predecessor, AMBA, it lacks some of the advanced features found in AXI, such as multi-master arbitration and split transactions.\n\nThe key advantage of AXI over AHB lies in its ability to handle complex, high-performance communication scenarios efficiently. The combination of multiple outstanding transactions, burst transactions, and split transactions enables AXI to achieve significantly higher bandwidth and lower latency compared to AHB. This makes AXI well-suited for applications that require fast data transfer rates and minimal latency, such as high-speed memory interfaces or communication controllers.\n\nHowever, this comes at the cost of increased complexity and resource utilization. Implementing AXI requires more hardware resources than implementing AHB, as it needs additional control signals, buffers, and logic to support the advanced transaction features. Additionally, AXI's higher performance often leads to higher power consumption compared to AHB.\n\nTherefore, the choice between AXI and AHB depends on the specific requirements of the application. If high-performance, low-latency data transfer is critical, then AXI is the preferred option. On the other hand, if simplicity and cost-effectiveness are paramount, AHB may be a better fit.\n",
+                "pred_answer": "AXI provides separate read/write channels, supports out-of-order transactions, allows multiple outstanding transactions, and has wider data paths compared to AHB, which supports only single-channel, in-order transactions. APB is a simpler, lower-bandwidth bus primarily used for accessing low-speed peripherals. These architectural differences mean AXI can achieve significantly higher bandwidth and lower latency, especially in complex multi-master system-on-chip (SoC) designs.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_420": {
+            "question_0": {
+                "gt_answer": " \n\nBack-pressure is a technique used in AXI Stream interfaces to control data flow between components. It allows the receiving component to signal to the transmitting component when it is ready to receive more data. This is achieved using the TREADY (Transmit Ready) signal in the AXI Stream protocol.\n\nWhen the receiving component is not ready to process incoming data, it asserts the TREADY signal low. This informs the transmitting component that its output buffer should be stopped from filling up any further until the receiving component can handle more data. The transmitting component will then stop sending data on the TDATA (Transmit Data) channel until TREADY is asserted high again.\n\nOn the other hand, when the receiving component is ready to accept more data, it asserts the TREADY signal high. This indicates to the transmitting component that its output buffer has space available for new data. The transmitting component will then resume sending data on the TDATA channel as soon as possible.\n\nBy implementing back-pressure using the TREADY signal, the system can ensure that the receiving component always has enough time to process incoming data before the transmitting component sends more. This helps prevent data loss or corruption due to overflowing buffers or insufficient processing time.\n\nIt's important to note that back-pressure is a unidirectional mechanism, meaning it only controls the flow of data from the transmitting component to the receiving component. The receiving component cannot directly affect the data flow from itself to the transmitting component.\n",
+                "pred_answer": "['In AXI Stream, back pressure is performed using the TREADY and TVALID signals.', 'The slave device controls back pressure by asserting TREADY to indicate it can accept data.', 'The master device must wait and cannot send new data until TREADY is high, effectively implementing flow control.']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_421": {
+            "question_0": {
+                "gt_answer": " \n\nThe AXI (Advanced eXtensible Interface) protocol defines a maximum transfer size or burst length of 256 bytes for each transaction. This means that in a single AXI burst, data can be transferred up to 256 bytes at a time between the master and slave devices. However, the total address range or span of an AXI burst cannot exceed 4096 bytes (4KB). If the requested data exceeds this limit, it must be split into multiple bursts, each spanning no more than 4KB. This limitation is imposed by the AXI protocol itself and is not specific to any particular implementation or device.\n",
+                "pred_answer": "An AXI burst cannot span 4K addresses due to the AXI protocol's address boundary constraints, which prevent crossing a 4KB page boundary to ensure coherent memory access and avoid potential memory management issues.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_422": {
+            "question_0": {
+                "gt_answer": " \n\nAXI (Advanced eXtensible Interface) does not have a dedicated read response channel because it relies on the read address channel for both sending the read address and receiving the corresponding read data. This design choice simplifies the interface and reduces the number of required channels.\n\nIn the AXI protocol, when a master initiates a read transaction, it sends the read address along with the read command on the read address channel. The slave then responds by sending the requested read data back on the same read address channel, effectively utilizing the read address channel for both communication directions during a read operation.\n\nBy sharing the read address channel for both sending the read address and receiving the read data, AXI eliminates the need for a separate read response channel. This approach minimizes the complexity of the interface and reduces the overall number of channels required, making it more efficient in terms of pin count and bandwidth utilization.\n\nThe use of the read address channel for bidirectional communication during reads allows for a streamlined interface and helps optimize the performance of AXI-based systems.\n",
+                "pred_answer": "In AXI, read responses are handled through the same read data channel (RDATA) to maintain simplicity and reduce interface complexity while providing an efficient data transfer mechanism.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_423": {
+            "question_0": {
+                "gt_answer": " \n\nAXI's Interleave feature allows for multiple data streams to be interleaved into a single channel, enabling efficient utilization of bandwidth and reducing the number of required channels in certain scenarios. This technique is particularly useful when dealing with bursty or irregular traffic patterns where data from different sources can be combined and transmitted together over a shared interconnect.\n\nBy interleaving data from various sources, AXI Interleave helps optimize the overall throughput and resource utilization. It reduces the number of physical channels needed, as multiple data streams can share the same logical channel. This not only saves hardware resources but also simplifies the design and implementation process.\n\nThe interleaving mechanism is controlled by the AXI protocol itself, which ensures proper ordering and synchronization of the interleaved data. The protocol handles the arbitration and scheduling of the individual data streams, guaranteeing that each stream receives its fair share of the available bandwidth.\n\nAXI Interleave is commonly used in systems where multiple masters are connected to a single slave device, such as in multiprocessor architectures or in systems with multiple peripherals sharing a common bus. By interleaving the data from these different sources, the system can achieve higher aggregate throughput while minimizing the number of physical channels required.\n",
+                "pred_answer": "AXI Interleave is a feature in the Advanced eXtensible Interface (AXI) protocol that allows multiple masters to access shared memory or interconnect resources by dynamically alternating or interleaving transactions across different masters to improve system performance and bandwidth utilization.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_424": {
+            "question_0": {
+                "gt_answer": " \n\nOutstanding refers to the number of outstanding transactions or requests currently being processed by an AXI (Advanced eXtensible Interface) master device. It represents the total count of transactions that have been initiated but not yet completed or acknowledged by the slave device at the other end of the communication link.\n\nThe Outstanding value is maintained by the AXI master and serves as a status indicator for the current state of its transaction queue. When a master initiates a new transaction, it increments the Outstanding counter by one. The counter remains incremented until all responses from the corresponding read or write transactions are received and processed by the master.\n\nOnce all responses have been handled, the Outstanding counter is decremented by one, indicating that one less transaction is pending completion. This process continues until the Outstanding value reaches zero, signifying that the master has no outstanding transactions waiting for acknowledgment.\n\nBy monitoring the Outstanding value, the AXI master can determine the availability of resources within its transaction queue and make appropriate decisions regarding initiating new transactions or blocking further requests until previous ones have been finalized.\n\nIn summary, Outstanding plays a crucial role in managing the flow of transactions between an AXI master and slave. It ensures that the master does not attempt to initiate more transactions than it can handle based on the available resources and that all transactions are properly acknowledged before proceeding.\n",
+                "pred_answer": "Outstanding in AXI refers to the maximum number of unacknowledged transactions that can be in-flight simultaneously on a specific channel (read or write) between a master and slave interface.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_425": {
+            "question_0": {
+                "gt_answer": " \n\nSRAM (Static Random Access Memory) and DRAM (Dynamic Random Access Memory) are both types of volatile memory, meaning they require power to maintain their stored data. SRAM is faster than DRAM but has lower storage density, which means it can store fewer bits per unit area. DRAM, on the other hand, has higher storage density but slower access times compared to SRAM. Both SRAM and DRAM are used in computer systems for temporary storage of frequently accessed data.\n\nFLASH is a type of non-volatile memory, meaning it retains its stored data even when power is removed. It is commonly used as secondary storage in computers, such as in USB drives or solid-state drives (SSDs). FLASH is faster than traditional hard disk drives (HDDs), but still slower than RAM. It is also more durable and shock-resistant than HDDs.\n\nROM (Read-Only Memory) is another type of non-volatile memory that is programmed during manufacturing and cannot be altered afterwards. It is used to store firmware, boot instructions, and other fixed data in computers and other electronic devices.\n",
+                "pred_answer": "SRAM is volatile, fast, and uses flip-flops; DRAM is volatile, slower, uses capacitors for storage; FLASH is non-volatile, electrically erasable memory; ROM is non-volatile, read-only memory that cannot be easily modified.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_426": {
+            "question_0": {
+                "gt_answer": " \n\nA latch and a flip-flop are both sequential logic circuits that store binary data, but they have some key differences in their behavior and operation.\n\nA latch is level-sensitive, meaning it responds to the level of the clock signal rather than its edge. This means that as long as the clock signal remains at a certain level (usually high), the latch will hold its current state. When the clock signal transitions to the other level (usually low), the latch will change its state based on the value of the data input. Latches can be transparent or opaque depending on whether the clock signal is high or low, respectively.\n\nOn the other hand, a flip-flop is edge-triggered, which means it changes its state only when the clock signal transitions from one level to another (usually from low to high). The flip-flop's output will change its state based on the value of the data input at the moment the clock signal transitions. Once the clock signal returns to its original level, the flip-flop will hold its current state until the next clock transition.\n\nIn summary, the main difference between a latch and a flip-flop lies in how they respond to the clock signal. A latch is sensitive to the level of the clock signal, while a flip-flop is sensitive to the edge of the clock signal. Additionally, latches can be transparent or opaque, while flip-flops always have a stable output.\n",
+                "pred_answer": "A latch is a level-triggered circuit that changes state continuously while the enable signal is active, whereas a flip-flop is an edge-triggered circuit that changes state only at the precise moment of a clock signal transition (rising or falling edge).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_427": {
+            "question_0": {
+                "gt_answer": " \n\nAXI (Advanced eXtensible Interface) is a high-performance, synchronous communication protocol used in System-on-Chip (SoC) designs. It allows for efficient data transfer between different components within an SoC. One of the key features of AXI is its ability to handle out-of-order transactions.\n\nTo implement AXI Out of Order, follow these steps:\n\n1. Define the AXI interface signals: The first step in implementing AXI Out of Order is to define the necessary interface signals. These include the address channel (AXADDR), read data channel (AXRDATA), write data channel (AXWDATA), control signals (e.g., ARVALID, WVALID), and status signals (e.g., ARREADY, WREADY).\n\n2. Implement the AXI interface logic: Next, create the logic required to handle the AXI interface signals. This includes decoding the address channel, processing the read/write requests, and transferring data on the appropriate channels.\n\n3. Handle out-of-order transactions: To support out-of-order transactions, you need to keep track of the state of each transaction. This can be done using a transaction queue or a state machine. When a new transaction arrives, check if it conflicts with any ongoing transactions. If there is no conflict, process the new transaction immediately. Otherwise, wait until all conflicting transactions have completed before processing the new one.\n\n4. Manage resource allocation: In order to handle out-of-order transactions efficiently, you need to allocate resources (e.g., buffers, memory) dynamically based on the current transaction state. This ensures that each transaction has access to the necessary resources without causing conflicts with other transactions.\n\n5. Verify the design: Finally, verify the correctness of the implemented AXI Out of Order logic using simulations and formal verification techniques. Ensure that the design handles out-of-order transactions correctly and does not introduce any deadlocks or livelocks.\n\nBy following these steps, you can successfully implement AXI Out of Order in your SoC design.\n",
+                "pred_answer": "['Implement an out-of-order AXI interface using:', '1. Transaction ID (ID) tracking mechanism', '2. Multiple transaction buffers/queues per channel', '3. Out-of-order completion and response handling', '4. Reorder buffer to manage transaction order', '5. Centralized transaction management unit', '6. Scoreboard for tracking pending transactions', '7. Dynamic scheduling of read/write transactions', '8. Conflict resolution logic for resource arbitration']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_428": {
+            "question_0": {
+                "gt_answer": " Setup and hold times are critical timing constraints in digital circuits that ensure proper data capture and synchronization between the clock signal and the input data. The setup time is the minimum amount of time that the input data must be stable before the active edge (rising or falling) of the clock signal arrives at the flip-flop or register. This ensures that the data has settled down and is ready for reliable capture. On the other hand, the hold time is the minimum amount of time that the input data must remain stable after the active edge of the clock signal. It guarantees that the data remains valid and unchanged during the brief period when the flip-flop is latching it into its storage element. Violating either the setup or hold time requirement can lead to metastability issues, where the flip-flop may enter an unstable state and take an unpredictable amount of time to resolve, potentially causing errors in the circuit's operation. Properly designing digital systems involves ensuring that the clock frequency, data path delays, and setup/hold times are carefully managed to maintain reliable data transfer and prevent timing violations.\n",
+                "pred_answer": "Setup time is the duration before the clock edge when input data must be stable, while hold time is the duration after the clock edge when input data must remain stable to ensure proper data capture by a sequential circuit.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_429": {
+            "question_0": {
+                "gt_answer": " \n\nThe Watchdog Timer (WDT), Timer, and Direct Memory Access (DMA) are three important components in embedded systems that work together to ensure reliable operation of the system. Here's how their workflow typically works:\n\n1. The WDT is a timer that continuously counts up from 0 to its maximum value. It is designed to reset the microcontroller if it reaches its maximum value without being cleared by software. This helps prevent the microcontroller from getting stuck in an infinite loop or other unresponsive state due to software bugs or hardware failures.\n\n2. The Timer module is used for generating precise time intervals and measuring elapsed time. It can be configured to generate interrupts at specific intervals, which can be used to trigger events or perform tasks at regular intervals.\n\n3. The DMA controller allows data transfer between memory locations without involving the CPU. It can move blocks of data from one memory location to another at high speed, freeing up the CPU to perform other tasks while the DMA is operating.\n\n4. When the system starts up, the WDT is usually enabled first. This ensures that if something goes wrong and the system becomes unresponsive, the WDT will eventually reset the microcontroller and bring it back to a known good state.\n\n5. Next, the Timer is initialized to generate the desired time interval for various tasks. For example, the Timer may be set to generate an interrupt every second to update a real-time clock or perform periodic maintenance tasks.\n\n6. Finally, the DMA is configured to transfer data between memory locations as needed. For example, the DMA might be used to copy data from a serial port into a buffer in RAM, allowing the CPU to process the data at its own pace rather than being tied up waiting for each byte to arrive.\n\n7. Once all these components are initialized and running, the system enters its normal operational mode. The WDT continues counting, the Timer generates interrupts at the appropriate intervals, and the DMA transfers data as required. As long as everything is working correctly, the system operates smoothly, with the CPU performing its tasks and the WDT and Timer ensuring that the system remains responsive and up-to-date.\n",
+                "pred_answer": "['1. WDT monitors system health and resets if system hangs', '2. TIMER provides periodic interrupts for scheduling and time-based events', '3. DMA transfers data between memory and peripherals without CPU intervention', '4. WDT can trigger system reset if critical DMA or TIMER operations fail', '5. TIMER can configure DMA transfer intervals', '6. DMA can handle TIMER and WDT register updates efficiently']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_430": {
+            "question_0": {
+                "gt_answer": " \n\nA blocking assignment is a type of assignment statement in which the right-hand side expression is evaluated first, followed by the assignment of its value to the left-hand variable. This means that the evaluation of the right-hand side expression blocks or pauses until it has completed before proceeding to assign the result to the left-hand variable. In other words, the assignment happens sequentially, one after another.\n\nOn the other hand, a non-blocking assignment allows multiple assignments to be executed concurrently or in parallel. When using a non-blocking assignment, the right-hand side expressions are evaluated simultaneously, without waiting for each other to complete. Once all the right-hand side expressions have been evaluated, their results are assigned to the corresponding left-hand variables at the same time. This means that the assignments happen in parallel, rather than sequentially.\n\nIn summary, the key difference between blocking and non-blocking assignments lies in how they handle the execution of the right-hand side expressions and the assignment of values to the left-hand variables. Blocking assignments execute the right-hand side expressions sequentially, while non-blocking assignments allow them to run concurrently.\n",
+                "pred_answer": "Blocking assignments (=) execute sequentially and immediately update the variable's value, while non-blocking assignments (<=) schedule value updates for the end of the time step, allowing concurrent simulation of signal assignments.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_431": {
+            "question_0": {
+                "gt_answer": " \n\nHere are some commonly used techniques for reducing power consumption in electronic devices:\n\n1. Dynamic voltage scaling (DVS): This technique involves dynamically adjusting the supply voltage of a device based on its workload requirements. When the device has light workloads, the voltage can be reduced, resulting in lower power consumption.\n\n2. Power gating: In this method, certain parts of a circuit or system are turned off when they are not being used. By selectively powering down unused components, significant power savings can be achieved.\n\n3. Clock gating: Similar to power gating, clock gating involves disabling the clock signal to specific parts of a circuit when they are idle. This prevents unnecessary switching activity and reduces dynamic power consumption.\n\n4. Leakage reduction: As technology scales down, leakage current becomes more prominent. Techniques such as multi-threshold CMOS (MTCMOS) and high-Vt transistors can be employed to reduce leakage currents and improve overall power efficiency.\n\n5. Low-power design methodologies: There are several design techniques that can be applied at various levels of abstraction to optimize power consumption. These include architectural optimizations, logic synthesis, placement and routing, and physical design considerations.\n\n6. Sleep modes: Many modern devices offer sleep or standby modes where the system enters a low-power state when it is not in use. By putting the device into these states, significant energy savings can be realized during periods of inactivity.\n",
+                "pred_answer": "['Dynamic Voltage and Frequency Scaling (DVFS)', 'Power Gating', 'Clock Gating', 'Sleep/Hibernate Modes', 'Low Power Hardware Design', 'Adaptive Brightness Control', 'Background Process Optimization', 'Energy-Efficient Algorithms', 'Wireless Power Management', 'Use of Low-Power Components']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_432": {
+            "question_0": {
+                "gt_answer": " \n\nSynchronous Reset:\nA synchronous reset signal is one where the reset operation is triggered only when the clock edge occurs. This means that the reset process happens in sync with the clock signal. When the reset signal is asserted (active low or high), it will cause the flip-flop or register to be set to its initial state, regardless of whether the clock is currently active or not. The reset operation takes effect at the next rising or falling edge of the clock, depending on the type of reset used.\n\nAsynchronous Reset:\nAn asynchronous reset signal is one where the reset operation is triggered independently of the clock signal. In this case, as soon as the reset signal becomes active (low or high), the flip-flop or register will immediately be forced into its initial state without waiting for the next clock edge. The reset action happens asynchronously, meaning it does not depend on the timing of the clock signal. Once the reset signal is deasserted (removed), the flip-flop or register will resume normal operation from the last stable state before the reset was applied.\n\nSynchronous Release:\nWhen using a synchronous reset signal, there is also the concept of synchronous release. Synchronous release refers to the condition where the flip-flop or register will start operating normally again once the reset signal is removed (deasserted) and the next clock edge occurs. This means that even if the reset signal is still active, the flip-flop or register will continue to remain in the reset state until the next clock edge arrives. After that clock edge, the flip-flop or register will resume normal operation based on the inputs received during the subsequent clock cycles.\n",
+                "pred_answer": "{'synchronous_reset': 'A reset signal that is only activated on the active edge of the clock signal (rising or falling), causing state changes to occur only during clock transitions.', 'asynchronous_reset': 'A reset signal that can be activated independently of the clock signal, immediately changing the state of a circuit regardless of clock timing.', 'asynchronous_release': 'The process of deactivating an asynchronous reset, which occurs outside of the normal clock synchronization and can happen at any time.'}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_433": {
+            "question_0": {
+                "gt_answer": " \n\nA Moore state machine is a type of finite state machine where the output depends only on the current state of the machine, not on any inputs. In other words, for a given state, the output remains constant regardless of the input values. The state transitions in a Moore machine are triggered by specific conditions or events, which can be represented as a set of Boolean expressions. These expressions determine when the state should change from one state to another based on the current state and the current inputs.\n\nOn the other hand, a Mealy state machine is also a type of finite state machine, but its outputs depend on both the current state and the current inputs. Unlike a Moore machine, the output of a Mealy machine can vary depending on the current input values for a given state. This means that for a particular state, different input combinations can result in different output values. The state transitions in a Mealy machine are also triggered by specific conditions or events, similar to those in a Moore machine.\n\nIn summary, the main difference between a Moore and a Mealy state machine lies in how their outputs are determined. A Moore machine has outputs that depend solely on the current state, while a Mealy machine has outputs that depend on both the current state and the current inputs.\n",
+                "pred_answer": "The key difference between Moore and Mealy state machines is the location of output generation: Moore machines generate outputs solely based on the current state, while Mealy machines generate outputs based on both the current state and input.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_434": {
+            "question_0": {
+                "gt_answer": " \n\nA First-In-First-Out (FIFO) buffer is a memory structure used for storing and retrieving data in a specific order. It operates based on two basic principles - write and read. Data is written into the FIFO at one end, while it is read out from the other end. This ensures that the data is processed in the same sequence as it was entered. The first piece of data written into the FIFO will be the first piece of data read out, hence the name \"first-in-first-out.\"\n\nSynchronous FIFOs are a type of FIFO where both the writing and reading operations occur simultaneously, synchronized by a common clock signal. In this case, the writing and reading processes happen at the same time, allowing for efficient data transfer between different parts of a system. Synchronous FIFOs are commonly used in digital systems where data needs to be transferred quickly and reliably.\n\nYiFIFO is a specialized type of synchronous FIFO designed specifically for use in high-speed serial communication applications. It stands for \"Yet another FIFO\" and is optimized for low latency and high throughput. YiFIFOs have been developed to handle the stringent requirements of modern communication protocols such as 10G Ethernet or PCI Express, where data must be transmitted and received at very high speeds without any loss of information.\n",
+                "pred_answer": "Synchronous FIFO is a type of First-In-First-Out queue where data transfer is synchronized and coordinated by a common clock signal, ensuring precise timing and data exchange between the read and write operations.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_435": {
+            "question_0": {
+                "gt_answer": " \n\nA First-In-First-Out (FIFO) buffer is a memory structure used for storing data in a queue-like manner. The data is inserted at one end (the write end) and removed from the other end (the read end). To determine whether a FIFO is empty or full, there are several methods depending on how the FIFO is implemented:\n\n1. Using two counters: In this method, two counters are used to keep track of the number of available spaces and the number of occupied slots in the FIFO. When a new element is written into the FIFO, the \"available space\" counter is decremented by 1. Similarly, when an element is read from the FIFO, the \"occupied slot\" counter is incremented by 1. If the \"available space\" counter is zero, then the FIFO is considered full. Conversely, if the \"occupied slot\" counter is zero, then the FIFO is considered empty.\n\n2. Using a flag bit: Another way to determine the status of a FIFO is by using a flag bit. This bit is set to 0 when the FIFO is empty and to 1 when it is full. When a new element is written into the FIFO, the flag bit is checked. If it is already set to 1, indicating that the FIFO is full, then the writing operation is blocked until a read operation occurs and frees up a slot in the FIFO. On the other hand, when an element is read from the FIFO, the flag bit is checked. If it is already set to 0, indicating that the FIFO is empty, then the reading operation is blocked until a write operation occurs and fills up the FIFO again.\n\n3. Using a pointer: A third approach to determining the status of a FIFO is by using a pointer. One pointer points to the first empty slot in the FIFO, while another pointer points to the last occupied slot. When a new element is written into the FIFO, the \"first empty\" pointer is advanced by 1. Similarly, when an element is read from the FIFO, the \"last occupied\" pointer is advanced by 1. If the \"first empty\" pointer is equal to the \"last occupied\" pointer, then the FIFO is considered full. Conversely, if the \"first empty\" pointer is greater than the \"last occupied\" pointer, then the FIFO is considered empty.\n",
+                "pred_answer": "To determine the empty or full status of a FIFO queue, check if the queue's front and rear indices are at the edge or same position, depending on the implementation.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_436": {
+            "question_0": {
+                "gt_answer": " \n\nIn Verilog, tasks and functions are both subroutines that can be called from within a module or interface. However, there are some key differences between them:\n\n1. Task vs Function: A task is a subroutine that can have multiple statements and can call other tasks or functions. It can also include delay statements and wait statements. On the other hand, a function is a subroutine that must return a single value and cannot contain any delay or wait statements.\n\n2. Synchronous vs Asynchronous: Tasks are asynchronous by default, meaning they execute concurrently with the rest of the code. This allows for parallel execution of different parts of the design. Functions, on the other hand, are synchronous by default, meaning they execute sequentially after the calling statement has completed its execution.\n\n3. Delay Statements: Tasks can contain delay statements, which allow the designer to specify the time at which the task should complete its execution. Functions, however, cannot contain delay statements, as they must return a single value without any delays.\n\n4. Wait Statements: Tasks can contain wait statements, which allow the designer to pause the execution of the task until a certain condition is met. Functions, again, cannot contain wait statements, as they must return a single value without any pauses.\n\n5. Return Value: Both tasks and functions can return values using the \"return\" keyword. The main difference lies in how these values are used. In tasks, the returned value is available immediately after the task is called, while in functions, the returned value becomes part of the expression that calls the function.\n\n6. Timing Control: Tasks can use timing control constructs such as @ (posedge clk) or @(negedge clk), allowing them to trigger based on specific clock edges. Functions, however, do not have access to timing control constructs, as they are executed synchronously with the calling statement.\n\n7. Scope: Tasks and functions can be declared either inside or outside a module. When declared outside a module, they become part of the global name space and can be accessed from anywhere in the design hierarchy. When declared inside a module, their scope is limited to that particular module.\n",
+                "pred_answer": "In Verilog, a task is a procedural block that can contain multiple statements and can pass arguments by reference, while a function is a procedural block that returns a single value and cannot contain time-consuming statements like delay or events.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_437": {
+            "question_0": {
+                "gt_answer": " \nFork...join, fork...join_none and fork...join_any are three different parallel programming constructs in Python used for managing threads. Here's how they differ:\n\n1. Fork...join: This construct creates multiple threads and waits until all of them have completed their tasks before proceeding to the next line of code. It ensures that the main thread does not continue until all child threads have finished executing. \n\n2. Fork...join_none: This construct also creates multiple threads but unlike fork...join, it allows the main thread to proceed even if some or all of the child threads haven't finished yet. The main thread continues its execution without waiting for the completion of all child threads. \n\n3. Fork...join_any: This construct is similar to fork...join_none, except that instead of allowing the main thread to continue as soon as any one of the child threads has completed, it waits until at least one of the child threads has finished before proceeding with the main thread. \n\nIn summary, fork...join ensures that all child threads complete before moving on, while fork...join_none and fork...join_any allow the main thread to continue execution regardless of whether all child threads have finished or not.\n",
+                "pred_answer": "fork...join waits for ALL spawned threads to complete, fork...join_none does NOT wait and immediately continues execution, and fork...join_any waits until AT LEAST ONE spawned thread completes before continuing.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_438": {
+            "question_0": {
+                "gt_answer": " \n\nImproving chip test coverage involves several key steps and techniques that can help ensure comprehensive testing of integrated circuits. Here are some ways to enhance test coverage:\n\n1. Identify critical paths: Start by identifying the most important functional paths in the design. These are typically the longest paths or those that involve complex logic. Focus on testing these paths thoroughly to ensure they are functioning correctly.\n\n2. Use boundary scan: Boundary scan technology allows for efficient testing of interconnects between components on a board. It enables access to internal nodes without the need for physical probing, which can damage the circuit.\n\n3. Employ ATPG (Automatic Test Pattern Generation): Automatic Test Pattern Generation tools can generate high-quality test patterns that target specific faults in the design. By using ATPG, designers can create tests that cover a wide range of possible defects.\n\n4. Perform at-speed testing: At-speed testing involves running tests while the device is operating at its normal speed. This helps identify timing-related issues that may not be caught during slower testing.\n\n5. Utilize BIST (Built-In Self-Test): Built-In Self-Test incorporates test circuitry directly into the chip itself. This allows for self-testing of the device without the need for external test equipment. BIST can significantly improve test coverage and reduce test time.\n\n6. Implement redundancy: Redundancy techniques such as error correction codes or spare elements can help detect and correct errors that may slip through the testing process. By incorporating redundancy, designers can improve overall reliability and fault tolerance.\n\n7. Review test results: Carefully review the test results to identify any areas where coverage could be improved. This may involve modifying the test patterns, adding new tests, or adjusting the test setup. Continuously refining the test strategy based on feedback from previous tests can lead to better coverage over time.\n",
+                "pred_answer": "['Implement advanced fault models like bridging and transition faults', 'Utilize machine learning-based test pattern generation techniques', 'Increase functional coverage through randomized and targeted test scenarios', 'Adopt statistical test coverage metrics and analysis', 'Integrate embedded self-test (BIST) architectures']",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_439": {
+            "question_0": {
+                "gt_answer": " \n\n- Pages: In flash memory, a page refers to a fixed-size unit of data storage, typically ranging from 512 bytes to 4KB. Each page contains a certain number of cells or bits that can be programmed or erased independently. The size of a page is determined by the specific flash technology and manufacturer.\n\n- Sectors: A sector is a logical division within a page, representing a smaller unit of data storage. Each sector usually consists of multiple bytes or words, depending on the flash architecture. Sectors serve as the basic read/write units for flash memory operations, allowing for efficient access and management of data.\n\n- Blocks: A block is a larger unit of storage in flash memory, consisting of several contiguous pages. Typically, a block spans across multiple sectors, providing a higher-level abstraction for data organization and management. Blocks play a crucial role in the erase operation of flash memory, where entire blocks must be erased before they can be reprogrammed or written to.\n\nThe key difference between these terms lies in their granularity and purpose. Pages represent the smallest addressable unit of data storage, while sectors provide finer-grained control over data access and manipulation. Blocks, on the other hand, offer a more coarse-grained approach to data management, facilitating bulk erasure and programming operations.\n",
+                "pred_answer": "In Flash memory, pages are the smallest units of read/write operations (typically 2-4 KB), sectors are groups of pages that can be erased together (usually 128-256 pages), and blocks are larger collections of sectors that represent the minimum erasable unit (typically 64-128 sectors).",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_440": {
+            "question_0": {
+                "gt_answer": " \n\nNOR flash and NAND flash are two types of non-volatile memory technologies commonly used in digital storage devices such as USB drives, solid-state drives (SSDs), and memory cards. While they share some similarities, there are also several key differences between them:\n\n1. Architecture: The main difference between NOR and NAND flash lies in their architecture. NOR flash uses a NOR gate structure where each cell can be accessed independently, making it faster for random access operations. In contrast, NAND flash uses a NAND gate structure where cells are connected in series, allowing for higher density but slower random access speeds.\n\n2. Speed: Due to its architecture, NOR flash has faster read and write times compared to NAND flash. This makes NOR flash more suitable for applications that require frequent random access operations, such as booting up computers or running firmware on embedded systems.\n\n3. Density: NAND flash offers much higher density than NOR flash due to its serial connection of cells. As a result, NAND flash is widely used in large-capacity storage devices like SSDs and USB drives. NOR flash, on the other hand, is limited to smaller capacities and is often used in applications that prioritize speed over capacity.\n\n4. Endurance: NOR flash typically has better endurance compared to NAND flash. It can withstand more program/erase cycles before wearing out, making it more reliable for applications that require frequent data updates. NAND flash, while less durable, has improved significantly in recent years and is now capable of handling millions of program/erase cycles.\n\n5. Cost: NAND flash is generally cheaper per gigabyte compared to NOR flash due to its higher density and lower manufacturing costs. However, the cost advantage of NAND flash diminishes when considering factors such as performance, reliability, and application-specific requirements.\n",
+                "pred_answer": "NOR Flash provides faster read speeds and supports byte-level random access, while NAND Flash offers higher storage density, lower cost per bit, and faster write/erase speeds. NOR is typically used for code storage in embedded systems, whereas NAND is primarily used in storage devices like SSDs, memory cards, and USB drives.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_441": {
+            "question_0": {
+                "gt_answer": " \nPMIC stands for Power Management Integrated Circuit or Power Management IC. It is a specialized chip designed to manage and regulate power distribution within electronic devices. Its primary function is to convert, control, and distribute power from a source (such as a battery) to various components in a device while ensuring optimal performance, efficiency, and safety. PMICs often include features such as voltage regulation, over-voltage protection, power sequencing, and battery management, among others.\n",
+                "pred_answer": "A Power Management Integrated Circuit (PMIC) is a specialized semiconductor chip that manages power distribution, conversion, and consumption in electronic devices, providing voltage regulation, power sequencing, battery charging, and system power optimization.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_442": {
+            "question_0": {
+                "gt_answer": " An interrupt is a signal or event that temporarily suspends the normal flow of execution in a computer program or processor. It allows the CPU to stop executing its current instructions and switch to another task or routine that has higher priority. When an interrupt occurs, the CPU saves the current state of the program, including registers and memory pointers, before jumping to a predefined interrupt service routine (ISR) to handle the interrupt. The ISR typically performs necessary actions related to the interrupt, such as processing input from a device or handling exceptions. Once the ISR completes its tasks, the CPU restores the saved state and resumes execution from where it left off before the interrupt occurred. Interrupts enable efficient multitasking, allowing multiple programs to run concurrently without interfering with each other.\n",
+                "pred_answer": "An interrupt is a signal sent to the CPU by hardware or software that temporarily halts the current processing task to handle a specific event or request, allowing the system to respond to critical or time-sensitive operations.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_443": {
+            "question_0": {
+                "gt_answer": " \n\nThe Secure Digital Input/Output (SDIO) 2.0 protocol is a high-speed serial interface standard used for data transfer between devices such as digital cameras, smartphones, tablets, and other portable electronic devices. It allows these devices to communicate with external peripherals or memory cards, enabling them to read from or write to the storage media. The SDIO 2.0 protocol supports data rates up to 25 Mbps, which makes it suitable for applications requiring fast data transfer speeds.\n\nTo read from an SD card using the SDIO 2.0 protocol, follow these steps:\n\n1. Initialize the SD card: Before any data can be read from the SD card, it must first be initialized. This involves sending specific commands to the SD card controller to set up communication parameters and ensure proper functioning of the device.\n\n2. Set up the read operation: Once the SD card has been initialized, the host device needs to configure the read operation. This includes specifying the starting address on the SD card where the data will be read from, the number of bytes to be read, and the buffer in the host device where the data will be stored.\n\n3. Execute the read command: After setting up the read operation, the host device sends a read command to the SD card controller. The controller then reads the specified data from the SD card and transfers it to the host device's buffer.\n\n4. Verify the read operation: After the read operation has completed, the host device verifies that the correct amount of data was transferred successfully. If there are any errors during the read process, the host device may need to retry the operation or take appropriate corrective action.\n\nWriting data to an SD card using the SDIO 2.0 protocol follows a similar procedure to reading data, but with some differences. Here are the steps involved:\n\n1. Initialize the SD card: As with reading data, writing requires initializing the SD card before any operations can begin. This ensures that the SD card is ready to receive data.\n\n2. Set up the write operation: To write data to the SD card, the host device sets up the write operation. This includes specifying the starting address on the SD card where the data will be written, the number of bytes to be written, and the buffer in the host device containing the data to be written.\n\n3. Execute the write command: After setting up the write operation, the host device sends a write command to the SD card controller. The controller then writes the specified data from the host device's buffer to the SD card at the designated location.\n\n4. Verify the write operation: After the write operation has completed, the host device verifies that the correct amount of data was written successfully. If there are any errors during the write process, the host device may need to retry the operation or take appropriate corrective action.\n\nIn summary, the SDIO 2.0 protocol enables efficient and reliable data transfer between devices and SD cards. By following the steps outlined above, users can easily read from or write to SD cards using this widely adopted standard.\n",
+                "pred_answer": "{'protocol_overview': 'SDIO (Secure Digital Input/Output) 2.0 is a computer bus interface designed for mobile devices to add various types of external input/output devices, such as wireless network adapters, GPS, Bluetooth, and other peripheral cards.', 'initialization_process': ['Detect the SDIO card using card identification (CID) and card-specific data (CSD) registers', 'Configure interrupt handling and I/O memory space', 'Assign a unique function number to the card', \"Enable the card's specific function\"], 'read_operations': ['Use CMD52 for single byte read operations', 'Use CMD53 for block or extended data read operations', 'Access device-specific registers and memory spaces', 'Manage read transfers with predefined block sizes'], 'write_operations': ['Use CMD52 for single byte write operations', 'Use CMD53 for block or extended data write operations', 'Write to specific device registers and memory spaces', 'Manage write transfers with predefined block sizes'], 'key_features': ['Supports multiple I/O functions per card', 'Low power consumption', 'Compact form factor', 'Hot-pluggable device support']}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_444": {
+            "question_0": {
+                "gt_answer": " \n\nThe MIPI (Mobile Industry Processor Interface) Alliance is a consortium of companies working together to develop and standardize interfaces for mobile devices. The MIPI Alliance was formed in 1997 as a non-profit organization to address the growing need for high-speed, low-power interconnects between components in mobile phones and other portable electronic devices.\n\nMIPI's primary goal is to enable seamless integration of various components within a mobile device, such as processors, memories, displays, cameras, and wireless connectivity modules. By defining common standards and protocols, MIPI helps reduce development time, cost, and complexity associated with integrating these disparate components.\n\nOne of the key features of the MIPI interface is its ability to support high data rates while consuming minimal power. This is crucial for mobile devices where battery life is a critical concern. Additionally, MIPI interfaces are designed to be robust and reliable, capable of handling the demanding requirements of modern mobile applications.\n\nOver the years, the MIPI Alliance has developed several specifications and standards covering different aspects of mobile device communication, including camera serial interfaces, display interfaces, audio interfaces, and more. These standards have been widely adopted by the industry, making it easier for manufacturers to integrate components from different vendors into their products.\n\nIn summary, the MIPI interface is a vital technology that enables efficient and reliable communication between components in mobile devices. Its focus on high speed, low power consumption, and interoperability has made it a popular choice among mobile device manufacturers worldwide.\n",
+                "pred_answer": "MIPI (Mobile Industry Processor Interface) is a set of standardized interface specifications designed to reduce complexity, power consumption, and cost in mobile device interconnects between integrated circuits, primarily used in smartphones, tablets, and other mobile devices.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_445": {
+            "question_0": {
+                "gt_answer": " \n\nJTAG (Joint Test Action Group) is a standard interface used for testing integrated circuits and debugging printed circuit boards during the manufacturing process. It allows engineers to access internal registers, scan chains, and other test points within the device using a dedicated port called the Test Access Port (TAP).\n\nThe primary purpose of JTAG is to facilitate board-level testing and debugging by providing a standardized way to control and observe the behavior of individual components on the board. This is achieved by connecting all the JTAG-enabled devices on the board together in a daisy-chain configuration, allowing a single external controller to communicate with each device simultaneously.\n\nOne of the key features of JTAG is the ability to perform boundary scan testing, which involves shifting data into and out of the device's input/output pins through the TAP. This enables comprehensive testing of interconnects between components without requiring physical probing of the board.\n\nIn addition to testing, JTAG can also be used for debugging purposes. By accessing the device's internal registers and memory, developers can monitor the state of the system, set breakpoints, and analyze the behavior of the device under various conditions.\n\nOverall, JTAG plays a crucial role in facilitating efficient and effective testing and debugging of electronic systems, helping to identify and resolve issues early in the development cycle.\n",
+                "pred_answer": "JTAG (Joint Test Action Group) is a standardized interface and protocol for testing, debugging, and programming integrated circuits, printed circuit boards (PCBs), and embedded systems, primarily used for boundary scan testing and device configuration.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_446": {
+            "question_0": {
+                "gt_answer": " \n\nSWD (Serial Wire Debug) is a two-wire interface used for debugging embedded systems based on ARM microcontrollers. It consists of a data line (SWDIO) and a clock line (SWCLK). The SWDIO line carries both the serial data and the control signals, while the SWCLK line acts as the clock signal for the serial communication.\n\nThe SWD protocol operates at a maximum speed of 4 Mbps, allowing for efficient data transfer between the debugger and the target device. It supports both read and write operations, enabling the debugger to access registers, memory, and other internal components of the microcontroller.\n\nTo establish a connection between the debugger and the target system, the debugger first sends a reset sequence to the microcontroller. This resets the microcontroller's state and prepares it for debugging. Once connected, the debugger can then send commands and receive responses from the microcontroller using the SWD protocol.\n\nOne of the key advantages of SWD is its simplicity compared to other debug interfaces like JTAG. SWD requires only two wires, making it easier to connect and debug embedded systems. Additionally, SWD is more robust than JTAG in terms of noise immunity, which makes it suitable for use in noisy environments.\n\nOverall, SWD provides a reliable and efficient way to debug ARM-based embedded systems, offering fast data transfer rates and simplified connectivity compared to other debug interfaces.\n",
+                "pred_answer": "SWD is a two-wire debugging interface used in microcontrollers, consisting of a SWCLK (clock) and SWDIO (data) line that allow for communication, debugging, and programming of embedded systems. It uses a single bidirectional data line for transferring debug information, replacing the older JTAG multi-wire debug interface. The protocol enables reading and writing of device registers, memory access, and control of program execution through a compact, low-pin-count interface.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_447": {
+            "question_0": {
+                "gt_answer": " An instruction set refers to the collection of machine code instructions supported by a particular processor or microcontroller. These instructions define the operations that can be performed by the hardware, such as arithmetic calculations, data movement, logical operations, and program flow control. The instruction set determines the capabilities and limitations of the processor in executing software programs.\n\nCommon instruction sets include x86 (Intel), ARM (ARM-based processors), MIPS (MIPS-based processors), and RISC-V. Each of these instruction sets has its own unique characteristics, such as the number of available registers, the size and format of instructions, and the supported addressing modes. The choice of instruction set often depends on factors like performance requirements, compatibility with existing software, and cost considerations.\n\nThe specific instructions within an instruction set vary widely, but many common operations are typically included, such as addition, subtraction, multiplication, division, bitwise operations, memory access, conditional jumps, function calls, and system-level instructions for I/O and interrupt handling. The complexity and diversity of the instructions determine the flexibility and power of the processor in performing various tasks.\n",
+                "pred_answer": "An instruction set is a collection of binary codes that define the basic operations a computer processor can execute, including arithmetic, logical, data transfer, and control operations.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_448": {
+            "question_0": {
+                "gt_answer": " \n\nRISC-V (Reduced Instruction Set Computing - V) is an open-source instruction set architecture (ISA) designed for modularity and extensibility. It was developed at the University of California, Berkeley in 2010 as a free and openly adoptable alternative to proprietary ISAs like ARM or x86. The key features that make RISC-V unique are:\n\n1. Open source: Unlike most other popular ISAs, RISC-V is freely available under a permissive license, allowing anyone to use, modify, and distribute it without paying royalties or fees.\n\n2. Modular design: RISC-V supports modular extensions, which means that different implementations can include only the necessary instructions and features required for their specific purpose. This allows for more efficient and customizable designs.\n\n3. Extensible: RISC-V's base ISA is small and simple, but it can be extended with additional instructions and features to support various applications and workloads.\n\n4. Free and accessible: Because RISC-V is open-source, it is widely available and accessible to developers, researchers, and students who want to experiment with and contribute to its development.\n\n5. Versatile: RISC-V can be used in a wide range of computing devices, from tiny embedded systems to powerful servers, making it suitable for a variety of applications.\n\nOverall, RISC-V's open-source nature, modular design, extensibility, and versatility make it a unique and attractive choice for many developers and users.\n",
+                "pred_answer": "Open-source, modular instruction set architecture with free licensing, customizable extensions, and minimal base instruction set that allows for flexible implementation across diverse computing platforms.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_449": {
+            "question_0": {
+                "gt_answer": " \n\nThe Advanced Coherent Accelerator (ACE) bus protocol is a high-speed interconnect designed for efficient communication between processors and accelerators in heterogeneous computing systems. It enables seamless data transfer between these components, allowing them to work together seamlessly without the need for complex software interfaces or additional hardware adapters.\n\nThe ACE bus protocol defines a set of rules and specifications for data transmission between devices connected to it. These include the format of packets, the timing of signals, and the synchronization mechanisms used during data exchange. The protocol supports both synchronous and asynchronous transfers, enabling flexible and efficient communication.\n\nOne of the key features of the ACE bus protocol is its support for coherent memory access. This means that when an accelerator accesses data from main memory, it can do so using virtual addresses rather than physical addresses. This eliminates the need for address translation and simplifies the programming model for accelerators.\n\nAnother important aspect of the ACE bus protocol is its ability to handle multiple outstanding transactions simultaneously. This allows accelerators to issue requests to main memory while waiting for previous requests to be completed. This feature helps to improve overall system performance by reducing latency and increasing throughput.\n\nThe ACE bus protocol also includes mechanisms for handling interrupts and exceptions. When an accelerator detects an error condition or needs to communicate with the host processor, it can generate an interrupt signal. The host processor can then take appropriate action based on the type of interrupt received.\n\nOverall, the ACE bus protocol provides a robust and efficient framework for connecting processors and accelerators in heterogeneous computing systems. By defining clear standards for data transfer, memory coherence, and exception handling, it enables seamless integration and collaboration between different types of computational resources.\n",
+                "pred_answer": "The ACE (Advanced Coherent Accelerator) bus protocol is an interface specification designed for high-performance coherent communication between processors, memory systems, and interconnect components, primarily used in advanced computing architectures to enable efficient cache coherency and low-latency data transfer.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_450": {
+            "question_0": {
+                "gt_answer": " \n\nThe Chi Bus Protocol is a high-speed serial communication interface designed for connecting multiple devices in a daisy-chain configuration. It operates at speeds up to 100 Mbps and supports data transmission rates of 8 bits per clock cycle. The protocol employs a synchronous, master-slave architecture where one device acts as the master and controls the flow of data while the other devices operate as slaves and respond to the master's commands.\n\nThe Chi Bus uses a single shared data line for transmitting both address and data information. This simplifies the hardware requirements and reduces the number of pins needed on each device. To ensure reliable data transfer, the protocol incorporates error detection mechanisms such as parity checking and cyclic redundancy check (CRC).\n\nThe Chi Bus utilizes a four-phase handshake mechanism to coordinate data transfers between the master and slave devices. In the first phase, the master initiates a transaction by asserting the \"request\" signal. In the second phase, the slave acknowledges the request by asserting its own \"acknowledge\" signal. During the third phase, the master sends the address and control information over the data line. Finally, in the fourth phase, the slave responds by either reading from or writing to the data line based on the command received from the master.\n\nTo facilitate efficient data transfer, the Chi Bus employs a pipelined approach. While the master is sending the next address and control information during the third phase, the slave can simultaneously read from or write to the current data being transmitted on the data line. This overlapping of operations allows for faster data exchange and improved overall system performance.\n\nThe Chi Bus also includes support for interrupt handling. When a slave device needs to alert the master about a specific event or condition, it can assert an \"interrupt\" signal. Upon receiving this signal, the master will immediately stop any ongoing transactions and attend to the interrupt before resuming normal operation.\n\nOverall, the Chi Bus Protocol offers a simple yet powerful solution for connecting multiple devices in a high-speed serial communication network. Its daisy-chain topology, synchronous operation, and advanced error detection capabilities make it well-suited for applications requiring fast and reliable data transfer between multiple components.\n",
+                "pred_answer": "The CHI (Coherent Hub Interface) bus protocol is a high-performance, scalable interconnect technology designed for computing systems that enables efficient communication between processors, memory, and other system components. It provides low-latency, high-bandwidth communication with advanced features like cache coherence, distributed shared memory support, and flexible topology configurations. CHI is part of the ARM AMBA (Advanced Microcontroller Bus Architecture) specification and supports heterogeneous computing architectures with sophisticated routing and transaction management capabilities.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_451": {
+            "question_0": {
+                "gt_answer": " \n\nCISC (Complex Instruction Set Computing) and RISC (Reduced Instruction Set Computing) are two different approaches to designing computer processors. Here are some key differences between them:\n\n1. Instruction set complexity: The main difference between CISC and RISC lies in their instruction sets. CISC has a large number of complex instructions, while RISC has a smaller number of simpler instructions. CISC instructions can perform more operations, but they require more clock cycles to execute, whereas RISC instructions are designed to be executed in one or two clock cycles.\n\n2. Hardware complexity: Due to its complex instruction set, CISC requires more hardware resources such as registers, memory, and control logic. On the other hand, RISC processors have a simpler design, with fewer components, which makes them easier to manufacture and less expensive.\n\n3. Code density: CISC instructions are typically longer than RISC instructions because they contain more information about the operation to be performed. This results in lower code density for CISC compared to RISC, meaning that more memory is required to store the same program.\n\n4. Performance: Despite having a larger number of instructions, CISC processors may not always outperform RISC processors in terms of raw performance. This is because the complex instructions in CISC take more time to execute, offsetting any gains from having more instructions available.\n\n5. Design philosophy: CISC was developed with the goal of making programming easier for developers, as it allows for more expressive instructions. RISC, on the other hand, focuses on simplicity and efficiency, with the aim of achieving higher performance through faster execution of simpler instructions.\n",
+                "pred_answer": "CISC architectures use complex, multi-cycle instructions that can perform several low-level operations in a single instruction, while RISC architectures use simpler, single-cycle instructions that are optimized for faster execution and easier hardware implementation.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_452": {
+            "question_0": {
+                "gt_answer": " \n\nThe optimal number of pipeline stages in a processor depends on various factors such as the target clock frequency, the complexity of each stage, and the available resources for implementing additional pipeline registers. In general, having more pipeline stages can potentially increase overall performance by allowing for shorter clock periods and higher clock frequencies. However, this comes at the cost of increased hardware complexity and potential issues related to control hazards, data dependencies, and branch prediction accuracy.\n\nOn the other hand, having fewer pipeline stages may simplify the design, reduce power consumption, and minimize the impact of control hazards. It also allows for easier optimization of individual pipeline stages without significant interactions between them.\n\nUltimately, the decision on the optimal number of pipeline stages should be based on a careful analysis of the specific requirements and constraints of the target system, considering factors such as the desired clock frequency, the complexity of the processor architecture, and the available resources for implementing additional pipeline registers.\n",
+                "pred_answer": "Fewer pipeline stages are generally better",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_453": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_454": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_455": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_456": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_457": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_458": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_459": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_460": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_461": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C 2n",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_462": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_463": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C 2n",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_464": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C 2n",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_465": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_466": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_467": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B drain",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_468": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_469": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_470": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_471": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "D",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_472": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A = (t * W) * (B / W) * (C * L) / (W * L * t)",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_473": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_474": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_475": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_476": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A increases",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_477": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_478": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_479": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_480": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_481": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_482": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_483": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A increases",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_484": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "C self timing",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_485": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_486": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_487": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A – Fermi potential",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_488": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C logic domain",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_489": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_490": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_491": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "A graphical entry",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_492": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_493": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_494": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B more",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_495": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "D",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_496": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_497": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C boards",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_498": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_499": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_500": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C substrate doping level",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_501": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "D",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_502": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_503": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_504": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_505": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_506": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_507": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_508": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_509": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B dynamic CMOS logic",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_510": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_511": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_512": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A low",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_513": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "B four",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_514": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "D",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_515": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_516": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_517": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "B²",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_518": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_519": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_520": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_521": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "D",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_522": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_523": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B two",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_524": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_525": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_526": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_527": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_528": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "A 0.01 Ω/square",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_529": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_530": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_531": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A dielectric layer",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_532": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_533": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_534": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_535": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_536": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_537": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_538": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_539": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_540": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_541": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_542": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_543": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_544": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_545": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_546": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "True",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_547": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_548": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_549": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_550": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_551": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_552": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_553": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_554": {
+            "accuracy": 0
+        },
+        "general_555": {
+            "accuracy": 0
+        },
+        "general_556": {
+            "accuracy": 0
+        },
+        "general_557": {
+            "accuracy": 0
+        },
+        "general_558": {
+            "accuracy": 0
+        },
+        "general_559": {
+            "accuracy": 0
+        },
+        "general_560": {
+            "accuracy": 0
+        },
+        "general_561": {
+            "accuracy": 0
+        },
+        "general_562": {
+            "accuracy": 0
+        },
+        "general_563": {
+            "accuracy": 0
+        },
+        "general_564": {
+            "accuracy": 0
+        },
+        "general_565": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_566": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_567": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_568": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_569": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_570": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_571": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_572": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_573": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_574": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_575": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_576": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_577": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_578": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_579": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_580": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_581": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_582": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_583": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_584": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_585": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_586": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B horizontal",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_587": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_588": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "B non volatility",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_589": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "D",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_590": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_591": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_592": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_593": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_594": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "D",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_595": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "A cross-talk",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_596": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_597": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A electric field",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_598": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_599": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_600": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "general_601": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_602": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "general_603": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        }
+    }
+}

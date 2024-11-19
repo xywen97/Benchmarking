@@ -8,7 +8,7 @@ from flask import Flask, request, jsonify
 import os
 
 app = Flask(__name__)
-os.environ["CUDA_VISIBLE_DEVICES"] = "6"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 model = InstructBlipForConditionalGeneration.from_pretrained("/data/xiangyu/benchmarkModels/instructblip-flan-t5-xxl")
@@ -76,8 +76,8 @@ def generate_text():
     outputs = model.generate(
             **inputs,
             do_sample=False,
-            num_beams=5,
-            max_length=2048,
+            num_beams=1,
+            max_length=1024,
             min_length=10,
             top_p=0.9,
             repetition_penalty=1.5,

@@ -16,7 +16,7 @@ from PIL import Image
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
-os.environ["CUDA_VISIBLE_DEVICES"] = "6"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 全局变量设置

@@ -14,7 +14,7 @@ app = Flask(__name__)
 model = AutoModelForVision2Seq.from_pretrained("/data/xiangyu/benchmarkModels/kosmos-2-patch14-224")
 processor = AutoProcessor.from_pretrained("/data/xiangyu/benchmarkModels/kosmos-2-patch14-224")
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "7"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 

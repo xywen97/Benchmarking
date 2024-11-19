@@ -40,7 +40,20 @@ def generate_text():
 
     for i in range(len(image_paths)):
         image = Image.open(image_paths[i]).convert("RGB")
-        images.append(image)
+        # 获取图像的宽度和高度
+        width, height = image.size
+        # 计算新的尺寸，保持长边为512
+        if width > height:
+            new_width = 512
+            new_height = int((512 / width) * height)
+        else:
+            new_height = 512
+            new_width = int((512 / height) * width)
+
+        # 调整图像大小
+        resized_image = image.resize((new_width, new_height))
+
+        images.append(resized_image)
 
     def combine_images(images):
         widths, heights = zip(*(i.size for i in images))
@@ -64,6 +77,8 @@ def generate_text():
                     x_offset += max_width
             y_offset += max(heights)
 
+        # combined_image = combined_image.resize((512, 512))
+
         return combined_image
 
     # Combine images and use the combined image for processing
@@ -77,7 +92,7 @@ def generate_text():
             **inputs,
             do_sample=False,
             num_beams=5,
-            max_length=2048,
+            max_length=1024,
             min_length=10,
             top_p=0.9,
             repetition_penalty=1.5,

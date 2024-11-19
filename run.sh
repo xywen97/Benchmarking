@@ -28,9 +28,9 @@
 # python main.py --field rtl --model blip2_flan_t5_xl (Done)
 # python main.py --field rtl --model blip2_flan_t5_xxl (Done)
 # python main.py --field rtl --model gemini_1_0_pro
-# python main.py --field rtl --model instructblip_flan_t5_xl (rtl, spec)
+# python main.py --field rtl --model instructblip_flan_t5_xl (Done)
 # python main.py --field rtl --model kosmos2_patch14_224 (Done)
-# python main.py --field rtl --model minicpm1b_sft_bf16
+# python main.py --field rtl --model minicpm1b_sft_bf16 (Done)
 # python main.py --field rtl --model minicpm2b_sft_bf16 (Done)
 # python main.py --field rtl --model minicpm3_4b (Done)
 # python main.py --field rtl --model minicpm_llama3_v_2_5 (Done)
@@ -46,12 +46,12 @@
 # python main.py --field rtl --model llama3_1_70b_instruct (Done)
 # python main.py --field rtl --model llama3_8b_instruct (Done)
 # python main.py --field rtl --model llama3_2_11b_vision_instruct (Done)
-# python main.py --field spec --model llama3_2_90b_vision_instruct
-# python main.py --field rtl --model intern_chat_20b (done)
+# python main.py --field rtl --model llama3_2_90b_vision_instruct (Done)
+# python main.py --field rtl --model intern_chat_20b (Done)
 # python main.py --field rtl --model internvl_mini_chat_2b_v1_5 (spec)
 # python main.py --field rtl --model internvl2_40b (spec)
 # python main.py --field rtl --model internlm_xcomposer_vl_7b (Done)
-# python main.py --field rtl --model internlm_xcomposer2_vl_7b
+# python main.py --field rtl --model internlm_xcomposer2_vl_7b --start 36
 # python main.py --field rtl --model qwen_2_7b_instruct (Done)
 # python main.py --field rtl --model qwen_vl_chat (Done)
 # python main.py --field rtl --model qwen_vl (Done)
@@ -65,7 +65,7 @@
 # python main.py --field rtl --model qwen_2_0_5b_instruct (Done)
 # python main.py --field rtl --model internvl2_8b (Done)
 # python main.py --field rtl --model internvl_chat_v1_5 (spec)
-# python main.py --field rtl --model instructblip_flan_t5_xxl (rtl, spec)
+# python main.py --field spec --model instructblip_flan_t5_xxl --start 100
 # python main.py --field rtl --model llama3_1_8b_instruct (Done)
 # python main.py --field rtl --model minicpm_v2 (Done)
 # python main.py --field rtl --model yi_vl_6b (Done)

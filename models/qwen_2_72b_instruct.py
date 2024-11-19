@@ -14,7 +14,7 @@ from flask import Flask, request, jsonify
 import os
 
 app = Flask(__name__)
-os.environ["CUDA_VISIBLE_DEVICES"] = "4,5,6"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 torch.set_grad_enabled(False)

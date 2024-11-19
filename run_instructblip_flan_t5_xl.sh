@@ -44,5 +44,5 @@
 # python main.py --field backend --model instructblip_flan_t5_xl
 # python main.py --field frontend --model instructblip_flan_t5_xl
 # python main.py --field netlist --model instructblip_flan_t5_xl
-python main.py --field spec --model instructblip_flan_t5_xl --start 100
-python main.py --field rtl --model instructblip_flan_t5_xl
+# python main.py --field spec --model instructblip_flan_t5_xl --start 100
+python main.py --field rtl --model instructblip_flan_t5_xl --start 0 --end 93

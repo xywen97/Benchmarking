@@ -44,5 +44,5 @@
 # python main.py --field backend --model internvl2_8b
 # python main.py --field frontend --model internvl2_8b
 # python main.py --field netlist --model internvl2_8b
-python main.py --field spec --model internvl_chat_v1_5 --start 0 --end 99
+# python main.py --field spec --model internvl_chat_v1_5 --start 0 --end 99
 # python main.py --field rtl --model internvl2_8b

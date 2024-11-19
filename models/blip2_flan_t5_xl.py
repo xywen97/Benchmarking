@@ -12,7 +12,7 @@ app = Flask(__name__)
 processor = AutoProcessor.from_pretrained("/data/xiangyu/benchmarkModels/blip2-flan-t5-xl")
 model = AutoModelForVisualQuestionAnswering.from_pretrained("/data/xiangyu/benchmarkModels/blip2-flan-t5-xl")
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "7"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 

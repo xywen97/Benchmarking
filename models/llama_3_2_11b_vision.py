@@ -8,7 +8,7 @@ from flask import Flask, request, jsonify
 import os
 
 app = Flask(__name__)
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "6"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 model_dir = "/data/xiangyu/benchmarkModels/Llama-3___2-11B-Vision-Instruct"

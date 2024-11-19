@@ -69,35 +69,64 @@ def query_reka_series(prompt, images=None, image_captions=None, model_name=None)
     return response.responses[0].message.content
 
 
+# def query_gemini_series(prompt, images=None, image_captions=None, model_name=None):
+#     model_to_bot_mapping = {
+#         "gemini_1.0_pro": "Gemini-1.0-pro",
+#         "gemini_1.5_pro": "Gemini-1.5-pro",
+#         "gemini_1.5_flash": "Gemini-1.5-Flash"
+#     }
+#     bot_name = model_to_bot_mapping[model_name]
+#     def parse_string_to_json(string):
+#         try:
+#             return json.loads(string)
+#         except json.JSONDecodeError as e:
+#             print(f"JSON解析错误: {e}")
+#             return None
+#     async def get_responses(api_key_poe, messages):
+#         response = []
+#         async for partial in fp.get_bot_response(messages=messages, bot_name=bot_name, api_key=api_key_poe):
+#             text = partial.raw_response['text']
+#             text = parse_string_to_json(text)
+#             response.append(text['text'])
+            
+#         # print(''.join(response))
+#         return_result = ''.join(response)
+#         return return_result
+    
+#     message_system = fp.ProtocolMessage(role="system", content="You are a helpful assistant.")
+#     message_user = fp.ProtocolMessage(role="user", content=prompt)
+
+#     result = asyncio.run(get_responses(api_key_poe, [message_system, message_user]))
+#     return result
+
 def query_gemini_series(prompt, images=None, image_captions=None, model_name=None):
     model_to_bot_mapping = {
-        "gemini_1.0_pro": "Gemini-1.0-pro",
-        "gemini_1.5_pro": "Gemini-1.5-pro",
-        "gemini_1.5_flash": "Gemini-1.5-Flash"
+        "gemini_1.5_pro": "gemini-1.5-pro-latest",
+        "gemini_1.5_flash": "gemini-1.5-fash-latest"
     }
-    bot_name = model_to_bot_mapping[model_name]
-    def parse_string_to_json(string):
-        try:
-            return json.loads(string)
-        except json.JSONDecodeError as e:
-            print(f"JSON解析错误: {e}")
-            return None
-    async def get_responses(api_key_poe, messages):
-        response = []
-        async for partial in fp.get_bot_response(messages=messages, bot_name=bot_name, api_key=api_key_poe):
-            text = partial.raw_response['text']
-            text = parse_string_to_json(text)
-            response.append(text['text'])
-            
-        # print(''.join(response))
-        return_result = ''.join(response)
-        return return_result
-    
-    message_system = fp.ProtocolMessage(role="system", content="You are a helpful assistant.")
-    message_user = fp.ProtocolMessage(role="user", content=prompt)
+    url = 'https://api.yesapikey.com/v1/chat/completions'
+    headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer sk-sgsr1v1qg97BmLrD7c38Ea8cEb3b4c82862c67B4A92a3564'#输入网站发给你的转发key
+    }
+    data = {
+        "model": model_to_bot_mapping[model_name],
+        "messages": [{"role": "user","content": prompt}],
+        #"temperature": 1,
+        #"max_tokens": 100,
+        #"top_p": 1
+    }
+    response = requests.post(url, json=data, headers=headers)
+    if response.status_code == 200:
+        data = response.json()
+        if 'choices' in data and data['choices']:
+            content = data['choices'][0].get('message', {}).get('content')
+            # print(response.json())#完整返回值
+    print(content)#补全内容
 
-    result = asyncio.run(get_responses(api_key_poe, [message_system, message_user]))
-    return result
+    # print(response.text)
+    
+    return content
 
 def query_claude_series(prompt, images=None, image_captions=None, model_name=None):
     model_to_bot_mapping = {

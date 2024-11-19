@@ -226,8 +226,8 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
         # if field == "spec":
 
         if model_name in ['instructblip_flan_t5_xl', 'instructblip_flan_t5_xxl', 'blip2_flan_t5_xl', 'blip2_flan_t5_xxl', 'kosmos2_patch14_224']:
-            if len(statement_item.split()) > 256:
-                statement_item = ' '.join(statement_item.split()[:256])
+            if len(statement_item.split()) > 128:
+                statement_item = ' '.join(statement_item.split()[:128])
             else:
                 pass
         else:
@@ -390,6 +390,12 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
                                 response = response[7:-3].strip()
                             # print(response)
                             response_data = json.loads(response)
+                            
+                            # Check if the returned data is a list
+                            if isinstance(response_data, list):
+                                print("Response data is a list.")
+                                response_data = response_data[0]
+
                             if isinstance(response_data, int):
                                 answer_preds.append("None")
                                 explanation_preds.append("None")

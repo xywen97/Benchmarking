@@ -12,7 +12,7 @@ app = Flask(__name__)
 processor = AutoProcessor.from_pretrained("/data/xiangyu/benchmarkModels/blip2-flan-t5-xxl")
 model = AutoModelForVisualQuestionAnswering.from_pretrained("/data/xiangyu/benchmarkModels/blip2-flan-t5-xxl")
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "7"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 
@@ -77,7 +77,7 @@ def generate_text():
             **inputs,
             do_sample=False,
             num_beams=5,
-            max_length=2048,
+            max_length=512,
             min_length=10,
             top_p=0.9,
             repetition_penalty=1.5,

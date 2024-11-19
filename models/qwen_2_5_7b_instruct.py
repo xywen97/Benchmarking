@@ -16,7 +16,7 @@ import os
 from zmq import device
 
 app = Flask(__name__)
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "7"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 torch.set_grad_enabled(False)

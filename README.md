@@ -28,10 +28,13 @@ QWen
     2-0.5B-Instruct (text-only)
     2-7B-Instruct (text-only)
     2-72B-Instruct (text-only)
+    2.5-7B-Instruct (text-only)
     VL (image-encoder)
     VL-Chat (image-encoder)
 InternLM
     Chat-20B (text-only)
+    2-Chat-7B (text-only)
+    2.5-Chat-7B (text-only)
     XComposer-VL-7B (image-encoder)
 InternVL
     2-8B (image-encoder)

@@ -38,6 +38,9 @@
 # python main.py --field general --model gpt4 (Done)
 # python main.py --field general --model yi_chat_6b (Done)
 # python main.py --field general --model yi_vl_34b (Done)
+# python main.py --field general --model qwen_2_5_7b_instruct
+# python main.py --field general --model internlm2_chat_7b
+# python main.py --field general --model internlm2_5_chat_7b
 
 
 # 2024.11.18

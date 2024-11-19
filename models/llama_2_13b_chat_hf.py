@@ -4,7 +4,7 @@ from transformers import pipeline
 from transformers import AutoTokenizer
 import os
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "7"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 app = Flask(__name__)

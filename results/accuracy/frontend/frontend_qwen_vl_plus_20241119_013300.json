@@ -1,0 +1,565 @@
+{
+    "Accuracy": 0.21428571428571427,
+    "Comparison": {
+        "frontend_0": {
+            "question_0": {
+                "gt_answer": "DC gain is A_DC and dominant pole is p_0 which is located at lef-half plain",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_1": {
+            "question_0": {
+                "gt_answer": "one right-half plane zero: g_m2/C_m; two left-half-plane poles: 1/(r_o1 r_o2 g_m2 C_m),g_m2/C_L",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_2": {
+            "question_0": {
+                "gt_answer": "DC gain is g_mn/g_mp, where g_mn is the transconductance of the NMOS and  g_mp is the transconductance of the PMOS. To increase the dc gain, you should increase the NMOS' W/L and decrease PMOS' W/L.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_3": {
+            "question_0": {
+                "gt_answer": "GBW = A_V*P_-3dB where A_V is the amplifier's dc gain and the p_-3dB is the dominant pole of the amplifier.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_4": {
+            "question_0": {
+                "gt_answer": "Gain = g_m1In/g_m1load*A_v2 where g_m1in is the 1st stage's input MOSFET's transconductance and g_m1load is the 1st stage's load MOSFET's transconductance, and A_v2 is the 2nd stage's DC gain.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_5": {
+            "question_0": {
+                "gt_answer": "SR = I/C where SR is the amplifier's slewrate, I is the quiescent current of the driven stage and C is the load cap.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_6": {
+            "question_0": {
+                "gt_answer": "The relationship between the saturation region current (I_D) and the overdrive voltage (V_OV) of an NMOSFET, when ignoring the body effect and short-channel effects, is described by the following equation:\n\n\\[ I_D = \\frac{1}{2} \\mu_n C_{ox} \\left(\\frac{W}{L}\\right) V_{OV}^2 \\]\n\nHere:\n- \\( \\mu_n \\) is the electron mobility in the NMOS channel.\n- \\( C_{ox} \\) is the gate oxide capacitance per unit area.\n- \\( W \\) and \\( L \\) are the width and length of the NMOS transistor, respectively.\n- \\( V_{OV} \\) (overdrive voltage) is defined as \\( V_{GS} - V_{th} \\), where \\( V_{GS} \\) is the gate-source voltage and \\( V_{th} \\) is the threshold voltage of the NMOS transistor.\n",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_7": {
+            "question_0": {
+                "gt_answer": "The correct expression for the power spectral density of the flicker noise voltage (\\( V_n^2 \\)) in a MOSFET is:\n\n\\[ V_n^2 = \\frac{K}{{C_{ox}} \\cdot W \\cdot L} \\cdot \\frac{1}{f} \\]\n\nWhere:\n- \\( V_n^2 \\) is the power spectral density of the flicker noise voltage.\n- \\( K \\) is a process-dependent flicker noise coefficient.\n- \\( C_{ox} \\) is the gate oxide capacitance per unit area.\n- \\( W \\) and \\( L \\) are the width and length of the MOSFET channel, respectively.\n- \\( f \\) is the frequency.\n\nTo reduce flicker noise in a MOSFET, the following strategies can be employed:\n\n**Increase the Gate Area**: Since flicker noise is inversely proportional to the gate area (W x L), increasing the dimensions of the gate can help reduce the noise. However, this may not always be practical due to size constraints in integrated circuits.\n",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_8": {
+            "question_0": {
+                "gt_answer": "1. Increasing the channel length of the transistor can be used to increase the output impedance, and consequently, the amplifier gain.\nThis is because the channel-length modulation coefficient, lambda, is inversely proportional to the gate length. And the output impedance is inversely proportional to lambda.\nTherefore, by increasing the channel length of the transistor, the value of lambda decreases. This results in an increase in the output impedance of the transistor.\n2. Increasing the channel width-to-length ratio (W/L) of the input transistors can enhance the amplifier gain. The amplifier gain is proportional to the product of the transconductance (gm) and the output impedance (Ro), i.e., gm*Ro.\nThe output impedance Ro is inversely proportional to the channel-length modulation coefficient (λ) and the drain current (I), i.e., Ro ~ 1/(λ*I).\nBy keeping the drain current (I) constant while increasing the (W/L) ratio of the input transistors, the transconductance (gm) will increase, as gm is proportional to (W/L). Meanwhile, the output impedance (Ro) will remain relatively constant since the drain current (I) is held fixed.\nTherefore, increasing the (W/L) ratio of the input transistors allows the amplifier to achieve a higher transconductance (gm) without compromising the output impedance (Ro).",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_9": {
+            "question_0": {
+                "gt_answer": "The dominant pole will be locate at p1=1/(Rout1*(gm2*Rout2*Cc)), \nwhere Rout1 is the output resistance of the 1st stage, \ngm2 is the transconductance of the 2nd stage, Rout2 is the output resistance of the 2nd stage and the Cc is the compensation cap.\nThe non-dominant pole will be locate at p2=gm2/CL where CL is the load cap.\nThe GBW is AV*p1 = gm1*Rout1*gm2*Rout2*p1 = gm1/Cc",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_10": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_11": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_12": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_13": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_14": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_15": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_16": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B: crystal oscillator",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_17": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_18": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_19": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_20": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_21": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_22": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_23": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_24": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_25": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_26": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_27": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "B: Obstructive property",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_28": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_29": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "D",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_30": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "C: reduce",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_31": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A: 12V",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_32": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_33": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "D",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_34": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_35": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_36": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_37": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "D",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_38": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_39": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_40": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_41": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_42": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_43": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_44": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "C",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_45": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_46": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "A",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_47": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_48": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "C",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_49": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "B",
+                "is_correct": true
+            },
+            "accuracy": 1.0
+        },
+        "frontend_50": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "B",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_51": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_52": {
+            "question_0": {
+                "gt_answer": "B",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_53": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_54": {
+            "question_0": {
+                "gt_answer": "C",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_55": {
+            "question_0": {
+                "gt_answer": "D",
+                "pred_answer": "A",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_56": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "C: Widening",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_57": {
+            "question_0": {
+                "gt_answer": "A",
+                "pred_answer": "D",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_58": {
+            "question_0": {
+                "gt_answer": "According to analysis, the gain bandwidth is about 50MHz, the phase margin (PM) is about 80 degrees, and the low-frequency gain is about 85dB",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_59": {
+            "question_0": {
+                "gt_answer": "According to the data annotation and analysis in the figure, it can be accurately determined that GBW is 2.536GHz and PM is 60.4°. Low frequency gain is about 135dB.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_60": {
+            "question_0": {
+                "gt_answer": "The input offset voltage of the amplifier was measured across a temperature range of −40 ℃ to 130 ℃. The offset voltage displayed a maximum change of 130 μV across the entire temperature range. ",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_61": {
+            "question_0": {
+                "gt_answer": "The figure shows a plot of the output voltage versus temperature from 0 ℃ to 70 ℃. The peak-to-peak variation is 9.4 mV. The maximum output voltage occurs at around 45 ℃.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_62": {
+            "question_0": {
+                "gt_answer": "The frequency of the ripple is swept from 1 Hz to 100 kHz. The PSR of the proposed BGR is nearly 58 dB in the low frequency, increasing continuously from around tens of hertz, and is -16 dB when the frequency is 100 kHz.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_63": {
+            "question_0": {
+                "gt_answer": "The figure compares the measured distribution of the conventional and proposed BGR’s. Supply-voltage, temperature, and process variations are included. There are four conditions and three temperature conditions. Thus, there are twelve matrix measurement conditions: VCC=2.4, 2.7, 3.3, and 3.9 V; and temp = 27, 85, and 125℃. The number of samples is 34 for the conventional BGR and 23 for the proposed BGR.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_64": {
+            "question_0": {
+                "gt_answer": "It has a settling time of about 160us.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_65": {
+            "question_0": {
+                "gt_answer": "The figure shows 192 simulation results for the comparator input referred offset voltage, with an average offset voltage of -2.3mV and a standard deviation standard deviation of 10.9mV.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_66": {
+            "question_0": {
+                "gt_answer": "The figure shows the input-referred noise root power spectral density (PSD). The measured noise is slightly worse than the simulated results, approximately 27.5 nV/sqrtHz at 10kHz.",
+                "pred_answer": "The measured input referred noise power spectral density (PSD) shows that it has an amplitude of about 27 nV/sqrt(Hz), which decreases with increasing frequency.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_67": {
+            "question_0": {
+                "gt_answer": "The trip point histograms of a comparator without and with the proposed OC scheme enabled are plotted in the figure. It can be seen that the OC scheme does not degrade the noise performance, while reducing the offset from −7.58 mV to 40.8 μV. And σ is 63.8756uV without the OC scheme enabled and is 56.1012uV with the OC scheme enabled.",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_68": {
+            "question_0": {
+                "gt_answer": "The output voltage variation in 0-100°C temperature range at different supply is less than 0.71mV. The temperature-coefficients at 2, 3, 4, 5V supply voltage are 15ppm/℃, 14.3ppm/℃, 13.4ppm/℃ and 14.0ppm/℃, respectively. ",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "frontend_69": {
+            "question_0": {
+                "gt_answer": "It can be seen that the PSRR at DC is 95dB and remains about 90 dB at frequency of 10KHz. The frequency range with PSRR greater than 80dB is about 0-30kHz。",
+                "pred_answer": "None",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        }
+    }
+}

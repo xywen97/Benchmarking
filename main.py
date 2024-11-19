@@ -11,12 +11,14 @@ def main():
     parser = argparse.ArgumentParser(description="Benchmarking script for model evaluation.")
     parser.add_argument('--field', type=str, required=True, help='Field to benchmark, e.g., spec, general, etc.')
     parser.add_argument('--model', type=str, required=True, help='Model to use, e.g., gpt4o, llama2_7b, etc.')
+    parser.add_argument('--start', type=int, default=0, required=False, help='start index number of the testing data')
+    parser.add_argument('--end', type=int, default=-1, required=False, help='end index number of the testing data')
     
     args = parser.parse_args()
 
     data_path = f"data/{args.field}.json"
     image_path = f"data/{args.field}"
-    data = load_data(data_path, image_path)
+    data = load_data(data_path, image_path, args.start, args.end)
 
     current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
     save_path = f"./results/predictedResults/{args.field}/{args.field}_{args.model}_{current_time}.jsonl"

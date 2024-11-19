@@ -224,7 +224,17 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
         source_item = data['source']
 
         # if field == "spec":
-        statement_item = ' '.join(statement_item.split()[:512])
+
+        if model_name in ['instructblip_flan_t5_xl', 'instructblip_flan_t5_xxl', 'blip2_flan_t5_xl', 'blip2_flan_t5_xxl', 'kosmos2_patch14_224']:
+            if len(statement_item.split()) > 256:
+                statement_item = ' '.join(statement_item.split()[:256])
+            else:
+                pass
+        else:
+            if len(statement_item.split()) > 256:
+                statement_item = ' '.join(statement_item.split()[:256])
+            else:
+                pass
 
         '''
         Check if the elements in each item is full filled
@@ -360,7 +370,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
             
             # print(f"QUESTION: {entire_question}")
             
-            for attempt in range(3):
+            for attempt in range(1):
                 try:
                     if model_name.startswith("gemini") or model_name.startswith("claude"):
                         response = query_model(entire_question, images, model_name=model_name)
@@ -397,7 +407,7 @@ def benchmarking(raw_data, field="general", model_name='gpt4o', save_path=None):
                                 break
                         except json.JSONDecodeError:
                             print("Failed to decode JSON from response.")
-                            if attempt == 2:
+                            if attempt == 0:
                                 answer_preds.append("None")
                                 explanation_preds.append("None")
                                 raw_preds.append(response)

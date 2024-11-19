@@ -7,7 +7,7 @@ import torch
 from transformers import pipeline
 import os
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "4"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 app = Flask(__name__)

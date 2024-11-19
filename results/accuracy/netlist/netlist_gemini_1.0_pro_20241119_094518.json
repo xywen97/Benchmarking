@@ -1,0 +1,171 @@
+{
+    "Accuracy": 0.0,
+    "Comparison": {
+        "netlist_0": {
+            "accuracy": 0
+        },
+        "netlist_1": {
+            "accuracy": 0
+        },
+        "netlist_2": {
+            "accuracy": 0
+        },
+        "netlist_3": {
+            "accuracy": 0
+        },
+        "netlist_4": {
+            "accuracy": 0
+        },
+        "netlist_5": {
+            "accuracy": 0
+        },
+        "netlist_6": {
+            "accuracy": 0
+        },
+        "netlist_7": {
+            "accuracy": 0
+        },
+        "netlist_8": {
+            "accuracy": 0
+        },
+        "netlist_9": {
+            "accuracy": 0
+        },
+        "netlist_10": {
+            "accuracy": 0
+        },
+        "netlist_11": {
+            "accuracy": 0
+        },
+        "netlist_12": {
+            "accuracy": 0
+        },
+        "netlist_13": {
+            "accuracy": 0
+        },
+        "netlist_14": {
+            "accuracy": 0
+        },
+        "netlist_15": {
+            "accuracy": 0
+        },
+        "netlist_16": {
+            "accuracy": 0
+        },
+        "netlist_17": {
+            "accuracy": 0
+        },
+        "netlist_18": {
+            "accuracy": 0
+        },
+        "netlist_19": {
+            "accuracy": 0
+        },
+        "netlist_20": {
+            "accuracy": 0
+        },
+        "netlist_21": {
+            "accuracy": 0
+        },
+        "netlist_22": {
+            "accuracy": 0
+        },
+        "netlist_23": {
+            "accuracy": 0
+        },
+        "netlist_24": {
+            "question_0": {
+                "gt_answer": "^Result obtained by applying unate recursive methods to deduce the complement.",
+                "pred_answer": "{\n  \"type\": \"unate\",\n  \"arity\": 6,\n  \"root\": {\n    \"op\": \"*\",\n    \"args\": [\n      {\n        \"op\": \"*\",\n        \"args\": [\n          {\n            \"op\": \"*\",\n            \"args\": [\n              {\n                \"op\": \"*\",\n                \"args\": [\n                  {\n                    \"op\": \"*\",\n                    \"args\": [\n                      {\n                        \"op\": \"*\",\n                        \"args\": [\n                          {\n                            \"op\": \"NOT\",\n                            \"arg\": {\n                              \"op\": \"VAR\",\n                              \"index\": 0\n                            }\n                          },\n                          {\n                            \"op\": \"NOT\",\n                            \"arg\": {\n                              \"op\": \"VAR\",\n                              \"index\": 1\n                            }\n                          }\n                        ]\n                      },\n                      {\n                        \"op\": \"NOT\",\n                        \"arg\": {\n                          \"op\": \"VAR\",\n                          \"index\": 2\n                        }\n                      }\n                    ]\n                  },\n                  {\n                    \"op\": \"NOT\",\n                    \"arg\": {\n                      \"op\": \"VAR\",\n                      \"index\": 3\n                    }\n                  }\n                ]\n              },\n              {\n                \"op\": \"OR\",\n                \"args\": [\n                  {\n                    \"op\": \"*\",\n                    \"args\": [\n                      {\n                        \"op\": \"VAR\",\n                        \"index\": 0\n                      },\n                      {\n                        \"op\": \"NOT\",\n                        \"arg\": {\n                          \"op\": \"VAR\",\n                          \"index\": 1\n                        }\n                      }\n                    ]\n                  },\n                  {\n                    \"op\": \"VAR\",\n                    \"index\": 2\n                  }\n                ]\n              }\n            ]\n          },\n          {\n            \"op\": \"VAR\",\n            \"index\": 3\n          }\n        ]\n      },\n      {\n        \"op\": \"*\",\n        \"args\": [\n          {\n            \"op\": \"*\",\n            \"args\": [\n              {\n                \"op\": \"VAR\",\n                \"index\": 0\n              },\n              {\n                \"op\": \"VAR\",\n                \"index\": 1\n              }\n            ]\n          },\n          {\n            \"op\": \"*\",\n            \"args\": [\n              {\n                \"op\": \"NOT\",\n                \"arg\": {\n                  \"op\": \"VAR\",\n                  \"index\": 2\n                }\n              },\n              {\n                \"op\": \"VAR\",\n                \"index\": 3\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  }\n}",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_25": {
+            "accuracy": 0
+        },
+        "netlist_26": {
+            "accuracy": 0
+        },
+        "netlist_27": {
+            "accuracy": 0
+        },
+        "netlist_28": {
+            "accuracy": 0
+        },
+        "netlist_29": {
+            "accuracy": 0
+        },
+        "netlist_30": {
+            "accuracy": 0
+        },
+        "netlist_31": {
+            "accuracy": 0
+        },
+        "netlist_32": {
+            "accuracy": 0
+        },
+        "netlist_33": {
+            "accuracy": 0
+        },
+        "netlist_34": {
+            "accuracy": 0
+        },
+        "netlist_35": {
+            "accuracy": 0
+        },
+        "netlist_36": {
+            "accuracy": 0
+        },
+        "netlist_37": {
+            "accuracy": 0
+        },
+        "netlist_38": {
+            "accuracy": 0
+        },
+        "netlist_39": {
+            "accuracy": 0
+        },
+        "netlist_40": {
+            "accuracy": 0
+        },
+        "netlist_41": {
+            "accuracy": 0
+        },
+        "netlist_42": {
+            "question_0": {
+                "gt_answer": "(a) Prove",
+                "pred_answer": "The statement SCC(c₁ + c₂) = SCC(c₁) + SCC(c₂) is **false**. While the volume of the smallest cube containing the sum of two cubes is indeed related to the volumes of the smallest cubes containing the individual cubes, the relationship is not a simple addition.",
+                "is_correct": false
+            },
+            "accuracy": 0.0
+        },
+        "netlist_43": {
+            "accuracy": 0
+        },
+        "netlist_44": {
+            "accuracy": 0
+        },
+        "netlist_45": {
+            "accuracy": 0
+        },
+        "netlist_46": {
+            "accuracy": 0
+        },
+        "netlist_47": {
+            "accuracy": 0
+        },
+        "netlist_48": {
+            "accuracy": 0
+        },
+        "netlist_49": {
+            "accuracy": 0
+        },
+        "netlist_50": {
+            "accuracy": 0
+        },
+        "netlist_51": {
+            "accuracy": 0
+        }
+    }
+}

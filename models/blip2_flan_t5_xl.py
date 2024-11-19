@@ -1,3 +1,5 @@
+# env: benchmark
+
 from transformers import AutoProcessor, AutoModelForVisualQuestionAnswering
 import torch
 from PIL import Image
@@ -75,7 +77,7 @@ def generate_text():
             **inputs,
             do_sample=False,
             num_beams=5,
-            max_length=512,
+            max_length=2048,
             min_length=10,
             top_p=0.9,
             repetition_penalty=1.5,

@@ -13,7 +13,7 @@ import os
 
 app = Flask(__name__)
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "7"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 IMAGENET_MEAN = (0.485, 0.456, 0.406)
 IMAGENET_STD = (0.229, 0.224, 0.225)
@@ -123,6 +123,8 @@ def generate_text():
         return jsonify(response)
     else:
         images = []
+        if len(image_paths) > 2:
+            image_paths = image_paths[:2]
         for i in range(len(image_paths)):
             images.append(load_image(image_paths[i], max_num=12).to(torch.bfloat16).cuda())
         pixel_values = torch.cat(images, dim=0)

@@ -1,3 +1,5 @@
+# env: benchmark
+
 from transformers import InstructBlipProcessor, InstructBlipForConditionalGeneration
 import torch
 from PIL import Image
@@ -10,7 +12,7 @@ app = Flask(__name__)
 model = InstructBlipForConditionalGeneration.from_pretrained("/data/xiangyu/benchmarkModels/instructblip-flan-t5-xl")
 processor = InstructBlipProcessor.from_pretrained("/data/xiangyu/benchmarkModels/instructblip-flan-t5-xl")
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "7"
+os.environ["CUDA_VISIBLE_DEVICES"] = "6"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 
@@ -75,7 +77,7 @@ def generate_text():
             **inputs,
             do_sample=False,
             num_beams=5,
-            max_length=512,
+            max_length=2048,
             min_length=10,
             top_p=0.9,
             repetition_penalty=1.5,

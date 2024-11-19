@@ -1,3 +1,5 @@
+# env: benchmark
+
 from transformers import InstructBlipProcessor, InstructBlipForConditionalGeneration
 import torch
 from PIL import Image

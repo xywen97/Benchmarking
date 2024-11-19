@@ -1,3 +1,5 @@
+# env: benchmark-chenchen
+
 # modality: text
 import sys
 import torch
@@ -12,7 +14,7 @@ import os
 import dashscope
 
 app = Flask(__name__)
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 # device = "cuda" if torch.cuda.is_available() else "cpu"
 
 torch.set_grad_enabled(False)
@@ -37,6 +39,7 @@ class QWenVLWeb:
         try:
             response = dashscope.MultiModalConversation.call(
                 model=self.model_id, messages=messages)
+            print(response)
             return response['output']['choices'][0]['message']['content'][0]['text']
         except ValueError:
             return None

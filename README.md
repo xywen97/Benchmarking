@@ -2,6 +2,11 @@
 
 [简体中文CN](README_CN.md)
 
+## Updating
+- [√] supporting vLLM for text inference
+- [√] supporting vLLM for text & image inference
+
+
 ## Project Overview
 
 The Multimodal EDA Benchmarking project aims to provide a framework for evaluating and comparing the performance of different models on multimodal data. This project supports various data formats and models, helping researchers and developers better understand the capabilities of models in handling multimodal data.

@@ -7,7 +7,12 @@ This directory contains scripts and resources for testing and demonstrating the 
 - `vLLM_example.py`: A basic example script demonstrating how to use vLLM for model inference.
 - `adaptive_testing_script.py`: An adaptive script that attempts to load and run Qwen models using vLLM if available, or falls back to standard generation methods.
 - `vision_language_testing_script.py`: A comprehensive script for testing vision-language models, supporting various configurations and datasets.
-- `dataloader.py`: Utility functions for loading and processing data for model testing.
+
+- You can directly run all these scripts by using Python, e.g,
+
+```python
+python vLLM_example.py
+```
 
 ## Usage
 

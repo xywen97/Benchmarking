@@ -1367,16 +1367,16 @@ def parse_args():
     return parser.parse_args()
 
 
-def run_vision_language():
+def run_vision_language(model_name="qwen2_5_vl", modality="image"):
     # set cuda device
     # os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
     # model = args.model_type
-    model = "qwen2_5_vl"
+    model = model_name
     if model not in model_example_map:
         raise ValueError(f"Model type {model} is not supported.")
 
-    modality = "image"
+    modality = modality
     mm_input = get_multi_modal_input(modality, num_frames=16, model_name=model)
     data = mm_input["data"]
     questions = mm_input["questions"]
@@ -1408,7 +1408,7 @@ def run_vision_language():
         temperature=0.2, max_tokens=64, stop_token_ids=req_data.stop_token_ids
     )
 
-    num_prompts = 4
+    num_prompts = 2
     image_repeat_prob = None
     assert num_prompts > 0
     if num_prompts == 1:
@@ -1433,6 +1433,8 @@ def run_vision_language():
                 }
                 for i in range(num_prompts)
             ]
+        
+    print(f"inputs: {inputs}")
 
     # Add LoRA request if applicable
     lora_request = (

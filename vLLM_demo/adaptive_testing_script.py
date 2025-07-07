@@ -4,7 +4,6 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from vllm import LLM, SamplingParams
 from dataloader import load_data
-from vision_language import run_vision_language
 
 # set cuda device
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
@@ -114,8 +113,4 @@ if __name__ == "__main__":
         
         outputs = generate_text(questions, model_id)
         print(f"Response: {outputs}") 
-        break
-
-    # run the vision language model
-    print("Running vision language model...")
-    run_vision_language()
+        # break
